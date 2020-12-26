@@ -1,4 +1,5 @@
 import { navItems } from './Nav.constants';
+import ReactGa from 'react-ga';
 import './Nav.view.scss';
 
 const NavView = () => {
@@ -8,16 +9,17 @@ const NavView = () => {
         {navItems &&
           navItems.map(({ order, link, title }) => {
             return (
-              <a
+              <ReactGa.OutboundLink
                 {...{
-                  key: order,
                   className: 'nav__link',
-                  href: link,
+                  key: order,
+                  eventLabel: `${title}Visit`,
+                  to: link,
                   target: '_blank',
                 }}
               >
                 {title}
-              </a>
+              </ReactGa.OutboundLink>
             );
           })}
       </nav>
