@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/// Anything that is below #root shall be styled by their own component files
+#root {
+  width: 100vw;
+  height: 100vh;
+}
