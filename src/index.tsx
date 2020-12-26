@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import ReactGA from 'react-ga';
 import { GA_TRACKING_ID } from './config';
 
-ReactGA.initialize(GA_TRACKING_ID, { debug: true });
+ReactGA.initialize(GA_TRACKING_ID, { debug: false });
 
 ReactDOM.render(
   <React.StrictMode>
