@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  webclient:
+    image: node
+    container_name: utkusarioglu-com__webclient
+    working_dir: /usr/src/app
+    stdin_open: true
+    ports:
+      - 80:3000
+    volumes: 
+      - ./:/usr/src/app
+    entrypoint: yarn start
