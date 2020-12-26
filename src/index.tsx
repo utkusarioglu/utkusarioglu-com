@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/main.scss';
+import HomeRoute from './components/routes/home.route';
 import reportWebVitals from './reportWebVitals';
 import ReactGA from 'react-ga';
 import { GA_TRACKING_ID } from './config';
 
 ReactGA.initialize(GA_TRACKING_ID, { debug: true });
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <HomeRoute />
   </React.StrictMode>,
   document.getElementById('root')
 );
