@@ -3,6 +3,7 @@
 /// This 100% height declaration gives the best result with mobile
 html {
   @include hundred-percent-width-height;
+  @include disable-user-select;
 }
 
 body {
