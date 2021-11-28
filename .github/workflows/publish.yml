@@ -2,6 +2,7 @@ name: Build and deploy to ftp server
 on:
   release:
     type: [published]
+  workflow_dispatch:
 
 jobs:
   publish:
@@ -13,15 +14,19 @@ jobs:
       - name: checkout
         id: checkout
         uses: actions/checkout@v2
+      - name: Install dependencies
+        id: Install
+        run: yarn
       - name: Build
         id: build
         run: yarn build
       - name: Publish to server
         id: publish
-        uses: genietim/ftp-action@releases/v4.0.1
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          host: ${{ secret.FTP_SERVER }}
-          user: ${{ secret.FTP_USERNAME }}
-          password: ${{ secret.FTP_PASSWORD }}
-          localDir: build
-          remoteDir: tmp/test
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./build/
+          server-dir: ./domains/utkusarioglu.com/public_html/
+          dangerous-clean-slate: true
