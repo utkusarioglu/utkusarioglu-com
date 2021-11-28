@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   webclient:
-    image: node
+    image: node:16
     container_name: utkusarioglu-com__webclient
     working_dir: /usr/src/app
     stdin_open: true
