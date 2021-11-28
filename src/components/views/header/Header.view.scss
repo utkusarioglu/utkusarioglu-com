@@ -1,7 +1,9 @@
 .header {
   grid-area: header;
+  position: absolute;
+  top: 0;
 
   &__title {
-    padding: 1rem;
+    padding: 3rem;
   }
 }

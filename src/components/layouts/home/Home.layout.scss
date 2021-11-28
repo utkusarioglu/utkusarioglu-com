@@ -1,8 +1,8 @@
 .home {
   display: grid;
   /// Hero section does not yet exist but its placement is denoted here
-  grid-template-areas: 'header' 'hero' 'nav';
-  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas: 'header' 'nav';
+  grid-template-rows: 0 2fr;
   width: 100%;
   height: 100%;
   justify-items: center;
