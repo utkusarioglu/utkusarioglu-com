@@ -1,0 +1,27 @@
+name: Build and deploy to ftp server
+on:
+  release:
+    type: [published]
+
+jobs:
+  publish:
+    name: Build and deploy to ftp server
+    runs-on: ubuntu-latest
+    environment: production
+    container: node:16
+    steps:
+      - name: checkout
+        id: checkout
+        uses: actions/checkout@v2
+      - name: Build
+        id: build
+        run: yarn build
+      - name: Publish to server
+        id: publish
+        uses: genietim/ftp-action@releases/v4.0.1
+        with:
+          host: ${{ secret.FTP_SERVER }}
+          user: ${{ secret.FTP_USERNAME }}
+          password: ${{ secret.FTP_PASSWORD }}
+          localDir: build
+          remoteDir: tmp/test
