@@ -1,12 +1,17 @@
 .paper-chain-layout {
   padding: 1em;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .paper-chain-layout-title {
   padding-bottom: 0.4em;
   font-weight: 600;
+  text-align: center;
 }
 
 .paper-chain-layout-subtitle {
   padding-bottom: 0.2em;
+  text-align: center;
 }
