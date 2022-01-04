@@ -1,18 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './styles/main.scss';
-import HomeRoute from './components/routes/home.route';
-import reportWebVitals from './reportWebVitals';
-import ReactGA from 'react-ga';
-import { GA_TRACKING_ID } from './config';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./styles/main.scss";
+import reportWebVitals from "./reportWebVitals";
+import ReactGA from "react-ga";
+import { GA_TRACKING_ID } from "./config";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./components/routers/app/App.router";
 
 ReactGA.initialize(GA_TRACKING_ID, { debug: false });
 
 ReactDOM.render(
   <React.StrictMode>
-    <HomeRoute />
+    <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
