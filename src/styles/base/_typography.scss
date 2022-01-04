@@ -1,8 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span {
+  font-family: "Open Sans", sans-serif;
+}
 
 /// Used for the title "Utku Sarioglu"
 h1 {
-  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 2rem;
 }
@@ -11,7 +22,6 @@ h1 {
 /// Do not put instance implementation properties here.
 /// Those belong in their respective components
 a {
-  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   text-decoration: none;
 }
