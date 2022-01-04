@@ -1,0 +1,17 @@
+.paper-chain-list {
+  margin-top: 1em;
+}
+
+.paper-chain-list-item {
+  padding: 1em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(20px);
+}
+
+.paper-chain-list-item-timestamp {
+  margin-top: 0.2em;
+  text-align: end;
+  font-size: 0.8em;
+}

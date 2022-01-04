@@ -5,7 +5,9 @@ body {
   background: linear-gradient(#457b9d, #1d3557);
 }
 
-h1 {
+h1,
+h2,
+h3 {
   color: #f1faee;
 }
 
@@ -15,4 +17,12 @@ a {
   &:hover {
     color: #a8dadc;
   }
+}
+
+.paper-chain-list-item {
+  color: white;
+}
+
+.paper-chain-layout-subtitle {
+  color: #bbb;
 }

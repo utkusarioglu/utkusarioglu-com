@@ -1,18 +1,14 @@
-import PaperChainData from "./paper-chain.json";
 import "./PaperChain.layout.scss";
+import PaperChainListView from "../../views/paper-chain-list/PaperChainList.view";
 
 const PaperChainLayout = () => {
   return (
     <div className="paper-chain-layout">
-      <h1>Utku's Paper Chain</h1>
-      <h3>The most amazing chain in the world after Bossonica's</h3>
-      <div className="paper-chain-list">
-        {PaperChainData.list.map(({ content, timestamp }) => (
-          <div className="paper-chain-link" key={timestamp}>
-            {content}
-          </div>
-        ))}
-      </div>
+      <h1 className="paper-chain-layout-title">Utku's Paper Chain</h1>
+      <h3 className="paper-chain-layout-subtitle">
+        The most amazing chain in the world after Bossonica's!
+      </h3>
+      <PaperChainListView />
     </div>
   );
 };
