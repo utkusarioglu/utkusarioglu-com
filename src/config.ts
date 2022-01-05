@@ -15,4 +15,4 @@ const { REACT_APP_GA_TRACKING_ID } = process.env;
 /**
  * Google analytics tracking id
  */
-export const GA_TRACKING_ID = REACT_APP_GA_TRACKING_ID || '';
+export const GA_TRACKING_ID = "UA-78365909-1"
