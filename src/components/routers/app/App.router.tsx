@@ -1,16 +1,30 @@
+import { lazy, Suspense } from "react";
 import { useRoutes } from "react-router-dom";
-import HomeRoute from "../../routes/home.route";
-import PaperChainRoute from "../../routes/paper-chain.route";
+
+const LoadingView = () => <div>Loading...</div>;
 
 const AppRouter = () => {
+  const LazyHomeRoute = lazy(() => import("../../routes/home.route"));
+  const LazyPaperChainRoute = lazy(
+    () => import("../../routes/paper-chain.route")
+  );
+
   return useRoutes([
     {
       path: "/",
-      element: <HomeRoute />,
+      element: (
+        <Suspense fallback={LoadingView}>
+          <LazyHomeRoute />
+        </Suspense>
+      ),
     },
     {
       path: "/paper-chain",
-      element: <PaperChainRoute />,
+      element: (
+        <Suspense fallback={LoadingView}>
+          <LazyPaperChainRoute />
+        </Suspense>
+      ),
     },
   ]);
 };
