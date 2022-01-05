@@ -1,11 +1,11 @@
-import type { FC } from "react";
+import type { CSSProperties, FC } from "react";
 import PaperChainData from "./paper-chain.json";
 import "./PaperChainList.view.scss";
 
 type PaperChainListItemParams = {
   content: string;
   timestamp: number;
-  backgroundColor: string; // hex color
+  style: CSSProperties;
 };
 
 const PaperChainListView = () => {
@@ -21,11 +21,11 @@ const PaperChainListView = () => {
 const PaperChainListItem: FC<PaperChainListItemParams> = ({
   content,
   timestamp,
-  backgroundColor,
+  style,
 }) => {
   const date = new Date(timestamp);
   return (
-    <div className="paper-chain-list-item" style={{ backgroundColor }}>
+    <div className="paper-chain-list-item" style={style}>
       <p>{content}</p>
       <p className="paper-chain-list-item-timestamp">{date.toDateString()}</p>
     </div>
