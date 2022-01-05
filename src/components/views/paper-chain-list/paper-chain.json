@@ -1,9 +1,39 @@
 {
   "list": [
     {
+      "content": "So many expect someone else to love them before they love themselves.",
+      "timestamp": 1641365787156,
+      "style": {
+        "backgroundColor": "#ff4097"
+      }
+    },
+    {
       "content": "If you have to choose between bird-man and man-bird, always choose bird-man.",
       "timestamp": 1641297525194,
-      "backgroundColor": "#419093"
+      "style": {
+        "backgroundColor": "#419093"
+      }
+    },
+    {
+      "content": "Pencils used to be a regular part of my life. Now it's incredibly rare that I use one for anything other than signing my name.",
+      "timestamp": 1641193377057,
+      "style": {
+        "backgroundColor": "#0e9347"
+      }
+    },
+    {
+      "content": "Turns out, not everyone wants to be able to fly...",
+      "timestamp": 1641107241132,
+      "style": {
+        "backgroundColor": "#581072"
+      }
+    },
+    {
+      "content": "I wholeheartedly want James Webb Space Telescope to successfully deploy and show us all the amazing things we cannot yet see",
+      "timestamp": 1641021064993,
+      "style": {
+        "backgroundColor": "#002070"
+      }
     }
   ]
 }
