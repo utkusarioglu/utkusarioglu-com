@@ -8,11 +8,9 @@
  * runtime shall also be created here and consumed from this module
  */
 
-const { REACT_APP_GA_TRACKING_ID } = process.env;
-
 // TODO Error checks for environment variables shall be implemented here
 
 /**
  * Google analytics tracking id
  */
-export const GA_TRACKING_ID = "UA-78365909-1"
+export const GA_TRACKING_ID = "UA-78365909-1";
