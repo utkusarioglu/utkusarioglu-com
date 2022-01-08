@@ -4,13 +4,12 @@
  * value if needed
  */
 export interface NavItem {
-  order: number;
   title: string;
-  link: string; // this is a url
+  link: string; // url
 }
 
 /**
  * The collection of {@link navItem}s these will most probably end up on the
- * screen throuh the <nav> tag
+ * screen through the <nav> tag
  */
 export type NavItems = NavItem[];
