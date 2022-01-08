@@ -1,16 +1,16 @@
 {
-	"name": "utkusarioglu-com",
-	"dockerComposeFile": [
-		"../docker-compose.dev.yaml",
-		"docker-compose.yml"
-	],
-	"service": "webclient",
-	"workspaceFolder": "/usr/src/app",
-	"settings": {
+  "name": "utkusarioglu-com",
+  "dockerComposeFile": ["../docker-compose.dev.yaml", "docker-compose.yml"],
+  "service": "webclient",
+  "workspaceFolder": "/usr/src/app",
+  "settings": {
     "workbench.colorCustomizations": {
       "activityBar.background": "#002255"
     }
   },
-	"extensions": [],
-  "postCreateCommand": "yarn"
+  "extensions": [],
+  "postCreateCommand": "yarn",
+  "features": {
+    "github-cli": "latest"
+  }
 }
