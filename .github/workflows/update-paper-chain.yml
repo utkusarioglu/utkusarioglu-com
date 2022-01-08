@@ -1,7 +1,8 @@
 name: Update paper chain
 on:
-  # release:
-  #   type: [published]
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -23,3 +24,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./public/etc/
           server-dir: ./domains/utkusarioglu.com/public_html/etc/
+          dangerous-clean-slate: true

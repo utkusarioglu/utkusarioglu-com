@@ -1,6 +1,13 @@
 {
   "list": [
     {
+      "content": "testing single file ci pipeline (yes I'm doing this in production)",
+      "timestamp": 1000,
+      "style": {
+        "backgroundColor": "rgb(33, 33, 100)"
+      }
+    },
+    {
       "content": "So much changes in so little time while it feels like nothing changes overall.",
       "timestamp": 1641644254620,
       "style": {
