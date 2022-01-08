@@ -1,0 +1,25 @@
+name: Update paper chain
+on:
+  # release:
+  #   type: [published]
+  workflow_dispatch:
+
+jobs:
+  update-paper-chain:
+    name: Update paper-chain.json
+    runs-on: ubuntu-latest
+    environment: production
+    # container: node:16
+    steps:
+      - name: checkout
+        id: checkout
+        uses: actions/checkout@v2
+      - name: Publish to server
+        id: publish
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./public/paper-chain.json
+          server-dir: ./domains/utkusarioglu.com/public_html/paper-chain.json
