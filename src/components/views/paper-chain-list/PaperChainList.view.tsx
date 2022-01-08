@@ -20,7 +20,7 @@ const PaperChainListView = () => {
   });
 
   useEffect(() => {
-    fetch("/paper-chain/list.json")
+    fetch("/etc/paper-chain.json")
       .then((response) => response.json())
       .then((paperChain) => {
         setPaperChain({
