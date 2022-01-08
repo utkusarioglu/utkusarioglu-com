@@ -20,3 +20,11 @@
   text-align: end;
   font-size: 0.8em;
 }
+
+.paper-chain__no-items-indicator,
+.paper-chain__loading-indicator {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

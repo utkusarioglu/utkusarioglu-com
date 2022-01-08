@@ -1,24 +1,57 @@
+import { useState, useEffect } from "react";
 import type { CSSProperties, FC } from "react";
-import PaperChainData from "./paper-chain.json";
 import "./PaperChainList.view.scss";
 
-type PaperChainListItemParams = {
+type PaperChainListItem = {
   content: string;
   timestamp: number;
   style: CSSProperties;
 };
 
+interface PaperChain {
+  timestamp: number; // epoch
+  list: PaperChainListItem[];
+}
+
 const PaperChainListView = () => {
+  const [paperChain, setPaperChain] = useState<PaperChain>({
+    timestamp: 0,
+    list: [],
+  });
+
+  useEffect(() => {
+    fetch("/paper-chain.json")
+      .then((response) => response.json())
+      .then((paperChain) => {
+        setPaperChain({
+          timestamp: Date.now(),
+          ...paperChain,
+        });
+      });
+  }, []);
+
+  if (!paperChain.timestamp) {
+    return <span className="paper-chain__loading-indicator">Loading...</span>;
+  }
+
+  if (!!paperChain.timestamp && !paperChain.list.length) {
+    return (
+      <span className="paper-chain__no-items-indicator">
+        There seems to be nothing here :o
+      </span>
+    );
+  }
+
   return (
     <div className="paper-chain-list">
-      {PaperChainData.list.map((item) => (
-        <PaperChainListItem {...item} key={item.timestamp} />
+      {paperChain.list.map((item) => (
+        <PaperChainListItemView {...item} key={item.timestamp} />
       ))}
     </div>
   );
 };
 
-const PaperChainListItem: FC<PaperChainListItemParams> = ({
+const PaperChainListItemView: FC<PaperChainListItem> = ({
   content,
   timestamp,
   style,
