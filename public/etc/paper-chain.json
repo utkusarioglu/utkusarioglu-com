@@ -1,6 +1,14 @@
 {
   "list": [
     {
+      "content": "Gummy bears are my favorite candy",
+      "timestamp": 1641807876545,
+      "style": {
+        "background": "linear-gradient(to left, #068891, #E072B4, #1FD1DE, #DEC109)",
+        "color": "black"
+      }
+    },
+    {
       "content": "We have poetry, theater, books, movies, all kinds of art, and all genres of music; we developed AR and VR, built all kinds of immersive games and experiences on top of them. But despite all of these amazing ways of communication, we cannot even start to understand how someone else sees the world unless we have been in their shoes.",
       "timestamp": 1641720959467,
       "style": {
