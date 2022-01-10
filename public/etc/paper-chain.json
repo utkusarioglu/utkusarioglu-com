@@ -1,6 +1,14 @@
 {
   "list": [
     {
+      "content": "We have theater, books, movies, all kinds of art, and all genres of music, we developed AR and VR, built all kinds of immersive games and experiences on top of it. But despite all of this, we cannot even start to understand how someone else sees the world unless we have been in their shoes.",
+      "timestamp": 1641720959467,
+      "style": {
+        "backgroundColor": "rgb(205 205 205)",
+        "color": "black"
+      }
+    },
+    {
       "content": "So much changes in so little time while it feels like nothing changes overall.",
       "timestamp": 1641644254620,
       "style": {
