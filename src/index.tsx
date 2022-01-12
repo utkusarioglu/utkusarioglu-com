@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { HelmetProvider } from "react-helmet-async";
 import "./styles/main.scss";
 import reportWebVitals from "./reportWebVitals";
 import ReactGA from "react-ga";
@@ -11,9 +12,11 @@ ReactGA.initialize(GA_TRACKING_ID, { debug: false });
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <AppRouter />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
+    </HelmetProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
