@@ -4,6 +4,7 @@ import "./PaperChainList.view.scss";
 
 type PaperChainListItem = {
   content: string;
+  notes: string; // contains notes about the content
   timestamp: number;
   style: CSSProperties;
 };
