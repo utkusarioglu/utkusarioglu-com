@@ -1,6 +1,18 @@
 {
   "list": [
     {
+      "content": "Pain may be the price we pay for having love in our lives.",
+      "notes": "This one is inspired by a conversation in this video: https://www.youtube.com/watch?v=vTVQtsIfoo8",
+      "timestamp": 1642143601889,
+      "style": {
+        "backgroundColor": "#cda5c3",
+        "color": "#600000",
+        "animationName": "border-radius-1em-to-0",
+        "animationDuration": "4s",
+        "animationIterationCount": "infinite"
+      }
+    },
+    {
       "content": "I sometimes imagine myself traveling to the past to tell people about what today's world is like. I try to imagine how they would perceive what the world has become.",
       "timestamp": 1642062093730,
       "style": {
