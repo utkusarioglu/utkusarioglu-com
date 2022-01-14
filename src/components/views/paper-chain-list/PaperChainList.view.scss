@@ -28,3 +28,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@keyframes border-radius-1em-to-0 {
+  0% {
+    border-radius: 1em;
+  }
+  50% {
+    border-radius: 0;
+  }
+}
