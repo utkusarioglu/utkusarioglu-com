@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "public/paper-chain-data/**.json"
   workflow_dispatch:
 
 jobs:
