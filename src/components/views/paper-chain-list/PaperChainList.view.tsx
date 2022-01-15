@@ -21,7 +21,7 @@ const PaperChainListView = () => {
   });
 
   useEffect(() => {
-    fetch("/etc/paper-chain.json")
+    fetch("/paper-chain-data/2020-01.json")
       .then((response) => response.json())
       .then((paperChain) => {
         setPaperChain({
