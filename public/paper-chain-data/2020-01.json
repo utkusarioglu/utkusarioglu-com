@@ -1,10 +1,10 @@
 {
   "list": [
     {
-      "content": "We are gathered here today to celebrate the life of my second coffee maker that died within the last two months. Now you can make coffee for Einstein and Segovia among the clouds.",
+      "content": "We are gathered here today to celebrate the life of my coffee maker; which is one of the two that died within the last two months. Now you can make coffee for Einstein and Segovia among the clouds.",
       "timestamp": 1642230393335,
       "style": {
-        "backgroundImage": "repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, 0.2) 35px, rgba(255, 255, 255, 0.2) 70px), repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(255,255,255,0.4) 35px, rgba(255,255,255,0.4) 70px), linear-gradient(black, #363636)",
+        "backgroundImage": "repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, 0.1) 35px, rgba(255, 255, 255, 0.1) 70px), repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(255,255,255,0.2) 35px, rgba(255,255,255,0.2) 70px), linear-gradient(black, #363636)",
         "color": "white"
       }
     },
