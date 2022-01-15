@@ -1,6 +1,14 @@
 {
   "list": [
     {
+      "content": "We are gathered here today to celebrate the life of my second coffee maker that died within the last two months. Now you can make coffee for Einstein and Segovia among the clouds.",
+      "timestamp": 1642230393335,
+      "style": {
+        "backgroundImage": "repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, 0.2) 35px, rgba(255, 255, 255, 0.2) 70px), repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(255,255,255,0.4) 35px, rgba(255,255,255,0.4) 70px), linear-gradient(black, #363636)",
+        "color": "white"
+      }
+    },
+    {
       "content": "Pain may be the price we pay for having love in our lives.",
       "notes": "This one is inspired by a conversation in this video: https://www.youtube.com/watch?v=vTVQtsIfoo8",
       "timestamp": 1642143601889,
