@@ -22,6 +22,6 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./public/etc/
-          server-dir: ./domains/utkusarioglu.com/public_html/etc/
+          local-dir: ./public/paper-chain-data/
+          server-dir: ./domains/utkusarioglu.com/public_html/paper-chain-data/
           dangerous-clean-slate: true
