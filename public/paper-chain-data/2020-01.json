@@ -1,6 +1,15 @@
 {
   "list": [
     {
+      "content": "New land is being created and destroyed in Tonga right now.",
+      "notes": "Inspired by this video: https://www.youtube.com/watch?v=zoMRwyNhqJ4",
+      "timestamp": 1642327776606,
+      "style": {
+        "backgroundColor": "rgb(255 195 0)",
+        "color": "black"
+      }
+    },
+    {
       "content": "We are gathered here today to celebrate the life of my coffee maker, which is one of the two that died within the last two months. Now you can make coffee for Einstein and Segovia among the clouds.",
       "timestamp": 1642230393335,
       "style": {
