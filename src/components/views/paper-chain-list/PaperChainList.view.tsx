@@ -4,7 +4,7 @@ import "./PaperChainList.view.scss";
 
 type PaperChainListItem = {
   content: string;
-  notes: string; // contains notes about the content
+  notes?: string; // contains notes about the content
   timestamp: number;
   style: CSSProperties;
 };
@@ -55,13 +55,21 @@ const PaperChainListView = () => {
 const PaperChainListItemView: FC<PaperChainListItem> = ({
   content,
   timestamp,
+  notes,
   style,
 }) => {
   const date = new Date(timestamp);
   return (
     <div className="paper-chain-list-item" style={style}>
       <p>{content}</p>
-      <p className="paper-chain-list-item-timestamp">{date.toDateString()}</p>
+      <div className="paper-chain-list-item-hud">
+        {!!notes && (
+          <span className="paper-chain-list-item-hud-indicator">♫</span>
+        )}
+        <span className="paper-chain-list-item-hud-timestamp">
+          {date.toDateString()}
+        </span>
+      </div>
     </div>
   );
 };

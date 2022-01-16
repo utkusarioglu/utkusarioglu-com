@@ -15,10 +15,16 @@
   }
 }
 
-.paper-chain-list-item-timestamp {
-  margin-top: 0.2em;
-  text-align: end;
+.paper-chain-list-item-hud {
+  margin-top: 0.6em;
   font-size: 0.8em;
+  display: flex;
+  justify-content: flex-end;
+  text-align: end;
+}
+
+.paper-chain-list-item-hud-indicator {
+  margin-right: 0.4em;
 }
 
 .paper-chain__no-items-indicator,
