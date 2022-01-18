@@ -1,6 +1,15 @@
 {
   "list": [
     {
+      "content": "You can find joy in all sorts of things if you have a \"joy\" plug installed in your head.",
+      "timestamp": 1642488755165,
+      "style": {
+        "background": "#06111C",
+        "color": "#FFEB4D",
+        "border": "solid 3px #BEC7C7"
+      }
+    },
+    {
       "content": "I wonder whether a period like dark ages would ever emerge at the global scale.",
       "timestamp": 1642400512718,
       "style": {
