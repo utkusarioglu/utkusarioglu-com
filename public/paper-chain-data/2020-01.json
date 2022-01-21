@@ -1,6 +1,16 @@
 {
   "list": [
     {
+      "content": "I read about people's trust in their leaders and their government during the earlier decades, and it feels almost unbelievable.",
+      "timestamp": 1642766628249,
+      "style": {
+        "background": "radial-gradient(ellipse at bottom, #B0339B, #2E038C)",
+        "color": "#C9CFF2",
+        "textShadow": "0 1px 5px #2E038C",
+        "boxShadow": "inset 0 0 10px #C9CFF2, inset 0 0 30px #B0339B40"
+      }
+    },
+    {
       "content": "When I watch these end-of-the-year recaps, I always feel surprised by how much has happened. Remember hearing all of those events but they flee from my consciousness quite fast.",
       "timestamp": 1642659455149,
       "style": {
