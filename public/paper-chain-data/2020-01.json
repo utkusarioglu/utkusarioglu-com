@@ -1,6 +1,16 @@
 {
   "list": [
     {
+      "content": "Have a great trip Bossonica!",
+      "timestamp": 0,
+      "style": {
+        "background": "#63A0AD",
+        "color": "#FAEB5A",
+        "textShadow": "1px 1px 1px #AD5E79, 2px 2px 2px #FA6698, 3px 3px 3px #ADA55A, 4px 4px 4px #AD5E79, 5px 5px 5px #FA6698, 6px 6px 6px #ADA55A, 7px 7px 7px #AD5E79, 8px 8px 8px #FA6698",
+        "boxShadow": "1px 1px 1px #AD5E79, 2px 2px 2px #FA6698, 3px 3px 3px #ADA55A, 4px 4px 4px #AD5E79, 5px 5px 5px #FA6698"
+      }
+    },
+    {
       "content": "I read about people's trust in their leaders and their government during the earlier decades, and it feels almost unbelievable.",
       "timestamp": 1642766628249,
       "style": {
