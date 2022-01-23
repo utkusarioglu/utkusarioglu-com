@@ -1,6 +1,19 @@
 {
   "list": [
     {
+      "content": "So many empires came and went. They all knew about others that came before. They probably knew that their efforts would crumble like their predecessors. They invented a noble reason for their ultimately futile efforts, called it glory, remembrance.",
+      "timestamp": 1642923564204,
+      "notes": "This one render properly on safari",
+      "style": {
+        "background": "linear-gradient(to right, #F2CF63, #F2F2F2)",
+        "textShadow": "0 0 10px #58595B",
+        "-webkit-text-fill-color": "transparent",
+        "-webkit-background-clip": "text",
+        "border": "1px solid #F2C06350",
+        "boxShadow": "inset 0 0 60px #58595B"
+      }
+    },
+    {
       "content": "Have a great trip Bossonica!",
       "timestamp": 1642837054023,
       "style": {
