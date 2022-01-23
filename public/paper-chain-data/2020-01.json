@@ -1,9 +1,9 @@
 {
   "list": [
     {
-      "content": "So many empires came and went. They all knew about others that came before. They probably knew that their efforts would crumble like their predecessors. They invented a noble reason for their ultimately futile efforts, called it glory, remembrance.",
+      "content": "So many empires came and went. They all knew about others that came before. They probably knew that their efforts would crumble like their predecessors. They invented noble reasons for their ultimately futile efforts; called them glory, remembrance, duty",
       "timestamp": 1642923564204,
-      "notes": "This one render properly on safari",
+      "notes": "This one will not render properly on safari",
       "style": {
         "background": "linear-gradient(to right, #F2CF63, #F2F2F2)",
         "textShadow": "0 0 10px #58595B",
