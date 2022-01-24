@@ -1,6 +1,14 @@
 {
   "list": [
     {
+      "content": "It's amazing how much our early lives influence our path in life.",
+      "timestamp": 1643006826350,
+      "style": {
+        "backgroundColor": "#C5D9A7",
+        "color": "#401B22"
+      }
+    },
+    {
       "content": "So many empires came and went. They all knew about others that came before. They probably knew that their efforts would crumble like their predecessors. They invented noble reasons for their ultimately futile efforts; called them glory, remembrance, duty",
       "timestamp": 1642923564204,
       "notes": "This one will not render properly on safari",
