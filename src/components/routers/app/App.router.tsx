@@ -8,6 +8,9 @@ const AppRouter = () => {
   const LazyPaperChainRoute = lazy(
     () => import("../../routes/paper-chain.route")
   );
+  const LazyArtsyFartsyRoute = lazy(
+    () => import("../../routes/ArtsyFartsy.route")
+  );
 
   return useRoutes([
     {
@@ -23,6 +26,14 @@ const AppRouter = () => {
       element: (
         <Suspense fallback={LoadingView}>
           <LazyPaperChainRoute />
+        </Suspense>
+      ),
+    },
+    {
+      path: "/artsy-fartsy",
+      element: (
+        <Suspense fallback={LoadingView}>
+          <LazyArtsyFartsyRoute />
         </Suspense>
       ),
     },
