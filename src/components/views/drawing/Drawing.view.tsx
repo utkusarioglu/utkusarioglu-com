@@ -11,6 +11,24 @@ const DrawingView = () => (
       </div>
     </div>
     <div className="grass" />
+    <div className="billboard">
+      <div className="billboard-frame">
+        <div className="billboard-image">
+          <div className="billboard-image-padding">
+            <div className="billboard-image-header">Home welcomes</div>
+            <div className="billboard-image-title">Bossonica</div>
+            <div className="billboard-image-subtitle">
+              Real life awaits you!1!!
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="billboard-leg-left" />
+      <div className="billboard-leg-side-left" />
+      <div className="billboard-leg-right" />
+      <div className="billboard-leg-side-right" />
+      <div className="billboard-frame-top" />
+    </div>
   </div>
 );
 

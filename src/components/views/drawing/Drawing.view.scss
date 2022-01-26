@@ -1,13 +1,38 @@
 :root {
   --ruby-dark: #c70000;
   --white: #ffffff;
-  --shadow: #00000060;
   --blue-light: #0055ff;
   --blue-dark: #002255;
   --green-light: #006600;
   --green-dark: #005500;
   --yellow: #776600;
   --brown: #444400;
+  --white: #ffffff;
+  --black: #141414;
+  --black-2: #232323;
+
+  --green-1: rgba(71, 140, 2, 1);
+  --green-2: rgba(165, 191, 72, 1);
+  --yellow-1: rgba(239, 242, 147, 1);
+  --yellow-2: rgba(242, 226, 4, 1);
+  --yellow-3: rgba(242, 231, 179, 1);
+
+  // #488C03
+  /* Color Theme Swatches in Hex */
+  //  color: #488C03;
+  //  color: #A6BF49;
+  //  color: #EFF294;
+  //  color: #F2E205;
+  //  color: #F2E8B3;
+
+  /* Color Theme Swatches in RGBA */
+
+  /* Color Theme Swatches in HSLA */
+  //  color: hsla(90, 96, 28, 1);
+  //  color: hsla(73, 48, 51, 1);
+  //  color: hsla(61, 78, 76, 1);
+  //  color: hsla(56, 96, 48, 1);
+  //  color: hsla(50, 71, 82, 1);
 }
 
 #canvas {
@@ -72,5 +97,100 @@
     height: 4vw;
     left: 2vw;
     position: absolute;
+  }
+}
+
+.billboard {
+  width: 30vw;
+  display: block;
+  position: fixed;
+  left: 50vw;
+  bottom: 40%;
+  transform: skew(0, 10deg);
+
+  &-frame {
+    padding: 3vw;
+    background-color: var(--black);
+
+    &-top {
+      background-color: var(--black-2);
+      width: 30vw;
+      height: 2vw;
+      position: absolute;
+      top: -2vw;
+      left: 1vw;
+      transform: skew(-45deg);
+    }
+  }
+
+  &-leg {
+    @mixin common {
+      background-color: var(--black);
+      width: 3vw;
+      height: 10vw;
+      position: absolute;
+    }
+
+    &-left {
+      @include common;
+      left: 0;
+    }
+
+    &-right {
+      @include common;
+      right: 0;
+    }
+
+    &-side {
+      @mixin common-side {
+        background-color: var(--black-2);
+        width: 2vw;
+        top: -1vw;
+        height: 28vw;
+        position: absolute;
+        z-index: -1;
+      }
+
+      &-left {
+        @include common-side;
+        transform: skew(0, -45deg);
+        left: 3vw;
+        bottom: 1vw;
+      }
+
+      &-right {
+        @include common-side;
+        transform: skew(0, -45deg);
+        right: -2vw;
+        bottom: 1vw;
+      }
+    }
+  }
+
+  &-image {
+    background-color: var(--white);
+    display: grid;
+    text-align: center;
+
+    &-padding {
+      padding: 2vw;
+    }
+
+    &-header {
+      font-weight: 700;
+      font-size: 1.6vw;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-family: "serif";
+      font-size: 3vw;
+      margin: 0.4vw;
+    }
+
+    &-subtitle {
+      font-size: 1.4vw;
+      font-weight: 700;
+    }
   }
 }
