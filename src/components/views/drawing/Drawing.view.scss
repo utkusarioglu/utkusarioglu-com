@@ -1,5 +1,5 @@
 :root {
-  --red-dark: #dd0000;
+  --ruby-dark: #c70000;
   --white: #ffffff;
   --shadow: #00000060;
   --blue-light: #0055ff;
@@ -62,11 +62,11 @@
   &-roof {
     border-left: 7vw solid transparent;
     border-right: 7vw solid transparent;
-    border-bottom: 7vw solid var(--red-dark);
+    border-bottom: 7vw solid var(--ruby-dark);
   }
 
   &-chimney {
-    background-color: var(--red-dark);
+    background-color: var(--ruby-dark);
     width: 2vw;
     top: 1vw;
     height: 4vw;
