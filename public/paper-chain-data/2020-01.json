@@ -1,6 +1,14 @@
 {
   "list": [
     {
+      "content": "Since my last link, I have been dealing with software things that I thought would have taken a day tops. I was so so wrong.",
+      "timestamp": 1643961060282,
+      "style": {
+        "color": "white",
+        "backgroundColor": "#3c3c3c"
+      }
+    },
+    {
       "content": "Paper was such an expensive commodity: something hard to find; something that spoke of royalty, power and intellectualism. Now we literally wipe our asses with it.",
       "timestamp": 1643091780443,
       "style": {
@@ -23,8 +31,8 @@
       "style": {
         "background": "linear-gradient(to right, #F2CF63, #F2F2F2)",
         "textShadow": "0 0 10px #58595B",
-        "-webkit-text-fill-color": "transparent",
-        "-webkit-background-clip": "text",
+        "WebkitTextFillColor": "transparent",
+        "WebkitBackgroundClip": "text",
         "border": "1px solid #F2C06350",
         "boxShadow": "inset 0 0 60px #58595B"
       }
