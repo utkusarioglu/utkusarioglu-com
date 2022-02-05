@@ -1,6 +1,15 @@
 {
   "list": [
     {
+      "content": "Restraint is a virtue only when there is an alternative.",
+      "notes": "Inspired by this CaspianReport video: https://www.youtube.com/watch?v=XVEJ6TXgKpo&t=4s",
+      "timestamp": 1644043783131,
+      "style": {
+        "background": "linear-gradient(45deg, #013, black, #013)",
+        "color": "#def"
+      }
+    },
+    {
       "content": "Since my last link, I have been dealing with software things that I thought would have taken a day tops. I was so so wrong.",
       "timestamp": 1643961060282,
       "style": {
