@@ -1,6 +1,14 @@
 {
   "list": [
     {
+      "content": "I missed studying math",
+      "timestamp": 1644214437970,
+      "style": {
+        "background": "repeating-linear-gradient(transparent, #8B9386 10px, transparent 20px), radial-gradient(circle, #8B9386 50%, #4D4D3D 55%, #4D4D3D 60%, #8B9386 65%, #8B9386 75%, #4D4D3D 80%, #4D4D3D 85%, #8B9386 90%)",
+        "color": "#FFE849"
+      }
+    },
+    {
       "content": "Restraint is a virtue only when there is an alternative.",
       "notes": "Inspired by this CaspianReport video: https://www.youtube.com/watch?v=XVEJ6TXgKpo&t=4s",
       "timestamp": 1644043783131,
