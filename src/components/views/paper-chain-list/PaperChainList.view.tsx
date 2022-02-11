@@ -61,7 +61,11 @@ const PaperChainListItemView: FC<PaperChainListItem> = ({
   const date = new Date(timestamp);
   return (
     <div className="paper-chain-list-item" style={style}>
-      <p>{content}</p>
+      {Array.isArray(content) ? (
+        content.map((p) => <p key={p.slice(0, 10)}>{p}</p>)
+      ) : (
+        <p>{content}</p>
+      )}
       <div className="paper-chain-list-item-hud">
         {!!notes && (
           <span className="paper-chain-list-item-hud-indicator">♫</span>
