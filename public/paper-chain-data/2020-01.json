@@ -1,6 +1,16 @@
 {
   "list": [
     {
+      "content": ["I watched", "Kong Skull Island", "and it was", "meh."],
+      "timestamp": 1644993848273,
+      "style": {
+        "backgroundColor": "#1D1C53",
+        "backgroundImage": "linear-gradient(to right, transparent 0%, transparent 10%, #89346D 10%, #89346D 20%, transparent 20%, transparent 30%, #C76058 30%, #C76058 40%, transparent 40%, transparent 50%, #FFB248 50%, #FFB248 60%, transparent 60%)",
+        "color": "#FFD700",
+        "textShadow": "1px 1px 1px #1D1C53, -1px 1px 1px #1D1C53, -1px -1px 1px #1D1C53, 1px -1px 1px #1D1C53"
+      }
+    },
+    {
       "content": [
         "After flying around for a while she was off her hype state. She was able to see that these metal chunks didn't stop for anything, they also growled like those dangerous big birds, but only worse. ",
         "She realized that these things weren't as innocuous as our little bird predicted. They seemed to be dangerous. Still she loved how they looked from afar. She realized that her mom knew something that maybe she didn't know yet.",
