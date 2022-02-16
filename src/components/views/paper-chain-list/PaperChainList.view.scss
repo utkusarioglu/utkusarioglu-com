@@ -7,7 +7,7 @@
   border-radius: 1em;
   display: flex;
   flex-direction: column;
-  // backdrop-filter: blur(20px);
+  justify-content: flex-end;
   margin-bottom: 1em;
 
   &:last-of-type {
@@ -24,7 +24,6 @@
   font-size: 0.8em;
   display: flex;
   justify-content: flex-end;
-  text-align: end;
 }
 
 .paper-chain-list-item-hud-indicator {
