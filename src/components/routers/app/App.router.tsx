@@ -12,7 +12,7 @@ const AppRouter = () => {
     () => import("../../routes/ArtsyFartsy.route")
   );
 
-  return useRoutes([
+  const routes = useRoutes([
     {
       path: "/",
       element: (
@@ -38,6 +38,12 @@ const AppRouter = () => {
       ),
     },
   ]);
+
+  if (!routes) {
+    return <span>Congrats! You have reached 404!</span>;
+  }
+
+  return routes;
 };
 
 export default AppRouter;
