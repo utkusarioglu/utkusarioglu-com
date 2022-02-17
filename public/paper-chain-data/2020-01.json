@@ -1,6 +1,15 @@
 {
   "list": [
     {
+      "content": "If we found a way to tell us who and what we can trust without a doubt, would we trust that tech?",
+      "timestamp": 1645078216612,
+      "style": {
+        "backgroundColor": "#212226",
+        "backgroundImage": "linear-gradient(to bottom, transparent 0%, transparent 7%, #212226 7%, #212226 93%, transparent 93%, transparent 100%), linear-gradient(75deg, transparent 0px, transparent 10%, #F28322 10%, #F28322 15%, transparent 15%, transparent 25%, #F25050 25%, #F25050 75%, transparent 75%, transparent 85%, #4C5059 85%, #4C5059 90%, transparent 90%, transparent 100%)",
+        "color": "#eee"
+      }
+    },
+    {
       "content": ["I watched", "Kong Skull Island", "and it was", "meh."],
       "timestamp": 1644993848273,
       "style": {
