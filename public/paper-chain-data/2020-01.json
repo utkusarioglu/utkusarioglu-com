@@ -1,6 +1,17 @@
 {
   "list": [
     {
+      "content": "Reality is so complicated that we’re always in a permanent state of being wrong, I just don’t know how I’m wrong.",
+      "timestamp": 1645426909536,
+      "notes": "This is a quote from this video @ 1:00: https://www.youtube.com/watch?v=U24gLMx_B08",
+      "style": {
+        "backgroundImage": "radial-gradient(circle at bottom right, #F7C31A 0%, #F7C31A 5%, #35400C 6%, #35400C 20%, #92A605 21%,  #92A605 50%, transparent 51%, transparent 100%)",
+        "backgroundColor": "#45311C",
+        "color": "#CCD3D9",
+        "textShadow": "1px 1px 1px #45311C, -1px 1px 1px #45311C, -1px -1px 1px #45311C, 1px -1px 1px #45311C"
+      }
+    },
+    {
       "content": "If we found a way to tell us who and what we can trust without a doubt, would we trust that tech?",
       "timestamp": 1645078216612,
       "style": {
