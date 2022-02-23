@@ -1,6 +1,15 @@
 {
   "list": [
     {
+      "content": "Trust is an interesting resource. It's emergent and very hard to nurture. Its production is voluntary but also very dependent on external factors.",
+      "timestamp": 1645597252720,
+      "style": {
+        "backgroundColor": "#16232E",
+        "backgroundImage": "repeating-linear-gradient(45deg, transparent 0, transparent 20px, #164C457F 21px, #164C457F 39px, transparent 40px), repeating-linear-gradient(135deg, transparent 0, transparent 20px, #CC8D1A7F 21px, #CC8D1A7F 39px, transparent 40px)",
+        "color": "white"
+      }
+    },
+    {
       "content": "Reality is so complicated that we’re always in a permanent state of being wrong, I just don’t know how I’m wrong.",
       "timestamp": 1645426909536,
       "notes": "This is a quote from this video @ 1:00: https://www.youtube.com/watch?v=U24gLMx_B08",
