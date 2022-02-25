@@ -1,6 +1,16 @@
 {
   "list": [
     {
+      "content": "I'm healthy, safe and comfortable; and I'm grateful for these.",
+      "timestamp": 1645772221835,
+      "style": {
+        "backgroundColor": "#8C6B42",
+        "backgroundImage": "repeating-radial-gradient(circle, transparent, #F2DFBB30 0, #F2DFBB30 10px, transparent 11px, transparent 20px), repeating-radial-gradient(at bottom center, transparent, #F2DFBB30 0, #F2DFBB30 20px, transparent 21px, transparent 50px)",
+        "color": "#260801",
+        "fontWeight": "800"
+      }
+    },
+    {
       "content": "Trust is an interesting resource. It's emergent and very hard to nurture. Its production is voluntary but also very dependent on external factors.",
       "timestamp": 1645597252720,
       "style": {
@@ -10,7 +20,7 @@
       }
     },
     {
-      "content": "Reality is so complicated that we’re always in a permanent state of being wrong, I just don’t know how I’m wrong.",
+      "content": "Reality is so complicated that we`re always in a permanent state of being wrong, I just don`t know how I`m wrong.",
       "timestamp": 1645426909536,
       "notes": "This is a quote from this video @ 1:00: https://www.youtube.com/watch?v=U24gLMx_B08",
       "style": {
@@ -46,6 +56,7 @@
         "This was a let down, she was heartbroken but also proud of herself for being open enough to observe these things instead of mindlessly diving in."
       ],
       "timestamp": 1644905820352,
+      "notes": "This was inspired by a conversation about a bedtime story with Bossonica",
       "style": {
         "background": "#315466",
         "color": "#F5E38F",
@@ -55,6 +66,7 @@
     {
       "content": "She is still flying and she is so so happy to finally be near her beloved cars. I think we should let her enjoy her moment.",
       "timestamp": 1644735776789,
+      "notes": "This was inspired by a conversation about a bedtime story with Bossonica",
       "style": {
         "background": "radial-gradient(#14140F 80%, #053D38)",
         "color": "#F59600",
@@ -70,6 +82,7 @@
         "The little bird was worried but she wanted to try her luck. She was still going to be safe. \"I won't land on anything this time, just fly around and look at my giant metals from distance\""
       ],
       "timestamp": 1644644807951,
+      "notes": "This was inspired by a conversation about a bedtime story with Bossonica",
       "style": {
         "background": "linear-gradient(#357526, #091407)",
         "color": "#F2E283"
@@ -82,6 +95,7 @@
         "One day while her mom was out, finding food for our little bird and her sisters, she decided to get out of the park and take a look at these majestic chunks of metal. She was so excited..."
       ],
       "timestamp": 1644572292728,
+      "notes": "This was inspired by a conversation about a bedtime story with Bossonica",
       "style": {
         "background": "linear-gradient(#22401E, #537322)",
         "color": "#D2D8D9"
