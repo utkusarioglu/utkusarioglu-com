@@ -1,6 +1,13 @@
 {
   "list": [
     {
+      "content": "I'm scared for the world...",
+      "timestamp": 1646296919994,
+      "style": {
+        "backgroundImage": "linear-gradient(#990000, #840000)"
+      }
+    },
+    {
       "content": "I'm healthy, safe and comfortable; and I'm grateful for these.",
       "timestamp": 1645772221835,
       "style": {
