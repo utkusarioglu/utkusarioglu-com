@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import "./TruckerJokes.view.scss";
 
 type Jokes = string[];
@@ -30,10 +30,10 @@ interface JokeDisplayViewProps {
 const JokeDisplayView: FC<JokeDisplayViewProps> = ({ jokes }) => {
   const [joke, setJoke] = useState("");
 
-  const chooseJoke = () => {
+  const chooseJoke = useCallback(() => {
     const jokeIndex = Math.round(Math.random() * (jokes.length - 1));
     setJoke(jokes[jokeIndex]);
-  };
+  }, [jokes]);
 
   useEffect(() => {
     chooseJoke();
