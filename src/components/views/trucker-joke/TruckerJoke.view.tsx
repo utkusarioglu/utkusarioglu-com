@@ -37,7 +37,7 @@ const JokeDisplayView: FC<JokeDisplayViewProps> = ({ jokes }) => {
 
   useEffect(() => {
     chooseJoke();
-  }, []);
+  }, [chooseJoke]);
 
   return (
     <>
