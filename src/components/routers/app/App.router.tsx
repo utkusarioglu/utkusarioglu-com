@@ -11,6 +11,9 @@ const AppRouter = () => {
   const LazyArtsyFartsyRoute = lazy(
     () => import("../../routes/ArtsyFartsy.route")
   );
+  const TruckerJokesRoute = lazy(
+    () => import("../../routes/TruckerJokes.route")
+  );
 
   const routes = useRoutes([
     {
@@ -34,6 +37,14 @@ const AppRouter = () => {
       element: (
         <Suspense fallback={LoadingView}>
           <LazyArtsyFartsyRoute />
+        </Suspense>
+      ),
+    },
+    {
+      path: "/kamyoncu-yazilari",
+      element: (
+        <Suspense fallback={LoadingView}>
+          <TruckerJokesRoute />
         </Suspense>
       ),
     },
