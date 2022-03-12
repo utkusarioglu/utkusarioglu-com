@@ -1,3 +1,8 @@
+# Trucker Jokes source file
+# Use hashtag for line comments
+# empty lines are ok
+
+# Ennuriye
 Kamyon çeker 10-20 ton, gönlüm çeker Paris Hilton
 Kusura bakma matmazel, bu semtte herkes güzel
 Solucan çiceğe demiş ki bi gün sen de solucan
@@ -23,3 +28,11 @@ Ayık ol tatlım, yıkılmaz tahtım
 Taklaya gelse de kurduğumuz düşler, eksilmedi yüzümüzden kıyak gülüşler
 Gökyüzünde bir yıldız olsaydım, ilk sana kayardım
 Parçalı bulutluyum ama hala umutluyum
+
+# Utkusu
+Kafada bitirdik de kalpte bitiremedik
+Neye küfür edeceğimi şaşırdım, herşey küfürlük
+Parayı sevmiyorum ama sinirlerimi yatıştırıyor
+Hiç milyoner olmak için yaşamadık çünkü yaşadığımız hayat trilyonlara bedel
+Ummadığın bir anda görüşürüz
+İmkansız olan herşey kafamın güzelliğine bakar
