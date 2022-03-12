@@ -63,7 +63,7 @@ export function useJokeChooser(jokes: JokeList): [Joke, () => void] {
     const randomIndex = Math.round(Math.random() * (source.length - 1));
     const current = source.splice(randomIndex, 1)[0];
     sink.push(current);
-    ReactGA.set({
+    ReactGA.event({
       category: "navigation",
       action: "get new joke",
       value: randomIndex,
