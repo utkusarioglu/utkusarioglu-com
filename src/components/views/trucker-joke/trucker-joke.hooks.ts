@@ -55,7 +55,7 @@ export function useJokeFetch() {
  * 2 items to `used` list.
  */
 export function useJokeChooser(jokes: JokeList): [Joke, number, () => void] {
-  const [{ remaining, used, usedPercent: usedRatio, current }, setJoke] =
+  const [{ remaining, used, usedPercent, current }, setJoke] =
     useState<JokeStructure>({
       remaining: [...jokes],
       used: [],
@@ -84,5 +84,5 @@ export function useJokeChooser(jokes: JokeList): [Joke, number, () => void] {
     });
   }, [remaining, used]);
 
-  return [current, usedRatio, chooseJoke];
+  return [current, usedPercent, chooseJoke];
 }
