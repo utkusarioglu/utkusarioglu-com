@@ -26,7 +26,10 @@ export function useJokeFetch() {
         }
         setJokeFetch({
           timestamp: Date.now(),
-          list: jokeList.split("\n").filter((entry) => entry.length),
+          list: jokeList
+            .split("\n")
+            .map((item) => item.trim())
+            .filter((entry) => entry.length && !entry.startsWith("#")),
           error: false,
         });
       })
@@ -65,8 +68,7 @@ export function useJokeChooser(jokes: JokeList): [Joke, () => void] {
     sink.push(current);
     ReactGA.event({
       category: "navigation",
-      action: "get new joke",
-      value: randomIndex,
+      action: "read new joke",
     });
 
     setJoke({
