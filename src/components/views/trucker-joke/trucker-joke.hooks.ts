@@ -5,6 +5,7 @@ import type {
   JokeStructure,
   JokeFetch,
 } from "./trucker-joke.types";
+import ReactGA from "react-ga";
 
 /**
  * Fetches the jokes from the server
@@ -62,6 +63,11 @@ export function useJokeChooser(jokes: JokeList): [Joke, () => void] {
     const randomIndex = Math.round(Math.random() * (source.length - 1));
     const current = source.splice(randomIndex, 1)[0];
     sink.push(current);
+    ReactGA.set({
+      category: "navigation",
+      action: "get new joke",
+      value: randomIndex,
+    });
 
     setJoke({
       remaining: source,
