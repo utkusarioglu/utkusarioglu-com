@@ -15,4 +15,5 @@ export interface JokeStructure {
   remaining: JokeList;
   used: JokeList;
   current: Joke;
+  usedPercent: number; // percentage of completion 0 - 100
 }

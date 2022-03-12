@@ -10,11 +10,20 @@
   text-align: center;
   padding: max(10vw, 120px) 10vw;
 
-  &-click-catcher {
+  &--click-catcher {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+  }
+
+  &--used-ratio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background-color: #00000050;
+    border-bottom-right-radius: 5px;
   }
 }

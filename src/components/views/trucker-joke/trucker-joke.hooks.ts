@@ -54,17 +54,22 @@ export function useJokeFetch() {
  * empty, refilling of the list results on the hook running twice and pushing
  * 2 items to `used` list.
  */
-export function useJokeChooser(jokes: JokeList): [Joke, () => void] {
-  const [{ remaining, used, current }, setJoke] = useState<JokeStructure>({
-    remaining: [...jokes],
-    used: [],
-    current: "",
-  });
+export function useJokeChooser(jokes: JokeList): [Joke, number, () => void] {
+  const [{ remaining, used, usedPercent: usedRatio, current }, setJoke] =
+    useState<JokeStructure>({
+      remaining: [...jokes],
+      used: [],
+      current: "",
+      usedPercent: 0,
+    });
 
   const chooseJoke = useCallback(() => {
     const [source, sink] = !remaining.length ? [used, []] : [remaining, used];
     const randomIndex = Math.round(Math.random() * (source.length - 1));
     const current = source.splice(randomIndex, 1)[0];
+    const usedPercent = Math.round(
+      (used.length / (remaining.length + used.length)) * 100
+    );
     sink.push(current);
     ReactGA.event({
       category: "navigation",
@@ -75,8 +80,9 @@ export function useJokeChooser(jokes: JokeList): [Joke, () => void] {
       remaining: source,
       used: sink,
       current,
+      usedPercent,
     });
   }, [remaining, used]);
 
-  return [current, chooseJoke];
+  return [current, usedRatio, chooseJoke];
 }

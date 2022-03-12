@@ -28,7 +28,7 @@ const TruckerJokeView = () => {
 };
 
 const JokeDisplayView: FC<JokeDisplayViewProps> = ({ jokeList: jokes }) => {
-  const [joke, chooseJoke] = useJokeChooser(jokes);
+  const [joke, usedPercent, chooseJoke] = useJokeChooser(jokes);
 
   useEffect(() => {
     chooseJoke();
@@ -37,7 +37,8 @@ const JokeDisplayView: FC<JokeDisplayViewProps> = ({ jokeList: jokes }) => {
   return (
     <>
       <div className="joke">{joke}</div>
-      <div className="joke-click-catcher" onClick={chooseJoke} />
+      <div className="joke--used-ratio" style={{ width: `${usedPercent}%` }} />
+      <div className="joke--click-catcher" onClick={chooseJoke} />
     </>
   );
 };
