@@ -1,9 +1,9 @@
 import TruckerJokesLayout from "../layouts/trucker-jokes/TruckerJokes.layout";
-import ReactGA from "react-ga";
 import { Helmet } from "react-helmet-async";
+import { useGaPageView } from "../../hooks/useGaPageview.hook";
 
 const TruckerJokesRoute = () => {
-  ReactGA.pageview("/kamyoncu-yazilari");
+  useGaPageView();
 
   return (
     <>

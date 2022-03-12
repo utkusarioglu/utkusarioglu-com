@@ -1,9 +1,9 @@
 import HomeLayout from "../layouts/home/Home.layout";
-import ReactGA from "react-ga";
 import { Helmet } from "react-helmet-async";
+import { useGaPageView } from "../../hooks/useGaPageview.hook";
 
 const HomeRoute = () => {
-  ReactGA.pageview("/");
+  useGaPageView();
 
   return (
     <>

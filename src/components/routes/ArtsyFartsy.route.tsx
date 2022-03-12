@@ -1,9 +1,9 @@
-import ReactGA from "react-ga";
 import { Helmet } from "react-helmet-async";
 import DrawingView from "../views/drawing/Drawing.view";
+import { useGaPageView } from "../../hooks/useGaPageview.hook";
 
 const HomeRoute = () => {
-  ReactGA.pageview("/artsy-fartsy");
+  useGaPageView();
 
   return (
     <>

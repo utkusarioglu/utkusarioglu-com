@@ -1,9 +1,9 @@
 import PaperChainLayout from "../layouts/paper-chain/PaperChain.layout";
-import ReactGA from "react-ga";
 import { Helmet } from "react-helmet-async";
+import { useGaPageView } from "../../hooks/useGaPageview.hook";
 
 const PaperChainRoute = () => {
-  ReactGA.pageview("/paper-chain");
+  useGaPageView();
 
   return (
     <>
