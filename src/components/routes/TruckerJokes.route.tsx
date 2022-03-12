@@ -8,7 +8,7 @@ const TruckerJokesRoute = () => {
   return (
     <>
       <Helmet>
-        <html lang="TR" />
+        <html lang="tr" />
         <title>Ennuriye'nin Kamyoncu Yazıları</title>
       </Helmet>
       <TruckerJokesLayout />
