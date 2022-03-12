@@ -2,15 +2,26 @@
   padding: 1em;
   margin-left: auto;
   margin-right: auto;
-}
 
-.trucker-jokes-layout-title {
-  padding-bottom: 0.4em;
-  font-weight: 600;
-  text-align: center;
-}
+  &--title {
+    padding-bottom: 0.4em;
+    font-weight: 600;
+    text-align: center;
+  }
 
-.trucker-jokes-layout-subtitle {
-  padding-bottom: 0.2em;
-  text-align: center;
+  &--subtitle {
+    padding-bottom: 0.2em;
+    text-align: center;
+  }
+
+  &--view-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

@@ -1,39 +1,34 @@
 import type { FC } from "react";
-import { useEffect, useState, useCallback } from "react";
-import "./TruckerJokes.view.scss";
-
-type Jokes = string[];
+import { useEffect } from "react";
+import type { JokeDisplayViewProps } from "./trucker-joke.types";
+import "./TruckerJoke.view.scss";
+import { useJokeFetch, useJokeChooser } from "./trucker-joke.hooks";
 
 const TruckerJokeView = () => {
-  const [jokes, setJokes] = useState<Jokes>([]);
+  const jokes = useJokeFetch();
 
-  useEffect(() => {
-    fetch("/trucker-jokes/1.json")
-      .then((response) => response.json())
-      .then((json) => {
-        setJokes(json);
-        return json.length;
-      });
-  }, []);
-
-  if (!jokes.length) {
+  if (!jokes.timestamp) {
+    // means still loading
     return null;
   }
 
-  return <JokeDisplayView jokes={jokes} />;
+  if (jokes.error) {
+    return (
+      <span style={{ color: "red" }}>
+        Something went wrong during fetch operation
+      </span>
+    );
+  }
+
+  if (!jokes.list.length) {
+    return <span>Hiç yok ki...</span>;
+  }
+
+  return <JokeDisplayView jokeList={jokes.list} />;
 };
 
-interface JokeDisplayViewProps {
-  jokes: Jokes;
-}
-
-const JokeDisplayView: FC<JokeDisplayViewProps> = ({ jokes }) => {
-  const [joke, setJoke] = useState("");
-
-  const chooseJoke = useCallback(() => {
-    const jokeIndex = Math.round(Math.random() * (jokes.length - 1));
-    setJoke(jokes[jokeIndex]);
-  }, [jokes]);
+const JokeDisplayView: FC<JokeDisplayViewProps> = ({ jokeList: jokes }) => {
+  const [joke, chooseJoke] = useJokeChooser(jokes);
 
   useEffect(() => {
     chooseJoke();
@@ -42,12 +37,7 @@ const JokeDisplayView: FC<JokeDisplayViewProps> = ({ jokes }) => {
   return (
     <>
       <div className="joke">{joke}</div>
-      <div
-        className="joke-click-catcher"
-        onClick={() => {
-          chooseJoke();
-        }}
-      />
+      <div className="joke-click-catcher" onClick={chooseJoke} />
     </>
   );
 };

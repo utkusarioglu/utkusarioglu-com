@@ -5,14 +5,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat&display=block");
 
 .joke {
-  font-size: 8vw;
+  font-size: min(13vw, 13vh);
   font-family: "Caveat", "Arial";
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 5vw;
+  padding: max(10vw, 120px) 10vw;
 
   &-click-catcher {
     position: fixed;
