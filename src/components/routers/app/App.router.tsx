@@ -4,9 +4,9 @@ import { useRoutes } from "react-router-dom";
 const LoadingView = () => <div>Loading...</div>;
 
 const AppRouter = () => {
-  const LazyHomeRoute = lazy(() => import("../../routes/home.route"));
+  const LazyHomeRoute = lazy(() => import("../../routes/Home.route"));
   const LazyPaperChainRoute = lazy(
-    () => import("../../routes/paper-chain.route")
+    () => import("../../routes/PaperChain.route")
   );
   const LazyArtsyFartsyRoute = lazy(
     () => import("../../routes/ArtsyFartsy.route")
