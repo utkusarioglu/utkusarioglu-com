@@ -18,7 +18,7 @@ export function useJokeFetch() {
   });
 
   useEffect(() => {
-    fetch("/trucker-jokes/list.txt")
+    fetch("/trucker-jokes/list.txt", { cache: "no-cache" })
       .then((response) => response.text())
       .then((jokeList) => {
         if (jokeList.startsWith("<")) {
