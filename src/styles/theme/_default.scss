@@ -27,10 +27,11 @@ a {
 
 .paper-chain-list-item {
   color: white;
+  background-color: gray;
 }
 
-.paper-chain__no-items-indicator,
-.paper-chain__loading-indicator,
+.paper-chain-list__no-items-indicator,
+.paper-chain-list__loading-indicator,
 .paper-chain-layout-subtitle {
   color: #bbb;
 }
