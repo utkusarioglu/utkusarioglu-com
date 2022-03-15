@@ -1,0 +1,28 @@
+.paper-chain-list-item {
+  padding: 1em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 1em;
+  background-color: gray;
+
+  &:last-of-type {
+    margin-bottom: 3em;
+  }
+
+  & p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__hud {
+    margin-top: 0.6em;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__hud__notes-indicator {
+    margin-right: 0.4em;
+  }
+}

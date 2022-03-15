@@ -1,60 +1,41 @@
 import { lazy, Suspense } from "react";
 import { useRoutes } from "react-router-dom";
+import { RouteProps } from "./app.router.types";
+
+const routeProps: RouteProps[] = [
+  {
+    path: "/",
+    component: lazy(() => import("../../routes/Home.route")),
+  },
+  {
+    path: "/paper-chain",
+    component: lazy(() => import("../../routes/PaperChain.route")),
+  },
+  {
+    path: "/artsy-fartsy",
+    component: lazy(() => import("../../routes/ArtsyFartsy.route")),
+  },
+  {
+    path: "/kamyoncu-yazilari",
+    component: lazy(() => import("../../routes/TruckerJokes.route")),
+  },
+];
 
 const LoadingView = () => <div>Loading...</div>;
 
 const AppRouter = () => {
-  const LazyHomeRoute = lazy(() => import("../../routes/Home.route"));
-  const LazyPaperChainRoute = lazy(
-    () => import("../../routes/PaperChain.route")
+  return useRoutes(
+    routeProps.map(({ path, component: Component }) => {
+      return {
+        path,
+        element: (
+          <Suspense fallback={LoadingView}>
+            <Component />
+          </Suspense>
+        ),
+      };
+    })
   );
-  const LazyArtsyFartsyRoute = lazy(
-    () => import("../../routes/ArtsyFartsy.route")
-  );
-  const TruckerJokesRoute = lazy(
-    () => import("../../routes/TruckerJokes.route")
-  );
-
-  const routes = useRoutes([
-    {
-      path: "/",
-      element: (
-        <Suspense fallback={LoadingView}>
-          <LazyHomeRoute />
-        </Suspense>
-      ),
-    },
-    {
-      path: "/paper-chain",
-      element: (
-        <Suspense fallback={LoadingView}>
-          <LazyPaperChainRoute />
-        </Suspense>
-      ),
-    },
-    {
-      path: "/artsy-fartsy",
-      element: (
-        <Suspense fallback={LoadingView}>
-          <LazyArtsyFartsyRoute />
-        </Suspense>
-      ),
-    },
-    {
-      path: "/kamyoncu-yazilari",
-      element: (
-        <Suspense fallback={LoadingView}>
-          <TruckerJokesRoute />
-        </Suspense>
-      ),
-    },
-  ]);
-
-  if (!routes) {
-    return <span>Congrats! You have reached 404!</span>;
-  }
-
-  return routes;
 };
 
 export default AppRouter;

@@ -1,6 +1,32 @@
 {
   "list": [
     {
+      "content": "I'm very confused about how we assign value to concepts and ideas",
+      "timestamp": 1647328584058,
+      "style": {
+        "backgroundColor": "black",
+        "backgroundImage": "linear-gradient(45deg, #222222 30%, transparent 30%), linear-gradient(135deg, transparent 70%, #444444 70%)"
+      }
+    },
+    {
+      "content": "It's so easy to destroy things that take decades to build",
+      "timestamp": 1647238642528,
+      "style": {
+        "backgroundImage": "linear-gradient(90deg, #577DAD, #70ADFA, #A789FA, #6850AD)",
+        "color": "#000000"
+      }
+    },
+    {
+      "content": [
+        "Social media let us know how \"stupid\" other people's thoughts are. Then we had the great idea of weaponizing those thoughts.",
+        "Some say that some portion of online malignancy ceased with the sanctions against Russia. I'm not sure what to think about that."
+      ],
+      "timestamp": 1647165995290,
+      "style": {
+        "backgroundColor": "#005544"
+      }
+    },
+    {
       "content": "I'm scared for the world...",
       "timestamp": 1646296919995,
       "style": {
@@ -238,10 +264,7 @@
       "timestamp": 1642143601889,
       "style": {
         "backgroundColor": "#cda5c3",
-        "color": "#600000",
-        "animationName": "border-radius-1em-to-0",
-        "animationDuration": "4s",
-        "animationIterationCount": "infinite"
+        "color": "#600000"
       }
     },
     {

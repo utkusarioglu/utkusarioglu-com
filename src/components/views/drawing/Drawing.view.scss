@@ -17,6 +17,8 @@
   --yellow-2: rgba(242, 226, 4, 1);
   --yellow-3: rgba(242, 231, 179, 1);
 
+  --grass-height: 40%;
+
   // #488C03
   /* Color Theme Swatches in Hex */
   //  color: #488C03;
@@ -105,7 +107,7 @@
   display: block;
   position: fixed;
   left: 50vw;
-  bottom: 40%;
+  bottom: var(--grass-height);
   transform: skew(0, 10deg);
 
   &-frame {
@@ -192,5 +194,15 @@
       font-size: 1.4vw;
       font-weight: 700;
     }
+  }
+}
+
+.mountain {
+  position: fixed;
+  bottom: var(--grass-height);
+
+  & > svg {
+    // This removes the phantom bottom padding of svg inside the div
+    display: block;
   }
 }

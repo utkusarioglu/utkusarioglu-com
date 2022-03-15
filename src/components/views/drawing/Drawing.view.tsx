@@ -29,6 +29,48 @@ const DrawingView = () => (
       <div className="billboard-leg-side-right" />
       <div className="billboard-frame-top" />
     </div>
+    <div className="mountain">
+      <svg>
+        <defs>
+          <linearGradient id="mountain-rise" x2="0" y2="100%">
+            <stop stopColor="yellow" offset="0%" />
+            <stop stopColor="green" offset="100%" />
+          </linearGradient>
+        </defs>
+        <circle
+          cx="50"
+          cy="50"
+          r="40"
+          stroke="var(--green-light)"
+          stroke-width="2vw"
+          fill="var(--black-2)"
+        />
+
+        <line
+          x1={10}
+          y1={15}
+          x2={50}
+          y2={60}
+          stroke="var(--green-light)"
+          strokeWidth="2vw"
+        />
+
+        {/* <rect
+          width="10vw"
+          height="20vw"
+          fill="gray"
+          strokeWidth="4vw"
+          stroke="pink"
+        /> */}
+
+        <polygon
+          points="0,100 50,100 25,0"
+          // stroke="red"
+          // strokeWidth="red"
+          fill="url(#mountain-rise)"
+        />
+      </svg>
+    </div>
   </div>
 );
 
