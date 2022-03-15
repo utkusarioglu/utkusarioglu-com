@@ -1,6 +1,14 @@
 {
   "list": [
     {
+      "content": "I'm very confused about how we assign value to concepts and ideas",
+      "timestamp": 1647328584058,
+      "style": {
+        "backgroundColor": "black",
+        "backgroundImage": "linear-gradient(45deg, #222222 30%, transparent 30%), linear-gradient(135deg, transparent 70%, #444444 70%)"
+      }
+    },
+    {
       "content": "It's so easy to destroy things that take decades to build",
       "timestamp": 1647238642528,
       "style": {
@@ -256,10 +264,7 @@
       "timestamp": 1642143601889,
       "style": {
         "backgroundColor": "#cda5c3",
-        "color": "#600000",
-        "animationName": "border-radius-1em-to-0",
-        "animationDuration": "4s",
-        "animationIterationCount": "infinite"
+        "color": "#600000"
       }
     },
     {
