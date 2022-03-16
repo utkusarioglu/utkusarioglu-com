@@ -1,6 +1,16 @@
 {
   "list": [
     {
+      "content": "I want the world to know that I don't fully wake up until around 12pm",
+      "timestamp": 1647409581049,
+      "style": {
+        "backgroundImage": "radial-gradient(circle at bottom right, #083643, #476C5E)",
+        "color": "#B1E001",
+        "border": "1px dashed #CEF09D",
+        "boxShadow": "0 0 10px inset #083643"
+      }
+    },
+    {
       "content": "I'm very confused about how we assign value to concepts and ideas",
       "timestamp": 1647328584058,
       "style": {
