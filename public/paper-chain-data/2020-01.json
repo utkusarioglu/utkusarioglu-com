@@ -1,6 +1,19 @@
 {
   "list": [
     {
+      "content": "The cold war is probably back...",
+      "timestamp": 1647507390611,
+      "style": {
+        "backgroundColor": "#0D0000",
+        "backgroundImage": "conic-gradient(from 90deg, transparent, #BF2011 5%, transparent)",
+        "color": "#E0F2CE",
+        "boxShadow": "inset 0 0 15px #0D0000, 0 0 5px #0D0000",
+        "borderWidth": "2px",
+        "borderColor": "#BF2011",
+        "borderStyle": "dashed none"
+      }
+    },
+    {
       "content": "I want the world to know that I don't fully wake up until around 12pm",
       "timestamp": 1647409581049,
       "style": {
