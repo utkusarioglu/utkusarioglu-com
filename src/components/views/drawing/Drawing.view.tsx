@@ -29,48 +29,56 @@ const DrawingView = () => (
       <div className="billboard-leg-side-right" />
       <div className="billboard-frame-top" />
     </div>
-    <div className="mountain">
-      <svg>
-        <defs>
-          <linearGradient id="mountain-rise" x2="0" y2="100%">
-            <stop stopColor="yellow" offset="0%" />
-            <stop stopColor="green" offset="100%" />
+    <svg className="mountain" width="100%" height="100px">
+      <defs>
+        <g id="mountain">
+          <linearGradient id="mountain-top-fill" x2="0" y2="100%">
+            <stop stopColor="white" offset="0%" />
+            <stop stopColor="gray" offset="100%" />
           </linearGradient>
-        </defs>
-        <circle
+          <linearGradient id="mountain-fill" x2="0" y2="100%">
+            <stop stopColor="var(--white)" offset="0%" />
+            <stop stopColor="var(--green-2)" offset="90%" />
+            <stop stopColor="var(--green-1)" offset="100%" />
+          </linearGradient>
+          <polygon points="50 0, 100 80, 0 80" fill="url(#mountain-fill)" />
+          <polygon
+            id="mountain-top"
+            points="50 0, 75 40, 70 45, 65 40, 60 45, 55 40, 50 45, 45 40, 40 45, 35 40, 30 45, 25 40"
+            fill="url(#mountain-top-fill)"
+          />
+        </g>
+      </defs>
+      {/* <circle
           cx="50"
           cy="50"
           r="40"
           stroke="var(--green-light)"
           stroke-width="2vw"
           fill="var(--black-2)"
-        />
+        /> */}
 
-        <line
+      {/* <line
           x1={10}
           y1={15}
           x2={50}
           y2={60}
           stroke="var(--green-light)"
           strokeWidth="2vw"
-        />
+        /> */}
 
-        {/* <rect
+      {/* <rect
           width="10vw"
           height="20vw"
           fill="gray"
           strokeWidth="4vw"
           stroke="pink"
         /> */}
-
-        <polygon
-          points="0,100 50,100 25,0"
-          // stroke="red"
-          // strokeWidth="red"
-          fill="url(#mountain-rise)"
-        />
-      </svg>
-    </div>
+      <use y="20" xlinkHref="#mountain" filter="opacity(0.7)" />
+      <use x="40" transform="scale(1.25)" xlinkHref="#mountain" />
+      <use y="20" x="150" xlinkHref="#mountain" filter="opacity(0.8)" />
+      <use y="00" x="150" transform="scale(1.25)" xlinkHref="#mountain" />
+    </svg>
   </div>
 );
 

@@ -200,9 +200,4 @@
 .mountain {
   position: fixed;
   bottom: var(--grass-height);
-
-  & > svg {
-    // This removes the phantom bottom padding of svg inside the div
-    display: block;
-  }
 }
