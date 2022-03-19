@@ -1,6 +1,15 @@
 {
   "list": [
     {
+      "content": "There isn't enough time in the world to do everything that I want to do😔",
+      "timestamp": 1647666946147,
+      "style": {
+        "backgroundColor": "#3E211D",
+        "backgroundImage": "repeating-conic-gradient(from 0deg, #290000 0deg 30deg, transparent 30deg 60deg)",
+        "color": "#EDF4F3"
+      }
+    },
+    {
       "content": "The cold war is probably back...",
       "timestamp": 1647507390611,
       "style": {
