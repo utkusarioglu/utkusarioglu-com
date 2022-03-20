@@ -1,6 +1,18 @@
 {
   "list": [
     {
+      "content": [
+        "The most time I spend on these daily posts actually goes to choosing a color palette and design. I try to find some interesting new way of applying colors on the card. ",
+        "Some days I finish the card with the feelings of amusement for the result, and some days I just get bored and decide that whatever I chose is just fine."
+      ],
+      "timestamp": 1647753272963,
+      "style": {
+        "backgroundImage": "repeating-linear-gradient(0deg, #CC8D1A, #BDA523)",
+        "boxShadow": "inset 0 0 10px #CC8D1A",
+        "color": "#16232E"
+      }
+    },
+    {
       "content": "There isn't enough time in the world to do everything that I want to do😔",
       "timestamp": 1647666946147,
       "style": {
