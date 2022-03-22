@@ -1,6 +1,27 @@
 {
   "list": [
     {
+      "content": "Yesterday I finally came around to achieving the capability of deploying the same piece of code on all devices: mobile, desktop, and web. This makes me happy as it tells me that I have reached a milestone I have set a few years back.",
+      "timestamp": 1647926328675,
+      "style": {
+        "backgroundImage": "radial-gradient(ellipse at top center, #571209, #000000 80%, #FFD84F 81%, #000000 82%, #000000 90%, #C5ED73 91%, #000000 92%)",
+        "color": "#FFFFFF",
+        "textShadow": "0 0 2px #000000"
+      }
+    },
+    {
+      "content": [
+        "I remember as a kid running towards a rainbow in order to stand under it. I ran quite the distance, and I only stopped when my path was completely blocked by some private property.",
+        "Thinking about that day, I always thought that if I ran far enough, I would have been able to stand under that rainbow, because the arch felt so close that day.",
+        "It was only years later in school that I learned if I see a big rainbow facing me, I am probably under it even if it appears ahead."
+      ],
+      "timestamp": 1647842484816,
+      "style": {
+        "color": "#000",
+        "backgroundImage": "radial-gradient(circle at bottom center, #46BDEB, #7FF5B1, #B4DF80, #F5E07F, #EBAF7A)"
+      }
+    },
+    {
       "content": [
         "The most time I spend on these daily posts actually goes to choosing a color palette and design. I try to find some interesting new way of applying colors on the card. ",
         "Some days I finish the card with the feelings of amusement for the result, and some days I just get bored and decide that whatever I chose is just fine."
