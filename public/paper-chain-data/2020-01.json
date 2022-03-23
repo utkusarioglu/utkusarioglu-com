@@ -1,6 +1,16 @@
 {
   "list": [
     {
+      "content": "Because of what's happening in Ukraine, I have read and watched way more network news than I normally do. I can confidently say that I don't feel better informed after all of that exposure.",
+      "timestamp": 1648014356923,
+      "style": {
+        "backgroundColor": "#024236",
+        "backgroundImage": "radial-gradient(circle at top left, transparent 7%, #F5CB6F7F, transparent 8%), radial-gradient(circle at bottom left, transparent 7%, #005930, transparent 8%), radial-gradient(circle at bottom right, transparent 7%, #F5CB6F7F, transparent 8%), radial-gradient(circle at top right, transparent 7%, #005930, transparent 8%)",
+        "color": "#D6F0BB",
+        "textShadow": "0 0 1px #024236, 0 0 2px #024236"
+      }
+    },
+    {
       "content": "Yesterday I finally came around to achieving the capability of deploying the same piece of code on all devices: mobile, desktop, and web. This makes me happy as it tells me that I have reached a milestone I have set a few years back.",
       "timestamp": 1647926328675,
       "style": {
