@@ -1,6 +1,16 @@
 {
   "list": [
     {
+      "content": "I found this channel about the strategies used by countries and people throughout the history. Its tone is very academic. I'm pretty sure I'll love watching it.",
+      "timestamp": 1648098115941,
+      "style": {
+        "backgroundColor": "#FFC418",
+        "textShadow": "0 0 1px #0A0A0A, 0 0 2px #FFC418, 0 0 3px #FFC418, 0 0 4px #FFC418",
+        "color": "#0A0A0A",
+        "backgroundImage": "linear-gradient(135deg, transparent 92%, #01006B 92%, #01006B 93%, transparent 93%, transparent 95%, #9E0500 95%, #9E0500 96%, transparent 96%)"
+      }
+    },
+    {
       "content": "Because of what's happening in Ukraine, I have read and watched way more network news than I normally do. I can confidently say that I don't feel better informed after all of that exposure.",
       "timestamp": 1648014356923,
       "style": {
