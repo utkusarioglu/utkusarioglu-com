@@ -1,6 +1,15 @@
 {
   "list": [
     {
+      "content": "I wonder whether building mansions on the moon will ever be a thing",
+      "timestamp": 1648183907586,
+      "style": {
+        "backgroundColor": "#E85E44",
+        "backgroundImage": "repeating-linear-gradient(to bottom, transparent 10px, #F4AE68 10px, #F4AE68 20px, #E9D1AD 20px, #E9D1AD 30px, #F4AE68 30px, #F4AE68 40px, transparent 40px, transparent 50px)",
+        "color": "#0D0D0D"
+      }
+    },
+    {
       "content": "I found this channel about the strategies used by countries and people throughout the history. Its tone is very academic. I'm pretty sure I'll love watching it.",
       "timestamp": 1648098115941,
       "style": {
