@@ -1,6 +1,17 @@
 {
   "list": [
     {
+      "content": "My mom dropped her phone from the 4th floor onto a concrete road. Needless to say the phone didn't make it.",
+      "timestamp": 1648269455437,
+      "style": {
+        "backgroundColor": "white",
+        "backgroundImage": "repeating-linear-gradient(45deg, transparent 10px, #eee 10px, #eee 20px, transparent 20px, transparent 30px)",
+        "color": "black",
+        "fontWeight": "700",
+        "border": "6px solid black"
+      }
+    },
+    {
       "content": "I wonder whether building mansions on the moon will ever be a thing",
       "timestamp": 1648183907586,
       "style": {
