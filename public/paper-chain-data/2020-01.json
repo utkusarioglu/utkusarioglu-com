@@ -1,6 +1,16 @@
 {
   "list": [
     {
+      "content": "I can't find good metal anymore. I think this is one of the reasons for pivoting towards classical and jazz.",
+      "timestamp": 1648360680536,
+      "style": {
+        "backgroundColor": "#000000",
+        "fontWeight": "700",
+        "color": "#ff0000",
+        "boxShadow": "inset 5px 5px 0 #aa0000, inset -5px -5px 0 #ffffff"
+      }
+    },
+    {
       "content": "My mom dropped her phone from the 4th floor onto a concrete road. Needless to say the phone didn't make it.",
       "timestamp": 1648269455437,
       "style": {
