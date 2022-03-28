@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { PaperChain } from "./paper-chain-list.types";
 
+/**
+ * #1 This shall be computed by a `current month` function
+ */
 export function usePaperChainList() {
   const [paperChain, setPaperChain] = useState<PaperChain>({
     timestamp: 0,
@@ -8,7 +11,10 @@ export function usePaperChainList() {
   });
 
   useEffect(() => {
-    fetch("/paper-chain-data/2020-01.json")
+    const filePath = "/paper-chain-data";
+    const fileName = "2020-01"; // #1
+    const ext = "json";
+    fetch(`${filePath}/${fileName}.${ext}`)
       .then((response) => response.json())
       .then((paperChain) => {
         setPaperChain({
