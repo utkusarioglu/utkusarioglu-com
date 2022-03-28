@@ -16,12 +16,17 @@
 
   &__hud {
     margin-top: 0.6em;
-    font-size: 0.8em;
     display: flex;
     justify-content: flex-end;
   }
 
   &__hud__notes-indicator {
     margin-right: 0.4em;
+    font-size: initial;
+  }
+
+  &__hud__timestamp {
+    font-size: initial;
+    font-weight: initial;
   }
 }
