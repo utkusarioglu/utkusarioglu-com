@@ -1,6 +1,18 @@
 {
   "list": [
     {
+      "content": "I'm a bunny",
+      "timestamp": 1648446504466,
+      "style": {
+        "backgroundImage": "repeating-radial-gradient(circle, #267365 0px, #256c60 20px, #267365 30px)",
+        "color": "#F2CB05",
+        "fontSize": 50,
+        "textAlign": "center",
+        "fontWeight": "700",
+        "textShadow": "1px 1px 2px #F29F05, 2px 2px 3px #F28705, 3px 3px 4px #F23030, 4px 4px 5px #F28705, 5px 5px 6px #f29f05, 6px 6px 7px #f28705, 7px 7px 8px #f23030, 8px 8px 9px #f28705, 9px 9px 10px #f29f05, 10px 10px 11px #f23030"
+      }
+    },
+    {
       "content": "I can't find good metal anymore. I think this is one of the reasons for pivoting towards classical and jazz.",
       "timestamp": 1648360680536,
       "style": {
