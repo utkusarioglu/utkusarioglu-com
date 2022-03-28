@@ -1,6 +1,133 @@
 {
   "list": [
     {
+      "content": "I'm a bunny",
+      "timestamp": 1648446504466,
+      "style": {
+        "backgroundImage": "repeating-radial-gradient(circle, #267365 0px, #256c60 20px, #267365 30px)",
+        "color": "#F2CB05",
+        "fontSize": 50,
+        "textAlign": "center",
+        "fontWeight": "700",
+        "textShadow": "1px 1px 2px #F29F05, 2px 2px 3px #F28705, 3px 3px 4px #F23030, 4px 4px 5px #F28705, 5px 5px 6px #f29f05, 6px 6px 7px #f28705, 7px 7px 8px #f23030, 8px 8px 9px #f28705, 9px 9px 10px #f29f05, 10px 10px 11px #f23030"
+      }
+    },
+    {
+      "content": "I can't find good metal anymore. I think this is one of the reasons for pivoting towards classical and jazz.",
+      "timestamp": 1648360680536,
+      "style": {
+        "backgroundColor": "#000000",
+        "fontWeight": "700",
+        "color": "#ff0000",
+        "boxShadow": "inset 5px 5px 0 #aa0000, inset -5px -5px 0 #ffffff"
+      }
+    },
+    {
+      "content": "My mom dropped her phone from the 4th floor onto a concrete road. Needless to say the phone didn't make it.",
+      "timestamp": 1648269455437,
+      "style": {
+        "backgroundColor": "white",
+        "backgroundImage": "repeating-linear-gradient(45deg, transparent 10px, #eee 10px, #eee 20px, transparent 20px, transparent 30px)",
+        "color": "black",
+        "fontWeight": "700",
+        "border": "6px solid black"
+      }
+    },
+    {
+      "content": "I wonder whether building mansions on the moon will ever be a thing",
+      "timestamp": 1648183907586,
+      "style": {
+        "backgroundColor": "#E85E44",
+        "backgroundImage": "repeating-linear-gradient(to bottom, transparent 10px, #F4AE68 10px, #F4AE68 20px, #E9D1AD 20px, #E9D1AD 30px, #F4AE68 30px, #F4AE68 40px, transparent 40px, transparent 50px)",
+        "color": "#0D0D0D"
+      }
+    },
+    {
+      "content": "I found this channel about the strategies used by countries and people throughout the history. Its tone is very academic. I'm pretty sure I'll love watching it.",
+      "timestamp": 1648098115941,
+      "style": {
+        "backgroundColor": "#FFC418",
+        "textShadow": "0 0 1px #0A0A0A, 0 0 2px #FFC418, 0 0 3px #FFC418, 0 0 4px #FFC418",
+        "color": "#0A0A0A",
+        "backgroundImage": "linear-gradient(135deg, transparent 92%, #01006B 92%, #01006B 93%, transparent 93%, transparent 95%, #9E0500 95%, #9E0500 96%, transparent 96%)"
+      }
+    },
+    {
+      "content": "Because of what's happening in Ukraine, I have read and watched way more network news than I normally do. I can confidently say that I don't feel better informed after all of that exposure.",
+      "timestamp": 1648014356923,
+      "style": {
+        "backgroundColor": "#024236",
+        "backgroundImage": "radial-gradient(circle at top left, transparent 7%, #F5CB6F7F, transparent 8%), radial-gradient(circle at bottom left, transparent 7%, #005930, transparent 8%), radial-gradient(circle at bottom right, transparent 7%, #F5CB6F7F, transparent 8%), radial-gradient(circle at top right, transparent 7%, #005930, transparent 8%)",
+        "color": "#D6F0BB",
+        "textShadow": "0 0 1px #024236, 0 0 2px #024236"
+      }
+    },
+    {
+      "content": "Yesterday I finally came around to achieving the capability of deploying the same piece of code on all devices: mobile, desktop, and web. This makes me happy as it tells me that I have reached a milestone I have set a few years back.",
+      "timestamp": 1647926328675,
+      "style": {
+        "backgroundImage": "radial-gradient(ellipse at top center, #571209, #000000 80%, #FFD84F 81%, #000000 82%, #000000 90%, #C5ED73 91%, #000000 92%)",
+        "color": "#FFFFFF",
+        "textShadow": "0 0 2px #000000"
+      }
+    },
+    {
+      "content": [
+        "I remember as a kid running towards a rainbow in order to stand under it. I ran quite the distance, and I only stopped when my path was completely blocked by some private property.",
+        "Thinking about that day, I always thought that if I ran far enough, I would have been able to stand under that rainbow, because the arch felt so close that day.",
+        "It was only years later in school that I learned if I see a big rainbow facing me, I am probably under it even if it appears ahead."
+      ],
+      "timestamp": 1647842484816,
+      "style": {
+        "color": "#000",
+        "backgroundImage": "radial-gradient(circle at bottom center, #46BDEB, #7FF5B1, #B4DF80, #F5E07F, #EBAF7A)"
+      }
+    },
+    {
+      "content": [
+        "The most time I spend on these daily posts actually goes to choosing a color palette and design. I try to find some interesting new way of applying colors on the card. ",
+        "Some days I finish the card with the feelings of amusement for the result, and some days I just get bored and decide that whatever I chose is just fine."
+      ],
+      "timestamp": 1647753272963,
+      "style": {
+        "backgroundImage": "repeating-linear-gradient(0deg, #CC8D1A, #BDA523)",
+        "boxShadow": "inset 0 0 10px #CC8D1A",
+        "color": "#16232E"
+      }
+    },
+    {
+      "content": "There isn't enough time in the world to do everything that I want to do😔",
+      "timestamp": 1647666946147,
+      "style": {
+        "backgroundColor": "#3E211D",
+        "backgroundImage": "repeating-conic-gradient(from 0deg, #290000 0deg 30deg, transparent 30deg 60deg)",
+        "color": "#EDF4F3"
+      }
+    },
+    {
+      "content": "The cold war is probably back...",
+      "timestamp": 1647507390611,
+      "style": {
+        "backgroundColor": "#0D0000",
+        "backgroundImage": "conic-gradient(from 90deg, transparent, #BF2011 5%, transparent)",
+        "color": "#E0F2CE",
+        "boxShadow": "inset 0 0 15px #0D0000, 0 0 5px #0D0000",
+        "borderWidth": "2px",
+        "borderColor": "#BF2011",
+        "borderStyle": "dashed none"
+      }
+    },
+    {
+      "content": "I want the world to know that I don't fully wake up until around 12pm",
+      "timestamp": 1647409581049,
+      "style": {
+        "backgroundImage": "radial-gradient(circle at bottom right, #083643, #476C5E)",
+        "color": "#B1E001",
+        "border": "1px dashed #CEF09D",
+        "boxShadow": "0 0 10px inset #083643"
+      }
+    },
+    {
       "content": "I'm very confused about how we assign value to concepts and ideas",
       "timestamp": 1647328584058,
       "style": {

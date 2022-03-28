@@ -8,7 +8,7 @@ const HomeRoute = () => {
   return (
     <>
       <Helmet>
-        <title>Utku Sarioglu</title>
+        <title>Utku Sarioglu - Artsy Fartsy</title>
       </Helmet>
       <DrawingView />
     </>

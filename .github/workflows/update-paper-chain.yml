@@ -2,7 +2,6 @@ name: Update paper chain
 on:
   push:
     branches:
-      - main
       - dev
     paths:
       - "public/paper-chain-data/**.json"

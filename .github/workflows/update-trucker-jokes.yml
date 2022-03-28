@@ -2,7 +2,6 @@ name: Update Trucker Jokes Source
 on:
   push:
     branches:
-      - main
       - dev
     paths:
       - "public/trucker-jokes/**.txt"
