@@ -1,6 +1,15 @@
 {
   "list": [
     {
+      "content": "I'm usually surprised by how much social media means to other people",
+      "timestamp": 1648532591637,
+      "style": {
+        "backgroundColor": "#402116",
+        "backgroundImage": "radial-gradient(circle at top left, #BF665E 30%, #40211600 30.3%), linear-gradient(160deg, #40211600 60%, #9A44A6F7)",
+        "color": "#F2C063"
+      }
+    },
+    {
       "content": "I'm a bunny",
       "timestamp": 1648446504466,
       "style": {
