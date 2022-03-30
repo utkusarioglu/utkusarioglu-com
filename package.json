@@ -26,7 +26,8 @@
     "dev": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "add-new-paper-chain-link": "scripts/add-new-paper-chain-link.js"
   },
   "eslintConfig": {
     "extends": [
