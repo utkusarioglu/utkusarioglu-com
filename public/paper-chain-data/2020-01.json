@@ -1,6 +1,17 @@
 {
   "list": [
     {
+      "content": "Many of the lies that people tell each other seem to be for things that they wish would be true about themselves",
+      "timestamp": 1648622505437,
+      "style": {
+        "backgroundColor": "transparent",
+        "backgroundImage": "linear-gradient(-45deg, #ffffff20, #00000020)",
+        "color": "white",
+        "boxShadow": "inset 10px 10px 20px #00000040, inset -10px -10px 20px #ffffff40",
+        "padding": "20px"
+      }
+    },
+    {
       "content": "I'm usually surprised by how much social media means to other people",
       "timestamp": 1648532591637,
       "style": {
