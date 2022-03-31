@@ -1,6 +1,16 @@
 {
   "list": [
     {
+      "content": "I want to find some lectures about mindsets of different cultures.",
+      "timestamp": 1648703486422,
+      "style": {
+        "backgroundImage": "repeating-radial-gradient(circle at bottom left, #182625 0px, #182625 1em, #28403D 1em, #28403D 2em, #455559 2em, #455559 3em,  #2F3D40 3em, #2F3D40 4em, #3D5A73 4em, #3D5A73 5em)",
+        "color": "white",
+        "textShadow": "1px 1px 3px #182625",
+        "boxShadow": "2px 2px 4px #182625"
+      }
+    },
+    {
       "content": "Many of the lies that people tell each other seem to be for things that they wish would be true about themselves",
       "timestamp": 1648622505437,
       "style": {
@@ -29,7 +39,9 @@
         "fontSize": 50,
         "textAlign": "center",
         "fontWeight": "700",
-        "textShadow": "1px 1px 2px #F29F05, 2px 2px 3px #F28705, 3px 3px 4px #F23030, 4px 4px 5px #F28705, 5px 5px 6px #f29f05, 6px 6px 7px #f28705, 7px 7px 8px #f23030, 8px 8px 9px #f28705, 9px 9px 10px #f29f05, 10px 10px 11px #f23030"
+        "textShadow": "1px 1px 2px #F29F05, 2px 2px 3px #F28705, 3px 3px 4px #F23030, 4px 4px 5px #F28705, 5px 5px 6px #f29f05, 6px 6px 7px #f28705, 7px 7px 8px #f23030, 8px 8px 9px #f28705, 9px 9px 10px #f29f05, 10px 10px 11px #f23030",
+        "borderRadius": "0.3em",
+        "marginBottom": "0.3em"
       }
     },
     {
