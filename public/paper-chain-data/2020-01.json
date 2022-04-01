@@ -1,6 +1,17 @@
 {
   "list": [
     {
+      "content": "Is blockchain really the future of money?",
+      "timestamp": 1648787806623,
+      "style": {
+        "backgroundColor": "#F2F2F2",
+        "color": "#8C1C1C",
+        "border": "2px solid #F2F2F2",
+        "padding": "1.5em",
+        "boxShadow": "inset 10px 10px 10px #F2A341, inset -10px -10px 10px #F2C849"
+      }
+    },
+    {
       "content": "I want to find some lectures about mindsets of different cultures.",
       "timestamp": 1648703486422,
       "style": {
