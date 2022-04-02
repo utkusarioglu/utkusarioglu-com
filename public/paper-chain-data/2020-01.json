@@ -1,6 +1,17 @@
 {
   "list": [
     {
+      "content": "Do most of us live longer than our wisdom allows?",
+      "notes": "This feels like a bullshit question",
+      "timestamp": 1648879459342,
+      "style": {
+        "backgroundColor": "#363432",
+        "backgroundImage": "linear-gradient(90deg, #00000040 50%, #36343200 50%), linear-gradient(70deg, #00000040 50%, #36343200 50%), linear-gradient(50deg, #00000040 50%, #36343200 50%), linear-gradient(30deg, #00000040 50%, #36343200 50%)",
+        "color": "#F0941F",
+        "border": "1px solid #F0941F"
+      }
+    },
+    {
       "content": "Is blockchain really the future of money?",
       "timestamp": 1648787806623,
       "style": {
