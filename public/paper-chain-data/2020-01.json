@@ -1,6 +1,16 @@
 {
   "list": [
     {
+      "content": "I'm not sure why I cannot tell what my favorite band is, my best or worst day was... Why is this unavailable to me?",
+      "timestamp": 1649053239837,
+      "style": {
+        "backgroundColor": "#F2E7DC",
+        "backgroundImage": "repeating-linear-gradient(transparent 0px, transparent 1px, #A9D9D0 1px, #A9D9D0 2px), radial-gradient(circle at bottom right, #038C7F 15%, transparent 15%), radial-gradient(circle at bottom left, #038C7F 8%, transparent 8%)",
+        "textShadow": "1px 0px 1px #027373",
+        "color": "#0D0D0D"
+      }
+    },
+    {
       "content": [
         "As Ukraine takes back territory, so much horror that people went through start being told.",
         "These stories come from survivors. I don't know how much worse would have come from the ones that didn't make it..."
@@ -265,7 +275,12 @@
       }
     },
     {
-      "content": ["I watched", "Kong Skull Island", "and it was", "meh."],
+      "content": [
+        "I watched",
+        "Kong Skull Island",
+        "and it was",
+        "meh."
+      ],
       "timestamp": 1644993848273,
       "style": {
         "backgroundColor": "#1D1C53",
