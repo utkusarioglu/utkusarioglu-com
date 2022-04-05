@@ -1,6 +1,14 @@
 {
   "list": [
     {
+      "content": "Lili Boulanger was such an amazing composer. It's sad that she lived a short and painful life😔",
+      "timestamp": 1649139473415,
+      "style": {
+        "background": "repeating-linear-gradient(to left, transparent 0px, #377BA6 1px, transparent 2px), radial-gradient(200vw 100% at bottom center, transparent 37%, #A68053 40%, #377BA6 45%), repeating-linear-gradient(#4D5923 0px, transparent 1px, transparent 2px, #4D5923 2px, #4D5923 4px), repeating-radial-gradient(200vw 100% at bottom center, #A68053 0px, #261501 5px, #A68053 9px)",
+        "color": "#F2F1F0"
+      }
+    },
+    {
       "content": "I'm not sure why I cannot tell what my favorite band is, my best or worst day was... Why is this unavailable to me?",
       "timestamp": 1649053239837,
       "style": {
@@ -275,12 +283,7 @@
       }
     },
     {
-      "content": [
-        "I watched",
-        "Kong Skull Island",
-        "and it was",
-        "meh."
-      ],
+      "content": ["I watched", "Kong Skull Island", "and it was", "meh."],
       "timestamp": 1644993848273,
       "style": {
         "backgroundColor": "#1D1C53",
