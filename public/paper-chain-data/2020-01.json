@@ -1,6 +1,18 @@
 {
   "list": [
     {
+      "content": [
+        "When I was a kid, I used to feel sad about the fact that I'd never be able to travel to other galaxies.",
+        "I think that feeling never really went away. I just learned to accept this fact."
+      ],
+      "timestamp": 1649310777675,
+      "style": {
+        "backgroundColor": "#07070D",
+        "backgroundImage": "radial-gradient(150vw 100% at bottom center, #3238A655, transparent 40%)",
+        "color": "#dddac4"
+      }
+    },
+    {
       "content": "What's going to replace the spirit of Helsinki?",
       "timestamp": 1649226016056,
       "style": {
