@@ -2,6 +2,17 @@
   "list": [
     {
       "content": [
+        "Many people seem to think that truth is capable of changing minds. I have seen seen quite a few examples of truth failing to change minds; both in western and eastern societies."
+      ],
+      "timestamp": 1649399002140,
+      "style": {
+        "backgroundColor": "#BFB3A4",
+        "backgroundImage": "repeating-linear-gradient(90deg, transparent 0px, #12A652 1px, transparent 2px)",
+        "color": "#465059"
+      }
+    },
+    {
+      "content": [
         "When I was a kid, I used to feel sad about the fact that I'd never be able to travel to other galaxies.",
         "I think that feeling never really went away. I just learned to accept this fact."
       ],
