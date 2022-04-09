@@ -1,6 +1,16 @@
 {
   "list": [
     {
+      "content": "I thought I knew OOP but C++'s OOP pattern confused me a bit",
+      "timestamp": 1649478383121,
+      "style": {
+        "backgroundColor": "#2A3740",
+        "color": "#F2BC79",
+        "border": "2px solid #D9A171",
+        "boxShadow": "inset 2px 2px 2px #736D63, inset -2px -2px 2px #222222"
+      }
+    },
+    {
       "content": [
         "Many people seem to think that truth is capable of changing minds. I have seen seen quite a few examples of truth failing to change minds; both in western and eastern societies."
       ],
