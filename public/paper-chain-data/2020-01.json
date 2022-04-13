@@ -1,6 +1,24 @@
 {
   "list": [
     {
+      "content": [
+        "There are a lot of stray dogs in the streets here. I have had them gang up on me twice during this last year, and I know that this doesn't only happen to me.",
+        "I hear them barking in the streets almost every night, and sometimes during the day as well. Their noise has actually become a very salient symbolism for the decadence of this place.",
+        "This morning I was expecting to wake up to an uneventful, almost boring day with lots of coding work to handle. I was in the kitchen and at best half awake, preparing my morning coffee when I heard the dogs barking outside. But this time their noise felt closer. This was somewhat surprising because I live in a complex and they don't usually come within the gates.",
+        "I glanced out the window expecting to see dogs barking each other. Instead, I glanced out just at the right moment to see one of the cats of the complex desperately fleeing up a tree, only to be captured from its behind by one of the dogs, and pulled to the ground.",
+        "I had to watch those three dogs bite into that poor cat, while it was still trying to claw the ground to pull itself away from the teeth that were surely penetrating through its abdomen.",
+        "I thought of throwing something, yelling, anything... but I was too far away to reach and to stop what was happening. ",
+        "It didn't take long for the cat to stop fighting for its life. It was probably gone before I could have done something.",
+        "None of this is about me, but after that moment I couldn't stand. I had to lay down in cold sweat and take in what I just witnessed.",
+        "I don't see death often. Let alone; violent death. This wasn't done for feeding. They left the cat's body right there, in the middle of the playground, where the kids of the complex usually gather to play and feed animals..."
+      ],
+      "timestamp": 1649734395000,
+      "style": {
+        "backgroundColor": "black",
+        "color": "white"
+      }
+    },
+    {
       "content": "I thought I knew OOP but C++'s OOP pattern confused me a bit",
       "timestamp": 1649478383121,
       "style": {
