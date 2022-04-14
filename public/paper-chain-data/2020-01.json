@@ -1,6 +1,16 @@
 {
   "list": [
     {
+      "content": "Can summer come already pretty please?",
+      "timestamp": 1649914705508,
+      "style": {
+        "backgroundImage": "linear-gradient(transparent 85%, #285400 88%, #093c00 100%), radial-gradient(circle at bottom center, #F2B90C 18%, transparent 18%), repeating-conic-gradient(at bottom center, #F2B90C50 0deg 10.58deg, transparent 10.58deg 21.17deg), linear-gradient(#afc3e1, #4173cf)",
+        "color": "#001a30",
+        "textAlign": "center",
+        "fontWeight": "800"
+      }
+    },
+    {
       "content": [
         "There are a lot of stray dogs in the streets here. I have had them gang up on me twice during this last year, and I know that this doesn't only happen to me.",
         "I hear them barking in the streets almost every night, and sometimes during the day as well. Their noise has actually become a very salient symbolism for the decadence of this place.",
