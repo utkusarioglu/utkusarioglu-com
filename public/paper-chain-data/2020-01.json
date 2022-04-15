@@ -1,6 +1,14 @@
 {
   "list": [
     {
+      "content": "Sometimes people you don't expect end up lingering in your mindscape for years",
+      "timestamp": 1650011404797,
+      "style": {
+        "backgroundImage": "linear-gradient(transparent 0 10%, #F2E8B3 10% 90%, transparent 90%), repeating-linear-gradient(90deg, #025939 0px 20px, #BBBF3B 20px 40px, #F2E8B3 40px 60px, #F2B33D 60px 80px, #D95D30 80px 100px)",
+        "color": "black"
+      }
+    },
+    {
       "content": "Can summer come already pretty please?",
       "timestamp": 1649914705508,
       "style": {
