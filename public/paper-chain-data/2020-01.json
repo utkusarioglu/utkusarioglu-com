@@ -1,6 +1,16 @@
 {
   "list": [
     {
+      "content": "My hair got tall enough to shed the blonde-ish streak I had. Now I'm due for a new one.",
+      "timestamp": 1650257115474,
+      "style": {
+        "backgroundColor": "#F2D6BD",
+        "color": "#0D0D0D",
+        "border": "1px solid #400101",
+        "boxShadow": "inset 4px 4px 0px #40342A, inset -4px -4px 0px #8C7B6C"
+      }
+    },
+    {
       "content": "Today I'll be on an 8 hour drive with my dad in a small car",
       "timestamp": 1650171249499,
       "style": {
