@@ -1,6 +1,15 @@
 {
   "list": [
     {
+      "content": "Interests of a country are rarely aligned by the interests of its people. The same is largely true for humans and the cells that make them up.",
+      "timestamp": 1650541988382,
+      "style": {
+        "backgroundColor": "black",
+        "backgroundImage": "radial-gradient(500vw 150px at bottom center, #84A651 0% 7%, #D5D95F 8% 10%, #84A651 11% 17%, transparent 18% 100%),linear-gradient(#84A651, #D5D95F)",
+        "color": "black"
+      }
+    },
+    {
       "content": "How do you tell how high you are on the side of a mountain if you lost sense of where the ground is?",
       "timestamp": 1650430931662,
       "style": {
