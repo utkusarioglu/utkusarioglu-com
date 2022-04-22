@@ -1,6 +1,17 @@
 {
   "list": [
     {
+      "content": "Is it really Hegel's thesis-antithesis-synthesis? Or do we choose to find counters to ideas, only to move on to another pair eventually?",
+      "timestamp": 1650603689295,
+      "style": {
+        "backgroundColor": "#5C6560",
+        "backgroundImage": "conic-gradient(from 180deg at top right, #353736 0deg, #35373600 90deg), conic-gradient(at bottom left, #BAB6B3 0deg 10deg, #BAB6B300 90deg)",
+        "textShadow": "0 0 2px #ffffff34",
+        "boxShadow": "5px 5px 5px #35373650",
+        "color": "black"
+      }
+    },
+    {
       "content": "Interests of a country are rarely aligned by the interests of its people. The same is largely true for humans and the cells that make them up.",
       "timestamp": 1650541988382,
       "style": {
