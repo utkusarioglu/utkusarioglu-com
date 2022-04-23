@@ -1,6 +1,16 @@
 {
   "list": [
     {
+      "content": "Humans are very good at ignoring harm from things that profit them",
+      "timestamp": 1650692443588,
+      "style": {
+        "backgroundImage": "conic-gradient(from 180deg at top right, #09A603 0deg 33deg, #078C03 34deg 66deg, #055902 67deg 90deg)",
+        "boxShadow": "inset 0 0 3px #055902",
+        "border": "solid 2px #055902",
+        "color": "white"
+      }
+    },
+    {
       "content": "Is it really Hegel's thesis-antithesis-synthesis? Or do we choose to find counters to ideas, only to move on to another pair eventually?",
       "timestamp": 1650603689295,
       "style": {
