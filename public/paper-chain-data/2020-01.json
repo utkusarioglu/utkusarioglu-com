@@ -1,6 +1,15 @@
 {
   "list": [
     {
+      "content": "I want to set up a tent at the edge of a cliff, overlooking a calm sea in the middle of nowhere",
+      "timestamp": 1650777276314,
+      "style": {
+        "backgroundColor": "#013440",
+        "backgroundImage": "linear-gradient(#386040 0% 5%, transparent 6% 94%, #037F8C 95%)",
+        "color": "#F2E3B3"
+      }
+    },
+    {
       "content": "Humans are very good at ignoring harm from things that profit them",
       "timestamp": 1650692443588,
       "style": {
@@ -424,7 +433,12 @@
       }
     },
     {
-      "content": ["I watched", "Kong Skull Island", "and it was", "meh."],
+      "content": [
+        "I watched",
+        "Kong Skull Island",
+        "and it was",
+        "meh."
+      ],
       "timestamp": 1644993848273,
       "style": {
         "backgroundColor": "#1D1C53",
