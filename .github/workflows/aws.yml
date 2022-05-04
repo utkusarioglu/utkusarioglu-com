@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-web:
+  build-web-artifact:
     uses: ./.github/workflows/build-web.yml
 
   apply-aws-changes:
-    needs: build-web
+    needs: build-web-artifact
     name: Sync changes to AWS
     runs-on: ubuntu-latest
     permissions:
