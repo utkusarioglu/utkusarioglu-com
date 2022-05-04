@@ -1,6 +1,237 @@
 {
   "list": [
     {
+      "content": "I want to set up a tent at the edge of a cliff, overlooking a calm sea in the middle of nowhere",
+      "timestamp": 1650777276314,
+      "style": {
+        "backgroundColor": "#013440",
+        "backgroundImage": "linear-gradient(#386040 0% 5%, transparent 6% 94%, #037F8C 95%)",
+        "color": "#F2E3B3"
+      }
+    },
+    {
+      "content": "Humans are very good at ignoring harm from things that profit them",
+      "timestamp": 1650692443588,
+      "style": {
+        "backgroundImage": "conic-gradient(from 180deg at top right, #09A603 0deg 33deg, #078C03 34deg 66deg, #055902 67deg 90deg)",
+        "boxShadow": "inset 0 0 3px #055902",
+        "border": "solid 2px #055902",
+        "color": "white"
+      }
+    },
+    {
+      "content": "Is it really Hegel's thesis-antithesis-synthesis? Or do we choose to find counters to ideas, only to move on to another pair eventually?",
+      "timestamp": 1650603689295,
+      "style": {
+        "backgroundColor": "#5C6560",
+        "backgroundImage": "conic-gradient(from 180deg at top right, #353736 0deg, #35373600 90deg), conic-gradient(at bottom left, #BAB6B3 0deg 10deg, #BAB6B300 90deg)",
+        "textShadow": "0 0 2px #ffffff34",
+        "boxShadow": "5px 5px 5px #35373650",
+        "color": "black"
+      }
+    },
+    {
+      "content": "Interests of a country are rarely aligned by the interests of its people. The same is largely true for humans and the cells that make them up.",
+      "timestamp": 1650541988382,
+      "style": {
+        "backgroundColor": "black",
+        "backgroundImage": "radial-gradient(500vw 150px at bottom center, #84A651 0% 7%, #D5D95F 8% 10%, #84A651 11% 17%, transparent 18% 100%),linear-gradient(#84A651, #D5D95F)",
+        "color": "black"
+      }
+    },
+    {
+      "content": "How do you tell how high you are on the side of a mountain if you lost sense of where the ground is?",
+      "timestamp": 1650430931662,
+      "style": {
+        "backgroundImage": "linear-gradient(90deg, #59AACC 0 2%, #072837 2% 98%, #8C4F49 98% 100%)",
+        "color": "white"
+      }
+    },
+    {
+      "content": "My hair got tall enough to shed the blonde-ish streak I had. Now I'm due for a new one.",
+      "timestamp": 1650257115474,
+      "style": {
+        "backgroundColor": "#F2D6BD",
+        "color": "#0D0D0D",
+        "border": "1px solid #400101",
+        "boxShadow": "inset 4px 4px 0px #40342A, inset -4px -4px 0px #8C7B6C"
+      }
+    },
+    {
+      "content": "Today I'll be on an 8 hour drive with my dad in a small car",
+      "timestamp": 1650171249499,
+      "style": {
+        "backgroundColor": "#40382B",
+        "border": "2px solid #8C7C5E",
+        "color": "#9CC1D9"
+      }
+    },
+    {
+      "content": "Last night I got out of bed to get some water because my mouth was as try as my humor. Ankara's weather is really much much drier than what I have been used to.",
+      "timestamp": 1650085323298,
+      "style": {
+        "backgroundColor": "#3D001C",
+        "color": "#FDE792"
+      }
+    },
+    {
+      "content": "Sometimes people you don't expect end up lingering in your mindscape for years",
+      "timestamp": 1650011404797,
+      "style": {
+        "backgroundImage": "linear-gradient(transparent 0 10%, #F2E8B3 10% 90%, transparent 90%), repeating-linear-gradient(90deg, #025939 0px 20px, #BBBF3B 20px 40px, #F2E8B3 40px 60px, #F2B33D 60px 80px, #D95D30 80px 100px)",
+        "color": "black"
+      }
+    },
+    {
+      "content": "Can summer come already pretty please?",
+      "timestamp": 1649914705508,
+      "style": {
+        "backgroundImage": "linear-gradient(transparent 85%, #285400 88%, #093c00 100%), radial-gradient(circle at bottom center, #F2B90C 18%, transparent 18%), repeating-conic-gradient(at bottom center, #F2B90C50 0deg 10.58deg, transparent 10.58deg 21.17deg), linear-gradient(#afc3e1, #4173cf)",
+        "color": "#001a30",
+        "textAlign": "center",
+        "fontWeight": "800"
+      }
+    },
+    {
+      "content": [
+        "There are a lot of stray dogs in the streets here. I have had them gang up on me twice during this last year, and I know that this doesn't only happen to me.",
+        "I hear them barking in the streets almost every night, and sometimes during the day as well. Their noise has actually become a very salient symbolism for the decadence of this place.",
+        "This morning I was expecting to wake up to an uneventful, almost boring day with lots of coding work to handle. I was in the kitchen and at best half awake, preparing my morning coffee when I heard the dogs barking outside. But this time their noise felt closer. This was somewhat surprising because I live in a complex and they don't usually come within the gates.",
+        "I glanced out the window expecting to see dogs barking each other. Instead, I glanced out just at the right moment to see one of the cats of the complex desperately fleeing up a tree, only to be captured from its behind by one of the dogs, and pulled to the ground.",
+        "I had to watch those three dogs bite into that poor cat, while it was still trying to claw the ground to pull itself away from the teeth that were surely penetrating through its abdomen.",
+        "I thought of throwing something, yelling, anything... but I was too far away to reach and to stop what was happening. It didn't take long for the cat to stop fighting for its life. It was probably gone before I could have done something.",
+        "None of this is about me, but after that moment I couldn't stand. I had to lay down in cold sweat and take in what I just witnessed.",
+        "I don't see death often. Let alone; violent death. This wasn't done for feeding. They left the cat's body right there, in the middle of the playground, where the kids of the complex usually gather to play and feed animals..."
+      ],
+      "timestamp": 1649734395000,
+      "style": {
+        "backgroundColor": "black",
+        "color": "white"
+      }
+    },
+    {
+      "content": "I thought I knew OOP but C++'s OOP pattern confused me a bit",
+      "timestamp": 1649478383121,
+      "style": {
+        "backgroundColor": "#2A3740",
+        "color": "#F2BC79",
+        "border": "2px solid #D9A171",
+        "boxShadow": "inset 2px 2px 2px #736D63, inset -2px -2px 2px #222222"
+      }
+    },
+    {
+      "content": [
+        "Many people seem to think that truth is capable of changing minds. I have seen seen quite a few examples of truth failing to change minds; both in western and eastern societies."
+      ],
+      "timestamp": 1649399002140,
+      "style": {
+        "backgroundColor": "#BFB3A4",
+        "backgroundImage": "repeating-linear-gradient(90deg, transparent 0px, #12A652 1px, transparent 2px)",
+        "color": "#465059"
+      }
+    },
+    {
+      "content": [
+        "When I was a kid, I used to feel sad about the fact that I'd never be able to travel to other galaxies.",
+        "I think that feeling never really went away. I just learned to accept this fact."
+      ],
+      "timestamp": 1649310777675,
+      "style": {
+        "backgroundColor": "#07070D",
+        "backgroundImage": "radial-gradient(150vw 100% at bottom center, #3238A655, transparent 40%)",
+        "color": "#dddac4"
+      }
+    },
+    {
+      "content": "What's going to replace the spirit of Helsinki?",
+      "timestamp": 1649226016056,
+      "style": {
+        "backgroundColor": "#56594C",
+        "color": "#F2B705"
+      }
+    },
+    {
+      "content": "Lili Boulanger was such an amazing composer. It's sad that she lived a short and painful life😔",
+      "timestamp": 1649139473415,
+      "style": {
+        "background": "repeating-linear-gradient(to left, transparent 0px, #377BA6 1px, transparent 2px), radial-gradient(200vw 100% at bottom center, transparent 37%, #A68053 40%, #377BA6 45%), repeating-linear-gradient(#4D5923 0px, transparent 1px, transparent 2px, #4D5923 2px, #4D5923 4px), repeating-radial-gradient(200vw 100% at bottom center, #A68053 0px, #261501 5px, #A68053 9px)",
+        "color": "#F2F1F0"
+      }
+    },
+    {
+      "content": "I'm not sure why I cannot tell what my favorite band is, my best or worst day was... Why is this unavailable to me?",
+      "timestamp": 1649053239837,
+      "style": {
+        "backgroundColor": "#F2E7DC",
+        "backgroundImage": "repeating-linear-gradient(transparent 0px, transparent 1px, #A9D9D0 1px, #A9D9D0 2px), radial-gradient(circle at bottom right, #038C7F 15%, transparent 15%), radial-gradient(circle at bottom left, #038C7F 8%, transparent 8%)",
+        "textShadow": "1px 0px 1px #027373",
+        "color": "#0D0D0D"
+      }
+    },
+    {
+      "content": [
+        "As Ukraine takes back territory, so much horror that people went through start being told.",
+        "These stories come from survivors. I don't know how much worse would have come from the ones that didn't make it..."
+      ],
+      "timestamp": 1648962959550,
+      "style": {
+        "backgroundColor": "black",
+        "color": "#bbb"
+      }
+    },
+    {
+      "content": "Do most of us live longer than our wisdom allows?",
+      "notes": "This feels like a bullshit question",
+      "timestamp": 1648879459342,
+      "style": {
+        "backgroundColor": "#363432",
+        "backgroundImage": "linear-gradient(90deg, #00000040 50%, #36343200 50%), linear-gradient(70deg, #00000040 50%, #36343200 50%), linear-gradient(50deg, #00000040 50%, #36343200 50%), linear-gradient(30deg, #00000040 50%, #36343200 50%)",
+        "color": "#F0941F",
+        "border": "1px solid #F0941F"
+      }
+    },
+    {
+      "content": "Is blockchain really the future of money?",
+      "timestamp": 1648787806623,
+      "style": {
+        "backgroundColor": "#F2F2F2",
+        "color": "#8C1C1C",
+        "border": "2px solid #F2F2F2",
+        "padding": "1.5em",
+        "boxShadow": "inset 10px 10px 10px #F2A341, inset -10px -10px 10px #F2C849"
+      }
+    },
+    {
+      "content": "I want to find some lectures about mindsets of different cultures.",
+      "timestamp": 1648703486422,
+      "style": {
+        "backgroundImage": "repeating-radial-gradient(circle at bottom left, #182625 0px, #182625 1em, #28403D 1em, #28403D 2em, #455559 2em, #455559 3em,  #2F3D40 3em, #2F3D40 4em, #3D5A73 4em, #3D5A73 5em)",
+        "color": "white",
+        "textShadow": "1px 1px 3px #182625",
+        "boxShadow": "2px 2px 4px #182625"
+      }
+    },
+    {
+      "content": "Many of the lies that people tell each other seem to be for things that they wish would be true about themselves",
+      "timestamp": 1648622505437,
+      "style": {
+        "backgroundColor": "transparent",
+        "backgroundImage": "linear-gradient(-45deg, #ffffff20, #00000020)",
+        "color": "white",
+        "boxShadow": "inset 10px 10px 20px #00000040, inset -10px -10px 20px #ffffff40",
+        "padding": "20px"
+      }
+    },
+    {
+      "content": "I'm usually surprised by how much social media means to other people",
+      "timestamp": 1648532591637,
+      "style": {
+        "backgroundColor": "#402116",
+        "backgroundImage": "radial-gradient(circle at top left, #BF665E 30%, #40211600 30.3%), linear-gradient(160deg, #40211600 60%, #9A44A6F7)",
+        "color": "#F2C063"
+      }
+    },
+    {
       "content": "I'm a bunny",
       "timestamp": 1648446504466,
       "style": {
@@ -9,7 +240,9 @@
         "fontSize": 50,
         "textAlign": "center",
         "fontWeight": "700",
-        "textShadow": "1px 1px 2px #F29F05, 2px 2px 3px #F28705, 3px 3px 4px #F23030, 4px 4px 5px #F28705, 5px 5px 6px #f29f05, 6px 6px 7px #f28705, 7px 7px 8px #f23030, 8px 8px 9px #f28705, 9px 9px 10px #f29f05, 10px 10px 11px #f23030"
+        "textShadow": "1px 1px 2px #F29F05, 2px 2px 3px #F28705, 3px 3px 4px #F23030, 4px 4px 5px #F28705, 5px 5px 6px #f29f05, 6px 6px 7px #f28705, 7px 7px 8px #f23030, 8px 8px 9px #f28705, 9px 9px 10px #f29f05, 10px 10px 11px #f23030",
+        "borderRadius": "0.3em",
+        "marginBottom": "0.3em"
       }
     },
     {
@@ -200,7 +433,12 @@
       }
     },
     {
-      "content": ["I watched", "Kong Skull Island", "and it was", "meh."],
+      "content": [
+        "I watched",
+        "Kong Skull Island",
+        "and it was",
+        "meh."
+      ],
       "timestamp": 1644993848273,
       "style": {
         "backgroundColor": "#1D1C53",

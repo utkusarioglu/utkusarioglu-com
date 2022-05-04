@@ -1,10 +1,10 @@
 name: Update Trucker Jokes Source
 on:
-  push:
-    branches:
-      - dev
-    paths:
-      - "public/trucker-jokes/**.txt"
+  # push:
+  #   branches:
+  #     - dev
+  #   paths:
+  #     - "public/trucker-jokes/**.txt"
   workflow_dispatch:
 
 jobs:
