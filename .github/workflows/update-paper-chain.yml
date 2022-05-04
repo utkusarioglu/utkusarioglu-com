@@ -1,10 +1,10 @@
 name: Update paper chain
 on:
-  push:
-    branches:
-      - dev
-    paths:
-      - "public/paper-chain-data/**.json"
+  # push:
+  #   branches:
+  #     - dev
+  #   paths:
+  #     - "public/paper-chain-data/**.json"
   workflow_dispatch:
 
 jobs:

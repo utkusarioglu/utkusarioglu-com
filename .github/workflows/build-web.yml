@@ -1,0 +1,39 @@
+name: Build and deploy to ftp server
+on:
+  # push:
+  #   branches:
+  #     - main
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Build and deploy to ftp server
+    runs-on: ubuntu-latest
+    environment: production
+    container: 
+      image: node:16-slim
+    steps:
+      - name: checkout
+        id: checkout
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        id: Install
+        run: yarn
+      - name: Build
+        id: build
+        run: yarn build
+      # - name: Publish to server
+      #   id: publish
+      #   uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      #   with:
+      #     server: ${{ secrets.FTP_SERVER }}
+      #     username: ${{ secrets.FTP_USERNAME }}
+      #     password: ${{ secrets.FTP_PASSWORD }}
+      #     local-dir: ./build/
+      #     server-dir: ./domains/utkusarioglu.com/public_html/
+      #     dangerous-clean-slate: true
+      - name: Builds as artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: utkusarioglu-com-web-build
+          path: build

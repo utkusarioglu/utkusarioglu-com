@@ -1,0 +1,38 @@
+name: AWS Workflows
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  build-web:
+    uses: ./.github/workflows/build-web.yml
+
+  apply-aws-changes:
+    needs: build-web
+    name: Sync changes to AWS
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Download web build artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: utkusarioglu-web-build
+          path: build
+      # - name: Checkout
+      #   uses: actions/checkout@v2
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          # role-to-assume: arn:aws:iam::731522355899:role/workshop-aws-terraform-gh-actions
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: eu-central-1
+      - name: STS
+        run: aws sts get-caller-identity
+      - name: List Buckets
+        run: aws s3api list-buckets
+      # - name: Terraform
+      #   run: |
+      #     terraform init
+      #     terraform apply --auto-approve
