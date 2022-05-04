@@ -1,4 +1,4 @@
-name: Build and deploy to ftp server
+name: Build for web and upload as artifact
 on:
   # push:
   #   branches:
@@ -9,7 +9,7 @@ on:
 jobs:
   publish:
     name: Build web version and upload as artifact
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest 
     environment: production
     container: 
       image: node:16-slim
