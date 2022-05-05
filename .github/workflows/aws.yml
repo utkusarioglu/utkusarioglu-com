@@ -20,12 +20,9 @@ jobs:
         with:
           name: utkusarioglu-com-web-build
           path: build
-      # - name: Checkout
-      #   uses: actions/checkout@v2
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          # role-to-assume: arn:aws:iam::731522355899:role/workshop-aws-terraform-gh-actions
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           aws-region: eu-central-1
       - name: Terraform
