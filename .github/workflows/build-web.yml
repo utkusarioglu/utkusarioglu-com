@@ -14,8 +14,7 @@ jobs:
     container: 
       image: node:16-slim
     steps:
-      - name: checkout
-        id: checkout
+      - name: Checkout
         uses: actions/checkout@v2
       - name: Install dependencies
         id: Install
