@@ -1,4 +1,4 @@
 locals {
   build_dir = "../build"
-  bucket_name = "arn:aws:s3:::utkusarioglu-com-static-content"
+  bucket_name = "utkusarioglu-com-static-content"
 }
