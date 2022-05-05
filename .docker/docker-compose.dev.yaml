@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  webclient:
+    build:
+      context: ..
+      dockerfile: .docker/Dockerfile.dev
+    stdin_open: true
+    volumes:
+      - ../:/utkusarioglu/utkusarioglu-com

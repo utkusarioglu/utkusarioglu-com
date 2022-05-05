@@ -7,6 +7,12 @@
       "problemMatcher": [],
       "label": "Add new paper-chain link",
       "detail": "Adds a stub with today's date in paper-chain"
+    },
+    {
+      "type": "npm",
+      "script": "dev",
+      "label": "Start dev server",
+      "detail": "Start create-react-app dev server"
     }
   ]
 }
