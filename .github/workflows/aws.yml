@@ -28,11 +28,7 @@ jobs:
           # role-to-assume: arn:aws:iam::731522355899:role/workshop-aws-terraform-gh-actions
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           aws-region: eu-central-1
-      - name: STS
-        run: aws sts get-caller-identity
-      - name: List Buckets
-        run: aws s3api list-buckets
-      # - name: Terraform
-      #   run: |
-      #     terraform init
-      #     terraform apply --auto-approve
+      - name: Terraform
+        run: |
+          terraform -chdir=./.terraform init 
+          terraform -chdir=./.terraform apply --auto-approve
