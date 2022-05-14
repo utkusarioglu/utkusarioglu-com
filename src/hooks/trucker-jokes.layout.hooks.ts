@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
-import { ColorScheme, ColorMindApiResponse } from "./TruckerJokes.layout";
+import {
+  ColorScheme,
+  ColorMindApiResponse,
+} from "../components/layouts/trucker-jokes/TruckerJokes.layout";
 
 /**
  * A hook for retrieving a colorscheme from colormind.io

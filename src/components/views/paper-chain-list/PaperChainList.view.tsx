@@ -1,5 +1,5 @@
 import "./PaperChainList.view.scss";
-import { usePaperChainList } from "./paper-chain-list.hooks";
+import { usePaperChainList } from "../../../hooks/paper-chain-list.hooks";
 import { PaperChainListItemView } from "./PaperChainListItem.view";
 
 const PaperChainListView = () => {

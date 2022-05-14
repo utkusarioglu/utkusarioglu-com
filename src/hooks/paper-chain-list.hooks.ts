@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { PaperChain } from "./paper-chain-list.types";
+import { PaperChain } from "../components/views/paper-chain-list/paper-chain-list.types";
 
 /**
  * #1 This shall be computed by a `current month` function

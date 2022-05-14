@@ -4,7 +4,7 @@ import type {
   JokeList,
   JokeStructure,
   JokeFetch,
-} from "./trucker-joke.types";
+} from "../components/views/trucker-joke/trucker-joke.types";
 import ReactGA from "react-ga";
 
 /**

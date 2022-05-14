@@ -1,6 +1,6 @@
 import TruckerJokeView from "../../views/trucker-joke/TruckerJoke.view";
 import "./TruckerJokes.layout.scss";
-import { useColorScheme } from "./trucker-jokes.layout.hooks";
+import { useColorScheme } from "../../../hooks/trucker-jokes.layout.hooks";
 import { rgb } from "./rgb.util";
 
 export type ColorScheme = RgbColor[];

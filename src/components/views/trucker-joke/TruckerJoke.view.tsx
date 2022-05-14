@@ -2,7 +2,10 @@ import type { FC } from "react";
 import { useEffect } from "react";
 import type { JokeDisplayViewProps } from "./trucker-joke.types";
 import "./TruckerJoke.view.scss";
-import { useJokeFetch, useJokeChooser } from "./trucker-joke.hooks";
+import {
+  useJokeFetch,
+  useJokeChooser,
+} from "../../../hooks/trucker-joke.hooks";
 
 const TruckerJokeView = () => {
   const jokes = useJokeFetch();
