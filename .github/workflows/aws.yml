@@ -1,6 +1,6 @@
 name: Sync to AWS S3 bucket
 
-on: 
+on:
   workflow_dispatch:
 
 jobs:
@@ -25,8 +25,8 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-          aws-region: eu-central-1
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_TO_ASSUME }}
+          aws-region: ${{ secrets.AWS_REGION }}
       - name: Terraform
         run: |
           terraform -chdir=./.terraform init 
