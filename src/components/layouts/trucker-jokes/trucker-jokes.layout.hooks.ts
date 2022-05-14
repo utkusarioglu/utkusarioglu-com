@@ -12,7 +12,7 @@ export function useColorScheme() {
   );
 
   useEffect(() => {
-    fetch("http://colormind.io/api/", {
+    fetch("https://colormind.io/api/", {
       method: "POST",
       headers: {
         "Content-Type": "text/plain; charset=UTF-8",
