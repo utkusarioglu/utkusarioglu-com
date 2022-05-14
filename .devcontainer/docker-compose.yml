@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 services:
   webclient:
     ports:
@@ -6,6 +6,7 @@ services:
     volumes:
       - vscode-exts:/root/.vscode-server/extensions
       - vscode-exts-insiders:/root/.vscode-server-insiders/extensions
+      - ~/.config/gh:/home/node/.config/gh:ro
     command: /bin/sh -c "while sleep 1000; do :; done"
 
 volumes:
