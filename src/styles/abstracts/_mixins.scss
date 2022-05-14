@@ -4,10 +4,16 @@
   width: 100%;
 }
 
-/// Disables user selection
 @mixin disable-user-select() {
   -webkit-user-select: none; /* Chrome all / Safari all */
   -moz-user-select: none; /* Firefox all */
   -ms-user-select: none; /* IE 10+ */
   user-select: none; /* Likely future */
+}
+
+@mixin enable-user-select() {
+  -webkit-user-select: auto; /* Chrome auto / Safari auto */
+  -moz-user-select: auto; /* Firefox auto */
+  -ms-user-select: auto; /* IE 10+ */
+  user-select: auto; /* Likely future */
 }

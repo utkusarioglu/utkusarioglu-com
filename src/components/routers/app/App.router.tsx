@@ -19,6 +19,10 @@ const routeProps: RouteProps[] = [
     path: "/kamyoncu-yazilari",
     component: lazy(() => import("../../routes/TruckerJokes.route")),
   },
+  {
+    path: "*",
+    component: lazy(() => import("../../routes/NotFound.route")),
+  },
 ];
 
 const LoadingView = () => <div>Loading...</div>;
