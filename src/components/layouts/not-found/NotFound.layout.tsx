@@ -1,5 +1,5 @@
 import NotFoundView from "../../views/not-found/NotFound.view";
-import "./NotFound.layout.scss";
+// import "./NotFound.layout.scss";
 
 const NotFoundLayout = () => {
   return (
