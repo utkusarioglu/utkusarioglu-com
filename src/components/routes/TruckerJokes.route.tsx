@@ -1,6 +1,6 @@
 import TruckerJokesLayout from "../layouts/trucker-jokes/TruckerJokes.layout";
 import { Helmet } from "react-helmet-async";
-import { useGaPageView } from "../../hooks/useGaPageview.hook";
+import { useGaPageView } from "../../hooks/google-analytics.hooks";
 
 const TruckerJokesRoute = () => {
   useGaPageView();
