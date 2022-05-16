@@ -1,4 +1,4 @@
-import { RgbColor } from "./TruckerJokes.layout";
+import { RgbColor } from "../components/layouts/trucker-jokes/TruckerJokes.layout";
 
 /**
  * Converts rgb color array into css compatible rgb string

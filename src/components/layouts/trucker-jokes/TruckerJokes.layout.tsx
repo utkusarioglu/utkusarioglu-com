@@ -1,7 +1,7 @@
 import TruckerJokeView from "../../views/trucker-joke/TruckerJoke.view";
 import "./TruckerJokes.layout.scss";
 import { useColorScheme } from "../../../hooks/trucker-jokes.layout.hooks";
-import { rgb } from "./rgb.util";
+import { rgb } from "../../../utils/rgb.utils";
 
 export type ColorScheme = RgbColor[];
 export type RgbColor = [number, number, number];
