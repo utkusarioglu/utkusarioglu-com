@@ -11,6 +11,7 @@
     {
       "type": "npm",
       "script": "dev",
+      "problemMatcher": [],
       "label": "Start dev server",
       "detail": "Start create-react-app dev server"
     }
