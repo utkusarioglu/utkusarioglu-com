@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { useEffect } from "react";
 import type { JokeDisplayViewProps } from "./trucker-joke.types";
-import "./TruckerJoke.view.scss";
+// import "./TruckerJoke.view.scss";
 import {
   useJokeFetch,
   useJokeChooser,

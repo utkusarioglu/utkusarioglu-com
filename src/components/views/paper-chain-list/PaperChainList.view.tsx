@@ -1,4 +1,4 @@
-import "./PaperChainList.view.scss";
+// import "./PaperChainList.view.scss";
 import { usePaperChainList } from "../../../hooks/paper-chain-list.hooks";
 import { PaperChainListItemView } from "./PaperChainListItem.view";
 
