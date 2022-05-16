@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const NavView = () => {
   return (
-    <div {...{ className: "nav-container" }}>
+    <div className="nav-container">
       <nav>
         {NAV_ROUTES &&
           NAV_ROUTES.map(({ link, title }) => (
@@ -17,13 +17,11 @@ const NavView = () => {
           SOCIALS.map(({ link, title }) => {
             return (
               <ReactGa.OutboundLink
-                {...{
-                  className: "nav-link nav-link-social",
-                  key: title,
-                  eventLabel: `${title}Visit`,
-                  to: link,
-                  target: "_blank",
-                }}
+                className="nav-link nav-link-social"
+                key={title}
+                eventLabel={`${title}Visit`}
+                to={link}
+                target="_blank"
               >
                 {title}
               </ReactGa.OutboundLink>
