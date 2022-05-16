@@ -2,8 +2,8 @@
 
 const HeaderView = () => {
   return (
-    <header {...{ className: 'header' }}>
-      <div {...{ className: 'header__title' }}>
+    <header className="header">
+      <div className="header-title">
         <h1>Utku Sarioglu</h1>
       </div>
     </header>
