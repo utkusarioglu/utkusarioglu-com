@@ -1,6 +1,6 @@
 import { navItems } from "./Nav.constants";
 import ReactGa from "react-ga";
-import "./Nav.view.scss";
+// import "./Nav.view.scss";
 
 const NavView = () => {
   return (

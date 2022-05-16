@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { HelmetProvider } from "react-helmet-async";
-import "./styles/main.scss";
+// import "./styles/main.scss";
 import reportWebVitals from "./reportWebVitals";
 import ReactGA from "react-ga";
 import { GA_TRACKING_ID } from "./config";

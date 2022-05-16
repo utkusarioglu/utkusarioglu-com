@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { PaperChainListItem } from "./paper-chain-list.types";
-import "./PaperChainListItem.view.scss";
+// import "./PaperChainListItem.view.scss";
 
 export const PaperChainListItemView: FC<PaperChainListItem> = ({
   content,
