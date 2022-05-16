@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import DrawingView from "../views/drawing/Drawing.view";
-import { useGaPageView } from "../../hooks/useGaPageview.hook";
+import { useGaPageView } from "../../hooks/google-analytics.hooks";
 
 const HomeRoute = () => {
   useGaPageView();

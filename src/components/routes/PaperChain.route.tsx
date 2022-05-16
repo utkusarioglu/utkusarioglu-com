@@ -1,6 +1,6 @@
 import PaperChainLayout from "../layouts/paper-chain/PaperChain.layout";
 import { Helmet } from "react-helmet-async";
-import { useGaPageView } from "../../hooks/useGaPageview.hook";
+import { useGaPageView } from "../../hooks/google-analytics.hooks";
 
 const PaperChainRoute = () => {
   useGaPageView();

@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { useGaPageView } from "../../hooks/useGaPageview.hook";
+import { useGaPageView } from "../../hooks/google-analytics.hooks";
 import NotFoundLayout from "../layouts/not-found/NotFound.layout";
 
 const NotFoundRoute = () => {

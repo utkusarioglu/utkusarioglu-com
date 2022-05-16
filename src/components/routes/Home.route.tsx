@@ -1,6 +1,6 @@
 import HomeLayout from "../layouts/home/Home.layout";
 import { Helmet } from "react-helmet-async";
-import { useGaPageView } from "../../hooks/useGaPageview.hook";
+import { useGaPageView } from "../../hooks/google-analytics.hooks";
 
 const HomeRoute = () => {
   useGaPageView();
