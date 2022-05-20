@@ -25,3 +25,5 @@ yarn-error.log*
 
 # terraform 
 /.terraform/.terraform
+/.old
+.next
