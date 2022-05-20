@@ -4,11 +4,7 @@
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
-}
-
-.standard-background-theme {
-  background: linear-gradient(#457b9d, #1d3557);
-  background-attachment: fixed;
+  background-color: #222;
 }
 
 h1,
@@ -34,4 +30,14 @@ a {
 .paper-chain-list__loading-indicator,
 .paper-chain-layout-subtitle {
   color: #bbb;
+}
+
+.nav-link {
+  &-route {
+    color: #ffa800;
+  }
+
+  &-social {
+    color: #6ebad2;
+  }
 }
