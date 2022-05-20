@@ -13,7 +13,7 @@
       "script": "dev",
       "problemMatcher": [],
       "label": "Start dev server",
-      "detail": "Start create-react-app dev server"
+      "detail": "Start next dev server"
     }
   ]
 }
