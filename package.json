@@ -26,6 +26,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next build && next export -o build",
     "test": "echo this isn't implemented yet",
     "add-new-paper-chain-link": "scripts/add-new-paper-chain-link.js"
   },
