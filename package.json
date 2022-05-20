@@ -3,6 +3,14 @@
   "version": "2.0.0",
   "private": true,
   "dependencies": {
+    "next": "^12.1.6",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-ga": "^3.3.0",
+    "react-router-dom": "^6.2.1",
+    "web-vitals": "^0.2.4"
+  },
+  "devDependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -11,15 +19,8 @@
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
     "@types/react-ga": "^2.3.0",
-    "next": "^12.1.6",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-ga": "^3.3.0",
-    "react-helmet-async": "^1.2.2",
-    "react-router-dom": "^6.2.1",
     "sass": "^1.30.0",
-    "typescript": "^4.0.3",
-    "web-vitals": "^0.2.4"
+    "typescript": "^4.0.3"
   },
   "scripts": {
     "dev": "next dev",
