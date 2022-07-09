@@ -1,10 +1,21 @@
+const defaults = require("tailwindcss/defaultTheme");
+
+function formatFontFamilies(...items) {
+  return items.map((font) => `'${font}'`).slice(-1);
+}
+
 module.exports = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-  ],
+  darkMode: "class",
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: formatFontFamilies("Quicksand")[0],
+      display: formatFontFamilies("Galada")[0],
+    },
+    fontSize: {
+      ...defaults.fontSize,
+      base: ["1.1rem", { lineHeight: "1.6rem" }],
+    },
   },
-  plugins: [],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  plugins: [require("tailwind-scrollbar"), require("tailwind-scrollbar-hide")],
 };

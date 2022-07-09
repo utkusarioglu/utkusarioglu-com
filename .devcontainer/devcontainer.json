@@ -1,6 +1,9 @@
 {
   "name": "utkusarioglu-com.utkusarioglu.com",
-  "dockerComposeFile": ["../.docker/docker-compose.dev.yaml", "docker-compose.yml"],
+  "dockerComposeFile": [
+    "../.docker/docker-compose.dev.yaml",
+    "docker-compose.yml"
+  ],
   "service": "webclient",
   "workspaceFolder": "/utkusarioglu/utkusarioglu-com",
   "settings": {
@@ -8,7 +11,9 @@
       "activityBar.background": "#002255"
     }
   },
-  "extensions": [],
+  "extensions": [
+    "bradlc.vscode-tailwindcss"
+  ],
   "postCreateCommand": "yarn",
   "features": {
     "github-cli": "latest"

@@ -2,7 +2,8 @@ version: "3.8"
 services:
   webclient:
     ports:
-      - 80:3000
+      - 443:4000
+      - 3000:3000
     volumes:
       - vscode-exts:/root/.vscode-server/extensions
       - vscode-exts-insiders:/root/.vscode-server-insiders/extensions

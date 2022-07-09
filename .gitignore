@@ -27,3 +27,7 @@ yarn-error.log*
 /.terraform/.terraform
 /.old
 .next
+
+.certs
+public/*.js
+public/*.js.map
