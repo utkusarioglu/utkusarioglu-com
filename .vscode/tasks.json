@@ -10,10 +10,45 @@
     },
     {
       "type": "npm",
-      "script": "dev",
+      "script": "dev-insecure",
       "problemMatcher": [],
-      "label": "Start dev server",
-      "detail": "Start next dev server"
+      "label": "Dev (insecure)",
+      "detail": "Start next dev server without SLL proxy"
+    },
+    {
+      "type": "npm",
+      "script": "export",
+      "problemMatcher": [],
+      "label": "Export",
+      "detail": "Export static NextJS site"
+    },
+    {
+      "type": "npm",
+      "script": "start-ssl-proxy",
+      "problemMatcher": [],
+      "label": "Start SSL Proxy",
+      "detail": "Start secure connection between dev server and clients"
+    },
+    {
+      "type": "npm",
+      "script": "dev",
+      "label": "Dev",
+      "problemMatcher": [],
+      "detail": "Start dev server with SSL proxy"
+    },
+    {
+      "type": "npm",
+      "script": "local",
+      "label": "Local",
+      "problemMatcher": [],
+      "detail": "Start local server with SSL proxy"
+    },
+    {
+      "type": "shell",
+      "command": "scripts/export-and-local.sh",
+      "label": "Export & Local",
+      "problemMatcher": [],
+      "detail": "Export and start Local server"
     }
   ]
 }

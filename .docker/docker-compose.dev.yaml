@@ -5,6 +5,6 @@ services:
     build:
       context: ..
       dockerfile: .docker/Dockerfile.dev
-    stdin_open: true
     volumes:
       - ../:/utkusarioglu/utkusarioglu-com
+      - ~/projects/utkusarioglu-root-ca:/utkusarioglu/utkusarioglu-com/.certs:ro

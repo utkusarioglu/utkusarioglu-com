@@ -20,14 +20,26 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "_styles/*": ["src/styles/*"]
+      "_styles/*": ["src/styles/*"],
+      "_views/*": ["src/components/views/*"],
+      "_layouts/*": ["src/components/layouts/*"],
+      "_services/*": ["src/services/*"],
+      // "_public/*": ["public/*"],
+      "_assets/*": ["assets/*"],
+      "_constants": ["src/constants"],
+      "_hooks/*": ["src/hooks/*"],
+      "_contexts/*": ["src/contexts/*"],
+      "_utils/*": ["src/utils/*"],
+      "_types/*": ["src/types/*"],
+      "_workers/*": ["src/workers/*"],
+      "_primitives/*": ["src/components/primitives/*"]
     }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "public/sw.js"  ],
   "exclude": [
     "node_modules"
   ]
