@@ -6,10 +6,10 @@ import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallbackView from "_views/error-fallback/ErrorFallback.view";
 import { MotionVariants } from "_types/vendors/framer-motion.types";
 import FooterLayout from "_layouts/footer/Footer.layout";
-import { PageLayoutProps } from "./Page.layout.types";
+import { ContentLayoutProps } from "./Content.layout.types";
 
 /* eslint-disable react/display-name */
-const PageLayout = forwardRef<HTMLDivElement, PageLayoutProps>(
+const ContentLayout = forwardRef<HTMLDivElement, ContentLayoutProps>(
   (
     {
       children,
@@ -96,4 +96,4 @@ const variants: MotionVariants<"div"> = {
   exit: { y: 100, opacity: 0 },
 };
 
-export default PageLayout;
+export default ContentLayout;

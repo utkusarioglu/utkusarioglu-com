@@ -1,4 +1,4 @@
-import PageLayout from "_layouts/page/Page.layout";
+import ContentLayout from "_layouts/content/Content.layout";
 import { COLORS } from "_constants";
 import Paragraph from "_primitives/Paragraph.primitive";
 
@@ -6,11 +6,11 @@ const content = ["Runs on aws", "Also, other things"];
 
 const ResumePage = () => {
   return (
-    <PageLayout>
+    <ContentLayout>
       {content.map((paragraph) => (
         <Paragraph key={paragraph}>{paragraph}</Paragraph>
       ))}
-    </PageLayout>
+    </ContentLayout>
   );
 };
 

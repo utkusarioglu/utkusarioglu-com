@@ -1,11 +1,11 @@
 import { useRef } from "react";
-import PageLayout from "_layouts/page/Page.layout";
+import ContentLayout from "_layouts/content/Content.layout";
 import CanvasControlLayout from "_layouts/canvas-control/CanvasControl.layout";
 
 const CanvasPage = () => {
   const dragConstraints = useRef(null);
   return (
-    <PageLayout
+    <ContentLayout
       ref={dragConstraints}
       footer={false}
       alignment="self-end"
@@ -14,7 +14,7 @@ const CanvasPage = () => {
       overflowY={false}
     >
       <CanvasControlLayout dragConstraintsRef={dragConstraints} />
-    </PageLayout>
+    </ContentLayout>
   );
 };
 
