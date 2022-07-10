@@ -4,6 +4,7 @@ import { COLORS, TRANSITIONS } from "_constants";
 import { EnhancedImageProps } from "./EnhancedImage.primitive.types";
 import { useDeviceQuery } from "_hooks/device/device.hook";
 import Head from "next/head";
+import { useAppContext } from "_contexts/app/App.context";
 
 const INITIAL_SCALE = 1.2;
 const PLACEHOLDER_SCALE = 1.3;
@@ -16,6 +17,7 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
   credits,
   allowZoom = true,
 }) => {
+  const { setNavigation } = useAppContext();
   const imgRef = useRef<HTMLImageElement>();
   const containerRef = useRef<HTMLDivElement>();
   const { isSm } = useDeviceQuery();
@@ -43,6 +45,7 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
           width: "100%",
         }}
       >
+        {/* eslint-disable @next/next/no-img-element */}
         <img
           src={img.placeholder}
           className="w-full"
@@ -69,7 +72,12 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
           className="absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden block"
           onLoad={() => setImgLoaded(true)}
           alt={alt}
-          {...(allowZoom && { onClick: () => setImgZoomed(true) })}
+          {...(allowZoom && {
+            onClick: () => {
+              setNavigation(false);
+              setImgZoomed(true);
+            },
+          })}
         />
         {allowZoom && (
           <AnimatePresence>
@@ -89,7 +97,7 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
                 />
               </Head>
             )}
-            {imgZoomed && (
+            {/* {imgZoomed && (
               <motion.div
                 key="zoomed-img-bg"
                 initial={{ opacity: 0 }}
@@ -100,7 +108,7 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
                   COLORS.bgDarker,
                 ].join(" ")}
               />
-            )}
+            )} */}
             {imgLoaded && imgZoomed && (
               <motion.div
                 key="zoomed-img"
@@ -115,8 +123,12 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
                 }}
                 exit={getDims(imgRef.current.getBoundingClientRect())}
                 transition={TRANSITIONS.route}
-                onClick={() => setImgZoomed(false)}
+                onClick={() => {
+                  setNavigation(true);
+                  setImgZoomed(false);
+                }}
               >
+                {/* eslint-disable @next/next/no-img-element */}
                 <img
                   src={img.src}
                   srcSet={img.srcSet}

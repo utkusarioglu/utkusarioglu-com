@@ -1,7 +1,7 @@
 import {
   type DrawPerlinParams,
   type DrawPerlinReturn,
-} from "_hooks/perlin/perlin.hook.types";
+} from "_contexts/canvas/Canvas.context.types";
 
 class Grad {
   x: number;
@@ -475,6 +475,7 @@ export async function perlinFactory({
           requestFrame(frame);
         } else {
           resolve({
+            finished: true,
             duration: Date.now() - startTime,
             jpgDataUrl: createJpg(),
             pngDataUrl: createPng(),

@@ -17,13 +17,13 @@ const Document = () => {
           crossOrigin="true"
         /> */}
 
+        {/* eslint-disable @next/next/google-font-display */}
         <link
-          /* eslint-disable @next/next/google-font-display */
           href="https://fonts.googleapis.com/css2?family=Galada&display=block"
           rel="stylesheet"
         />
+        {/* eslint-disable @next/next/google-font-display */}
         <link
-          /* eslint-disable @next/next/google-font-display */
           href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
           rel="stylesheet"
         ></link>
