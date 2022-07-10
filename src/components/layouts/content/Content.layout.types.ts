@@ -2,7 +2,7 @@ import { type ReactNode } from "react";
 
 type ContentAlignment = "self-start" | "self-center" | "self-end";
 
-export interface PageLayoutProps {
+export interface ContentLayoutProps {
   allowEntireViewport?: boolean;
   footer?: boolean;
   alignment?: ContentAlignment;

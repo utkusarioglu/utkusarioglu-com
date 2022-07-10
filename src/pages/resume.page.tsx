@@ -1,4 +1,4 @@
-import PageLayout from "_layouts/page/Page.layout";
+import ContentLayout from "_layouts/content/Content.layout";
 import { COLORS } from "_constants";
 
 const content = [
@@ -10,13 +10,13 @@ const content = [
 
 const ResumePage = () => {
   return (
-    <PageLayout>
+    <ContentLayout>
       {content.map((paragraph) => (
         <p className={`mb-5 text-base ${COLORS.paragraph}`} key={paragraph}>
           {paragraph}
         </p>
       ))}
-    </PageLayout>
+    </ContentLayout>
   );
 };
 

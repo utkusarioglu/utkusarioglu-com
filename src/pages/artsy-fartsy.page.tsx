@@ -1,9 +1,9 @@
-import PageLayout from "_layouts/page/Page.layout";
+import ContentLayout from "_layouts/content/Content.layout";
 import styles from "_styles/artsy-fartsy.module.scss";
 
 const ArtsyPage = () => {
   return (
-    <PageLayout allowEntireViewport={true}>
+    <ContentLayout allowEntireViewport={true}>
       <div className={styles.canvas}>
         <div className={styles.house}>
           <div className={styles["house-chimney"]} />
@@ -85,7 +85,7 @@ const ArtsyPage = () => {
           <use y="00" x="150" transform="scale(1.25)" xlinkHref="#mountain" />
         </svg>
       </div>
-    </PageLayout>
+    </ContentLayout>
   );
 };
 export default ArtsyPage;

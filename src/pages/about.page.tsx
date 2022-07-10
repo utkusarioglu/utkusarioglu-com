@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import PageLayout from "_layouts/page/Page.layout";
+import ContentLayout from "_layouts/content/Content.layout";
 import EnhancedImage from "_primitives/enhanced-image/EnhancedImage.primitive";
 import Paragraph from "_primitives/Paragraph.primitive";
 
@@ -15,7 +15,7 @@ interface AboutPageProps {}
 
 const AboutPage: FC<AboutPageProps> = () => {
   return (
-    <PageLayout>
+    <ContentLayout>
       <EnhancedImage
         className="rounded-full"
         alt="Utku Sarioglu"
@@ -25,7 +25,7 @@ const AboutPage: FC<AboutPageProps> = () => {
       {content.map((paragraph) => (
         <Paragraph key={paragraph}>{paragraph}</Paragraph>
       ))}
-    </PageLayout>
+    </ContentLayout>
   );
 };
 

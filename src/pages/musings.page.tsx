@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import PageLayout from "_layouts/page/Page.layout";
+import ContentLayout from "_layouts/content/Content.layout";
 import { COLORS } from "_constants";
 import EnhancedImage from "_primitives/enhanced-image/EnhancedImage.primitive";
 import Link from "next/link";
@@ -36,7 +36,7 @@ interface AboutPageProps {
 
 const AboutPage: FC<AboutPageProps> = ({ musingsImage }) => {
   return (
-    <PageLayout>
+    <ContentLayout>
       <EnhancedImage
         className="rounded-md"
         alt="Musings title image"
@@ -55,7 +55,7 @@ const AboutPage: FC<AboutPageProps> = ({ musingsImage }) => {
       {content.map((paragraph) => (
         <Paragraph key={paragraph}>{paragraph}</Paragraph>
       ))}
-    </PageLayout>
+    </ContentLayout>
   );
 };
 
