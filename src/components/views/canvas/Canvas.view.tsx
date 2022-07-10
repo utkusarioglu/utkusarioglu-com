@@ -1,37 +1,34 @@
-import { setConfig } from "next/config";
 import { useEffect, useRef, type FC } from "react";
-import { usePerlin } from "_hooks/perlin/perlin.hook";
+import { useCanvas } from "_contexts/canvas/Canvas.context";
 import { useTheme } from "_hooks/theme/theme.hook";
 import { type CanvasViewProps } from "./Canvas.view.types";
 
 const CanvasView: FC<CanvasViewProps> = ({ window }) => {
-  const ref = useRef<HTMLCanvasElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>();
   const {
-    draw,
     setDependencies,
     loadFromLocalStorage,
     presets,
     produceConfig,
-  } = usePerlin();
+    draw,
+  } = useCanvas();
   const { getActive } = useTheme();
 
   useEffect(() => {
-    setDependencies({ ref, window });
+    setDependencies({ ref: canvasRef, window });
     const storageTheme = loadFromLocalStorage();
     if (storageTheme) {
-      setConfig(storageTheme);
       draw(storageTheme);
     } else {
       const config = produceConfig(presets[getActive()]);
-      setConfig(config);
       draw(config);
     }
     /* esnext-disable react-hooks/exhaustive-deps */
-  }, [ref]);
+  }, [canvasRef]);
 
   return (
     <canvas
-      ref={ref}
+      ref={canvasRef}
       className="w-full h-full"
       width={window.innerWidth}
       height={window.innerHeight}

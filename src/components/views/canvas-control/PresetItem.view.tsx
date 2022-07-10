@@ -1,7 +1,7 @@
 import { MouseEventHandler, type FC, type ReactNode } from "react";
 import { useFormik } from "formik";
 import { COLORS } from "_constants";
-import { type PerlinConfig } from "_hooks/perlin/perlin.hook.types";
+import { type PerlinConfig } from "_contexts/canvas/Canvas.context.types";
 
 interface PresetItemViewProps {
   formik: ReturnType<typeof useFormik>;

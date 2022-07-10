@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import { usePerlin } from "_hooks/perlin/perlin.hook";
+import { useCanvas } from "_contexts/canvas/Canvas.context";
 import { useFormik } from "formik";
 import { CANVAS_CONTROLS, COLORS, PERLIN_PRESETS } from "_constants";
 import Label from "_primitives/form/Label.primitive";
@@ -20,17 +20,15 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
   helpEnabled,
 }) => {
   const {
-    duration,
-    jpgDataUrl,
-    pngDataUrl,
-    updateConfig,
+    config,
+    lastDrawStats: { finished, duration, jpgDataUrl, pngDataUrl },
+    draw: updateConfig,
     saveToLocalStorage,
     loadFromLocalStorage,
-    config,
     produceConfig,
     generateRandomConfig,
     removeFromLocalStorage,
-  } = usePerlin();
+  } = useCanvas();
   const localStorageValues = loadFromLocalStorage();
   const formik = useFormik({
     initialValues: localStorageValues || config,
@@ -81,7 +79,7 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
         </SectionHelp>
         <div className={`px-3 rounded-md mb-5 ${COLORS.canvasControlInput}`}>
           <div className={`${COLORS.paragraph}`}>
-            {!!duration ? (
+            {finished ? (
               <div>
                 <div className={[COLORS.paragraph, "mb-5 pt-3"].join(" ")}>
                   Drawing complete in {Math.floor(duration / 100) / 10}s.
@@ -100,7 +98,7 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
                   onClick={downloadPngImage}
                   className="mb-3"
                 >
-                  Download PNG (with transparent bg)
+                  Download transparent PNG
                 </CanvasControlFormButtonView>
               </div>
             ) : (
@@ -113,11 +111,9 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
         <div className="mb-5">
           <Legend title="Presets">
             <SectionHelp enabled={helpEnabled}>
-              Select a preset to apply to the controls.
+              Select a preset to start drawing
               <br />
-              Double click starts drawing the preset immediately.
-              <br />
-              Triple click minimizes the controls during drawing.
+              Double click the preset to minimize controls during draw
             </SectionHelp>
             <ol>
               {localStorageValues && (

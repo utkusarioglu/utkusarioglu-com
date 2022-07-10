@@ -1,4 +1,4 @@
-import { PerlinConfig } from "_hooks/perlin/perlin.hook.types";
+import { PerlinConfig } from "_contexts/canvas/Canvas.context.types";
 import { Theme } from "_types/theme.types";
 
 export function loadPerlinConfig(): PerlinConfig | null {

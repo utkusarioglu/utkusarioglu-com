@@ -1,5 +1,5 @@
 import { type INavItem } from "_views/nav-item/NavItem.view.types";
-import { type PerlinPresets } from "_hooks/perlin/perlin.hook.types";
+import { type PerlinPresets } from "_contexts/canvas/Canvas.context.types";
 
 export const ROUTE_PROPS: INavItem[] = [
   {
