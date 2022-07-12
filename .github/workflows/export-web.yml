@@ -1,0 +1,30 @@
+name: Build for web and upload as artifact
+on:
+  # push:
+  #   branches:
+  #     - main
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  publish:
+    name: Export web version and upload as artifact
+    runs-on: ubuntu-latest
+    environment: production
+    container:
+      # Shall be same as the Dockerfile.dev image base
+      image: node:17-slim
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        id: Install
+        run: yarn
+      - name: Export
+        id: export
+        run: yarn export
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: utkusarioglu-com-web-build
+          path: build

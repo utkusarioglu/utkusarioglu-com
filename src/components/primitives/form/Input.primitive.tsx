@@ -2,24 +2,38 @@ import { type FC } from "react";
 import { COLORS } from "_constants";
 import { type InputProps } from "./Input.primitive.types";
 
-const Input: FC<InputProps> = ({ name, type, formik, unit, min, max }) => {
+const Input: FC<InputProps> = ({
+  name,
+  type,
+  unit,
+  min,
+  max,
+  handleChange,
+  values,
+}) => {
   return (
     <div
-      className={`${COLORS.canvasControlInput} py-2 px-3 relative flex flex-row items-center grow rounded-md`}
+      className={[
+        COLORS.canvasControlInput,
+        "py-2 px-3 relative flex flex-row items-center grow rounded-md",
+      ].join(" ")}
     >
       <input
         name={name}
         type={type}
-        onChange={formik.handleChange}
-        className={` ${COLORS.paragraph} grow bg-transparent focus:outline-none`}
-        value={formik.values[name]}
+        onChange={handleChange}
+        className={[
+          COLORS.paragraph,
+          "grow bg-transparent focus:outline-none",
+        ].join(" ")}
+        value={values[name]}
         min={min}
         max={max}
       />
       {unit !== "" && (
-        <div className="ml-3">
+        <div className="ml-3 min-w-[40px] text-right">
           {type === "range" && (
-            <span className={COLORS.paragraph}>{formik.values[name]}</span>
+            <span className={COLORS.paragraph}>{values[name]}</span>
           )}
           <span className={[COLORS.paragraph, "pointer-events-none"].join(" ")}>
             {unit}

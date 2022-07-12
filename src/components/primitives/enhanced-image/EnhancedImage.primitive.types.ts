@@ -10,3 +10,17 @@ export type EnhancedImageProps = {
 export interface ImageData {
   src: ResponsiveImageOutput;
 }
+
+export type GetDims = () => {
+  top: number;
+  left: number;
+  width: number;
+  height: number;
+  borderRadius: string;
+};
+
+export type EndZoom = () => void;
+
+export type OnLoad = () => void;
+
+export type CancelZoom = () => void;

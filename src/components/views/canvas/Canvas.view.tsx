@@ -1,13 +1,16 @@
 import { useEffect, useRef, type FC } from "react";
 import { useCanvas } from "_contexts/canvas/Canvas.context";
+import { useDeviceQuery } from "_hooks/device/device.hook";
 import { useTheme } from "_hooks/theme/theme.hook";
 import { type CanvasViewProps } from "./Canvas.view.types";
 
 const CanvasView: FC<CanvasViewProps> = ({ window }) => {
   const canvasRef = useRef<HTMLCanvasElement>();
+  const { isSm } = useDeviceQuery();
   const {
+    adjustConfig,
     setDependencies,
-    loadFromLocalStorage,
+    localStorageValues,
     presets,
     produceConfig,
     draw,
@@ -16,15 +19,18 @@ const CanvasView: FC<CanvasViewProps> = ({ window }) => {
 
   useEffect(() => {
     setDependencies({ ref: canvasRef, window });
-    const storageTheme = loadFromLocalStorage();
-    if (storageTheme) {
-      draw(storageTheme);
+    if (localStorageValues) {
+      draw(localStorageValues);
     } else {
-      const config = produceConfig(presets[getActive()]);
+      const config = adjustConfig(
+        produceConfig(presets[getActive()]),
+        isSm,
+        getActive()
+      );
       draw(config);
     }
     /* esnext-disable react-hooks/exhaustive-deps */
-  }, [canvasRef]);
+  }, [canvasRef, window.innerWidth, window.innerHeight]);
 
   return (
     <canvas

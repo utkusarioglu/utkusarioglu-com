@@ -1,7 +1,25 @@
+$ruby-dark: #c70000;
+$white: #ffffff;
+$blue-light: #0055ff;
+$blue-dark: #002255;
+$green-light: #006600;
+$green-dark: #005500;
+$yellow: #776600;
+$brown: #444400;
+$white: #ffffff;
+$black: #141414;
+$black-2: #232323;
+$green-1: rgba(71, 140, 2, 1);
+$green-2: rgba(165, 191, 72, 1);
+$yellow-1: rgba(239, 242, 147, 1);
+$yellow-2: rgba(242, 226, 4, 1);
+$yellow-3: rgba(242, 231, 179, 1);
+$grass-height: 40%;
+
 .canvas {
   width: 100%;
   height: 100%;
-  background: linear-gradient(var(--blue-light), var(--blue-dark));
+  background: linear-gradient($blue-light, $blue-dark);
 }
 
 .grass {
@@ -10,7 +28,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(var(--green-light), var(--green-dark));
+  background: linear-gradient($green-light, $green-dark);
 }
 
 .house {
@@ -22,14 +40,14 @@
   justify-content: center;
 
   &-facade {
-    background-color: var(--yellow);
+    background-color: $yellow;
     height: 10vw;
     margin-left: 2vw;
     margin-right: 2vw;
     display: block;
 
     &-window {
-      background-color: var(--blue-light);
+      background-color: $blue-light;
       width: 3vw;
       height: 4vw;
       position: relative;
@@ -38,7 +56,7 @@
     }
 
     &-door {
-      background-color: var(--brown);
+      background-color: $brown;
       position: absolute;
       width: 4vw;
       height: 9vw;
@@ -50,11 +68,11 @@
   &-roof {
     border-left: 7vw solid transparent;
     border-right: 7vw solid transparent;
-    border-bottom: 7vw solid var(--ruby-dark);
+    border-bottom: 7vw solid $ruby-dark;
   }
 
   &-chimney {
-    background-color: var(--ruby-dark);
+    background-color: $ruby-dark;
     width: 2vw;
     top: 1vw;
     height: 4vw;
@@ -68,15 +86,15 @@
   display: block;
   position: fixed;
   left: 50vw;
-  bottom: var(--grass-height);
+  bottom: $grass-height;
   transform: skew(0, 10deg);
 
   &-frame {
     padding: 3vw;
-    background-color: var(--black);
+    background-color: $black;
 
     &-top {
-      background-color: var(--black-2);
+      background-color: $black-2;
       width: 30vw;
       height: 2vw;
       position: absolute;
@@ -88,7 +106,7 @@
 
   &-leg {
     @mixin common {
-      background-color: var(--black);
+      background-color: $black;
       width: 3vw;
       height: 10vw;
       position: absolute;
@@ -106,7 +124,7 @@
 
     &-side {
       @mixin common-side {
-        background-color: var(--black-2);
+        background-color: $black-2;
         width: 2vw;
         top: -1vw;
         height: 28vw;
@@ -131,7 +149,7 @@
   }
 
   &-image {
-    background-color: var(--white);
+    background-color: $white;
     display: grid;
     text-align: center;
 
@@ -160,7 +178,7 @@
 
 .mountain {
   position: fixed;
-  bottom: var(--grass-height);
+  bottom: $grass-height;
   width: 100%;
   height: 100px;
 }

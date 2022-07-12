@@ -31,3 +31,5 @@ yarn-error.log*
 .certs
 public/*.js
 public/*.js.map
+
+.cypress/artifacts

@@ -6,5 +6,12 @@ services:
       context: ..
       dockerfile: .docker/Dockerfile.dev
     volumes:
-      - ../:/utkusarioglu/utkusarioglu-com
-      - ~/projects/utkusarioglu-root-ca:/utkusarioglu/utkusarioglu-com/.certs:ro
+      - type: bind
+        source: ..
+        target: /utkusarioglu/utkusarioglu-com
+      - type: bind
+        source: ~/projects/utkusarioglu-root-ca/p-256/server
+        target: /utkusarioglu/utkusarioglu-com/.certs
+        read_only: true
+        volume:
+          nocopy: true

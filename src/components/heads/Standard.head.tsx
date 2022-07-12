@@ -4,17 +4,23 @@ import {
   APP_DESCRIPTION,
   APP_NAME,
   COLORS,
+  PATH_SEPARATOR,
   TWITTER_HANDLE,
 } from "_constants";
+import { useEnhancedRouter } from "_hooks/router/router.hook";
 
 const StandardHead = () => {
+  const { title } = useEnhancedRouter();
   const { icons, manifest, browserConfig } = JSON.parse(
     process.env.manifestProps
   );
 
   return (
     <Head>
-      <title>Utku Sarioglu</title>
+      <title>
+        {APP_NAME}
+        {title && ` ${PATH_SEPARATOR} ${title}`}
+      </title>
       <meta charSet="utf-8" />
       <meta
         key="viewport"
@@ -37,63 +43,16 @@ const StandardHead = () => {
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="msapplication-tap-highlight" content="no" />
       <meta name="theme-color" content={COLORS.theme} />
-      {/* <IconsHead /> */}
-
-      {/* <link rel="manifest" href={manifest.href} />
-        <meta name="msapplication-config" content={browserConfig.href} />
-        <meta
-          name="msapplication-TileColor"
-          content={browserConfig.object.themeColor}
-        />
-
-        {Object.values<any>(icons.list).map(
-          ({ sizes, filePath, mimeType, href, rel }) => (
-            <link
-              key={filePath}
-              type={mimeType}
-              rel={rel}
-              sizes={sizes}
-              href={href}
-            />
-          )
-        )}
-        <link
-          rel="shortcut icon"
-          type={icons.list.favicon.mimeType}
-          href={icons.list.favicon.href}
-        /> */}
-
-      {/* <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href={icons.png["32x32"]}
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href={icons.png["16x16"]}
-        /> */}
-
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:url" content={APP_ADDRESS} />
       <meta name="twitter:title" content={APP_NAME} />
       <meta name="twitter:description" content={APP_DESCRIPTION} />
-      {/* <meta
-          name="twitter:image"
-          content={APP_ADDRESS + icons.list["192x192"].href}
-        /> */}
       <meta name="twitter:creator" content={TWITTER_HANDLE} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={APP_NAME} />
       <meta property="og:description" content={APP_DESCRIPTION} />
       <meta property="og:site_name" content={APP_NAME} />
       <meta property="og:url" content={APP_ADDRESS} />
-      {/* <meta
-          property="og:image"
-          content={APP_ADDRESS + icons.list["120x120"].href}
-        /> */}
       <link rel="manifest" href={manifest.href} />
       <meta name="msapplication-config" content={browserConfig.href} />
       <meta

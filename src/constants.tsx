@@ -1,5 +1,17 @@
-import { type INavItem } from "_views/nav-item/NavItem.view.types";
+import type { INavItem } from "_views/nav-item/NavItem.view.types";
 import { type PerlinPresets } from "_contexts/canvas/Canvas.context.types";
+import { type MotionVariantRecord } from "_types/vendors/framer-motion.types";
+import type { LayoutSlice } from "_contexts/layout/Layout.context.types";
+
+export const DEFAULT_LAYOUT: LayoutSlice = {
+  navigation: true,
+  canvas: true,
+  content: true,
+  imageViewer: false,
+  contentMask: true,
+};
+
+export const PATH_SEPARATOR = "/";
 
 export const ROUTE_PROPS: INavItem[] = [
   {
@@ -7,71 +19,128 @@ export const ROUTE_PROPS: INavItem[] = [
     type: "page",
     href: "/about",
     show: true,
+    layout: {
+      canvas: true,
+      content: true,
+      navigation: true,
+      contentMask: true,
+    },
   },
   {
     title: "Resume",
     type: "page",
     href: "/resume",
     show: true,
+    layout: {
+      canvas: true,
+      content: true,
+      navigation: true,
+      contentMask: true,
+    },
   },
   {
     title: "Musings",
     type: "page",
     href: "/musings",
     show: true,
+    layout: {
+      canvas: true,
+      content: true,
+      navigation: true,
+      contentMask: true,
+    },
   },
   {
     title: "Canvas",
     type: "page",
     href: "/canvas",
     show: false,
+    layout: {
+      canvas: true,
+      content: true,
+      navigation: true,
+      contentMask: false,
+    },
   },
   {
     title: "Credits",
     type: "page",
     href: "/credits",
     show: false,
+    layout: {
+      canvas: true,
+      content: true,
+      navigation: true,
+      contentMask: true,
+    },
+  },
+  {
+    title: "Artsy Fartsy",
+    type: "page",
+    href: "/musings/artsy-fartsy",
+    show: false,
+    layout: {
+      canvas: false,
+      content: true,
+      navigation: false,
+      contentMask: false,
+    },
+  },
+  {
+    title: "Paper Chain",
+    type: "page",
+    href: "/musings/paper-chain",
+    show: false,
+    layout: {
+      canvas: false,
+      content: true,
+      navigation: true,
+      contentMask: true,
+    },
+  },
+  {
+    title: "Kamyoncu Yazıları",
+    type: "page",
+    href: "/musings/kamyoncu-yazilari",
+    show: false,
+    layout: {
+      canvas: false,
+      content: true,
+      navigation: false,
+      contentMask: false,
+    },
   },
   {
     title: "LinkedIn",
     type: "social",
     href: "https://www.linkedin.com/in/utku-sarioglu",
-    show: true,
   },
   {
     title: "Instagram",
     type: "social",
     href: "https://www.instagram.com/utkusarioglu",
-    show: true,
   },
   {
     title: "Twitter",
     type: "social",
     href: "https://www.twitter.com/utkusarioglu",
-    show: true,
   },
 ];
 
 export const COLORS = {
-  /**
-   * If you change this, also change it in:
-   * - public/browserconfig.xml
-   * - public/manifest.json
-   */
-  theme: "#f59e0b",
+  theme: process.env.THEME_COLOR,
+  background: process.env.BACKGROUND_COLOR,
   bg: "bg-neutral-200 dark:bg-neutral-900 transition-colors",
-  // bgDarker: "bg-neutral-500 dark:bg-[#090909] transition-colors",
-  bgDarker: "bg-neutral-200 dark:bg-neutral-900 transition-colors",
   title: "text-neutral-900 dark:text-neutral-300 transition-colors",
   route: "text-neutral-600 dark:text-neutral-400 transition-colors",
-  page: "text-amber-500 transition-colors",
-  pageFill: "fill-amber-500 dark:fill-amber-500 transition-colors",
+  page: "text-amber-500",
+  pageFill: "fill-amber-500",
   social: "text-sky-500 dark:text-sky-300 transition-colors",
-  extra: "text-neutral-500 dark:text-neutral-500 transition-colors",
-  extraFill: "fill-neutral-500 dark:fill-neutral-500 transition-colors",
+  extra: "text-neutral-500",
+  extraFill: "fill-neutral-500",
   paragraph: "text-black dark:text-white transition-colors",
-  sectionHelpBorder: "border-black dark:border-white transition-colors",
-  secondaryText: "text-neutral-700 dark:text-neutral-500",
+  sectionHelpBorder: "border-neutral-400",
+  secondaryText: "text-neutral-700 dark:text-neutral-500 transition-colors",
   windowTitle: "bg-white/70 dark:bg-black/70 transition-colors",
   scrollbar:
     "scrollbar-thumb-neutral-300 dark:scrollbar-thumb-neutral-800 scrollbar-track-transparent transition-colors",
@@ -91,7 +160,7 @@ export const TRANSITIONS = {
   route: {
     ease: "easeInOut",
     duration: 0.4,
-    // duration: 4,
+    // duration: 2,
   },
   routeFast: {
     ease: "easeInOut",
@@ -122,7 +191,8 @@ export const MASKS = {
   canvasBgH: `linear-gradient(90deg, ${O1}, ${ONE}, ${ONE}, ${ONE}, ${ONE})`,
   canvasSmV: `linear-gradient(0deg, ${O5} 55px, ${ONE} 75px, ${ONE} calc(100% - 85px), ${O1} calc(100% - 65px))`,
   notHomeSmV: `linear-gradient(0deg, ${O1} 55px, ${O2} 75px, ${O2} calc(100% - 85px), ${O1} calc(100% - 65px))`,
-  content: `linear-gradient(0deg, ${ZERO} 55px, ${ONE} 65px, ${ONE} calc(100% - 65px), ${ZERO} calc(100% - 55px))`,
+  // content: `linear-gradient(0deg, ${ZERO} 55px, ${ONE} 65px, ${ONE} calc(100% - 65px), ${ZERO} calc(100% - 55px))`,
+  content: `linear-gradient(0deg, ${ZERO} 55px, ${ONE} 60px, ${ONE} calc(100% - 65px), ${ZERO} calc(100% - 60px))`,
 };
 
 export const TRANSPARENT_MASK = [
@@ -141,7 +211,11 @@ export const CANVAS_CONTROLS = [
         type: "number",
         min: 1,
         max: 60000,
-        help: "Max miliseconds that the render is allowed to run. The render may finalize before the set time if all the particles hit the boundaries of the viewport",
+        help: [
+          "Max duration sets the maximum milliseconds that the render is allowed to run.",
+          "This setting allows drawing short lines that do not reach the ends of the viewport.",
+          "The render may finalize before the set time if all the particles hit the boundaries of the viewport.",
+        ],
       },
     ],
   },
@@ -153,7 +227,9 @@ export const CANVAS_CONTROLS = [
         label: "Seed",
         unit: "",
         type: "number",
-        help: "A random number that determines the shape of the curves",
+        help: [
+          "Seed is a random number that determines the shape of the curves.",
+        ],
       },
       {
         name: "freq",
@@ -161,7 +237,10 @@ export const CANVAS_CONTROLS = [
         unit: "rad",
         min: "1",
         max: "10000",
-        help: "Radius of curvature of the curves. Lower values produce a curlier output and more frequent changes in color hue",
+        help: [
+          "Frequency sets the radius of curvature of the curves.",
+          "Lower values produce a curlier output and more frequent changes in hue.",
+        ],
       },
     ],
   },
@@ -175,7 +254,10 @@ export const CANVAS_CONTROLS = [
         type: "number",
         min: 1,
         max: 10000,
-        help: "Number of particles used for render. Higher values produce a busier render and may slow down your device.",
+        help: [
+          "Particle count determines the number of particles that will create the drawing.",
+          "Higher values produce a busier render and may slow down your device.",
+        ],
       },
       {
         name: "particleSize",
@@ -184,36 +266,34 @@ export const CANVAS_CONTROLS = [
         type: "range",
         min: 1,
         max: 10,
-        help: "Size of the particles. Bigger values produce thicker lines",
+        help: [
+          "Particle size sets the width and height of the leading squares that trace the lines.",
+          "Bigger values produce thicker lines.",
+        ],
       },
     ],
   },
   {
-    title: "Hue",
+    title: "HSL",
     items: [
       {
         name: "hueOffset",
-        label: "Offset",
+        label: "Hue Offset",
         unit: "°",
         type: "range",
         min: 0,
         max: 360,
-        help: "Start offset of the hue value",
+        help: ["Hue start offset sets the start hue for the lines."],
       },
       {
         name: "hueRange",
-        label: "Range",
+        label: "Hue Range",
         unit: "°",
         type: "range",
         min: 0,
         max: 360,
-        help: "Range for the hue value",
+        help: ["Hue range sets the range of colors that the lines can use."],
       },
-    ],
-  },
-  {
-    title: "Intensity",
-    items: [
       {
         name: "saturation",
         label: "Saturation",
@@ -221,7 +301,7 @@ export const CANVAS_CONTROLS = [
         type: "range",
         min: 0,
         max: 100,
-        help: "Color saturation",
+        help: ["Saturation sets the intensity of the color."],
       },
       {
         name: "luminance",
@@ -230,31 +310,45 @@ export const CANVAS_CONTROLS = [
         type: "range",
         min: 0,
         max: 100,
-        help: "Blackness or whiteness of the curves. 50% produces the liveliest colors",
+        help: [
+          "Luminance sets the blackness or whiteness of the color.",
+          "50% produces the liveliest colors.",
+        ],
       },
     ],
   },
 ];
 
-export const APP_NAME = "Utku Sarioglu";
+export const APP_NAME = process.env.APP_NAME;
+export const APP_ADDRESS = process.env.APP_DESCRIPTION;
 export const APP_DESCRIPTION = "Utku Sarioglu's personal website";
-export const APP_ADDRESS = "https://www.utkusarioglu.com";
 export const TWITTER_HANDLE = "@utkusarioglu";
 
 export const PERLIN_PRESETS: PerlinPresets = {
   light: {
     name: "Light theme default",
-    hueOffset: 0,
-    hueRange: 360,
-    freq: 800,
+    hueOffset: 200,
+    hueRange: 40,
+    freq: 700,
     particleCount: 200,
-    particleSize: 1.5,
+    particleSize: 1,
     saturation: 100,
-    luminance: 70,
+    luminance: 40,
     maxDuration: 30000,
   },
   dark: {
     name: "Dark theme default",
+    hueOffset: 200,
+    hueRange: 70,
+    freq: 800,
+    particleCount: 200,
+    particleSize: 1,
+    saturation: 100,
+    luminance: 50,
+    maxDuration: 30000,
+  },
+  vibrant: {
+    name: "Vibrant",
     hueOffset: 0,
     hueRange: 360,
     freq: 800,
@@ -268,7 +362,7 @@ export const PERLIN_PRESETS: PerlinPresets = {
     name: "Thick black lines",
     hueOffset: 0,
     hueRange: 360,
-    freq: 1500,
+    freq: 3000,
     particleCount: 30,
     particleSize: 5,
     saturation: 0,
@@ -286,15 +380,26 @@ export const PERLIN_PRESETS: PerlinPresets = {
     luminance: 0,
     maxDuration: 30000,
   },
-  blueMarble: {
-    name: "Blue Marble",
-    hueOffset: 216,
-    hueRange: 160,
-    freq: 2000,
-    particleCount: 500,
-    particleSize: 1,
+  physarumPolycephalum: {
+    name: "Physarum polycephalum",
+    hueOffset: 46,
+    hueRange: 20,
+    freq: 20,
+    particleCount: 2000,
+    particleSize: 0.1,
     saturation: 100,
     luminance: 50,
+    maxDuration: 60000,
+  },
+  drawMeLikeOneOfYourFrenchCurves: {
+    name: "Draw me like one of your French curves",
+    hueOffset: 189,
+    hueRange: 37,
+    freq: 2000,
+    particleCount: 20,
+    particleSize: 10,
+    saturation: 25,
+    luminance: 16,
     maxDuration: 30000,
   },
   drunkWindowsPipes: {
@@ -308,4 +413,38 @@ export const PERLIN_PRESETS: PerlinPresets = {
     luminance: 50,
     maxDuration: 30000,
   },
+  loveSeatInHyperspace: {
+    name: "Love seat in hyperspace",
+    hueOffset: 0,
+    hueRange: 60,
+    freq: 600,
+    particleCount: 2,
+    particleSize: 200,
+    saturation: 100,
+    luminance: 50,
+    maxDuration: 30000,
+  },
+  asSmoothAsSilk: {
+    name: "As smooth as silk",
+    hueOffset: 0,
+    hueRange: 50,
+    freq: 1500,
+    particleCount: 2000,
+    particleSize: 0.2,
+    saturation: 0,
+    luminance: 100,
+    maxDuration: 60000,
+  },
 };
+
+export const MOTION_VARIANTS: MotionVariantRecord<"div"> = {
+  opacity: {
+    none: { opacity: 0 },
+    full: { opacity: 1 },
+    o7: { opacity: 0.7 },
+  },
+};
+
+export const IMG_ZOOM_MARGIN = 20;
+export const IMG_MAXIMIZED_BORDER_RADIUS = 20;
+export const CONTENT_ANIMATION_Y_DRIFT = 100;

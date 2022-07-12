@@ -8,8 +8,10 @@ import { produceAnimate } from "./Canvas.layout.utils";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallbackView from "_views/error-fallback/ErrorFallback.view";
 import { isIOS, isAndroid } from "react-device-detect";
+import { useLayoutContext } from "_contexts/layout/Layout.context";
 
 const CanvasLayout = () => {
+  const { navigation, canvas } = useLayoutContext();
   const { isCanvas, isHome } = useEnhancedRouter();
   const window = useWindow();
   const { isSm } = useDeviceQuery();
@@ -20,10 +22,18 @@ const CanvasLayout = () => {
 
   return (
     <motion.div
+      layout
       initial={{
         WebkitMaskImage: TRANSPARENT_MASK,
       }}
-      animate={produceAnimate({ isHome, isCanvas, isSm, isAndroid })}
+      animate={produceAnimate({
+        isHome,
+        isCanvas,
+        isSm,
+        isAndroid,
+        navigation,
+        canvas,
+      })}
       transition={TRANSITIONS.route}
       style={{
         ...(isIOS
@@ -37,7 +47,7 @@ const CanvasLayout = () => {
         maskMode: "alpha",
       }}
       className={[
-        "fixed h-full w-full top-0 left-0 z-0",
+        "absolute h-full w-full top-0 left-0 z-0",
         "pointer-events-none flex justify-center",
       ].join(" ")}
     >

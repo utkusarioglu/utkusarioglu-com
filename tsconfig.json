@@ -4,7 +4,8 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "esnext",
+      "WebWorker"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -20,19 +21,19 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "_styles/*": ["src/styles/*"],
       "_views/*": ["src/components/views/*"],
+      "_primitives/*": ["src/components/primitives/*"],
+      "_contexts/*": ["src/components/contexts/*"],
       "_layouts/*": ["src/components/layouts/*"],
-      "_services/*": ["src/services/*"],
       "_heads/*": ["src/components/heads/*"],
-      "_assets/*": ["assets/*"],
+      "_services/*": ["src/services/*"],
+      "_styles/*": ["src/styles/*"],
       "_constants": ["src/constants"],
       "_hooks/*": ["src/hooks/*"],
-      "_contexts/*": ["src/components/contexts/*"],
       "_utils/*": ["src/utils/*"],
       "_types/*": ["src/types/*"],
       "_workers/*": ["src/workers/*"],
-      "_primitives/*": ["src/components/primitives/*"]
+      "_assets/*": ["assets/*"],
     }
   },
   "include": [

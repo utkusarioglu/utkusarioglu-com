@@ -1,51 +1,73 @@
-import { type FC, useState, PointerEventHandler } from "react";
+import { type FC, useState, type PointerEventHandler, useEffect } from "react";
 import { AnimatePresence, motion, useDragControls } from "framer-motion";
 import CanvasControlView from "_views/canvas-control/CanvasControl.view";
 import { useDeviceQuery } from "_hooks/device/device.hook";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallbackView from "_views/error-fallback/ErrorFallback.view";
-import { COLORS, TRANSITIONS } from "_constants";
+import { COLORS, TRANSITIONS, MOTION_VARIANTS } from "_constants";
 import { CanvasControlLayoutProps } from "./CanvasControl.layout.types";
 import CanvasControlTitleButtonView from "_views/canvas-control-title-button/CanvasControlTitleButton.view";
-import { type MotionVariants } from "_types/vendors/framer-motion.types";
+import { useLayoutContext } from "_contexts/layout/Layout.context";
+import { isAndroid } from "react-device-detect";
+import {
+  getCanvasControlsFirstVisit,
+  setCanvasControlsVisitHappened,
+} from "_utils/local-storage.utils";
 
 const CanvasControlLayout: FC<CanvasControlLayoutProps> = ({
   dragConstraintsRef,
 }) => {
-  const [helpEnabled, setHelpEnabled] = useState(false);
+  const isFirstVisit = getCanvasControlsFirstVisit();
+  const { setLayout } = useLayoutContext();
+  const [helpEnabled, setHelpEnabled] = useState(isFirstVisit);
   const dragControls = useDragControls();
   const [maximized, setMaximized] = useState(true);
   const { isSm } = useDeviceQuery();
   const toggleHelp = () => {
     setHelpEnabled((current) => !current);
   };
+  useEffect(() => setCanvasControlsVisitHappened, []);
+
   const startDrag: PointerEventHandler<HTMLDivElement> = (event) => {
     if (!isSm) {
       dragControls.start(event);
     }
   };
 
+  const minimize = () => {
+    setMaximized(false);
+    setLayout({ navigation: false });
+  };
+
+  const maximize = () => {
+    setMaximized(true);
+    setLayout({ navigation: true });
+  };
+
   return (
-    <AnimatePresence initial={false}>
+    <AnimatePresence initial={false} exitBeforeEnter>
       {maximized ? (
         <motion.div
+          key="canvas-control-layout-maximized"
           drag={true}
           dragControls={dragControls}
           dragMomentum={false}
           dragListener={false}
           dragConstraints={dragConstraintsRef}
-          variants={variants}
-          initial="hidden"
-          animate="animate"
-          exit="exit"
-          whileDrag="whileDrag"
+          variants={MOTION_VARIANTS.opacity}
+          initial="none"
+          animate="full"
+          exit="none"
+          whileDrag="o7"
           transition={TRANSITIONS.routeFast}
           className={[
-            "relative rounded-lg flex flex-col border-[1px]",
-            "backdrop-blur-sm overflow-hidden w-[400px]",
+            "flex flex-col overflow-hidden",
             COLORS.canvasControlsBg,
             COLORS.canvasControlBorder,
-            isSm ? "h-[350px] mb-12" : "h-[450px]",
+            isSm
+              ? "absolute top-16 bottom-4 left-0 right-0 mb-12 !transform-none"
+              : "relative h-[450px] w-[400px] border-[1px] rounded-lg ",
+            isAndroid ? "" : "backdrop-blur-sm ",
           ].join(" ")}
         >
           <div
@@ -63,33 +85,31 @@ const CanvasControlLayout: FC<CanvasControlLayoutProps> = ({
             >
               ?
             </CanvasControlTitleButtonView>
-            <CanvasControlTitleButtonView
-              onClick={() => setMaximized(false)}
-              isActive={false}
-            >
+            <CanvasControlTitleButtonView onClick={minimize} isActive={false}>
               ▼
             </CanvasControlTitleButtonView>
           </div>
           <ErrorBoundary FallbackComponent={ErrorFallbackView}>
             <CanvasControlView
-              minimize={() => setMaximized(false)}
+              minimize={minimize}
               helpEnabled={helpEnabled}
+              firstVisit={isFirstVisit}
             />
           </ErrorBoundary>
         </motion.div>
       ) : (
         <motion.button
-          variants={variants}
-          initial="hidden"
-          animate="animate"
-          exit="exit"
-          onClick={() => setMaximized(true)}
+          key="fixed canvas-control-layout-minimized"
+          variants={MOTION_VARIANTS.opacity}
+          initial="none"
+          animate="full"
+          onClick={maximize}
           className={[
-            `bottom-0 right-0 px-4 py-1 rounded-md`,
+            "bottom-0 px-4 py-1 rounded-md",
             COLORS.canvasControlsBg,
             COLORS.canvasControlBorder,
             COLORS.paragraph,
-            isSm ? "mb-12" : "mb-5",
+            isSm ? "mb-0" : "mb-5",
           ].join(" ")}
         >
           ▲
@@ -97,13 +117,6 @@ const CanvasControlLayout: FC<CanvasControlLayoutProps> = ({
       )}
     </AnimatePresence>
   );
-};
-
-const variants: MotionVariants<"div"> | MotionVariants<"button"> = {
-  hidden: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
-  whileDrag: { opacity: 0.7 },
 };
 
 export default CanvasControlLayout;

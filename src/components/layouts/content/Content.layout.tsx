@@ -1,12 +1,18 @@
 import { type FC, forwardRef } from "react";
 import { motion } from "framer-motion";
-import { COLORS, TRANSITIONS, MASKS } from "_constants";
+import {
+  COLORS,
+  TRANSITIONS,
+  MASKS,
+  CONTENT_ANIMATION_Y_DRIFT,
+} from "_constants";
 import { useDeviceQuery } from "_hooks/device/device.hook";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallbackView from "_views/error-fallback/ErrorFallback.view";
 import { MotionVariants } from "_types/vendors/framer-motion.types";
 import FooterLayout from "_layouts/footer/Footer.layout";
 import { ContentLayoutProps } from "./Content.layout.types";
+import { useLayoutContext } from "_contexts/layout/Layout.context";
 
 /* eslint-disable react/display-name */
 const ContentLayout = forwardRef<HTMLDivElement, ContentLayoutProps>(
@@ -22,6 +28,7 @@ const ContentLayout = forwardRef<HTMLDivElement, ContentLayoutProps>(
     },
     dragConstraintsRef
   ) => {
+    const { content, contentMask } = useLayoutContext();
     const { isSm } = useDeviceQuery();
 
     return (
@@ -29,7 +36,8 @@ const ContentLayout = forwardRef<HTMLDivElement, ContentLayoutProps>(
         ref={dragConstraintsRef}
         style={{
           ...(isSm &&
-            !allowEntireViewport && {
+            !allowEntireViewport &&
+            contentMask && {
               WebkitMaskImage: MASKS.content,
               maskMode: "alpha",
             }),
@@ -37,8 +45,13 @@ const ContentLayout = forwardRef<HTMLDivElement, ContentLayoutProps>(
         className="absolute left-0 right-0 h-full w-full overflow-hidden"
       >
         <motion.div
+          layout
           key="content-container"
-          variants={variants}
+          variants={{
+            initial: { y: CONTENT_ANIMATION_Y_DRIFT, opacity: 0 },
+            animate: { y: 0, opacity: content ? 1 : 0 },
+            exit: { y: CONTENT_ANIMATION_Y_DRIFT, opacity: 0 },
+          }}
           initial="initial"
           animate="animate"
           exit="exit"
@@ -90,10 +103,6 @@ const ContentLayout = forwardRef<HTMLDivElement, ContentLayoutProps>(
   }
 );
 
-const variants: MotionVariants<"div"> = {
-  initial: { y: 100, opacity: 0 },
-  animate: { y: 0, opacity: 1 },
-  exit: { y: 100, opacity: 0 },
-};
+const variants: MotionVariants<"div"> = {};
 
 export default ContentLayout;

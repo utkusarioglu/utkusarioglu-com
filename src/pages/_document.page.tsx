@@ -1,7 +1,9 @@
+import { type FC } from "react";
 import { Html, Head, Main, NextScript } from "next/document";
 import { COLORS } from "_constants";
+import { DocumentProps } from "next/document";
 
-const Document = () => {
+const Document: FC<DocumentProps> = () => {
   return (
     <Html lang="en" className="h-full">
       <Head>
@@ -26,7 +28,7 @@ const Document = () => {
         <link
           href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
           rel="stylesheet"
-        ></link>
+        />
       </Head>
       <body
         className={[COLORS.bg, "select-none h-full overflow-hidden"].join(" ")}

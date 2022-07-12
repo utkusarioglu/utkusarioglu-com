@@ -1,16 +1,14 @@
 import { type FC } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { APP_NAME, COLORS } from "_constants";
-import { TRANSITIONS, ROUTE_PROPS } from "_constants";
+import { APP_NAME, COLORS, PATH_SEPARATOR } from "_constants";
+import { TRANSITIONS } from "_constants";
 import { type MotionVariants } from "_types/vendors/framer-motion.types";
 import { useEnhancedRouter } from "_hooks/router/router.hook";
 import { type TitleViewProps } from "./Title.view.types";
 
 const TitleView: FC<TitleViewProps> = ({ className }) => {
-  const { route, isHome } = useEnhancedRouter();
-  const navItem = !isHome && ROUTE_PROPS.find((item) => item.href === route);
-  const title = (navItem && navItem.title) || route.substring(1);
+  const { route, isHome, title } = useEnhancedRouter();
 
   return (
     <div className={["grow-0 flex flex-row", className].join(" ")}>
@@ -46,7 +44,9 @@ const TitleView: FC<TitleViewProps> = ({ className }) => {
                 className={`${className} flex flex-row items-center absolute`}
                 transition={TRANSITIONS.route}
               >
-                <span className={["px-1", COLORS.route].join(" ")}>/</span>
+                <span className={["px-1", COLORS.route].join(" ")}>
+                  {PATH_SEPARATOR}
+                </span>
                 <span
                   className={["font-display text-3xl w-max", COLORS.route].join(
                     " "

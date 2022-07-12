@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { type FC } from "react";
+import { Theme } from "_types/theme.types";
 import { type MotionVariants } from "_types/vendors/framer-motion.types";
 import { type AnimatedLinkProps } from "./AnimatedLink.primitive.types";
 
@@ -11,7 +12,7 @@ const AnimatedLink: FC<AnimatedLinkProps> = ({
   return (
     <motion.div
       key={href}
-      variants={variants}
+      variants={variants("dark")}
       initial="hidden"
       animate="enter"
       whileHover="hover"
@@ -24,15 +25,21 @@ const AnimatedLink: FC<AnimatedLinkProps> = ({
   );
 };
 
-const variants: MotionVariants<"div"> = {
-  enter: { opacity: 1, x: 0, y: 0 },
+const variants: (theme: Theme) => MotionVariants<"div"> = (theme) => ({
+  enter: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    // textShadow: theme === "light" ? "0px 0px 10px #e5e5e5" : "",
+  },
   hover: {
     opacity: 1,
     x: -10,
     y: 0,
-    textShadow: "10px 10px 20px black",
+    textShadow:
+      theme === "light" ? "10px 10px 20px #171717" : "10px 10px 20px #050505",
   },
   tap: { scale: 0.8 },
-};
+});
 
 export default AnimatedLink;

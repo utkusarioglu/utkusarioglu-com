@@ -8,8 +8,10 @@ import { useWindow } from "_hooks/window/window.hook";
 import { homeNavX, homeNavY } from "_utils/positioning.utils";
 import type { MotionVariantRecord } from "_types/vendors/framer-motion.types";
 import { type NavLayoutProps } from "./Nav.layout.types";
+import { useLayoutContext } from "_contexts/layout/Layout.context";
 
 const NavLayout: FC<NavLayoutProps> = ({ titleRef }) => {
+  const { navigation } = useLayoutContext();
   const { isHome } = useEnhancedRouter();
   const { isSm } = useDeviceQuery();
   const window = useWindow();
@@ -20,12 +22,13 @@ const NavLayout: FC<NavLayoutProps> = ({ titleRef }) => {
 
   const wMid = homeNavX(window);
   const hMid = homeNavY(window);
-  const variants = computeVariants(isHome, isSm, hMid, wMid);
+  const variants = computeVariants(isHome, isSm, hMid, wMid, navigation);
 
   return (
     <AnimatePresence initial={false}>
       {isHome ? (
         <motion.div
+          layout
           key="center-nav"
           variants={variants.centerNav}
           initial="initial"
@@ -38,6 +41,7 @@ const NavLayout: FC<NavLayoutProps> = ({ titleRef }) => {
         </motion.div>
       ) : isSm ? (
         <motion.div
+          layout
           key="bottom-nav"
           variants={variants.bottomNav}
           initial="initial"
@@ -51,6 +55,7 @@ const NavLayout: FC<NavLayoutProps> = ({ titleRef }) => {
           style={{
             WebkitMaskImage: MASKS.nav,
             maskMode: "alpha",
+            pointerEvents: navigation ? "all" : "none",
           }}
         >
           <div className="px-5">
@@ -59,6 +64,7 @@ const NavLayout: FC<NavLayoutProps> = ({ titleRef }) => {
         </motion.div>
       ) : (
         <motion.div
+          layout
           key="aside-nav"
           variants={variants.asideNav}
           initial="initial"
@@ -66,6 +72,9 @@ const NavLayout: FC<NavLayoutProps> = ({ titleRef }) => {
           exit="exit"
           className="top-0 z-20 bottom-0 fixed justify-center flex"
           transition={TRANSITIONS.route}
+          style={{
+            pointerEvents: navigation ? "all" : "none",
+          }}
         >
           <NavView mode="aside" />
         </motion.div>
@@ -78,7 +87,8 @@ function computeVariants(
   isHome: boolean,
   isSm: boolean,
   hMid: number,
-  wMid: number
+  wMid: number,
+  navigation: boolean
 ): MotionVariantRecord<"div"> {
   return {
     centerNav: {
@@ -105,7 +115,7 @@ function computeVariants(
       },
       animate: {
         x: 0,
-        opacity: 1,
+        opacity: navigation ? 1 : 0,
       },
       exit: {
         x: wMid,
@@ -119,7 +129,7 @@ function computeVariants(
       },
       animate: {
         y: 0,
-        opacity: 1,
+        opacity: navigation ? 1 : 0,
       },
       exit: {
         y: 60,

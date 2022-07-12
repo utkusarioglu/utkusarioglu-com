@@ -1,8 +1,8 @@
-import { type FC } from "react";
+import { type ReactNode, type FC } from "react";
 import { COLORS } from "_constants";
 
 type CanvasControlFormButtonViewProps = {
-  children: string;
+  children: ReactNode;
   color: "primary" | "secondary";
 } & JSX.IntrinsicElements["button"];
 

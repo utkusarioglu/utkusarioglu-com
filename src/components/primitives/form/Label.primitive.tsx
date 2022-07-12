@@ -4,7 +4,7 @@ import { type LabelProps } from "./Label.primitive.types";
 
 const Label: FC<LabelProps> = ({ children, ...props }) => {
   return (
-    <label {...props} className={[COLORS.paragraph, "w-28 mr-2"].join(" ")}>
+    <label {...props} className={[COLORS.paragraph, "w-24 mr-2"].join(" ")}>
       {children}
     </label>
   );

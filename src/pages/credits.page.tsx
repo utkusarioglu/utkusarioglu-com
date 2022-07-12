@@ -1,6 +1,5 @@
 import ContentLayout from "_layouts/content/Content.layout";
-import { COLORS } from "_constants";
-import Paragraph from "_primitives/Paragraph.primitive";
+import Paragraph from "_primitives/paragraph/Paragraph.primitive";
 
 const content = ["Runs on aws", "Also, other things"];
 
