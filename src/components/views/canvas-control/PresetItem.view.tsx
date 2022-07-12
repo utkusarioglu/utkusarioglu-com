@@ -3,16 +3,20 @@ import { useFormik } from "formik";
 import { COLORS } from "_constants";
 import { type PerlinConfig } from "_contexts/canvas/Canvas.context.types";
 
-interface PresetItemViewProps {
-  formik: ReturnType<typeof useFormik>;
+type PresetItemViewProps = Pick<
+  ReturnType<typeof useFormik>,
+  "setValues" | "values" | "submitForm"
+> & {
   configCallback: () => PerlinConfig;
   minimize: () => void;
   name: string;
   ControlComponent?: ReactNode;
-}
+};
 
 const PresetItemView: FC<PresetItemViewProps> = ({
-  formik,
+  setValues,
+  submitForm,
+  values,
   configCallback,
   name,
   minimize,
@@ -21,8 +25,8 @@ const PresetItemView: FC<PresetItemViewProps> = ({
   const presetOnClick: MouseEventHandler<HTMLDivElement> = (e) => {
     switch (e.detail) {
       case 1:
-        formik.setValues(configCallback());
-        formik.submitForm();
+        setValues(configCallback());
+        submitForm();
         break;
       case 2:
         minimize();
@@ -35,7 +39,7 @@ const PresetItemView: FC<PresetItemViewProps> = ({
       className={[
         "p-3 mb-1 rounded-md w-full text-left relative cursor-pointer",
         COLORS.paragraph,
-        formik.values.name === name
+        values.name === name
           ? COLORS.canvasControlInputSelected
           : COLORS.canvasControlInput,
       ].join(" ")}

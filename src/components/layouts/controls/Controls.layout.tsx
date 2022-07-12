@@ -1,30 +1,23 @@
-import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useRef, type FC } from "react";
 import ExtraNavLayout from "_layouts/extra-nav/ExtraNav.layout";
 import NavLayout from "_layouts/nav/Nav.layout";
 import TitleLayout from "_layouts/title/Title.layout";
 import CanvasLayout from "_layouts/canvas/Canvas.layout";
-import { type MotionVariants } from "_types/vendors/framer-motion.types";
-import { useAppContext } from "_contexts/app/App.context";
+import ImageViewerLayout from "_layouts/image-viewer/ImageViewer.layout";
 
-const ControlsLayout = () => {
-  const { navigation } = useAppContext();
+interface ControlsLayoutProps {
+  route: string;
+}
+
+const ControlsLayout: FC<ControlsLayoutProps> = ({ route }) => {
   const titleRef = useRef<HTMLDivElement>(null);
-  const variants: MotionVariants<"div"> = {
-    // initialAndAnimate: { opacity: controlHiddenRoute(route) ? 0 : 1 },
-    initialAndAnimate: { opacity: navigation ? 1 : 0 },
-  };
+
   return (
     <>
-      <motion.div
-        variants={variants}
-        initial="initialAndAnimate"
-        animate="initialAndAnimate"
-      >
-        <CanvasLayout />
-        <ExtraNavLayout titleRef={titleRef} />
-        <NavLayout titleRef={titleRef} />
-      </motion.div>
+      <ImageViewerLayout />
+      <CanvasLayout />
+      <ExtraNavLayout titleRef={titleRef} />
+      <NavLayout titleRef={titleRef} />
       <TitleLayout ref={titleRef} />
     </>
   );

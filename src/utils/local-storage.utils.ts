@@ -43,3 +43,19 @@ export function saveTheme(theme: Theme) {
     console.log(e);
   }
 }
+
+export function getCanvasControlsFirstVisit() {
+  try {
+    return !localStorage.getItem("canvasControlVisited");
+  } catch (e) {
+    return false;
+  }
+}
+
+export function setCanvasControlsVisitHappened() {
+  try {
+    localStorage.setItem("canvasControlVisited", "true");
+  } catch (e) {
+    console.log(e);
+  }
+}

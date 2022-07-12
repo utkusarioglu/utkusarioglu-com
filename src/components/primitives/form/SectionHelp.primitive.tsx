@@ -8,15 +8,18 @@ const SectionHelp: FC<SectionHelpProps> = ({ children, enabled }) => {
   }
 
   return (
-    <div
+    <fieldset
       className={[
-        "text-sm p-3 rounded-md mb-3 border-[1px]",
+        "text-sm px-3 pb-3 pt-2 rounded-md mb-3 border-[1px]",
         COLORS.paragraph,
         COLORS.sectionHelpBorder,
       ].join(" ")}
     >
+      <legend>
+        <span className="px-2 font-bold">Help</span>
+      </legend>
       {children}
-    </div>
+    </fieldset>
   );
 };
 

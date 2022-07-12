@@ -1,4 +1,4 @@
-FROM node:16-slim
+FROM node:17-slim
 RUN apt update
 RUN apt install vim -y
 USER node

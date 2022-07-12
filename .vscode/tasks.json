@@ -44,6 +44,13 @@
       "detail": "Start local server with SSL proxy"
     },
     {
+      "type": "npm",
+      "script": "e2e-test",
+      "label": "E2E Test",
+      "problemMatcher": [],
+      "detail": "Start E2E testing"
+    },
+    {
       "type": "shell",
       "command": "scripts/export-and-local.sh",
       "label": "Export & Local",

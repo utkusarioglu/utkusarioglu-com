@@ -1,5 +1,6 @@
 import ContentLayout from "_layouts/content/Content.layout";
 import { COLORS } from "_constants";
+import EnhancedImage from "_primitives/enhanced-image/EnhancedImage.primitive";
 
 const content = [
   " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac massa et metus elementum convallis. Aliquam sed laoreet est, id auctor neque. Suspendisse euismod, augue id tempus venenatis, eros sapien finibus odio, et sagittis erat quam a orci. In hac habitasse platea dictumst. Vestibulum arcu turpis, cursus placerat leo aliquam, porttitor euismod purus. Sed urna nunc, vestibulum non commodo at, fermentum ac ipsum. Nunc tempus ex non vestibulum mollis. Ut pharetra hendrerit justo, ac varius odio placerat ut. Nunc vitae ligula ut quam cursus consectetur. Maecenas euismod sapien ut magna viverra, ultrices pharetra enim dictum. Mauris pretium nisi purus, quis pretium diam venenatis ornare. Vestibulum tortor dolor, convallis eget lectus et, elementum rhoncus nisl. Curabitur consectetur odio at augue egestas porta. Praesent ut leo non turpis suscipit finibus sed nec augue. Sed magna velit, eleifend sed porttitor non, dictum non odio. Integer ac nunc rutrum tortor rutrum commodo eget vel risus. ",
@@ -11,6 +12,12 @@ const content = [
 const ResumePage = () => {
   return (
     <ContentLayout>
+      <EnhancedImage
+        className="rounded-md"
+        alt="Resume title image"
+        credits="photo by Utku Sarioglu"
+        src={require("_assets/images/waves-and-bird.jpg")}
+      />
       {content.map((paragraph) => (
         <p className={`mb-5 text-base ${COLORS.paragraph}`} key={paragraph}>
           {paragraph}

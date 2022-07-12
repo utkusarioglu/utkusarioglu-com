@@ -5,7 +5,9 @@ import ExtraNavView from "_views/extra-nav/ExtraNav.view";
 import { type NavViewProps } from "./Nav.view.types";
 
 const NavView: FC<NavViewProps> = ({ mode }) => {
-  const navItems = ROUTE_PROPS.filter((item) => item.show);
+  const navItems = ROUTE_PROPS.filter(
+    (item) => item.type === "social" || (item.type === "page" && item.show)
+  );
 
   switch (mode) {
     case "center":
@@ -26,7 +28,7 @@ const NavView: FC<NavViewProps> = ({ mode }) => {
             type="home"
             fontSize="small"
             mode={mode}
-            show={true}
+            // show={true}
           />
           {navItems.map((item) => (
             <NavItem key={item.title} {...item} fontSize="small" mode={mode} />
@@ -43,7 +45,7 @@ const NavView: FC<NavViewProps> = ({ mode }) => {
             type="home"
             fontSize="small"
             mode={mode}
-            show={true}
+            // show={true}
           />
           {navItems.map((item) => (
             <NavItem key={item.title} {...item} fontSize="small" mode={mode} />

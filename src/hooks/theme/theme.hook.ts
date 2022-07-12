@@ -52,6 +52,7 @@ export function useTheme(): UseThemeReturn {
 
     setThemeProps({ system, local, combined });
   }, [window]);
+
   return {
     ...themeProps,
     setActive,

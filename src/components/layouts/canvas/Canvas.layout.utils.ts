@@ -5,6 +5,8 @@ interface ComputeMaskParams {
   isCanvas: boolean;
   isSm: boolean;
   isAndroid: boolean;
+  navigation: boolean;
+  canvas: boolean;
 }
 
 export function produceAnimate({
@@ -12,6 +14,8 @@ export function produceAnimate({
   isCanvas,
   isSm,
   isAndroid,
+  navigation,
+  canvas,
 }: ComputeMaskParams) {
   const masks = [];
   let filter = "";
@@ -27,7 +31,11 @@ export function produceAnimate({
     if (isSm) {
       masks.push(MASKS.horizontalOpaque);
     } else {
-      masks.push(MASKS.canvasBgH);
+      if (!navigation) {
+        masks.push(MASKS.horizontalOpaque);
+      } else {
+        masks.push(MASKS.canvasBgH);
+      }
     }
   } else {
     if (!isAndroid) {
@@ -43,7 +51,11 @@ export function produceAnimate({
   // vertical
   if (isSm) {
     if (isCanvas) {
-      masks.push(MASKS.canvasSmV);
+      if (!navigation) {
+        masks.push(MASKS.verticalOpaque);
+      } else {
+        masks.push(MASKS.canvasSmV);
+      }
     } else if (!isHome) {
       masks.push(MASKS.notHomeSmV);
     } else {
@@ -52,8 +64,10 @@ export function produceAnimate({
   } else {
     masks.push(MASKS.verticalOpaque);
   }
+
   return {
     WebkitMaskImage: masks.join(", "),
     filter,
+    opacity: canvas ? 1 : 0,
   };
 }

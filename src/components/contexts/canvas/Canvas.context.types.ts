@@ -2,11 +2,14 @@ import { type ReactNode } from "react";
 import { Theme } from "_types/theme.types";
 import { MutableRefObject } from "react";
 import {
-  loadPerlinConfig,
   savePerlinConfig,
   deletePerlinConfig,
 } from "_utils/local-storage.utils";
-import { produceConfig, generateRandomConfig } from "./Canvas.context.logic";
+import {
+  produceConfig,
+  generateRandomConfig,
+  adjustConfig,
+} from "./Canvas.context.logic";
 
 export type CanvasSlice = {
   config: PerlinConfig;
@@ -14,8 +17,8 @@ export type CanvasSlice = {
 };
 
 type CanvasContextActions = {
-  setConfig: (config: PerlinConfig) => void;
-  onFinished: (params: DrawPerlinReturn) => void;
+  setConfig: SetConfig;
+  onFinished: OnFinished;
 };
 
 export type ICanvasContext = CanvasSlice & CanvasContextActions;
@@ -29,7 +32,10 @@ export interface CanvasContextProviderProps {
   theme: Theme;
 }
 
-export type InitializeDraw = (customConfig?: PerlinConfig) => Promise<void>;
+export type InitializeDraw = (args: {
+  onFinished: OnFinished;
+  config: PerlinConfig;
+}) => Promise<void>;
 
 type UseCanvasReturn = {
   config: PerlinConfig;
@@ -39,20 +45,15 @@ type UseCanvasReturn = {
   setDependencies: SetDependencies;
   draw: UpdateConfig;
   saveToLocalStorage: typeof savePerlinConfig;
-  loadFromLocalStorage: typeof loadPerlinConfig;
+  localStorageValues: PerlinConfig | null;
   removeFromLocalStorage: typeof deletePerlinConfig;
   produceConfig: typeof produceConfig;
+  adjustConfig: typeof adjustConfig;
   generateRandomConfig: typeof generateRandomConfig;
 };
 
-export type PerlinPresets = Record<
-  | Theme
-  | "thickBlackLines"
-  | "thinBlackLines"
-  | "blueMarble"
-  | "drunkWindowsPipes",
-  PerlinPreset
->;
+export type PerlinPresets = Record<string, PerlinPreset>;
+
 type UpdateConfig = (config: PerlinConfig) => Promise<void>;
 
 export type SetDependencies = (args: SetDependenciesArgs) => void;
@@ -104,13 +105,18 @@ export type PerlinPreset = {
 export interface DrawPerlinParams {
   configId: string;
   config: PerlinConfig;
+  handler: Handlers;
 }
+
+export type Handlers = "main" | "offscreenWorker";
 
 export interface DrawPerlinReturn {
   finished: boolean;
   duration: number;
   jpgDataUrl: string;
   pngDataUrl: string;
+  handler: Handlers;
+  config: PerlinConfig;
 }
 
 export interface PerlinTargetParams {

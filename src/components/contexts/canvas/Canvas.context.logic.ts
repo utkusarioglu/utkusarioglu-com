@@ -1,3 +1,5 @@
+import { PERLIN_PRESETS } from "_constants";
+import { Theme } from "_types/theme.types";
 import {
   DrawPerlinReturn,
   PerlinConfig,
@@ -6,14 +8,19 @@ import {
   PerlinDrawer,
   PerlinTargetMessage,
   DrawPerlinMessage,
+  InitializeDraw,
+  CanvasRef,
+  SetDependencies,
 } from "./Canvas.context.types";
 
+let drawer: PerlinDrawer | null = null;
 export let offscreen: Transferable;
 export let worker: Worker;
+let window: Window | null = null;
+let ref: CanvasRef | null = null;
 
-export function init({ canvas, width, height }: InitParams): PerlinDrawer {
-  if (false && canvas.transferControlToOffscreen) {
-    console.log("transferControlToOffscreen");
+function init({ canvas, width, height }: InitParams): PerlinDrawer {
+  if (canvas.transferControlToOffscreen) {
     if (!offscreen) {
       offscreen = canvas.transferControlToOffscreen();
       worker = new Worker(
@@ -32,6 +39,7 @@ export function init({ canvas, width, height }: InitParams): PerlinDrawer {
         args: {
           configId,
           config,
+          handler: "offscreenWorker",
         },
       };
       worker.postMessage(postMessageArgs);
@@ -49,6 +57,7 @@ export function init({ canvas, width, height }: InitParams): PerlinDrawer {
       return perlinFactory({
         config,
         configId,
+        handler: "main",
       });
     };
   }
@@ -61,6 +70,24 @@ export function produceConfig(
   return {
     ...preset,
     seed: seed || Math.round(Math.random() * 10000),
+  };
+}
+
+export function adjustConfig(
+  preset: PerlinConfig,
+  isSm: boolean,
+  theme: Theme
+) {
+  return {
+    ...preset,
+    ...(isSm && {
+      particleCount: Math.ceil(preset.particleCount / 4),
+      freq: Math.ceil(preset.freq / 2),
+    }),
+    ...(theme === "light" &&
+      preset.name === PERLIN_PRESETS.asSmoothAsSilk.name && {
+        luminance: 50,
+      }),
   };
 }
 
@@ -81,3 +108,26 @@ export function generateRandomConfig(): PerlinConfig {
     seed: Math.round(Math.random() * 10000),
   };
 }
+
+export const initializeDraw: InitializeDraw = ({ onFinished, config }) => {
+  if (!ref || !window) {
+    throw new Error("setDependencies need to be called before anything else");
+  }
+  if (!drawer) {
+    drawer = init({
+      canvas: ref.current,
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  }
+  const configId = Math.random().toString().slice(2);
+  return drawer(config, configId).then(onFinished);
+};
+
+export const setDependencies: SetDependencies = ({
+  ref: refObj,
+  window: windowObj,
+}) => {
+  window = windowObj;
+  ref = refObj;
+};

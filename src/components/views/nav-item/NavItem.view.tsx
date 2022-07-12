@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { type FC, useRef } from "react";
-import { COLORS, TRANSITIONS } from "_constants";
+import { type FC, useRef, useEffect } from "react";
+import { COLORS, TRANSITIONS, MOTION_VARIANTS } from "_constants";
 import { useEnhancedRouter } from "_hooks/router/router.hook";
 import AnimatedLink from "_primitives/animated-link/AnimatedLink.primitive";
 import type {
@@ -12,13 +12,22 @@ import type {
 } from "./NavItem.view.types";
 
 const NavItem: FC<NavItemProps> = (props) => {
-  const ref = useRef<HTMLDivElement>();
+  const containerRef = useRef<HTMLDivElement>();
   const { fontSize, mode, href, type, title } = props;
   const { isActiveRoute, isCanvas } = useEnhancedRouter();
   const isActive = isActiveRoute(href);
   const paddingAndMargins = computePaddingAndMargins(fontSize, mode);
   const colorAndFontSize = computeColorAndFontSize(type, fontSize);
   const hasIndicator = type === "page" || isCanvas;
+
+  useEffect(() => {
+    if (isActive) {
+      containerRef.current?.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+      });
+    }
+  }, [isActive, containerRef]);
 
   if (type === "social") {
     return (
@@ -35,19 +44,19 @@ const NavItem: FC<NavItemProps> = (props) => {
     );
   }
 
-  if (isActive) {
-    ref.current?.scrollIntoView({ behavior: "auto", inline: "center" });
-  }
-
   return (
-    <div ref={ref} className={["relative", paddingAndMargins].join(" ")}>
+    <div
+      ref={containerRef}
+      className={["relative", paddingAndMargins].join(" ")}
+    >
       <AnimatePresence initial={false}>
         {isActive && hasIndicator && (
           <motion.div
             className="w-full pointer-events-none block"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            variants={MOTION_VARIANTS.opacity}
+            initial="none"
+            animate="full"
+            exit="none"
             transition={TRANSITIONS.route}
           >
             {mode === "bottom" ? (

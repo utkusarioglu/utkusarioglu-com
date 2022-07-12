@@ -8,12 +8,26 @@ const {
 const isProduction = process.env.NODE_ENV === "production";
 const withManifestBuilder = require("./scripts/plugin");
 
+// this comes from _constants
+const IMG_ZOOM_MARGIN = 20;
+const APP_NAME = "Utku Sarioglu";
+const APP_ADDRESS = "https://www.utkusarioglu.com";
+const THEME_COLOR = "#f59e0b";
+const BACKGROUND_COLOR = "#171717";
+
 const getBuildConfig = async (...args) => {
   const nextConfig = {
     reactStrictMode: true,
     pageExtensions: ["page.tsx"],
     devIndicators: {
       buildActivity: false,
+    },
+    env: {
+      APP_NAME,
+      APP_ADDRESS,
+      IMG_ZOOM_MARGIN,
+      THEME_COLOR,
+      BACKGROUND_COLOR,
     },
   };
 
@@ -42,7 +56,13 @@ const getBuildConfig = async (...args) => {
       svgo: {},
       responsive: {
         adapter: require("responsive-loader/sharp"),
-        sizes: [320, 640, 960, 1200, 1800, 2400],
+        sizes: [
+          320,
+          640,
+          960 - IMG_ZOOM_MARGIN * 2,
+          1200 - IMG_ZOOM_MARGIN * 2,
+          1920 - IMG_ZOOM_MARGIN * 2,
+        ],
         placeholder: true,
         format: "jpg",
       },
@@ -72,14 +92,14 @@ const getBuildConfig = async (...args) => {
     withManifestBuilder,
     {
       manifest: {
-        shortName: "Utku Sarioglu",
-        name: "Utku Sarioglu",
+        shortName: APP_NAME,
+        name: APP_NAME,
         description: "Utku Sarioglu's personal website",
-        startUrl: "https://www.utkusarioglu.com",
+        startUrl: APP_ADDRESS,
         orientation: "portrait",
         display: "standalone",
-        themeColor: "#f59e0b",
-        backgroundColor: "#171717",
+        themeColor: THEME_COLOR,
+        backgroundColor: BACKGROUND_COLOR,
         icons: {
           sizes: [16, 32, 64, 120, 128, 144, 150, 192, 256, 512],
           groups: [

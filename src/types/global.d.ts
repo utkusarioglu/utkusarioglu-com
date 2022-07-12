@@ -17,3 +17,7 @@ declare module "*.jpg" {
   const content: any;
   export default content;
 }
+
+interface HTMLCanvasElement {
+  convertToBlob?: (options: any) => Promise<Blob>;
+}
