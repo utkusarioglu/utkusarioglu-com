@@ -14,9 +14,6 @@ jobs:
     name: Run Cypress tests
     runs-on: ubuntu-latest
     environment: production
-    # container:
-    #   # Shall be same as the Dockerfile.dev image base
-    #   image: node:17-slim
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -27,12 +24,6 @@ jobs:
           path: build
       - name: Run Cypress tests
         run: scripts/docker-run-cypress.sh
-      # - name: Install dependencies
-      #   id: Install
-      #   run: yarn
-      # - name: Export
-      #   id: export
-      #   run: yarn export
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
