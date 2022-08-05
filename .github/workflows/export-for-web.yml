@@ -1,4 +1,4 @@
-name: Build for web and upload as artifact
+name: Export for web
 on:
   # push:
   #   branches:
