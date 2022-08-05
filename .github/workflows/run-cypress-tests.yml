@@ -11,6 +11,7 @@ jobs:
     uses: ./.github/workflows/export-for-web.yml
 
   run-cypress-tests:
+    needs: build-web-artifact
     name: Run Cypress tests
     runs-on: ubuntu-latest
     environment: production
