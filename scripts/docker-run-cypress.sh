@@ -4,6 +4,7 @@ WORKDIR=/utkusarioglu/utkusarioglu-com
 
 docker run \
   --rm \
+  -t \
   -v $(pwd)/.cypress:$WORKDIR/cypress \
   -v $(pwd)/scripts:$WORKDIR/scripts \
   -v $(pwd)/cypress.config.js:$WORKDIR/cypress.config.js \
