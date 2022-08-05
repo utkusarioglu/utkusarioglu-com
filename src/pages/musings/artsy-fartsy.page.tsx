@@ -4,8 +4,8 @@ import styles from "_styles/artsy-fartsy.module.scss";
 const ArtsyPage = () => {
   return (
     <ContentLayout allowEntireViewport={true}>
-      <div className={styles.canvas}>
-        <div className={styles.house}>
+      <div className={styles["canvas"]}>
+        <div className={styles["house"]}>
           <div className={styles["house-chimney"]} />
           <div className={styles["house-roof"]} />
           <div className={styles["house-facade"]}>
