@@ -1,14 +1,14 @@
 name: Run Cypress tests
 on:
-  # push:
-  #   branches:
-  #     - dev
+  push:
+    branches:
+      - dev
   workflow_dispatch:
   workflow_call:
 
 jobs:
   build-web-artifact:
-    uses: ./.github/workflows/export-web.yml
+    uses: ./.github/workflows/export-for-web.yml
 
   run-cypress-tests:
     name: Run Cypress tests
