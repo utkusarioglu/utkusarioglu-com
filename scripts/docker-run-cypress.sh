@@ -2,7 +2,7 @@
 
 WORKDIR=/utkusarioglu/utkusarioglu-com
 
-docker run -it \
+docker run \
   --rm \
   -v $(pwd)/.cypress:$WORKDIR/cypress \
   -v $(pwd)/scripts:$WORKDIR/scripts \
