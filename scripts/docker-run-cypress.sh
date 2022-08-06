@@ -9,6 +9,7 @@ docker run \
   -v $(pwd)/scripts:$WORKDIR/scripts \
   -v $(pwd)/cypress.config.js:$WORKDIR/cypress.config.js \
   -w $WORKDIR \
+  --name utkusarioglu-com-cypress-tests \
   --add-host target-http-server:host-gateway \
   --entrypoint scripts/run-cypress-tests.js \
   cypress/included:10.0.0 
