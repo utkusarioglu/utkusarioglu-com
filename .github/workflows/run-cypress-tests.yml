@@ -25,6 +25,7 @@ jobs:
           path: build
       - name: Run Cypress tests
         run: |
+          rm package.json
           yarn add http-server \
             --frozen-lockfile \
             --non-interactive
