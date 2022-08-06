@@ -24,7 +24,12 @@ jobs:
           name: utkusarioglu-com-web-build
           path: build
       - name: Run Cypress tests
-        run: scripts/docker-run-cypress.sh
+        run: |
+          yarn add http-server \
+            --frozen-lockfile \
+            --non-interactive
+          yarn http-server -p 3000 & \
+            scripts/docker-run-cypress.sh
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
