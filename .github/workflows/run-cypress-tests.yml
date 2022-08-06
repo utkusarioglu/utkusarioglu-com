@@ -28,7 +28,7 @@ jobs:
           yarn add http-server \
             --frozen-lockfile \
             --non-interactive
-          yarn http-server -p 3000 & \
+          scripts/start-http-server.sh & \
             scripts/docker-run-cypress.sh
       - name: Upload artifact
         uses: actions/upload-artifact@v3
