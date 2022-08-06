@@ -6,7 +6,7 @@ const WINDOW_SIZE = [1920, 1080];
 module.exports = defineConfig({
   e2e: {
     supportFile: false,
-    baseUrl: "http://192.168.1.151:3000",
+    baseUrl: "http://target-http-server:3000",
     setupNodeEvents(on, config) {
       on("before:browser:launch", (browser = {}, launchOptions) => {
         if (browser.isHeadless) {
