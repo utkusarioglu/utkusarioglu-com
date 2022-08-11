@@ -3,7 +3,7 @@ const cypress = require("cypress");
 const config = require("../cypress.config.js");
 const { windowSize } = require("../cypress/utils/test.utils.js");
 
-const BROWSERS = ["chrome", "firefox", "edge"].slice(0, 1);
+const BROWSERS = ["chrome", "firefox", "edge"];
 
 const VIEWPORT_SIZES = [
   [1920, 1080],
