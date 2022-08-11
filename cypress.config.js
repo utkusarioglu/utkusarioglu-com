@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   e2e: {
     supportFile: false,
-    baseUrl: "https://target-http-server",
+    baseUrl: "http://target-http-server:3000",
     setupNodeEvents(on, config) {
       const windowSize = config.env.windowSize;
       on("before:browser:launch", (browser = {}, launchOptions) => {
