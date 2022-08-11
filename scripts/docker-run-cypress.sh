@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source .env
 WORKDIR=/utkusarioglu/utkusarioglu-com
 
 docker run \
@@ -9,6 +10,7 @@ docker run \
   -v $(pwd)/scripts:$WORKDIR/scripts \
   -v $(pwd)/cypress.config.js:$WORKDIR/cypress.config.js \
   -w $WORKDIR \
+  --env-file $(pwd)/.env \
   --name utkusarioglu-com-cypress-tests \
   --add-host target-http-server:host-gateway \
   --entrypoint scripts/run-cypress-tests.js \
