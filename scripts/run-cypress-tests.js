@@ -1,19 +1,17 @@
 #! /usr/local/bin/node
 const cypress = require("cypress");
+const {
+  getE2eBrowsers,
+  getE2eViewportSizes,
+  calculateE2eWindowSize,
+} = require("../cypress/utils/test.utils.js");
 const config = require("../cypress.config.js");
-const { windowSize } = require("../cypress/utils/test.utils.js");
 
-const BROWSERS = ["chrome", "firefox", "edge"];
+const browsers = getE2eBrowsers();
+const viewportSizes = getE2eViewportSizes();
+const windowSize = calculateE2eWindowSize(viewportSizes);
 
-const VIEWPORT_SIZES = [
-  [1920, 1080],
-  [540, 1200], // 1080/2, 2400/2
-  // [480, 850],
-  [480, 720],
-  // [320, 400],
-];
-
-BROWSERS.reduce((chain, browser) => {
+browsers.reduce((chain, browser) => {
   chain = chain.then(() => {
     console.log(`Starting: ${browser}`);
     return cypress.run({
@@ -22,8 +20,9 @@ BROWSERS.reduce((chain, browser) => {
         ...config,
         env: {
           ...config.env,
-          windowSize: windowSize(VIEWPORT_SIZES),
-          viewportSizes: VIEWPORT_SIZES,
+          windowSize,
+          viewportSizes,
+          browsers,
         },
         screenshotsFolder: `cypress/artifacts/${browser}/screenshots`,
         videosFolder: `cypress/artifacts/${browser}/videos`,
