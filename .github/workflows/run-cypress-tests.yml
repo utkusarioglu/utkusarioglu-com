@@ -23,13 +23,19 @@ jobs:
         with:
           name: utkusarioglu-com-web-build
           path: build
+      - name: Generate server certificates
+        uses: kofemann/action-create-certificate@v0.0.4
+        with:
+          hostcert: .certs/server/server.crt
+          hostkey: .certs/server/server.key
+          cachain: .certs/root/root.crt
       - name: Run Cypress tests
         run: |
           rm package.json
-          yarn add http-server \
+          yarn add http-server local-ssl-proxy \
             --frozen-lockfile \
             --non-interactive
-          scripts/start-http-server.sh & \
+          scripts/start-local-server.sh & \
             scripts/docker-run-cypress.sh
       - name: Upload artifact
         uses: actions/upload-artifact@v3
