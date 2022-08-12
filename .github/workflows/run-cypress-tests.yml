@@ -37,6 +37,11 @@ jobs:
             --non-interactive
           scripts/start-local-server.sh & \
             scripts/docker-run-cypress.sh
+        env:
+          E2E_BROWSERS: ${{ secrets.E2E_BROWSERS }}
+          E2E_VIEWPORT_SIZES: ${{ secrets.E2E_VIEWPORT_SIZES }}
+          CERTS_FOLDER: "${{ GITHUB_WORKSPACE }}/.certs"
+
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
