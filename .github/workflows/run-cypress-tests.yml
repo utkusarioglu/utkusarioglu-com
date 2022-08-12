@@ -25,13 +25,13 @@ jobs:
           path: build
       - name: Create certificate folders
         run: |
-          mkdir -p "${{ env.GITHUB_WORKSPACE }}/.certs/{server,root}"
+          mkdir -p "$GITHUB_WORKSPACE/.certs/{server,root}"
       - name: Generate server certificates
         uses: kofemann/action-create-certificate@v0.0.4
         with:
-          hostcert: "${{ env.GITHUB_WORKSPACE }}/.certs/server/server.crt"
-          hostkey: "${{ env.GITHUB_WORKSPACE }}/.certs/server/server.key"
-          cachain: "${{ env.GITHUB_WORKSPACE }}/.certs/root/root.crt"
+          hostcert: "$GITHUB_WORKSPACE/.certs/server/server.crt"
+          hostkey: "$GITHUB_WORKSPACE/.certs/server/server.key"
+          cachain: "$GITHUB_WORKSPACE/.certs/root/root.crt"
       - name: Run Cypress tests
         run: |
           rm package.json
