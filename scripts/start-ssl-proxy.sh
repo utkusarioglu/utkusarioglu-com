@@ -1,6 +1,6 @@
 #!/bin/bash
 yarn local-ssl-proxy \
-  --source 4000 \
+  --source 443 \
   --target 3000 \
-  --key ./.certs/server.key \
-  --cert ./.certs/server.crt
+  --key ./.certs/server/server.key \
+  --cert ./.certs/server/server.crt
