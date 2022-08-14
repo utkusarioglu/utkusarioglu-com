@@ -2,9 +2,7 @@ version: "3.9"
 
 services:
   webclient:
-    build:
-      context: ..
-      dockerfile: .docker/Dockerfile.dev
+    image: utkusarioglu/node-devcontainer:17-slim.0.0
     volumes:
       - type: bind
         source: ..

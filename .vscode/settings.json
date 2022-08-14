@@ -4,7 +4,12 @@
       {
         "match": ".env*",
         "isAsync": true,
-        "cmd": "scripts/create-env-example.sh"
+        "cmd": "/scripts/create-env-example.sh"
+      },
+      {
+        "match": ".env",
+        "isAsync": true,
+        "cmd": "gh secret set -f .env"
       },
     ]
   }
