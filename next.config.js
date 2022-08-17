@@ -14,6 +14,9 @@ const APP_NAME = "Utku Sarioglu";
 const APP_ADDRESS = "https://www.utkusarioglu.com";
 const THEME_COLOR = "#f59e0b";
 const BACKGROUND_COLOR = "#171717";
+// MAGIC. This value comes from tailwind max-w-prose class,
+// which is set to 65ch
+const MAX_W_PROSE = 611;
 
 const getBuildConfig = async (...args) => {
   const nextConfig = {
@@ -28,6 +31,7 @@ const getBuildConfig = async (...args) => {
       IMG_ZOOM_MARGIN,
       THEME_COLOR,
       BACKGROUND_COLOR,
+      MAX_W_PROSE,
     },
   };
 
@@ -58,7 +62,7 @@ const getBuildConfig = async (...args) => {
         adapter: require("responsive-loader/sharp"),
         sizes: [
           320,
-          640,
+          MAX_W_PROSE,
           960 - IMG_ZOOM_MARGIN * 2,
           1200 - IMG_ZOOM_MARGIN * 2,
           1920 - IMG_ZOOM_MARGIN * 2,
