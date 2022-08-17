@@ -45,13 +45,6 @@
     },
     {
       "type": "npm",
-      "script": "e2e-test",
-      "label": "E2E Test",
-      "problemMatcher": [],
-      "detail": "Start E2E testing"
-    },
-    {
-      "type": "npm",
       "script": "clean",
       "label": "Clean",
       "problemMatcher": [],
