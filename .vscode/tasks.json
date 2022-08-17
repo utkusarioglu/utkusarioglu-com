@@ -51,6 +51,13 @@
       "detail": "Start E2E testing"
     },
     {
+      "type": "npm",
+      "script": "clean",
+      "label": "Clean",
+      "problemMatcher": [],
+      "detail": "Clean compiled files"
+    },
+    {
       "type": "shell",
       "command": "scripts/export-and-local.sh",
       "label": "Export & Local",

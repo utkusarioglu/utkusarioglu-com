@@ -11,7 +11,8 @@
     "e2e-test": "scripts/e2e-test.sh",
     "start-ssl-proxy": "scripts/start-ssl-proxy.sh",
     "local": "scripts/start-local-server.sh",
-    "add-new-paper-chain-link": "scripts/add-new-paper-chain-link.js"
+    "add-new-paper-chain-link": "scripts/add-new-paper-chain-link.js",
+    "clean": "scripts/clean.sh"
   },
   "dependencies": {
     "@badrap/bar-of-progress": "^0.2.1",
