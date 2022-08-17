@@ -12,10 +12,12 @@ import { useDeviceQuery } from "_hooks/device/device.hook";
 import { useLayoutContext } from "_contexts/layout/Layout.context";
 import { getProgressBar } from "_utils/progress-bar.util";
 import { useEnhancedRouter } from "_hooks/router/router.hook";
+import { produceSizes } from "./EnhancedImage.primitive.utils";
 
 const INITIAL_SCALE = 1.2;
 const PLACEHOLDER_SCALE = 1.3;
 const INITIAL_IMG = { transform: `scale(${INITIAL_SCALE})`, opacity: 0 };
+const MAX_EXPECTED_IMAGE_WIDTH = 1920 * 2;
 
 const EnhancedImage: FC<EnhancedImageProps> = ({
   className,
@@ -23,6 +25,7 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
   alt,
   credits,
   allowZoom = true,
+  maxResponsiveWidth = MAX_EXPECTED_IMAGE_WIDTH,
 }) => {
   const imgRef = useRef<HTMLImageElement>();
   const containerRef = useRef<HTMLDivElement>();
@@ -146,6 +149,7 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
           transition={TRANSITIONS.route}
           src={img.src}
           srcSet={img.srcSet}
+          sizes={produceSizes(img.images, maxResponsiveWidth)}
           className={[
             "absolute top-0 h-full w-full object-cover",
             "overflow-hidden block",

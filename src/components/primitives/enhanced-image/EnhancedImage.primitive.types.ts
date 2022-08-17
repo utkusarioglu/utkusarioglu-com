@@ -5,6 +5,7 @@ export type EnhancedImageProps = {
   alt: string;
   credits?: string;
   allowZoom?: boolean;
+  maxResponsiveWidth?: number; // px
 } & ImageData;
 
 export interface ImageData {
