@@ -8,7 +8,6 @@
     "build": "next build",
     "export": "next build && next export -o build",
     "unit-test": "echo this isn't implemented yet",
-    "e2e-test": "scripts/e2e-test.sh",
     "start-ssl-proxy": "scripts/start-ssl-proxy.sh",
     "local": "scripts/start-local-server.sh",
     "add-new-paper-chain-link": "scripts/add-new-paper-chain-link.js",
