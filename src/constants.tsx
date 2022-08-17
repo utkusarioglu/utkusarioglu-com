@@ -191,7 +191,6 @@ export const MASKS = {
   canvasBgH: `linear-gradient(90deg, ${O1}, ${ONE}, ${ONE}, ${ONE}, ${ONE})`,
   canvasSmV: `linear-gradient(0deg, ${O5} 55px, ${ONE} 75px, ${ONE} calc(100% - 85px), ${O1} calc(100% - 65px))`,
   notHomeSmV: `linear-gradient(0deg, ${O1} 55px, ${O2} 75px, ${O2} calc(100% - 85px), ${O1} calc(100% - 65px))`,
-  // content: `linear-gradient(0deg, ${ZERO} 55px, ${ONE} 65px, ${ONE} calc(100% - 65px), ${ZERO} calc(100% - 55px))`,
   content: `linear-gradient(0deg, ${ZERO} 55px, ${ONE} 60px, ${ONE} calc(100% - 65px), ${ZERO} calc(100% - 60px))`,
 };
 
