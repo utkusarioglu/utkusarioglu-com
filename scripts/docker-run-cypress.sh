@@ -3,6 +3,13 @@
 source .env
 WORKDIR=/utkusarioglu/utkusarioglu-com
 
+if [ ! -z $(which docker) ];
+then
+  echo "This script requires docker to be available in the environment"
+  echo "If you are inside the devcontainer, try running the script from the host."
+  exit 1
+fi
+
 docker run \
   --rm \
   -t \
