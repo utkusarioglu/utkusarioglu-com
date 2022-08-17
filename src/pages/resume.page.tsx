@@ -1,5 +1,5 @@
 import ContentLayout from "_layouts/content/Content.layout";
-import { COLORS } from "_constants";
+import { COLORS, MAX_W_PROSE } from "_constants";
 import EnhancedImage from "_primitives/enhanced-image/EnhancedImage.primitive";
 
 const content = [
@@ -17,6 +17,7 @@ const ResumePage = () => {
         alt="Resume title image"
         credits="photo by Utku Sarioglu"
         src={require("_assets/images/waves-and-bird.jpg")}
+        maxResponsiveWidth={MAX_W_PROSE}
       />
       {content.map((paragraph) => (
         <p className={`mb-5 text-base ${COLORS.paragraph}`} key={paragraph}>
