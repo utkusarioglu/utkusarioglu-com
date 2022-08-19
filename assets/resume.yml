@@ -16,157 +16,178 @@ contactChannels:
   list:
     - name: Linkedin
       link: https://www.linkedin.com/in/utku-sarioglu/
+      remarks: Preferred for professional inquiries
     - name: Instagram
       link: https://www.instagram.com/utkusarioglu
+      remarks: Preferred for personal inquiries
     - name: Twitter
       link: https://www.twitter.com/utkusarioglu
 
 skills:
-  naturalLanguages:
-    title: Natural Languages
-    list:
-      - name: English
-        level: Native level
-      - name: Turkish
-        level: Native
-  programmingLanguages:
-    title: Programming Languages
-    list:
-      - Typescript
-      - Javascript
-      - Solidity
-      - Yul
-      - Python
-      - PHP
-      - C*
-      - C++*
-  scriptingLanguages:
-    title: Scripting Languages and DSL
-    list:
-      - SQL
-      - Bash
-      - PowerShell*
-      - PlantUML
-      - HCL
-  frontend:
-    title: Frontend
-    list:
-      - React
-      - React Native*
-      - NextJS
-      - Tauri*
-      - Apollo
-      - Redux
-      - WordPress
-      - TailwindCSS
-      - SDL
-      - ENTT*
-  devOpsAndCiCd:
-    title: DevOps and CI&CD
-    list:
-      - Docker
-      - Kubernetes
-      - kOps
-      - Skaffold
-      - Terraform
-      - Vagrant
-      - Hyper-V
-      - GitHub Actions
-      - Jenkins*
-  backend:
-    title: Backend
-    list:
-      - NodeJS
-      - MySQL
-      - PostgreSQL
-      - MongoDB*
-      - Redis
-      - Kafka
-      - Debezium
-      - ZooKeeper*
-      - Strimzi
-      - Grafana*
-      - Loki*
-      - Jaeger*
-      - Prometheus*
-      - OpenTelemetry
-      - OpenSSL
-      - gRPC
-  testingAndAnalysis:
-    title: Testing and Analysis
-    list:
-      - Cypress
-      - Jest
-      - Mocha
-      - Waffle
-      - Echidna*
-      - Mythril
-      - Slither
-      - Manticore
-  projectHandling:
-    title: Project Handling
-    list:
-      - Git
-      - Helm
-      - Conan
-      - OpenAPI
-      - Lerna
-      - Emscripten
-      - AsyncAPI
-      - Metarepo
-  web3:
-    title: Web3
-    list:
-      - Truffle
-      - Drizzle
-      - Ganache
-      - Web3
-      - Ethers
-      - Matic
-      - Hardhat
-      - Waffle
-      - Geth*
-      - The Graph
-      - EVM
-  dataAndMath:
-    title: Data and Math
-    list:
-      - Pandas
-      - NumPy
-      - SciPy
-      - SymPy
-      - Matplotlib
-      - music21
-  developmentSoftware:
-    title: Development Software
-    list:
-      - VS Code
-      - Visual Studio
-      - Vim
-      - Figma
-      - Jupyter Notebook
-      - Postman
-      - Enterprise Architect
-      - Adobe XD
-  notableOtherSoftware:
-    title: Notable Other Software
-    list:
-      - Photoshop
-      - Illustrator*
-      - Lightroom
-      - Word
-      - Excel
-      - Outlook
-      - PowerPoint
-      - Visio
-      - Cubase
-      - CaptureOne
-      - MuseScore
+  title: Skills
+  map:
+    naturalLanguages:
+      title: Natural Languages
+      list:
+        - name: English
+          remarks: Native level
+        - name: Turkish
+          remarks: Native
+    programmingLanguages:
+      title: Programming Languages
+      list:
+        - name: Typescript
+        - name: Javascript
+        - name: Solidity
+        - name: Yul
+        - name: Python
+        - name: PHP
+        - name: C
+          confident: false
+        - name: C++
+          confident: false
+    scriptingLanguages:
+      title: Scripting Languages and DSL
+      list:
+        - name: SQL
+        - name: Bash
+        - name: PowerShell
+          confident: false
+        - name: PlantUML
+        - name: HCL
+    frontend:
+      title: Frontend
+      list:
+        - name: React
+        - name: React Native
+          confident: false
+        - name: NextJS
+        - name: Tauri
+          confident: false
+        - name: Apollo
+        - name: Redux
+        - name: WordPress
+        - name: TailwindCSS
+        - name: SDL
+        - name: ENTT
+          confident: false
+    devOpsAndCiCd:
+      title: DevOps and CI&CD
+      list:
+        - name: Docker
+        - name: Kubernetes
+        - name: kOps
+        - name: Skaffold
+        - name: Terraform
+        - name: Vagrant
+        - name: Hyper-V
+        - name: GitHub Actions
+        - name: Jenkins
+          confident: false
+    backend:
+      title: Backend
+      list:
+        - name: NodeJS
+        - name: MySQL
+        - name: PostgreSQL
+        - name: MongoDB
+          confident: false
+        - name: Redis
+        - name: Kafka
+        - name: Debezium
+        - name: ZooKeeper
+          confident: false
+        - name: Strimzi
+        - name: Grafana
+          confident: false
+        - name: Loki
+          confident: false
+        - name: Jaeger
+          confident: false
+        - name: Prometheus
+          confident: false
+        - name: OpenTelemetry
+        - name: OpenSSL
+        - name: gRPC
+    testingAndAnalysis:
+      title: Testing and Analysis
+      list:
+        - name: Cypress
+        - name: Jest
+        - name: Mocha
+        - name: Waffle
+        - name: Echidna
+          confident: false
+        - name: Mythril
+        - name: Slither
+        - name: Manticore
+    projectHandling:
+      title: Project Handling
+      list:
+        - name: Git
+        - name: Helm
+        - name: Conan
+        - name: OpenAPI
+        - name: Lerna
+        - name: Emscripten
+        - name: AsyncAPI
+        - name: Metarepo
+    web3:
+      title: Web3
+      list:
+        - name: Truffle
+        - name: Drizzle
+        - name: Ganache
+        - name: Web3
+        - name: Ethers
+        - name: Matic
+        - name: Hardhat
+        - name: Waffle
+        - name: Geth
+          confident: false
+        - name: The Graph
+        - name: EVM
+    dataAndMath:
+      title: Data and Math
+      list:
+        - name: Pandas
+        - name: NumPy
+        - name: SciPy
+        - name: SymPy
+        - name: Matplotlib
+        - name: music21
+    developmentSoftware:
+      title: Development Software
+      list:
+        - name: VS Code
+        - name: Visual Studio
+        - name: Vim
+        - name: Figma
+        - name: Jupyter Notebook
+        - name: Postman
+        - name: Enterprise Architect
+        - name: Adobe XD
+    notableOtherSoftware:
+      title: Notable Other Software
+      list:
+        - name: Photoshop
+        - name: Illustrator
+          confident: false
+        - name: Lightroom
+        - name: Word
+        - name: Excel
+        - name: Outlook
+        - name: PowerPoint
+        - name: Visio
+        - name: Cubase
+        - name: CaptureOne
+        - name: MuseScore
+
 relevantWorkExperience:
   title: Relevant Work Experience
   list:
     - title: Full-stack developer
-      companyName: HSO, LLC – Oz Medical DBA
+      companyName: HSO, LLC - Oz Medical DBA
       location: Pleasanton, CA. USA
       start: Oct, 2019
       finish: Mar, 2021
@@ -192,7 +213,7 @@ relevantWorkExperience:
       start: Jun, 2016
       finish: Aug, 2018
       remarks: |
-        Built company’s online sales website using PHP, JS. Maintained dev and
+        Built company's online sales website using PHP, JS. Maintained dev and
         production while it went through multiple advertising and growth cycles.
 
     - title: Project Manager
