@@ -1,31 +1,38 @@
-interface NaturalLanguage {
-  name: string;
-  level: string;
-}
-
 type Section<ListType> = {
   title: string;
   list: ListType[];
+  print?: boolean;
 };
 
+interface Skill {
+  name: string;
+  remarks?: string;
+  confident?: boolean;
+  print?: boolean;
+}
+
 interface Skills {
-  naturalLanguages: Section<NaturalLanguage>;
-  programmingLanguages: Section<string>;
-  scriptingLanguages: Section<string>;
-  frontend: Section<string>;
-  devOpsAndCiCd: Section<string>;
-  backend: Section<string>;
-  testingAndAnalysis: Section<string>;
-  projectHandling: Section<string>;
-  web3: Section<string>;
-  dataAndMath: Section<string>;
-  developmentSoftware: Section<string>;
-  notableOtherSoftware: Section<string>;
+  title: string;
+  map: {
+    naturalLanguages: Section<Skill>;
+    programmingLanguages: Section<Skill>;
+    scriptingLanguages: Section<Skill>;
+    frontend: Section<Skill>;
+    devOpsAndCiCd: Section<Skill>;
+    backend: Section<Skill>;
+    testingAndAnalysis: Section<Skill>;
+    projectHandling: Section<Skill>;
+    web3: Section<Skill>;
+    dataAndMath: Section<Skill>;
+    developmentSoftware: Section<Skill>;
+    notableOtherSoftware: Section<Skill>;
+  };
 }
 
 interface ContactChannel {
   name: string;
   link: string;
+  remarks?: string;
 }
 
 interface WorkExperience {
