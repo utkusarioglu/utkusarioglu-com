@@ -1,10 +1,10 @@
-type Section<ListType> = {
+export type Section<ListType> = {
   title: string;
   list: ListType[];
   print?: boolean;
 };
 
-interface Skill {
+export interface Skill {
   name: string;
   remarks?: string;
   confident?: boolean;
@@ -29,13 +29,16 @@ interface Skills {
   };
 }
 
-interface ContactChannel {
-  name: string;
-  link: string;
+export interface ContactListItem {
+  title: string;
+  value: string;
+  handle?: string;
   remarks?: string;
+  print?: boolean;
+  screen?: boolean;
 }
 
-interface WorkExperience {
+export interface WorkExperience {
   title: string;
   companyName: string;
   location: string;
@@ -44,14 +47,16 @@ interface WorkExperience {
   remarks: string;
 }
 
-interface Certification {
+export interface Certification {
   course: string;
   institution: string;
   instructor: string;
-  certificateId: string;
+  certificateId?: string;
+  certificateUrl?: string;
+  print?: boolean;
 }
 
-interface Education {
+export interface Education {
   title: string;
   institution: string;
   location: string;
@@ -67,7 +72,7 @@ interface Introduction {
 export interface Resume {
   name: string;
   introduction: Introduction;
-  contactChannels: Section<ContactChannel>;
+  contact: Section<ContactListItem>;
   skills: Skills;
   relevantWorkExperience: Section<WorkExperience>;
   relevantCertifications: Section<Certification>;
