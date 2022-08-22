@@ -4,7 +4,7 @@ import { MAX_W_PROSE } from "_constants";
 import EnhancedImage from "_primitives/enhanced-image/EnhancedImage.primitive";
 import { parse } from "yaml";
 import { readFileSync } from "fs";
-import { ResumeView } from "../components/views/resume/Resume.view";
+import ResumeLayout from "_layouts/resume/Resume.layout";
 import { Resume } from "../types/resume.types";
 
 interface ResumePageProps {
@@ -33,7 +33,7 @@ const ResumePage: FC<ResumePageProps> = ({ resume }) => {
         src={require("_assets/images/waves-and-bird.jpg")}
         maxResponsiveWidth={MAX_W_PROSE}
       />
-      <ResumeView resume={resume} />
+      <ResumeLayout resume={resume} />
     </ContentLayout>
   );
 };
