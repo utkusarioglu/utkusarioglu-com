@@ -12,7 +12,7 @@ const ResumeSkills: FC<ResumeSkillsProps> = ({ title, map }) => (
     <ResumeH2 className="px-5">{title}</ResumeH2>
     <div>
       {Object.values(map).map((section) => (
-        <ResumeCardBorder>
+        <ResumeCardBorder key={section.title}>
           <ResumeSkillSection
             {...section}
             listItemComponent={({ item }) => <ResumeSkillSectionLi {...item} />}

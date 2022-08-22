@@ -3,10 +3,11 @@ import { type Section } from "_types/resume.types";
 import ResumeH2 from "./ResumeH2";
 
 type ResumeSectionProps<T> = Section<T> & {
-  listItemComponent: T;
+  listItemComponent: FC<T>;
   className?: string;
 };
 
+// TODO remove `any`
 const ResumeSection: FC<ResumeSectionProps<any>> = ({
   title,
   list,
@@ -17,7 +18,7 @@ const ResumeSection: FC<ResumeSectionProps<any>> = ({
     <ResumeH2 className="px-5">{title}</ResumeH2>
     <ul>
       {list.map((item) => (
-        <ListItem item={item} />
+        <ListItem key={item.title} item={item} />
       ))}
     </ul>
   </div>
