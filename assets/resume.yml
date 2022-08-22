@@ -1,6 +1,7 @@
 name: Utku Sarioglu
 introduction:
   title: Introduction
+  print: false
   remarks: |
     Full stack Web2 / Web3 developer experienced in economics and international
     trade. 10+ years of experience in programming and 5+ years of experience in
@@ -11,17 +12,41 @@ introduction:
     handling complexity. Experienced in international contexts and handling tricky
     personnel and clients. Proven to be capable of creating wholistic solutions,
     meeting complex requirements and handling stressful tasks.
-contactChannels:
-  title: Contact Channels
+contact:
+  title: Contact
+  print: false
   list:
-    - name: Linkedin
-      link: https://www.linkedin.com/in/utku-sarioglu/
+    - title: Linkedin
+      value: https://www.linkedin.com/in/utku-sarioglu/
+      handle: utku-sarioglu
       remarks: Preferred for professional inquiries
-    - name: Instagram
-      link: https://www.instagram.com/utkusarioglu
+      print: false
+    - title: Instagram
+      value: https://www.instagram.com/utkusarioglu
+      handle: utkuasarioglu
       remarks: Preferred for personal inquiries
-    - name: Twitter
-      link: https://www.twitter.com/utkusarioglu
+      print: false 
+    - title: Twitter
+      value: https://www.twitter.com/utkusarioglu
+      handle: "@utkusarioglu"
+      print: false
+      remarks: Professional and personal inquiries
+    - title: Address
+      value: Ordu, Turkey
+      print: true
+      screen: false
+    - title: Phone Number 
+      value: +90 (530) 113 1745
+      print: true
+      screen: false
+    - title: Website
+      value: www.utkusarioglu.com
+      print: true
+      screen: false
+    - title: Email
+      value: utkusarioglu@gmail.com
+      print: true
+      screen: false
 
 skills:
   title: Skills
@@ -207,8 +232,8 @@ relevantWorkExperience:
         hardware used for seed pressing. Found suppliers for the new business in
         California, Oregon and Washington State. Handled product development and
         enhancement surveys in California.
-    - title: Full-stack Developer
-      company: Altas Oil Industry
+    - title: Full-stack developer
+      companyName: Altas Oil Industry
       location: Ordu, Turkey
       start: Jun, 2016
       finish: Aug, 2018
@@ -251,52 +276,35 @@ relevantCertifications:
   list:
     - course: AWS Certified Solutions Architect Associate
       institution: Udemy
-      instructor:
-      certificateId:
     - course: Advanced Kubernetes Usage
       institution: Udemy
-      instructor:
-      certificateId:
     - course: Apache Kafka
       institution: Udemy
-      instructor:
       certificateId: UC-0d49da70-b845-4cc2-b2b2-2cadb6ca1990
-    - course:
-      institution: Udemy
-      instructor:
-      certificateId:
+      certificateUrl: https://www.udemy.com/certificate/UC-0d49da70-b845-4cc2-b2b2-2cadb6ca1990/
     - course: Apache Kafka Security
       institution: Udemy
-      instructor:
-      certificateId:
     - course: Ethereum Blockchain Development Bootcamp
       institution: Udemy
-      instructor:
       certificateId: UC-35f47a50-8dc7-48ef-b889-e17eb600e895
+      certificateUrl: https://www.udemy.com/certificate/UC-35f47a50-8dc7-48ef-b889-e17eb600e895/
     - course: Professional IT Automation with Python
       institution: Coursera
       instructor: Google
       certificateId: 8S6F67S4FE5B
-    - course: Nand to Tetris I & II
+      certificateUrl: https://coursera.org/share/26f71a19335cf1ce898f93a8d25d0378
+    - course: Nand to Tetris I
       institution: Udemy
-      instructor:
-      certificateId:
-    - course: Nand to Tetris I & II
+    - course: Nand to Tetris II
       institution: Udemy
-      instructor:
-      certificateId:
     - course: PostgreSQL Bootcamp
       institution: Udemy
-      instructor:
-      certificateId:
     - course: Fundamentals of Digital Marketing
       institution: Google
       instructor: Google Digital Garage
-      certificateId:
     - course: Copywriting
       institution: Copy Club Advertising Training Agency
-      instructor:
-      certificateId: inapplicable
+
 education:
   title: Education
   list:
