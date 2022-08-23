@@ -25,6 +25,7 @@ const ContentLayout = forwardRef<HTMLDivElement, ContentLayoutProps>(
       smShimTop = true,
       overflowY = true,
       allowEntireViewport = false,
+      verticalMargins = true,
     },
     dragConstraintsRef
   ) => {
@@ -60,7 +61,8 @@ const ContentLayout = forwardRef<HTMLDivElement, ContentLayoutProps>(
             "w-full h-full overflow-x-hidden",
             overflowY ? "overflow-y-auto" : "overflow-y-hidden",
             isSm ? "" : `scrollbar ${COLORS.scrollbar}`,
-            allowEntireViewport ? "" : "p-5 flex justify-center ",
+            allowEntireViewport ? "" : "py-5 flex justify-center ",
+            verticalMargins && "px-5",
           ].join(" ")}
         >
           <div

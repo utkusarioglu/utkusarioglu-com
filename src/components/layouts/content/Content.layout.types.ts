@@ -10,4 +10,5 @@ export interface ContentLayoutProps {
   smShimTop?: boolean;
   overflowY?: boolean;
   children: ReactNode;
+  verticalMargins?: boolean;
 }
