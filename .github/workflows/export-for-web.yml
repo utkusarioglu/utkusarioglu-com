@@ -13,7 +13,7 @@ jobs:
     environment: production
     container:
       # Shall be same as the Dockerfile.dev image base
-      image: node:17-slim
+      image: utkusarioglu/node-devcontainer:17-slim.0.0
     steps:
       - name: Checkout
         uses: actions/checkout@v2
