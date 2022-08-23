@@ -35,5 +35,5 @@ jobs:
           terraform -chdir=./.terraform init 
           terraform \
             -chdir=./.terraform apply \
-            -var='git_branch=${{ github.action_ref }}' 
+            -var='git_branch=${{ github.ref }}' 
             --auto-approve
