@@ -5,7 +5,8 @@ import EnhancedImage from "_primitives/enhanced-image/EnhancedImage.primitive";
 import { parse } from "yaml";
 import { readFileSync } from "fs";
 import ResumeLayout from "_layouts/resume/Resume.layout";
-import { Resume } from "../types/resume.types";
+import VerticalMarginsLayout from "_layouts/vertical-margins/VerticalMargins.layout";
+import { Resume } from "_types/resume.types";
 
 interface ResumePageProps {
   resume: Resume;
@@ -25,14 +26,16 @@ export function getStaticProps() {
 
 const ResumePage: FC<ResumePageProps> = ({ resume }) => {
   return (
-    <ContentLayout>
-      <EnhancedImage
-        className="rounded-md"
-        alt="Resume title image"
-        credits="photo by Utku Sarioglu"
-        src={require("_assets/images/waves-and-bird.jpg")}
-        maxResponsiveWidth={MAX_W_PROSE}
-      />
+    <ContentLayout verticalMargins={false}>
+      <VerticalMarginsLayout>
+        <EnhancedImage
+          className="rounded-md"
+          alt="Resume title image"
+          credits="photo by Utku Sarioglu"
+          src={require("_assets/images/waves-and-bird.jpg")}
+          maxResponsiveWidth={MAX_W_PROSE}
+        />
+      </VerticalMarginsLayout>
       <ResumeLayout resume={resume} />
     </ContentLayout>
   );
