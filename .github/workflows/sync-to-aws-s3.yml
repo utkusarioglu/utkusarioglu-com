@@ -30,7 +30,7 @@ jobs:
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN_TO_ASSUME }}
           aws-region: ${{ secrets.AWS_REGION }}
-      - name: Terraform actions
+      - name: Terraform
         run: |
           terraform -chdir=./.terraform/${{ github.ref_name }} init 
           terraform -chdir=./.terraform/${{ github.ref_name }} apply --auto-approve
