@@ -10,6 +10,7 @@ import ResumeEducationLi from "_views/resume/ResumeEducationLi";
 import ResumeCardBackground from "_views/resume/ResumeCardBackground";
 import ResumeContactLi from "_views/resume/ResumeContactLi";
 import ResumeCardBorder from "_views/resume/ResumeCardBorder";
+import VerticalMarginsLayout from "_layouts/vertical-margins/VerticalMargins.layout";
 
 export interface ResumeLayoutProps {
   resume: Resume;
@@ -28,7 +29,9 @@ const ResumeLayout: FC<ResumeLayoutProps> = ({
 }) => {
   return (
     <>
-      <ResumeH1>{name}</ResumeH1>
+      <VerticalMarginsLayout>
+        <ResumeH1>{name}</ResumeH1>
+      </VerticalMarginsLayout>
       <ResumeCardBackground>
         <ResumeIntroduction {...introduction} />
       </ResumeCardBackground>
