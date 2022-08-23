@@ -62,7 +62,7 @@ const ContentLayout = forwardRef<HTMLDivElement, ContentLayoutProps>(
             overflowY ? "overflow-y-auto" : "overflow-y-hidden",
             isSm ? "" : `scrollbar ${COLORS.scrollbar}`,
             allowEntireViewport ? "" : "py-5 flex justify-center ",
-            verticalMargins && "px-5",
+            verticalMargins && !allowEntireViewport && "px-5",
           ].join(" ")}
         >
           <div
