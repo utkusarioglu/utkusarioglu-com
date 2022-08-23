@@ -1,7 +1,6 @@
 import { type FC } from "react";
 import { type Resume } from "_types/resume.types";
 import ResumeIntroduction from "_views/resume/ResumeIntroduction";
-import ResumeH1 from "_views/resume/ResumeH1";
 import ResumeSection from "_views/resume/ResumeSection";
 import ResumeSkills from "_views/resume/ResumeSkills";
 import ResumeWorkExperienceLi from "_views/resume/ResumeWorkExperienceLi";
@@ -10,7 +9,6 @@ import ResumeEducationLi from "_views/resume/ResumeEducationLi";
 import ResumeCardBackground from "_views/resume/ResumeCardBackground";
 import ResumeContactLi from "_views/resume/ResumeContactLi";
 import ResumeCardBorder from "_views/resume/ResumeCardBorder";
-import VerticalMarginsLayout from "_layouts/vertical-margins/VerticalMargins.layout";
 
 export interface ResumeLayoutProps {
   resume: Resume;
