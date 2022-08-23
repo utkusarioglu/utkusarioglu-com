@@ -14,6 +14,7 @@ jobs:
     container:
       # Shall be same as the Dockerfile.dev image base
       image: utkusarioglu/node-devcontainer:17-slim.0.0
+      options: --user 0:0
     steps:
       - name: Checkout
         uses: actions/checkout@v2
