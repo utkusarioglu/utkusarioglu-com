@@ -32,7 +32,9 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
       - name: Terraform
         run: |
-          terraform -chdir=./.terraform init 
+          terraform 
+            -chdir=./.terraform/${{ github.ref_name }} \
+            init 
           terraform \
             -chdir=./.terraform/${{ github.ref_name }} \
             apply \
