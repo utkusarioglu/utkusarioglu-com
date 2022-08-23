@@ -25,7 +25,14 @@ const ResumeWorkExperienceLi: FC<ResumeWorkExperienceLiProps> = ({
           Finish: finish,
         }}
       />
-      <p className={[COLORS.paragraph].join(" ")}>{remarks}</p>
+      {remarks.map((paragraph) => (
+        <p
+          key={paragraph}
+          className={[COLORS.paragraph, "mb-3 last:mb-0"].join(" ")}
+        >
+          {paragraph}
+        </p>
+      ))}
     </div>
   );
 };

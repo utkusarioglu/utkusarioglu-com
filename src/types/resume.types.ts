@@ -44,7 +44,7 @@ export interface WorkExperience {
   location: string;
   start: string;
   finish: string;
-  remarks: string;
+  remarks: string[];
 }
 
 export interface Certification {
@@ -66,7 +66,7 @@ export interface Education {
 
 interface Introduction {
   title: string;
-  remarks: string;
+  remarks: string[];
 }
 
 export interface Resume {

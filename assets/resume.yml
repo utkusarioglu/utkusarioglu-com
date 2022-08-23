@@ -2,16 +2,17 @@ name: Utku Sarioglu
 introduction:
   title: Introduction
   print: false
-  remarks: |
-    Full stack Web2 / Web3 developer experienced in economics and international
-    trade. 10+ years of experience in programming and 5+ years of experience in
-    management of trade and engineering projects.
-
-    An efficient leader through conscientious approaches and presentable
-    personality. Excellent at creating intuitive solutions and multi-level steps for
-    handling complexity. Experienced in international contexts and handling tricky
-    personnel and clients. Proven to be capable of creating wholistic solutions,
-    meeting complex requirements and handling stressful tasks.
+  remarks: 
+    - |
+      Full stack Web2 / Web3 developer experienced in economics and international
+      trade. 10+ years of experience in programming and 5+ years of experience in
+      management of trade and engineering projects.
+    - |
+      An efficient leader through conscientious approaches and presentable
+      personality. Excellent at creating intuitive solutions and multi-level steps for
+      handling complexity. Experienced in international contexts and handling tricky
+      personnel and clients. Proven to be capable of creating wholistic solutions,
+      meeting complex requirements and handling stressful tasks.
 contact:
   title: Contact
   print: false
@@ -134,6 +135,7 @@ skills:
         - name: OpenTelemetry
         - name: OpenSSL
         - name: gRPC
+        - name: Puppeteer
     testingAndAnalysis:
       title: Testing and Analysis
       list:
@@ -216,61 +218,76 @@ relevantWorkExperience:
       location: Pleasanton, CA. USA
       start: Oct, 2019
       finish: Mar, 2021
-      remarks: |
-        Built a scalable online sales management system aiding the product listing,
-        sales, marketing, shipments and competitor tracking using PHP, later using
-        NodeJS + TypeScript. This project resulted in overhaul of the workflow of the
-        company and lead to massive time savings and more efficient personnel use.
+      remarks: 
+        - |
+          Built a scalable online sales management system aiding the product 
+          listing, sales, marketing, shipments and competitor tracking using 
+          PHP, later using NodeJS + TypeScript. 
+        - |
+          This project resulted in overhaul of the workflow of the company and 
+          lead to massive time savings and more efficient personnel use.
     - title: General Manager
       companyName: Altas USA, LLC
       location: Stockton, CA. USA
       start: Aug, 2018
       finish: Oct,2018
-      remarks: |
-        Created the business plan for a new branch of the company located in California.
-        Established the business on paper and on premise including the boot-up of the
-        hardware used for seed pressing. Found suppliers for the new business in
-        California, Oregon and Washington State. Handled product development and
-        enhancement surveys in California.
+      remarks: 
+        - |
+          Created the business plan for a new branch of the company located in 
+          California. Established the business on paper and on premise including 
+          the boot-up of the hardware used for seed pressing. 
+        - |
+          Found suppliers for the new business in California, Oregon and 
+          Washington State. Handled product development and enhancement surveys 
+          in California.
     - title: Full-stack developer
       companyName: Altas Oil Industry
       location: Ordu, Turkey
       start: Jun, 2016
       finish: Aug, 2018
-      remarks: |
-        Built company's online sales website using PHP, JS. Maintained dev and
-        production while it went through multiple advertising and growth cycles.
+      remarks: 
+        - |
+          Built company's online sales website using PHP, JS. Maintained dev and
+          production while it went through multiple advertising and growth 
+          cycles.
 
     - title: Project Manager
       companyName: Altas Oil Industry
       location: Ordu, Turkey
       start: Jan, 2017
       finish: Aug, 2018
-      remarks: |
-        Managed the construction, assembly and boot up of Turkey's first and world's
-        sixth non-chemical process vegetable oil refinery: a 6-million-dollar investment
-        involving civic, chemical, electrical, mechanical, automation, IT, construction
-        work with 10+ contractors and 100+ personnel.
+      remarks: 
+        - |
+          Managed the construction, assembly and boot up of Turkey's first and 
+          world's sixth non-chemical process vegetable oil refinery: a 6 million 
+          dollar investment involving civic, chemical, electrical, mechanical, 
+          automation, IT, construction work with 10+ contractors and 100+ 
+          personnel.
 
     - title: Foreign Trade Expert
       companyName: Altas Oil Industry
       location: Ordu, Turkey
       start: Jun, 2016
       finish: Jan, 2017
-      remarks: |
-        Managed food grade and heavy machinery trade with 10+ countries at 6000+ tones
-        monthly volume, with deals many being valued at six-figures. As a side project
-        during this time, took Instagram followers from 50 to ~20k.
+      remarks: 
+        - |
+          Managed food grade and heavy machinery trade with 10+ countries at 
+          6000+ tones monthly volume, with deals many being valued at 
+          six-figures. 
+        - |
+          As a side project during this time, took Instagram followers from 50 
+          to ~20k.
 
     - title: Developer, Current Accounts Manager
       companyName: Index Group
       location: Istanbul, Turkey
       start: Sep, 2011
       finish: Sep, 2014
-      remarks: |
-        Wrote productivity modules using VBA, AutoIt, which reduced daily
-        workload by 60%. While primarily working as the current accounts'
-        manager.
+      remarks: 
+        - |
+          Wrote productivity modules using VBA, AutoIt, which reduced daily
+          workload by 60%. While primarily working as the current accounts'
+          manager.
 relevantCertifications:
   title: Relevant Certifications
   list:
