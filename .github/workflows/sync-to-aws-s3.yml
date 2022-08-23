@@ -34,6 +34,6 @@ jobs:
         run: |
           terraform -chdir=./.terraform init 
           terraform \
-            -chdir=./.terraform apply \
-            -var='git_branch=${{ github.ref_name }}' \
+            -chdir=./.terraform/${{ github.ref_name }} \
+            apply \
             --auto-approve
