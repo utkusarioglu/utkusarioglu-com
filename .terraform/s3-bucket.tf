@@ -1,7 +1,7 @@
 resource "aws_s3_object" "static_content" {
   provider = aws.us_west_2
   for_each = local.upload_list
-  bucket = local.bucket_name
+  bucket = local.buckets[var.git_branch]
   key = each.value
   source = "${local.build_path}/${each.value}"
   etag = filemd5("${local.build_path}/${each.value}")
