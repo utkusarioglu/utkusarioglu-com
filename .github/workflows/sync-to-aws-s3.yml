@@ -1,6 +1,9 @@
 name: Sync to AWS S3
 
 on:
+  push:
+    branches:
+      - dev
   workflow_dispatch:
 
 jobs:
@@ -30,4 +33,7 @@ jobs:
       - name: Terraform
         run: |
           terraform -chdir=./.terraform init 
-          terraform -chdir=./.terraform apply --auto-approve
+          terraform \
+            -chdir=./.terraform apply \
+            -var='git_branch=${{ github.action_ref }}' 
+            --auto-approve
