@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-web-artifact:
-    uses: ./.github/workflows/export-web.yml
+    uses: ./.github/workflows/export-for-web.yml
 
   apply-aws-changes:
     needs: build-web-artifact
