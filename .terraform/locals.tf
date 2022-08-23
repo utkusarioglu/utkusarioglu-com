@@ -5,7 +5,10 @@ locals {
     Admin = "aws-automation-setup.utkusarioglu.github"
   }
   build_path = "../build"
-  bucket_name = "utkusarioglu-com-static-content"
+  buckets = {
+    main = "utkusarioglu-com-static-content"
+    dev = "utkusarioglu-com-dev-content"
+  }
   mime_types = jsondecode(data.http.mime_types.body)
   upload_list = fileset("${local.build_path}/", "**")
 }
