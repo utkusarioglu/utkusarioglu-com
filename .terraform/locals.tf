@@ -7,7 +7,7 @@ locals {
   build_path = "../build"
   buckets = {
     main = "utkusarioglu-com-static-content"
-    dev = "utkusarioglu-com-dev-content"
+    dev = "utkusarioglu-com-dev-static-content"
   }
   mime_types = jsondecode(data.http.mime_types.body)
   upload_list = fileset("${local.build_path}/", "**")
