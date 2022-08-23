@@ -9,7 +9,7 @@ const ResumeIntroduction: FC<ResumeIntroductionProps> = ({
   title,
   remarks,
 }) => (
-  <div className="px-5">
+  <div className="px-5 mb-10">
     <ResumeH2>{title}</ResumeH2>
     <p className={[COLORS.paragraph].join(" ")}>{remarks}</p>
   </div>

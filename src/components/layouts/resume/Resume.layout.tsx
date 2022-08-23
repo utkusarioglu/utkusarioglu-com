@@ -29,13 +29,7 @@ const ResumeLayout: FC<ResumeLayoutProps> = ({
 }) => {
   return (
     <>
-      <VerticalMarginsLayout>
-        <ResumeH1>{name}</ResumeH1>
-      </VerticalMarginsLayout>
-      <ResumeCardBackground>
-        <ResumeIntroduction {...introduction} />
-      </ResumeCardBackground>
-
+      <ResumeIntroduction {...introduction} />
       <ResumeCardBackground>
         <ResumeSection
           {...contact}
