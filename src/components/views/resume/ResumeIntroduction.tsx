@@ -11,7 +11,14 @@ const ResumeIntroduction: FC<ResumeIntroductionProps> = ({
 }) => (
   <div className="px-5 mb-10">
     <ResumeH2>{title}</ResumeH2>
-    <p className={[COLORS.paragraph].join(" ")}>{remarks}</p>
+    {remarks.map((paragraph) => (
+      <p
+        key={paragraph}
+        className={[COLORS.paragraph, "mb-3 last:mb-0"].join(" ")}
+      >
+        {paragraph}
+      </p>
+    ))}
   </div>
 );
 
