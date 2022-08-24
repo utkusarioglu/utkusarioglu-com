@@ -17,7 +17,7 @@ const ResumeSkillsSection: FC<ResumeSkillsSectionProps<any>> = ({
     <ResumeH3>{title}</ResumeH3>
     <ul>
       {list.map((item) => (
-        <ListItem key={item.title} item={item} />
+        <ListItem key={item.name} item={item} />
       ))}
     </ul>
   </div>
