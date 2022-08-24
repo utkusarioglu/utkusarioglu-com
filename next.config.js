@@ -5,18 +5,21 @@ const {
   PHASE_DEVELOPMENT_SERVER,
   PHASE_PRODUCTION_BUILD,
 } = require("next/constants");
-const isProduction = process.env.NODE_ENV === "production";
 const withManifestBuilder = require("./scripts/plugin");
 
-// this comes from _constants
-const IMG_ZOOM_MARGIN = 20;
-const APP_NAME = "Utku Sarioglu";
-const APP_ADDRESS = "https://www.utkusarioglu.com";
-const THEME_COLOR = "#f59e0b";
-const BACKGROUND_COLOR = "#171717";
-// MAGIC. This value comes from tailwind max-w-prose class,
-// which is set to 65ch
-const MAX_W_PROSE = 611;
+const isProduction = process.env.NODE_ENV === "production";
+const subdomain = process.env.SUBDOMAIN;
+
+const env = {
+  IMG_ZOOM_MARGIN: 20,
+  APP_NAME: "Utku Sarioglu",
+  THEME_COLOR: "#f59e0b",
+  BACKGROUND_COLOR: "#171717",
+  APP_ADDRESS: `https://${subdomain}.utkusarioglu.com`,
+  // MAGIC. This value comes from tailwind max-w-prose class,
+  // which is set to 65ch
+  MAX_W_PROSE: 611,
+};
 
 const getBuildConfig = async (...args) => {
   const nextConfig = {
@@ -25,14 +28,7 @@ const getBuildConfig = async (...args) => {
     devIndicators: {
       buildActivity: false,
     },
-    env: {
-      APP_NAME,
-      APP_ADDRESS,
-      IMG_ZOOM_MARGIN,
-      THEME_COLOR,
-      BACKGROUND_COLOR,
-      MAX_W_PROSE,
-    },
+    env,
   };
 
   const optimizedImagesPlugin = [
@@ -62,10 +58,10 @@ const getBuildConfig = async (...args) => {
         adapter: require("responsive-loader/sharp"),
         sizes: [
           320,
-          MAX_W_PROSE,
-          960 - IMG_ZOOM_MARGIN * 2,
-          1200 - IMG_ZOOM_MARGIN * 2,
-          1920 - IMG_ZOOM_MARGIN * 2,
+          env.MAX_W_PROSE,
+          960 - env.IMG_ZOOM_MARGIN * 2,
+          1200 - env.IMG_ZOOM_MARGIN * 2,
+          1920 - env.IMG_ZOOM_MARGIN * 2,
         ],
         placeholder: true,
         format: "jpg",
@@ -96,14 +92,14 @@ const getBuildConfig = async (...args) => {
     withManifestBuilder,
     {
       manifest: {
-        shortName: APP_NAME,
-        name: APP_NAME,
+        shortName: env.APP_NAME,
+        name: env.APP_NAME,
         description: "Utku Sarioglu's personal website",
-        startUrl: APP_ADDRESS,
+        startUrl: env.APP_ADDRESS,
         orientation: "portrait",
         display: "standalone",
-        themeColor: THEME_COLOR,
-        backgroundColor: BACKGROUND_COLOR,
+        themeColor: env.THEME_COLOR,
+        backgroundColor: env.BACKGROUND_COLOR,
         icons: {
           sizes: [16, 32, 64, 120, 128, 144, 150, 192, 256, 512],
           groups: [
