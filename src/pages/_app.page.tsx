@@ -36,16 +36,9 @@ const App: FC<AppProps> = ({
 
   if (window.location.pathname !== router.route) {
     console.log("replaced", router.route, " with ", window.location.pathname);
-    // setTimeout(() => {
     router.replace(window.location.pathname);
-    // }, 3000);
+    return null;
   }
-  // const subpath = (/#!(\/.*)$/.exec(asPath) || [])[1];
-  // if (subpath) {
-  //   // @ts-ignore
-  //   console.log("replacing ", window.location.pathname, subpath);
-  //   replace(subpath);
-  // }
 
   return (
     <ErrorBoundary FallbackComponent={ErrorFallbackView}>
