@@ -1,4 +1,3 @@
-require("dotenv").config();
 const withPwa = require("next-pwa");
 const withOptimizedImages = require("next-optimized-images");
 const withPlugins = require("next-compose-plugins");
@@ -9,7 +8,9 @@ const {
 const withManifestBuilder = require("./scripts/plugin");
 
 const isProduction = process.env.NODE_ENV === "production";
-const subdomain = process.env.SUBDOMAIN;
+const subdomain = process.env.SUBDOMAIN || "dev";
+
+console.log("next.config using env:\n", process.env);
 
 const env = {
   IMG_ZOOM_MARGIN: 20,
