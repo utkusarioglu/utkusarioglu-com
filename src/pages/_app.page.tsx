@@ -11,7 +11,7 @@ import ErrorFallbackView from "_views/error-fallback/ErrorFallback.view";
 import ControlsLayout from "_layouts/controls/Controls.layout";
 import StandardHead from "_heads/Standard.head";
 import { progressBarInit } from "_utils/progress-bar.util";
-import { useTiinySite } from "_hooks/tiiny-site/tiiny-site.hook";
+// import { useTiinySite } from "_hooks/tiiny-site/tiiny-site.hook";
 import type { AppProps } from "next/app";
 
 const App: FC<AppProps> = ({
@@ -20,12 +20,8 @@ const App: FC<AppProps> = ({
   router: { route, replace },
 }) => {
   const window = useWindow();
-  if (window && window.location.pathname !== route) {
-    console.log("replace");
-    replace(window.location.pathname);
-  }
   const { combined, setActive } = useTheme();
-  useTiinySite();
+  // useTiinySite();
 
   useEffect(() => {
     progressBarInit();
@@ -37,6 +33,11 @@ const App: FC<AppProps> = ({
 
   if (!window) {
     return null;
+  }
+
+  if (window.location.pathname !== route) {
+    console.log("replace from: ", route, " to ", window.location.pathname);
+    replace(window.location.pathname);
   }
 
   return (
