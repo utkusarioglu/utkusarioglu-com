@@ -33,12 +33,18 @@ const App: FC<AppProps> = ({
     return null;
   }
 
-  const subpath = (/#!(\/.*)$/.exec(asPath) || [])[1];
-  if (subpath) {
-    // @ts-ignore
-    console.log("replacing ", window.location.pathname, subpath);
-    replace(subpath);
+  if (window.location.pathname !== route) {
+    console.log("will replace", window.location.pathname, " with ", route);
+    setTimeout(() => {
+      replace(window.location.pathname);
+    }, 3000);
   }
+  // const subpath = (/#!(\/.*)$/.exec(asPath) || [])[1];
+  // if (subpath) {
+  //   // @ts-ignore
+  //   console.log("replacing ", window.location.pathname, subpath);
+  //   replace(subpath);
+  // }
 
   return (
     <ErrorBoundary FallbackComponent={ErrorFallbackView}>
