@@ -1,3 +1,4 @@
+require("dotenv").config();
 const withPwa = require("next-pwa");
 const withOptimizedImages = require("next-optimized-images");
 const withPlugins = require("next-compose-plugins");
@@ -8,13 +9,14 @@ const {
 const withManifestBuilder = require("./scripts/plugin");
 
 const isProduction = process.env.NODE_ENV === "production";
+const subdomain = process.env.SUBDOMAIN;
 
 const env = {
   IMG_ZOOM_MARGIN: 20,
   APP_NAME: "Utku Sarioglu",
   THEME_COLOR: "#f59e0b",
   BACKGROUND_COLOR: "#171717",
-  APP_ADDRESS: `https://${process.env.SUBDOMAIN}.utkusarioglu.com`,
+  APP_ADDRESS: `https://${subdomain}.utkusarioglu.com`,
   // MAGIC. This value comes from tailwind max-w-prose class,
   // which is set to 65ch
   MAX_W_PROSE: 611,
