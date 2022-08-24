@@ -11,7 +11,6 @@ import ErrorFallbackView from "_views/error-fallback/ErrorFallback.view";
 import ControlsLayout from "_layouts/controls/Controls.layout";
 import StandardHead from "_heads/Standard.head";
 import { progressBarInit } from "_utils/progress-bar.util";
-// import { useTiinySite } from "_hooks/tiiny-site/tiiny-site.hook";
 import type { AppProps } from "next/app";
 
 const App: FC<AppProps> = ({
@@ -21,7 +20,6 @@ const App: FC<AppProps> = ({
 }) => {
   const window = useWindow();
   const { combined, setActive } = useTheme();
-  // useTiinySite();
 
   useEffect(() => {
     progressBarInit();
