@@ -14,8 +14,16 @@ import { progressBarInit } from "_utils/progress-bar.util";
 import { useTiinySite } from "_hooks/tiiny-site/tiiny-site.hook";
 import type { AppProps } from "next/app";
 
-const App: FC<AppProps> = ({ Component, pageProps, router: { route } }) => {
+const App: FC<AppProps> = ({
+  Component,
+  pageProps,
+  router: { route, replace },
+}) => {
   const window = useWindow();
+  if (window && window.location.pathname !== route) {
+    console.log("replace");
+    replace(window.location.pathname);
+  }
   const { combined, setActive } = useTheme();
   useTiinySite();
 
