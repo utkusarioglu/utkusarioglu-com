@@ -16,7 +16,8 @@ import type { AppProps } from "next/app";
 const App: FC<AppProps> = ({
   Component,
   pageProps,
-  router: { route, replace, asPath },
+  router,
+  // router: { route, replace, asPath },
 }) => {
   const window = useWindow();
   const { combined, setActive } = useTheme();
@@ -33,10 +34,15 @@ const App: FC<AppProps> = ({
     return null;
   }
 
-  if (window.location.pathname !== route) {
-    console.log("will replace", window.location.pathname, " with ", route);
+  if (window.location.pathname !== router.route) {
+    console.log(
+      "will replace",
+      router.route,
+      " with ",
+      window.location.pathname
+    );
     setTimeout(() => {
-      replace(window.location.pathname);
+      router.replace(window.location.pathname);
     }, 3000);
   }
   // const subpath = (/#!(\/.*)$/.exec(asPath) || [])[1];
@@ -49,12 +55,12 @@ const App: FC<AppProps> = ({
   return (
     <ErrorBoundary FallbackComponent={ErrorFallbackView}>
       <StandardHead />
-      <LayoutContextProvider route={route}>
+      <LayoutContextProvider route={router.route}>
         <CanvasContextProvider theme={combined}>
-          <ControlsLayout route={route} />
+          <ControlsLayout route={router.route} />
           <ErrorBoundary FallbackComponent={ErrorFallbackView}>
             <AnimatePresence initial={false}>
-              <Component {...pageProps} key={route} window={window} />
+              <Component {...pageProps} key={router.route} window={window} />
             </AnimatePresence>
           </ErrorBoundary>
         </CanvasContextProvider>
