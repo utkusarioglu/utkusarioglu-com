@@ -22,12 +22,6 @@ const ResumeEducationLi: FC<ResumeEducationLiProps> = ({
         Finish: finish,
       }}
     />
-    {/* <div className={[COLORS.paragraph].join(" ")}>
-      {institution} at {location}
-    </div>
-    <div className={[COLORS.paragraph].join(" ")}>
-      from {start} to {finish}
-    </div> */}
   </div>
 );
 
