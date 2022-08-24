@@ -18,11 +18,6 @@ const App: FC<AppProps> = ({
   pageProps,
   router: { route, replace, asPath },
 }) => {
-  const subpath = (/#!(\/.*)$/.exec(asPath) || [])[1];
-  if (subpath) {
-    replace(subpath);
-  }
-
   const window = useWindow();
   const { combined, setActive } = useTheme();
 
@@ -38,10 +33,12 @@ const App: FC<AppProps> = ({
     return null;
   }
 
-  // if (window.location.pathname !== route) {
-  //   console.log("replace from: ", route, " to ", window.location.pathname);
-  //   // replace(window.location.pathname);
-  // }
+  const subpath = (/#!(\/.*)$/.exec(asPath) || [])[1];
+  if (subpath) {
+    // @ts-ignore
+    console.log("replacing ", window.location.pathname, subpath);
+    replace(subpath);
+  }
 
   return (
     <ErrorBoundary FallbackComponent={ErrorFallbackView}>
