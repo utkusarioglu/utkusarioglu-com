@@ -35,15 +35,10 @@ const App: FC<AppProps> = ({
   }
 
   if (window.location.pathname !== router.route) {
-    console.log(
-      "will replace",
-      router.route,
-      " with ",
-      window.location.pathname
-    );
-    setTimeout(() => {
-      router.replace(window.location.pathname);
-    }, 3000);
+    console.log("replaced", router.route, " with ", window.location.pathname);
+    // setTimeout(() => {
+    router.replace(window.location.pathname);
+    // }, 3000);
   }
   // const subpath = (/#!(\/.*)$/.exec(asPath) || [])[1];
   // if (subpath) {
