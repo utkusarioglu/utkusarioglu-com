@@ -16,8 +16,13 @@ import type { AppProps } from "next/app";
 const App: FC<AppProps> = ({
   Component,
   pageProps,
-  router: { route, replace },
+  router: { route, replace, asPath },
 }) => {
+  const subpath = (/#!(\/.*)$/.exec(asPath) || [])[1];
+  if (subpath) {
+    replace(subpath);
+  }
+
   const window = useWindow();
   const { combined, setActive } = useTheme();
 
@@ -33,10 +38,10 @@ const App: FC<AppProps> = ({
     return null;
   }
 
-  if (window.location.pathname !== route) {
-    console.log("replace from: ", route, " to ", window.location.pathname);
-    // replace(window.location.pathname);
-  }
+  // if (window.location.pathname !== route) {
+  //   console.log("replace from: ", route, " to ", window.location.pathname);
+  //   // replace(window.location.pathname);
+  // }
 
   return (
     <ErrorBoundary FallbackComponent={ErrorFallbackView}>
