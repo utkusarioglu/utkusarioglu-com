@@ -35,7 +35,7 @@ const App: FC<AppProps> = ({
 
   if (window.location.pathname !== route) {
     console.log("replace from: ", route, " to ", window.location.pathname);
-    replace(window.location.pathname);
+    // replace(window.location.pathname);
   }
 
   return (
