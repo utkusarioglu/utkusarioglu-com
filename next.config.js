@@ -8,7 +8,7 @@ const {
 const withManifestBuilder = require("./scripts/plugin");
 
 const isProduction = process.env.NODE_ENV === "production";
-const subdomain = process.env.SUBDOMAIN || "dev";
+const subdomain = process.env.SUBDOMAIN;
 
 console.log("next.config using env:\n", process.env);
 
