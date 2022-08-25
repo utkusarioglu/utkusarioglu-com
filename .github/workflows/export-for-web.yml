@@ -24,6 +24,8 @@ jobs:
       - name: Export
         id: export
         run: yarn export
+        env:
+          SUBDOMAIN: ${{ github.ref_name }}
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
