@@ -13,12 +13,7 @@ import StandardHead from "_heads/Standard.head";
 import { progressBarInit } from "_utils/progress-bar.util";
 import type { AppProps } from "next/app";
 
-const App: FC<AppProps> = ({
-  Component,
-  pageProps,
-  router,
-  // router: { route, replace, asPath },
-}) => {
+const App: FC<AppProps> = ({ Component, pageProps, router }) => {
   const window = useWindow();
   const { combined, setActive } = useTheme();
 
@@ -35,7 +30,6 @@ const App: FC<AppProps> = ({
   }
 
   if (window.location.pathname !== router.route) {
-    console.log("replaced", router.route, " with ", window.location.pathname);
     router.replace(window.location.pathname);
     return null;
   }
