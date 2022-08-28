@@ -37,3 +37,4 @@ public/*.js
 public/*.js.map
 
 .cypress/artifacts
+.puppeteer/artifacts
