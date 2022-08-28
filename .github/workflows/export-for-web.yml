@@ -7,27 +7,61 @@ on:
   workflow_call:
 
 jobs:
-  publish:
-    name: Export web version and upload as artifact
+  export-for-web:
+    name: Export for web
     runs-on: ubuntu-latest
     environment: production
     container:
-      # Shall be same as the Dockerfile.dev image base
       image: utkusarioglu/node-devcontainer:17-slim.0.0
       options: --user 0:0
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Cache `node_modules`
+        uses: actions/cache@v3
+        id: node-modules-cache
+        with:
+          path: node_modules
+          key: node-modules-cache-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            node-modules-cache-
+
       - name: Install dependencies
+        if: steps.node-modules-cache.outputs.cache-hit != 'true'
         id: Install
         run: yarn
+
+      - name: Cache `build`
+        uses: actions/cache@v3
+        id: nextjs-build-cache
+        with:
+          path: build
+          key: nextjs-build-cache-${{ hashFiles('yarn.lock', 'src/**', 'assets/**')}}
+          restore-keys: |
+            nextjs-build-cache
+
       - name: Export
+        if: steps.nextjs-build-cache.outputs.cache-hit != 'true'
         id: export
         run: yarn export
         env:
           SUBDOMAIN: ${{ github.ref_name }}
+
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: utkusarioglu-com-web-build
           path: build
+
+      - name: Event name
+        run: echo ${{ job.status }}
+
+      - name: Telegram notifications
+        if: always()
+        uses: utkusarioglu/telegram-notifications@main 
+        with:
+          telegram_id: ${{ secrets.TELEGRAM_ID }}
+          telegram_token: ${{ secrets.TELEGRAM_TOKEN }}
+          job_status: ${{ job.status }}
+          github_context: ${{ toJson(github) }}
