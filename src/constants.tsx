@@ -319,8 +319,9 @@ export const CANVAS_CONTROLS = [
 ];
 
 export const APP_NAME = process.env.APP_NAME;
-export const APP_ADDRESS = process.env.APP_DESCRIPTION;
-export const APP_DESCRIPTION = "Utku Sarioglu's personal website";
+export const DOMAIN = process.env.DOMAIN;
+export const APP_ADDRESS = `https://${process.env.SUBDOMAIN}.${process.env.DOMAIN}`;
+export const APP_DESCRIPTION = process.env.APP_DESCRIPTION;
 export const TWITTER_HANDLE = "@utkusarioglu";
 
 export const PERLIN_PRESETS: PerlinPresets = {
