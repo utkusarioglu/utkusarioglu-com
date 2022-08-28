@@ -99,9 +99,9 @@ export const ROUTE_PROPS: INavItem[] = [
     },
   },
   {
-    title: "Kamyoncu Yazıları",
+    title: "Kamyon",
     type: "page",
-    href: "/musings/kamyoncu-yazilari",
+    href: "/musings/kamyon",
     show: false,
     layout: {
       canvas: false,
