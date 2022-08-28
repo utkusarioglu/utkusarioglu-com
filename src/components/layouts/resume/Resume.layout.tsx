@@ -279,10 +279,14 @@ const ResumeDownload = () => (
     <ResumeSection
       title="Download Resume"
       list={[
-        { title: "Letter", remarks: "USA", folder: "letter" },
+        {
+          title: "Letter",
+          remarks: "North American standard",
+          folder: "letter",
+        },
         {
           title: "A4",
-          remarks: "Europe and the rest of the world",
+          remarks: "Standard format for Europe and the rest of the world",
           folder: "a4",
         },
       ]}
