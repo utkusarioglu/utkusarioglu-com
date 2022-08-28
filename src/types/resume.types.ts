@@ -13,6 +13,7 @@ export interface Skill {
 
 interface Skills {
   title: string;
+  remarks: string;
   map: {
     naturalLanguages: Section<Skill>;
     programmingLanguages: Section<Skill>;
@@ -39,6 +40,7 @@ export interface ContactListItem {
 }
 
 export interface WorkExperience {
+  print?: boolean;
   title: string;
   companyName: string;
   location: string;
@@ -67,6 +69,7 @@ export interface Education {
 interface Introduction {
   title: string;
   remarks: string[];
+  print?: boolean;
 }
 
 export interface Resume {

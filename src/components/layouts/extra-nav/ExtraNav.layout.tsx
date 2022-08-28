@@ -53,7 +53,8 @@ const ExtraNavLayout: FC<ExtraNavLayoutProps> = ({ titleRef }) => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="fixed bottom-0 left-0 py-5 z-30"
+            // TODO print: shouldn't be here, but it's still required in `print`
+            className="fixed bottom-0 left-0 py-5 z-30 print:hidden"
             transition={TRANSITIONS.route}
           >
             <ExtraNavView mode="aside" />
@@ -79,7 +80,8 @@ const ExtraNavLayout: FC<ExtraNavLayoutProps> = ({ titleRef }) => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="fixed bottom-0 left-0 py-5 z-30"
+            // TODO print: shouldn't be here, but it's still required in `print`
+            className="fixed bottom-0 left-0 py-5 z-30 print:hidden"
             transition={TRANSITIONS.route}
           >
             <ExtraNavView mode="aside" />
