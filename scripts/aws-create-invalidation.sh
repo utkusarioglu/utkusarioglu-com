@@ -21,5 +21,5 @@ distribution_id=$( \
 
 echo "Creating cloudfront invalidation for id: $distribution_id..."
 aws cloudfront create-invalidation \
-  --distribution_id $distribution_id \
+  --distribution-id $distribution_id \
   --paths "/"
