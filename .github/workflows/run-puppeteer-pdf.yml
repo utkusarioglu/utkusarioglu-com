@@ -1,0 +1,82 @@
+name: Run Puppeteer Pdf
+on:
+  # push:
+  # branches:
+  # - feature/resume-print
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  build-web-artifact:
+    uses: ./.github/workflows/export-for-web.yml
+    secrets: inherit
+
+  run-puppeteer-pdf:
+    needs:
+      - build-web-artifact
+    name: Run Puppeteer Pdf
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Download web build artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: utkusarioglu-com-web-build
+          path: build
+
+      - name: Cache resume artifacts
+        uses: actions/cache@v3
+        id: resume-artifacts-cache
+        with:
+          path: .puppeteer/artifacts
+          key: resume-artifacts-cache-${{ hashFiles('build' )}}
+          restore-keys: |
+            resume-artifacts-cache-
+
+      - name: Generate server certificates
+        if: steps.resume-artifacts-cache.outputs.cache-hit != 'true'
+        uses: kofemann/action-create-certificate@v0.0.4
+        with:
+          hostcert: "server.crt"
+          hostkey: "server.key"
+          cachain: "root.crt"
+
+      - name: Move certificates
+        if: steps.resume-artifacts-cache.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p ".certs/server"
+          mkdir -p ".certs/root/certs"
+          mv server.crt server.key .certs/server/
+          mv root.crt .certs/root/certs/
+          sudo chmod -R +r .certs
+
+      - name: Run Puppeteer pdf creation
+        if: steps.resume-artifacts-cache.outputs.cache-hit != 'true'
+        run: |
+          rm package.json
+          yarn add http-server local-ssl-proxy \
+            --frozen-lockfile \
+            --non-interactive
+          sudo apt install ghostscript -y
+          sudo scripts/start-local-server.sh & \
+            sudo scripts/docker-run-puppeteer-pdf.sh
+        env:
+          CERTS_FOLDER: "${{ github.workspace }}/.certs"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: utkusarioglu-com-pdf-artifacts
+          path: .puppeteer/artifacts
+
+      - name: Telegram notifications
+        if: always()
+        uses: utkusarioglu/telegram-notifications@main 
+        with:
+          telegram_id: ${{ secrets.TELEGRAM_ID }}
+          telegram_token: ${{ secrets.TELEGRAM_TOKEN }}
+          job_status: ${{ job.status }}
+          github_context: ${{ toJson(github) }}
