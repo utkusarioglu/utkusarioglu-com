@@ -139,6 +139,8 @@ export const COLORS = {
   extra: "text-neutral-500",
   extraFill: "fill-neutral-500",
   paragraph: "text-black dark:text-white transition-colors",
+  print: "print:text-black print:dark:text-black",
+  printBg: "print:bg-white print:dark:bg-white",
   sectionHelpBorder: "border-neutral-400",
   secondaryText: "text-neutral-700 dark:text-neutral-500 transition-colors",
   windowTitle: "bg-white/70 dark:bg-black/70 transition-colors",
@@ -449,3 +451,4 @@ export const IMG_ZOOM_MARGIN = +process.env.IMG_ZOOM_MARGIN;
 export const IMG_MAXIMIZED_BORDER_RADIUS = 20;
 export const CONTENT_ANIMATION_Y_DRIFT = 100;
 export const MAX_W_PROSE = +process.env.MAX_W_PROSE;
+export const RESUME_PRINT_Y_GAP_CLASS = "gap-y-3";
