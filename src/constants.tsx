@@ -75,9 +75,9 @@ export const ROUTE_PROPS: INavItem[] = [
     },
   },
   {
-    title: "Artsy Fartsy",
+    title: "Artsy",
     type: "page",
-    href: "/musings/artsy-fartsy",
+    href: "/musings/artsy",
     show: false,
     layout: {
       canvas: false,
