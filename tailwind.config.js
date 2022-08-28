@@ -15,6 +15,12 @@ module.exports = {
       ...defaults.fontSize,
       base: ["1.1rem", { lineHeight: "1.6rem" }],
     },
+    gridTemplateColumns: {
+      resume: "50vw 15vw auto",
+    },
+    gridTemplateRows: {
+      resume: "min max",
+    },
   },
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   plugins: [require("tailwind-scrollbar"), require("tailwind-scrollbar-hide")],
