@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import { COLORS } from "_constants";
 import { type ContactListItem } from "_types/resume.types";
-import ResumeCardBorder from "./ResumeCardBorder";
+import ResumeCardItem from "./ResumeCardItem";
 import ResumeH3 from "./ResumeH3";
 import ResumeExternalLink from "./ResumeExternalLink";
 
@@ -17,13 +17,13 @@ const ResumeContactLi: FC<ResumeContactLiProps> = ({
 }) =>
   screen === false ? null : (
     <ResumeExternalLink href={value}>
-      <ResumeCardBorder>
+      <ResumeCardItem>
         <ResumeH3>{title}</ResumeH3>
         <div className="flex justify-between">
           <span className={COLORS.paragraph}>{remarks}</span>
           <span className={[COLORS.secondaryText].join(" ")}>{handle}</span>
         </div>
-      </ResumeCardBorder>
+      </ResumeCardItem>
     </ResumeExternalLink>
   );
 
