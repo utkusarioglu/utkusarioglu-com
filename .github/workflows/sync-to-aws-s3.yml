@@ -105,7 +105,7 @@ jobs:
         if: steps.terraform-config.outputs.tf-action == 'apply'
         run: |
           SUBDOMAIN=${{ steps.terraform-config.outputs.subdomain }} 
-          scripts/aws-create-invalidation $SUBDOMAIN          
+          scripts/aws-create-invalidation.sh $SUBDOMAIN          
 
       - name: Telegram notifications
         if: always()
