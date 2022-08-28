@@ -17,7 +17,8 @@ const env = {
   APP_NAME: "Utku Sarioglu",
   THEME_COLOR: "#f59e0b",
   BACKGROUND_COLOR: "#171717",
-  APP_ADDRESS: `https://${subdomain}.utkusarioglu.com`,
+  DOMAIN: "utkusarioglu.com",
+  SUBDOMAIN: subdomain,
   // MAGIC. This value comes from tailwind max-w-prose class,
   // which is set to 65ch
   MAX_W_PROSE: 611,
@@ -97,7 +98,7 @@ const getBuildConfig = async (...args) => {
         shortName: env.APP_NAME,
         name: env.APP_NAME,
         description: "Utku Sarioglu's personal website",
-        startUrl: env.APP_ADDRESS,
+        startUrl: `https://${env.SUBDOMAIN}.${env.DOMAIN}`,
         orientation: "portrait",
         display: "standalone",
         themeColor: env.THEME_COLOR,
