@@ -27,7 +27,7 @@ export function getStaticProps() {
 const ResumePage: FC<ResumePageProps> = ({ resume }) => {
   return (
     <ContentLayout verticalMargins={false}>
-      <VerticalMarginsLayout>
+      <VerticalMarginsLayout className="print:hidden">
         <EnhancedImage
           className="rounded-md"
           alt="Resume title image"
