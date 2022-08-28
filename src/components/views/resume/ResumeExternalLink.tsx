@@ -29,7 +29,7 @@ const ResumeExternalLink: FC<ResumeExternalLinkProps> = ({
           "absolute top-0 right-0 px-5 py-3",
         ].join(" ")}
       >
-        ↗
+        &#x279a;
       </div>
       {children}
     </a>
