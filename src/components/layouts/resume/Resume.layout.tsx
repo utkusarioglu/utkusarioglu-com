@@ -15,8 +15,10 @@ import {
   DOMAIN,
   RESUME_PRINT_Y_GAP_CLASS,
 } from "_constants";
-import ResumeExternalLink from "_views/resume/ResumeExternalLink";
-import ResumeH3 from "_views/resume/ResumeH3";
+import ResumePrintH1 from "_views/resume-print/ResumePrintH1";
+import ResumePrintH2 from "_views/resume-print/ResumePrintH2";
+import ResumePrintH3 from "_views/resume-print/ResumePrintH3";
+import ResumeDownload from "_views/resume/ResumeDownload";
 
 export interface ResumeLayoutProps {
   resume: Resume;
@@ -258,48 +260,4 @@ const ResumeLayout: FC<ResumeLayoutProps> = ({
   );
 };
 
-const ResumePrintH1 = ({ children, className = "" }) => (
-  <h1 className={["font-bold text-4xl", className].join(" ")}>{children}</h1>
-);
-
-const ResumePrintH2 = ({ children, className = "" }) => (
-  <h1 className={["font-bold text-md mb-1", className].join(" ")}>
-    {children}
-  </h1>
-);
-
-const ResumePrintH3 = ({ children, className = "" }) => (
-  <h1 className={["font-bold text-md", className].join(" ")}>{children}</h1>
-);
-
 export default ResumeLayout;
-
-const ResumeDownload = () => (
-  <ResumeCardBackground>
-    <ResumeSection
-      title="Download Resume"
-      list={[
-        {
-          title: "Letter",
-          remarks: "North American standard",
-          folder: "letter",
-        },
-        {
-          title: "A4",
-          remarks: "Standard format for Europe and the rest of the world",
-          folder: "a4",
-        },
-      ]}
-      listItemComponent={({ item: { title, folder, remarks } }) => (
-        <ResumeExternalLink
-          href={`/_next/static/resume/${folder}/utku-sarioglu-resume.pdf`}
-        >
-          <ResumeCardBorder>
-            <ResumeH3 className={COLORS.paragraph}>{title}</ResumeH3>
-            <div className={COLORS.paragraph}>{remarks}</div>
-          </ResumeCardBorder>
-        </ResumeExternalLink>
-      )}
-    />
-  </ResumeCardBackground>
-);
