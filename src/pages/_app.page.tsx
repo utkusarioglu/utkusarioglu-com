@@ -12,6 +12,7 @@ import ControlsLayout from "_layouts/controls/Controls.layout";
 import StandardHead from "_heads/Standard.head";
 import { progressBarInit } from "_utils/progress-bar.util";
 import type { AppProps } from "next/app";
+import { ROUTE_PROPS } from "_constants";
 
 const App: FC<AppProps> = ({ Component, pageProps, router }) => {
   const window = useWindow();
@@ -29,7 +30,11 @@ const App: FC<AppProps> = ({ Component, pageProps, router }) => {
     return null;
   }
 
-  if (window.location.pathname !== router.route) {
+  if (
+    window.location.pathname !== router.route &&
+    ROUTE_PROPS.filter(({ href }) => window.location.pathname === href)
+      .length === 1
+  ) {
     router.replace(window.location.pathname);
     return null;
   }
