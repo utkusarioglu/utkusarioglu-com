@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import { type Resume } from "_types/resume.types";
-import ResumeCardBorder from "./ResumeCardBorder";
+import ResumeCardItem from "./ResumeCardItem";
 import ResumeH2 from "./ResumeH2";
 import ResumeSkillSectionLi from "./ResumeSkillsSectionLi";
 import ResumeSkillSection from "./ResumeSkillsSection";
@@ -12,12 +12,12 @@ const ResumeSkills: FC<ResumeSkillsProps> = ({ title, map }) => (
     <ResumeH2 className="px-5">{title}</ResumeH2>
     <div>
       {Object.values(map).map((section) => (
-        <ResumeCardBorder key={section.title}>
+        <ResumeCardItem key={section.title}>
           <ResumeSkillSection
             {...section}
             listItemComponent={({ item }) => <ResumeSkillSectionLi {...item} />}
           />
-        </ResumeCardBorder>
+        </ResumeCardItem>
       ))}
     </div>
   </div>

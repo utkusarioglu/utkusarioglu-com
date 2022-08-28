@@ -8,7 +8,7 @@ import ResumeCertificationLi from "_views/resume/ResumeCertificationLi";
 import ResumeEducationLi from "_views/resume/ResumeEducationLi";
 import ResumeCardBackground from "_views/resume/ResumeCardBackground";
 import ResumeContactLi from "_views/resume/ResumeContactLi";
-import ResumeCardBorder from "_views/resume/ResumeCardBorder";
+import ResumeCardItem from "_views/resume/ResumeCardItem";
 import ResumeDownload from "_views/resume/ResumeDownload";
 
 export interface ResumeScreenLayoutProps {
@@ -34,9 +34,9 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
       <ResumeSection
         {...relevantWorkExperience}
         listItemComponent={({ item }) => (
-          <ResumeCardBorder>
+          <ResumeCardItem>
             <ResumeWorkExperienceLi {...item} />
-          </ResumeCardBorder>
+          </ResumeCardItem>
         )}
       />
     </ResumeCardBackground>
@@ -50,9 +50,9 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
       <ResumeSection
         {...education}
         listItemComponent={({ item }) => (
-          <ResumeCardBorder>
+          <ResumeCardItem>
             <ResumeEducationLi {...item} />
-          </ResumeCardBorder>
+          </ResumeCardItem>
         )}
       />
     </ResumeCardBackground>

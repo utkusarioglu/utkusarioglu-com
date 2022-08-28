@@ -1,11 +1,11 @@
 import { type FC, type ReactNode } from "react";
 import { COLORS } from "_constants";
 
-interface ResumeCardBorderProps {
+interface ResumeCardItemProps {
   children: ReactNode;
 }
 
-const ResumeCardBorder: FC<ResumeCardBorderProps> = ({ children }) => (
+const ResumeCardItem: FC<ResumeCardItemProps> = ({ children }) => (
   <div
     className={[
       COLORS.canvasControlInput,
@@ -16,4 +16,4 @@ const ResumeCardBorder: FC<ResumeCardBorderProps> = ({ children }) => (
   </div>
 );
 
-export default ResumeCardBorder;
+export default ResumeCardItem;
