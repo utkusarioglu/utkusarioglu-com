@@ -50,6 +50,8 @@ const NavLayout: FC<NavLayoutProps> = ({ titleRef }) => {
           className={[
             "z-20 fixed justify-center left-0 right-0 bottom-0",
             "overflow-y-hidden overflow-x-auto scrollbar-hide",
+            // TODO this shouldn't be here, but it's still required in `print`
+            "print:hidden",
           ].join(" ")}
           transition={TRANSITIONS.routeFast}
           style={{
@@ -70,7 +72,8 @@ const NavLayout: FC<NavLayoutProps> = ({ titleRef }) => {
           initial="initial"
           animate="animate"
           exit="exit"
-          className="top-0 z-20 bottom-0 fixed justify-center flex"
+          // TODO print: shouldn't be here, but it's still required in `print`
+          className="top-0 z-20 bottom-0 fixed justify-center flex print:hidden"
           transition={TRANSITIONS.route}
           style={{
             pointerEvents: navigation ? "all" : "none",

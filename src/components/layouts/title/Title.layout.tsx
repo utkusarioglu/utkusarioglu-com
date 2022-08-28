@@ -33,7 +33,12 @@ const TitleLayout = forwardRef<HTMLDivElement, {}>((_, ref) => {
         ref={ref}
         variants={variants.title}
         animate="animate"
-        className={["fixed z-50 top-0 px-5", isSm ? "pt-4" : "pt-5"].join(" ")}
+        className={[
+          "fixed z-50 top-0 px-5",
+          // TODO this shouldn't be here, but it's still required in `print`
+          "print:hidden",
+          isSm ? "pt-4" : "pt-5",
+        ].join(" ")}
         transition={TRANSITIONS.route}
       >
         <Title />
