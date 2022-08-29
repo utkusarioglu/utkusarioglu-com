@@ -14,7 +14,7 @@ jobs:
   build-pdfs:
     needs:
       - build-website
-    uses: ./.github/workflows/run-puppeteer-pdf.yml
+    uses: ./.github/workflows/build-pdfs.yml
     secrets: inherit
 
   deploy-website:
