@@ -1,4 +1,4 @@
-name: Export for web
+name: build-website
 on:
   # push:
   #   branches:
@@ -7,8 +7,8 @@ on:
   workflow_call:
 
 jobs:
-  export-for-web:
-    name: Export for web
+  build-website:
+    name: build-website
     runs-on: ubuntu-latest
     environment: production
     container:
@@ -59,7 +59,7 @@ jobs:
 
       - name: Telegram notifications
         if: always()
-        uses: utkusarioglu/telegram-notifications@main 
+        uses: utkusarioglu/telegram-notifications@main
         with:
           telegram_id: ${{ secrets.TELEGRAM_ID }}
           telegram_token: ${{ secrets.TELEGRAM_TOKEN }}

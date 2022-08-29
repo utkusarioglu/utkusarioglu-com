@@ -1,4 +1,4 @@
-name: Sync to AWS S3
+name: deploy-website
 
 on:
   push:
@@ -7,18 +7,20 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-web-artifact:
-    uses: ./.github/workflows/export-for-web.yml
+  build-website:
+    uses: ./.github/workflows/build-website.yml
     secrets: inherit
 
-  build-pdf-artifact:
+  build-pdfs:
+    needs:
+      - build-website
     uses: ./.github/workflows/run-puppeteer-pdf.yml
     secrets: inherit
 
-  apply-aws-changes:
+  deploy-website:
     needs:
-      - build-web-artifact
-      - build-pdf-artifact
+      - build-website
+      - build-pdfs
     name: Sync changes to AWS
     runs-on: ubuntu-latest
     permissions:
@@ -100,16 +102,16 @@ jobs:
             echo "Running 'terraform plan'..."
             terraform -chdir=./.terraform/$SUBPATH plan
           fi
-        
+
       - name: Invalidate Cloudfront cache
         if: steps.terraform-config.outputs.tf-action == 'apply'
         run: |
           SUBDOMAIN=${{ steps.terraform-config.outputs.subdomain }} 
-          scripts/aws-create-invalidation.sh $SUBDOMAIN          
+          scripts/aws-create-invalidation.sh $SUBDOMAIN
 
       - name: Telegram notifications
         if: always()
-        uses: utkusarioglu/telegram-notifications@main 
+        uses: utkusarioglu/telegram-notifications@main
         with:
           telegram_id: ${{ secrets.TELEGRAM_ID }}
           telegram_token: ${{ secrets.TELEGRAM_TOKEN }}
