@@ -3,7 +3,7 @@ import { COLORS } from "_constants";
 import ResumeH3 from "./ResumeH3";
 import { type Certification } from "_types/resume.types";
 import ResumeCardItem from "./ResumeCardItem";
-import ResumeExternalLink from "./ResumeExternalLink";
+import ResumeLink from "./ResumeLink";
 
 type ResumeCertificationLiProps = Certification;
 
@@ -32,9 +32,9 @@ const ResumeCertificationLi: FC<ResumeCertificationLiProps> = ({
 
   if (certificateUrl) {
     return (
-      <ResumeExternalLink href={certificateUrl}>
+      <ResumeLink href={certificateUrl}>
         <Content />
-      </ResumeExternalLink>
+      </ResumeLink>
     );
   }
 
