@@ -23,7 +23,7 @@ const AboutPage: FC<AboutPageProps> = () => {
       />
       <Paragraph>
         Click here for the
-        <Hyperlink href="/musings/artsy-fartsy">Artsy Fartsy</Hyperlink>
+        <Hyperlink href="/musings/artsy">Artsy Fartsy</Hyperlink>
         content!1!!
       </Paragraph>
       <Paragraph>
@@ -33,7 +33,7 @@ const AboutPage: FC<AboutPageProps> = () => {
       </Paragraph>
       <Paragraph>
         Amazing
-        <Hyperlink href="/musings/kamyoncu-yazilari">Trucker jokes</Hyperlink>
+        <Hyperlink href="/musings/kamyon">Trucker jokes</Hyperlink>
         but they are in Turkish
       </Paragraph>
       {content.map((paragraph) => (
