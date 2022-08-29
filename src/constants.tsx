@@ -143,6 +143,7 @@ export const COLORS = {
   printBg: "print:bg-white print:dark:bg-white",
   sectionHelpBorder: "border-neutral-400",
   secondaryText: "text-neutral-700 dark:text-neutral-500 transition-colors",
+  secondaryFill: "fill-neutral-700 dark:fill-neutral-500 transition-colors",
   windowTitle: "bg-white/70 dark:bg-black/70 transition-colors",
   scrollbar:
     "scrollbar-thumb-neutral-300 dark:scrollbar-thumb-neutral-800 scrollbar-track-transparent transition-colors",

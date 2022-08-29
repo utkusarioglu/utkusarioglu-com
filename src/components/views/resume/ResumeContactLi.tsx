@@ -3,7 +3,7 @@ import { COLORS } from "_constants";
 import { type ContactListItem } from "_types/resume.types";
 import ResumeCardItem from "./ResumeCardItem";
 import ResumeH3 from "./ResumeH3";
-import ResumeExternalLink from "./ResumeExternalLink";
+import ResumeLink from "./ResumeLink";
 
 type ResumeContactLiProps = ContactListItem;
 
@@ -16,7 +16,7 @@ const ResumeContactLi: FC<ResumeContactLiProps> = ({
   handle,
 }) =>
   screen === false ? null : (
-    <ResumeExternalLink href={value}>
+    <ResumeLink href={value}>
       <ResumeCardItem>
         <ResumeH3>{title}</ResumeH3>
         <div className="flex justify-between">
@@ -24,7 +24,7 @@ const ResumeContactLi: FC<ResumeContactLiProps> = ({
           <span className={[COLORS.secondaryText].join(" ")}>{handle}</span>
         </div>
       </ResumeCardItem>
-    </ResumeExternalLink>
+    </ResumeLink>
   );
 
 export default ResumeContactLi;
