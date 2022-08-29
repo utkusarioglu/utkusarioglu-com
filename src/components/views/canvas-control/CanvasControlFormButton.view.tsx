@@ -1,5 +1,6 @@
 import { type ReactNode, type FC } from "react";
 import { COLORS } from "_constants";
+import c from "classnames";
 
 type CanvasControlFormButtonViewProps = {
   children: ReactNode;
@@ -14,11 +15,11 @@ const CanvasControlFormButtonView: FC<CanvasControlFormButtonViewProps> = ({
 }) => {
   return (
     <button
-      className={[
+      className={c(
         "rounded-md py-1 px-3 w-full font-bold",
         COLORS[`${color}Button`],
-        className,
-      ].join(" ")}
+        className
+      )}
       {...rest}
     >
       {children}

@@ -11,7 +11,6 @@ const ResumeContactLi: FC<ResumeContactLiProps> = ({
   title,
   value,
   remarks,
-  print,
   screen,
   handle,
 }) =>
@@ -21,7 +20,7 @@ const ResumeContactLi: FC<ResumeContactLiProps> = ({
         <ResumeH3>{title}</ResumeH3>
         <div className="flex justify-between">
           <span className={COLORS.paragraph}>{remarks}</span>
-          <span className={[COLORS.secondaryText].join(" ")}>{handle}</span>
+          <span className={COLORS.secondaryText}>{handle}</span>
         </div>
       </ResumeCardItem>
     </ResumeLink>

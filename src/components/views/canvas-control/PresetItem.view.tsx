@@ -2,6 +2,7 @@ import { MouseEventHandler, type FC, type ReactNode } from "react";
 import { useFormik } from "formik";
 import { COLORS } from "_constants";
 import { type PerlinConfig } from "_contexts/canvas/Canvas.context.types";
+import c from "classnames";
 
 type PresetItemViewProps = Pick<
   ReturnType<typeof useFormik>,
@@ -36,13 +37,13 @@ const PresetItemView: FC<PresetItemViewProps> = ({
 
   return (
     <div
-      className={[
+      className={c(
         "p-3 mb-1 rounded-md w-full text-left relative cursor-pointer",
         COLORS.paragraph,
         values.name === name
           ? COLORS.canvasControlInputSelected
-          : COLORS.canvasControlInput,
-      ].join(" ")}
+          : COLORS.canvasControlInput
+      )}
       onClick={presetOnClick}
     >
       {name}

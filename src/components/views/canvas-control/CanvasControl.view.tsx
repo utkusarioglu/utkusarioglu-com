@@ -15,6 +15,7 @@ import { downloadImage } from "./CanvasControl.view.logic";
 import { useDeviceQuery } from "_hooks/device/device.hook";
 import { useTheme } from "_hooks/theme/theme.hook";
 import HslColorBarView from "./HslColorBar.view";
+import c from "classnames";
 
 const CanvasControlView: FC<CanvasControlViewProps> = ({
   minimize,
@@ -61,10 +62,10 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
   return (
     <form onSubmit={handleSubmit} className="flex flex-col overflow-hidden">
       <div
-        className={[
-          "scrollbar-thin px-5 overflow-x-hidden grow py-5",
+        className={c(
           COLORS.scrollbar,
-        ].join(" ")}
+          "scrollbar-thin px-5 overflow-x-hidden grow py-5"
+        )}
       >
         <SectionHelp enabled={helpEnabled}>
           <Paragraph small>
@@ -84,10 +85,10 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
               You are seeing this section because this is your first visit to
               this page. You can toggle the help dialogs by clicking the{" "}
               <span
-                className={[
+                className={c(
                   "bg-neutral-800 text-white px-2",
-                  "text-sm w-min h-min rounded-md inline-block",
-                ].join(" ")}
+                  "text-sm w-min h-min rounded-md inline-block"
+                )}
               >
                 ?
               </span>{" "}
@@ -96,15 +97,11 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
           )}
         </SectionHelp>
         <Legend title="Status">
-          <div
-            className={["px-3 rounded-md mb-5", COLORS.canvasControlInput].join(
-              " "
-            )}
-          >
+          <div className={c(COLORS.canvasControlInput, "px-3 rounded-md mb-5")}>
             <div className={COLORS.paragraph}>
               {finished ? (
                 <div>
-                  <div className={["mb-5 pt-3", COLORS.paragraph].join(" ")}>
+                  <div className={c(COLORS.paragraph, "mb-5 pt-3")}>
                     <div className="mb-3">
                       Drawing complete in {Math.round(duration / 100) / 10}{" "}
                       seconds
@@ -127,10 +124,10 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
                       }).map(([key, value]) => (
                         <pre
                           key={key}
-                          className={[
-                            "text-sm font-thin",
+                          className={c(
                             COLORS.secondaryText,
-                          ].join(" ")}
+                            "text-sm font-thin"
+                          )}
                         >
                           {key}: {value}
                         </pre>
@@ -171,9 +168,7 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
                   )}
                 </div>
               ) : (
-                <div className={[COLORS.paragraph, "py-3"].join(" ")}>
-                  Drawing...
-                </div>
+                <div className={c(COLORS.paragraph, "py-3")}>Drawing...</div>
               )}
             </div>
           </div>

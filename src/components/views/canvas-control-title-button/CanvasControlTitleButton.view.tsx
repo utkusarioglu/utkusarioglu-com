@@ -1,6 +1,7 @@
 import { type FC } from "react";
 import { COLORS } from "_constants";
 import { type CanvasControlTitleButtonViewProps } from "./CanvasControlTitleButton.view.types";
+import c from "classnames";
 
 const CanvasControlTitleButtonView: FC<CanvasControlTitleButtonViewProps> = ({
   children,
@@ -11,14 +12,14 @@ const CanvasControlTitleButtonView: FC<CanvasControlTitleButtonViewProps> = ({
   return (
     <button
       {...rest}
-      className={[
+      className={c(
         "ml-2 w-7 rounded-md",
         COLORS.paragraph,
         isActive
           ? COLORS.canvasControlInputSelected
           : COLORS.canvasControlInput,
-        className,
-      ].join(" ")}
+        className
+      )}
     >
       {children}
     </button>

@@ -10,6 +10,7 @@ import type {
   NavModes,
   LinkTypes,
 } from "./NavItem.view.types";
+import c from "classnames";
 
 const NavItem: FC<NavItemProps> = (props) => {
   const containerRef = useRef<HTMLDivElement>();
@@ -36,7 +37,7 @@ const NavItem: FC<NavItemProps> = (props) => {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className={["font-display", colorAndFontSize].join(" ")}
+          className={c(colorAndFontSize, "font-display")}
         >
           {title}
         </a>
@@ -45,10 +46,7 @@ const NavItem: FC<NavItemProps> = (props) => {
   }
 
   return (
-    <div
-      ref={containerRef}
-      className={["relative", paddingAndMargins].join(" ")}
-    >
+    <div ref={containerRef} className={c("relative", paddingAndMargins)}>
       <AnimatePresence initial={false}>
         {isActive && hasIndicator && (
           <motion.div
@@ -86,9 +84,7 @@ const NavItem: FC<NavItemProps> = (props) => {
       </AnimatePresence>
       <AnimatedLink href={href} paddingAndMargins="">
         <Link href={href} passHref>
-          <a className={["font-display", colorAndFontSize].join(" ")}>
-            {title}
-          </a>
+          <a className={c("font-display", colorAndFontSize)}>{title}</a>
         </Link>
       </AnimatedLink>
     </div>

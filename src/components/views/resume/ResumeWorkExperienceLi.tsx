@@ -3,6 +3,7 @@ import { COLORS } from "_constants";
 import ResumeH3 from "./ResumeH3";
 import { type WorkExperience } from "_types/resume.types";
 import ResumeTable from "./ResumeTable";
+import c from "classnames";
 
 type ResumeWorkExperienceLiProps = WorkExperience;
 
@@ -26,10 +27,7 @@ const ResumeWorkExperienceLi: FC<ResumeWorkExperienceLiProps> = ({
         }}
       />
       {remarks.map((paragraph) => (
-        <p
-          key={paragraph}
-          className={[COLORS.paragraph, "mb-3 last:mb-0"].join(" ")}
-        >
+        <p key={paragraph} className={c(COLORS.paragraph, "mb-3 last:mb-0")}>
           {paragraph}
         </p>
       ))}

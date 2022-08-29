@@ -1,6 +1,7 @@
 import { type FC } from "react";
 import { COLORS } from "_constants";
 import { type InputProps } from "./Input.primitive.types";
+import c from "classnames";
 
 const Input: FC<InputProps> = ({
   name,
@@ -13,19 +14,19 @@ const Input: FC<InputProps> = ({
 }) => {
   return (
     <div
-      className={[
+      className={c(
         COLORS.canvasControlInput,
-        "py-2 px-3 relative flex flex-row items-center grow rounded-md",
-      ].join(" ")}
+        "py-2 px-3 relative flex flex-row items-center grow rounded-md"
+      )}
     >
       <input
         name={name}
         type={type}
         onChange={handleChange}
-        className={[
+        className={c(
           COLORS.paragraph,
-          "grow bg-transparent focus:outline-none",
-        ].join(" ")}
+          "grow bg-transparent focus:outline-none"
+        )}
         value={values[name]}
         min={min}
         max={max}
@@ -35,7 +36,7 @@ const Input: FC<InputProps> = ({
           {type === "range" && (
             <span className={COLORS.paragraph}>{values[name]}</span>
           )}
-          <span className={[COLORS.paragraph, "pointer-events-none"].join(" ")}>
+          <span className={c(COLORS.paragraph, "pointer-events-none")}>
             {unit}
           </span>
         </div>

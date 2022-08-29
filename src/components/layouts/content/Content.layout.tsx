@@ -13,6 +13,7 @@ import { MotionVariants } from "_types/vendors/framer-motion.types";
 import FooterLayout from "_layouts/footer/Footer.layout";
 import { ContentLayoutProps } from "./Content.layout.types";
 import { useLayoutContext } from "_contexts/layout/Layout.context";
+import c from "classnames";
 
 /* eslint-disable react/display-name */
 const ContentLayout = forwardRef<HTMLDivElement, ContentLayoutProps>(
@@ -57,13 +58,15 @@ const ContentLayout = forwardRef<HTMLDivElement, ContentLayoutProps>(
           animate="animate"
           exit="exit"
           transition={TRANSITIONS.route}
-          className={[
+          className={c(
             "w-full h-full overflow-x-hidden",
-            overflowY ? "overflow-y-auto" : "overflow-y-hidden",
-            isSm ? "" : `scrollbar ${COLORS.scrollbar}`,
-            allowEntireViewport ? "" : "py-5 flex justify-center ",
-            verticalMargins && !allowEntireViewport && "px-5",
-          ].join(" ")}
+            {
+              [`scrollbar ${COLORS.scrollbar}`]: !isSm,
+              "py-5 flex justify-center ": !allowEntireViewport,
+              "px-5": verticalMargins && !allowEntireViewport,
+            },
+            overflowY ? "overflow-y-auto" : "overflow-y-hidden"
+          )}
         >
           <div
             className={
@@ -73,10 +76,10 @@ const ContentLayout = forwardRef<HTMLDivElement, ContentLayoutProps>(
             }
           >
             <div
-              className={[
+              className={c(
                 "min-h-full",
-                allowEntireViewport ? "h-full" : "flex flex-row",
-              ].join(" ")}
+                allowEntireViewport ? "h-full" : "flex flex-row"
+              )}
             >
               <ErrorBoundary FallbackComponent={ErrorFallbackView}>
                 <article

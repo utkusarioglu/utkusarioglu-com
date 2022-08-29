@@ -4,6 +4,7 @@ import ResumeH3 from "./ResumeH3";
 import { type Certification } from "_types/resume.types";
 import ResumeCardItem from "./ResumeCardItem";
 import ResumeLink from "./ResumeLink";
+import c from "classnames";
 
 type ResumeCertificationLiProps = Certification;
 
@@ -23,9 +24,7 @@ const ResumeCertificationLi: FC<ResumeCertificationLiProps> = ({
           {instructor && `${instructor} @ `}
           {institution}
         </span>
-        <span className={[COLORS.secondaryText].join(" ")}>
-          {certificateId}
-        </span>
+        <span className={c(COLORS.secondaryText)}>{certificateId}</span>
       </div>
     </ResumeCardItem>
   );

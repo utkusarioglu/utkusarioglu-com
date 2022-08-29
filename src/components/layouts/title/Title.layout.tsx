@@ -7,6 +7,7 @@ import { useEnhancedRouter } from "_hooks/router/router.hook";
 import { useDeviceQuery } from "_hooks/device/device.hook";
 import { useWindow } from "_hooks/window/window.hook";
 import { homeNavX } from "_utils/positioning.utils";
+import c from "classnames";
 
 /* eslint-disable react/display-name */
 const TitleLayout = forwardRef<HTMLDivElement, {}>((_, ref) => {
@@ -33,12 +34,12 @@ const TitleLayout = forwardRef<HTMLDivElement, {}>((_, ref) => {
         ref={ref}
         variants={variants.title}
         animate="animate"
-        className={[
+        className={c(
           "fixed z-50 top-0 px-5",
           // TODO this shouldn't be here, but it's still required in `print`
           "print:hidden",
-          isSm ? "pt-4" : "pt-5",
-        ].join(" ")}
+          isSm ? "pt-4" : "pt-5"
+        )}
         transition={TRANSITIONS.route}
       >
         <Title />

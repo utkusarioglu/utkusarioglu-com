@@ -1,4 +1,5 @@
 import { type FC, type ReactNode } from "react";
+import c from "classnames";
 
 interface VerticalMarginsLayoutProps {
   children: ReactNode;
@@ -8,6 +9,6 @@ interface VerticalMarginsLayoutProps {
 const VerticalMarginsLayout: FC<VerticalMarginsLayoutProps> = ({
   children,
   className = "",
-}) => <div className={["px-5", className].join(" ")}>{children}</div>;
+}) => <div className={c("px-5", className)}>{children}</div>;
 
 export default VerticalMarginsLayout;

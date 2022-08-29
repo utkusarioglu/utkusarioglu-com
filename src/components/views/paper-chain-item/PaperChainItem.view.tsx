@@ -1,5 +1,6 @@
 import { type FC } from "react";
 import type { PaperChainItemViewProps } from "./PaperChainItem.view.types";
+import c from "classnames";
 
 const PaperChainItemView: FC<PaperChainItemViewProps> = ({
   item: { content, timestamp, notes, style, styles, classes },
@@ -7,11 +8,11 @@ const PaperChainItemView: FC<PaperChainItemViewProps> = ({
   const date = new Date(timestamp);
   return (
     <div
-      className={[
+      className={c(
         "p-5 rounded-lg flex flex-col",
         "justify-end mb-5 text-base text-white",
-        classes?.container,
-      ].join(" ")}
+        classes?.container
+      )}
       style={{ ...style, ...styles?.container }}
     >
       {Array.isArray(content) ? (
@@ -19,35 +20,29 @@ const PaperChainItemView: FC<PaperChainItemViewProps> = ({
           <p
             key={paragraph.slice(0, 10)}
             style={styles?.paragraph}
-            className={["mb-3", classes?.paragraph].join(" ")}
+            className={c("mb-3", classes?.paragraph)}
           >
             {paragraph}
           </p>
         ))
       ) : (
-        <p
-          style={styles?.paragraph}
-          className={["mb-3", classes?.paragraph].join(" ")}
-        >
+        <p style={styles?.paragraph} className={c("mb-3", classes?.paragraph)}>
           {content}
         </p>
       )}
       <div
-        className={["flex justify-end", classes?.details].join(" ")}
+        className={c("flex justify-end", classes?.details)}
         style={styles?.details}
       >
         {!!notes && (
           <span
-            className={["mr-2 text-base", classes?.notes].join(" ")}
+            className={c("mr-2 text-base", classes?.notes)}
             style={styles?.notes}
           >
             ♫
           </span>
         )}
-        <span
-          className={["text-base", classes?.date].join(" ")}
-          style={styles?.date}
-        >
+        <span className={c("text-base", classes?.date)} style={styles?.date}>
           {date.toDateString()}
         </span>
       </div>

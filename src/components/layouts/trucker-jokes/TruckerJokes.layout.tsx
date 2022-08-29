@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { TRANSITIONS } from "_constants";
 import TruckerJokesTextView from "_views/trucker-jokes-text/TruckerJokesText.view";
 import type { JokeList } from "_hooks/trucker-jokes/trucker-jokes.hook.types";
+import c from "classnames";
 
 interface TruckerJokesLayoutProps {
   list: JokeList;
@@ -21,7 +22,7 @@ const TruckerJokesLayout: FC<TruckerJokesLayoutProps> = ({ list }) => {
   return (
     <div
       onClick={chooseJoke}
-      className={["relative w-full h-full overflow-hidden", palette].join(" ")}
+      className={c("relative w-full h-full overflow-hidden", palette)}
     >
       <motion.div
         className="h-full absolute top-0 left-0"
