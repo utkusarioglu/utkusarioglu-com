@@ -1,4 +1,4 @@
-name: Run Cypress tests
+name: run-e2e-tests
 on:
   # push:
   #   branches:
@@ -7,12 +7,13 @@ on:
   workflow_call:
 
 jobs:
-  build-web-artifact:
-    uses: ./.github/workflows/export-for-web.yml
+  build-website:
+    uses: ./.github/workflows/build-website.yml
 
-  run-cypress-tests:
-    needs: build-web-artifact
-    name: Run Cypress tests
+  run-e2e-tests:
+    needs:
+      - build-website
+    name: run-e2e-tests
     runs-on: ubuntu-latest
     environment: production
     steps:

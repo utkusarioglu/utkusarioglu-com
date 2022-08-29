@@ -1,4 +1,4 @@
-name: Run Puppeteer Pdf
+name: build-pdfs
 on:
   # push:
   # branches:
@@ -7,14 +7,14 @@ on:
   workflow_call:
 
 jobs:
-  build-web-artifact:
-    uses: ./.github/workflows/export-for-web.yml
+  build-website:
+    uses: ./.github/workflows/build-website.yml
     secrets: inherit
 
-  run-puppeteer-pdf:
+  build-pdfs:
     needs:
-      - build-web-artifact
-    name: Run Puppeteer Pdf
+      - build-website
+    name: build-pdfs
     runs-on: ubuntu-latest
     environment: production
     steps:
@@ -74,7 +74,7 @@ jobs:
 
       - name: Telegram notifications
         if: always()
-        uses: utkusarioglu/telegram-notifications@main 
+        uses: utkusarioglu/telegram-notifications@main
         with:
           telegram_id: ${{ secrets.TELEGRAM_ID }}
           telegram_token: ${{ secrets.TELEGRAM_TOKEN }}
