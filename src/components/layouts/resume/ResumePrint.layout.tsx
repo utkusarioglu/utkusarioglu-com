@@ -9,6 +9,7 @@ import {
 import ResumePrintH1 from "_views/resume-print/ResumePrintH1";
 import ResumePrintH2 from "_views/resume-print/ResumePrintH2";
 import ResumePrintH3 from "_views/resume-print/ResumePrintH3";
+import c from "classnames";
 
 export interface ResumeLayoutProps {
   resume: Resume;
@@ -26,18 +27,18 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
 }) => (
   <div className="hidden print:block relative">
     <div
-      className={[
+      className={c(
         COLORS.print,
         COLORS.printBg,
         "fixed top-0 left-0 right-0 bottom-0",
-        "z-50 text-[12px] font-[Arial]",
-      ].join(" ")}
+        "z-50 text-[12px] font-[Arial]"
+      )}
     >
       <div
-        className={[
-          "grid grid-cols-resume grid-rows-resume gap-x-5",
+        className={c(
           RESUME_PRINT_Y_GAP_CLASS,
-        ].join(" ")}
+          "grid grid-cols-resume grid-rows-resume gap-x-5"
+        )}
       >
         <ResumePrintH1 className="col-start-1 row-start-1">
           {name}
@@ -62,10 +63,10 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
         </div>
 
         <div
-          className={[
-            "col-start-1 col-end-3 row-start-2 flex flex-col",
+          className={c(
             RESUME_PRINT_Y_GAP_CLASS,
-          ].join(" ")}
+            "col-start-1 col-end-3 row-start-2 flex flex-col"
+          )}
         >
           <div>
             <ResumePrintH2>
@@ -136,10 +137,10 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
         </div>
 
         <div
-          className={[
+          className={c(
             "col-start-3 row-start-2 flex flex-col",
-            RESUME_PRINT_Y_GAP_CLASS,
-          ].join(" ")}
+            RESUME_PRINT_Y_GAP_CLASS
+          )}
         >
           <div>
             <div className="flex justify-between">

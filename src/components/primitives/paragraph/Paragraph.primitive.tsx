@@ -1,5 +1,6 @@
 import { type FC, type ReactNode } from "react";
 import { COLORS } from "_constants";
+import c from "classnames";
 
 interface ParagraphProps {
   children: ReactNode;
@@ -9,11 +10,11 @@ interface ParagraphProps {
 const Paragraph: FC<ParagraphProps> = ({ children, small = false }) => {
   return (
     <p
-      className={[
-        "last:mb-0",
-        small ? "text-sm mb-2" : "text-base mb-5",
+      className={c(
         COLORS.paragraph,
-      ].join(" ")}
+        "last:mb-0",
+        small ? "text-sm mb-2" : "text-base mb-5"
+      )}
     >
       {children}
     </p>

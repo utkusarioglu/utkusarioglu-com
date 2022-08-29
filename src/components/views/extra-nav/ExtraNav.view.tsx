@@ -4,6 +4,7 @@ import { useTheme } from "_hooks/theme/theme.hook";
 import AnimatedLink from "_primitives/animated-link/AnimatedLink.primitive";
 import NavItem from "_views/nav-item/NavItem.view";
 import { type ExtraNavViewProps } from "./ExtraNav.view.types";
+import c from "classnames";
 
 const ExtraNavView: FC<ExtraNavViewProps> = ({ mode }) => {
   const { toggleActive, saveTheme, getActive } = useTheme();
@@ -24,12 +25,10 @@ const ExtraNavView: FC<ExtraNavViewProps> = ({ mode }) => {
       />
       <AnimatedLink href="theme" paddingAndMargins="">
         <a
-          className={[
-            "font-display text-3xl cursor-pointer",
-            COLORS.extra,
-            mode === "aside" ? "pl-5" : "",
-            mode === "bottom" ? "mr-5" : "",
-          ].join(" ")}
+          className={c(COLORS.extra, "font-display text-3xl cursor-pointer", {
+            "pl-5": mode === "aside",
+            "mr-5": mode === "bottom",
+          })}
           onClick={toggleAndSaveTheme}
         >
           Theme

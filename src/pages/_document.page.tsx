@@ -2,6 +2,7 @@ import { type FC } from "react";
 import { Html, Head, Main, NextScript } from "next/document";
 import { COLORS } from "_constants";
 import { DocumentProps } from "next/document";
+import c from "classnames";
 
 const Document: FC<DocumentProps> = () => {
   return (
@@ -30,9 +31,7 @@ const Document: FC<DocumentProps> = () => {
           rel="stylesheet"
         />
       </Head>
-      <body
-        className={[COLORS.bg, "select-none h-full overflow-hidden"].join(" ")}
-      >
+      <body className={c(COLORS.bg, "select-none h-full overflow-hidden")}>
         <Main />
         <NextScript />
       </body>

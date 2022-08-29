@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import { COLORS } from "_constants";
+import c from "classnames";
 
 interface HslColorBarViewProps {
   hueOffset: number;
@@ -37,7 +38,7 @@ const HslColorBarView: FC<HslColorBarViewProps> = ({
           ].join(""),
         }}
       />
-      <div className={["text-sm text-center", COLORS.secondaryText].join(" ")}>
+      <div className={c(COLORS.secondaryText, "text-sm text-center")}>
         Approximate color range (due to perlin noise)
       </div>
     </div>

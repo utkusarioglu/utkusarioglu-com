@@ -1,5 +1,6 @@
 import { type FC } from "react";
 import { COLORS } from "_constants";
+import c from "classnames";
 
 interface ResumeTableProps {
   table: Record<string, string | number>;
@@ -7,11 +8,9 @@ interface ResumeTableProps {
 
 const ResumeTable: FC<ResumeTableProps> = ({ table }) => {
   const Pair = ({ heading, value, className = "" }) => (
-    <div className={["flex flex-col", className].join(" ")}>
-      <span className={[COLORS.paragraph, "font-bold"].join(" ")}>
-        {heading}
-      </span>
-      <span className={[COLORS.paragraph].join(" ")}>{value}</span>
+    <div className={c("flex flex-col", className)}>
+      <span className={c(COLORS.paragraph, "font-bold")}>{heading}</span>
+      <span className={COLORS.paragraph}>{value}</span>
     </div>
   );
 

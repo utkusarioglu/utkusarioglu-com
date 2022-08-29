@@ -1,6 +1,7 @@
 import { type FC } from "react";
 import { motion } from "framer-motion";
 import type { Joke } from "_hooks/trucker-jokes/trucker-jokes.hook.types";
+import c from "classnames";
 
 interface TruckerJokesTextViewProps {
   joke: Joke;
@@ -31,10 +32,10 @@ const TruckerJokesTextView: FC<TruckerJokesTextViewProps> = ({ joke }) => {
           duration: 0.3,
         },
       }}
-      className={[
+      className={c(
         "absolute top-0 left-0 w-full h-full flex",
-        "flex-col justify-center leading-tight",
-      ].join(" ")}
+        "flex-col justify-center leading-tight"
+      )}
     >
       <div
         className="text-center px-10 text-[60px]"

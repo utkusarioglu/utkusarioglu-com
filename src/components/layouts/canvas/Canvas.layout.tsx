@@ -9,6 +9,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallbackView from "_views/error-fallback/ErrorFallback.view";
 import { isIOS, isAndroid } from "react-device-detect";
 import { useLayoutContext } from "_contexts/layout/Layout.context";
+import c from "classnames";
 
 const CanvasLayout = () => {
   const { navigation, canvas } = useLayoutContext();
@@ -46,10 +47,10 @@ const CanvasLayout = () => {
             }),
         maskMode: "alpha",
       }}
-      className={[
+      className={c(
         "absolute h-full w-full top-0 left-0 z-0",
-        "pointer-events-none flex justify-center",
-      ].join(" ")}
+        "pointer-events-none flex justify-center"
+      )}
     >
       <ErrorBoundary FallbackComponent={ErrorFallbackView}>
         <CanvasView window={window} />

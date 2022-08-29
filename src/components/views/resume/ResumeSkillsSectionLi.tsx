@@ -10,7 +10,7 @@ const ResumeSkillSectionLi: FC<ResumeSkillSectionLiProps> = ({
   confident,
   print,
 }) => (
-  <li className={[COLORS.paragraph].join(" ")}>
+  <li className={COLORS.paragraph}>
     {name}
     {confident === false && "*"} {remarks && `(${remarks})`}
   </li>

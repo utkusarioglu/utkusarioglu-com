@@ -13,6 +13,7 @@ import { useLayoutContext } from "_contexts/layout/Layout.context";
 import { getProgressBar } from "_utils/progress-bar.util";
 import { useEnhancedRouter } from "_hooks/router/router.hook";
 import { produceSizes } from "./EnhancedImage.primitive.utils";
+import c from "classnames";
 
 const INITIAL_SCALE = 1.2;
 const PLACEHOLDER_SCALE = 1.3;
@@ -116,7 +117,7 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
     <div className="mb-5">
       <div
         ref={containerRef}
-        className={["overflow-hidden relative", className].join(" ")}
+        className={c("overflow-hidden relative", className)}
         style={{
           letterSpacing: 0,
           wordSpacing: 0,
@@ -150,11 +151,12 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
           src={img.src}
           srcSet={img.srcSet}
           sizes={produceSizes(img.images, maxResponsiveWidth)}
-          className={[
-            "absolute top-0 h-full w-full object-cover",
-            "overflow-hidden block",
-            allowZoom && !isSm ? "cursor-pointer" : "",
-          ].join(" ")}
+          className={c(
+            "absolute top-0 h-full w-full object-cover overflow-hidden block",
+            {
+              "cursor-pointer": allowZoom && !isSm,
+            }
+          )}
           onLoad={() => setImgLoaded(true)}
           alt={alt}
           {...(allowZoom && {
@@ -162,27 +164,17 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
           })}
         />
         {imgZoomed && loadingDialogShown && (
-          <div
-            className={[
-              "absolute bottom-0 w-full pt-6 pb-8",
-              "backdrop-blur-md",
-            ].join(" ")}
-          >
+          <div className="absolute bottom-0 w-full pt-6 pb-8 backdrop-blur-md">
             <div className="m-auto w-min">
-              <span
-                className={["text-base inline w-min", COLORS.paragraph].join(
-                  " "
-                )}
-              >
+              <span className={c(COLORS.paragraph, "text-base inline w-min")}>
                 Loading...
               </span>
               <span
-                className={[
-                  "text-base px-4 py-2 inline",
-                  "ml-3 rounded-md cursor-pointer",
+                className={c(
                   COLORS.paragraph,
                   COLORS.canvasControlInput,
-                ].join(" ")}
+                  "text-base px-4 py-2 inline ml-3 rounded-md cursor-pointer"
+                )}
                 onClick={cancelZoom}
               >
                 Cancel
@@ -192,9 +184,7 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
         )}
       </div>
       {credits && (
-        <div className={["text-center", COLORS.secondaryText].join(" ")}>
-          {credits}
-        </div>
+        <div className={c(COLORS.secondaryText, "text-center")}>{credits}</div>
       )}
     </div>
   );

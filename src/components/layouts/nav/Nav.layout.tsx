@@ -9,6 +9,7 @@ import { homeNavX, homeNavY } from "_utils/positioning.utils";
 import type { MotionVariantRecord } from "_types/vendors/framer-motion.types";
 import { type NavLayoutProps } from "./Nav.layout.types";
 import { useLayoutContext } from "_contexts/layout/Layout.context";
+import c from "classnames";
 
 const NavLayout: FC<NavLayoutProps> = ({ titleRef }) => {
   const { navigation } = useLayoutContext();
@@ -47,12 +48,12 @@ const NavLayout: FC<NavLayoutProps> = ({ titleRef }) => {
           initial="initial"
           animate="animate"
           exit="exit"
-          className={[
+          className={c(
             "z-20 fixed justify-center left-0 right-0 bottom-0",
             "overflow-y-hidden overflow-x-auto scrollbar-hide",
             // TODO this shouldn't be here, but it's still required in `print`
-            "print:hidden",
-          ].join(" ")}
+            "print:hidden"
+          )}
           transition={TRANSITIONS.routeFast}
           style={{
             WebkitMaskImage: MASKS.nav,

@@ -1,6 +1,7 @@
 import { type FC, type ReactNode } from "react";
 import { COLORS } from "_constants";
 import { useDeviceQuery } from "_hooks/device/device.hook";
+import c from "classnames";
 
 interface ResumeCardBackground {
   children: ReactNode;
@@ -14,12 +15,14 @@ const ResumeCardBackground: FC<ResumeCardBackground> = ({
   const { isSm } = useDeviceQuery();
   return (
     <div
-      className={[
+      className={c(
         COLORS.canvasControlsBg,
-        isSm ? "" : "mx-5",
         "py-5 rounded-lg mb-8",
-        className,
-      ].join(" ")}
+        {
+          "mx-5": !isSm,
+        },
+        className
+      )}
     >
       {children}
     </div>

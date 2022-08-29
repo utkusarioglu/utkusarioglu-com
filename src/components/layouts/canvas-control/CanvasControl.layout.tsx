@@ -13,6 +13,7 @@ import {
   getCanvasControlsFirstVisit,
   setCanvasControlsVisitHappened,
 } from "_utils/local-storage.utils";
+import c from "classnames";
 
 const CanvasControlLayout: FC<CanvasControlLayoutProps> = ({
   dragConstraintsRef,
@@ -60,23 +61,23 @@ const CanvasControlLayout: FC<CanvasControlLayoutProps> = ({
           exit="none"
           whileDrag="o7"
           transition={TRANSITIONS.routeFast}
-          className={[
-            "flex flex-col overflow-hidden",
+          className={c(
             COLORS.canvasControlsBg,
             COLORS.canvasControlBorder,
+            "flex flex-col overflow-hidden",
+            {
+              "backdrop-blur-sm": !isAndroid,
+            },
             isSm
               ? "absolute top-16 bottom-4 left-0 right-0 mb-12 !transform-none"
-              : "relative h-[450px] w-[400px] border-[1px] rounded-lg ",
-            isAndroid ? "" : "backdrop-blur-sm ",
-          ].join(" ")}
+              : "relative h-[450px] w-[400px] border-[1px] rounded-lg"
+          )}
         >
           <div
-            className={`px-5 p-3 flex ${COLORS.windowTitle}`}
+            className={c(COLORS.windowTitle, "px-5 p-3 flex")}
             onPointerDown={startDrag}
           >
-            <div
-              className={["text-lg font-bold grow", COLORS.paragraph].join(" ")}
-            >
+            <div className={c(COLORS.paragraph, "text-lg font-bold grow")}>
               Canvas controls
             </div>
             <CanvasControlTitleButtonView
@@ -104,13 +105,13 @@ const CanvasControlLayout: FC<CanvasControlLayoutProps> = ({
           initial="none"
           animate="full"
           onClick={maximize}
-          className={[
-            "bottom-0 px-4 py-1 rounded-md",
+          className={c(
             COLORS.canvasControlsBg,
             COLORS.canvasControlBorder,
             COLORS.paragraph,
-            isSm ? "mb-0" : "mb-5",
-          ].join(" ")}
+            "bottom-0 px-4 py-1 rounded-md",
+            isSm ? "mb-0" : "mb-5"
+          )}
         >
           ▲
         </motion.button>

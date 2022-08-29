@@ -1,5 +1,6 @@
 import { type FC, type ReactNode } from "react";
 import { COLORS } from "_constants";
+import c from "classnames";
 
 interface ResumeCardItemProps {
   children: ReactNode;
@@ -7,10 +8,10 @@ interface ResumeCardItemProps {
 
 const ResumeCardItem: FC<ResumeCardItemProps> = ({ children }) => (
   <div
-    className={[
+    className={c(
       COLORS.canvasControlInput,
-      "px-5 py-3 mb-3 last:mb-0 rounded-lg",
-    ].join(" ")}
+      "px-5 py-3 mb-3 last:mb-0 rounded-lg"
+    )}
   >
     {children}
   </div>

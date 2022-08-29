@@ -1,6 +1,7 @@
 import { type FC, type ReactNode } from "react";
 import { COLORS, TRANSITIONS, APP_ADDRESS } from "_constants";
 import { motion } from "framer-motion";
+import c from "classnames";
 
 interface ResumeExternalLinkProps {
   href: string;
@@ -22,10 +23,10 @@ const ResumeLink: FC<ResumeExternalLinkProps> = ({ href, children }) => (
     >
       {!href.startsWith(APP_ADDRESS) && !href.startsWith("/") && (
         <div
-          className={[
+          className={c(
             COLORS.secondaryText,
-            "absolute top-0 right-0 px-5 py-4 h-10 v-5",
-          ].join(" ")}
+            "absolute top-0 right-0 px-5 py-4 h-10 v-5"
+          )}
         >
           <ExternalLinkIcon />
         </div>
@@ -40,7 +41,7 @@ const ExternalLinkIcon = () => (
     dangerouslySetInnerHTML={{
       __html: require("_assets/icons/external-link.svg?include"),
     }}
-    className={["w-4 h-4", COLORS.secondaryFill].join(" ")}
+    className={c("w-4 h-4", COLORS.secondaryFill)}
   />
 );
 
