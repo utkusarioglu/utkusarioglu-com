@@ -52,8 +52,8 @@ async function writeUpdatedFile(filename, content) {
  * Main function that handles the entire operation
  */
 async function main() {
-  const dataPath = "../public/paper-chain-data";
-  const filename = path.join(__dirname, dataPath, "2020-01.json");
+  const dataPath = "../assets/paper-chain";
+  const filename = path.join(__dirname, dataPath, "data.json");
   const file = await readHistory(filename);
   const newEntry = createNewEntry();
   const updated = addNewEntry(file, newEntry);
