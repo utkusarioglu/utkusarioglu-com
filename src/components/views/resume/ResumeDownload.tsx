@@ -2,7 +2,7 @@ import ResumeSection from "_views/resume/ResumeSection";
 import ContentCardBackground from "_views/content-card/ContentCardBackground";
 import ContentCardItem from "_views/content-card/ContentCardItem";
 import { COLORS } from "_constants";
-import NonRoutedLink from "_views/resume/NonRoutedLink";
+import NonRoutedLink from "_primitives/non-routed-link/NonRoutedLink";
 import ResumeH3 from "_views/resume/ResumeH3";
 
 const ResumeDownload = () => (

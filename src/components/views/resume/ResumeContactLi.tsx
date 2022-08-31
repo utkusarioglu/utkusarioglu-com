@@ -3,7 +3,7 @@ import { COLORS } from "_constants";
 import { type ContactListItem } from "_types/resume.types";
 import ContentCardItem from "_views/content-card/ContentCardItem";
 import ResumeH3 from "./ResumeH3";
-import NonRoutedLink from "./NonRoutedLink";
+import NonRoutedLink from "_primitives/non-routed-link/NonRoutedLink";
 
 type ResumeContactLiProps = ContactListItem;
 
