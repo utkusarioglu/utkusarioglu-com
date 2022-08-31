@@ -6,7 +6,7 @@ import ResumeSkills from "_views/resume/ResumeSkills";
 import ResumeWorkExperienceLi from "_views/resume/ResumeWorkExperienceLi";
 import ResumeCertificationLi from "_views/resume/ResumeCertificationLi";
 import ResumeEducationLi from "_views/resume/ResumeEducationLi";
-import ResumeCardBackground from "_views/resume/ResumeCardBackground";
+import ContentCardBackground from "_views/resume/ContentCardBackground";
 import ResumeContactLi from "_views/resume/ResumeContactLi";
 import ResumeCardItem from "_views/resume/ResumeCardItem";
 import ResumeDownload from "_views/resume/ResumeDownload";
@@ -27,10 +27,10 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
 }) => (
   <div className="print:hidden">
     <ResumeIntroduction {...introduction} />
-    <ResumeCardBackground>
+    <ContentCardBackground>
       <ResumeSkills {...skills} />
-    </ResumeCardBackground>
-    <ResumeCardBackground>
+    </ContentCardBackground>
+    <ContentCardBackground>
       <ResumeSection
         {...relevantWorkExperience}
         listItemComponent={({ item }) => (
@@ -39,14 +39,14 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
           </ResumeCardItem>
         )}
       />
-    </ResumeCardBackground>
-    <ResumeCardBackground>
+    </ContentCardBackground>
+    <ContentCardBackground>
       <ResumeSection
         {...relevantCertifications}
         listItemComponent={({ item }) => <ResumeCertificationLi {...item} />}
       />
-    </ResumeCardBackground>
-    <ResumeCardBackground>
+    </ContentCardBackground>
+    <ContentCardBackground>
       <ResumeSection
         {...education}
         listItemComponent={({ item }) => (
@@ -55,13 +55,13 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
           </ResumeCardItem>
         )}
       />
-    </ResumeCardBackground>
-    <ResumeCardBackground>
+    </ContentCardBackground>
+    <ContentCardBackground>
       <ResumeSection
         {...contact}
         listItemComponent={({ item }) => <ResumeContactLi {...item} />}
       />
-    </ResumeCardBackground>
+    </ContentCardBackground>
     <ResumeDownload />
   </div>
 );

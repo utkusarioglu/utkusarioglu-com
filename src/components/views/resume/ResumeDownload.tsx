@@ -1,12 +1,12 @@
 import ResumeSection from "_views/resume/ResumeSection";
-import ResumeCardBackground from "_views/resume/ResumeCardBackground";
+import ContentCardBackground from "_views/resume/ContentCardBackground";
 import ResumeCardItem from "_views/resume/ResumeCardItem";
 import { COLORS } from "_constants";
 import NonRoutedLink from "_views/resume/NonRoutedLink";
 import ResumeH3 from "_views/resume/ResumeH3";
 
 const ResumeDownload = () => (
-  <ResumeCardBackground>
+  <ContentCardBackground>
     <ResumeSection
       title="Download Resume"
       list={[
@@ -32,7 +32,7 @@ const ResumeDownload = () => (
         </NonRoutedLink>
       )}
     />
-  </ResumeCardBackground>
+  </ContentCardBackground>
 );
 
 export default ResumeDownload;
