@@ -1,6 +1,5 @@
-import { type ReactNode } from "react";
+import { type PropsWithChildren } from "react";
 
-export interface SectionHelpProps {
-  children: ReactNode;
+export type SectionHelpProps = PropsWithChildren<{
   enabled: boolean;
-}
+}>;

@@ -1,11 +1,10 @@
-import { type FC, type ReactNode } from "react";
+import { type FC, type PropsWithChildren } from "react";
 import { COLORS } from "_constants";
 import c from "classnames";
 
-interface ParagraphProps {
-  children: ReactNode;
+type ParagraphProps = PropsWithChildren<{
   small?: boolean;
-}
+}>;
 
 const Paragraph: FC<ParagraphProps> = ({ children, small = false }) => {
   return (

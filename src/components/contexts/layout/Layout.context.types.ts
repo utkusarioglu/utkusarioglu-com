@@ -1,4 +1,4 @@
-import { type ReactNode } from "react";
+import { PropsWithChildren } from "react";
 import type {
   GetDims,
   EndZoom,
@@ -31,7 +31,6 @@ export type ILayoutContext = LayoutSlice & {
   setLayout: SetLayout;
 };
 
-export interface LayoutContextProviderProps {
-  children: ReactNode;
+export type LayoutContextProviderProps = PropsWithChildren<{
   route: string;
-}
+}>;

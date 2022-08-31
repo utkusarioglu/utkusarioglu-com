@@ -1,14 +1,14 @@
-import { type FC, type ReactNode } from "react";
+import { HTMLAttributes, type FC, type PropsWithChildren } from "react";
 import c from "classnames";
 
-interface VerticalMarginsLayoutProps {
-  children: ReactNode;
-  className?: string;
-}
+type VerticalMarginsLayoutProps = HTMLAttributes<HTMLDivElement>;
 
-const VerticalMarginsLayout: FC<VerticalMarginsLayoutProps> = ({
-  children,
-  className = "",
-}) => <div className={c("px-5", className)}>{children}</div>;
+const VerticalMarginsLayout: FC<
+  PropsWithChildren<VerticalMarginsLayoutProps>
+> = ({ children, className = "", ...rest }) => (
+  <div className={c("px-5", className)} {...rest}>
+    {children}
+  </div>
+);
 
 export default VerticalMarginsLayout;

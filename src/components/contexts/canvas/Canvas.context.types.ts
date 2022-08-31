@@ -1,4 +1,4 @@
-import { type ReactNode } from "react";
+import { type PropsWithChildren } from "react";
 import { Theme } from "_types/theme.types";
 import { MutableRefObject } from "react";
 import {
@@ -27,10 +27,9 @@ export type SetConfig = (config: PerlinConfig) => void;
 
 export type OnFinished = (drawerReturn: DrawPerlinReturn) => void;
 
-export interface CanvasContextProviderProps {
-  children: ReactNode;
+export type CanvasContextProviderProps = PropsWithChildren<{
   theme: Theme;
-}
+}>;
 
 export type InitializeDraw = (args: {
   onFinished: OnFinished;

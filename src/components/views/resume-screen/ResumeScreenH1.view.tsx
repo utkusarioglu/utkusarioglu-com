@@ -1,17 +1,15 @@
-import { type FC, type ReactNode } from "react";
+import { type FC, type PropsWithChildren, HTMLAttributes } from "react";
 import { COLORS } from "_constants";
 import c from "classnames";
 
-interface ResumeScreenH1ViewProps {
-  children: ReactNode;
-  className?: string;
-}
+type ResumeScreenH1ViewProps = HTMLAttributes<HTMLHeadingElement>;
 
-const ResumeScreenH1View: FC<ResumeScreenH1ViewProps> = ({
+const ResumeScreenH1View: FC<PropsWithChildren<ResumeScreenH1ViewProps>> = ({
   children,
   className,
+  ...rest
 }) => (
-  <h1 className={c(COLORS.paragraph, className, "text-3xl mb-10")}>
+  <h1 className={c(COLORS.paragraph, className, "text-3xl mb-10")} {...rest}>
     {children}
   </h1>
 );

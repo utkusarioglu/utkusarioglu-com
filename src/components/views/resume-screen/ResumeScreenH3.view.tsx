@@ -1,15 +1,13 @@
-import { type FC, type ReactNode } from "react";
+import { type FC, type PropsWithChildren, type HTMLAttributes } from "react";
 import { COLORS } from "_constants";
 import c from "classnames";
 
-interface ResumeScreenH3ViewProps {
-  children: ReactNode;
-  className?: string;
-}
+type ResumeScreenH3ViewProps = HTMLAttributes<HTMLHeadingElement>;
 
-const ResumeScreenH3View: FC<ResumeScreenH3ViewProps> = ({
+const ResumeScreenH3View: FC<PropsWithChildren<ResumeScreenH3ViewProps>> = ({
   children,
   className,
+  ...rest
 }) => (
   <h3
     className={c(
@@ -17,6 +15,7 @@ const ResumeScreenH3View: FC<ResumeScreenH3ViewProps> = ({
       "text-base font-bold mt-6 first:mt-0 mb-1",
       className
     )}
+    {...rest}
   >
     {children}
   </h3>

@@ -1,6 +1,5 @@
-import { type ReactNode } from "react";
+import { type PropsWithChildren } from "react";
 
-export type LabelProps = {
-  children: ReactNode;
+export type LabelProps = PropsWithChildren<{
   htmlFor: string;
-};
+}>;

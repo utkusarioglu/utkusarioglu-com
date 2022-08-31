@@ -1,12 +1,11 @@
-import type { FC, ReactNode } from "react";
+import { type FC, type PropsWithChildren } from "react";
 import Link from "next/link";
 import { COLORS } from "_constants";
 import c from "classnames";
 
-interface HyperlinkProps {
+type HyperlinkProps = PropsWithChildren<{
   href: string;
-  children: ReactNode;
-}
+}>;
 
 const Hyperlink: FC<HyperlinkProps> = ({ children, href }) => {
   return (
