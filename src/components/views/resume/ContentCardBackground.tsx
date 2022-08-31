@@ -3,12 +3,12 @@ import { COLORS } from "_constants";
 import { useDeviceQuery } from "_hooks/device/device.hook";
 import c from "classnames";
 
-interface ResumeCardBackground {
+interface ContentCardBackground {
   children: ReactNode;
   className?: string;
 }
 
-const ResumeCardBackground: FC<ResumeCardBackground> = ({
+const ContentCardBackground: FC<ContentCardBackground> = ({
   children,
   className,
 }) => {
@@ -28,4 +28,4 @@ const ResumeCardBackground: FC<ResumeCardBackground> = ({
     </div>
   );
 };
-export default ResumeCardBackground;
+export default ContentCardBackground;
