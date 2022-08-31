@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import ResumeScreenH3View from "./ResumeScreenH3.view";
+import H3 from "_primitives/headings/H3.primitive";
 import { type Education } from "_types/resume.types";
 import ResumeScreenTableView from "./ResumeScreenTable.view";
 
@@ -13,7 +13,7 @@ const ResumeScreenEducationLiView: FC<ResumeScreenEducationLiViewProps> = ({
   finish,
 }) => (
   <div key={title}>
-    <ResumeScreenH3View>{title}</ResumeScreenH3View>
+    <H3>{title}</H3>
     <ResumeScreenTableView
       table={{
         Institution: institution,

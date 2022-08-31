@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import { type Resume } from "_types/resume.types";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
-import ResumeScreenH2View from "./ResumeScreenH2.view";
+import H2 from "_primitives/headings/H2.primitive";
 import ResumeScreenSkillSectionLiView from "./ResumeScreenSkillsSectionLi.view";
 import ResumeScreenSkillSectionView from "./ResumeScreenSkillsSection.view";
 
@@ -12,7 +12,7 @@ const ResumeScreenSkillsView: FC<ResumeScreenSkillsViewProps> = ({
   map,
 }) => (
   <div>
-    <ResumeScreenH2View className="px-5">{title}</ResumeScreenH2View>
+    <H2 className="px-5">{title}</H2>
     <div>
       {Object.values(map).map((section) => (
         <ContentCardItemLayout key={section.title}>

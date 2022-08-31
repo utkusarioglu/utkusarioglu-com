@@ -2,9 +2,9 @@ import { type FC, type PropsWithChildren, type HTMLAttributes } from "react";
 import { COLORS } from "_constants";
 import c from "classnames";
 
-type ResumeScreenH3ViewProps = HTMLAttributes<HTMLHeadingElement>;
+type H3Props = HTMLAttributes<HTMLHeadingElement>;
 
-const ResumeScreenH3View: FC<PropsWithChildren<ResumeScreenH3ViewProps>> = ({
+const H3: FC<PropsWithChildren<H3Props>> = ({
   children,
   className,
   ...rest
@@ -21,4 +21,4 @@ const ResumeScreenH3View: FC<PropsWithChildren<ResumeScreenH3ViewProps>> = ({
   </h3>
 );
 
-export default ResumeScreenH3View;
+export default H3;

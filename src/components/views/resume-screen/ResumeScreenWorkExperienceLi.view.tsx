@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import ResumeScreenH3View from "./ResumeScreenH3.view";
+import H3 from "_primitives/headings/H3.primitive";
 import { type WorkExperience } from "_types/resume.types";
 import ResumeScreenTableView from "./ResumeScreenTable.view";
 import ContentCardParagraphView from "_views/content-card/ContentCardParagraph.view";
@@ -11,7 +11,7 @@ const ResumeScreenWorkExperienceLiView: FC<
 > = ({ companyName, location, title, start, finish, remarks }) => {
   return (
     <div>
-      <ResumeScreenH3View>{title}</ResumeScreenH3View>
+      <H3>{title}</H3>
       <ResumeScreenTableView
         table={{
           Company: companyName,
