@@ -1,24 +1,19 @@
 import { type FC } from "react";
 import { COLORS } from "_constants";
-import ResumeH3 from "./ResumeH3";
+import ResumeScreenH3View from "./ResumeScreenH3.view";
 import { type WorkExperience } from "_types/resume.types";
-import ResumeTable from "./ResumeTable";
+import ResumeScreenTableView from "./ResumeScreenTable.view";
 import c from "classnames";
 
-type ResumeWorkExperienceLiProps = WorkExperience;
+type ResumeScreenWorkExperienceLiViewProps = WorkExperience;
 
-const ResumeWorkExperienceLi: FC<ResumeWorkExperienceLiProps> = ({
-  companyName,
-  location,
-  title,
-  start,
-  finish,
-  remarks,
-}) => {
+const ResumeScreenWorkExperienceLiView: FC<
+  ResumeScreenWorkExperienceLiViewProps
+> = ({ companyName, location, title, start, finish, remarks }) => {
   return (
     <div>
-      <ResumeH3>{title}</ResumeH3>
-      <ResumeTable
+      <ResumeScreenH3View>{title}</ResumeScreenH3View>
+      <ResumeScreenTableView
         table={{
           Company: companyName,
           Location: location,
@@ -35,4 +30,4 @@ const ResumeWorkExperienceLi: FC<ResumeWorkExperienceLiProps> = ({
   );
 };
 
-export default ResumeWorkExperienceLi;
+export default ResumeScreenWorkExperienceLiView;

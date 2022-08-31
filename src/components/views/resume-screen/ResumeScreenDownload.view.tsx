@@ -1,13 +1,13 @@
-import ResumeSection from "_views/resume-screen/ResumeSection";
+import ResumeScreenSectionView from "_views/resume-screen/ResumeScreenSection.view";
 import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import { COLORS } from "_constants";
 import NonRoutedLink from "_primitives/non-routed-link/NonRoutedLink";
-import ResumeH3 from "./ResumeH3";
+import ResumeScreenH3View from "./ResumeScreenH3.view";
 
-const ResumeDownload = () => (
+const ResumeScreenDownloadView = () => (
   <ContentCardBackgroundLayout>
-    <ResumeSection
+    <ResumeScreenSectionView
       title="Download Resume"
       list={[
         {
@@ -26,7 +26,9 @@ const ResumeDownload = () => (
           href={`/_next/static/resume/${folder}/utku-sarioglu-resume.pdf`}
         >
           <ContentCardItemLayout>
-            <ResumeH3 className={COLORS.paragraph}>{title}</ResumeH3>
+            <ResumeScreenH3View className={COLORS.paragraph}>
+              {title}
+            </ResumeScreenH3View>
             <div className={COLORS.paragraph}>{remarks}</div>
           </ContentCardItemLayout>
         </NonRoutedLink>
@@ -35,4 +37,4 @@ const ResumeDownload = () => (
   </ContentCardBackgroundLayout>
 );
 
-export default ResumeDownload;
+export default ResumeScreenDownloadView;

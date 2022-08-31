@@ -2,18 +2,15 @@ import { type FC } from "react";
 import { COLORS } from "_constants";
 import { Skill } from "_types/resume.types";
 
-type ResumeSkillSectionLiProps = Skill;
+type ResumeScreenSkillSectionLiViewProps = Skill;
 
-const ResumeSkillSectionLi: FC<ResumeSkillSectionLiProps> = ({
-  name,
-  remarks,
-  confident,
-  print,
-}) => (
+const ResumeScreenSkillSectionLiView: FC<
+  ResumeScreenSkillSectionLiViewProps
+> = ({ name, remarks, confident, print }) => (
   <li className={COLORS.paragraph}>
     {name}
     {confident === false && "*"} {remarks && `(${remarks})`}
   </li>
 );
 
-export default ResumeSkillSectionLi;
+export default ResumeScreenSkillSectionLiView;

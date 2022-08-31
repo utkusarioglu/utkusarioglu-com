@@ -1,14 +1,16 @@
 import { type FC } from "react";
 import { COLORS } from "_constants";
-import ResumeH3 from "./ResumeH3";
+import ResumeScreenH3View from "./ResumeScreenH3.view";
 import { type Certification } from "_types/resume.types";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import NonRoutedLink from "_primitives/non-routed-link/NonRoutedLink";
 import c from "classnames";
 
-type ResumeCertificationLiProps = Certification;
+type ResumeScreenCertificationLiViewProps = Certification;
 
-const ResumeCertificationLi: FC<ResumeCertificationLiProps> = ({
+const ResumeScreenCertificationLiView: FC<
+  ResumeScreenCertificationLiViewProps
+> = ({
   course,
   institution,
   instructor,
@@ -18,7 +20,7 @@ const ResumeCertificationLi: FC<ResumeCertificationLiProps> = ({
 }) => {
   const Content = () => (
     <ContentCardItemLayout>
-      <ResumeH3>{course}</ResumeH3>
+      <ResumeScreenH3View>{course}</ResumeScreenH3View>
       <div className="flex justify-between">
         <span className={COLORS.paragraph}>
           {instructor && `${instructor} @ `}
@@ -40,4 +42,4 @@ const ResumeCertificationLi: FC<ResumeCertificationLiProps> = ({
   return <Content />;
 };
 
-export default ResumeCertificationLi;
+export default ResumeScreenCertificationLiView;

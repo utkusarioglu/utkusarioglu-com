@@ -1,15 +1,15 @@
 import { type FC } from "react";
 import { type Resume } from "_types/resume.types";
-import ResumeIntroduction from "_views/resume-screen/ResumeIntroduction";
-import ResumeSection from "_views/resume-screen/ResumeSection";
-import ResumeSkills from "_views/resume-screen/ResumeSkills";
-import ResumeWorkExperienceLi from "_views/resume-screen/ResumeWorkExperienceLi";
-import ResumeCertificationLi from "_views/resume-screen/ResumeCertificationLi";
-import ResumeEducationLi from "_views/resume-screen/ResumeEducationLi";
+import ResumeIntroduction from "_views/resume-screen/ResumeScreenIntroduction.view";
+import ResumeSection from "_views/resume-screen/ResumeScreenSection.view";
+import ResumeSkills from "_views/resume-screen/ResumeScreenSkills.view";
+import ResumeWorkExperienceLi from "_views/resume-screen/ResumeScreenWorkExperienceLi.view";
+import ResumeCertificationLi from "_views/resume-screen/ResumeScreenCertificationLi.view";
+import ResumeEducationLi from "_views/resume-screen/ResumeScreenEducationLi.view";
 import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
-import ResumeContactLi from "_views/resume-screen/ResumeContactLi";
+import ResumeContactLi from "_views/resume-screen/ResumeScreenContactLi.view";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
-import ResumeDownload from "_views/resume-screen/ResumeDownload";
+import ResumeDownload from "_views/resume-screen/ResumeScreenDownload.view";
 
 export interface ResumeScreenLayoutProps {
   resume: Resume;

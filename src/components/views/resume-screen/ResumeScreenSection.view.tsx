@@ -1,21 +1,21 @@
 import { type FC } from "react";
 import { type Section } from "_types/resume.types";
-import ResumeH2 from "./ResumeH2";
+import ResumeScreenH2View from "./ResumeScreenH2.view";
 
-type ResumeSectionProps<T> = Section<T> & {
+type ResumeScreenSectionViewProps<T> = Section<T> & {
   listItemComponent: FC<T>;
   className?: string;
 };
 
 // TODO remove `any`
-const ResumeSection: FC<ResumeSectionProps<any>> = ({
+const ResumeScreenSectionView: FC<ResumeScreenSectionViewProps<any>> = ({
   title,
   list,
   listItemComponent: ListItem,
   className,
 }) => (
   <div className={className}>
-    <ResumeH2 className="px-5">{title}</ResumeH2>
+    <ResumeScreenH2View className="px-5">{title}</ResumeScreenH2View>
     <ul>
       {list.map((item) => (
         // TODO this `key` wont' do
@@ -25,4 +25,4 @@ const ResumeSection: FC<ResumeSectionProps<any>> = ({
   </div>
 );
 
-export default ResumeSection;
+export default ResumeScreenSectionView;
