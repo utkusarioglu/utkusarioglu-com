@@ -6,9 +6,9 @@ import ResumeSkills from "_views/resume/ResumeSkills";
 import ResumeWorkExperienceLi from "_views/resume/ResumeWorkExperienceLi";
 import ResumeCertificationLi from "_views/resume/ResumeCertificationLi";
 import ResumeEducationLi from "_views/resume/ResumeEducationLi";
-import ContentCardBackground from "_views/resume/ContentCardBackground";
+import ContentCardBackground from "_views/content-card/ContentCardBackground";
 import ResumeContactLi from "_views/resume/ResumeContactLi";
-import ContentCardItem from "_views/resume/ContentCardItem";
+import ContentCardItem from "_views/content-card/ContentCardItem";
 import ResumeDownload from "_views/resume/ResumeDownload";
 
 export interface ResumeScreenLayoutProps {

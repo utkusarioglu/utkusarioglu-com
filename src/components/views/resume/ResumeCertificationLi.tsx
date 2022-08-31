@@ -2,7 +2,7 @@ import { type FC } from "react";
 import { COLORS } from "_constants";
 import ResumeH3 from "./ResumeH3";
 import { type Certification } from "_types/resume.types";
-import ContentCardItem from "./ContentCardItem";
+import ContentCardItem from "_views/content-card/ContentCardItem";
 import NonRoutedLink from "./NonRoutedLink";
 import c from "classnames";
 

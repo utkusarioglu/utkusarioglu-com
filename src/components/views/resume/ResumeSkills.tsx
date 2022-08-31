@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import { type Resume } from "_types/resume.types";
-import ContentCardItem from "./ContentCardItem";
+import ContentCardItem from "_views/content-card/ContentCardItem";
 import ResumeH2 from "./ResumeH2";
 import ResumeSkillSectionLi from "./ResumeSkillsSectionLi";
 import ResumeSkillSection from "./ResumeSkillsSection";
