@@ -32,8 +32,9 @@ const App: FC<AppProps> = ({ Component, pageProps, router }) => {
 
   if (
     window.location.pathname !== router.route &&
-    ROUTE_PROPS.filter(({ href }) => window.location.pathname === href)
-      .length === 1
+    ROUTE_PROPS.filter(({ href }) =>
+      [href, `${href}/`].includes(window.location.pathname)
+    ).length === 1
   ) {
     router.replace(window.location.pathname);
     return null;
