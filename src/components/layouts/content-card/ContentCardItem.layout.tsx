@@ -10,7 +10,7 @@ const ContentCardItemLayout: FC<
   <div
     className={c(
       COLORS.canvasControlInput,
-      "px-5 py-3 mb-3 last:mb-0 rounded-lg"
+      "px-5 py-4 mb-3 last:mb-0 rounded-lg"
     )}
   >
     {children}
