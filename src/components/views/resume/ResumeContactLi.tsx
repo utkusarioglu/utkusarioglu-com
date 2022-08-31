@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import { COLORS } from "_constants";
 import { type ContactListItem } from "_types/resume.types";
-import ContentCardItem from "./ContentCardItem";
+import ContentCardItem from "_views/content-card/ContentCardItem";
 import ResumeH3 from "./ResumeH3";
 import NonRoutedLink from "./NonRoutedLink";
 
