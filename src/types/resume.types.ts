@@ -1,5 +1,6 @@
 export type Section<ListType> = {
   title: string;
+  remarks?: string[];
   list: ListType[];
   print?: boolean;
 };
