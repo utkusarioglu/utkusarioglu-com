@@ -1,9 +1,8 @@
 import { type FC } from "react";
-import { COLORS } from "_constants";
 import ResumeScreenH3View from "./ResumeScreenH3.view";
 import { type WorkExperience } from "_types/resume.types";
 import ResumeScreenTableView from "./ResumeScreenTable.view";
-import c from "classnames";
+import ContentCardParagraphView from "_views/content-card/ContentCardParagraph.view";
 
 type ResumeScreenWorkExperienceLiViewProps = WorkExperience;
 
@@ -22,9 +21,9 @@ const ResumeScreenWorkExperienceLiView: FC<
         }}
       />
       {remarks.map((paragraph) => (
-        <p key={paragraph} className={c(COLORS.paragraph, "mb-3 last:mb-0")}>
+        <ContentCardParagraphView key={paragraph}>
           {paragraph}
-        </p>
+        </ContentCardParagraphView>
       ))}
     </div>
   );
