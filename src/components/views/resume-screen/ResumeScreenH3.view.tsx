@@ -12,7 +12,7 @@ const ResumeScreenH3View: FC<PropsWithChildren<ResumeScreenH3ViewProps>> = ({
   <h3
     className={c(
       COLORS.paragraph,
-      "text-base font-bold mt-6 first:mt-0 mb-1",
+      "text-base font-bold mt-6 first:mt-0 mb-2",
       className
     )}
     {...rest}
