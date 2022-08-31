@@ -2,42 +2,91 @@ import { type FC } from "react";
 import ContentLayout from "_layouts/content/Content.layout";
 import EnhancedImage from "_primitives/enhanced-image/EnhancedImage.primitive";
 import Paragraph from "_primitives/paragraph/Paragraph.primitive";
-import Hyperlink from "_primitives/hyperlink/Hyperlink.primitive";
-import { MAX_W_PROSE } from "_constants";
+import { readFileSync } from "fs";
+import { parse } from "yaml";
+import { COLORS, MAX_W_PROSE } from "_constants";
+import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
+import ResumeScreenH3View from "_views/resume-screen/ResumeScreenH3.view";
+import VerticalMarginsLayout from "_layouts/vertical-margins/VerticalMargins.layout";
+import ResumeScreenSectionView from "_views/resume-screen/ResumeScreenSection.view";
+import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
+import ContentCardParagraphView from "_views/content-card/ContentCardParagraph.view";
+import ContentCardLinkView from "_views/content-card/ContentCardLink.view";
+import { type Section } from "_types/resume.types";
 
-const content = [
-  "Quisque at enim suscipit, luctus felis sed, vehicula risus. Fusce sit amet diam consequat, viverra quam in, consectetur mi. Praesent lectus elit, convallis non metus et, sodales feugiat sapien. Donec neque urna, rutrum at risus a, malesuada tempus ex. Mauris ultrices massa sem, pretium tincidunt risus finibus eu. Aliquam erat volutpat. Nullam pharetra lacus eget fermentum congue. In hac habitasse platea dictumst. Sed venenatis nibh non quam ultricies gravida. Ut porta, dolor eget fermentum porta, massa diam posuere ante, in consequat ligula turpis et eros. Curabitur scelerisque tellus in sem iaculis accumsan. Vestibulum viverra nunc auctor semper lacinia. Nulla facilisi. Donec sed enim molestie, tempus justo in, ornare ex. Nulla faucibus tortor a nulla sodales, in pellentesque nisl ornare. ",
-];
+interface MusingsListItem {
+  title: string;
+  href: string; // url
+  remarks: string[];
+}
 
-interface AboutPageProps {}
+interface MusingsPageProps {
+  musings: {
+    remarks: string[];
+    sections: Section<MusingsListItem>[];
+  };
+}
 
-const AboutPage: FC<AboutPageProps> = () => {
+export function getStaticProps() {
+  const musings = parse(
+    readFileSync("assets/musings.yml", { encoding: "UTF-8" })
+  ) as any;
+
+  return {
+    props: {
+      musings,
+    },
+  };
+}
+
+const AboutPage: FC<MusingsPageProps> = ({
+  musings: { sections, remarks },
+}) => {
   return (
-    <ContentLayout>
-      <EnhancedImage
-        className="rounded-md"
-        alt="Musings title image"
-        credits="photo by Utku Sarioglu"
-        src={require("_assets/images/old-ship.jpg")}
-        maxResponsiveWidth={MAX_W_PROSE}
-      />
-      <Paragraph>
-        Click here for the
-        <Hyperlink href="/musings/artsy">Artsy Fartsy</Hyperlink>
-        content!1!!
-      </Paragraph>
-      <Paragraph>
-        This goes to the{" "}
-        <Hyperlink href="/musings/paper-chain">Paper Chain</Hyperlink> a project
-        in collaboration with Bossonica
-      </Paragraph>
-      <Paragraph>
-        Amazing
-        <Hyperlink href="/musings/kamyon">Trucker jokes</Hyperlink>
-        but they are in Turkish
-      </Paragraph>
-      {content.map((paragraph) => (
-        <Paragraph key={paragraph}>{paragraph}</Paragraph>
+    <ContentLayout verticalMargins={false}>
+      <VerticalMarginsLayout>
+        <EnhancedImage
+          className="rounded-md"
+          alt="Musings title image"
+          credits="photo by Utku Sarioglu"
+          src={require("_assets/images/old-ship.jpg")}
+          maxResponsiveWidth={MAX_W_PROSE}
+        />
+        <div className="mb-6">
+          {remarks.map((paragraph) => (
+            <Paragraph key={paragraph}>{paragraph}</Paragraph>
+          ))}
+        </div>
+      </VerticalMarginsLayout>
+
+      {sections.map((section) => (
+        <ContentCardBackgroundLayout key={section.title}>
+          <ResumeScreenSectionView
+            {...section}
+            listItemComponent={({
+              item: { title, subtitle, remarks, href },
+            }) => (
+              <ContentCardLinkView href={href}>
+                <ContentCardItemLayout>
+                  <ResumeScreenH3View>
+                    {title}
+                    {subtitle && (
+                      <span className={COLORS.secondaryText}>
+                        {" "}
+                        ({subtitle})
+                      </span>
+                    )}
+                  </ResumeScreenH3View>
+                  {remarks.map((paragraph) => (
+                    <ContentCardParagraphView key={paragraph}>
+                      {paragraph}
+                    </ContentCardParagraphView>
+                  ))}
+                </ContentCardItemLayout>
+              </ContentCardLinkView>
+            )}
+          />
+        </ContentCardBackgroundLayout>
       ))}
     </ContentLayout>
   );
