@@ -3,12 +3,12 @@ import { COLORS } from "_constants";
 import { useDeviceQuery } from "_hooks/device/device.hook";
 import c from "classnames";
 
-interface ContentCardBackground {
+interface ContentCardBackgroundLayoutProps {
   children: ReactNode;
   className?: string;
 }
 
-const ContentCardBackground: FC<ContentCardBackground> = ({
+const ContentCardBackgroundLayout: FC<ContentCardBackgroundLayoutProps> = ({
   children,
   className,
 }) => {
@@ -28,4 +28,4 @@ const ContentCardBackground: FC<ContentCardBackground> = ({
     </div>
   );
 };
-export default ContentCardBackground;
+export default ContentCardBackgroundLayout;

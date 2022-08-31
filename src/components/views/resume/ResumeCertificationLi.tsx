@@ -2,7 +2,7 @@ import { type FC } from "react";
 import { COLORS } from "_constants";
 import ResumeH3 from "./ResumeH3";
 import { type Certification } from "_types/resume.types";
-import ContentCardItem from "_views/content-card/ContentCardItem";
+import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import NonRoutedLink from "_primitives/non-routed-link/NonRoutedLink";
 import c from "classnames";
 
@@ -17,7 +17,7 @@ const ResumeCertificationLi: FC<ResumeCertificationLiProps> = ({
   print,
 }) => {
   const Content = () => (
-    <ContentCardItem>
+    <ContentCardItemLayout>
       <ResumeH3>{course}</ResumeH3>
       <div className="flex justify-between">
         <span className={COLORS.paragraph}>
@@ -26,7 +26,7 @@ const ResumeCertificationLi: FC<ResumeCertificationLiProps> = ({
         </span>
         <span className={c(COLORS.secondaryText)}>{certificateId}</span>
       </div>
-    </ContentCardItem>
+    </ContentCardItemLayout>
   );
 
   if (certificateUrl) {

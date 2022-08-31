@@ -2,11 +2,13 @@ import { type FC, type ReactNode } from "react";
 import { COLORS } from "_constants";
 import c from "classnames";
 
-interface ContentCardItemProps {
+interface ContentCardItemLayoutProps {
   children: ReactNode;
 }
 
-const ContentCardItem: FC<ContentCardItemProps> = ({ children }) => (
+const ContentCardItemLayout: FC<ContentCardItemLayoutProps> = ({
+  children,
+}) => (
   <div
     className={c(
       COLORS.canvasControlInput,
@@ -17,4 +19,4 @@ const ContentCardItem: FC<ContentCardItemProps> = ({ children }) => (
   </div>
 );
 
-export default ContentCardItem;
+export default ContentCardItemLayout;

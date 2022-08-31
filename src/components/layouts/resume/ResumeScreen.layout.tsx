@@ -6,9 +6,9 @@ import ResumeSkills from "_views/resume/ResumeSkills";
 import ResumeWorkExperienceLi from "_views/resume/ResumeWorkExperienceLi";
 import ResumeCertificationLi from "_views/resume/ResumeCertificationLi";
 import ResumeEducationLi from "_views/resume/ResumeEducationLi";
-import ContentCardBackground from "_views/content-card/ContentCardBackground";
+import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
 import ResumeContactLi from "_views/resume/ResumeContactLi";
-import ContentCardItem from "_views/content-card/ContentCardItem";
+import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import ResumeDownload from "_views/resume/ResumeDownload";
 
 export interface ResumeScreenLayoutProps {
@@ -27,41 +27,41 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
 }) => (
   <div className="print:hidden">
     <ResumeIntroduction {...introduction} />
-    <ContentCardBackground>
+    <ContentCardBackgroundLayout>
       <ResumeSkills {...skills} />
-    </ContentCardBackground>
-    <ContentCardBackground>
+    </ContentCardBackgroundLayout>
+    <ContentCardBackgroundLayout>
       <ResumeSection
         {...relevantWorkExperience}
         listItemComponent={({ item }) => (
-          <ContentCardItem>
+          <ContentCardItemLayout>
             <ResumeWorkExperienceLi {...item} />
-          </ContentCardItem>
+          </ContentCardItemLayout>
         )}
       />
-    </ContentCardBackground>
-    <ContentCardBackground>
+    </ContentCardBackgroundLayout>
+    <ContentCardBackgroundLayout>
       <ResumeSection
         {...relevantCertifications}
         listItemComponent={({ item }) => <ResumeCertificationLi {...item} />}
       />
-    </ContentCardBackground>
-    <ContentCardBackground>
+    </ContentCardBackgroundLayout>
+    <ContentCardBackgroundLayout>
       <ResumeSection
         {...education}
         listItemComponent={({ item }) => (
-          <ContentCardItem>
+          <ContentCardItemLayout>
             <ResumeEducationLi {...item} />
-          </ContentCardItem>
+          </ContentCardItemLayout>
         )}
       />
-    </ContentCardBackground>
-    <ContentCardBackground>
+    </ContentCardBackgroundLayout>
+    <ContentCardBackgroundLayout>
       <ResumeSection
         {...contact}
         listItemComponent={({ item }) => <ResumeContactLi {...item} />}
       />
-    </ContentCardBackground>
+    </ContentCardBackgroundLayout>
     <ResumeDownload />
   </div>
 );
