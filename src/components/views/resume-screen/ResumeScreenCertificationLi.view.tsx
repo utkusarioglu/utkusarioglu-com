@@ -3,7 +3,7 @@ import { COLORS } from "_constants";
 import ResumeScreenH3View from "./ResumeScreenH3.view";
 import { type Certification } from "_types/resume.types";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
-import NonRoutedLink from "_primitives/non-routed-link/NonRoutedLink";
+import ContentCardLinkView from "_views/content-card/ContentCardLink.view";
 import c from "classnames";
 
 type ResumeScreenCertificationLiViewProps = Certification;
@@ -33,9 +33,9 @@ const ResumeScreenCertificationLiView: FC<
 
   if (certificateUrl) {
     return (
-      <NonRoutedLink href={certificateUrl}>
+      <ContentCardLinkView href={certificateUrl}>
         <Content />
-      </NonRoutedLink>
+      </ContentCardLinkView>
     );
   }
 
