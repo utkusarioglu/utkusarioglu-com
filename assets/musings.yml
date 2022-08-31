@@ -1,0 +1,169 @@
+remarks: 
+  - |
+    Some small (and big) projects that I carry out in my spare time
+sections:
+  - title: Amusement Projects
+    remarks: 
+      - |
+        Small projects that are meant to test some ideas, or just to have fun
+    list:
+      - title: Artsy Fartsy
+        href: /musings/artsy
+        remarks: 
+          - |
+            SVG based drawing for souls that stopped drawing after they were 5.
+      - title: Paper Chain
+        href: /musings/paper-chain
+        remarks:
+          - |
+            A project pioneered by Bossonica, which started as an attempt to 
+            choose a single word everyday to add to "paper chain".
+          - |
+            However, it quickly grew into this Twitter-like feed. I'm not sure 
+            why I post on this instead of Twitter itself.
+      - title: Trucker Jokes
+        subtitle: in Turkish
+        href: /musings/kamyon
+        remarks:
+          - |
+            A collaboration with Ennuriye in aim of gathering amusing and insightful examples of what is colloquially called "trucker jokes" in Turkey. 
+
+  - title: Container Templates
+    remarks:
+      - |
+        It's very rare that I develop anything outside of a container. This such
+        a regular thing for me that until Devcontainers CLI came out, I didn't 
+        have NodeJS installed on my development machine.
+      - |
+        The repos listed here build the environment for almost all the code I
+        write. As a matter of principle are all CI&CD based, properly tested and
+        documented.
+    list:
+      - title: C Containers
+        href: https://www.github.com/utkusarioglu/c-containers
+        remarks: 
+          - |
+            Emscripten - Conan containers that I use for working on lower-level 
+            concepts and some web-based graphical computing.
+      - title: Ethereum Containers
+        href: https://www.github.com/utkusarioglu/ethereum-containers
+        remarks: 
+          - |
+            While I do not think that Web3 will completely replace Web2,
+            I do believe that it will hold a very important place in the world
+            of tomorrow. I usually base my ethereum ecosystem related workshops
+            on the containers created by this repo.
+      - title: Node Containers
+        href: https://www.github.com/utkusarioglu/node-containers
+        remarks:
+          - |
+            Usually the workhorse of my stack, Node containers this repo
+            creates ends up being used in most of my personal CS projects.
+      - title: PlantUML Containers
+        href: https://www.github.com/utkusarioglu/plantuml-containers
+        remarks: 
+          - |
+            There is one thing linguists do that I like a lot: through the 
+            virtue of their subject, they have to create very stringent definitions
+            for the concepts that they have to work with. I see application and
+            system design the same way. I use containers that are created by this
+            repo to work on these aspects of my coding journey.
+      - title: Python Containers
+        href: https://www.github.com/utkusarioglu/python-containers
+        remarks: 
+          - |
+            Python is my language of choice for my non-CS based interests. While
+            it's hard to choose a chief among them; currently this repo provides
+            me containers for my economics, music and mathematics related 
+            workshops.
+      - title: React Native Containers
+        href: https://www.github.com/utkusarioglu/react-native-containers
+        remarks:
+          - |
+            The newest addition to this list - These containers help me 
+            work on prototyping work I do with React Native projects.
+
+  - title: Repo Templates
+    remarks: 
+      - |
+        I treat repos the way clusters treat containers: they are ephemeral to me.
+      - |
+        Some of my go-to templates are listed here. I usually think about how
+        to improve these templates while I'm working on the workshops that are 
+        based on them.
+    list:
+      - title: Conda Econ Repo Template
+        href: https://www.github.com/utkusarioglu/conda-econ-repo-template
+        remarks: 
+          - |
+            Despite most of my life now revolving around coding, I'm actually
+            an economics grad. Before my current life, I did do a lot based on 
+            the wisdom I have gained through my education. This repo is usually
+            the coding template counterpart of all the econ things I think about 
+            and execute.
+      - title: Conda Math Repo Template
+        href: https://www.github.com/utkusarioglu/conda-math-repo-template
+        remarks:
+          - |
+            Since highschool, math has held a very important place in my mind I 
+            was convinced that we live in a deterministic universe that could 
+            securely be represented by mathematical arguments.
+          - |
+            As time passed and I learned more about Gödel et al, my opinions 
+            on the subject changed. But I still find comfort in the notion that
+            we have tool that is unreasonably effective in explaining nature and
+            itself. I wish to be close to it as much as my time allows.
+          - | 
+            This template repo is the basis for all my math journeys that 
+            can be carried out with a computer.
+      - title: Conda Music Repo Template
+        href: https://www.github.com/utkusarioglu/conda-music-repo-template
+        remarks:
+          - |
+            I tried to make it as a musician earlier in my life. It ultimately
+            failed because I was more concerned with technical and theoretical
+            aspects of music rather than the theatrics or even the delivery.
+          - |
+            In my past I spent quite some time working on theoretical aspects
+            of pitch, rhythm, composition, orchestration, whatever else you can
+            think of that relates to music. I remember the day I found out about
+            Bohlen-Pierce scale or Diana Deutsch's work.
+          - |
+            I use this repo template to work on my musical inquiries and 
+            occasionally compose. 
+      - title: Diagram Repo Template
+        href: https://www.github.com/utkusarioglu/diagram-repo-template
+        remarks:
+          - |
+            I have a visual mind. Even with very abstract ideas such as 
+            democracy, I have some kind of visual that is guiding my 
+            thoughts. 
+          - |
+            Unsurprisingly, I have a very strong urge to represent my 
+            processes and designs with easily parseable diagrams. This 
+            template repo helps me improve myself on this aspect of my 
+            work.
+      - title: Emscripten Conan Repo Template
+        href: https://www.github.com/utkusarioglu/emscripten-conan-repo-template
+        remarks:
+          - |
+            I got interested in lower-level CS concepts after I found out that
+            despite the common wisdom that Solidity resembles Javascript, it is
+            actually closer to C and C++ in thinking and the kinds of mess you 
+            can create.
+          - |
+            This repo template came out of my interest in bundling my C++ work
+            with web. I usually use this template for my C++ workshops.
+      - title: Hardhat Repo Template
+        href: https://www.github.com/utkusarioglu/hardhat-repo-template
+        remarks:
+          - |
+            My Web3 work usually revolves around Hardhat - and increasingly
+            Python related analysis tools such as Manticore, Echidna and 
+            Slither. 
+          - |
+            Needless to say, the boilerplate that goes along with so many
+            tools bundled up together is quite a hassle. This template repo
+            helps me forget about all of that and work on my quest in
+            trying to reestablish some kind of trust in society.
+            
