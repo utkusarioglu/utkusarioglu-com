@@ -2,7 +2,7 @@ import ResumeScreenSectionView from "_views/resume-screen/ResumeScreenSection.vi
 import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import { COLORS } from "_constants";
-import NonRoutedLink from "_primitives/non-routed-link/NonRoutedLink";
+import ContentCardLinkView from "_views/content-card/ContentCardLink.view";
 import ResumeScreenH3View from "./ResumeScreenH3.view";
 
 const ResumeScreenDownloadView = () => (
@@ -22,7 +22,7 @@ const ResumeScreenDownloadView = () => (
         },
       ]}
       listItemComponent={({ item: { title, folder, remarks } }) => (
-        <NonRoutedLink
+        <ContentCardLinkView
           href={`/_next/static/resume/${folder}/utku-sarioglu-resume.pdf`}
         >
           <ContentCardItemLayout>
@@ -31,7 +31,7 @@ const ResumeScreenDownloadView = () => (
             </ResumeScreenH3View>
             <div className={COLORS.paragraph}>{remarks}</div>
           </ContentCardItemLayout>
-        </NonRoutedLink>
+        </ContentCardLinkView>
       )}
     />
   </ContentCardBackgroundLayout>

@@ -3,7 +3,7 @@ import { COLORS } from "_constants";
 import { type ContactListItem } from "_types/resume.types";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import ResumeScreenH3View from "./ResumeScreenH3.view";
-import NonRoutedLink from "_primitives/non-routed-link/NonRoutedLink";
+import ContentCardLinkView from "_views/content-card/ContentCardLink.view";
 
 type ResumeScreenContactLiViewProps = ContactListItem;
 
@@ -15,7 +15,7 @@ const ResumeScreenContactLiView: FC<ResumeScreenContactLiViewProps> = ({
   handle,
 }) =>
   screen === false ? null : (
-    <NonRoutedLink href={value}>
+    <ContentCardLinkView href={value}>
       <ContentCardItemLayout>
         <ResumeScreenH3View>{title}</ResumeScreenH3View>
         <div className="flex justify-between">
@@ -23,7 +23,7 @@ const ResumeScreenContactLiView: FC<ResumeScreenContactLiViewProps> = ({
           <span className={COLORS.secondaryText}>{handle}</span>
         </div>
       </ContentCardItemLayout>
-    </NonRoutedLink>
+    </ContentCardLinkView>
   );
 
 export default ResumeScreenContactLiView;
