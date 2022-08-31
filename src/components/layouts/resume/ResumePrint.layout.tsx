@@ -6,9 +6,9 @@ import {
   DOMAIN,
   RESUME_PRINT_Y_GAP_CLASS,
 } from "_constants";
-import ResumePrintH1 from "_views/resume-print/ResumePrintH1";
-import ResumePrintH2 from "_views/resume-print/ResumePrintH2";
-import ResumePrintH3 from "_views/resume-print/ResumePrintH3";
+import ResumePrintH1View from "_views/resume-print/ResumePrintH1.view";
+import ResumePrintH2View from "_views/resume-print/ResumePrintH2.view";
+import ResumePrintH3View from "_views/resume-print/ResumePrintH3.view";
 import c from "classnames";
 
 export interface ResumeLayoutProps {
@@ -40,9 +40,9 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
           "grid grid-cols-resume grid-rows-resume gap-x-5"
         )}
       >
-        <ResumePrintH1 className="col-start-1 row-start-1">
+        <ResumePrintH1View className="col-start-1 row-start-1">
           {name}
-        </ResumePrintH1>
+        </ResumePrintH1View>
         <div className="col-start-2 row-start-1 text-right">
           {contact.list
             .filter(({ print }) => print !== false)
@@ -69,9 +69,9 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
           )}
         >
           <div>
-            <ResumePrintH2>
+            <ResumePrintH2View>
               {relevantWorkExperience.title.toUpperCase()}
-            </ResumePrintH2>
+            </ResumePrintH2View>
             <div>
               {relevantWorkExperience.list
                 .filter(({ print }) => print !== false)
@@ -88,9 +88,9 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
                       key={remarks[0]}
                       className="grid grid-cols-2 grid-rows-3 mb-2 last:mb-0"
                     >
-                      <ResumePrintH3 className="row-start-1 col-start-1">
+                      <ResumePrintH3View className="row-start-1 col-start-1">
                         {title}
-                      </ResumePrintH3>
+                      </ResumePrintH3View>
                       <span className="row-start-1 col-start-2 text-right">
                         {start} - {finish}
                       </span>
@@ -114,9 +114,9 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
           </div>
           <div>
             <div className="flex justify-between">
-              <ResumePrintH2>
+              <ResumePrintH2View>
                 {relevantCertifications.title.toUpperCase()}
-              </ResumePrintH2>
+              </ResumePrintH2View>
               <span className="text-right">
                 please visit{" "}
                 <a href={`${APP_ADDRESS}/resume`}>{DOMAIN}/resume</a> for
@@ -144,7 +144,9 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
         >
           <div>
             <div className="flex justify-between">
-              <ResumePrintH2>{skills.title.toUpperCase()}</ResumePrintH2>
+              <ResumePrintH2View>
+                {skills.title.toUpperCase()}
+              </ResumePrintH2View>
               <span className="text-right">{skills.remarks}</span>
             </div>
             <div>
@@ -152,7 +154,7 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
                 .filter(({ print }) => print !== false)
                 .map(({ title, list }) => (
                   <div key={title}>
-                    <ResumePrintH3>{title}</ResumePrintH3>
+                    <ResumePrintH3View>{title}</ResumePrintH3View>
                     <div>
                       {list
                         .filter(({ print }) => print !== false)
@@ -172,14 +174,16 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
             </div>
           </div>
           <div>
-            <ResumePrintH2>{education.title.toUpperCase()}</ResumePrintH2>
+            <ResumePrintH2View>
+              {education.title.toUpperCase()}
+            </ResumePrintH2View>
             <div>
               {education.list.map(
                 ({ title, institution, location, start, finish }) => (
                   <div key={title} className="grid grid-rows-2 grid-cols-2">
-                    <ResumePrintH3 className="row-start-1 col-start-1">
+                    <ResumePrintH3View className="row-start-1 col-start-1">
                       {title}
-                    </ResumePrintH3>
+                    </ResumePrintH3View>
                     <span className="row-start-1 col-start-2 text-right">
                       {start} - {finish}
                     </span>
