@@ -2,21 +2,24 @@ import { type FC, type ReactNode } from "react";
 import { COLORS } from "_constants";
 import c from "classnames";
 
-interface ResumeH2Props {
+interface ResumeScreenH3ViewProps {
   children: ReactNode;
   className?: string;
 }
 
-const ResumeH2: FC<ResumeH2Props> = ({ children, className }) => (
-  <h2
+const ResumeScreenH3View: FC<ResumeScreenH3ViewProps> = ({
+  children,
+  className,
+}) => (
+  <h3
     className={c(
       COLORS.paragraph,
-      "text-2xl first:mt-0 mt-6 mb-3 font-bold",
+      "text-base font-bold mt-6 first:mt-0 mb-1",
       className
     )}
   >
     {children}
-  </h2>
+  </h3>
 );
 
-export default ResumeH2;
+export default ResumeScreenH3View;

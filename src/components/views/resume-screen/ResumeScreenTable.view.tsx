@@ -2,11 +2,11 @@ import { type FC } from "react";
 import { COLORS } from "_constants";
 import c from "classnames";
 
-interface ResumeTableProps {
+interface ResumeScreenTableViewProps {
   table: Record<string, string | number>;
 }
 
-const ResumeTable: FC<ResumeTableProps> = ({ table }) => {
+const ResumeScreenTableView: FC<ResumeScreenTableViewProps> = ({ table }) => {
   const Pair = ({ heading, value, className = "" }) => (
     <div className={c("flex flex-col", className)}>
       <span className={c(COLORS.paragraph, "font-bold")}>{heading}</span>
@@ -23,4 +23,4 @@ const ResumeTable: FC<ResumeTableProps> = ({ table }) => {
   );
 };
 
-export default ResumeTable;
+export default ResumeScreenTableView;
