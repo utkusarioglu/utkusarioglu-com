@@ -1,9 +1,9 @@
-import ResumeSection from "_views/resume/ResumeSection";
+import ResumeSection from "_views/resume-screen/ResumeSection";
 import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import { COLORS } from "_constants";
 import NonRoutedLink from "_primitives/non-routed-link/NonRoutedLink";
-import ResumeH3 from "_views/resume/ResumeH3";
+import ResumeH3 from "./ResumeH3";
 
 const ResumeDownload = () => (
   <ContentCardBackgroundLayout>
