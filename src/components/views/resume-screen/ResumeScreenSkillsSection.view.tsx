@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import { type Section } from "_types/resume.types";
-import ResumeScreenH3View from "./ResumeScreenH3.view";
+import H3 from "_primitives/headings/H3.primitive";
 
 type ResumeScreenSkillsSectionViewProps<T> = Section<T> & {
   listItemComponent: T;
@@ -11,7 +11,7 @@ const ResumeScreenSkillsSectionView: FC<
   ResumeScreenSkillsSectionViewProps<any>
 > = ({ title, list, listItemComponent: ListItem, className }) => (
   <div className={className}>
-    <ResumeScreenH3View>{title}</ResumeScreenH3View>
+    <H3>{title}</H3>
     <ul>
       {list.map((item) => (
         <ListItem key={item.name} item={item} />

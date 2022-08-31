@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import Paragraph from "_primitives/paragraph/Paragraph.primitive";
 import { type Section } from "_types/resume.types";
-import ResumeScreenH2View from "./ResumeScreenH2.view";
+import H2 from "_primitives/headings/H2.primitive";
 
 type ResumeScreenSectionViewProps<T> = Section<T> & {
   listItemComponent: FC<T>;
@@ -17,7 +17,7 @@ const ResumeScreenSectionView: FC<ResumeScreenSectionViewProps<any>> = ({
   className,
 }) => (
   <div className={className}>
-    <ResumeScreenH2View className="px-5">{title}</ResumeScreenH2View>
+    <H2 className="px-5">{title}</H2>
     <div className="px-5 pb-5">
       {remarks &&
         remarks.map((paragraph) => (

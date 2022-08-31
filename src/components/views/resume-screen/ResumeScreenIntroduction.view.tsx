@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import { COLORS } from "_constants";
-import ResumeScreenH2View from "./ResumeScreenH2.view";
+import H2 from "_primitives/headings/H2.primitive";
 import type { Resume } from "_types/resume.types";
 import c from "classnames";
 
@@ -11,7 +11,7 @@ const ResumeScreenIntroductionView: FC<ResumeScreenIntroductionViewProps> = ({
   remarks,
 }) => (
   <div className="px-5 mb-10">
-    <ResumeScreenH2View>{title}</ResumeScreenH2View>
+    <H2>{title}</H2>
     {remarks.map((paragraph) => (
       <p key={paragraph} className={c(COLORS.paragraph, "mb-3 last:mb-0")}>
         {paragraph}

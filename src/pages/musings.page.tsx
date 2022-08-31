@@ -6,7 +6,7 @@ import { readFileSync } from "fs";
 import { parse } from "yaml";
 import { COLORS, MAX_W_PROSE } from "_constants";
 import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
-import ResumeScreenH3View from "_views/resume-screen/ResumeScreenH3.view";
+import H3 from "_primitives/headings/H3.primitive";
 import VerticalMarginsLayout from "_layouts/vertical-margins/VerticalMargins.layout";
 import ResumeScreenSectionView from "_views/resume-screen/ResumeScreenSection.view";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
@@ -68,7 +68,7 @@ const AboutPage: FC<MusingsPageProps> = ({
             }) => (
               <ContentCardLinkView href={href}>
                 <ContentCardItemLayout>
-                  <ResumeScreenH3View>
+                  <H3>
                     {title}
                     {subtitle && (
                       <span className={COLORS.secondaryText}>
@@ -76,7 +76,7 @@ const AboutPage: FC<MusingsPageProps> = ({
                         ({subtitle})
                       </span>
                     )}
-                  </ResumeScreenH3View>
+                  </H3>
                   {remarks.map((paragraph) => (
                     <ContentCardParagraphView key={paragraph}>
                       {paragraph}

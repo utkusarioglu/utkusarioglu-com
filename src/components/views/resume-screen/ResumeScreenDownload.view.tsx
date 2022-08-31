@@ -3,7 +3,7 @@ import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackgr
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import { COLORS } from "_constants";
 import ContentCardLinkView from "_views/content-card/ContentCardLink.view";
-import ResumeScreenH3View from "./ResumeScreenH3.view";
+import H3 from "_primitives/headings/H3.primitive";
 
 const ResumeScreenDownloadView = () => (
   <ContentCardBackgroundLayout>
@@ -26,9 +26,7 @@ const ResumeScreenDownloadView = () => (
           href={`/_next/static/resume/${folder}/utku-sarioglu-resume.pdf`}
         >
           <ContentCardItemLayout>
-            <ResumeScreenH3View className={COLORS.paragraph}>
-              {title}
-            </ResumeScreenH3View>
+            <H3 className={COLORS.paragraph}>{title}</H3>
             <div className={COLORS.paragraph}>{remarks}</div>
           </ContentCardItemLayout>
         </ContentCardLinkView>
