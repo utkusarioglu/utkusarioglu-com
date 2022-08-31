@@ -1,6 +1,6 @@
 import ResumeSection from "_views/resume/ResumeSection";
 import ContentCardBackground from "_views/resume/ContentCardBackground";
-import ResumeCardItem from "_views/resume/ResumeCardItem";
+import ContentCardItem from "_views/resume/ContentCardItem";
 import { COLORS } from "_constants";
 import NonRoutedLink from "_views/resume/NonRoutedLink";
 import ResumeH3 from "_views/resume/ResumeH3";
@@ -25,10 +25,10 @@ const ResumeDownload = () => (
         <NonRoutedLink
           href={`/_next/static/resume/${folder}/utku-sarioglu-resume.pdf`}
         >
-          <ResumeCardItem>
+          <ContentCardItem>
             <ResumeH3 className={COLORS.paragraph}>{title}</ResumeH3>
             <div className={COLORS.paragraph}>{remarks}</div>
-          </ResumeCardItem>
+          </ContentCardItem>
         </NonRoutedLink>
       )}
     />
