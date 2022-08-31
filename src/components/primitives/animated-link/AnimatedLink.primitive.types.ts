@@ -1,7 +1,6 @@
-import { type ReactNode } from "react";
+import { type PropsWithChildren } from "react";
 
-export interface AnimatedLinkProps {
+export type AnimatedLinkProps = PropsWithChildren<{
   href: string;
   paddingAndMargins: string;
-  children: ReactNode;
-}
+}>;

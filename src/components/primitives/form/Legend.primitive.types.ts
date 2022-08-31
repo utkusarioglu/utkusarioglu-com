@@ -1,6 +1,5 @@
-import { type ReactNode } from "react";
+import { type PropsWithChildren } from "react";
 
-export interface LegendProps {
+export type LegendProps = PropsWithChildren<{
   title: string;
-  children: ReactNode | ReactNode[];
-}
+}>;

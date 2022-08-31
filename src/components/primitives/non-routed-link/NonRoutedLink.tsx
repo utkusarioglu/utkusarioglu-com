@@ -1,12 +1,11 @@
-import { type FC, type ReactNode } from "react";
+import { type FC, type PropsWithChildren } from "react";
 import { COLORS, TRANSITIONS, APP_ADDRESS } from "_constants";
 import { motion } from "framer-motion";
 import c from "classnames";
 
-interface NonRoutedLinkProps {
+type NonRoutedLinkProps = PropsWithChildren<{
   href: string;
-  children: ReactNode;
-}
+}>;
 
 const NonRoutedLink: FC<NonRoutedLinkProps> = ({ href, children }) => (
   <motion.div

@@ -1,17 +1,13 @@
-import { type FC, type ReactNode } from "react";
+import { HTMLAttributes, type FC, type PropsWithChildren } from "react";
 import { COLORS } from "_constants";
 import { useDeviceQuery } from "_hooks/device/device.hook";
 import c from "classnames";
 
-interface ContentCardBackgroundLayoutProps {
-  children: ReactNode;
-  className?: string;
-}
+type ContentCardBackgroundLayoutProps = HTMLAttributes<HTMLDivElement>;
 
-const ContentCardBackgroundLayout: FC<ContentCardBackgroundLayoutProps> = ({
-  children,
-  className,
-}) => {
+const ContentCardBackgroundLayout: FC<
+  PropsWithChildren<ContentCardBackgroundLayoutProps>
+> = ({ children, className, ...rest }) => {
   const { isSm } = useDeviceQuery();
   return (
     <div
@@ -23,6 +19,7 @@ const ContentCardBackgroundLayout: FC<ContentCardBackgroundLayoutProps> = ({
         },
         className
       )}
+      {...rest}
     >
       {children}
     </div>

@@ -1,11 +1,12 @@
-import { type ReactNode, type FC } from "react";
+import { type PropsWithChildren, type FC } from "react";
 import { COLORS } from "_constants";
 import c from "classnames";
 
-type CanvasControlFormButtonViewProps = {
-  children: ReactNode;
-  color: "primary" | "secondary";
-} & JSX.IntrinsicElements["button"];
+type CanvasControlFormButtonViewProps = PropsWithChildren<
+  {
+    color: "primary" | "secondary";
+  } & JSX.IntrinsicElements["button"]
+>;
 
 const CanvasControlFormButtonView: FC<CanvasControlFormButtonViewProps> = ({
   children,
