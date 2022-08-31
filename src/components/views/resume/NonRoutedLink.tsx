@@ -3,12 +3,12 @@ import { COLORS, TRANSITIONS, APP_ADDRESS } from "_constants";
 import { motion } from "framer-motion";
 import c from "classnames";
 
-interface ResumeExternalLinkProps {
+interface NonRoutedLinkProps {
   href: string;
   children: ReactNode;
 }
 
-const ResumeLink: FC<ResumeExternalLinkProps> = ({ href, children }) => (
+const NonRoutedLink: FC<NonRoutedLinkProps> = ({ href, children }) => (
   <motion.div
     className="mb-3 last:mb-0 rounded-lg"
     layout
@@ -45,4 +45,4 @@ const ExternalLinkIcon = () => (
   />
 );
 
-export default ResumeLink;
+export default NonRoutedLink;

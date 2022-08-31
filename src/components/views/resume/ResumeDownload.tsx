@@ -2,7 +2,7 @@ import ResumeSection from "_views/resume/ResumeSection";
 import ResumeCardBackground from "_views/resume/ResumeCardBackground";
 import ResumeCardItem from "_views/resume/ResumeCardItem";
 import { COLORS } from "_constants";
-import ResumeLink from "_views/resume/ResumeLink";
+import NonRoutedLink from "_views/resume/NonRoutedLink";
 import ResumeH3 from "_views/resume/ResumeH3";
 
 const ResumeDownload = () => (
@@ -22,14 +22,14 @@ const ResumeDownload = () => (
         },
       ]}
       listItemComponent={({ item: { title, folder, remarks } }) => (
-        <ResumeLink
+        <NonRoutedLink
           href={`/_next/static/resume/${folder}/utku-sarioglu-resume.pdf`}
         >
           <ResumeCardItem>
             <ResumeH3 className={COLORS.paragraph}>{title}</ResumeH3>
             <div className={COLORS.paragraph}>{remarks}</div>
           </ResumeCardItem>
-        </ResumeLink>
+        </NonRoutedLink>
       )}
     />
   </ResumeCardBackground>
