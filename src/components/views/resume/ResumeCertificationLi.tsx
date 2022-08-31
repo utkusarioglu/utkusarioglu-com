@@ -3,7 +3,7 @@ import { COLORS } from "_constants";
 import ResumeH3 from "./ResumeH3";
 import { type Certification } from "_types/resume.types";
 import ContentCardItem from "_views/content-card/ContentCardItem";
-import NonRoutedLink from "./NonRoutedLink";
+import NonRoutedLink from "_primitives/non-routed-link/NonRoutedLink";
 import c from "classnames";
 
 type ResumeCertificationLiProps = Certification;
