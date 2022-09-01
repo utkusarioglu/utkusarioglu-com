@@ -9,7 +9,7 @@ interface ResumeScreenTableViewProps {
 const ResumeScreenTableView: FC<ResumeScreenTableViewProps> = ({ table }) => {
   const Pair = ({ heading, value, className = "" }) => (
     <div className={c("flex flex-col", className)}>
-      <span className={c(COLORS.paragraph, "font-bold")}>{heading}</span>
+      <span className={c(COLORS.secondaryText, "font-bold")}>{heading}</span>
       <span className={COLORS.paragraph}>{value}</span>
     </div>
   );
