@@ -18,12 +18,13 @@ const ResumeScreenSectionView: FC<ResumeScreenSectionViewProps<any>> = ({
 }) => (
   <div className={className}>
     <H2 className="px-5">{title}</H2>
-    <div className="px-5 pb-5">
-      {remarks &&
-        remarks.map((paragraph) => (
+    {remarks && (
+      <div className="px-5 pb-5">
+        {remarks.map((paragraph) => (
           <Paragraph key={paragraph}>{paragraph}</Paragraph>
         ))}
-    </div>
+      </div>
+    )}
     <ul>
       {list.map((item) => (
         // TODO this `key` wont' do
