@@ -18,7 +18,8 @@ export function computePaddingAndMargins(fontSize: FontSizes, mode: NavModes) {
 }
 export function computeColorAndFontSize(
   type: LinkTypes,
-  fontSize: FontSizes
+  fontSize: FontSizes,
+  isSm: boolean
 ): string {
   const classes = [];
 
@@ -49,7 +50,11 @@ export function computeColorAndFontSize(
       break;
 
     case "large":
-      classes.push("text-6xl mb-2");
+      if (isSm) {
+        classes.push("text-5xl mb-2");
+      } else {
+        classes.push("text-6xl mb-2");
+      }
       break;
   }
 

@@ -10,14 +10,16 @@ import {
   computePaddingAndMargins,
   computeColorAndFontSize,
 } from "./NavItem.logic";
+import { useDeviceQuery } from "_hooks/device/device.hook";
 
 const NavItem: FC<NavItemProps> = (props) => {
   const containerRef = useRef<HTMLDivElement>();
+  const { isSm } = useDeviceQuery();
   const { fontSize, mode, href, type, title } = props;
   const { isActiveRoute, isCanvas } = useEnhancedRouter();
   const isActive = isActiveRoute(href);
   const paddingAndMargins = computePaddingAndMargins(fontSize, mode);
-  const colorAndFontSize = computeColorAndFontSize(type, fontSize);
+  const colorAndFontSize = computeColorAndFontSize(type, fontSize, isSm);
   const hasIndicator = type === "page" || isCanvas;
 
   useEffect(() => {
