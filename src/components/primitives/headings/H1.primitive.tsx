@@ -4,14 +4,9 @@ import c from "classnames";
 
 type H1Props = HTMLAttributes<HTMLHeadingElement>;
 
-const H1: FC<PropsWithChildren<H1Props>> = ({
-  children,
-  className,
-  ...rest
-}) => (
-  <h1 className={c(COLORS.paragraph, className, "text-3xl mb-10")} {...rest}>
+const H1: FC<PropsWithChildren<H1Props>> = ({ children, ...rest }) => (
+  <span className={c("font-display text-3xl w-max", COLORS.route)} {...rest}>
     {children}
-  </h1>
+  </span>
 );
-
 export default H1;
