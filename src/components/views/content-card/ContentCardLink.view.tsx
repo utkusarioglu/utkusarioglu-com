@@ -17,7 +17,7 @@ const ContentCardLinkView: FC<ContentCardLinkViewProps> = ({
     <motion.div
       className="mb-3 last:mb-0 rounded-lg"
       layout
-      whileHover={{ backgroundColor: COLORS.theme }}
+      whileHover={{ backgroundColor: "#bbbbbb" }}
       transition={TRANSITIONS.routeFast}
     >
       {isExternalLink ? (
@@ -27,12 +27,7 @@ const ContentCardLinkView: FC<ContentCardLinkViewProps> = ({
           rel="noopener noreferrer"
           className="cursor-pointer relative block"
         >
-          <div
-            className={c(
-              COLORS.secondaryText,
-              "absolute top-0 right-0 px-5 py-4 h-10 v-5"
-            )}
-          >
+          <div className="absolute top-0 right-0 px-5 py-4 h-10 v-5">
             <ExternalLinkIcon />
           </div>
           {children}
