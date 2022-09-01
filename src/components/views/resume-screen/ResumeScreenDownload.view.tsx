@@ -26,7 +26,7 @@ const ResumeScreenDownloadView = () => (
           href={`/_next/static/resume/${folder}/utku-sarioglu-resume.pdf`}
         >
           <ContentCardItemLayout>
-            <H3 className={COLORS.paragraph}>{title}</H3>
+            <H3>{title}</H3>
             <div className={COLORS.paragraph}>{remarks}</div>
           </ContentCardItemLayout>
         </ContentCardLinkView>
