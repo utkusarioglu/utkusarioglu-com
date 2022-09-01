@@ -7,6 +7,7 @@ import { type MotionVariants } from "_types/vendors/framer-motion.types";
 import { useEnhancedRouter } from "_hooks/router/router.hook";
 import { type TitleViewProps } from "./Title.view.types";
 import c from "classnames";
+import H1 from "_primitives/headings/H1.primitive";
 
 const TitleView: FC<TitleViewProps> = ({ className }) => {
   const { route, isHome, title } = useEnhancedRouter();
@@ -48,11 +49,7 @@ const TitleView: FC<TitleViewProps> = ({ className }) => {
                 <span className={c("px-1", COLORS.route)}>
                   {PATH_SEPARATOR}
                 </span>
-                <span
-                  className={c("font-display text-3xl w-max", COLORS.route)}
-                >
-                  {title}
-                </span>
+                <H1>{title}</H1>
               </motion.div>
             )}
           </AnimatePresence>
