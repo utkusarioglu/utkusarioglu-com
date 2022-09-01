@@ -10,6 +10,10 @@ module.exports = {
     fontFamily: {
       sans: formatFontFamilies("Quicksand")[0],
       display: formatFontFamilies("Galada")[0],
+      heading: formatFontFamilies(
+        // "Poppins",
+        "Raleway"
+      )[0],
     },
     fontSize: {
       ...defaults.fontSize,

@@ -11,8 +11,8 @@ const H3: FC<PropsWithChildren<H3Props>> = ({
 }) => (
   <h3
     className={c(
-      COLORS.paragraph,
-      "text-base font-bold mt-6 first:mt-0 mb-2",
+      COLORS.social,
+      "text-base font-bold mt-6 first:mt-0 mb-2 font-heading",
       className
     )}
     {...rest}
