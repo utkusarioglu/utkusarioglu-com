@@ -48,39 +48,7 @@ const NavItem: FC<NavItemProps> = (props) => {
   return (
     <div ref={containerRef} className={c("relative", paddingAndMargins)}>
       <AnimatePresence initial={false}>
-        {isActive && hasIndicator && (
-          <motion.div
-            className="w-full pointer-events-none block"
-            variants={MOTION_VARIANTS.opacity}
-            initial="none"
-            animate="full"
-            exit="none"
-            transition={TRANSITIONS.route}
-          >
-            {mode === "bottom" ? (
-              <svg
-                className="absolute bottom-0 m-auto left-0 right-0"
-                width={20}
-                height={20}
-              >
-                <circle
-                  cx={10}
-                  cy={20}
-                  r={10}
-                  className={COLORS[`${type}Fill`]}
-                />
-              </svg>
-            ) : (
-              <svg
-                className="absolute bottom-0 m-auto left-0 top-0"
-                width={20}
-                height={20}
-              >
-                <circle cx={0} cy={7} r={7} className={COLORS[`${type}Fill`]} />
-              </svg>
-            )}
-          </motion.div>
-        )}
+        {isActive && hasIndicator && <NavItemRouteIndicator mode={mode} type={type} />}
       </AnimatePresence>
       <AnimatedLink href={href} paddingAndMargins="">
         <Link href={href} passHref>
@@ -89,7 +57,46 @@ const NavItem: FC<NavItemProps> = (props) => {
       </AnimatedLink>
     </div>
   );
+
 };
+
+interface NavItemRouteIndicatorProps {
+  mode: string;
+  type: string
+}
+
+const NavItemRouteIndicator: FC<NavItemRouteIndicatorProps> = ({mode, type}) => {
+  return <motion.div
+    className="w-full pointer-events-none block"
+    variants={MOTION_VARIANTS.opacity}
+    initial="none"
+    animate="full"
+    exit="none"
+    transition={TRANSITIONS.route}
+  >
+    {mode === "bottom" ? (
+      <svg
+        className="absolute bottom-0 m-auto left-0 right-0"
+        width={20}
+        height={20}
+      >
+        <circle
+          cx={10}
+          cy={20}
+          r={10}
+          className={COLORS[`${type}Fill`]} />
+      </svg>
+    ) : (
+      <svg
+        className="absolute bottom-0 m-auto left-0 top-0"
+        width={20}
+        height={20}
+      >
+        <circle cx={0} cy={7} r={7} className={COLORS[`${type}Fill`]} />
+      </svg>
+    )}
+  </motion.div>;
+}
 
 function computePaddingAndMargins(fontSize: FontSizes, mode: NavModes) {
   const classes = [];
