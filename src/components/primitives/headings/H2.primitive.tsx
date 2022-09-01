@@ -11,8 +11,8 @@ const H2: FC<PropsWithChildren<H2Props>> = ({
 }) => (
   <h2
     className={c(
-      COLORS.paragraph,
-      "text-2xl first:mt-0 mt-6 mb-3 font-bold",
+      COLORS.page,
+      "text-2xl first:mt-0 mt-6 mb-3 font-bold font-heading",
       className
     )}
     {...rest}
