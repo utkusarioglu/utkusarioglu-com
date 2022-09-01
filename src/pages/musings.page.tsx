@@ -71,10 +71,7 @@ const AboutPage: FC<MusingsPageProps> = ({
                   <H3>
                     {title}
                     {subtitle && (
-                      <span className={COLORS.secondaryText}>
-                        {" "}
-                        ({subtitle})
-                      </span>
+                      <span className={COLORS.route}> ({subtitle})</span>
                     )}
                   </H3>
                   {remarks.map((paragraph) => (
