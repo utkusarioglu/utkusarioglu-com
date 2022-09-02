@@ -6,27 +6,12 @@ import type {
   Confided,
   Screenable,
   Entity,
+  Listed,
 } from "./content.types";
 
 export type Skill = Titled & Partial<Remarked & Confided & Printable>;
 
-type Skills = {
-  map: {
-    naturalLanguages: Section<Skill>;
-    programmingLanguages: Section<Skill>;
-    scriptingLanguages: Section<Skill>;
-    frontend: Section<Skill>;
-    devOpsAndCiCd: Section<Skill>;
-    backend: Section<Skill>;
-    testingAndAnalysis: Section<Skill>;
-    projectHandling: Section<Skill>;
-    web3: Section<Skill>;
-    dataAndMath: Section<Skill>;
-    developmentSoftware: Section<Skill>;
-    notableOtherSoftware: Section<Skill>;
-  };
-} & Titled &
-  Remarked;
+type Skills = Titled & Remarked & Listed<Section<Skill>>;
 
 export type ContactListItem = {
   value: string;

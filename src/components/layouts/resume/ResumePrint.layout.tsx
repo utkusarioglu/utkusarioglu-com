@@ -150,7 +150,7 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
               <span className="text-right">{skills.remarks}</span>
             </div>
             <div>
-              {Object.values(skills.map)
+              {skills.list
                 .filter(({ print }) => print !== false)
                 .map(({ title, list }) => (
                   <div key={title}>
