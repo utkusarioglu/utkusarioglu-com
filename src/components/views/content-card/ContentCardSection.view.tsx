@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import Paragraph from "_primitives/paragraph/Paragraph.primitive";
-import { type Section } from "_types/resume.types";
+import { type Section } from "_types/content.types";
 import H2 from "_primitives/headings/H2.primitive";
 
 type ContentCardSectionViewProps<T> = Section<T> & {

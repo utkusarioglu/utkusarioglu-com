@@ -6,9 +6,9 @@ type ResumeScreenSkillSectionLiViewProps = Skill;
 
 const ResumeScreenSkillSectionLiView: FC<
   ResumeScreenSkillSectionLiViewProps
-> = ({ name, remarks, confident, print }) => (
+> = ({ title, remarks, confident, print }) => (
   <li className={COLORS.paragraph}>
-    {name}
+    {title}
     {confident === false && "*"} {remarks && `(${remarks})`}
   </li>
 );

@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import { type Section } from "_types/resume.types";
+import { type Section } from "_types/content.types";
 import H3 from "_primitives/headings/H3.primitive";
 
 type ResumeScreenSkillsSectionViewProps<T> = Section<T> & {

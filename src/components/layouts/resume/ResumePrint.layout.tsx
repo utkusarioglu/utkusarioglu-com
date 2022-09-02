@@ -158,10 +158,10 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
                     <div>
                       {list
                         .filter(({ print }) => print !== false)
-                        .map(({ name, remarks, confident }, i, filtered) => (
+                        .map(({ title, remarks, confident }, i, filtered) => (
                           <>
-                            <span key={name}>
-                              {name}
+                            <span key={title}>
+                              {title}
                               {confident === false ? "*" : ""}
                               {remarks ? ` (${remarks})` : ""}
                             </span>
