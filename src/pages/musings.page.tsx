@@ -12,25 +12,15 @@ import ContentCardSectionView from "_views/content-card/ContentCardSection.view"
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import ContentCardParagraphView from "_views/content-card/ContentCardParagraph.view";
 import ContentCardLinkView from "_views/content-card/ContentCardLink.view";
-import { type Section } from "_types/resume.types";
-
-interface MusingsListItem {
-  title: string;
-  href: string; // url
-  remarks: string[];
-}
-
+import { Musings } from "_types/musings.types";
 interface MusingsPageProps {
-  musings: {
-    remarks: string[];
-    sections: Section<MusingsListItem>[];
-  };
+  musings: Musings;
 }
 
 export function getStaticProps() {
   const musings = parse(
     readFileSync("assets/musings.yml", { encoding: "UTF-8" })
-  ) as any;
+  ) as Musings;
 
   return {
     props: {

@@ -1,20 +1,16 @@
-export type Section<ListType> = {
-  title: string;
-  remarks?: string[];
-  list: ListType[];
-  print?: boolean;
-};
+import type {
+  Section,
+  Titled,
+  Remarked,
+  Printable,
+  Confided,
+  Screenable,
+  Entity,
+} from "./content.types";
 
-export interface Skill {
-  name: string;
-  remarks?: string;
-  confident?: boolean;
-  print?: boolean;
-}
+export type Skill = Titled & Partial<Remarked & Confided & Printable>;
 
-interface Skills {
-  title: string;
-  remarks: string;
+type Skills = {
   map: {
     naturalLanguages: Section<Skill>;
     programmingLanguages: Section<Skill>;
@@ -29,49 +25,40 @@ interface Skills {
     developmentSoftware: Section<Skill>;
     notableOtherSoftware: Section<Skill>;
   };
-}
+} & Titled &
+  Remarked;
 
-export interface ContactListItem {
-  title: string;
+export type ContactListItem = {
   value: string;
   handle?: string;
-  remarks?: string;
-  print?: boolean;
-  screen?: boolean;
-}
+} & Titled &
+  Partial<Remarked & Printable & Screenable>;
 
-export interface WorkExperience {
-  print?: boolean;
-  title: string;
+export type WorkExperience = {
   companyName: string;
   location: string;
   start: string;
   finish: string;
-  remarks: string[];
-}
+} & Titled &
+  Remarked &
+  Partial<Printable>;
 
-export interface Certification {
+export type Certification = {
   course: string;
   institution: string;
   instructor: string;
   certificateId?: string;
   certificateUrl?: string;
-  print?: boolean;
-}
+} & Partial<Printable>;
 
-export interface Education {
-  title: string;
+export type Education = {
   institution: string;
   location: string;
   start: number;
   finish: number;
-}
+} & Titled;
 
-interface Introduction {
-  title: string;
-  remarks: string[];
-  print?: boolean;
-}
+type Introduction = Entity;
 
 export interface Resume {
   name: string;
