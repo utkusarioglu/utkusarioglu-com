@@ -1,4 +1,4 @@
-import ResumeScreenSectionView from "_views/resume-screen/ResumeScreenSection.view";
+import ContentCardSectionView from "_views/content-card/ContentCardSection.view";
 import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import { COLORS } from "_constants";
@@ -7,7 +7,7 @@ import H3 from "_primitives/headings/H3.primitive";
 
 const ResumeScreenDownloadView = () => (
   <ContentCardBackgroundLayout>
-    <ResumeScreenSectionView
+    <ContentCardSectionView
       title="Download Resume"
       list={[
         {
