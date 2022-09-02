@@ -8,7 +8,7 @@ import { COLORS, MAX_W_PROSE } from "_constants";
 import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
 import H3 from "_primitives/headings/H3.primitive";
 import VerticalMarginsLayout from "_layouts/vertical-margins/VerticalMargins.layout";
-import ResumeScreenSectionView from "_views/resume-screen/ResumeScreenSection.view";
+import ContentCardSectionView from "_views/content-card/ContentCardSection.view";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import ContentCardParagraphView from "_views/content-card/ContentCardParagraph.view";
 import ContentCardLinkView from "_views/content-card/ContentCardLink.view";
@@ -61,7 +61,7 @@ const AboutPage: FC<MusingsPageProps> = ({
 
       {sections.map((section) => (
         <ContentCardBackgroundLayout key={section.title}>
-          <ResumeScreenSectionView
+          <ContentCardSectionView
             {...section}
             listItemComponent={({
               item: { title, subtitle, remarks, href },

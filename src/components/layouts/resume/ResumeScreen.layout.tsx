@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import { type Resume } from "_types/resume.types";
 import ResumeIntroduction from "_views/resume-screen/ResumeScreenIntroduction.view";
-import ResumeSection from "_views/resume-screen/ResumeScreenSection.view";
+import ResumeSection from "_views/content-card/ContentCardSection.view";
 import ResumeSkills from "_views/resume-screen/ResumeScreenSkills.view";
 import ResumeWorkExperienceLi from "_views/resume-screen/ResumeScreenWorkExperienceLi.view";
 import ResumeCertificationLi from "_views/resume-screen/ResumeScreenCertificationLi.view";

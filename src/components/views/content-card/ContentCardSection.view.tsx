@@ -3,13 +3,13 @@ import Paragraph from "_primitives/paragraph/Paragraph.primitive";
 import { type Section } from "_types/resume.types";
 import H2 from "_primitives/headings/H2.primitive";
 
-type ResumeScreenSectionViewProps<T> = Section<T> & {
+type ContentCardSectionViewProps<T> = Section<T> & {
   listItemComponent: FC<T>;
   className?: string;
 };
 
 // TODO remove `any`
-const ResumeScreenSectionView: FC<ResumeScreenSectionViewProps<any>> = ({
+const ContentCardSectionView: FC<ContentCardSectionViewProps<any>> = ({
   title,
   list,
   remarks,
@@ -34,4 +34,4 @@ const ResumeScreenSectionView: FC<ResumeScreenSectionViewProps<any>> = ({
   </div>
 );
 
-export default ResumeScreenSectionView;
+export default ContentCardSectionView;
