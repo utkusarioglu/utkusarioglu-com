@@ -9,12 +9,12 @@ type ResumeScreenSkillsViewProps = Resume["skills"];
 
 const ResumeScreenSkillsView: FC<ResumeScreenSkillsViewProps> = ({
   title,
-  map,
+  list,
 }) => (
   <div>
     <H2 className="px-5">{title}</H2>
     <div>
-      {Object.values(map).map((section) => (
+      {list.map((section) => (
         <ContentCardItemLayout key={section.title}>
           <ResumeScreenSkillSectionView
             {...section}

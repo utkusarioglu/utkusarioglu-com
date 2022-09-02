@@ -52,16 +52,14 @@ contact:
 skills:
   title: Skills
   remarks: "* implies familiarity"
-  map:
-    naturalLanguages:
-      title: Natural Languages
+  list:
+    - title: Natural Languages
       list:
         - title: English
           remarks: Native level
         - title: Turkish
           remarks: Native
-    programmingLanguages:
-      title: Programming Languages
+    - title: Programming Languages
       list:
         - title: Typescript
         - title: Javascript
@@ -73,8 +71,7 @@ skills:
           confident: false
         - title: C++
           confident: false
-    scriptingLanguages:
-      title: Scripting Languages and DSL
+    - title: Scripting Languages and DSL
       list:
         - title: SQL
         - title: Bash
@@ -83,8 +80,7 @@ skills:
         - title: PlantUML
         - title: HCL
           print: false
-    frontend:
-      title: Frontend
+    - title: Frontend
       list:
         - title: React
         - title: React Native
@@ -99,8 +95,7 @@ skills:
         - title: SDL
         - title: ENTT
           confident: false
-    devOpsAndCiCd:
-      title: DevOps and CI&CD
+    - title: DevOps and CI&CD
       list:
         - title: Docker
         - title: Kubernetes
@@ -112,8 +107,7 @@ skills:
         - title: GitHub Actions
         - title: Jenkins
           confident: false
-    backend:
-      title: Backend
+    - title: Backend
       list:
         - title: NodeJS
         - title: MySQL
@@ -138,8 +132,7 @@ skills:
         - title: OpenTelemetry
         - title: gRPC
         - title: Puppeteer
-    testingAndAnalysis:
-      title: Testing and Analysis
+    - title: Testing and Analysis
       list:
         - title: Cypress
         - title: Jest
@@ -150,8 +143,7 @@ skills:
         - title: Mythril
         - title: Slither
         - title: Manticore
-    projectHandling:
-      title: Project Handling
+    - title: Project Handling
       list:
         - title: Git
         - title: Helm
@@ -161,8 +153,7 @@ skills:
         - title: Emscripten
         - title: AsyncAPI
         - title: Metarepo
-    web3:
-      title: Web3
+    - title: Web3
       list:
         - title: Truffle
         - title: Drizzle
@@ -176,8 +167,7 @@ skills:
           confident: false
         - title: The Graph
         - title: EVM
-    dataAndMath:
-      title: Data and Math
+    - title: Data and Math
       list:
         - title: Pandas
         - title: NumPy
@@ -185,8 +175,7 @@ skills:
         - title: SymPy
         - title: Matplotlib
         - title: music21
-    developmentSoftware:
-      title: Development Software
+    - title: Development Software
       list:
         - title: VS Code
         - title: Visual Studio
@@ -196,8 +185,7 @@ skills:
         - title: Postman
         - title: Enterprise Architect
         - title: Adobe XD
-    notableOtherSoftware:
-      title: Notable Other Software
+    - title: Notable Other Software
       list:
         - title: Photoshop
         - title: Illustrator
