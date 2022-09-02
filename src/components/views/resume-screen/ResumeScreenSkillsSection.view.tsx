@@ -13,9 +13,11 @@ const ResumeScreenSkillsSectionView: FC<
   <div className={className}>
     <H3>{title}</H3>
     <ul>
-      {list.map((item) => (
-        <ListItem key={item.name} item={item} />
-      ))}
+      {list
+        .filter(({ print }) => print !== false)
+        .map((item) => (
+          <ListItem key={item.title} item={item} />
+        ))}
     </ul>
   </div>
 );
