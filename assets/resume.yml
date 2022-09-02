@@ -56,161 +56,161 @@ skills:
     naturalLanguages:
       title: Natural Languages
       list:
-        - name: English
+        - title: English
           remarks: Native level
-        - name: Turkish
+        - title: Turkish
           remarks: Native
     programmingLanguages:
       title: Programming Languages
       list:
-        - name: Typescript
-        - name: Javascript
-        - name: Solidity
-        - name: Yul
-        - name: Python
-        - name: PHP
-        - name: C
+        - title: Typescript
+        - title: Javascript
+        - title: Solidity
+        - title: Yul
+        - title: Python
+        - title: PHP
+        - title: C
           confident: false
-        - name: C++
+        - title: C++
           confident: false
     scriptingLanguages:
       title: Scripting Languages and DSL
       list:
-        - name: SQL
-        - name: Bash
-        - name: PowerShell
+        - title: SQL
+        - title: Bash
+        - title: PowerShell
           confident: false
-        - name: PlantUML
-        - name: HCL
+        - title: PlantUML
+        - title: HCL
           print: false
     frontend:
       title: Frontend
       list:
-        - name: React
-        - name: React Native
+        - title: React
+        - title: React Native
           confident: false
-        - name: NextJS
-        - name: Tauri
+        - title: NextJS
+        - title: Tauri
           confident: false
-        - name: Apollo
-        - name: Redux
-        - name: WordPress
-        - name: TailwindCSS
-        - name: SDL
-        - name: ENTT
+        - title: Apollo
+        - title: Redux
+        - title: WordPress
+        - title: TailwindCSS
+        - title: SDL
+        - title: ENTT
           confident: false
     devOpsAndCiCd:
       title: DevOps and CI&CD
       list:
-        - name: Docker
-        - name: Kubernetes
-        - name: kOps
-        - name: Skaffold
-        - name: Terraform
-        - name: Vagrant
-        - name: Hyper-V
-        - name: GitHub Actions
-        - name: Jenkins
+        - title: Docker
+        - title: Kubernetes
+        - title: kOps
+        - title: Skaffold
+        - title: Terraform
+        - title: Vagrant
+        - title: Hyper-V
+        - title: GitHub Actions
+        - title: Jenkins
           confident: false
     backend:
       title: Backend
       list:
-        - name: NodeJS
-        - name: MySQL
-        - name: PostgreSQL
-        - name: MongoDB
+        - title: NodeJS
+        - title: MySQL
+        - title: PostgreSQL
+        - title: MongoDB
           confident: false
-        - name: Redis
-        - name: Kafka
-        - name: Debezium
-        - name: ZooKeeper
+        - title: Redis
+        - title: Kafka
+        - title: Debezium
+        - title: ZooKeeper
           confident: false
-        - name: Strimzi
-        - name: Grafana
+        - title: Strimzi
+        - title: Grafana
           confident: false
-        - name: Loki
+        - title: Loki
           confident: false
-        - name: Jaeger
+        - title: Jaeger
           confident: false
-        - name: Prometheus
+        - title: Prometheus
           confident: false
-        - name: OpenSSL
-        - name: OpenTelemetry
-        - name: gRPC
-        - name: Puppeteer
+        - title: OpenSSL
+        - title: OpenTelemetry
+        - title: gRPC
+        - title: Puppeteer
     testingAndAnalysis:
       title: Testing and Analysis
       list:
-        - name: Cypress
-        - name: Jest
-        - name: Mocha
-        - name: Waffle
-        - name: Echidna
+        - title: Cypress
+        - title: Jest
+        - title: Mocha
+        - title: Waffle
+        - title: Echidna
           confident: false
-        - name: Mythril
-        - name: Slither
-        - name: Manticore
+        - title: Mythril
+        - title: Slither
+        - title: Manticore
     projectHandling:
       title: Project Handling
       list:
-        - name: Git
-        - name: Helm
-        - name: Conan
-        - name: OpenAPI
-        - name: Lerna
-        - name: Emscripten
-        - name: AsyncAPI
-        - name: Metarepo
+        - title: Git
+        - title: Helm
+        - title: Conan
+        - title: OpenAPI
+        - title: Lerna
+        - title: Emscripten
+        - title: AsyncAPI
+        - title: Metarepo
     web3:
       title: Web3
       list:
-        - name: Truffle
-        - name: Drizzle
-        - name: Ganache
-        - name: Web3
-        - name: Ethers
-        - name: Matic
-        - name: Hardhat
-        - name: Waffle
-        - name: Geth
+        - title: Truffle
+        - title: Drizzle
+        - title: Ganache
+        - title: Web3
+        - title: Ethers
+        - title: Matic
+        - title: Hardhat
+        - title: Waffle
+        - title: Geth
           confident: false
-        - name: The Graph
-        - name: EVM
+        - title: The Graph
+        - title: EVM
     dataAndMath:
       title: Data and Math
       list:
-        - name: Pandas
-        - name: NumPy
-        - name: SciPy
-        - name: SymPy
-        - name: Matplotlib
-        - name: music21
+        - title: Pandas
+        - title: NumPy
+        - title: SciPy
+        - title: SymPy
+        - title: Matplotlib
+        - title: music21
     developmentSoftware:
       title: Development Software
       list:
-        - name: VS Code
-        - name: Visual Studio
-        - name: Vim
-        - name: Figma
-        - name: Jupyter Notebook
-        - name: Postman
-        - name: Enterprise Architect
-        - name: Adobe XD
+        - title: VS Code
+        - title: Visual Studio
+        - title: Vim
+        - title: Figma
+        - title: Jupyter Notebook
+        - title: Postman
+        - title: Enterprise Architect
+        - title: Adobe XD
     notableOtherSoftware:
       title: Notable Other Software
       list:
-        - name: Photoshop
-        - name: Illustrator
+        - title: Photoshop
+        - title: Illustrator
           confident: false
-        - name: Lightroom
-        - name: Word
-        - name: Excel
-        - name: Outlook
-        - name: PowerPoint
-        - name: Visio
-        - name: Cubase
-        - name: CaptureOne
-        - name: MuseScore
+        - title: Lightroom
+        - title: Word
+        - title: Excel
+        - title: Outlook
+        - title: PowerPoint
+        - title: Visio
+        - title: Cubase
+        - title: CaptureOne
+        - title: MuseScore
 
 relevantWorkExperience:
   title: Relevant Work Experience
