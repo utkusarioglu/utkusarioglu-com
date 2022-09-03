@@ -2,7 +2,7 @@ import type { FC } from "react";
 import { readFile } from "fs";
 import type { GetStaticProps } from "next";
 import ContentLayout from "_layouts/content/Content.layout";
-import Paragraph from "_primitives/paragraph/Paragraph.primitive";
+import P from "_primitives/paragraph/P.primitive";
 import PaperChainView from "_views/paper-chain/PaperChain.view";
 import type { PaperChainEntry } from "_views/paper-chain-item/PaperChainItem.view.types";
 
@@ -50,7 +50,7 @@ const PaperChainPage: FC<PaperChainPageProps> = ({ list, error }) => {
   if (error) {
     return (
       <ContentLayout>
-        <Paragraph>Something went wrong 😔</Paragraph>
+        <P>Something went wrong 😔</P>
       </ContentLayout>
     );
   }
@@ -58,7 +58,7 @@ const PaperChainPage: FC<PaperChainPageProps> = ({ list, error }) => {
   if (!list.length) {
     return (
       <ContentLayout>
-        <Paragraph>The list is empty 😲</Paragraph>
+        <P>The list is empty 😲</P>
       </ContentLayout>
     );
   }

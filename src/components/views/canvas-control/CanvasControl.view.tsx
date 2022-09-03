@@ -9,7 +9,7 @@ import SectionHelp from "_primitives/form/SectionHelp.primitive";
 import Input from "_primitives/form/Input.primitive";
 import CanvasControlFormButtonView from "./CanvasControlFormButton.view";
 import PresetItemView from "./PresetItem.view";
-import Paragraph from "_primitives/paragraph/Paragraph.primitive";
+import P from "_primitives/paragraph/P.primitive";
 import type { CanvasControlViewProps } from "./CanvasControl.view.types";
 import { downloadImage } from "./CanvasControl.view.logic";
 import { useDeviceQuery } from "_hooks/device/device.hook";
@@ -68,20 +68,20 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
         )}
       >
         <SectionHelp enabled={helpEnabled}>
-          <Paragraph small>
+          <P small>
             Welcome to the canvas page. You can control the specifications of
             the background canvas draw from this control window.
-          </Paragraph>
-          <Paragraph small>
+          </P>
+          <P small>
             You can either choose a preset or enter custom values to draw a
             custom curve for your background.
-          </Paragraph>
-          <Paragraph small>
+          </P>
+          <P small>
             Once you find a result that you are satisfied with, you can save it
             to local storage for your subsequent visits.
-          </Paragraph>
+          </P>
           {firstVisit && (
-            <Paragraph small>
+            <P small>
               You are seeing this section because this is your first visit to
               this page. You can toggle the help dialogs by clicking the{" "}
               <span
@@ -93,7 +93,7 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
                 ?
               </span>{" "}
               button on top right.
-            </Paragraph>
+            </P>
           )}
         </SectionHelp>
         <Legend title="Status">
@@ -173,23 +173,23 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
             </div>
           </div>
           <SectionHelp enabled={helpEnabled}>
-            <Paragraph small>
+            <P small>
               Status section shows details about the current and last finished
               render.
-            </Paragraph>
-            <Paragraph small>
+            </P>
+            <P small>
               Once the image is drawn, you can download it as a JPG or PNG file.
-            </Paragraph>
-            <Paragraph small>
+            </P>
+            <P small>
               Note that the size of the image will be the size of the viewport.
               If you need a fullscreen image, consider reloading the page using
               the fullscreen mode of your browser and then start creating your
               renders.
-            </Paragraph>
-            <Paragraph small>
+            </P>
+            <P small>
               This limitation is expected to be removed later with the
               introduction of pre-renders.
-            </Paragraph>
+            </P>
           </SectionHelp>
         </Legend>
         <div className="mb-5">
@@ -234,23 +234,23 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
               </li>
             </ol>
             <SectionHelp enabled={helpEnabled}>
-              <Paragraph small>
+              <P small>
                 Presets section provides you with configurations that
                 demonstrate the variety of renders that can be created with this
                 tool.
-              </Paragraph>
-              <Paragraph small>
+              </P>
+              <P small>
                 Despite the configurations being fixed, the seed value that
                 determines the shape of the curve is random. Which means that
                 every time you choose a preset, a different curve will be drawn.
-              </Paragraph>
-              <Paragraph small>
+              </P>
+              <P small>
                 Double click the preset to minimize controls during the draw.
-              </Paragraph>
-              <Paragraph small>
+              </P>
+              <P small>
                 You can also select a preset only to customize its values from
                 the controls below.
-              </Paragraph>
+              </P>
             </SectionHelp>
           </Legend>
         </div>

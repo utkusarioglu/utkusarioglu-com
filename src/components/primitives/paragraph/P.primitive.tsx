@@ -2,11 +2,11 @@ import { type FC, type PropsWithChildren } from "react";
 import { COLORS } from "_constants";
 import c from "classnames";
 
-type ParagraphProps = PropsWithChildren<{
+type PProps = PropsWithChildren<{
   small?: boolean;
 }>;
 
-const Paragraph: FC<ParagraphProps> = ({ children, small = false }) => {
+const P: FC<PProps> = ({ children, small = false }) => {
   return (
     <p
       className={c(
@@ -20,4 +20,4 @@ const Paragraph: FC<ParagraphProps> = ({ children, small = false }) => {
   );
 };
 
-export default Paragraph;
+export default P;

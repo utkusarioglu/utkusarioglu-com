@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import Paragraph from "_primitives/paragraph/Paragraph.primitive";
+import P from "_primitives/paragraph/P.primitive";
 import { type Section } from "_types/content.types";
 import H2 from "_primitives/headings/H2.primitive";
 
@@ -21,7 +21,7 @@ const ContentCardSectionView: FC<ContentCardSectionViewProps<any>> = ({
     {remarks && (
       <div className="px-5 pb-5">
         {remarks.map((paragraph) => (
-          <Paragraph key={paragraph}>{paragraph}</Paragraph>
+          <P key={paragraph}>{paragraph}</P>
         ))}
       </div>
     )}
