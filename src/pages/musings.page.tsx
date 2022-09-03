@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import ContentLayout from "_layouts/content/Content.layout";
 import EnhancedImage from "_primitives/enhanced-image/EnhancedImage.primitive";
-import Paragraph from "_primitives/paragraph/Paragraph.primitive";
+import P from "_primitives/paragraph/P.primitive";
 import { readFileSync } from "fs";
 import { parse } from "yaml";
 import { COLORS, MAX_W_PROSE } from "_constants";
@@ -44,7 +44,7 @@ const AboutPage: FC<MusingsPageProps> = ({
         />
         <div className="mb-6">
           {remarks.map((paragraph) => (
-            <Paragraph key={paragraph}>{paragraph}</Paragraph>
+            <P key={paragraph}>{paragraph}</P>
           ))}
         </div>
       </VerticalMarginsLayout>

@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import SectionHelp from "./SectionHelp.primitive";
 import { type SectionProps } from "./Section.primitive.types";
-import Paragraph from "_primitives/paragraph/Paragraph.primitive";
+import P from "_primitives/paragraph/P.primitive";
 
 const Section: FC<SectionProps> = ({ children, help, helpEnabled }) => {
   return (
@@ -9,9 +9,9 @@ const Section: FC<SectionProps> = ({ children, help, helpEnabled }) => {
       <div className="mb-2 flex flex-row items-center">{children}</div>
       <SectionHelp enabled={helpEnabled}>
         {help.map((p) => (
-          <Paragraph small key={p}>
+          <P small key={p}>
             {p}
-          </Paragraph>
+          </P>
         ))}
       </SectionHelp>
     </div>
