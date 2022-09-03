@@ -1,5 +1,6 @@
 import { type FC } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+import MDiv from "_primitives/framer-motion/m-div.primitive";
 import NavView from "_views/nav/Nav.view";
 import { MASKS, TRANSITIONS } from "_constants";
 import { useEnhancedRouter } from "_hooks/router/router.hook";
@@ -28,7 +29,7 @@ const NavLayout: FC<NavLayoutProps> = ({ titleRef }) => {
   return (
     <AnimatePresence initial={false}>
       {isHome ? (
-        <motion.div
+        <MDiv
           layout
           key="center-nav"
           variants={variants.centerNav}
@@ -39,9 +40,9 @@ const NavLayout: FC<NavLayoutProps> = ({ titleRef }) => {
           transition={TRANSITIONS.route}
         >
           <NavView mode="center" />
-        </motion.div>
+        </MDiv>
       ) : isSm ? (
-        <motion.div
+        <MDiv
           layout
           key="bottom-nav"
           variants={variants.bottomNav}
@@ -64,9 +65,9 @@ const NavLayout: FC<NavLayoutProps> = ({ titleRef }) => {
           <div className="px-5">
             <NavView mode="bottom" />
           </div>
-        </motion.div>
+        </MDiv>
       ) : (
-        <motion.div
+        <MDiv
           layout
           key="aside-nav"
           variants={variants.asideNav}
@@ -81,7 +82,7 @@ const NavLayout: FC<NavLayoutProps> = ({ titleRef }) => {
           }}
         >
           <NavView mode="aside" />
-        </motion.div>
+        </MDiv>
       )}
     </AnimatePresence>
   );

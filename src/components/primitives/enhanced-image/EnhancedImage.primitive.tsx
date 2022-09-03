@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import MImg from "_primitives/framer-motion/m-img.primitive";
 import { useEffect, useRef, useState, type FC } from "react";
 import { COLORS, TRANSITIONS } from "_constants";
 import type {
@@ -135,7 +135,7 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
           }}
           alt={alt}
         />
-        <motion.img
+        <MImg
           layout
           ref={imgRef}
           initial={INITIAL_IMG}

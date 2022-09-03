@@ -1,5 +1,6 @@
 import { useState, type FC } from "react";
-import { motion, useMotionValue, useAnimation } from "framer-motion";
+import MImg from "_primitives/framer-motion/m-img.primitive";
+import { useMotionValue, useAnimation } from "framer-motion";
 import { TRANSITIONS } from "_constants";
 import { useLayoutContext } from "_contexts/layout/Layout.context";
 import type { ImageViewerSpecs } from "_contexts/layout/Layout.context.types";
@@ -37,7 +38,7 @@ export const ImageViewerView: FC<ImageViewerViewProps> = ({ imageViewer }) => {
   };
 
   return (
-    <motion.img
+    <MImg
       layout
       key="zoomed-img-container"
       className="fixed cursor-pointer z-40 bg-contain bg-no-repeat bg-center"

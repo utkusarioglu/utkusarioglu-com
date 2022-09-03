@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import MDiv from "_primitives/framer-motion/m-div.primitive";
 import { type FC } from "react";
 import { COLORS, TRANSITIONS, MOTION_VARIANTS } from "_constants";
 
@@ -12,7 +12,7 @@ const NavItemRouteIndicatorView: FC<NavItemRouteIndicatorViewProps> = ({
   type,
 }) => {
   return (
-    <motion.div
+    <MDiv
       className="w-full pointer-events-none block"
       variants={MOTION_VARIANTS.opacity}
       initial="none"
@@ -37,7 +37,7 @@ const NavItemRouteIndicatorView: FC<NavItemRouteIndicatorViewProps> = ({
           <circle cx={0} cy={7} r={7} className={COLORS[`${type}Fill`]} />
         </svg>
       )}
-    </motion.div>
+    </MDiv>
   );
 };
 

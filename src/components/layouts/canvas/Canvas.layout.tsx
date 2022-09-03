@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import MDiv from "_primitives/framer-motion/m-div.primitive";
 import CanvasView from "_views/canvas/Canvas.view";
 import { TRANSITIONS, TRANSPARENT_MASK } from "_constants";
 import { useEnhancedRouter } from "_hooks/router/router.hook";
@@ -22,7 +22,7 @@ const CanvasLayout = () => {
   }
 
   return (
-    <motion.div
+    <MDiv
       layout
       initial={{
         WebkitMaskImage: TRANSPARENT_MASK,
@@ -55,7 +55,7 @@ const CanvasLayout = () => {
       <ErrorBoundary FallbackComponent={ErrorFallbackView}>
         <CanvasView window={window} />
       </ErrorBoundary>
-    </motion.div>
+    </MDiv>
   );
 };
 

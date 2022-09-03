@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { AnimatePresence } from "framer-motion";
-import { motion } from "framer-motion";
+import MDiv from "_primitives/framer-motion/m-div.primitive";
 import Title from "_views/title/Title.view";
 import { TRANSITIONS } from "_constants";
 import { useEnhancedRouter } from "_hooks/router/router.hook";
@@ -30,7 +30,7 @@ const TitleLayout = forwardRef<HTMLDivElement, {}>((_, ref) => {
 
   return (
     <AnimatePresence initial={false}>
-      <motion.div
+      <MDiv
         ref={ref}
         variants={variants.title}
         animate="animate"
@@ -43,7 +43,7 @@ const TitleLayout = forwardRef<HTMLDivElement, {}>((_, ref) => {
         transition={TRANSITIONS.route}
       >
         <Title />
-      </motion.div>
+      </MDiv>
     </AnimatePresence>
   );
 });

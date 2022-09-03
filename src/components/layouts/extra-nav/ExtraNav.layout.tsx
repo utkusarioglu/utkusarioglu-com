@@ -1,5 +1,6 @@
 import { type FC } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+import MDiv from "_primitives/framer-motion/m-div.primitive";
 import ExtraNavView from "_views/extra-nav/ExtraNav.view";
 import { TRANSITIONS, MOTION_VARIANTS } from "_constants";
 import { useEnhancedRouter } from "_hooks/router/router.hook";
@@ -47,7 +48,7 @@ const ExtraNavLayout: FC<ExtraNavLayoutProps> = ({ titleRef }) => {
     <AnimatePresence initial={false}>
       {isHome ? (
         isSm ? (
-          <motion.div
+          <MDiv
             key="extra-home-sm"
             variants={variants.asideControls}
             initial="initial"
@@ -58,9 +59,9 @@ const ExtraNavLayout: FC<ExtraNavLayoutProps> = ({ titleRef }) => {
             transition={TRANSITIONS.route}
           >
             <ExtraNavView mode="aside" />
-          </motion.div>
+          </MDiv>
         ) : (
-          <motion.div
+          <MDiv
             key="extra-home-bg"
             variants={MOTION_VARIANTS.opacity}
             initial="none"
@@ -70,11 +71,11 @@ const ExtraNavLayout: FC<ExtraNavLayoutProps> = ({ titleRef }) => {
             transition={TRANSITIONS.route}
           >
             <ExtraNavView mode="center" />
-          </motion.div>
+          </MDiv>
         )
       ) : (
         !isSm && (
-          <motion.div
+          <MDiv
             key="extra-route-bg"
             variants={variants.asideControls}
             initial="initial"
@@ -85,7 +86,7 @@ const ExtraNavLayout: FC<ExtraNavLayoutProps> = ({ titleRef }) => {
             transition={TRANSITIONS.route}
           >
             <ExtraNavView mode="aside" />
-          </motion.div>
+          </MDiv>
         )
       )}
     </AnimatePresence>
