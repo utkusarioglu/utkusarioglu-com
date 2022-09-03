@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import MDiv from "_primitives/framer-motion/m-div.primitive";
 import { type FC } from "react";
 import { Theme } from "_types/theme.types";
 import { type MotionVariants } from "_types/vendors/framer-motion.types";
@@ -10,7 +10,7 @@ const AnimatedLink: FC<AnimatedLinkProps> = ({
   children,
 }) => {
   return (
-    <motion.div
+    <MDiv
       key={href}
       variants={variants("dark")}
       initial="hidden"
@@ -21,7 +21,7 @@ const AnimatedLink: FC<AnimatedLinkProps> = ({
       className={paddingAndMargins}
     >
       {children}
-    </motion.div>
+    </MDiv>
   );
 };
 

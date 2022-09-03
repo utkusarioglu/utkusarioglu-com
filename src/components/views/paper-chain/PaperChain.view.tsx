@@ -1,5 +1,6 @@
 import PaperChainItemView from "_views/paper-chain-item/PaperChainItem.view";
-import { motion } from "framer-motion";
+import MOl from "_primitives/framer-motion/m-ol.primitive";
+import MLi from "_primitives/framer-motion/m-li.primitive";
 import { FC } from "react";
 import type { PaperChainEntry } from "_views/paper-chain-item/PaperChainItem.view.types";
 
@@ -9,13 +10,13 @@ interface PaperChainViewProps {
 
 const PaperChainView: FC<PaperChainViewProps> = ({ list }) => {
   return (
-    <motion.ol className="mb-20" variants={variants.container}>
+    <MOl className="mb-20" variants={variants.container}>
       {list.map((item) => (
-        <motion.li layout key={item.content} variants={variants.item}>
+        <MLi layout key={item.content} variants={variants.item}>
           <PaperChainItemView item={item} key={item.timestamp} />
-        </motion.li>
+        </MLi>
       ))}
-    </motion.ol>
+    </MOl>
   );
 };
 

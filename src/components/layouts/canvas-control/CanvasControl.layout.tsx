@@ -1,5 +1,6 @@
 import { type FC, useState, type PointerEventHandler, useEffect } from "react";
-import { AnimatePresence, motion, useDragControls } from "framer-motion";
+import { AnimatePresence, useDragControls } from "framer-motion";
+import MDiv from "_primitives/framer-motion/m-div.primitive";
 import CanvasControlView from "_views/canvas-control/CanvasControl.view";
 import { useDeviceQuery } from "_hooks/device/device.hook";
 import { ErrorBoundary } from "react-error-boundary";
@@ -14,6 +15,7 @@ import {
   setCanvasControlsVisitHappened,
 } from "_utils/local-storage.utils";
 import c from "classnames";
+import MButton from "_primitives/framer-motion/m-button.primitive";
 
 const CanvasControlLayout: FC<CanvasControlLayoutProps> = ({
   dragConstraintsRef,
@@ -48,7 +50,7 @@ const CanvasControlLayout: FC<CanvasControlLayoutProps> = ({
   return (
     <AnimatePresence initial={false} exitBeforeEnter>
       {maximized ? (
-        <motion.div
+        <MDiv
           key="canvas-control-layout-maximized"
           drag={true}
           dragControls={dragControls}
@@ -97,9 +99,9 @@ const CanvasControlLayout: FC<CanvasControlLayoutProps> = ({
               firstVisit={isFirstVisit}
             />
           </ErrorBoundary>
-        </motion.div>
+        </MDiv>
       ) : (
-        <motion.button
+        <MButton
           key="fixed canvas-control-layout-minimized"
           variants={MOTION_VARIANTS.opacity}
           initial="none"
@@ -114,7 +116,7 @@ const CanvasControlLayout: FC<CanvasControlLayoutProps> = ({
           )}
         >
           ▲
-        </motion.button>
+        </MButton>
       )}
     </AnimatePresence>
   );

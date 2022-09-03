@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { APP_NAME, COLORS, PATH_SEPARATOR } from "_constants";
 import { TRANSITIONS } from "_constants";
 import { type MotionVariants } from "_types/vendors/framer-motion.types";
@@ -8,6 +8,8 @@ import { useEnhancedRouter } from "_hooks/router/router.hook";
 import { type TitleViewProps } from "./Title.view.types";
 import c from "classnames";
 import H1 from "_primitives/headings/H1.primitive";
+import MA from "_primitives/framer-motion/m-a.primitive";
+import MDiv from "_primitives/framer-motion/m-div.primitive";
 
 const TitleView: FC<TitleViewProps> = ({ className }) => {
   const { route, isHome, title } = useEnhancedRouter();
@@ -17,7 +19,7 @@ const TitleView: FC<TitleViewProps> = ({ className }) => {
       <>
         {!isHome ? (
           <Link href="/">
-            <motion.a
+            <MA
               variants={variants.title}
               whileTap="tap"
               whileHover="hover"
@@ -27,7 +29,7 @@ const TitleView: FC<TitleViewProps> = ({ className }) => {
               )}
             >
               {APP_NAME}
-            </motion.a>
+            </MA>
           </Link>
         ) : (
           <div className={c("font-display text-3xl", COLORS.title)}>
@@ -37,7 +39,7 @@ const TitleView: FC<TitleViewProps> = ({ className }) => {
         <div className="relative">
           <AnimatePresence initial={false}>
             {!isHome && (
-              <motion.div
+              <MDiv
                 variants={variants.route}
                 initial="hidden"
                 animate="animate"
@@ -50,7 +52,7 @@ const TitleView: FC<TitleViewProps> = ({ className }) => {
                   {PATH_SEPARATOR}
                 </span>
                 <H1>{title}</H1>
-              </motion.div>
+              </MDiv>
             )}
           </AnimatePresence>
         </div>

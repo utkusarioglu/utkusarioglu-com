@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import { motion } from "framer-motion";
+import MDiv from "_primitives/framer-motion/m-div.primitive";
 import type { Joke } from "_hooks/trucker-jokes/trucker-jokes.hook.types";
 import c from "classnames";
 
@@ -9,7 +9,7 @@ interface TruckerJokesTextViewProps {
 
 const TruckerJokesTextView: FC<TruckerJokesTextViewProps> = ({ joke }) => {
   return (
-    <motion.div
+    <MDiv
       layout
       initial={{
         transform: "scale(2)",
@@ -46,7 +46,7 @@ const TruckerJokesTextView: FC<TruckerJokesTextViewProps> = ({ joke }) => {
       >
         {joke}
       </div>
-    </motion.div>
+    </MDiv>
   );
 };
 

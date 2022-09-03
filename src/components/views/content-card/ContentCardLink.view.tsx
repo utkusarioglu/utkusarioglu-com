@@ -1,6 +1,6 @@
 import { type FC, type PropsWithChildren } from "react";
 import { COLORS, TRANSITIONS, APP_ADDRESS } from "_constants";
-import { motion } from "framer-motion";
+import MDiv from "_primitives/framer-motion/m-div.primitive";
 import c from "classnames";
 import Link from "next/link";
 
@@ -14,7 +14,7 @@ const ContentCardLinkView: FC<ContentCardLinkViewProps> = ({
 }) => {
   const isExternalLink = !href.startsWith(APP_ADDRESS) && !href.startsWith("/");
   return (
-    <motion.div
+    <MDiv
       className="mb-3 last:mb-0 rounded-lg"
       layout
       whileHover={{ backgroundColor: "#bbbbbb" }}
@@ -37,7 +37,7 @@ const ContentCardLinkView: FC<ContentCardLinkViewProps> = ({
           <a>{children}</a>
         </Link>
       )}
-    </motion.div>
+    </MDiv>
   );
 };
 

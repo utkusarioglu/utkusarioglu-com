@@ -1,5 +1,5 @@
 import { type FC, forwardRef } from "react";
-import { motion } from "framer-motion";
+import MDiv from "_primitives/framer-motion/m-div.primitive";
 import {
   COLORS,
   TRANSITIONS,
@@ -46,7 +46,7 @@ const ContentLayout = forwardRef<HTMLDivElement, ContentLayoutProps>(
         }}
         className="absolute left-0 right-0 h-full w-full overflow-hidden"
       >
-        <motion.div
+        <MDiv
           layout
           key="content-container"
           variants={{
@@ -102,7 +102,7 @@ const ContentLayout = forwardRef<HTMLDivElement, ContentLayoutProps>(
               <div className="h-20" />
             )}
           </div>
-        </motion.div>
+        </MDiv>
       </div>
     );
   }

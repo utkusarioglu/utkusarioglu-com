@@ -1,6 +1,7 @@
 import { type FC, useEffect, useState } from "react";
 import { useJokeChooser } from "_hooks/trucker-jokes/trucker-jokes.hook";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+import MDiv from "_primitives/framer-motion/m-div.primitive";
 import { TRANSITIONS } from "_constants";
 import TruckerJokesTextView from "_views/trucker-jokes-text/TruckerJokesText.view";
 import type { JokeList } from "_hooks/trucker-jokes/trucker-jokes.hook.types";
@@ -24,7 +25,7 @@ const TruckerJokesLayout: FC<TruckerJokesLayoutProps> = ({ list }) => {
       onClick={chooseJoke}
       className={c("relative w-full h-full overflow-hidden", palette)}
     >
-      <motion.div
+      <MDiv
         className="h-full absolute top-0 left-0"
         style={{
           backdropFilter: "brightness(0.95)",
