@@ -56,6 +56,7 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
 
   const getDims: GetDims = () => {
     if (!imgRef.current) {
+      console.log("imgRef unavailable, using center of the screen");
       return {
         top: window.innerHeight / 2,
         left: window.innerWidth / 2,
