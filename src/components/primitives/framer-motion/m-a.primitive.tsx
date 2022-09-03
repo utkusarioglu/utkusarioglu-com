@@ -18,4 +18,6 @@ const MA: FC<PropsWithChildren<MAProps>> = forwardRef(
   }
 );
 
+MA.displayName = "MA";
+
 export default MA;

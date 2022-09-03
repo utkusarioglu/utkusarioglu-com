@@ -18,4 +18,6 @@ const MImg: FC<PropsWithChildren<MImgProps>> = forwardRef(
   }
 );
 
+MImg.displayName = "MImg";
+
 export default MImg;

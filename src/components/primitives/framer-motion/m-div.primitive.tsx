@@ -18,4 +18,6 @@ const MDiv: FC<PropsWithChildren<MDivProps>> = forwardRef(
   }
 );
 
+MDiv.displayName = "MDiv";
+
 export default MDiv;
