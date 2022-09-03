@@ -1,4 +1,4 @@
-import { type FC, forwardRef } from "react";
+import { forwardRef } from "react";
 import MDiv from "_primitives/framer-motion/m-div.primitive";
 import {
   COLORS,
@@ -9,7 +9,6 @@ import {
 import { useDeviceQuery } from "_hooks/device/device.hook";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallbackView from "_views/error-fallback/ErrorFallback.view";
-import { MotionVariants } from "_types/vendors/framer-motion.types";
 import FooterLayout from "_layouts/footer/Footer.layout";
 import { ContentLayoutProps } from "./Content.layout.types";
 import { useLayoutContext } from "_contexts/layout/Layout.context";
@@ -107,7 +106,5 @@ const ContentLayout = forwardRef<HTMLDivElement, ContentLayoutProps>(
     );
   }
 );
-
-const variants: MotionVariants<"div"> = {};
 
 export default ContentLayout;
