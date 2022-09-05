@@ -55,7 +55,7 @@ const getBuildConfig = async (...args) => {
         adapter: require("responsive-loader/sharp"),
         sizes: [
           320,
-          env.MAX_W_PROSE,
+          env.MAX_W_CONTENT,
           960 - env.IMG_ZOOM_MARGIN * 2,
           1200 - env.IMG_ZOOM_MARGIN * 2,
           1920 - env.IMG_ZOOM_MARGIN * 2,

@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import { MAX_W_PROSE } from "_constants";
+import { MAX_W_CONTENT } from "_constants";
 import ContentLayout from "_layouts/content/Content.layout";
 import EnhancedImage from "_primitives/enhanced-image/EnhancedImage.primitive";
 import P from "_primitives/paragraph/P.primitive";
@@ -20,7 +20,7 @@ const AboutPage: FC<AboutPageProps> = () => {
         alt="Utku Sarioglu"
         credits="photo by Onur Sarioglu"
         src={require("_assets/images/utku-1x1.jpg")}
-        maxResponsiveWidth={MAX_W_PROSE}
+        maxResponsiveWidth={MAX_W_CONTENT}
       />
       {content.map((paragraph) => (
         <P key={paragraph}>{paragraph}</P>
@@ -30,7 +30,7 @@ const AboutPage: FC<AboutPageProps> = () => {
         alt="Musings title image"
         credits="photo by Utku Sarioglu"
         src={require("_assets/images/old-ship.jpg")}
-        maxResponsiveWidth={MAX_W_PROSE}
+        maxResponsiveWidth={MAX_W_CONTENT}
       />
       {content.map((paragraph) => (
         <P key={paragraph}>{paragraph}</P>

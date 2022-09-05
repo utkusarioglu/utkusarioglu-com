@@ -71,7 +71,7 @@ const ContentLayout = forwardRef<HTMLDivElement, ContentLayoutProps>(
             className={
               allowEntireViewport
                 ? "w-full h-full"
-                : ["max-w-prose", isSm && smShimTop ? "pt-12" : ""].join(" ")
+                : ["max-w-content", isSm && smShimTop ? "pt-12" : ""].join(" ")
             }
           >
             <div
