@@ -138,7 +138,7 @@ export const HEX = {
 export const COLORS = {
   bg: "bg-base-light dark:bg-base-dark transition-colors",
   page: "text-primary-light dark:text-primary-dark transition-colors",
-  pageFill: "fill-primary-light dark:text-primary-dark transition-colors",
+  pageFill: "fill-primary-light dark:fill-primary-dark transition-colors",
   social: "text-secondary-light dark:text-secondary-dark transition-colors",
 
   title: "text-neutral-700 dark:text-neutral-300 transition-colors",
