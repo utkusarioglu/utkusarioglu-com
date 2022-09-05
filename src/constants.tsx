@@ -474,5 +474,5 @@ export const MOTION_VARIANTS: MotionVariantRecord<"div"> = {
 export const IMG_ZOOM_MARGIN = +process.env.IMG_ZOOM_MARGIN;
 export const IMG_MAXIMIZED_BORDER_RADIUS = 20;
 export const CONTENT_ANIMATION_Y_DRIFT = 100;
-export const MAX_W_PROSE = +process.env.MAX_W_PROSE;
+export const MAX_W_CONTENT = +process.env.MAX_W_CONTENT;
 export const RESUME_PRINT_Y_GAP_CLASS = "gap-y-3";

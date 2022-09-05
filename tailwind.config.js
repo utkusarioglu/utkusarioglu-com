@@ -26,21 +26,25 @@ module.exports = {
     gridTemplateRows: {
       resume: "min max",
     },
-    colors: ({ colors }) => ({
-      ...colors,
-      base: {
-        dark: commonConfig.BASE_DARK,
-        light: commonConfig.BASE_LIGHT,
+    extend: {
+      colors: {
+        base: {
+          dark: commonConfig.BASE_DARK,
+          light: commonConfig.BASE_LIGHT,
+        },
+        primary: {
+          dark: commonConfig.PRIMARY_DARK,
+          light: commonConfig.PRIMARY_LIGHT,
+        },
+        secondary: {
+          dark: commonConfig.SECONDARY_DARK,
+          light: commonConfig.SECONDARY_LIGHT,
+        },
       },
-      primary: {
-        dark: commonConfig.PRIMARY_DARK,
-        light: commonConfig.PRIMARY_LIGHT,
+      maxWidth: {
+        content: `${commonConfig.MAX_W_CONTENT}px`,
       },
-      secondary: {
-        dark: commonConfig.SECONDARY_DARK,
-        light: commonConfig.SECONDARY_LIGHT,
-      },
-    }),
+    },
   },
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   plugins: [require("tailwind-scrollbar"), require("tailwind-scrollbar-hide")],

@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import ContentLayout from "_layouts/content/Content.layout";
-import { MAX_W_PROSE } from "_constants";
+import { MAX_W_CONTENT } from "_constants";
 import EnhancedImage from "_primitives/enhanced-image/EnhancedImage.primitive";
 import { parse } from "yaml";
 import { readFileSync } from "fs";
@@ -33,7 +33,7 @@ const ResumePage: FC<ResumePageProps> = ({ resume }) => {
           alt="Resume title image"
           credits="photo by Utku Sarioglu"
           src={require("_assets/images/waves-and-bird.jpg")}
-          maxResponsiveWidth={MAX_W_PROSE}
+          maxResponsiveWidth={MAX_W_CONTENT}
         />
       </VerticalMarginsLayout>
       <ResumeLayout resume={resume} />
