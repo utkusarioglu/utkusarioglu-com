@@ -374,10 +374,10 @@ export const PERLIN_PRESETS: PerlinPresets = {
   },
   allTheBlues: {
     // name: "Dark theme default",
-    name: "All the blues",
+    name: "Blue marble",
     hueOffset: 200,
     hueRange: 70,
-    freq: 800,
+    freq: 6000,
     particleCount: 200,
     particleSize: 1,
     saturation: 100,
