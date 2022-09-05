@@ -18,7 +18,8 @@ const CanvasControlFormButtonView: FC<CanvasControlFormButtonViewProps> = ({
     <button
       className={c(
         "rounded-md py-1 px-3 w-full font-bold",
-        COLORS[`${color}Button`],
+        COLORS[`${color}ButtonBg`],
+        COLORS[`${color}ButtonText`],
         className
       )}
       {...rest}

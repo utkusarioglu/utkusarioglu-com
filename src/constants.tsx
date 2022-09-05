@@ -135,40 +135,49 @@ export const HEX = {
   },
 };
 
-export const COLORS = {
-  bg: "bg-base-light dark:bg-base-dark transition-colors",
-  page: "text-primary-light dark:text-primary-dark transition-colors",
-  pageFill: "fill-primary-light dark:fill-primary-dark transition-colors",
-  social: "text-secondary-light dark:text-secondary-dark transition-colors",
+const COLOR_CLASSES = {
+  bg: "bg-base-light dark:bg-base-dark",
+  page: "text-primary-light dark:text-primary-dark",
+  pageFill: "fill-primary-light dark:fill-primary-dark",
+  social: "text-secondary-light dark:text-secondary-dark",
 
-  title: "text-neutral-700 dark:text-neutral-300 transition-colors",
-  route: "text-neutral-500 dark:text-neutral-400 transition-colors",
+  title: "text-neutral-700 dark:text-neutral-500",
+  secondaryText: "text-neutral-700 dark:text-neutral-500",
+  secondaryFill: "fill-neutral-700 dark:fill-neutral-500",
 
-  extra: "text-neutral-500",
-  extraFill: "fill-neutral-500",
+  route: "text-neutral-500 dark:text-neutral-400",
+  extra: "text-neutral-500 dark:text-neutral-400",
+  extraFill: "fill-neutral-500 dark:fill-neutral-400",
 
-  paragraph: "text-black dark:text-white transition-colors",
+  paragraph: "text-black dark:text-white",
+
   print: "print:text-black print:dark:text-black",
   printBg: "print:bg-white print:dark:bg-white",
+
+  windowTitle: "bg-white/70 dark:bg-black/70",
+  canvasControlsBg: "bg-neutral-200/80 dark:bg-neutral-900/80",
+  canvasControlBorder: "border-neutral-300 dark:border-neutral-600",
+  canvasControlInput: "bg-neutral-300/70 dark:bg-neutral-800/70",
+  canvasControlInputSelected: "bg-neutral-400/70 dark:bg-neutral-700/70",
   sectionHelpBorder: "border-neutral-400",
-  secondaryText: "text-neutral-700 dark:text-neutral-500 transition-colors",
-  secondaryFill: "fill-neutral-700 dark:fill-neutral-500 transition-colors",
-  windowTitle: "bg-white/70 dark:bg-black/70 transition-colors",
+
+  primaryButtonBg: "bg-primary-light dark:bg-primary-dark",
+  primaryButtonText: "text-black dark:text-white",
+  secondaryButtonBg: "bg-secondary-light dark:bg-secondary-dark",
+  secondaryButtonText: "text-black dark:text-white",
+
   scrollbar:
-    "scrollbar-thumb-neutral-300 dark:scrollbar-thumb-neutral-800 scrollbar-track-transparent transition-colors",
-
-  canvasControlsBg:
-    "bg-neutral-200/80 dark:bg-neutral-900/80 transition-colors",
-  canvasControlBorder:
-    "dark:border-neutral-300 dark:border-neutral-600 transition-colors",
-  canvasControlInput:
-    "bg-neutral-300/70 dark:bg-neutral-800/70 transition-colors",
-  canvasControlInputSelected:
-    "bg-neutral-400/70 dark:bg-neutral-700/70 transition-colors",
-
-  secondaryButton: "bg-neutral-300",
-  primaryButton: "bg-blue-400",
+    "scrollbar-thumb-neutral-300 dark:scrollbar-thumb-neutral-800 scrollbar-track-transparent",
 };
+
+export const COLORS = Object.entries(COLOR_CLASSES).reduce(
+  (p, [key, value]) => {
+    const hasDarkMode = value.split(" ").length > 1;
+    p[key] = hasDarkMode ? `${value} transition-colors` : value;
+    return p;
+  },
+  {} as typeof COLOR_CLASSES
+);
 
 export const TRANSITIONS = {
   route: {
