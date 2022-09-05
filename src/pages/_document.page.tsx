@@ -31,7 +31,7 @@ const Document: FC<DocumentProps> = () => {
           rel="stylesheet"
         />
       </Head>
-      <body className={c(COLORS.bg, "select-none h-full overflow-hidden")}>
+      <body className={c(COLORS.baseBg, "select-none h-full overflow-hidden")}>
         <Main />
         <NextScript />
       </body>
