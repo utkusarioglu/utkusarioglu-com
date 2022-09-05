@@ -6,22 +6,16 @@ const {
   PHASE_PRODUCTION_BUILD,
 } = require("next/constants");
 const withManifestBuilder = require("./scripts/plugin");
+const commonConfig = require("./common.config.json");
 
 const isProduction = process.env.NODE_ENV === "production";
 const subdomain = process.env.SUBDOMAIN;
 
-console.log("next.config using env:\n", process.env);
+process.env.CI && console.log("next.config using env:\n", process.env);
 
 const env = {
-  IMG_ZOOM_MARGIN: 20,
-  APP_NAME: "Utku Sarioglu",
-  THEME_COLOR: "#f59e0b",
-  BACKGROUND_COLOR: "#171717",
-  DOMAIN: "utkusarioglu.com",
   SUBDOMAIN: subdomain,
-  // MAGIC. This value comes from tailwind max-w-prose class,
-  // which is set to 65ch
-  MAX_W_PROSE: 611,
+  ...commonConfig,
 };
 
 const getBuildConfig = async (...args) => {
@@ -101,8 +95,8 @@ const getBuildConfig = async (...args) => {
         startUrl: `https://${env.SUBDOMAIN}.${env.DOMAIN}`,
         orientation: "portrait",
         display: "standalone",
-        themeColor: env.THEME_COLOR,
-        backgroundColor: env.BACKGROUND_COLOR,
+        themeColor: env.BRAND,
+        backgroundColor: env.BASE_DARK,
         icons: {
           sizes: [16, 32, 64, 120, 128, 144, 150, 192, 256, 512],
           groups: [
