@@ -136,7 +136,7 @@ export const HEX = {
 };
 
 const COLOR_CLASSES = {
-  bg: "bg-base-light dark:bg-base-dark",
+  baseBg: "bg-base-light dark:bg-base-dark",
   baseText: "text-base-light dark:text-base-dark",
 
   page: "text-primary-light dark:text-primary-dark",
