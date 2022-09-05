@@ -136,6 +136,16 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
           }}
           alt={alt}
         />
+        <div
+          className={c(
+            COLORS.baseText,
+            "absolute top-0 right-0 bottom-0 left-0",
+            "flex text-base items-center justify-center"
+          )}
+        >
+          Loading...
+        </div>
+
         <MImg
           layout
           ref={imgRef}
@@ -164,6 +174,7 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
             onClick: sendToImageViewer,
           })}
         />
+
         {imgZoomed && loadingDialogShown && (
           <div className="absolute bottom-0 w-full pt-6 pb-8 backdrop-blur-md">
             <div className="m-auto w-min">
