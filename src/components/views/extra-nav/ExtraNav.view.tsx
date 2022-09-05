@@ -4,14 +4,18 @@ import { useTheme } from "_hooks/theme/theme.hook";
 import AnimatedLink from "_primitives/animated-link/AnimatedLink.primitive";
 import NavItem from "_views/nav-item/NavItem.view";
 import { type ExtraNavViewProps } from "./ExtraNav.view.types";
+import { useCanvas } from "_contexts/canvas/Canvas.context";
 import c from "classnames";
 
 const ExtraNavView: FC<ExtraNavViewProps> = ({ mode }) => {
   const { toggleActive, saveTheme, getActive } = useTheme();
+  const { config, draw, presets, produceConfig } = useCanvas();
   const orientation = mode !== "aside" ? "row" : "col";
 
   const toggleAndSaveTheme = () => {
     saveTheme(toggleActive());
+    const newConfig = produceConfig(presets[getActive()], config.seed);
+    draw(newConfig);
   };
 
   return (
