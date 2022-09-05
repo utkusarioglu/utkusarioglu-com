@@ -1,22 +1,6 @@
 import ProgressBar from "@badrap/bar-of-progress";
 import Router from "next/router";
-import { COLORS } from "_constants";
-
-// class AppProgressBar {
-//   private progress: ProgressBar
-
-//   init() {
-//   this.progress = new ProgressBar({
-//     color: COLORS.theme,
-//     size: 3,
-//   });
-
-//   }
-
-//   getBar() {
-//     return this.progress;
-//   }
-// }
+import { HEX } from "_constants";
 
 let progress: ProgressBar;
 
@@ -29,7 +13,7 @@ export function getProgressBar() {
 
 export function progressBarInit() {
   progress = new ProgressBar({
-    color: COLORS.theme,
+    color: HEX.brand,
     size: 3,
   });
 

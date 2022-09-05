@@ -127,17 +127,26 @@ export const ROUTE_PROPS: INavItem[] = [
   },
 ];
 
+export const HEX = {
+  brand: process.env.BRAND,
+  base: {
+    dark: process.env.BASE_DARK,
+    light: process.env.BASE_LIGHT,
+  },
+};
+
 export const COLORS = {
-  theme: process.env.THEME_COLOR,
-  background: process.env.BACKGROUND_COLOR,
-  bg: "bg-neutral-200 dark:bg-neutral-900 transition-colors",
+  bg: "bg-base-light dark:bg-base-dark transition-colors",
+  page: "text-primary-light dark:text-primary-dark transition-colors",
+  pageFill: "fill-primary-light dark:text-primary-dark transition-colors",
+  social: "text-secondary-light dark:text-secondary-dark transition-colors",
+
   title: "text-neutral-700 dark:text-neutral-300 transition-colors",
   route: "text-neutral-500 dark:text-neutral-400 transition-colors",
-  page: "text-amber-500",
-  pageFill: "fill-amber-500",
-  social: "text-sky-500 dark:text-sky-300 transition-colors",
+
   extra: "text-neutral-500",
   extraFill: "fill-neutral-500",
+
   paragraph: "text-black dark:text-white transition-colors",
   print: "print:text-black print:dark:text-black",
   printBg: "print:bg-white print:dark:bg-white",
@@ -147,6 +156,7 @@ export const COLORS = {
   windowTitle: "bg-white/70 dark:bg-black/70 transition-colors",
   scrollbar:
     "scrollbar-thumb-neutral-300 dark:scrollbar-thumb-neutral-800 scrollbar-track-transparent transition-colors",
+
   canvasControlsBg:
     "bg-neutral-200/80 dark:bg-neutral-900/80 transition-colors",
   canvasControlBorder:
@@ -155,8 +165,9 @@ export const COLORS = {
     "bg-neutral-300/70 dark:bg-neutral-800/70 transition-colors",
   canvasControlInputSelected:
     "bg-neutral-400/70 dark:bg-neutral-700/70 transition-colors",
-  secondaryButton: "text-black bg-neutral-300",
-  primaryButton: "text-black bg-blue-400",
+
+  secondaryButton: "bg-neutral-300",
+  primaryButton: "bg-blue-400",
 };
 
 export const TRANSITIONS = {
@@ -328,19 +339,42 @@ export const APP_DESCRIPTION = process.env.APP_DESCRIPTION;
 export const TWITTER_HANDLE = "@utkusarioglu";
 
 export const PERLIN_PRESETS: PerlinPresets = {
+  // light: {
+  //   name: "Light theme default",
+  //   hueOffset: 200,
+  //   hueRange: 40,
+  //   freq: 700,
+  //   particleCount: 200,
+  //   particleSize: 1,
+  //   saturation: 100,
+  //   luminance: 40,
+  //   maxDuration: 30000,
+  // },
   light: {
-    name: "Light theme default",
-    hueOffset: 200,
-    hueRange: 40,
-    freq: 700,
-    particleCount: 200,
+    name: "Thin gray lines (light theme default)",
+    hueOffset: 0,
+    hueRange: 360,
+    freq: 1000,
+    particleCount: 400,
     particleSize: 1,
-    saturation: 100,
-    luminance: 40,
+    saturation: 0,
+    luminance: 70,
     maxDuration: 30000,
   },
   dark: {
-    name: "Dark theme default",
+    name: "Thin black lines (dark theme default)",
+    hueOffset: 0,
+    hueRange: 360,
+    freq: 1000,
+    particleCount: 400,
+    particleSize: 1,
+    saturation: 0,
+    luminance: 0,
+    maxDuration: 30000,
+  },
+  allTheBlues: {
+    // name: "Dark theme default",
+    name: "All the blues",
     hueOffset: 200,
     hueRange: 70,
     freq: 800,
@@ -368,17 +402,6 @@ export const PERLIN_PRESETS: PerlinPresets = {
     freq: 3000,
     particleCount: 30,
     particleSize: 5,
-    saturation: 0,
-    luminance: 0,
-    maxDuration: 30000,
-  },
-  thinBlackLines: {
-    name: "Thin black lines",
-    hueOffset: 0,
-    hueRange: 360,
-    freq: 1000,
-    particleCount: 400,
-    particleSize: 1,
     saturation: 0,
     luminance: 0,
     maxDuration: 30000,

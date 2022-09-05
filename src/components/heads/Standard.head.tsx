@@ -3,7 +3,7 @@ import {
   APP_ADDRESS,
   APP_DESCRIPTION,
   APP_NAME,
-  COLORS,
+  HEX,
   PATH_SEPARATOR,
   TWITTER_HANDLE,
 } from "_constants";
@@ -42,7 +42,7 @@ const StandardHead = () => {
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="msapplication-tap-highlight" content="no" />
-      <meta name="theme-color" content={COLORS.theme} />
+      <meta name="theme-color" content={HEX.brand} />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:url" content={APP_ADDRESS} />
       <meta name="twitter:title" content={APP_NAME} />

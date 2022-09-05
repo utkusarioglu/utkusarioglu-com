@@ -1,0 +1,17 @@
+{
+  "IMG_ZOOM_MARGIN": 20,
+  "APP_NAME": "Utku Sarioglu",
+  "DOMAIN": "utkusarioglu.com",
+  "MAX_W_PROSE": 611,
+
+  "BRAND": "#f59e0b",
+
+  "PRIMARY_DARK": "#f59e0b",
+  "PRIMARY_LIGHT": "#f59e0b",
+
+  "SECONDARY_DARK":  "#7DD3FC",
+  "SECONDARY_LIGHT": "#0EA5E9",
+
+  "BASE_DARK": "#171717",
+  "BASE_LIGHT": "#e5e5e5"
+}

@@ -1,4 +1,5 @@
 const defaults = require("tailwindcss/defaultTheme");
+const commonConfig = require("./common.config.json");
 
 function formatFontFamilies(...items) {
   return items.map((font) => `'${font}'`).slice(-1);
@@ -25,6 +26,21 @@ module.exports = {
     gridTemplateRows: {
       resume: "min max",
     },
+    colors: ({ colors }) => ({
+      ...colors,
+      base: {
+        dark: commonConfig.BASE_DARK,
+        light: commonConfig.BASE_LIGHT,
+      },
+      primary: {
+        dark: commonConfig.PRIMARY_DARK,
+        light: commonConfig.PRIMARY_LIGHT,
+      },
+      secondary: {
+        dark: commonConfig.SECONDARY_DARK,
+        light: commonConfig.SECONDARY_LIGHT,
+      },
+    }),
   },
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   plugins: [require("tailwind-scrollbar"), require("tailwind-scrollbar-hide")],
