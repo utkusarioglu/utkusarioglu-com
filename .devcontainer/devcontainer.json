@@ -6,16 +6,17 @@
   ],
   "service": "webclient",
   "workspaceFolder": "/utkusarioglu/utkusarioglu-com",
-  "settings": {
-    "workbench.colorCustomizations": {
-      "activityBar.background": "#002255"
-    }
-  },
-  "extensions": [
-    "bradlc.vscode-tailwindcss"
-  ],
-  "postCreateCommand": "yarn",
-  "features": {
-    "github-cli": "latest"
+  "postCreateCommand": "scripts/post-create-command.sh",
+  "customizations": {
+		"vscode": {
+			"settings": {
+        "workbench.colorCustomizations": {
+          "activityBar.background": "#115566"
+        }
+      },
+			"extensions": [
+        "bradlc.vscode-tailwindcss"
+      ]
+		}
   }
 }
