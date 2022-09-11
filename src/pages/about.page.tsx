@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import { MAX_W_CONTENT } from "_constants";
+import { MAX_W_CONTENT } from "_config";
 import ContentLayout from "_layouts/content/Content.layout";
 import EnhancedImage from "_primitives/enhanced-image/EnhancedImage.primitive";
 import P from "_primitives/paragraph/P.primitive";

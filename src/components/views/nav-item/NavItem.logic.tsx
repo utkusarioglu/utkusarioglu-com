@@ -1,4 +1,4 @@
-import { COLORS } from "_constants";
+import { COLORS } from "_config";
 import { FontSizes, NavModes, LinkTypes } from "./NavItem.view.types";
 
 export function computePaddingAndMargins(fontSize: FontSizes, mode: NavModes) {

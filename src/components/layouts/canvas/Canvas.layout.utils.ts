@@ -1,4 +1,4 @@
-import { MASKS } from "_constants";
+import { MASKS } from "_config";
 
 interface ComputeMaskParams {
   isHome: boolean;

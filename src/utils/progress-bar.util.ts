@@ -1,6 +1,6 @@
 import ProgressBar from "@badrap/bar-of-progress";
 import Router from "next/router";
-import { HEX } from "_constants";
+import { HEX } from "_config";
 
 let progress: ProgressBar;
 

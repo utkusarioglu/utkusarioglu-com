@@ -5,7 +5,7 @@ import CanvasControlView from "_views/canvas-control/CanvasControl.view";
 import { useDeviceQuery } from "_hooks/device/device.hook";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallbackView from "_views/error-fallback/ErrorFallback.view";
-import { COLORS, TRANSITIONS, MOTION_VARIANTS } from "_constants";
+import { COLORS, TRANSITIONS, MOTION_VARIANTS } from "_config";
 import { CanvasControlLayoutProps } from "./CanvasControl.layout.types";
 import CanvasControlTitleButtonView from "_views/canvas-control-title-button/CanvasControlTitleButton.view";
 import { useLayoutContext } from "_contexts/layout/Layout.context";

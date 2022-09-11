@@ -6,7 +6,7 @@ import {
   HEX,
   PATH_SEPARATOR,
   TWITTER_HANDLE,
-} from "_constants";
+} from "_config";
 import { useEnhancedRouter } from "_hooks/router/router.hook";
 
 const StandardHead = () => {

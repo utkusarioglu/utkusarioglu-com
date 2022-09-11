@@ -1,6 +1,6 @@
 import { type FC, type PropsWithChildren } from "react";
 import Link from "next/link";
-import { COLORS } from "_constants";
+import { COLORS } from "_config";
 import c from "classnames";
 
 type HyperlinkProps = PropsWithChildren<{

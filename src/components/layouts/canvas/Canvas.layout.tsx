@@ -1,6 +1,6 @@
 import MDiv from "_primitives/framer-motion/m-div.primitive";
 import CanvasView from "_views/canvas/Canvas.view";
-import { TRANSITIONS, TRANSPARENT_MASK } from "_constants";
+import { TRANSITIONS, TRANSPARENT_MASK } from "_config";
 import { useEnhancedRouter } from "_hooks/router/router.hook";
 import { useWindow } from "_hooks/window/window.hook";
 import { useDeviceQuery } from "_hooks/device/device.hook";

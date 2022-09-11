@@ -1,5 +1,5 @@
 import { createContext, useState, type FC, useContext } from "react";
-import { PERLIN_PRESETS } from "_constants";
+import { PERLIN_PRESETS } from "_config";
 import type {
   CanvasSlice,
   PerlinConfig,

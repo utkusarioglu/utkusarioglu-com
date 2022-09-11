@@ -1,5 +1,5 @@
 import { HTMLAttributes, type FC, type PropsWithChildren } from "react";
-import { COLORS } from "_constants";
+import { COLORS } from "_config";
 import { useDeviceQuery } from "_hooks/device/device.hook";
 import c from "classnames";
 

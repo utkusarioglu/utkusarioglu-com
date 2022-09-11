@@ -2,7 +2,7 @@ import {
   IMG_ZOOM_MARGIN,
   IMG_MAXIMIZED_BORDER_RADIUS,
   CONTENT_ANIMATION_Y_DRIFT,
-} from "_constants";
+} from "_config";
 import { ImageViewerSpecs } from "_contexts/layout/Layout.context.types";
 
 export function produceNoneVariant(imageViewer: ImageViewerSpecs) {

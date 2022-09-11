@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import ContentLayout from "_layouts/content/Content.layout";
-import { MAX_W_CONTENT } from "_constants";
+import { MAX_W_CONTENT } from "_config";
 import EnhancedImage from "_primitives/enhanced-image/EnhancedImage.primitive";
 import { parse } from "yaml";
 import { readFileSync } from "fs";

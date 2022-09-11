@@ -1,7 +1,7 @@
 import ContentCardSectionView from "_views/content-card/ContentCardSection.view";
 import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
-import { COLORS } from "_constants";
+import { COLORS } from "_config";
 import ContentCardLinkView from "_views/content-card/ContentCardLink.view";
 import H3 from "_primitives/headings/H3.primitive";
 

@@ -1,4 +1,4 @@
-import { DEFAULT_LAYOUT, ROUTE_PROPS } from "_constants";
+import { DEFAULT_LAYOUT, ROUTE_PROPS } from "_config";
 import type { LayoutSlice } from "_contexts/layout/Layout.context.types";
 import { INavItemPage } from "_views/nav-item/NavItem.view.types";
 

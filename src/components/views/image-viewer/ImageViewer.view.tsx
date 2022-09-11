@@ -1,7 +1,7 @@
 import { useState, type FC } from "react";
 import MImg from "_primitives/framer-motion/m-img.primitive";
 import { useMotionValue, useAnimation } from "framer-motion";
-import { TRANSITIONS } from "_constants";
+import { TRANSITIONS } from "_config";
 import { useLayoutContext } from "_contexts/layout/Layout.context";
 import type { ImageViewerSpecs } from "_contexts/layout/Layout.context.types";
 import { useEnhancedRouter } from "_hooks/router/router.hook";
