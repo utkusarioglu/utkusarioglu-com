@@ -350,17 +350,6 @@ export const APP_DESCRIPTION = process.env.APP_DESCRIPTION;
 export const TWITTER_HANDLE = "@utkusarioglu";
 
 export const PERLIN_PRESETS: PerlinPresets = {
-  // light: {
-  //   name: "Light theme default",
-  //   hueOffset: 200,
-  //   hueRange: 40,
-  //   freq: 700,
-  //   particleCount: 200,
-  //   particleSize: 1,
-  //   saturation: 100,
-  //   luminance: 40,
-  //   maxDuration: 30000,
-  // },
   light: {
     name: "Thin gray lines (light theme default)",
     hueOffset: 0,
@@ -384,7 +373,6 @@ export const PERLIN_PRESETS: PerlinPresets = {
     maxDuration: 30000,
   },
   allTheBlues: {
-    // name: "Dark theme default",
     name: "Blue marble",
     hueOffset: 200,
     hueRange: 70,
