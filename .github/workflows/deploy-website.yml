@@ -2,8 +2,9 @@ name: deploy-website
 
 on:
   push:
-  # branches:
-  #   - dev
+    branches:
+      - main
+      - dev
   workflow_dispatch:
 
 jobs:
