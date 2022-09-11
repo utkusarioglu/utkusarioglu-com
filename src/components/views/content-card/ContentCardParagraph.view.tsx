@@ -1,4 +1,4 @@
-import { COLORS } from "_constants";
+import { COLORS } from "_config";
 import c from "classnames";
 
 const ContentCardParagraphView = ({ children }) => (

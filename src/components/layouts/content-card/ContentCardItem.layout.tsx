@@ -1,5 +1,5 @@
 import { type FC, type PropsWithChildren } from "react";
-import { COLORS } from "_constants";
+import { COLORS } from "_config";
 import c from "classnames";
 
 interface ContentCardItemLayoutProps {}

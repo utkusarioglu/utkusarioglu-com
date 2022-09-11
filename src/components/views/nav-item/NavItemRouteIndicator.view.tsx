@@ -1,6 +1,6 @@
 import MDiv from "_primitives/framer-motion/m-div.primitive";
 import { type FC } from "react";
-import { COLORS, TRANSITIONS, MOTION_VARIANTS } from "_constants";
+import { COLORS, TRANSITIONS, MOTION_VARIANTS } from "_config";
 
 interface NavItemRouteIndicatorViewProps {
   mode: string;

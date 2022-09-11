@@ -1,5 +1,5 @@
 import { type FC, type PropsWithChildren, type HTMLAttributes } from "react";
-import { COLORS } from "_constants";
+import { COLORS } from "_config";
 import c from "classnames";
 
 type H2Props = HTMLAttributes<HTMLHeadingElement>;

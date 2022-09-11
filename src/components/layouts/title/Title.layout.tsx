@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import { AnimatePresence } from "framer-motion";
 import MDiv from "_primitives/framer-motion/m-div.primitive";
 import Title from "_views/title/Title.view";
-import { TRANSITIONS } from "_constants";
+import { TRANSITIONS } from "_config";
 import { useEnhancedRouter } from "_hooks/router/router.hook";
 import { useDeviceQuery } from "_hooks/device/device.hook";
 import { useWindow } from "_hooks/window/window.hook";

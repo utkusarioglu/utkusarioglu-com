@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import NavItem from "_views/nav-item/NavItem.view";
-import { ROUTE_PROPS } from "_constants";
+import { ROUTE_PROPS } from "_config";
 import ExtraNavView from "_views/extra-nav/ExtraNav.view";
 import { type NavViewProps } from "./Nav.view.types";
 

@@ -1,4 +1,4 @@
-import { COLORS, APP_NAME } from "_constants";
+import { COLORS, APP_NAME } from "_config";
 import Link from "next/link";
 import c from "classnames";
 

@@ -1,6 +1,6 @@
 import MImg from "_primitives/framer-motion/m-img.primitive";
 import { useEffect, useRef, useState, type FC } from "react";
-import { COLORS, TRANSITIONS } from "_constants";
+import { COLORS, TRANSITIONS } from "_config";
 import type {
   EnhancedImageProps,
   GetDims,

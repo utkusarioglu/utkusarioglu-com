@@ -1,5 +1,5 @@
 import { type FC, type PropsWithChildren } from "react";
-import { COLORS, TRANSITIONS, APP_ADDRESS } from "_constants";
+import { COLORS, TRANSITIONS, APP_ADDRESS } from "_config";
 import MDiv from "_primitives/framer-motion/m-div.primitive";
 import c from "classnames";
 import Link from "next/link";

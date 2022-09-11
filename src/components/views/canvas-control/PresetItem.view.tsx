@@ -1,6 +1,6 @@
 import { MouseEventHandler, type FC, type ReactNode } from "react";
 import { useFormik } from "formik";
-import { COLORS } from "_constants";
+import { COLORS } from "_config";
 import { type PerlinConfig } from "_contexts/canvas/Canvas.context.types";
 import c from "classnames";
 

@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import { COLORS } from "_constants";
+import { COLORS } from "_config";
 import { useTheme } from "_hooks/theme/theme.hook";
 import AnimatedLink from "_primitives/animated-link/AnimatedLink.primitive";
 import NavItem from "_views/nav-item/NavItem.view";

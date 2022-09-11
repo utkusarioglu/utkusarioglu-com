@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import { Html, Head, Main, NextScript } from "next/document";
-import { COLORS } from "_constants";
+import { COLORS } from "_config";
 import { DocumentProps } from "next/document";
 import c from "classnames";
 
