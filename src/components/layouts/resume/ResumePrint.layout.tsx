@@ -1,11 +1,6 @@
 import { type FC } from "react";
 import { type Resume } from "_types/resume.types";
-import {
-  COLORS,
-  APP_ADDRESS,
-  DOMAIN,
-  RESUME_PRINT_Y_GAP_CLASS,
-} from "_constants";
+import { COLORS, APP_ADDRESS, DOMAIN, RESUME_PRINT_Y_GAP_CLASS } from "_config";
 import ResumePrintH1View from "_views/resume-print/ResumePrintH1.view";
 import ResumePrintH2View from "_views/resume-print/ResumePrintH2.view";
 import ResumePrintH3View from "_views/resume-print/ResumePrintH3.view";

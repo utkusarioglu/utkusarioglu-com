@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import { COLORS } from "_constants";
+import { COLORS } from "_config";
 import { Skill } from "_types/resume.types";
 
 type ResumeScreenSkillSectionLiViewProps = Skill;

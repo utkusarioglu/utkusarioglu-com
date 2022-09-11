@@ -2,7 +2,7 @@ import { type FC } from "react";
 import { AnimatePresence } from "framer-motion";
 import MDiv from "_primitives/framer-motion/m-div.primitive";
 import NavView from "_views/nav/Nav.view";
-import { MASKS, TRANSITIONS } from "_constants";
+import { MASKS, TRANSITIONS } from "_config";
 import { useEnhancedRouter } from "_hooks/router/router.hook";
 import { useDeviceQuery } from "_hooks/device/device.hook";
 import { useWindow } from "_hooks/window/window.hook";

@@ -1,8 +1,8 @@
 import { type FC } from "react";
 import Link from "next/link";
 import { AnimatePresence } from "framer-motion";
-import { APP_NAME, COLORS, PATH_SEPARATOR } from "_constants";
-import { TRANSITIONS } from "_constants";
+import { APP_NAME, COLORS, PATH_SEPARATOR } from "_config";
+import { TRANSITIONS } from "_config";
 import { type MotionVariants } from "_types/vendors/framer-motion.types";
 import { useEnhancedRouter } from "_hooks/router/router.hook";
 import { type TitleViewProps } from "./Title.view.types";

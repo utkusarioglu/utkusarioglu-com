@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import { COLORS } from "_constants";
+import { COLORS } from "_config";
 import { type ContactListItem } from "_types/resume.types";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import H3 from "_primitives/headings/H3.primitive";

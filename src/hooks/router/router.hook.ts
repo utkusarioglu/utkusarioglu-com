@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { ROUTE_PROPS } from "_constants";
+import { ROUTE_PROPS } from "_config";
 
 export function useEnhancedRouter() {
   const { route } = useRouter();

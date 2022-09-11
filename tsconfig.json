@@ -28,7 +28,7 @@
       "_heads/*": ["src/components/heads/*"],
       "_services/*": ["src/services/*"],
       "_styles/*": ["src/styles/*"],
-      "_constants": ["src/constants"],
+      "_config": ["src/config"],
       "_hooks/*": ["src/hooks/*"],
       "_utils/*": ["src/utils/*"],
       "_types/*": ["src/types/*"],

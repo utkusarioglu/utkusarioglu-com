@@ -12,7 +12,7 @@ import ControlsLayout from "_layouts/controls/Controls.layout";
 import StandardHead from "_heads/Standard.head";
 import { progressBarInit } from "_utils/progress-bar.util";
 import type { AppProps } from "next/app";
-import { ROUTE_PROPS } from "_constants";
+import { ROUTE_PROPS } from "_config";
 
 const App: FC<AppProps> = ({ Component, pageProps, router }) => {
   const window = useWindow();

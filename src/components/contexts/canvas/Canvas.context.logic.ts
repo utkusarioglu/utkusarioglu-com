@@ -1,4 +1,4 @@
-import { PERLIN_PRESETS } from "_constants";
+import { PERLIN_PRESETS } from "_config";
 import { Theme } from "_types/theme.types";
 import {
   DrawPerlinReturn,

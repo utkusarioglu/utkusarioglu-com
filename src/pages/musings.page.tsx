@@ -4,7 +4,7 @@ import EnhancedImage from "_primitives/enhanced-image/EnhancedImage.primitive";
 import P from "_primitives/paragraph/P.primitive";
 import { readFileSync } from "fs";
 import { parse } from "yaml";
-import { COLORS, MAX_W_CONTENT } from "_constants";
+import { COLORS, MAX_W_CONTENT } from "_config";
 import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
 import H3 from "_primitives/headings/H3.primitive";
 import VerticalMarginsLayout from "_layouts/vertical-margins/VerticalMargins.layout";

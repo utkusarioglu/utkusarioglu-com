@@ -1,7 +1,7 @@
 import { useState, type FC } from "react";
 import { useCanvas } from "_contexts/canvas/Canvas.context";
 import { useFormik } from "formik";
-import { CANVAS_CONTROLS, COLORS, PERLIN_PRESETS } from "_constants";
+import { CANVAS_CONTROLS, COLORS, PERLIN_PRESETS } from "_config";
 import Label from "_primitives/form/Label.primitive";
 import Legend from "_primitives/form/Legend.primitive";
 import Section from "_primitives/form/Section.primitive";

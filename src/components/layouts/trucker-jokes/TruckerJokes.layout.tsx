@@ -2,7 +2,7 @@ import { type FC, useEffect, useState } from "react";
 import { useJokeChooser } from "_hooks/trucker-jokes/trucker-jokes.hook";
 import { AnimatePresence } from "framer-motion";
 import MDiv from "_primitives/framer-motion/m-div.primitive";
-import { TRANSITIONS } from "_constants";
+import { TRANSITIONS } from "_config";
 import TruckerJokesTextView from "_views/trucker-jokes-text/TruckerJokesText.view";
 import type { JokeList } from "_hooks/trucker-jokes/trucker-jokes.hook.types";
 import c from "classnames";

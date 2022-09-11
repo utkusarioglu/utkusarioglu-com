@@ -1,11 +1,6 @@
 import { forwardRef } from "react";
 import MDiv from "_primitives/framer-motion/m-div.primitive";
-import {
-  COLORS,
-  TRANSITIONS,
-  MASKS,
-  CONTENT_ANIMATION_Y_DRIFT,
-} from "_constants";
+import { COLORS, TRANSITIONS, MASKS, CONTENT_ANIMATION_Y_DRIFT } from "_config";
 import { useDeviceQuery } from "_hooks/device/device.hook";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallbackView from "_views/error-fallback/ErrorFallback.view";
