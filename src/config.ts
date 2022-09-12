@@ -2,6 +2,7 @@ import type { INavItem } from "_views/nav-item/NavItem.view.types";
 import { type PerlinPresets } from "_contexts/canvas/Canvas.context.types";
 import { type MotionVariantRecord } from "_types/vendors/framer-motion.types";
 import type { LayoutSlice } from "_contexts/layout/Layout.context.types";
+import * as convert from "color-convert";
 
 export const DEFAULT_LAYOUT: LayoutSlice = {
   navigation: true,
@@ -132,6 +133,13 @@ export const HEX = {
   base: {
     dark: process.env.BASE_DARK,
     light: process.env.BASE_LIGHT,
+  },
+};
+
+export const HSL = {
+  canvas: {
+    light: convert.hex.hsl(process.env.CANVAS_LIGHT),
+    dark: convert.hex.hsl(process.env.CANVAS_DARK),
   },
 };
 
@@ -352,24 +360,24 @@ export const TWITTER_HANDLE = "@utkusarioglu";
 export const PERLIN_PRESETS: PerlinPresets = {
   light: {
     name: "Thin gray lines (light theme default)",
-    hueOffset: 0,
-    hueRange: 360,
+    hueOffset: HSL.canvas.light[0],
+    hueRange: 0,
     freq: 1000,
     particleCount: 400,
     particleSize: 1,
-    saturation: 0,
-    luminance: 70,
+    saturation: HSL.canvas.light[1],
+    luminance: HSL.canvas.light[2],
     maxDuration: 30000,
   },
   dark: {
     name: "Thin gray lines (dark theme default)",
-    hueOffset: 0,
-    hueRange: 360,
+    hueOffset: HSL.canvas.dark[0],
+    hueRange: 0,
     freq: 1000,
     particleCount: 400,
     particleSize: 1,
-    saturation: 0,
-    luminance: 40,
+    saturation: HSL.canvas.dark[1],
+    luminance: HSL.canvas.dark[2],
     maxDuration: 30000,
   },
   thinBlackLines: {
