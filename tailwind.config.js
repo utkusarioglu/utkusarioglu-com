@@ -32,6 +32,10 @@ module.exports = {
           dark: commonConfig.BASE_DARK,
           light: commonConfig.BASE_LIGHT,
         },
+        canvas: {
+          dark: commonConfig.CANVAS_DARK,
+          light: commonConfig.CANVAS_LIGHT,
+        },
         primary: {
           dark: commonConfig.PRIMARY_DARK,
           light: commonConfig.PRIMARY_LIGHT,
