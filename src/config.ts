@@ -143,13 +143,13 @@ const COLOR_CLASSES = {
   pageFill: "fill-primary-light dark:fill-primary-dark",
   social: "text-secondary-light dark:text-secondary-dark",
 
-  title: "text-neutral-700 dark:text-neutral-500",
-  secondaryText: "text-neutral-700 dark:text-neutral-500",
-  secondaryFill: "fill-neutral-700 dark:fill-neutral-500",
+  title: "text-tertiary-light dark:text-tertiary-dark",
+  secondaryText: "text-tertiary-light dark:text-tertiary-dark",
+  secondaryFill: "fill-tertiary-light dark:fill-tertiary-dark",
 
-  route: "text-neutral-500 dark:text-neutral-400",
-  extra: "text-neutral-500 dark:text-neutral-400",
-  extraFill: "fill-neutral-500 dark:fill-neutral-400",
+  route: "text-tertiary-light/70 dark:text-tertiary-dark/70",
+  extra: "text-quaternary-light dark:text-quaternary-dark",
+  extraFill: "fill-quaternary-light dark:fill-quaternary-dark",
 
   paragraph: "text-black dark:text-white",
 

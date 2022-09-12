@@ -6,12 +6,18 @@
 
   "BRAND": "#f59e0b",
 
+  "BASE_DARK": "#171717",
+  "BASE_LIGHT": "#e5e5e5",
+
   "PRIMARY_DARK": "#f59e0b",
   "PRIMARY_LIGHT": "#f59e0b",
 
   "SECONDARY_DARK":  "#7DD3FC",
   "SECONDARY_LIGHT": "#0EA5E9",
 
-  "BASE_DARK": "#171717",
-  "BASE_LIGHT": "#e5e5e5"
+  "TERTIARY_DARK": "#78716c",
+  "TERTIARY_LIGHT":  "#404040",
+
+  "QUATERNARY_DARK": "#78716c",
+  "QUATERNARY_LIGHT":  "#a8a29e"
 }
