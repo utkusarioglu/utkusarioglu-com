@@ -55,6 +55,7 @@ export const ImageViewerView: FC<ImageViewerViewProps> = ({ imageViewer }) => {
       onClick={() => {
         endZoom();
         setLayout({
+          // FIX: these need to be read from the defaults for where the image is requested
           navigation: true,
           content: true,
           canvas: true,
@@ -67,7 +68,9 @@ export const ImageViewerView: FC<ImageViewerViewProps> = ({ imageViewer }) => {
         }
         onLoad();
         updateMotionStyles(imageViewer, motionStyles);
-        animate.start(produceFullVariant(imageViewer));
+        process.nextTick(() => {
+          animate.start(produceFullVariant(imageViewer));
+        });
         setLayout({
           navigation: false,
           content: false,
