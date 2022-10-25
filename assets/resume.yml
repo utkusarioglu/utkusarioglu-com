@@ -71,6 +71,8 @@ skills:
           confident: false
         - title: C++
           confident: false
+        - title: Go
+          confident: false
     - title: Scripting Languages and DSL
       list:
         - title: SQL
@@ -107,6 +109,8 @@ skills:
         - title: GitHub Actions
         - title: Jenkins
           confident: false
+        - title: LocalStack
+        - title: k3s
     - title: Backend
       list:
         - title: NodeJS
@@ -132,6 +136,8 @@ skills:
         - title: OpenTelemetry
         - title: gRPC
         - title: Puppeteer
+        - title: Vault
+          confident: false
     - title: Testing and Analysis
       list:
         - title: Cypress
@@ -143,6 +149,8 @@ skills:
         - title: Mythril
         - title: Slither
         - title: Manticore
+        - title: Terratest
+          confident: false
     - title: Project Handling
       list:
         - title: Git
