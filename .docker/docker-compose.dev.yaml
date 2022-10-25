@@ -2,20 +2,8 @@ version: "3.9"
 
 services:
   webclient:
-    image: utkusarioglu/node-devcontainer:17-slim.0.1
+    image: utkusarioglu/node-devcontainer:17-slim.0.3
     volumes:
       - type: bind
         source: ..
         target: /utkusarioglu/utkusarioglu-com
-      - type: bind
-        source: ~/dev/projects/utkusarioglu-root-ca/p-256/server
-        target: /utkusarioglu/utkusarioglu-com/.certs/server
-        read_only: true
-        volume:
-          nocopy: true
-      - type: bind
-        source: ~/dev/projects/utkusarioglu-root-ca/p-256/root
-        target: /utkusarioglu/utkusarioglu-com/.certs/root
-        read_only: true
-        volume:
-          nocopy: true
