@@ -96,7 +96,7 @@ const getBuildConfig = async (...args) => {
         orientation: "portrait",
         display: "standalone",
         themeColor: env.BRAND,
-        backgroundColor: env.BASE_DARK,
+        backgroundColor: env.LOWEST_DARK,
         icons: {
           sizes: [16, 32, 64, 120, 128, 144, 150, 192, 256, 512],
           groups: [

@@ -29,12 +29,20 @@ module.exports = {
     extend: {
       colors: {
         paragraph: {
-          dark: commonConfig.PARAGRAPH_DARK,
-          light: commonConfig.PARAGRAPH_LIGHT,
+          dark: commonConfig.HIGHEST_DARK,
+          light: commonConfig.LOWEST_LIGHT,
         },
         base: {
-          dark: commonConfig.BASE_DARK,
-          light: commonConfig.BASE_LIGHT,
+          dark: commonConfig.LOWEST_DARK,
+          light: commonConfig.HIGHEST_LIGHT,
+        },
+        item: {
+          dark: commonConfig.HIGH_DARK,
+          light: commonConfig.LOW_LIGHT,
+        },
+        card: {
+          dark: commonConfig.LOW_DARK,
+          light: commonConfig.HIGH_LIGHT,
         },
         canvas: {
           dark: commonConfig.CANVAS_DARK,

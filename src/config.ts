@@ -131,8 +131,8 @@ export const ROUTE_PROPS: INavItem[] = [
 export const HEX = {
   brand: process.env.BRAND,
   base: {
-    dark: process.env.BASE_DARK,
-    light: process.env.BASE_LIGHT,
+    dark: process.env.LOWEST_DARK,
+    light: process.env.HIGHEST_LIGHT,
   },
 };
 
@@ -164,20 +164,21 @@ const COLOR_CLASSES = {
   print: "print:text-black print:dark:text-black",
   printBg: "print:bg-white print:dark:bg-white",
 
-  windowTitle: "bg-white/70 dark:bg-black/70", //
-  canvasControlsBg: "bg-neutral-200/80 dark:bg-neutral-900/80", //
-  canvasControlBorder: "border-neutral-300 dark:border-neutral-600", //
-  canvasControlInput: "bg-neutral-300/70 dark:bg-neutral-800/70", //
-  canvasControlInputSelected: "bg-neutral-400/70 dark:bg-neutral-700/70", //
-  sectionHelpBorder: "border-neutral-400", //
+  windowTitle: "bg-base-light dark:bg-base-dark",
+  canvasControlsBg: "bg-card-light/80 dark:bg-card-dark/80",
+  canvasControlBorder: "border-canvas-light dark:border-canvas-dark",
+  canvasControlInput: "bg-item-light/70 dark:bg-item-dark/70",
+  canvasControlInputSelected: "bg-canvas-light/70 dark:bg-canvas-dark/70",
+  sectionHelpBorder: "border-canvas-light dark:border-canvas-dark",
+  sectionHelpTitle: "text-canvas-light dark:text-canvas-dark",
 
   primaryButtonBg: "bg-primary-light dark:bg-primary-dark",
-  primaryButtonText: "text-paragraph-dark dark:text-paragraph-light", //
+  primaryButtonText: "text-paragraph-dark dark:text-paragraph-light",
   secondaryButtonBg: "bg-secondary-light dark:bg-secondary-dark",
-  secondaryButtonText: "text-paragraph-dark dark:text-paragraph-light", //
+  secondaryButtonText: "text-paragraph-dark dark:text-paragraph-light",
 
   scrollbar:
-    "scrollbar-thumb-neutral-300 dark:scrollbar-thumb-neutral-800 scrollbar-track-transparent", //
+    "scrollbar-thumb-item-light dark:scrollbar-thumb-item-dark scrollbar-track-transparent", //
 };
 
 export const COLORS = Object.entries(COLOR_CLASSES).reduce(
