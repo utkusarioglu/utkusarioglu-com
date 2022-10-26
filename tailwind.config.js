@@ -1,5 +1,5 @@
 const defaults = require("tailwindcss/defaultTheme");
-const commonConfig = require("./common.config.json");
+const commonConfig = require("./common.config");
 
 function formatFontFamilies(...items) {
   return items.map((font) => `'${font}'`).slice(-1);
@@ -28,6 +28,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        paragraph: {
+          dark: commonConfig.PARAGRAPH_DARK,
+          light: commonConfig.PARAGRAPH_LIGHT,
+        },
         base: {
           dark: commonConfig.BASE_DARK,
           light: commonConfig.BASE_LIGHT,
