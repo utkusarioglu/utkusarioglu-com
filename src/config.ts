@@ -159,25 +159,25 @@ const COLOR_CLASSES = {
   extra: "text-quaternary-light dark:text-quaternary-dark",
   extraFill: "fill-quaternary-light dark:fill-quaternary-dark",
 
-  paragraph: "text-black dark:text-white",
+  paragraph: "text-paragraph-light dark:text-paragraph-dark",
 
   print: "print:text-black print:dark:text-black",
   printBg: "print:bg-white print:dark:bg-white",
 
-  windowTitle: "bg-white/70 dark:bg-black/70",
-  canvasControlsBg: "bg-neutral-200/80 dark:bg-neutral-900/80",
-  canvasControlBorder: "border-neutral-300 dark:border-neutral-600",
-  canvasControlInput: "bg-neutral-300/70 dark:bg-neutral-800/70",
-  canvasControlInputSelected: "bg-neutral-400/70 dark:bg-neutral-700/70",
-  sectionHelpBorder: "border-neutral-400",
+  windowTitle: "bg-white/70 dark:bg-black/70", //
+  canvasControlsBg: "bg-neutral-200/80 dark:bg-neutral-900/80", //
+  canvasControlBorder: "border-neutral-300 dark:border-neutral-600", //
+  canvasControlInput: "bg-neutral-300/70 dark:bg-neutral-800/70", //
+  canvasControlInputSelected: "bg-neutral-400/70 dark:bg-neutral-700/70", //
+  sectionHelpBorder: "border-neutral-400", //
 
   primaryButtonBg: "bg-primary-light dark:bg-primary-dark",
-  primaryButtonText: "text-black dark:text-white",
+  primaryButtonText: "text-paragraph-dark dark:text-paragraph-light", //
   secondaryButtonBg: "bg-secondary-light dark:bg-secondary-dark",
-  secondaryButtonText: "text-black dark:text-white",
+  secondaryButtonText: "text-paragraph-dark dark:text-paragraph-light", //
 
   scrollbar:
-    "scrollbar-thumb-neutral-300 dark:scrollbar-thumb-neutral-800 scrollbar-track-transparent",
+    "scrollbar-thumb-neutral-300 dark:scrollbar-thumb-neutral-800 scrollbar-track-transparent", //
 };
 
 export const COLORS = Object.entries(COLOR_CLASSES).reduce(
