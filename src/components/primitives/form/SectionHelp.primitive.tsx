@@ -17,7 +17,9 @@ const SectionHelp: FC<SectionHelpProps> = ({ children, enabled }) => {
       )}
     >
       <legend>
-        <span className="px-2 font-bold">Help</span>
+        <span className={c("px-2 font-bold", COLORS.sectionHelpTitle)}>
+          Help
+        </span>
       </legend>
       {children}
     </fieldset>
