@@ -13,4 +13,9 @@
   html {
     -webkit-tap-highlight-color: transparent;
   }
+
+  ::-webkit-scrollbar-thumb {
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+  }
 }
