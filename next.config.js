@@ -6,7 +6,7 @@ const {
   PHASE_PRODUCTION_BUILD,
 } = require("next/constants");
 const withManifestBuilder = require("./scripts/plugin");
-const commonConfig = require("./common.config.json");
+const commonConfig = require("./common.config");
 
 const isProduction = process.env.NODE_ENV === "production";
 const subdomain = process.env.SUBDOMAIN;
