@@ -134,6 +134,10 @@ export const HEX = {
     dark: process.env.LOWEST_DARK,
     light: process.env.HIGHEST_LIGHT,
   },
+  shadow: {
+    light: process.env.LOW_LIGHT,
+    dark: process.env.HIGH_DARK,
+  },
 };
 
 export const HSL = {
@@ -155,9 +159,9 @@ const COLOR_CLASSES = {
   secondaryText: "text-tertiary-light dark:text-tertiary-dark",
   secondaryFill: "fill-tertiary-light dark:fill-tertiary-dark",
 
-  route: "text-tertiary-light/70 dark:text-tertiary-dark/70",
-  extra: "text-quaternary-light dark:text-quaternary-dark",
-  extraFill: "fill-quaternary-light dark:fill-quaternary-dark",
+  route: "text-tertiary-light dark:text-tertiary-dark",
+  extra: "text-tertiary-light dark:text-tertiary-dark",
+  extraFill: "fill-tertiary-light dark:fill-tertiary-dark",
 
   paragraph: "text-paragraph-light dark:text-paragraph-dark",
 
@@ -224,8 +228,8 @@ export const MASKS = {
   homeBg: `linear-gradient(90deg, ${ONE}, ${O3}, ${OO5}, ${O3}, ${ONE})`,
   canvasBgH: `linear-gradient(90deg, ${O1}, ${ONE}, ${ONE}, ${ONE}, ${ONE})`,
   canvasSmV: `linear-gradient(0deg, ${O5} 55px, ${ONE} 75px, ${ONE} calc(100% - 85px), ${O1} calc(100% - 65px))`,
-  notHomeSmV: `linear-gradient(0deg, ${O1} 55px, ${O2} 75px, ${O2} calc(100% - 85px), ${O1} calc(100% - 65px))`,
-  content: `linear-gradient(0deg, ${ZERO} 55px, ${ONE} 60px, ${ONE} calc(100% - 65px), ${ZERO} calc(100% - 60px))`,
+  notHomeSmV: `linear-gradient(0deg, ${OO5} 55px, ${O1} 75px, ${O1} calc(100% - 85px), ${OO5} calc(100% - 65px))`,
+  content: `linear-gradient(0deg, ${ZERO} 55px, ${ONE} 57px, ${ONE} calc(100% - 62px), ${ZERO} calc(100% - 60px))`,
 };
 
 export const TRANSPARENT_MASK = [
