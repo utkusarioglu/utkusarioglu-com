@@ -2,19 +2,16 @@ const defaults = require("tailwindcss/defaultTheme");
 const commonConfig = require("./common.config");
 
 function formatFontFamilies(...items) {
-  return items.map((font) => `'${font}'`).slice(-1);
+  return items.map((font) => `'${font}'`).slice(-1)[0];
 }
 
 module.exports = {
   darkMode: "class",
   theme: {
     fontFamily: {
-      sans: formatFontFamilies("Quicksand")[0],
-      display: formatFontFamilies("Galada")[0],
-      heading: formatFontFamilies(
-        // "Poppins",
-        "Raleway"
-      )[0],
+      sans: formatFontFamilies("Quicksand"),
+      display: formatFontFamilies("Galada"),
+      heading: formatFontFamilies("Raleway"),
     },
     fontSize: {
       ...defaults.fontSize,
@@ -59,10 +56,6 @@ module.exports = {
         tertiary: {
           dark: commonConfig.TERTIARY_DARK,
           light: commonConfig.TERTIARY_LIGHT,
-        },
-        quaternary: {
-          dark: commonConfig.QUATERNARY_DARK,
-          light: commonConfig.QUATERNARY_LIGHT,
         },
       },
       maxWidth: {
