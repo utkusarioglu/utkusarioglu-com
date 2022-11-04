@@ -1,3 +1,4 @@
+import { CSSProperties } from "react";
 import { LayoutSlice } from "_contexts/layout/Layout.context.types";
 
 export type NavModes = "aside" | "bottom" | "center";
@@ -30,4 +31,5 @@ type INavItemCommon = {
 export type NavItemProps = Pick<INavItem, "href" | "type" | "title"> & {
   fontSize: FontSizes;
   mode: NavModes;
+  zIndex: CSSProperties["zIndex"];
 };
