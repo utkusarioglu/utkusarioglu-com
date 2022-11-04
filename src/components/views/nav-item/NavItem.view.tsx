@@ -15,7 +15,7 @@ import { useDeviceQuery } from "_hooks/device/device.hook";
 const NavItem: FC<NavItemProps> = (props) => {
   const containerRef = useRef<HTMLDivElement>();
   const { isSm } = useDeviceQuery();
-  const { fontSize, mode, href, type, title } = props;
+  const { fontSize, mode, href, type, title, zIndex } = props;
   const { isActiveRoute, isCanvas } = useEnhancedRouter();
   const isActive = isActiveRoute(href);
   const paddingAndMargins = computePaddingAndMargins(fontSize, mode);
@@ -33,21 +33,27 @@ const NavItem: FC<NavItemProps> = (props) => {
 
   if (type === "social") {
     return (
-      <AnimatedLink href={href} paddingAndMargins={paddingAndMargins}>
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={c(colorAndFontSize, "font-display")}
-        >
-          {title}
-        </a>
-      </AnimatedLink>
+      <div style={{ zIndex }}>
+        <AnimatedLink href={href} paddingAndMargins={paddingAndMargins}>
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={c(colorAndFontSize, "font-display")}
+          >
+            {title}
+          </a>
+        </AnimatedLink>
+      </div>
     );
   }
 
   return (
-    <div ref={containerRef} className={c("relative", paddingAndMargins)}>
+    <div
+      ref={containerRef}
+      className={c("relative", paddingAndMargins)}
+      style={{ zIndex }}
+    >
       <AnimatePresence initial={false}>
         {isActive && hasIndicator && (
           <NavItemRouteIndicatorView mode={mode} type={type} />

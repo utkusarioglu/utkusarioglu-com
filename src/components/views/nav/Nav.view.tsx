@@ -13,8 +13,14 @@ const NavView: FC<NavViewProps> = ({ mode }) => {
     case "center":
       return (
         <nav className="flex flex-col justify-center grow">
-          {navItems.map((item) => (
-            <NavItem key={item.title} {...item} fontSize="large" mode={mode} />
+          {navItems.map((item, index) => (
+            <NavItem
+              key={item.title}
+              {...item}
+              fontSize="large"
+              mode={mode}
+              zIndex={index}
+            />
           ))}
         </nav>
       );
@@ -28,10 +34,16 @@ const NavView: FC<NavViewProps> = ({ mode }) => {
             type="home"
             fontSize="small"
             mode={mode}
-            // show={true}
+            zIndex={1}
           />
-          {navItems.map((item) => (
-            <NavItem key={item.title} {...item} fontSize="small" mode={mode} />
+          {navItems.map((item, index) => (
+            <NavItem
+              key={item.title}
+              {...item}
+              fontSize="small"
+              mode={mode}
+              zIndex={1 + index}
+            />
           ))}
         </nav>
       );
@@ -45,10 +57,16 @@ const NavView: FC<NavViewProps> = ({ mode }) => {
             type="home"
             fontSize="small"
             mode={mode}
-            // show={true}
+            zIndex={1}
           />
-          {navItems.map((item) => (
-            <NavItem key={item.title} {...item} fontSize="small" mode={mode} />
+          {navItems.map((item, index) => (
+            <NavItem
+              key={item.title}
+              {...item}
+              fontSize="small"
+              mode={mode}
+              zIndex={1 + index}
+            />
           ))}
           <ExtraNavView mode="bottom" />
         </nav>
