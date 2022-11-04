@@ -35,6 +35,7 @@ run_docker() {
     --name utkusarioglu-com-puppeteer-pdf \
     ghcr.io/puppeteer/puppeteer:latest \
     bash -c "\
+      yarn \
       NODE_EXTRA_CA_CERTS=$node_certificate_authority \
       node '$work_dir/src/index.js'\
     "
