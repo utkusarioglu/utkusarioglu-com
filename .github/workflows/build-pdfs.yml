@@ -51,6 +51,8 @@ jobs:
           mkdir -p ".certs/root/certs"
           mv server.crt server.key .certs/server/
           mv root.crt .certs/root/certs/
+          # This is done to pleas the pptruser: the user in 
+          # puppeteer container.
           sudo chmod -R +r .certs
 
       - name: Run Puppeteer pdf creation

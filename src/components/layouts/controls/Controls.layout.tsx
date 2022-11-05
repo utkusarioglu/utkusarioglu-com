@@ -17,7 +17,7 @@ const ControlsLayout: FC<ControlsLayoutProps> = ({ route }) => {
       <ImageViewerLayout />
       <CanvasLayout />
       <ExtraNavLayout titleRef={titleRef} />
-      <NavLayout titleRef={titleRef} />
+      <NavLayout />
       <TitleLayout ref={titleRef} />
     </>
   );
