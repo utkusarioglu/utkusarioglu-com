@@ -1,13 +1,14 @@
 version: "3.9"
 services:
   webclient:
+    environment:
+      GH_TOKEN: ${GH_TOKEN}
     ports:
       - 443:443
       - 3000:3000
     volumes:
       - vscode-exts:/root/.vscode-server/extensions
       - vscode-exts-insiders:/root/.vscode-server-insiders/extensions
-      - ~/.config/gh:/home/node/.config/gh:ro
     command: /bin/sh -c "while sleep 1000; do :; done"
 
 volumes:
