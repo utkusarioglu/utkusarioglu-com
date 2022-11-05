@@ -3,22 +3,29 @@ import { type FC } from "react";
 import { Theme } from "_types/theme.types";
 import { type MotionVariants } from "_types/vendors/framer-motion.types";
 import { type AnimatedLinkProps } from "./AnimatedLink.primitive.types";
+import { HEX } from "_config";
+import { useTheme } from "_hooks/theme/theme.hook";
 
 const AnimatedLink: FC<AnimatedLinkProps> = ({
   href,
   paddingAndMargins,
   children,
 }) => {
+  const { getActive } = useTheme();
+  const activeTheme = getActive();
   return (
     <MDiv
       key={href}
-      variants={variants("dark")}
       initial="hidden"
       animate="enter"
       whileHover="hover"
       whileTap="tap"
       exit="exit"
       className={paddingAndMargins}
+      variants={variants(activeTheme)}
+      style={{
+        textShadow: `0px 0px 0px ${HEX.shadow[activeTheme]}`,
+      }}
     >
       {children}
     </MDiv>
@@ -30,14 +37,12 @@ const variants: (theme: Theme) => MotionVariants<"div"> = (theme) => ({
     opacity: 1,
     x: 0,
     y: 0,
-    // textShadow: theme === "light" ? "0px 0px 10px #e5e5e5" : "",
   },
   hover: {
     opacity: 1,
     x: -10,
     y: 0,
-    textShadow:
-      theme === "light" ? "10px 10px 20px #171717" : "10px 10px 20px #050505",
+    textShadow: `10px 10px 5px ${HEX.shadow[theme]}`,
   },
   tap: { scale: 0.8 },
 });
