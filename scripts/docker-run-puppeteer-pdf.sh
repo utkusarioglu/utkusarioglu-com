@@ -18,26 +18,28 @@ fi
 clean_artifacts() {
   rm -rf $host_artifacts_path
   mkdir -p $host_artifacts_path/{compressed,raw,screenshots}
-  chown -R 1000:1000 $host_artifacts_path
+  # This is required to please pptruser: the user inside the 
+  # puppeteer container.
+  chmod -R 777 "$host_artifacts_path"
 }
 
 run_docker() {
   docker run -i \
     --init \
-    --user 1000:1000 \
     --cap-add=SYS_ADMIN \
     --add-host www.utkusarioglu.com:host-gateway \
     -v "$host_puppeteer_path/src:$work_dir/src" \
     -v "$host_artifacts_path:$work_dir/artifacts" \
-    -v $CERTS_FOLDER/server:$work_dir/.certs/server  \
-    -v $CERTS_FOLDER/root:$work_dir/.certs/root  \
+    -v $CERTS_FOLDER:$work_dir/.certs  \
     --rm \
     --name utkusarioglu-com-puppeteer-pdf \
     ghcr.io/puppeteer/puppeteer:latest \
     bash -c "\
-      yarn \
-      NODE_EXTRA_CA_CERTS=$node_certificate_authority \
-      node '$work_dir/src/index.js'\
+      cd ./node_modules/puppeteer;
+      npm install;
+      cd ../..;
+      export NODE_EXTRA_CA_CERTS="$node_certificate_authority"; 
+      node '$work_dir/src/index.js';
     "
 }
 
