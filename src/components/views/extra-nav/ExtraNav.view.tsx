@@ -26,6 +26,7 @@ const ExtraNavView: FC<ExtraNavViewProps> = ({ mode }) => {
         href="/canvas"
         fontSize="small"
         mode={mode}
+        zIndex={1}
       />
       <AnimatedLink href="theme" paddingAndMargins="">
         <a

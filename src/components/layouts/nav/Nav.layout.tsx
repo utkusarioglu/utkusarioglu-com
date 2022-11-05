@@ -8,11 +8,12 @@ import { useDeviceQuery } from "_hooks/device/device.hook";
 import { useWindow } from "_hooks/window/window.hook";
 import { homeNavX, homeNavY } from "_utils/positioning.utils";
 import type { MotionVariantRecord } from "_types/vendors/framer-motion.types";
-import { type NavLayoutProps } from "./Nav.layout.types";
 import { useLayoutContext } from "_contexts/layout/Layout.context";
 import c from "classnames";
 
-const NavLayout: FC<NavLayoutProps> = ({ titleRef }) => {
+interface NavLayoutProps {}
+
+const NavLayout: FC<NavLayoutProps> = () => {
   const { navigation } = useLayoutContext();
   const { isHome } = useEnhancedRouter();
   const { isSm } = useDeviceQuery();
