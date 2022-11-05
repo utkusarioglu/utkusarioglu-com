@@ -45,7 +45,7 @@ const TitleView: FC<TitleViewProps> = ({ className }) => {
                 animate="animate"
                 exit="exit"
                 key={route}
-                className={`${className} flex flex-row items-center absolute`}
+                className={c("flex flex-row items-center absolute", className)}
                 transition={TRANSITIONS.route}
               >
                 <span className={c("px-1", COLORS.route)}>
