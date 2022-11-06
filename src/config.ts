@@ -135,8 +135,8 @@ export const HEX = {
     light: process.env.HIGHEST_LIGHT,
   },
   shadow: {
-    light: process.env.LOW_LIGHT,
-    dark: process.env.HIGH_DARK,
+    light: process.env.TERTIARY_LIGHT,
+    dark: process.env.TERTIARY_DARK,
   },
 };
 
