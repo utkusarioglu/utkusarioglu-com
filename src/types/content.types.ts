@@ -29,3 +29,7 @@ export type Confided = {
 export type Screenable = {
   screen: boolean;
 };
+
+export type Named = {
+  name: "Utku Sarioglu";
+};
