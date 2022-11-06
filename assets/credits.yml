@@ -44,6 +44,9 @@ techStack:
       value: AWS Cloudfront
     - title: Development environment
       value: devcontainer
-      # TODO Find the original library for perlin noise
-    - title: Canvas library adapted from
-      value: <someone>
+    - title: Canvas renderer inspiration
+      value: github.com/josephg/noisejs
+    - title: Photography tools
+      value: Adobe Lightroom, Adobe Photoshop
+    - title: Vector graphic tool
+      value: Adobe Illustrator
