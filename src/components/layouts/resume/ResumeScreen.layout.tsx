@@ -1,15 +1,16 @@
 import { type FC } from "react";
 import { type Resume } from "_types/resume.types";
+import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
+import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
+import ContentCardSectionView from "_views/content-card/ContentCardSection.view";
+
+import ResumeCertificationLi from "_views/resume-screen/ResumeScreenCertificationLi.view";
+import ResumeContactLi from "_views/resume-screen/ResumeScreenContactLi.view";
+import ResumeDownload from "_views/resume-screen/ResumeScreenDownload.view";
+import ResumeEducationLi from "_views/resume-screen/ResumeScreenEducationLi.view";
 import ResumeIntroduction from "_views/resume-screen/ResumeScreenIntroduction.view";
-import ResumeSection from "_views/content-card/ContentCardSection.view";
 import ResumeSkills from "_views/resume-screen/ResumeScreenSkills.view";
 import ResumeWorkExperienceLi from "_views/resume-screen/ResumeScreenWorkExperienceLi.view";
-import ResumeCertificationLi from "_views/resume-screen/ResumeScreenCertificationLi.view";
-import ResumeEducationLi from "_views/resume-screen/ResumeScreenEducationLi.view";
-import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
-import ResumeContactLi from "_views/resume-screen/ResumeScreenContactLi.view";
-import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
-import ResumeDownload from "_views/resume-screen/ResumeScreenDownload.view";
 
 export interface ResumeScreenLayoutProps {
   resume: Resume;
@@ -31,7 +32,7 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
       <ResumeSkills {...skills} />
     </ContentCardBackgroundLayout>
     <ContentCardBackgroundLayout>
-      <ResumeSection
+      <ContentCardSectionView
         {...relevantWorkExperience}
         listItemComponent={({ item }) => (
           <ContentCardItemLayout>
@@ -41,13 +42,13 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
       />
     </ContentCardBackgroundLayout>
     <ContentCardBackgroundLayout>
-      <ResumeSection
+      <ContentCardSectionView
         {...relevantCertifications}
         listItemComponent={({ item }) => <ResumeCertificationLi {...item} />}
       />
     </ContentCardBackgroundLayout>
     <ContentCardBackgroundLayout>
-      <ResumeSection
+      <ContentCardSectionView
         {...education}
         listItemComponent={({ item }) => (
           <ContentCardItemLayout>
@@ -57,7 +58,7 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
       />
     </ContentCardBackgroundLayout>
     <ContentCardBackgroundLayout>
-      <ResumeSection
+      <ContentCardSectionView
         {...contact}
         listItemComponent={({ item }) => <ResumeContactLi {...item} />}
       />

@@ -5,22 +5,24 @@ import { COLORS } from "_config";
 import ContentCardLinkView from "_views/content-card/ContentCardLink.view";
 import H3 from "_primitives/headings/H3.primitive";
 
+const RESUME_LIST = [
+  {
+    title: "Letter",
+    remarks: "North American standard",
+    folder: "letter",
+  },
+  {
+    title: "A4",
+    remarks: "Standard format for Europe and the rest of the world",
+    folder: "a4",
+  },
+];
+
 const ResumeScreenDownloadView = () => (
   <ContentCardBackgroundLayout>
     <ContentCardSectionView
       title="Download Resume"
-      list={[
-        {
-          title: "Letter",
-          remarks: "North American standard",
-          folder: "letter",
-        },
-        {
-          title: "A4",
-          remarks: "Standard format for Europe and the rest of the world",
-          folder: "a4",
-        },
-      ]}
+      list={RESUME_LIST}
       listItemComponent={({ item: { title, folder, remarks } }) => (
         <ContentCardLinkView
           href={`/_next/static/resume/${folder}/utku-sarioglu-resume.pdf`}

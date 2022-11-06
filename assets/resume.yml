@@ -1,4 +1,6 @@
 name: Utku Sarioglu
+page: Resume
+
 introduction:
   title: Introduction
   print: false
@@ -13,6 +15,7 @@ introduction:
       handling complexity. Experienced in international contexts and handling tricky
       personnel and clients. Proven to be capable of creating wholistic solutions,
       meeting complex requirements and handling stressful tasks.
+
 contact:
   title: Contact
   print: false
@@ -286,6 +289,7 @@ relevantWorkExperience:
           Wrote productivity modules using VBA, AutoIt, which reduced daily
           workload by 60%. While primarily working as the current accounts'
           manager.
+
 relevantCertifications:
   title: Relevant Certifications
   list:
