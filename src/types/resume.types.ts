@@ -7,6 +7,7 @@ import type {
   Screenable,
   Entity,
   Listed,
+  Named,
 } from "./content.types";
 
 export type Skill = Titled & Partial<Remarked & Confided & Printable>;
@@ -45,12 +46,12 @@ export type Education = {
 
 type Introduction = Entity;
 
-export interface Resume {
-  name: string;
+export type Resume = {
+  page: "Resume";
   introduction: Introduction;
   contact: Section<ContactListItem>;
   skills: Skills;
   relevantWorkExperience: Section<WorkExperience>;
   relevantCertifications: Section<Certification>;
   education: Section<Education>;
-}
+} & Named;
