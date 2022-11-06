@@ -1,0 +1,49 @@
+name: Utku Sarioglu
+page: Credits
+
+inspiration: 
+  title: Inspiration
+  remarks: 
+    - The seeds of the design of the page came from the background canvas.
+      The eye-catching curves of the perlin noise generator guided the rest 
+      of the design; with essentially everything either flowing with or 
+      contrasting against the curves that are present on most of the pages.
+
+sourceCode:
+  title: Source Code
+  list: 
+    - title: Github
+      remarks: 
+        - The entirety of the source code
+      url: https://www.github.com/utkusarioglu/utkusarioglu-com
+
+techStack:
+  title: Tech stack
+  list: 
+    - title: JS Framework
+      value: NextJS
+    - title: CSS Framework
+      value: TailwindCSS
+    - title: Main language
+      value: Typescript
+    - title: Unit testing library
+      value: Jest
+    - title: E2E testing library
+      value: Cypress
+    - title: Animation library
+      value: Framer Motion
+    - title: PDF creation tool
+      value: Puppeteer
+    - title: CI/CD infrastructure tool
+      value: Github Actions
+    - title: Infrastructure management tool
+      value: Terraform
+    - title: Cloud Provider
+      value: AWS S3
+    - title: Cloud Cache
+      value: AWS Cloudfront
+    - title: Development environment
+      value: devcontainer
+      # TODO Find the original library for perlin noise
+    - title: Canvas library adapted from
+      value: <someone>
