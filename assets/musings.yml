@@ -1,6 +1,10 @@
+name: Utku Sarioglu
+page: Musings
+
 remarks: 
   - |
     Some small (and big) projects that I carry out in my spare time
+
 sections:
   - title: Amusement Projects
     remarks: 
@@ -26,7 +30,9 @@ sections:
         href: /musings/kamyon
         remarks:
           - |
-            A collaboration with Ennuriye in aim of gathering amusing and insightful examples of what is colloquially called "trucker jokes" in Turkey. 
+            A collaboration with Ennuriye in aim of gathering amusing and 
+            insightful examples of what is colloquially called "trucker jokes" 
+            in Turkey. 
 
   - title: Container Templates
     remarks:
