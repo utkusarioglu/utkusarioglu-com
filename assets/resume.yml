@@ -136,11 +136,11 @@ skills:
         - title: Prometheus
           confident: false
         - title: OpenSSL
+        - title: Vault
+          confident: false
         - title: OpenTelemetry
         - title: gRPC
         - title: Puppeteer
-        - title: Vault
-          confident: false
     - title: Testing and Analysis
       list:
         - title: Cypress
