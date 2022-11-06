@@ -120,7 +120,7 @@ const getBuildConfig = async (...args) => {
               sizes: [16],
             },
           ],
-          source: "assets/logo/logo.svg",
+          source: "assets/logo/logo_website.svg",
           // iconsSubfolder: "icons",
         },
         // manifestSubfolder: "",
