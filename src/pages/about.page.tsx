@@ -5,7 +5,11 @@ import EnhancedImage from "_primitives/enhanced-image/EnhancedImage.primitive";
 import P from "_primitives/paragraph/P.primitive";
 import { parse } from "yaml";
 import { readFileSync } from "fs";
-import type { About, AboutPageProps } from "_types/about.types";
+import type { About } from "_types/about.types";
+
+export interface AboutPageProps {
+  about: About;
+}
 
 export function getStaticProps() {
   const about = parse(
