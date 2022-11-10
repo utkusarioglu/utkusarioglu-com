@@ -30,7 +30,7 @@ jobs:
       - name: Generate server certificates
         uses: kofemann/action-create-certificate@v0.0.4
         with:
-          hostcert: "../../..${{ github.workspace }}/.certs/server/server.crt"
+          hostcert: "../../..${{ github.workspace }}/.certs/server/chain.crt"
           hostkey: "../../..${{ github.workspace }}/.certs/server/server.key"
           cachain: "../../..${{ github.workspace }}/.certs/root/root.crt"
       - name: Run Cypress tests

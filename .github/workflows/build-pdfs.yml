@@ -40,7 +40,7 @@ jobs:
         if: steps.resume-artifacts-cache.outputs.cache-hit != 'true'
         uses: kofemann/action-create-certificate@v0.0.4
         with:
-          hostcert: "server.crt"
+          hostcert: "chain.crt"
           hostkey: "server.key"
           cachain: "root.crt"
 
