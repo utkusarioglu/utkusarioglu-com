@@ -3,12 +3,12 @@ const puppeteer = require("puppeteer");
 const artifactsPath = "/home/pptruser/artifacts";
 const url = "https://www.utkusarioglu.com/resume";
 
-const variants = [
+const PAPER_FORMAT_VARIANTS = [
   {
     format: "a4",
     margin: {
-      x: 50,
-      y: 55,
+      x: 52,
+      y: 70,
     },
   },
   {
@@ -34,7 +34,7 @@ const variants = [
   });
   await page.screenshot({ path: `${artifactsPath}/screenshots/resume.png` });
 
-  await variants.reduce(async (chain, { format, margin }) => {
+  await PAPER_FORMAT_VARIANTS.reduce(async (chain, { format, margin }) => {
     chain = chain.then(() =>
       page.pdf({
         displayHeaderFooter: false,
