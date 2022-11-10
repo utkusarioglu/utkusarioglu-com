@@ -47,11 +47,12 @@ jobs:
       - name: Move certificates
         if: steps.resume-artifacts-cache.outputs.cache-hit != 'true'
         run: |
-          mkdir -p ".certs/server"
-          mkdir -p ".certs/root/certs"
-          mv server.crt server.key .certs/server/
+          mkdir -p .certs/server/{certs,private}
+          mkdir -p .certs/root/certs
+          mv server.crt .certs/server/certs/
+          mv server.key .certs/server/private/
           mv root.crt .certs/root/certs/
-          # This is done to pleas the pptruser: the user in 
+          # This is done to please the pptruser: the user in 
           # puppeteer container.
           sudo chmod -R +r .certs
 
