@@ -18,7 +18,7 @@ module.exports = {
       base: ["1.1rem", { lineHeight: "1.6rem" }],
     },
     gridTemplateColumns: {
-      resume: "50vw 15vw auto",
+      resume: "50vw 13vw auto",
     },
     gridTemplateRows: {
       resume: "min max",
