@@ -49,7 +49,7 @@ jobs:
         run: |
           mkdir -p .certs/server/{certs,private}
           mkdir -p .certs/root/certs
-          mv server.crt .certs/server/certs/
+          mv chain.crt .certs/server/certs/
           mv server.key .certs/server/private/
           mv root.crt .certs/root/certs/
           # This is done to please the pptruser: the user in 
