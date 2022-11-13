@@ -7,44 +7,43 @@ items:
 
   - type: paragraph
     content: |
-      My name is Utku and that's me in that photo above. Yup, I do take photos 
-      quite regularly but it has never been something I did professionally - 
-      except for a year and a half when I decided to get into product 
-      photography. But I'll come back to that later.
+      My name is Utku. That's me in that photo above, of course. And yes, 
+      I do take photos quite regularly but it has never been something I did 
+      professionally - except for a year and a half when I decided to get into 
+      product photography. But I'll come back to that later.
 
   - type: heading-2
     content: The Octopus
   
   - type: paragraph
     content: |
-      I studied economics in university. While doing that, I was regularly 
-      attending courses that math, physics and musicology majors took. I was 
-      and still am very involved in music. During that time I was also
-      a guitar and music theory instructor for the music club and wrote for
-      the economic's club magazine.
-  
+      I studied economics in university. Simultaneously, I was regular in 
+      courses that math, physics and musicology majors took. I was 
+      also a guitar and music theory instructor for the music club and wrote 
+      for the economics club's magazine throughout my university life.
+
   - type: paragraph
     content: |
-      I tend not to think too hard on questions like what I'd do on a deserted 
-      island or what my spirit animal might be, but as I'm writing this, I'm 
-      thinking that maybe an octopus could be a meaningful symbol as my spirit 
-      animal; with its multiple arms reaching a number of things and working 
-      semi-independently from each other.
+      I mention my time in university because it perfectly describes how I live. 
+      I'm usually involved with multiple things concurrently. They usually 
+      serve a common goal but that may not be obvious for a novel observer. 
+      This makes me think that maybe I should say that octopuses are my spirit
+      animal the next time someone asks.
 
   - type: paragraph
     content: |
       I followed a similar octopus-like variety in my leanings after university 
       as well. Working in various companies and pursuing music as a musician and
       a teacher, studying topics ranging from math to cognitive science, from 
-      anatomy to computer science. Taking courses on marketing, advertising,
-      social media management and some others that I cannot even recall right 
+      anatomy to programming; taking courses on marketing, advertising,
+      social media management and others that I cannot even recall right 
       now.
 
   - type: paragraph
     content: |
       Following topics to an endpoint that feels like natural cadence is what
       I have to do to rivet concepts in my head. If I have to cross discipline
-      boundaries to get there, I simply do not mind.
+      boundaries to get there, I simply have to pursue that end.
 
   - type: heading-2
     content: The Utility Belt
@@ -60,159 +59,104 @@ items:
   - type: paragraph
     content: |
       I wasn't happy with the software that the company used for monitoring 
-      thousands of companies, so I wrote my own. What I knew best at the time 
-      was Matlab at the time and it wasn't up to the task so I learned a bunch 
-      of others as the job required. But the fact that I already had a working
-      knowledge of programming as an econ major worked wonders for my career
-      during that time.
+      thousands of clients, so I wrote something supplementary to the main 
+      software. What I knew best at the time was Matlab. It was obvious that 
+      Matlab wasn't up to that task so I learned a bunch of others as my code 
+      demanded. The code I wrote was a hit and it was partially implemented 
+      into the main software that the company used. 
 
   - type: paragraph
     content: |
       The same thing kept happening as time passed. As another example, I was
       tasked as sort of a correspondence person in an oil refinery project. My
-      task was mainly to be the glue between the engineering company from which
-      I imported all the machinery, and my own company's construction people and 
-      their contractors. 
+      task was mainly to be the glue between the foreign engineering company 
+      and my own company's construction people and their contractors. I was 
+      chosen as I already had an organic relationship with both parties as the
+      trade director that imported all the machinery that was used in the 
+      project.
 
   - type: paragraph
     content: |
-      Technical, financial arguments inevitably rose between teams and 
-      departments, and I was usually there to witness the gridlocks of 
-      incompatible demands on
-      time, space, and funds. My realization at that point was that I actually
-      understood the concerns of all teams. I studied math and physics for years 
-      and that got me some way towards understanding technical issues, I had 
-      years of experience with training students for music and some other 
-      occasional subjects, which gave me the skills to help people visualize 
-      issues, explain solutions and have them accept them as their own ideas. 
+      Technical and financial arguments inevitably rose between teams and 
+      departments, and I was usually there to witness the gridlocks emerging from  
+      incompatible demands on time, space, and funds. My realization at that 
+      point was that I actually understood the concerns of all parties. I studied 
+      math and physics for years and that got me some way towards understanding 
+      technical issues, I had years of experience with training students for 
+      music and some other occasional subjects, which gave me the skills to 
+      help people visualize issues, explain solutions and have them accept 
+      them as their own ideas. 
 
   - type: paragraph
     content: |
-      As I interjected myself into these discussions, it became clear to everyone that I was 
-      able to manage a refinery project. It didn't take long before people 
-      started to turn their heads to me in meetings when there was a conflict 
-      to be resolved. This was customary at first and through my newly assumed
-      title in the project later on.
+      As I interjected myself into these discussions, it became clear to 
+      everyone that I was able to manage the project. It didn't take long 
+      before I became the go-to person for conflict resolution and big-picture 
+      things. This was customary at first, and later on, through my newly 
+      assumed title as the project manager.
     
   - type: heading-2
     content: The Aim
     
   - type: paragraph
     content: |
-      This and that
+      I can't say that I'm a big history buff but I spend some time reading on
+      early civilizations. What I tend to focus on while reading these are the
+      lives of everyday people. The kinds of hardships that they faced, what
+      they would have thought of our modern world or its inhabitants.
+
+  - type: paragraph
+    content: |
+      Most people I meet think that the world is going towards multiple 
+      disasters, that the things are changing for the worse as time passes. I'm
+      unable to think that way. I see a lot of dangers and some actions that are
+      taken much later than they ought to. But I can't help but believe that
+      we will likely solve most of our problems - then inevitably create others.
+
+  - type: paragraph
+    content: |
+      I find myself in a head space where I find a lot of uses for forced 
+      immutability created through cryptography. The kind that is used in
+      designs such as blockchain and transparency logs. I want to use these 
+      ideas to build a base of trust for society.
+
+  - type: paragraph
+    content: |
+      There are many moving pieces that need to come together and many cultural
+      shifts we will have to take to get there. But we have done similar things
+      in the past. If we can offer people working solutions, they will use 
+      them and rely on them. Maybe that reliance can be used for good things
+      from which we can all benefit.
 
   - type: heading-2
     content: What about that photography thing?
 
   - type: paragraph
     content: |
-      That was one of times I didn't realize what I was getting myself into😆 
+      That was one of times I didn't realize what I was getting myself into. 
       One of the gifts that my dad gave me during my childhood was the love of
-      photography. I spent most of my childhood shooting photos of people and 
-      landscapes.
+      photography. I spent most of my childhood doing landscape and macro 
+      photography. 
 
   - type: paragraph
     content: |
-      When my company needed new photos of their updated product line, I got 
-      involved. The smart thing would have been to let a seasoned photographer
-      handle such a task. But I wanted to learn. And I thought that my years of 
-      experience would have counted for something. Turns out I was mostly wrong😆
+      When my company needed new photos of their updated product line, I 
+      jumped at the opportunity. The smart thing would have been to 
+      let a seasoned photographer handle such a task. But I wanted to learn. 
+      I thought that my years of experience would have counted for something. 
+      Turns out I was almost entirely wrong😆
 
   - type: paragraph
     content: |
-      I eventually figured my way around using artificial lights and using 
-      Photoshop in a way that was beyond me at the time. I have to mention that
-      I got guidance from some a few people who worked in photography and design
-      during that time, which lead to florishing friendships that I'm grateful 
-      for.
+      I eventually figured my way around shooting with artificial lighting 
+      and using Photoshop in a way that was beyond me at the time. I have to 
+      mention that I got guidance from some people who worked in photography 
+      and design during that time, which lead to flourishing friendships for 
+      which that I'm grateful.
 
   - type: paragraph
     content: |
-      I still occasionally see some of the photos I have taken on billboards
-      and online ads. It's definitely one of the coolest feelings to see your
-      work put on a giant screen for everyone to see.
-
-  - type: heading-2
-    content: old stuff
-
-  - type: paragraph
-    content: |
-      I'm sure you have been asked about what your spirit animal may be. I know 
-      I have been asked that question plenty of times. I usually struggle with
-      answering these sorts of questions but the more I think about it, the more
-      I gravitate towards thinking that mine must be octopus.
-  
-  - type: paragraph
-    content: |
-      I say this because the multiple arms of an octopus reminds me of how my 
-      life has been defined by me having my arms at multiple, and some times 
-      unrelated, professional walks and interests at the same time. 
-
-  - type: paragraph
-    content: |
-      I studied economics in university while attending classes for mathematicians
-      and physicists because what I was learning was helping me with my quest in
-      understanding the nature of music. I was also one of the guitar instructors
-      in music club and a contributor to the university's economics magazine.
-    
-  - type: paragraph
-    content: |
-      After my graduation, I decided to pursue music while working in various
-      companies related to my university degree. During my spare time I was 
-      working on expanding my understanding of math, physics, cognitive and 
-      computer science. I even remember studying anatomy and neuropsychology 
-      during this time because their relation to psychology and cognitive 
-      science.
-  
-  - type: paragraph
-    content: |
-      As time passed, my focus naturally shifted. Throughout my life, I ended 
-      up studying advertising, marketing, social media management and product 
-      photography; among other things. I thought the latter wouldn't be a huge
-      jump over my already serviceable photography knowledge but I was dead 
-      wrong. I eventually figured that one out as well. I have to admit 
-      that seeing your photos on a giant billboard is very rewarding.
-    
-  - type: paragraph
-    content: |
-      As I walk through life, some ideas take deeper roots inside me. I have an 
-      experience based proof how how little I know and understand on even the 
-      topics on which I spend most of my time. How 
-
-
-  - type: paragraph
-    content: |
-      I'm an economist by degree but I have spent a considerable time studying 
-      music, math, physics and programming. In addition to these primary 
-      interests of mine, I have also been involved with photography, 
-      advertising and marketing through the professional roles I have served.
-      
-  - type: paragraph
-    content: |
-      I tend to thrive under challenges I understand. It's a very common thing 
-      for me to lose track of time while working on something I feel passionate 
-      about. The downside of this is that I spend some of my days upset with 
-      myself if I cannot get something to reach a state I'm satisfied with.
-
-  - type: paragraph
-    content: |
-      I tend to rise to leadership positions in most of the teams I participate 
-      in. I rarely intend for this to happen but I am usually level-headed and 
-      open-minded in many situations while many others give in to frustrations 
-      that are induced through exhaustion or stress. Heads usually end up 
-      turning to me to guide the conversation or to resolve the gridlock.
-
-  - type: paragraph
-    content: |
-      I want to help build a world where true information is readily available, 
-      where there is trust in society through implementation of the right 
-      carrots and the fewest sticks. I believe that we are on the cusp of many 
-      great changes that can help realize these ideals.
-
-  - type: paragraph
-    content: |
-      I spend my free time reading articles and watching videos about 
-      prehistoric civilizations, art history, contemporary civilian and 
-      military engineering projects. I also enjoy taking photos and processing 
-      them. But most of all, my free time is devoted to music. I am an avid 
-      classical music, jazz, rock and metal listener and performer.
+      I still occasionally come across billboards and websites that feature 
+      some of the photos I have taken during that time. It's definitely one 
+      of the coolest feelings to see your work put on a giant screen for 
+      everyone to see.
