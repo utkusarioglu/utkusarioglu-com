@@ -20,11 +20,11 @@ jobs:
     uses: ./.github/workflows/build-pdfs.yml
     secrets: inherit
 
-  deploy-website:
+  declare-finish:
     needs:
       - build-website
       - build-pdfs
-    name: Sync changes to AWS
+    name: Declare finish
     runs-on: ubuntu-latest
     permissions:
       id-token: write
