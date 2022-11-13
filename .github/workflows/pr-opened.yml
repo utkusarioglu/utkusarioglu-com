@@ -1,0 +1,40 @@
+name: pr-opened
+
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - main
+      - dev
+  workflow_dispatch:
+
+jobs:
+  build-website:
+    uses: ./.github/workflows/build-website.yml
+    secrets: inherit
+
+  build-pdfs:
+    needs:
+      - build-website
+    uses: ./.github/workflows/build-pdfs.yml
+    secrets: inherit
+
+  deploy-website:
+    needs:
+      - build-website
+      - build-pdfs
+    name: Sync changes to AWS
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Telegram notifications
+        if: always()
+        uses: utkusarioglu/telegram-notifications@main
+        with:
+          telegram_id: ${{ secrets.TELEGRAM_ID }}
+          telegram_token: ${{ secrets.TELEGRAM_TOKEN }}
+          job_status: ${{ job.status }}
+          github_context: ${{ toJson(github) }}
