@@ -1,9 +1,185 @@
 name: Utku Sarioglu
 items:
   - type: image
-    alt: "Utku Sarioglu"
-    credits: "photo by Onur Sarioglu"
+    alt: Utku Sarioglu
+    credits: photo by Onur Sarioglu
     src: _assets/images/utku-1x1.jpg
+
+  - type: paragraph
+    content: |
+      My name is Utku and that's me in that photo above. Yup, I do take photos 
+      quite regularly but it has never been something I did professionally - 
+      except for a year and a half when I decided to get into product 
+      photography. But I'll come back to that later.
+
+  - type: heading-2
+    content: The Octopus
+  
+  - type: paragraph
+    content: |
+      I studied economics in university. While doing that, I was regularly 
+      attending courses that math, physics and musicology majors took. I was 
+      and still am very involved in music. During that time I was also
+      a guitar and music theory instructor for the music club and wrote for
+      the economic's club magazine.
+  
+  - type: paragraph
+    content: |
+      I tend not to think too hard on questions like what I'd do on a deserted 
+      island or what my spirit animal might be, but as I'm writing this, I'm 
+      thinking that maybe an octopus could be a meaningful symbol as my spirit 
+      animal; with its multiple arms reaching a number of things and working 
+      semi-independently from each other.
+
+  - type: paragraph
+    content: |
+      I followed a similar octopus-like variety in my leanings after university 
+      as well. Working in various companies and pursuing music as a musician and
+      a teacher, studying topics ranging from math to cognitive science, from 
+      anatomy to computer science. Taking courses on marketing, advertising,
+      social media management and some others that I cannot even recall right 
+      now.
+
+  - type: paragraph
+    content: |
+      Following topics to an endpoint that feels like natural cadence is what
+      I have to do to rivet concepts in my head. If I have to cross discipline
+      boundaries to get there, I simply do not mind.
+
+  - type: heading-2
+    content: The Utility Belt
+
+  - type: paragraph
+    content: |
+      I have to admit that my thirst for knowledge has yielded some unexpected
+      results during my life. During the early years of my professional life, I
+      was working at a distributor for tech products. A part of my 
+      responsibilities involved monitoring credits defined to various clients
+      that pulled products from us. 
+      
+  - type: paragraph
+    content: |
+      I wasn't happy with the software that the company used for monitoring 
+      thousands of companies, so I wrote my own. What I knew best at the time 
+      was Matlab at the time and it wasn't up to the task so I learned a bunch 
+      of others as the job required. But the fact that I already had a working
+      knowledge of programming as an econ major worked wonders for my career
+      during that time.
+
+  - type: paragraph
+    content: |
+      The same thing kept happening as time passed. As another example, I was
+      tasked as sort of a correspondence person in an oil refinery project. My
+      task was mainly to be the glue between the engineering company from which
+      I imported all the machinery, and my own company's construction people and 
+      their contractors. 
+
+  - type: paragraph
+    content: |
+      Technical, financial arguments inevitably rose between teams and 
+      departments, and I was usually there to witness the gridlocks of 
+      incompatible demands on
+      time, space, and funds. My realization at that point was that I actually
+      understood the concerns of all teams. I studied math and physics for years 
+      and that got me some way towards understanding technical issues, I had 
+      years of experience with training students for music and some other 
+      occasional subjects, which gave me the skills to help people visualize 
+      issues, explain solutions and have them accept them as their own ideas. 
+
+  - type: paragraph
+    content: |
+      As I interjected myself into these discussions, it became clear to everyone that I was 
+      able to manage a refinery project. It didn't take long before people 
+      started to turn their heads to me in meetings when there was a conflict 
+      to be resolved. This was customary at first and through my newly assumed
+      title in the project later on.
+    
+  - type: heading-2
+    content: The Aim
+    
+  - type: paragraph
+    content: |
+      This and that
+
+  - type: heading-2
+    content: What about that photography thing?
+
+  - type: paragraph
+    content: |
+      That was one of times I didn't realize what I was getting myself into😆 
+      One of the gifts that my dad gave me during my childhood was the love of
+      photography. I spent most of my childhood shooting photos of people and 
+      landscapes.
+
+  - type: paragraph
+    content: |
+      When my company needed new photos of their updated product line, I got 
+      involved. The smart thing would have been to let a seasoned photographer
+      handle such a task. But I wanted to learn. And I thought that my years of 
+      experience would have counted for something. Turns out I was mostly wrong😆
+
+  - type: paragraph
+    content: |
+      I eventually figured my way around using artificial lights and using 
+      Photoshop in a way that was beyond me at the time. I have to mention that
+      I got guidance from some a few people who worked in photography and design
+      during that time, which lead to florishing friendships that I'm grateful 
+      for.
+
+  - type: paragraph
+    content: |
+      I still occasionally see some of the photos I have taken on billboards
+      and online ads. It's definitely one of the coolest feelings to see your
+      work put on a giant screen for everyone to see.
+
+  - type: heading-2
+    content: old stuff
+
+  - type: paragraph
+    content: |
+      I'm sure you have been asked about what your spirit animal may be. I know 
+      I have been asked that question plenty of times. I usually struggle with
+      answering these sorts of questions but the more I think about it, the more
+      I gravitate towards thinking that mine must be octopus.
+  
+  - type: paragraph
+    content: |
+      I say this because the multiple arms of an octopus reminds me of how my 
+      life has been defined by me having my arms at multiple, and some times 
+      unrelated, professional walks and interests at the same time. 
+
+  - type: paragraph
+    content: |
+      I studied economics in university while attending classes for mathematicians
+      and physicists because what I was learning was helping me with my quest in
+      understanding the nature of music. I was also one of the guitar instructors
+      in music club and a contributor to the university's economics magazine.
+    
+  - type: paragraph
+    content: |
+      After my graduation, I decided to pursue music while working in various
+      companies related to my university degree. During my spare time I was 
+      working on expanding my understanding of math, physics, cognitive and 
+      computer science. I even remember studying anatomy and neuropsychology 
+      during this time because their relation to psychology and cognitive 
+      science.
+  
+  - type: paragraph
+    content: |
+      As time passed, my focus naturally shifted. Throughout my life, I ended 
+      up studying advertising, marketing, social media management and product 
+      photography; among other things. I thought the latter wouldn't be a huge
+      jump over my already serviceable photography knowledge but I was dead 
+      wrong. I eventually figured that one out as well. I have to admit 
+      that seeing your photos on a giant billboard is very rewarding.
+    
+  - type: paragraph
+    content: |
+      As I walk through life, some ideas take deeper roots inside me. I have an 
+      experience based proof how how little I know and understand on even the 
+      topics on which I spend most of my time. How 
+
+
   - type: paragraph
     content: |
       I'm an economist by degree but I have spent a considerable time studying 
