@@ -6,6 +6,7 @@ import P from "_primitives/paragraph/P.primitive";
 import { parse } from "yaml";
 import { readFileSync } from "fs";
 import type { About } from "_types/about.types";
+import H2 from "_primitives/headings/H2.primitive";
 
 export interface AboutPageProps {
   about: About;
@@ -41,6 +42,10 @@ const AboutPage: FC<AboutPageProps> = ({ about }) => {
                 maxResponsiveWidth={MAX_W_CONTENT}
               />
             );
+          case "heading-2": 
+            return (
+              <H2 key={item.content}>{item.content}</H2>
+            )
         }
       })}
     </ContentLayout>

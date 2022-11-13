@@ -12,7 +12,12 @@ interface AboutImage {
   src: string;
 }
 
-type AboutItems = AboutParagraph | AboutImage;
+interface AboutHeading2 {
+  type: "heading-2";
+  content: string;
+}
+
+type AboutItems = AboutParagraph | AboutImage | AboutHeading2;
 
 export type About = {
   page: "About";
