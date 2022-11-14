@@ -15,7 +15,8 @@
         }
       },
 			"extensions": [
-        "bradlc.vscode-tailwindcss"
+        "bradlc.vscode-tailwindcss",
+        "HashiCorp.terraform"
       ]
 		}
   }
