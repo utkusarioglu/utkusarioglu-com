@@ -39,7 +39,7 @@ const CreditsPage: FC<CreditsPageProps> = ({
           className="rounded-md"
           alt="Resume title image"
           credits="photo by Utku Sarioglu"
-          src={require("_assets/images/waves-and-bird.jpg")}
+          src={require("_assets/images/camp-fire.jpg")}
           maxResponsiveWidth={MAX_W_CONTENT}
         />
       </VerticalMarginsLayout>
