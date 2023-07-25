@@ -41,7 +41,7 @@ jobs:
         uses: kofemann/action-create-certificate@v0.0.4
         with:
           hostcert: "chain.crt"
-          hostkey: "server.key"
+          hostkey: "tls.key"
           cachain: "ca.crt"
 
       - name: Move certificates
