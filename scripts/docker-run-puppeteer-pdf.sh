@@ -39,8 +39,10 @@ run_docker() {
       npm install;
       cd ../..;
       echo 'look here --'
-      ls .certs
-      ls .certs/server
+      pwd
+      ls $work_dir
+      ls $work_dir/.certs
+      ls $work_dir/.certs/server
       echo 'look here --'
       export NODE_EXTRA_CA_CERTS="$node_certificate_authority"; 
       node '$work_dir/src/index.js';
