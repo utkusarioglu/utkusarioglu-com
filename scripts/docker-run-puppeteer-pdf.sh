@@ -24,6 +24,13 @@ clean_artifacts() {
 }
 
 run_docker() {
+  echo 'look here host ---'
+  pwd
+  echo $CERTS_FOLDER
+  ls $CERTS_FOLDER
+  ls $CERTS_FOLDER/server
+  cat $CERTS_FOLDER/server/ca.crt
+  echo 'look here host ---'
   docker run -i \
     --init \
     --cap-add=SYS_ADMIN \
