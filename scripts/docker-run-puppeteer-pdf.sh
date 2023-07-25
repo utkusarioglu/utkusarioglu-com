@@ -38,6 +38,10 @@ run_docker() {
       cd ./node_modules/puppeteer;
       npm install;
       cd ../..;
+      echo 'look here --'
+      ls .certs
+      ls .certs/server
+      echo 'look here --'
       export NODE_EXTRA_CA_CERTS="$node_certificate_authority"; 
       node '$work_dir/src/index.js';
     "
