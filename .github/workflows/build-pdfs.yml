@@ -47,14 +47,15 @@ jobs:
       - name: Move certificates
         if: steps.resume-artifacts-cache.outputs.cache-hit != 'true'
         run: |
-          mkdir -p .certs/server/{certs,private}
-          mkdir -p .certs/root/certs
+          mkdir -p .certs/server
           mv chain.crt .certs/server/
           mv tls.key .certs/server/
           mv ca.crt .certs/server/
           # This is done to please the pptruser: the user in 
           # puppeteer container.
           sudo chmod -R +r .certs
+          ls -al .certs
+          ls -al .certs/server
 
       - name: Run Puppeteer pdf creation
         if: steps.resume-artifacts-cache.outputs.cache-hit != 'true'
