@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   webclient:
-    image: utkusarioglu/node-devcontainer:17-slim.0.3
+    image: utkusarioglu/node-devcontainer:20-slim.0.7
     volumes:
       - type: bind
         source: ..
