@@ -31,8 +31,8 @@ jobs:
         uses: kofemann/action-create-certificate@v0.0.4
         with:
           hostcert: "../../..${{ github.workspace }}/.certs/server/chain.crt"
-          hostkey: "../../..${{ github.workspace }}/.certs/server/server.key"
-          cachain: "../../..${{ github.workspace }}/.certs/root/root.crt"
+          hostkey: "../../..${{ github.workspace }}/.certs/server/tls.key"
+          cachain: "../../..${{ github.workspace }}/.certs/server/ca.crt"
       - name: Run Cypress tests
         run: |
           rm package.json
