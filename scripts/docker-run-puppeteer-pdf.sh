@@ -8,6 +8,8 @@ host_compressed_artifacts_path=$host_artifacts_path/compressed
 host_raw_artifacts_path=$host_artifacts_path/raw
 node_certificate_authority=$work_dir/.certs/server/ca.crt
 
+echo "certs folder - docker-run-puppeteer-pdf: $CERTS_FOLDER"
+
 if [ -z $(which docker) ];
 then
   echo "This script requires docker to be available in the environment"
@@ -26,7 +28,7 @@ clean_artifacts() {
 run_docker() {
   echo 'look here host ---'
   pwd
-  echo $CERTS_FOLDER
+  echo "certs folder - run_docker: $CERTS_FOLDER"
   ls $CERTS_FOLDER
   ls $CERTS_FOLDER/server
   cat $CERTS_FOLDER/server/ca.crt
