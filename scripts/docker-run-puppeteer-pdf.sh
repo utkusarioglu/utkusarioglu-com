@@ -26,6 +26,10 @@ clean_artifacts() {
 }
 
 run_docker() {
+  CERTS_FOLDER=$1
+  if [ -z "$CERTS_FOLDER" ]; then
+    echo "Error: First param needs to be the certs folder path"
+  fi
   echo 'look here host ---'
   pwd
   echo "certs folder - run_docker: $CERTS_FOLDER"
@@ -78,4 +82,4 @@ run_gs() {
   done
 }
 
-clean_artifacts && run_docker && run_gs
+clean_artifacts && run_docker $CERTS_FOLDER && run_gs
