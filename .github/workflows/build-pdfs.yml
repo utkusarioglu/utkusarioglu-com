@@ -66,8 +66,9 @@ jobs:
             --non-interactive
           echo "certs folder - actions: $CERTS_FOLDER"
           sudo apt install ghostscript -y
-          sudo scripts/start-local-server.sh & \
-            sudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER
+          sudo scripts/start-local-server.sh 
+          # & \
+          #   sudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER
           echo "www.utkusarioglu.com:"
           curl www.utkusarioglu.com
           echo "localhost:3000:"
