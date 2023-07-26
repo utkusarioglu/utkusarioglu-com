@@ -67,7 +67,7 @@ jobs:
           echo "certs folder - actions: $CERTS_FOLDER"
           sudo apt install ghostscript -y
           sudo scripts/start-local-server.sh & \
-            sudo scripts/docker-run-puppeteer-pdf.sh
+            sudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER
         env:
           CERTS_FOLDER: "${{ github.workspace }}/.certs"
 

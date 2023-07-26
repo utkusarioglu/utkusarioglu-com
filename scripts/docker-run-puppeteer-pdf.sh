@@ -7,6 +7,7 @@ host_artifacts_path=$(pwd)/.puppeteer/artifacts
 host_compressed_artifacts_path=$host_artifacts_path/compressed
 host_raw_artifacts_path=$host_artifacts_path/raw
 node_certificate_authority=$work_dir/.certs/server/ca.crt
+CERTS_FOLDER=$1
 
 echo "certs folder - docker-run-puppeteer-pdf: $CERTS_FOLDER"
 
@@ -26,7 +27,6 @@ clean_artifacts() {
 }
 
 run_docker() {
-  CERTS_FOLDER=$1
   if [ -z "$CERTS_FOLDER" ]; then
     echo "Error: First param needs to be the certs folder path"
   fi
@@ -82,4 +82,4 @@ run_gs() {
   done
 }
 
-clean_artifacts && run_docker $CERTS_FOLDER && run_gs
+clean_artifacts && run_docker && run_gs
