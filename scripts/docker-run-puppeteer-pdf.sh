@@ -9,7 +9,12 @@ host_raw_artifacts_path=$host_artifacts_path/raw
 node_certificate_authority=$work_dir/.certs/server/ca.crt
 CERTS_FOLDER=$1
 
-echo "certs folder - docker-run-puppeteer-pdf: $CERTS_FOLDER"
+echo "www.utkusarioglu.com:"
+curl www.utkusarioglu.com
+echo "localhost:3000:"
+curl localhost:3000
+echo "127.0.0.1:3000:"
+curl 127.0.0.1:3000
 
 if [ -z $(which docker) ];
 then
@@ -30,17 +35,10 @@ run_docker() {
   if [ -z "$CERTS_FOLDER" ]; then
     echo "Error: First param needs to be the certs folder path"
   fi
-  echo 'look here host ---'
-  pwd
-  echo "certs folder - run_docker: $CERTS_FOLDER"
-  ls $CERTS_FOLDER
-  ls $CERTS_FOLDER/server
-  cat $CERTS_FOLDER/server/ca.crt
-  echo 'look here host ---'
   docker run -i \
     --init \
     --cap-add=SYS_ADMIN \
-    --add-host www.utkusarioglu.com:127.0.0.1 \
+    --add-host=www.utkusarioglu.com:127.0.0.1 \
     -v "$host_puppeteer_path/src:$work_dir/src" \
     -v "$host_artifacts_path:$work_dir/artifacts" \
     -v $CERTS_FOLDER:$work_dir/.certs  \
@@ -51,12 +49,6 @@ run_docker() {
       cd ./node_modules/puppeteer;
       npm install;
       cd ../..;
-      echo 'look here --'
-      pwd
-      ls $work_dir
-      ls $work_dir/.certs
-      ls $work_dir/.certs/server
-      echo 'look here --'
       export NODE_EXTRA_CA_CERTS="$node_certificate_authority"; 
       node '$work_dir/src/index.js';
     "

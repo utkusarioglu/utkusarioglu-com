@@ -66,15 +66,8 @@ jobs:
             --non-interactive
           echo "certs folder - actions: $CERTS_FOLDER"
           sudo apt install ghostscript -y
-          sudo scripts/start-local-server.sh 
-          # & \
-          #   sudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER
-          echo "www.utkusarioglu.com:"
-          curl www.utkusarioglu.com
-          echo "localhost:3000:"
-          curl localhost:3000
-          echo "127.0.0.1:3000:"
-          curl 127.0.0.1:3000
+          sudo scripts/start-local-server.sh & \
+            sudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER
         env:
           CERTS_FOLDER: "${{ github.workspace }}/.certs"
 
