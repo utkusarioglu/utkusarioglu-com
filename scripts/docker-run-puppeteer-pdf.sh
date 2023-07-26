@@ -50,7 +50,7 @@ run_docker() {
       echo 'www.utkusarioglu.com:3000:'
       curl www.utkusarioglu.com:3000/resume
       echo 'www.utkusarioglu.com:'
-      curl --insecure www.utkusarioglu.com/resume
+      curl --insecure www.utkusarioglu.com:443/resume
       echo 'Done with curl---------'
 
       cd ./node_modules/puppeteer;
