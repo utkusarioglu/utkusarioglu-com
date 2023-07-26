@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer");
 
 const artifactsPath = "/home/pptruser/artifacts";
-const url = "http://www.utkusarioglu.com:3000/resume";
+const url = "https://www.utkusarioglu.com:443/resume";
 
 const PAPER_FORMAT_VARIANTS = [
   {
