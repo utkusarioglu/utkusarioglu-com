@@ -68,9 +68,9 @@ jobs:
             SUBPATH=${{ github.ref_name }}
           fi
 
-          echo "::set-output name=tf-action::$TF_ACTION"
-          echo "::set-output name=subpath::$SUBPATH"
-          echo "::set-output name=subdomain::$SUBDOMAIN"
+          echo "tf-action=$TF_ACTION" >> $GITHUB_OUTPUT
+          echo "subpath=$SUBPATH" >> $GITHUB_OUTPUT
+          echo "subdomain=$SUBDOMAIN" >> $GITHUB_OUTPUT
           echo "Terraform will use module '$SUBPATH' to '$TF_ACTION' for '$SUBDOMAIN.$DOMAIN'"
 
       - name: Configure AWS Credentials
