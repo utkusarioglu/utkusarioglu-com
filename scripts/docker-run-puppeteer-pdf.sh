@@ -40,6 +40,19 @@ run_docker() {
     --name utkusarioglu-com-puppeteer-pdf \
     ghcr.io/puppeteer/puppeteer:latest \
     bash -c "\
+      echo 'Sleeping for 60…'
+      sleep 60
+      echo 'Starting curl--------'
+      echo 'localhost:3000:'
+      curl localhost:3000
+      echo '127.0.0.1:3000:'
+      curl 127.0.0.1:3000
+      echo 'www.utkusarioglu.com:3000:'
+      curl www.utkusarioglu.com:3000
+      echo 'www.utkusarioglu.com:'
+      curl www.utkusarioglu.com
+      echo 'Done with curl---------'
+
       cd ./node_modules/puppeteer;
       npm install;
       cd ../..;
@@ -67,12 +80,5 @@ run_gs() {
       "$host_raw_artifacts_path/$source"
   done
 }
-
-sleep 60
-
-echo "localhost:3000:"
-curl localhost:3000
-echo "127.0.0.1:3000:"
-curl 127.0.0.1:3000
 
 clean_artifacts && run_docker && run_gs
