@@ -40,7 +40,7 @@ run_docker() {
   docker run -i \
     --init \
     --cap-add=SYS_ADMIN \
-    --add-host www.utkusarioglu.com:host-gateway \
+    --add-host www.utkusarioglu.com:127.0.0.1 \
     -v "$host_puppeteer_path/src:$work_dir/src" \
     -v "$host_artifacts_path:$work_dir/artifacts" \
     -v $CERTS_FOLDER:$work_dir/.certs  \
