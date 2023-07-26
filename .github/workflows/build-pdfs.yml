@@ -56,20 +56,22 @@ jobs:
           sudo chmod -R +r .certs
           ls -al .certs
           ls -al .certs/server
-
-      - name: Run Puppeteer pdf creation
-        if: steps.resume-artifacts-cache.outputs.cache-hit != 'true'
+          
+      - name: Add required packages
         run: |
           rm package.json
           yarn add http-server local-ssl-proxy \
             --frozen-lockfile \
             --non-interactive
-          echo "certs folder - actions: $CERTS_FOLDER"
           sudo apt install ghostscript -y
-          sudo scripts/start-local-server.sh & \
-            sudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER
+
+      - name: Run Puppeteer pdf creation
+        if: steps.resume-artifacts-cache.outputs.cache-hit != 'true'
         env:
           CERTS_FOLDER: "${{ github.workspace }}/.certs"
+        run: |
+          sudo scripts/start-local-server.sh & \
+            sudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3

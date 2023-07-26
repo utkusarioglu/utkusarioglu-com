@@ -9,8 +9,8 @@ host_raw_artifacts_path=$host_artifacts_path/raw
 node_certificate_authority=$work_dir/.certs/server/ca.crt
 CERTS_FOLDER=$1
 
-echo "www.utkusarioglu.com:"
-curl www.utkusarioglu.com
+sleep 60
+
 echo "localhost:3000:"
 curl localhost:3000
 echo "127.0.0.1:3000:"
