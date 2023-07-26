@@ -44,13 +44,13 @@ run_docker() {
       sleep 60
       echo 'Starting curl--------'
       echo 'localhost:3000:'
-      curl localhost:3000
+      curl localhost:3000/resume
       echo '127.0.0.1:3000:'
-      curl 127.0.0.1:3000
+      curl 127.0.0.1:3000/resume
       echo 'www.utkusarioglu.com:3000:'
-      curl www.utkusarioglu.com:3000
+      curl www.utkusarioglu.com:3000/resume
       echo 'www.utkusarioglu.com:'
-      curl www.utkusarioglu.com
+      curl www.utkusarioglu.com/resume
       echo 'Done with curl---------'
 
       cd ./node_modules/puppeteer;
