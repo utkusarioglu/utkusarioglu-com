@@ -9,13 +9,6 @@ host_raw_artifacts_path=$host_artifacts_path/raw
 node_certificate_authority=$work_dir/.certs/server/ca.crt
 CERTS_FOLDER=$1
 
-sleep 60
-
-echo "localhost:3000:"
-curl localhost:3000
-echo "127.0.0.1:3000:"
-curl 127.0.0.1:3000
-
 if [ -z $(which docker) ];
 then
   echo "This script requires docker to be available in the environment"
@@ -39,6 +32,7 @@ run_docker() {
     --init \
     --cap-add=SYS_ADMIN \
     --add-host=www.utkusarioglu.com:127.0.0.1 \
+    --add-host=www.utkusarioglu.com:host-gateway \
     -v "$host_puppeteer_path/src:$work_dir/src" \
     -v "$host_artifacts_path:$work_dir/artifacts" \
     -v $CERTS_FOLDER:$work_dir/.certs  \
@@ -73,5 +67,12 @@ run_gs() {
       "$host_raw_artifacts_path/$source"
   done
 }
+
+sleep 60
+
+echo "localhost:3000:"
+curl localhost:3000
+echo "127.0.0.1:3000:"
+curl 127.0.0.1:3000
 
 clean_artifacts && run_docker && run_gs
