@@ -6,8 +6,8 @@ import { TRANSITIONS } from "_config";
 import { useEnhancedRouter } from "_hooks/router/router.hook";
 import { useDeviceQuery } from "_hooks/device/device.hook";
 import { useWindow } from "_hooks/window/window.hook";
-import { homeNavX } from "_utils/positioning.utils";
 import c from "classnames";
+import { createVariants } from "./Title.layout.utils";
 
 /* eslint-disable react/display-name */
 const TitleLayout = forwardRef<HTMLDivElement, {}>((_, ref) => {
@@ -17,60 +17,48 @@ const TitleLayout = forwardRef<HTMLDivElement, {}>((_, ref) => {
     return null;
   }
 
-  return <TitleResponsive window={window} ref={ref} />
+  return <TitleResponsive window={window} ref={ref} />;
 });
 
 interface TitleResponsiveProps {
-  window: Window
+  window: Window;
 }
 
-const TitleResponsive = forwardRef<HTMLDivElement ,TitleResponsiveProps>(({window}, ref) => {
-  const { isHome } = useEnhancedRouter();
-  const { isSm } = useDeviceQuery();
-  const wMid = homeNavX(window);
-  const [variants, setVariants] = useState(computeVariants(isHome, isSm, wMid))
+const TitleResponsive = forwardRef<HTMLDivElement, TitleResponsiveProps>(
+  ({ window }, ref) => {
+    const { isHome } = useEnhancedRouter();
+    const { isSm } = useDeviceQuery();
+    const [variants, setVariants] = useState(createVariants(isHome, isSm));
 
-  useEffect(() => {
-    const reposition = () => {
-      const wMid = homeNavX(window);
-      const newVariants = computeVariants(isHome, isSm, wMid)
-      setVariants(newVariants);
-    }
-    reposition()
-    window.addEventListener("resize", reposition);
-    return () => window.removeEventListener("resize", reposition)
-  }, [isHome, isSm])
+    useEffect(() => {
+      const reposition = () => {
+        const newVariants = createVariants(isHome, isSm);
+        setVariants(newVariants);
+      };
+      reposition();
+      window.addEventListener("resize", reposition);
+      return () => window.removeEventListener("resize", reposition);
+    }, [isHome, isSm]);
 
-
-  return (
-    <AnimatePresence initial={false}>
-      <MDiv
-        ref={ref}
-        variants={variants.title}
-        animate="animate"
-        className={c(
-          "fixed z-50 top-0 px-5",
-          // TODO this shouldn't be here, but it's still required in `print`
-          "print:hidden",
-          isSm ? "pt-4" : "pt-5"
-        )}
-        transition={TRANSITIONS.route}
-      >
-        <Title />
-      </MDiv>
-    </AnimatePresence>
-  );
-
-})
-
-function computeVariants(isHome: boolean, isSm: boolean, wMid: number) {
-  return {
-    title: {
-      animate: {
-        x: isHome && !isSm ? wMid : 0,
-      },
-    },
+    return (
+      <AnimatePresence initial={false}>
+        <MDiv
+          ref={ref}
+          variants={variants.title}
+          animate="animate"
+          className={c(
+            "fixed z-50 top-0 px-5",
+            // TODO this shouldn't be here, but it's still required in `print`
+            "print:hidden",
+            isSm ? "pt-4" : "pt-5"
+          )}
+          transition={TRANSITIONS.route}
+        >
+          <Title />
+        </MDiv>
+      </AnimatePresence>
+    );
   }
-}
+);
 
 export default TitleLayout;

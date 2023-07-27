@@ -6,10 +6,9 @@ import { MASKS, TRANSITIONS } from "_config";
 import { useEnhancedRouter } from "_hooks/router/router.hook";
 import { useDeviceQuery } from "_hooks/device/device.hook";
 import { useWindow } from "_hooks/window/window.hook";
-import { homeNavX, homeNavY } from "_utils/positioning.utils";
-import type { MotionVariantRecord } from "_types/vendors/framer-motion.types";
 import { useLayoutContext } from "_contexts/layout/Layout.context";
 import c from "classnames";
+import { createVariants } from "./nav.layout.utils";
 
 interface NavLayoutProps {}
 
@@ -19,28 +18,26 @@ const NavLayout: FC<NavLayoutProps> = () => {
     return null;
   }
 
-  return <NavResponsive window={window} />
+  return <NavResponsive window={window} />;
 };
 
-const NavResponsive: FC<{window: Window}> = ({window}) => {
-  const { navigation } = useLayoutContext();
+const NavResponsive: FC<{ window: Window }> = ({ window }) => {
+  const { navigation: isNavEnabled } = useLayoutContext();
   const { isHome } = useEnhancedRouter();
   const { isSm } = useDeviceQuery();
-  const wMid = homeNavX(window);
-  const hMid = homeNavY(window);
-  const [ variants, setVariants] = useState(computeVariants(isHome, isSm, hMid, wMid, navigation) )
+  const [variants, setVariants] = useState(
+    createVariants(isHome, isSm, isNavEnabled)
+  );
 
   useEffect(() => {
     const reposition = () => {
-      const wMid = homeNavX(window);
-      const hMid = homeNavY(window);
-      const newVariants = computeVariants(isHome, isSm, hMid, wMid, navigation);
-      setVariants(newVariants)
-    }
-    reposition()
-    window.addEventListener("resize", reposition)
+      const newVariants = createVariants(isHome, isSm, isNavEnabled);
+      setVariants(newVariants);
+    };
+    reposition();
+    window.addEventListener("resize", reposition);
     return () => window.removeEventListener("resize", reposition);
-  }, [isHome, isSm])
+  }, [isHome, isSm, isNavEnabled]);
 
   return (
     <AnimatePresence initial={false}>
@@ -75,7 +72,7 @@ const NavResponsive: FC<{window: Window}> = ({window}) => {
           style={{
             WebkitMaskImage: MASKS.nav,
             maskMode: "alpha",
-            pointerEvents: navigation ? "all" : "none",
+            pointerEvents: isNavEnabled ? "all" : "none",
           }}
         >
           <div className="px-5">
@@ -94,7 +91,7 @@ const NavResponsive: FC<{window: Window}> = ({window}) => {
           className="top-0 z-20 bottom-0 fixed justify-center flex print:hidden"
           transition={TRANSITIONS.route}
           style={{
-            pointerEvents: navigation ? "all" : "none",
+            pointerEvents: isNavEnabled ? "all" : "none",
           }}
         >
           <NavView mode="aside" />
@@ -102,62 +99,6 @@ const NavResponsive: FC<{window: Window}> = ({window}) => {
       )}
     </AnimatePresence>
   );
-}
-
-function computeVariants(
-  isHome: boolean,
-  isSm: boolean,
-  hMid: number,
-  wMid: number,
-  navigation: boolean
-): MotionVariantRecord<"div"> {
-  return {
-    centerNav: {
-      initial: {
-        x: 0,
-        y: isSm ? hMid : 0,
-        opacity: 0,
-      },
-      animate: {
-        x: isHome && !isSm ? wMid : 0,
-        y: 0,
-        opacity: 1,
-      },
-      exit: {
-        x: 0,
-        y: isSm ? hMid : 0,
-        opacity: 0,
-      },
-    },
-    asideNav: {
-      initial: {
-        x: wMid,
-        opacity: 0,
-      },
-      animate: {
-        x: 0,
-        opacity: navigation ? 1 : 0,
-      },
-      exit: {
-        x: wMid,
-        opacity: 0,
-      },
-    },
-    bottomNav: {
-      initial: {
-        y: 60,
-        opacity: 0,
-      },
-      animate: {
-        y: 0,
-        opacity: navigation ? 1 : 0,
-      },
-      exit: {
-        y: 60,
-        opacity: 0,
-      },
-    },
-  };
-}
+};
 
 export default NavLayout;
