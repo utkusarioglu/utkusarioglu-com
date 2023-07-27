@@ -1,4 +1,4 @@
-import { type FC } from "react";
+import { useEffect, type FC, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import MDiv from "_primitives/framer-motion/m-div.primitive";
 import NavView from "_views/nav/Nav.view";
@@ -14,18 +14,33 @@ import c from "classnames";
 interface NavLayoutProps {}
 
 const NavLayout: FC<NavLayoutProps> = () => {
-  const { navigation } = useLayoutContext();
-  const { isHome } = useEnhancedRouter();
-  const { isSm } = useDeviceQuery();
   const window = useWindow();
-
   if (!window) {
     return null;
   }
 
+  return <NavResponsive window={window} />
+};
+
+const NavResponsive: FC<{window: Window}> = ({window}) => {
+  const { navigation } = useLayoutContext();
+  const { isHome } = useEnhancedRouter();
+  const { isSm } = useDeviceQuery();
   const wMid = homeNavX(window);
   const hMid = homeNavY(window);
-  const variants = computeVariants(isHome, isSm, hMid, wMid, navigation);
+  const [ variants, setVariants] = useState(computeVariants(isHome, isSm, hMid, wMid, navigation) )
+
+  useEffect(() => {
+    const reposition = () => {
+      const wMid = homeNavX(window);
+      const hMid = homeNavY(window);
+      const newVariants = computeVariants(isHome, isSm, hMid, wMid, navigation);
+      setVariants(newVariants)
+    }
+    reposition()
+    window.addEventListener("resize", reposition)
+    return () => window.removeEventListener("resize", reposition);
+  }, [isHome, isSm])
 
   return (
     <AnimatePresence initial={false}>
@@ -87,7 +102,7 @@ const NavLayout: FC<NavLayoutProps> = () => {
       )}
     </AnimatePresence>
   );
-};
+}
 
 function computeVariants(
   isHome: boolean,
