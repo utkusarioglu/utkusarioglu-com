@@ -8,16 +8,17 @@
   "workspaceFolder": "/utkusarioglu/utkusarioglu-com",
   "postCreateCommand": "scripts/post-create-command.sh",
   "customizations": {
-		"vscode": {
-			"settings": {
+    "vscode": {
+      "settings": {
         "workbench.colorCustomizations": {
           "activityBar.background": "#115566"
         }
       },
-			"extensions": [
+      "extensions": [
         "bradlc.vscode-tailwindcss",
-        "HashiCorp.terraform"
+        "HashiCorp.terraform",
+        "esbenp.prettier-vscode"
       ]
-		}
+    }
   }
 }
