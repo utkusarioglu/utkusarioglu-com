@@ -82,20 +82,26 @@ skills:
     - title: Programming Languages
       list:
         - title: Typescript
-          collections:
-            - frontend
-            - fullstack
         - title: Javascript
         - title: Solidity
+          specialties:
+            - web3
         - title: Yul
+          specialties:
+            - web3
         - title: Python
         - title: PHP
+          specialties:
+            - backend
         - title: C
           confident: false
         - title: C++
           confident: false
         - title: Go
           confident: false
+          specialties:
+            - fullstack
+            - backend
     - title: Scripting Languages and DSL
       list:
         - title: SQL

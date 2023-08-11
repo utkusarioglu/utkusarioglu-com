@@ -4,7 +4,7 @@ import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackgr
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import ContentCardSectionView from "_views/content-card/ContentCardSection.view";
 
-import ResumeSpecialtiesView from "_views/resume-screen/ResumeSpecialties.view";
+import ResumeSpecialtySelectionView from "_views/resume-screen/ResumeSpecialtySelection.view";
 import ResumeCertificationLi from "_views/resume-screen/ResumeScreenCertificationLi.view";
 import ResumeContactLi from "_views/resume-screen/ResumeScreenContactLi.view";
 import ResumeDownload from "_views/resume-screen/ResumeScreenDownload.view";
@@ -20,8 +20,8 @@ export interface ResumeScreenLayoutProps {
 }
 
 const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
-  activeSpecialtyId: currentSpecialtyId,
-  setActiveSpecialtyId: setCurrentSpecialtyId,
+  activeSpecialtyId,
+  setActiveSpecialtyId,
   resume: {
     specialties,
     introduction,
@@ -34,14 +34,21 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
 }) => (
   <div className="print:hidden">
     <ResumeIntroduction {...introduction} />
-    <ResumeSpecialtiesView
+    <ResumeSpecialtySelectionView
       specialties={specialties}
-      currentSpecialty={currentSpecialtyId}
-      setCurrentSpecialty={setCurrentSpecialtyId}
+      activeSpecialtyId={activeSpecialtyId}
+      setCurrentSpecialty={setActiveSpecialtyId}
     />
-    <ResumeDownload />
+    <ResumeDownload
+      specialties={specialties}
+      activeSpecialtyId={activeSpecialtyId}
+    />
     <ContentCardBackgroundLayout>
-      <ResumeSkills {...skills} />
+      <ResumeSkills
+        {...skills}
+        specialties={specialties}
+        activeSpecialtyId={activeSpecialtyId}
+      />
     </ContentCardBackgroundLayout>
     <ContentCardBackgroundLayout>
       <ContentCardSectionView

@@ -49,7 +49,7 @@ type Introduction = Entity;
 export type SpecialtyId = "all" | "frontend" | "backend" | "fullstack" | "web3";
 export type SpecialtyIdList = SpecialtyId[];
 
-type Specialty = {
+export type Specialty = {
   id: SpecialtyId;
 } & Titled &
   Remarked;
