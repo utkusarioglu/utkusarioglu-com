@@ -1,9 +1,13 @@
 export type Section<ListType> = Entity & Listed<ListType>;
 
-export type Entity = Titled & Partial<Printable & Remarked>;
+export type Entity = Titled & Subtitled & Partial<Printable & Remarked>;
 
 export type Titled = {
   title: string; // one liner
+};
+
+export type Subtitled = {
+  subtitle: string; // one liner
 };
 
 export type Printable = {

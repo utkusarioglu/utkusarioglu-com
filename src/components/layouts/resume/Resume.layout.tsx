@@ -1,10 +1,19 @@
 import { type FC, useEffect, useState } from "react";
 import ResumePrintLayout from "./ResumePrint.layout";
 import ResumeScreenLayout from "./ResumeScreen.layout";
-import { type SpecialtyId, type Resume } from "_types/resume.types";
+import {
+  type SpecialtyId,
+  type Resume,
+  type Specialties,
+} from "_types/resume.types";
 
 export interface ResumeLayoutProps {
   resume: Resume;
+}
+
+export interface SpecialtyReaderProps {
+  activeSpecialtyId: SpecialtyId;
+  specialties: Specialties;
 }
 
 const ResumeLayout: FC<ResumeLayoutProps> = ({ resume }) => {

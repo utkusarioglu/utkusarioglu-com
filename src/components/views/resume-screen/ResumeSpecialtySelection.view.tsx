@@ -5,16 +5,16 @@ import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackgr
 import ContentCardButtonView from "_views/content-card/ContentCardButton.view";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import H3 from "_primitives/headings/H3.primitive";
+import H2 from "_primitives/headings/H2.primitive";
 import { COLORS } from "_config";
+import { type SpecialtyReaderProps } from "_layouts/resume/Resume.layout";
 
-interface ResumeSpecialtiesViewProps {
-  currentSpecialty: SpecialtyId;
+type ResumeSpecialtiesViewProps = SpecialtyReaderProps & {
   setCurrentSpecialty: Dispatch<SetStateAction<SpecialtyId>>;
-  specialties: Specialties;
-}
+};
 
 const ResumeSpecialtiesView: FC<ResumeSpecialtiesViewProps> = ({
-  currentSpecialty,
+  activeSpecialtyId,
   setCurrentSpecialty,
   specialties,
 }) => {
@@ -22,6 +22,7 @@ const ResumeSpecialtiesView: FC<ResumeSpecialtiesViewProps> = ({
     <ContentCardBackgroundLayout>
       <ContentCardSectionView
         title="Specialty Selection"
+        subtitle=""
         list={specialties}
         listItemComponent={({ item: { title, remarks, id } }) => (
           <ContentCardButtonView
@@ -30,11 +31,13 @@ const ResumeSpecialtiesView: FC<ResumeSpecialtiesViewProps> = ({
             }}
           >
             <ContentCardItemLayout>
-              <H3>
-                {title}
-                {currentSpecialty === id ? " (active)" : ""}
-              </H3>
-              <div className={COLORS.paragraph}>{remarks}</div>
+              <div className="flex flex-row gap-5">
+                {activeSpecialtyId === id ? <H2>A</H2> : null}
+                <div className="flex-grow">
+                  <H3>{title}</H3>
+                  <div className={COLORS.paragraph}>{remarks}</div>
+                </div>
+              </div>
             </ContentCardItemLayout>
           </ContentCardButtonView>
         )}
