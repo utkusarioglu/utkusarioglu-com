@@ -46,8 +46,19 @@ export type Education = {
 
 type Introduction = Entity;
 
+export type SpecialtyId = "all" | "frontend" | "backend" | "fullstack" | "web3";
+export type SpecialtyIdList = SpecialtyId[];
+
+type Specialty = {
+  id: SpecialtyId;
+} & Titled &
+  Remarked;
+
+export type Specialties = Specialty[];
+
 export type Resume = {
   page: "Resume";
+  specialties: Specialties;
   introduction: Introduction;
   contact: Section<ContactListItem>;
   skills: Skills;

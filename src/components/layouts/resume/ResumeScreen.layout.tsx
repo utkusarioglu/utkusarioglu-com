@@ -1,9 +1,10 @@
-import { type FC } from "react";
-import { type Resume } from "_types/resume.types";
+import { type FC, type Dispatch, type SetStateAction } from "react";
+import { type SpecialtyId, type Resume } from "_types/resume.types";
 import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import ContentCardSectionView from "_views/content-card/ContentCardSection.view";
 
+import ResumeSpecialtiesView from "_views/resume-screen/ResumeSpecialties.view";
 import ResumeCertificationLi from "_views/resume-screen/ResumeScreenCertificationLi.view";
 import ResumeContactLi from "_views/resume-screen/ResumeScreenContactLi.view";
 import ResumeDownload from "_views/resume-screen/ResumeScreenDownload.view";
@@ -13,11 +14,16 @@ import ResumeSkills from "_views/resume-screen/ResumeScreenSkills.view";
 import ResumeWorkExperienceLi from "_views/resume-screen/ResumeScreenWorkExperienceLi.view";
 
 export interface ResumeScreenLayoutProps {
+  activeSpecialtyId: SpecialtyId;
+  setActiveSpecialtyId: Dispatch<SetStateAction<SpecialtyId>>;
   resume: Resume;
 }
 
 const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
+  activeSpecialtyId: currentSpecialtyId,
+  setActiveSpecialtyId: setCurrentSpecialtyId,
   resume: {
+    specialties,
     introduction,
     contact,
     skills,
@@ -28,6 +34,12 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
 }) => (
   <div className="print:hidden">
     <ResumeIntroduction {...introduction} />
+    <ResumeSpecialtiesView
+      specialties={specialties}
+      currentSpecialty={currentSpecialtyId}
+      setCurrentSpecialty={setCurrentSpecialtyId}
+    />
+    <ResumeDownload />
     <ContentCardBackgroundLayout>
       <ResumeSkills {...skills} />
     </ContentCardBackgroundLayout>
@@ -63,7 +75,6 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
         listItemComponent={({ item }) => <ResumeContactLi {...item} />}
       />
     </ContentCardBackgroundLayout>
-    <ResumeDownload />
   </div>
 );
 
