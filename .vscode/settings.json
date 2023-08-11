@@ -10,5 +10,9 @@
       "async": true,
       "command": "gh secret set -f .env"
     }
-  ]
+  ],
+  "yaml.schemas": {
+    "https://json.schemastore.org/helmfile.json": "**/*.helm",
+    "https://json.schemastore.org/sourcehut-build-0.65.0.json": "file:///utkusarioglu/utkusarioglu-com/assets/resume.yml"
+  }
 }
