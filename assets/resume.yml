@@ -13,10 +13,10 @@ specialties:
     remarks: NodeJS, Python, Kubernetes and AWS based backend development
   - id: fullstack
     title: Fullstack
-    remarks: Frontend, backend and Web3 combined
+    remarks: Fullstack web2 development
   - id: web3
     title: Web3
-    remarks: Ethereum based web3 fullstack application development
+    remarks: Ethereum based fullstack web3 application development
 
 introduction:
   title: Introduction
@@ -92,6 +92,7 @@ skills:
         - title: Python
         - title: PHP
           specialties:
+            - fullstack
             - backend
         - title: C
           confident: false
@@ -105,68 +106,187 @@ skills:
     - title: Scripting Languages and DSL
       list:
         - title: SQL
+          specialties:
+            - fullstack
+            - backend
         - title: Bash
+          specialties:
+            - fullstack
+            - backend
+            - web3
         - title: PowerShell
           confident: false
         - title: PlantUML
         - title: HCL
-          print: false
+          specialties:
+            - fullstack
+            - backend
     - title: Frontend
       list:
         - title: React
+          specialties:
+            - fullstack
+            - frontend
+            - web3
         - title: React Native
           confident: false
+          specialties:
+            - fullstack
+            - frontend
+            - web3
         - title: NextJS
+          specialties:
+            - fullstack
+            - frontend
+            - web3
         - title: Tauri
           confident: false
+          specialties:
+            - fullstack
+            - frontend
+            - web3
         - title: Apollo
+          specialties:
+            - fullstack
+            - frontend
+            - web3
         - title: Redux
+          specialties:
+            - fullstack
+            - frontend
+            - web3
         - title: WordPress
+          specialties:
+            - fullstack
+            - frontend
+            - web3
         - title: TailwindCSS
+          specialties:
+            - fullstack
+            - frontend
+            - web3
         - title: SDL
           confident: false
+          specialties:
+            - fullstack
+            - frontend
+            - web3
         - title: ENTT
           confident: false
+          specialties:
+            - fullstack
+            - frontend
+            - web3
     - title: DevOps and CI&CD
       list:
         - title: Docker
         - title: Kubernetes
+          specialties:
+            - fullstack
+            - backend
         - title: kOps
+          specialties:
+            - fullstack
+            - backend
         - title: Skaffold
+          specialties:
+            - fullstack
+            - backend
         - title: Terraform
+          specialties:
+            - fullstack
+            - backend
         - title: Vagrant
+          specialties:
+            - fullstack
+            - backend
         - title: Hyper-V
+          specialties:
+            - fullstack
+            - backend
         - title: GitHub Actions
         - title: Jenkins
           confident: false
+          specialties:
+            - fullstack
+            - backend
         - title: LocalStack
+          specialties:
+            - fullstack
+            - backend
         - title: k3s
+          specialties:
+            - fullstack
+            - backend
     - title: Backend
       list:
         - title: NodeJS
         - title: MySQL
+          specialties:
+            - fullstack
+            - backend
         - title: PostgreSQL
+          specialties:
+            - fullstack
+            - backend
         - title: MongoDB
           confident: false
+          specialties:
+            - fullstack
+            - backend
         - title: Redis
+          specialties:
+            - fullstack
+            - backend
         - title: Kafka
+          specialties:
+            - fullstack
+            - backend
         - title: Debezium
+          specialties:
+            - fullstack
+            - backend
         - title: ZooKeeper
           confident: false
+          specialties:
+            - fullstack
+            - backend
         - title: Strimzi
+          specialties:
+            - fullstack
+            - backend
         - title: Grafana
           confident: false
+          specialties:
+            - fullstack
+            - backend
         - title: Loki
           confident: false
+          specialties:
+            - fullstack
+            - backend
         - title: Jaeger
           confident: false
+          specialties:
+            - fullstack
+            - backend
         - title: Prometheus
           confident: false
+          specialties:
+            - fullstack
+            - backend
         - title: OpenSSL
         - title: Vault
           confident: false
+          specialties:
+            - fullstack
+            - backend
         - title: OpenTelemetry
         - title: gRPC
+          specialties:
+            - fullstack
+            - backend
+            - frontend
         - title: Puppeteer
     - title: Testing and Analysis
       list:
@@ -174,18 +294,38 @@ skills:
         - title: Jest
         - title: Mocha
         - title: Waffle
+          specialties:
+            - web3
         - title: Echidna
           confident: false
+          specialties:
+            - web3
         - title: Mythril
+          specialties:
+            - web3
         - title: Slither
+          specialties:
+            - web3
         - title: Manticore
+          specialties:
+            - web3
         - title: Terratest
           confident: false
+          specialties:
+            - fullstack
+            - backend
     - title: Project Handling
       list:
         - title: Git
         - title: Helm
+          specialties:
+            - fullstack
+            - backend
         - title: Conan
+          specialties:
+            - fullstack
+            - frontend
+            - backend
         - title: OpenAPI
         - title: Lerna
         - title: Emscripten
@@ -194,24 +334,61 @@ skills:
     - title: Web3
       list:
         - title: Truffle
+          specialties:
+            - web3
         - title: Drizzle
+          specialties:
+            - web3
         - title: Ganache
+          specialties:
+            - web3
         - title: Web3
+          specialties:
+            - web3
         - title: Ethers
+          specialties:
+            - web3
         - title: Matic
+          specialties:
+            - web3
         - title: Hardhat
+          specialties:
+            - web3
         - title: Waffle
+          specialties:
+            - web3
         - title: Geth
           confident: false
+          specialties:
+            - web3
         - title: The Graph
+          specialties:
+            - web3
         - title: EVM
+          specialties:
+            - web3
     - title: Data and Math
       list:
         - title: Pandas
+          specialties:
+            - fullstack
+            - web3
         - title: NumPy
+          specialties:
+            - fullstack
+            - web3
         - title: SciPy
+          specialties:
+            - fullstack
+            - web3
         - title: SymPy
+          specialties:
+            - fullstack
+            - web3
         - title: Matplotlib
+          specialties:
+            - fullstack
+            - web3
         - title: music21
     - title: Development Software
       list:
@@ -219,16 +396,40 @@ skills:
         - title: Visual Studio
         - title: Vim
         - title: Figma
+          specialties:
+            - fullstack
+            - frontend
+            - web3
         - title: Jupyter Notebook
+          specialties:
+            - fullstack
+            - frontend
+            - web3
         - title: Postman
         - title: Enterprise Architect
         - title: Adobe XD
+          specialties:
+            - fullstack
+            - frontend
+            - web3
     - title: Notable Other Software
       list:
         - title: Photoshop
+          specialties:
+            - fullstack
+            - frontend
+            - web3
         - title: Illustrator
           confident: false
+          specialties:
+            - fullstack
+            - frontend
+            - web3
         - title: Lightroom
+          specialties:
+            - fullstack
+            - frontend
+            - web3
         - title: Word
         - title: Excel
         - title: Outlook

@@ -13,7 +13,7 @@ type ResumeSpecialtiesViewProps = SpecialtyReaderProps & {
   setCurrentSpecialty: Dispatch<SetStateAction<SpecialtyId>>;
 };
 
-const ResumeSpecialtiesView: FC<ResumeSpecialtiesViewProps> = ({
+const ResumeSpecialtySelectionView: FC<ResumeSpecialtiesViewProps> = ({
   activeSpecialtyId,
   setCurrentSpecialty,
   specialties,
@@ -24,6 +24,8 @@ const ResumeSpecialtiesView: FC<ResumeSpecialtiesViewProps> = ({
         title="Specialty Selection"
         subtitle=""
         list={specialties}
+        keyFunction={(item) => item.title}
+        filterFunction={() => true}
         listItemComponent={({ item: { title, remarks, id } }) => (
           <ContentCardButtonView
             onClick={() => {
@@ -46,4 +48,4 @@ const ResumeSpecialtiesView: FC<ResumeSpecialtiesViewProps> = ({
   );
 };
 
-export default ResumeSpecialtiesView;
+export default ResumeSpecialtySelectionView;
