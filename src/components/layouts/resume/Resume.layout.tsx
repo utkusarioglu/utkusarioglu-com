@@ -22,7 +22,7 @@ function useResumeCustomization() {
   const querySpecialtyId = router.query["specialty-id"] as SpecialtyId;
   const queryIncludePhoto = router.query["include-photo"] === "true";
   const [activeSpecialtyId, setActiveSpecialtyId] = useState<SpecialtyId>(
-    querySpecialtyId || "all"
+    querySpecialtyId || "al"
   );
   const [includePhoto, setIncludePhoto] = useState(queryIncludePhoto);
 

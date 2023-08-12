@@ -46,7 +46,7 @@ export type Education = {
 
 type Introduction = Entity;
 
-export type SpecialtyId = "all" | "frontend" | "backend" | "fullstack" | "web3";
+export type SpecialtyId = "al" | "fe" | "be" | "fs" | "w3";
 export type SpecialtyIdList = SpecialtyId[];
 
 export type Specialty = {

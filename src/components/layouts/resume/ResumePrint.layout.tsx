@@ -6,9 +6,9 @@ import ResumePrintH2View from "_views/resume-print/ResumePrintH2.view";
 import ResumePrintH3View from "_views/resume-print/ResumePrintH3.view";
 import c from "classnames";
 import {
-  getActiveSpecialty,
   printFilter,
   specialtyFilter,
+  createResumeCode,
 } from "_utils/resume.utils";
 
 export interface ResumeLayoutProps {
@@ -21,7 +21,6 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
   activeSpecialtyId,
   includePhoto,
   resume: {
-    specialties,
     name,
     contact,
     skills,
@@ -30,21 +29,33 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
     education,
   },
 }) => {
-  // const activeSpecialty = getActiveSpecialty(specialties, activeSpecialtyId);
   const defaultFilter = (item: any) =>
     printFilter(item) && specialtyFilter(item, activeSpecialtyId);
+  const resumeCode = createResumeCode(activeSpecialtyId, includePhoto);
 
   return (
-    <div className="hidden print:block relative font-[Arial]">
-      <div className="fixed top-0 right-0 text-gray-300 z-50 text-[8px]">
-        {activeSpecialtyId}
+    <div className="hidden print:block relative">
+      <div
+        className={c(
+          "fixed top-1 right-0",
+          "text-gray-100 z-50",
+          "text-[6px] text-right font-[monospace]",
+          "leading-[7px]"
+        )}
+      >
+        {resumeCode.map((section) => (
+          <>
+            <span>{section}</span>
+            <br />
+          </>
+        ))}
       </div>
       <div
         className={c(
           COLORS.print,
           COLORS.printBg,
           "fixed top-0 left-0 right-0 bottom-0",
-          "z-40 text-[12px]"
+          "z-40 text-[12px] font-[Arial]"
         )}
       >
         <div
