@@ -26,7 +26,7 @@ export function specialtyFilter(
   if (
     item.specialties &&
     !item.specialties.includes(activeSpecialtyId) &&
-    activeSpecialtyId !== "all"
+    activeSpecialtyId !== "al"
   ) {
     displayItem = false;
   }
@@ -35,4 +35,26 @@ export function specialtyFilter(
 
 export function printFilter(item: any): boolean {
   return item.print !== false;
+}
+
+export function createResumeCode(
+  activeSpecialtyId: SpecialtyId,
+  includePhoto: boolean
+): string[] {
+  const resumeCode = [
+    activeSpecialtyId.toUpperCase(),
+    includePhoto ? "p" : "n",
+    btoa(Date.now().toString()),
+  ].join("");
+  const lineLength = 6;
+  const re = Array(Math.ceil(resumeCode.length / lineLength))
+    .fill(null)
+    .map((_, i) => {
+      let section = resumeCode.slice(i * lineLength, (i + 1) * lineLength);
+      if (section.length < lineLength) {
+        section = section.padEnd(lineLength, "-");
+      }
+      return section;
+    });
+  return re;
 }
