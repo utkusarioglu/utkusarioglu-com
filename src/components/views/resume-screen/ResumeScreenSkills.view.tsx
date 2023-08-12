@@ -5,7 +5,11 @@ import ResumeScreenSkillSectionLiView from "./ResumeScreenSkillsSectionLi.view";
 import ResumeScreenSkillSectionView from "./ResumeScreenSkillsSection.view";
 import ContentCardTitleBannerView from "_views/content-card/ContentCardTitleBanner.view";
 import { type SpecialtyReaderProps } from "_layouts/resume/Resume.layout";
-import { getActiveSpecialty, computeItemDisplay } from "_utils/resume.utils";
+import {
+  getActiveSpecialty,
+  specialtyFilter,
+  printFilter,
+} from "_utils/resume.utils";
 
 type ResumeScreenSkillsViewProps = Resume["skills"] & SpecialtyReaderProps;
 
@@ -28,11 +32,13 @@ const ResumeScreenSkillsView: FC<ResumeScreenSkillsViewProps> = ({
           <ContentCardItemLayout key={section.title}>
             <ResumeScreenSkillSectionView
               {...section}
-              listItemComponent={({ item }) => {
-                return computeItemDisplay(item, activeSpecialty.id) ? (
-                  <ResumeScreenSkillSectionLiView {...item} />
-                ) : null;
-              }}
+              filterFunction={(item) =>
+                specialtyFilter(item, activeSpecialty.id) && printFilter(item)
+              }
+              keyFunction={(item) => item.title}
+              listItemComponent={({ item }) => (
+                <ResumeScreenSkillSectionLiView {...item} />
+              )}
             />
           </ContentCardItemLayout>
         ))}

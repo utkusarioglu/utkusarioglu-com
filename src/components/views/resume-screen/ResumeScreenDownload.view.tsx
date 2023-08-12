@@ -35,6 +35,8 @@ const ResumeScreenDownloadView: FC<ResumeScreenDownloadViewProps> = ({
         title="Download Resume"
         subtitle={subtitle}
         list={RESUME_LIST}
+        keyFunction={(item) => item.title}
+        filterFunction={() => true}
         listItemComponent={({ item: { title, folder, remarks } }) => (
           <ContentCardLinkView
             href={`/_next/static/resume/${folder}/utku-sarioglu-resume.pdf`}

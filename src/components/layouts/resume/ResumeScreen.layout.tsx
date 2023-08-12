@@ -1,5 +1,6 @@
 import { type FC, type Dispatch, type SetStateAction } from "react";
 import { type SpecialtyId, type Resume } from "_types/resume.types";
+import { specialtyFilter } from "_utils/resume.utils";
 import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import ContentCardSectionView from "_views/content-card/ContentCardSection.view";
@@ -53,6 +54,8 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
     <ContentCardBackgroundLayout>
       <ContentCardSectionView
         {...relevantWorkExperience}
+        keyFunction={(item) => item.title + item.start}
+        filterFunction={(item) => specialtyFilter(item, activeSpecialtyId)}
         listItemComponent={({ item }) => (
           <ContentCardItemLayout>
             <ResumeWorkExperienceLi {...item} />
@@ -63,12 +66,16 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
     <ContentCardBackgroundLayout>
       <ContentCardSectionView
         {...relevantCertifications}
+        keyFunction={(item) => item.course}
+        filterFunction={(item) => specialtyFilter(item, activeSpecialtyId)}
         listItemComponent={({ item }) => <ResumeCertificationLi {...item} />}
       />
     </ContentCardBackgroundLayout>
     <ContentCardBackgroundLayout>
       <ContentCardSectionView
         {...education}
+        keyFunction={({ title }) => title}
+        filterFunction={(item) => specialtyFilter(item, activeSpecialtyId)}
         listItemComponent={({ item }) => (
           <ContentCardItemLayout>
             <ResumeEducationLi {...item} />
@@ -79,6 +86,8 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
     <ContentCardBackgroundLayout>
       <ContentCardSectionView
         {...contact}
+        keyFunction={({ title }) => title}
+        filterFunction={(item) => specialtyFilter(item, activeSpecialtyId)}
         listItemComponent={({ item }) => <ResumeContactLi {...item} />}
       />
     </ContentCardBackgroundLayout>
