@@ -2,19 +2,19 @@ name: Utku Sarioglu
 page: Resume
 
 specialties:
-  - id: all
+  - id: al
     title: All
     remarks: Includes frontend, backend and Web3 skills
-  - id: frontend
+  - id: fe
     title: Frontend
     remarks: React & React Native based frontend development
-  - id: backend
+  - id: be
     title: Backend
     remarks: NodeJS, Python, Kubernetes and AWS based backend development
-  - id: fullstack
+  - id: fs
     title: Fullstack
     remarks: Fullstack web2 development
-  - id: web3
+  - id: w3
     title: Web3
     remarks: Ethereum based fullstack web3 application development
 
