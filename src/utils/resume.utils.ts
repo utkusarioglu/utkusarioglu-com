@@ -18,7 +18,7 @@ export function getActiveSpecialty(
   return activeSpecialty[0];
 }
 
-export function computeItemDisplay(
+export function specialtyFilter(
   item: any,
   activeSpecialtyId: SpecialtyId
 ): boolean {
@@ -31,4 +31,8 @@ export function computeItemDisplay(
     displayItem = false;
   }
   return displayItem;
+}
+
+export function printFilter(item: any): boolean {
+  return item.print !== false;
 }
