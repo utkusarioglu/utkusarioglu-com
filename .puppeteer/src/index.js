@@ -62,35 +62,29 @@ async function createSingle(browser, specialtyId, includePhoto) {
     path: screenshotPath,
   });
 
-  return await PAPER_FORMAT_VARIANTS.reduce(
-    async (chain, { format, margin }) => {
-      const resumePath = `${artifactsPath}/raw/resume-${format}-${resumeCode}.pdf`;
-      console.log({
-        where: "in paper loop",
-        baseUrl,
-        url,
-        specialtyId,
-        includePhoto,
-        resumeCode,
-      });
-      chain = chain.then(() =>
-        page.pdf({
-          displayHeaderFooter: false,
-          omitBackground: true,
-          path: resumePath,
-          format,
-          margin: {
-            left: margin.x,
-            right: margin.x,
-            bottom: margin.y,
-            top: margin.y,
-          },
-        })
-      );
-      return chain;
-    },
-    Promise.resolve()
-  );
+  await PAPER_FORMAT_VARIANTS.reduce(async (chain, { format, margin }) => {
+    const resumePath = `${artifactsPath}/raw/resume-${format}-${resumeCode}.pdf`;
+    console.log({
+      where: "in paper loop",
+      resumePath,
+    });
+    chain = chain.then(() =>
+      page.pdf({
+        displayHeaderFooter: false,
+        omitBackground: true,
+        path: resumePath,
+        format,
+        margin: {
+          left: margin.x,
+          right: margin.x,
+          bottom: margin.y,
+          top: margin.y,
+        },
+      })
+    );
+    return chain;
+  }, Promise.resolve());
+  await page.close();
 }
 
 (async () => {
@@ -105,7 +99,7 @@ async function createSingle(browser, specialtyId, includePhoto) {
   console.log({ matrix });
   await matrix.reduce((acc, { specialtyId, includePhoto }) => {
     console.log({ specialtyId, includePhoto });
-    acc.then(() => createSingle(browser, specialtyId, includePhoto));
+    acc = acc.then(() => createSingle(browser, specialtyId, includePhoto));
     return acc;
   }, Promise.resolve());
 
