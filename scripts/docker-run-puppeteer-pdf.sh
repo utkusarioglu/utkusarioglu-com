@@ -73,7 +73,7 @@ run_gs() {
           -dBATCH \
           -sOutputFile=$output_file \
           $photo_params \
-          "$host_raw_artifacts_path/$source" \
+          "$host_raw_artifacts_path/$source"
       done
     done
   done
