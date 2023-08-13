@@ -43,9 +43,7 @@ async function createSingle(specialtyId, includePhoto) {
     `include-photo=${includePhoto ? "true" : "false"}`,
   ].join("");
   const resumeCode = [specialtyId, includePhoto ? "p" : "n"].join("");
-  const resumePath = `${artifactsPath}/raw/resume-${format}-${resumeCode}.pdf`;
   const screenshotPath = `${artifactsPath}/screenshots/resume-${resumeCode}.png`;
-  console.log({ baseUrl, url, specialtyId, includePhoto, resumeCode });
 
   await page.goto(url, {
     waitUntil: "networkidle2",
@@ -55,6 +53,8 @@ async function createSingle(specialtyId, includePhoto) {
   });
 
   await PAPER_FORMAT_VARIANTS.reduce(async (chain, { format, margin }) => {
+    const resumePath = `${artifactsPath}/raw/resume-${format}-${resumeCode}.pdf`;
+    console.log({ baseUrl, url, specialtyId, includePhoto, resumeCode });
     chain = chain.then(() =>
       page.pdf({
         displayHeaderFooter: false,
