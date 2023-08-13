@@ -35,8 +35,11 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
       <div
         className={c(
           "fixed top-1 right-0",
-          "text-gray-100 z-50",
-          "text-[6px] text-right font-[monospace]",
+          "z-50 text-[6px] text-right",
+
+          // "text-gray-100 font-[monospace]",
+          "font-[Arial]",
+
           "leading-[7px]"
         )}
       >
