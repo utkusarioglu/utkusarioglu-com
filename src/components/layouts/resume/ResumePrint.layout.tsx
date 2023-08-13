@@ -32,14 +32,11 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
 
   return (
     <div className="hidden print:block relative">
-      <div
+      {/* <div
         className={c(
           "fixed top-1 right-0",
           "z-50 text-[6px] text-right",
-
-          // "text-gray-100 font-[monospace]",
-          "font-[Arial]",
-
+          "text-gray-100 font-[monospace]",
           "leading-[7px]"
         )}
       >
@@ -49,7 +46,7 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
             <br />
           </>
         ))}
-      </div>
+      </div> */}
       <div
         className={c(
           COLORS.print,
