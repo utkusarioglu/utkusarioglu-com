@@ -24,31 +24,28 @@ const SPECIALTY_VARIANTS = ["fe", "be", "fs", "w3", "al"];
 
 const PHOTO_VARIANTS = [true, false];
 
-function createMatrix(specialtyIds, photoVariants)
-{
-  matrix = []
-  specialtyIds.forEach((specialtyId) =>
-  {
-    photoVariants.forEach((includePhoto) =>
-    {
-      matrix.push({specialtyId, includePhoto})
-    })
-  })
+function createMatrix(specialtyIds, photoVariants) {
+  matrix = [];
+  specialtyIds.forEach((specialtyId) => {
+    photoVariants.forEach((includePhoto) => {
+      matrix.push({ specialtyId, includePhoto });
+    });
+  });
   return matrix;
 }
 
-function createSingle(specialtyId, includePhoto) {
+async function createSingle(specialtyId, includePhoto) {
   const url = [
     baseUrl,
     "?",
     `specialtyId=${specialtyId}`,
     "&",
-    `include-photo=${includePhoto ? "true" : "false"}`
-  ].join("")
-  const resumeCode = [specialtyId, includePhoto ? "p": "n"].join("")
+    `include-photo=${includePhoto ? "true" : "false"}`,
+  ].join("");
+  const resumeCode = [specialtyId, includePhoto ? "p" : "n"].join("");
   const resumePath = `${artifactsPath}/raw/resume-${format}-${resumeCode}.pdf`;
   const screenshotPath = `${artifactsPath}/screenshots/resume-${resumeCode}.png`;
-  console.log({baseUrl, url, specialtyId, includePhoto, resumeCode})
+  console.log({ baseUrl, url, specialtyId, includePhoto, resumeCode });
 
   await page.goto(url, {
     waitUntil: "networkidle2",
@@ -87,9 +84,9 @@ function createSingle(specialtyId, includePhoto) {
   page.setViewport({ width: 1920, height: 1080 });
 
   const matrix = createMatrix(SPECIALTY_VARIANTS, PHOTO_VARIANTS);
-  await matrix.reduce(({specialtyId, includePhoto}) => {
-    return createSingle(specialtyId, includePhoto)
-  }, Promise.resolve() )
+  await matrix.reduce(({ specialtyId, includePhoto }) => {
+    return createSingle(specialtyId, includePhoto);
+  }, Promise.resolve());
 
   await browser.close();
 })();
