@@ -52,6 +52,9 @@ run_gs() {
   # You also need to set the format settings in 
   # `.puppeteer/src/index.js` for everything to work as expected
   for photo_included in p n; do
+    if [ $photo_included = 'p' ]; then
+      photo_params="-dColorImageResolution=300"
+    fi
     for specialty_id in fe be al w3 fs; do
       for format in a4 letter;
       do
@@ -65,12 +68,12 @@ run_gs() {
           -sDEVICE=pdfwrite \
           -dCompatibilityLevel=1.4 \
           -dPDFSETTINGS=/screen \
-          -dColorImageResolution=300 \
           -dNOPAUSE \
           -dQUIET \
           -dBATCH \
           -sOutputFile=$output_file \
-          "$host_raw_artifacts_path/$source"
+          $photo_params \
+          "$host_raw_artifacts_path/$source" \
       done
     done
   done
