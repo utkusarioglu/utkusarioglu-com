@@ -51,20 +51,25 @@ run_docker() {
 run_gs() {
   # You also need to set the format settings in 
   # `.puppeteer/src/index.js` for everything to work as expected
-  for format in a4 letter;
-  do
-    source="resume-$format.pdf"
-    target_folder="$host_compressed_artifacts_path/$format"
-    mkdir -p "$target_folder"
-    gs \
-      -sDEVICE=pdfwrite \
-      -dCompatibilityLevel=1.4 \
-      -dPDFSETTINGS=/screen \
-      -dNOPAUSE \
-      -dQUIET \
-      -dBATCH \
-      -sOutputFile="$target_folder/utku-sarioglu-resume.pdf" \
-      "$host_raw_artifacts_path/$source"
+  for photo_included in p n; do
+    for specialty_id in fe be al w3 fs; do
+      for format in a4 letter;
+      do
+        resume_code="$specialty_id$photo_included"
+        source="resume-$format-$resume_code.pdf"
+        target_folder="$host_compressed_artifacts_path/$format"
+        mkdir -p "$target_folder"
+        gs \
+          -sDEVICE=pdfwrite \
+          -dCompatibilityLevel=1.4 \
+          -dPDFSETTINGS=/screen \
+          -dNOPAUSE \
+          -dQUIET \
+          -dBATCH \
+          -sOutputFile="$target_folder/utku-sarioglu-resume.pdf" \
+          "$host_raw_artifacts_path/$source"
+      done
+    done
   done
 }
 
