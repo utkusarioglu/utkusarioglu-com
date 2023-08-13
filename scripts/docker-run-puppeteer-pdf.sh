@@ -48,6 +48,8 @@ run_docker() {
     "
 }
 
+# 1- 4 means a4, l means letter. Same values is are enforced by puppeteer and
+#    `utils/resume.utils.ts`.
 run_gs() {
   # You also need to set the format settings in 
   # `.puppeteer/src/index.js` for everything to work as expected
@@ -56,11 +58,11 @@ run_gs() {
       photo_params="-dColorImageResolution=300"
     fi
     for specialty_id in fe be al w3 fs; do
-      for format in a4 letter;
+      for paper_format_short_code in 4 l; #1
       do
-        resume_code="$specialty_id$photo_included"
-        source="resume-$format-$resume_code.pdf"
-        target_folder="$host_compressed_artifacts_path/$format"
+        resume_code="$specialty_id$photo_included$paper_format_short_code"
+        source="resume-$resume_code-raw.pdf"
+        target_folder="$host_compressed_artifacts_path"
         filename_prefix="utku-sarioglu-resume"
         output_file="$target_folder/$filename_prefix-$resume_code.pdf"
         mkdir -p "$target_folder"

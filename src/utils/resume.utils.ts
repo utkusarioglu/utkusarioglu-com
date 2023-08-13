@@ -2,6 +2,8 @@ import {
   type Specialties,
   type SpecialtyId,
   type Specialty,
+  type PaperFormat,
+  type PaperFormatShortCode,
 } from "_types/resume.types";
 
 export function getActiveSpecialty(
@@ -37,13 +39,30 @@ export function printFilter(item: any): boolean {
   return item.print !== false;
 }
 
+function createPaperFormatShortCode(
+  paperFormat: PaperFormat
+): PaperFormatShortCode {
+  switch (paperFormat) {
+    case "a4":
+      return "4";
+    case "letter":
+      return "l";
+    case "unspecified":
+      return "-";
+    default:
+      throw new Error("unrecognized paper format");
+  }
+}
+
 export function createResumeCode(
   activeSpecialtyId: SpecialtyId,
-  includePhoto: boolean
+  includePhoto: boolean,
+  paperFormat: PaperFormat
 ): string[] {
   const resumeCode = [
     activeSpecialtyId.toUpperCase(),
     includePhoto ? "p" : "n",
+    createPaperFormatShortCode(paperFormat),
     btoa(Date.now().toString()),
   ].join("");
   const lineLength = 6;

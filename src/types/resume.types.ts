@@ -56,6 +56,9 @@ export type Specialty = {
 
 export type Specialties = Specialty[];
 
+export type PaperFormat = "a4" | "letter" | "unspecified";
+export type PaperFormatShortCode = "4" | "l" | "-";
+
 export type Resume = {
   page: "Resume";
   specialties: Specialties;

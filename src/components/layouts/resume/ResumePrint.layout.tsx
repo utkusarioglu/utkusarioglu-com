@@ -5,21 +5,19 @@ import ResumePrintH1View from "_views/resume-print/ResumePrintH1.view";
 import ResumePrintH2View from "_views/resume-print/ResumePrintH2.view";
 import ResumePrintH3View from "_views/resume-print/ResumePrintH3.view";
 import c from "classnames";
-import {
-  printFilter,
-  specialtyFilter,
-  createResumeCode,
-} from "_utils/resume.utils";
+import { printFilter, specialtyFilter } from "_utils/resume.utils";
 
 export interface ResumeLayoutProps {
   activeSpecialtyId: SpecialtyId;
   resume: Resume;
   includePhoto: boolean;
+  resumeCode: string[];
 }
 
 const ResumePrintLayout: FC<ResumeLayoutProps> = ({
   activeSpecialtyId,
   includePhoto,
+  resumeCode,
   resume: {
     name,
     contact,
@@ -31,7 +29,6 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
 }) => {
   const defaultFilter = (item: any) =>
     printFilter(item) && specialtyFilter(item, activeSpecialtyId);
-  const resumeCode = createResumeCode(activeSpecialtyId, includePhoto);
 
   return (
     <div className="hidden print:block relative">

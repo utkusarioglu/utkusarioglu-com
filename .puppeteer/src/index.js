@@ -7,7 +7,7 @@ const PAPER_FORMAT_VARIANTS = [
   {
     format: "a4",
     margin: {
-      x: 52,
+      x: 51,
       y: 70,
     },
   },
@@ -23,6 +23,22 @@ const PAPER_FORMAT_VARIANTS = [
 const SPECIALTY_VARIANTS = ["fe", "be", "fs", "w3", "al"];
 
 const PHOTO_VARIANTS = [true, false];
+
+/**
+ * Same exact function also exists in `utils/resume.utils.ts`
+ */
+function createPaperFormatShortCode(paperFormat) {
+  switch (paperFormat) {
+    case "a4":
+      return "4";
+    case "letter":
+      return "l";
+    case "unspecified":
+      return "-";
+    default:
+      throw new Error("unrecognized paper format");
+  }
+}
 
 function createMatrix(specialtyIds, photoVariants) {
   matrix = [];
@@ -63,7 +79,12 @@ async function createSingle(browser, specialtyId, includePhoto) {
   });
 
   await PAPER_FORMAT_VARIANTS.reduce(async (chain, { format, margin }) => {
-    const resumePath = `${artifactsPath}/raw/resume-${format}-${resumeCode}.pdf`;
+    const paperFormatShortCode = createPaperFormatShortCode(format);
+    const resumePath = [
+      artifactsPath,
+      "raw",
+      `resume-${resumeCode + paperFormatShortCode}-raw.pdf`,
+    ].join("");
     console.log({
       where: "in paper loop",
       resumePath,
