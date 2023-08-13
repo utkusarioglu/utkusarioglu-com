@@ -53,6 +53,8 @@ const AboutPage: FC<MusingsPageProps> = ({
         <ContentCardBackgroundLayout key={section.title}>
           <ContentCardSectionView
             {...section}
+            keyFunction={(item) => item.title}
+            filterFunction={() => true}
             listItemComponent={({
               item: { title, subtitle, remarks, href },
             }) => (
