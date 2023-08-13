@@ -34,7 +34,7 @@ function createMatrix(specialtyIds, photoVariants) {
   return matrix;
 }
 
-async function createSingle(specialtyId, includePhoto) {
+async function createSingle(page, specialtyId, includePhoto) {
   const url = [
     baseUrl,
     "?",
@@ -85,7 +85,7 @@ async function createSingle(specialtyId, includePhoto) {
 
   const matrix = createMatrix(SPECIALTY_VARIANTS, PHOTO_VARIANTS);
   await matrix.reduce(({ specialtyId, includePhoto }) => {
-    return createSingle(specialtyId, includePhoto);
+    return createSingle(page, specialtyId, includePhoto);
   }, Promise.resolve());
 
   await browser.close();
