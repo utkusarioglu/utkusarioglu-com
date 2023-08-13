@@ -85,9 +85,10 @@ async function createSingle(page, specialtyId, includePhoto) {
 
   const matrix = createMatrix(SPECIALTY_VARIANTS, PHOTO_VARIANTS);
   console.log({ matrix });
-  await matrix.reduce((props) => {
-    console.log({ props });
-    return createSingle(page, props.specialtyId, props.includePhoto);
+  await matrix.reduce((acc, { specialtyId, includePhoto }) => {
+    console.log({ specialtyId, includePhoto });
+    acc.then(() => createSingle(page, specialtyId, includePhoto));
+    return acc;
   }, Promise.resolve());
 
   await browser.close();
