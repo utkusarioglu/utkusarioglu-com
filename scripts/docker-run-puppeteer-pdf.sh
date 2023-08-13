@@ -49,7 +49,6 @@ run_docker() {
 }
 
 run_gs() {
-  gs --version
   # You also need to set the format settings in 
   # `.puppeteer/src/index.js` for everything to work as expected
   for photo_included in p n; do
@@ -65,7 +64,8 @@ run_gs() {
         gs \
           -sDEVICE=pdfwrite \
           -dCompatibilityLevel=1.4 \
-          -dPDFSETTINGS=/printer \
+          -dPDFSETTINGS=/screen \
+          -dColorImageResolution=150 \
           -dNOPAUSE \
           -dQUIET \
           -dBATCH \
