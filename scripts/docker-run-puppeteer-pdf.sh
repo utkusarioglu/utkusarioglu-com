@@ -58,6 +58,8 @@ run_gs() {
         resume_code="$specialty_id$photo_included"
         source="resume-$format-$resume_code.pdf"
         target_folder="$host_compressed_artifacts_path/$format"
+        filename_prefix="utku-sarioglu-resume"
+        output_file="$target_folder/$filename_prefix-$resume_code.pdf"
         mkdir -p "$target_folder"
         gs \
           -sDEVICE=pdfwrite \
@@ -66,7 +68,7 @@ run_gs() {
           -dNOPAUSE \
           -dQUIET \
           -dBATCH \
-          -sOutputFile="$target_folder/utku-sarioglu-resume.pdf" \
+          -sOutputFile=$output_file \
           "$host_raw_artifacts_path/$source"
       done
     done
