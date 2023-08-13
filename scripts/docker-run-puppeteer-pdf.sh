@@ -65,7 +65,7 @@ run_gs() {
           -sDEVICE=pdfwrite \
           -dCompatibilityLevel=1.4 \
           -dPDFSETTINGS=/screen \
-          -dColorImageResolution=150 \
+          -dColorImageResolution=300 \
           -dNOPAUSE \
           -dQUIET \
           -dBATCH \
