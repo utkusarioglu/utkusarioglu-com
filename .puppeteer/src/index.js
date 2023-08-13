@@ -38,7 +38,7 @@ async function createSingle(page, specialtyId, includePhoto) {
   const url = [
     baseUrl,
     "?",
-    `specialtyId=${specialtyId}`,
+    `specialty-id=${specialtyId}`,
     "&",
     `include-photo=${includePhoto ? "true" : "false"}`,
   ].join("");
@@ -84,6 +84,7 @@ async function createSingle(page, specialtyId, includePhoto) {
   page.setViewport({ width: 1920, height: 1080 });
 
   const matrix = createMatrix(SPECIALTY_VARIANTS, PHOTO_VARIANTS);
+  console.log({ matrix });
   await matrix.reduce(({ specialtyId, includePhoto }) => {
     return createSingle(page, specialtyId, includePhoto);
   }, Promise.resolve());
