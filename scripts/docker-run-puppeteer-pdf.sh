@@ -68,12 +68,13 @@ run_gs() {
           -dNOPAUSE \
           -dQUIET \
           -dBATCH \
-          -r300 \
+          -r600 \
           -sOutputFile=$output_file \
           "$host_raw_artifacts_path/$source"
       done
     done
   done
+          # -dDownScaleFactor=3 \
 }
 
 clean_artifacts && run_docker && run_gs
