@@ -34,7 +34,7 @@ function createMatrix(specialtyIds, photoVariants) {
   return matrix;
 }
 
-async function createSingle(page, specialtyId, includePhoto) {
+async function createSingle(browser, specialtyId, includePhoto) {
   const url = [
     baseUrl,
     "?",
@@ -45,6 +45,16 @@ async function createSingle(page, specialtyId, includePhoto) {
   const resumeCode = [specialtyId, includePhoto ? "p" : "n"].join("");
   const screenshotPath = `${artifactsPath}/screenshots/resume-${resumeCode}.png`;
 
+  console.log({
+    where: "before paper loop",
+    baseUrl,
+    url,
+    specialtyId,
+    includePhoto,
+    resumeCode,
+  });
+  const page = await browser.newPage();
+  page.setViewport({ width: 1920, height: 1080 });
   await page.goto(url, {
     waitUntil: "networkidle2",
   });
@@ -52,25 +62,35 @@ async function createSingle(page, specialtyId, includePhoto) {
     path: screenshotPath,
   });
 
-  await PAPER_FORMAT_VARIANTS.reduce(async (chain, { format, margin }) => {
-    const resumePath = `${artifactsPath}/raw/resume-${format}-${resumeCode}.pdf`;
-    console.log({ baseUrl, url, specialtyId, includePhoto, resumeCode });
-    chain = chain.then(() =>
-      page.pdf({
-        displayHeaderFooter: false,
-        omitBackground: true,
-        path: resumePath,
-        format,
-        margin: {
-          left: margin.x,
-          right: margin.x,
-          bottom: margin.y,
-          top: margin.y,
-        },
-      })
-    );
-    return chain;
-  }, Promise.resolve());
+  return await PAPER_FORMAT_VARIANTS.reduce(
+    async (chain, { format, margin }) => {
+      const resumePath = `${artifactsPath}/raw/resume-${format}-${resumeCode}.pdf`;
+      console.log({
+        where: "in paper loop",
+        baseUrl,
+        url,
+        specialtyId,
+        includePhoto,
+        resumeCode,
+      });
+      chain = chain.then(() =>
+        page.pdf({
+          displayHeaderFooter: false,
+          omitBackground: true,
+          path: resumePath,
+          format,
+          margin: {
+            left: margin.x,
+            right: margin.x,
+            bottom: margin.y,
+            top: margin.y,
+          },
+        })
+      );
+      return chain;
+    },
+    Promise.resolve()
+  );
 }
 
 (async () => {
@@ -80,14 +100,12 @@ async function createSingle(page, specialtyId, includePhoto) {
       "--ignore-certificate-errors",
     ],
   });
-  const page = await browser.newPage();
-  page.setViewport({ width: 1920, height: 1080 });
 
   const matrix = createMatrix(SPECIALTY_VARIANTS, PHOTO_VARIANTS);
   console.log({ matrix });
   await matrix.reduce((acc, { specialtyId, includePhoto }) => {
     console.log({ specialtyId, includePhoto });
-    acc.then(() => createSingle(page, specialtyId, includePhoto));
+    acc.then(() => createSingle(browser, specialtyId, includePhoto));
     return acc;
   }, Promise.resolve());
 
