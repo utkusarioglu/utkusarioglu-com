@@ -49,6 +49,7 @@ run_docker() {
 }
 
 run_gs() {
+  gs --version
   # You also need to set the format settings in 
   # `.puppeteer/src/index.js` for everything to work as expected
   for photo_included in p n; do
@@ -69,12 +70,12 @@ run_gs() {
           -dQUIET \
           -dBATCH \
           -r600 \
+          -dDownScaleFactor=3 \
           -sOutputFile=$output_file \
           "$host_raw_artifacts_path/$source"
       done
     done
   done
-          # -dDownScaleFactor=3 \
 }
 
 clean_artifacts && run_docker && run_gs
