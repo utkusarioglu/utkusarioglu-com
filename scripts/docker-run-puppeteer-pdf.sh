@@ -68,6 +68,7 @@ run_gs() {
           -dNOPAUSE \
           -dQUIET \
           -dBATCH \
+          -dDownScaleFactor=3 \
           -sOutputFile=$output_file \
           "$host_raw_artifacts_path/$source"
       done
