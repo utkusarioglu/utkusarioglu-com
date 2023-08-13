@@ -65,12 +65,10 @@ run_gs() {
         gs \
           -sDEVICE=pdfwrite \
           -dCompatibilityLevel=1.4 \
-          -dPDFSETTINGS=/screen \
+          -dPDFSETTINGS=/printer \
           -dNOPAUSE \
           -dQUIET \
           -dBATCH \
-          -r600 \
-          -dDownScaleFactor=3 \
           -sOutputFile=$output_file \
           "$host_raw_artifacts_path/$source"
       done
