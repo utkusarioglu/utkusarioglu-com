@@ -5,14 +5,16 @@ const baseUrl = "http://www.utkusarioglu.com:3000/resume";
 
 const PAPER_FORMAT_VARIANTS = [
   {
-    format: "a4",
+    name: "a4",
+    shortCode: "4",
     margin: {
       x: 51,
       y: 70,
     },
   },
   {
-    format: "letter",
+    name: "letter",
+    shortCode: "l",
     margin: {
       x: 40,
       y: 40,
@@ -24,42 +26,53 @@ const SPECIALTY_VARIANTS = ["fe", "be", "fs", "w3", "al"];
 
 const PHOTO_VARIANTS = [true, false];
 
-/**
- * Same exact function also exists in `utils/resume.utils.ts`
- */
-function createPaperFormatShortCode(paperFormat) {
-  switch (paperFormat) {
-    case "a4":
-      return "4";
-    case "letter":
-      return "l";
-    case "unspecified":
-      return "-";
-    default:
-      throw new Error("unrecognized paper format");
-  }
-}
+// /**
+//  * Same exact function also exists in `utils/resume.utils.ts`
+//  */
+// function createPaperFormatShortCode(paperFormat) {
+//   switch (paperFormat) {
+//     case "a4":
+//       return "4";
+//     case "letter":
+//       return "l";
+//     case "unspecified":
+//       return "-";
+//     default:
+//       throw new Error("unrecognized paper format");
+//   }
+// }
 
-function createMatrix(specialtyIds, photoVariants) {
+function createMatrix(specialtyIds, photoVariants, paperFormatVariants) {
   matrix = [];
-  specialtyIds.forEach((specialtyId) => {
-    photoVariants.forEach((includePhoto) => {
-      matrix.push({ specialtyId, includePhoto });
+  paperFormatVariants.forEach((paperFormat) => {
+    specialtyIds.forEach((specialtyId) => {
+      photoVariants.forEach((includePhoto) => {
+        matrix.push({ specialtyId, includePhoto, paperFormat });
+      });
     });
   });
   return matrix;
 }
 
-async function createSingle(browser, specialtyId, includePhoto) {
+async function createSingle(browser, specialtyId, includePhoto, paperFormat) {
   const url = [
     baseUrl,
-    "?",
-    `specialty-id=${specialtyId}`,
-    "&",
-    `include-photo=${includePhoto ? "true" : "false"}`,
+    [
+      `specialty-id=${specialtyId}`,
+      `include-photo=${includePhoto ? "true" : "false"}`,
+      `paper-format=${paperFormat.name}`,
+    ].join("&"),
+  ].join("?");
+  const resumeCode = [
+    specialtyId,
+    includePhoto ? "p" : "n",
+    paperFormat.shortCode,
   ].join("");
-  const resumeCode = [specialtyId, includePhoto ? "p" : "n"].join("");
-  const screenshotPath = `${artifactsPath}/screenshots/resume-${resumeCode}.png`;
+  const screenshotPath = [
+    artifactsPath,
+    "screenshots",
+    `resume-${resumeCode}.png`,
+  ].join("/");
 
   console.log({
     where: "before paper loop",
@@ -78,33 +91,33 @@ async function createSingle(browser, specialtyId, includePhoto) {
     path: screenshotPath,
   });
 
-  await PAPER_FORMAT_VARIANTS.reduce(async (chain, { format, margin }) => {
-    const paperFormatShortCode = createPaperFormatShortCode(format);
-    const resumePath = [
-      artifactsPath,
-      "raw",
-      `resume-${resumeCode + paperFormatShortCode}-raw.pdf`,
-    ].join("");
-    console.log({
-      where: "in paper loop",
-      resumePath,
-    });
-    chain = chain.then(() =>
-      page.pdf({
-        displayHeaderFooter: false,
-        omitBackground: true,
-        path: resumePath,
-        format,
-        margin: {
-          left: margin.x,
-          right: margin.x,
-          bottom: margin.y,
-          top: margin.y,
-        },
-      })
-    );
-    return chain;
-  }, Promise.resolve());
+  // await PAPER_FORMAT_VARIANTS.reduce(async (chain, { format, margin }) => {
+  // const paperFormatShortCode = createPaperFormatShortCode(format);
+  const resumePath = [
+    artifactsPath,
+    "raw",
+    `resume-${resumeCode}-raw.pdf`,
+  ].join("/");
+  // console.log({
+  //   where: "in paper loop",
+  //   resumePath,
+  // });
+  // chain = chain.then(() =>
+  await page.pdf({
+    displayHeaderFooter: false,
+    omitBackground: true,
+    path: resumePath,
+    format: paperFormat.name,
+    margin: {
+      left: paperFormat.margin.x,
+      right: paperFormat.margin.x,
+      bottom: paperFormat.margin.y,
+      top: paperFormat.margin.y,
+    },
+  });
+  // );
+  // return chain;
+  // }, Promise.resolve());
   await page.close();
 }
 
@@ -116,11 +129,17 @@ async function createSingle(browser, specialtyId, includePhoto) {
     ],
   });
 
-  const matrix = createMatrix(SPECIALTY_VARIANTS, PHOTO_VARIANTS);
+  const matrix = createMatrix(
+    SPECIALTY_VARIANTS,
+    PHOTO_VARIANTS,
+    PAPER_FORMAT_VARIANTS
+  );
   console.log({ matrix });
-  await matrix.reduce((acc, { specialtyId, includePhoto }) => {
-    console.log({ specialtyId, includePhoto });
-    acc = acc.then(() => createSingle(browser, specialtyId, includePhoto));
+  await matrix.reduce((acc, { specialtyId, includePhoto, paperFormat }) => {
+    console.log({ specialtyId, includePhoto, paperFormat });
+    acc = acc.then(() =>
+      createSingle(browser, specialtyId, includePhoto, paperFormat)
+    );
     return acc;
   }, Promise.resolve());
 
