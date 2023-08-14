@@ -84,7 +84,7 @@ async function createSingle(browser, specialtyId, includePhoto, paperFormat) {
     displayHeaderFooter: false,
     omitBackground: true,
     path: resumePath,
-    format: paperFormat.name,
+    format: paperFormat.searchQueryValue,
     margin: {
       left: paperFormat.margins.x,
       right: paperFormat.margins.x,
