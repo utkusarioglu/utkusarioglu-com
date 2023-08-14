@@ -5,28 +5,25 @@ import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout"
 import { COLORS } from "_config";
 import ContentCardLinkView from "_views/content-card/ContentCardLink.view";
 import H3 from "_primitives/headings/H3.primitive";
-import {
-  type SpecialtyReaderProps,
-  type ResumePhotoStateProps,
-} from "_layouts/resume/Resume.layout";
+import { type SpecialtyReaderProps } from "_layouts/resume/Resume.layout";
+import { type ResumeIncludePhotoStateProps } from "_hooks/resume/resume.hooks";
+import P from "_primitives/paragraph/P.primitive";
 
 const RESUME_LIST = [
   {
     title: "Letter",
     remarks: "North American standard",
-    // folder: "letter",
     paperFormatShortCode: "l",
   },
   {
     title: "A4",
     remarks: "Standard format for Europe and the rest of the world",
-    // folder: "a4",
     paperFormatShortCode: "4",
   },
 ];
 
 type ResumeScreenDownloadViewProps = SpecialtyReaderProps &
-  ResumePhotoStateProps & {};
+  ResumeIncludePhotoStateProps & {};
 
 const ResumeScreenDownloadView: FC<ResumeScreenDownloadViewProps> = ({
   specialties,
@@ -38,14 +35,23 @@ const ResumeScreenDownloadView: FC<ResumeScreenDownloadViewProps> = ({
     .title;
   return (
     <ContentCardBackgroundLayout>
-      <input
-        type="checkbox"
-        value="true"
-        onChange={(e) => setIncludePhoto(e.target.value === "true")}
-      />
       <ContentCardSectionView
         title="Download Resume"
         subtitle={subtitle}
+        Body={() => (
+          <div className="flex flex-row">
+            <input
+              // TODO this needs work
+              className="mr-3 border-blue-500 bg-slate-500"
+              type="checkbox"
+              checked={includePhoto}
+              onChange={(e) => {
+                setIncludePhoto(e.target.checked);
+              }}
+            />
+            <P>Include a photo</P>
+          </div>
+        )}
         list={RESUME_LIST}
         keyFunction={(item) => item.title}
         filterFunction={() => true}

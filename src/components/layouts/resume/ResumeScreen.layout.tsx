@@ -1,13 +1,13 @@
-import { type FC, type Dispatch, type SetStateAction } from "react";
-import { type SpecialtyId, type Resume } from "_types/resume.types";
+import { type FC } from "react";
+import { type Resume } from "_types/resume.types";
 import { specialtyFilter } from "_utils/resume.utils";
 import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import ContentCardSectionView from "_views/content-card/ContentCardSection.view";
 import {
-  type ResumeSpecialtyStateProps,
-  type ResumePhotoStateProps,
-} from "./Resume.layout";
+  type ResumeSpecialtyIdStateProps,
+  type ResumeIncludePhotoStateProps,
+} from "_hooks/resume/resume.hooks";
 
 import ResumeSpecialtySelectionView from "_views/resume-screen/ResumeSpecialtySelection.view";
 import ResumeCertificationLi from "_views/resume-screen/ResumeScreenCertificationLi.view";
@@ -18,8 +18,8 @@ import ResumeIntroduction from "_views/resume-screen/ResumeScreenIntroduction.vi
 import ResumeSkills from "_views/resume-screen/ResumeScreenSkills.view";
 import ResumeWorkExperienceLi from "_views/resume-screen/ResumeScreenWorkExperienceLi.view";
 
-export type ResumeScreenLayoutProps = ResumeSpecialtyStateProps &
-  ResumePhotoStateProps & {
+export type ResumeScreenLayoutProps = ResumeSpecialtyIdStateProps &
+  ResumeIncludePhotoStateProps & {
     resume: Resume;
   };
 

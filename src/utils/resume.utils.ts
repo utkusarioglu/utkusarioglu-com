@@ -1,3 +1,4 @@
+import { IncludePhoto } from "_hooks/resume/resume.hooks";
 import {
   type Specialties,
   type SpecialtyId,
@@ -39,7 +40,7 @@ export function printFilter(item: any): boolean {
   return item.print !== false;
 }
 
-function createPaperFormatShortCode(
+export function createPaperFormatShortCode(
   paperFormat: PaperFormat
 ): PaperFormatShortCode {
   switch (paperFormat) {
@@ -56,13 +57,13 @@ function createPaperFormatShortCode(
 
 export function createResumeCode(
   activeSpecialtyId: SpecialtyId,
-  includePhoto: boolean,
-  paperFormat: PaperFormat
+  includePhoto: IncludePhoto,
+  paperFormatShortCode: PaperFormatShortCode
 ): string[] {
   const resumeCode = [
     activeSpecialtyId.toUpperCase(),
     includePhoto ? "p" : "n",
-    createPaperFormatShortCode(paperFormat),
+    paperFormatShortCode,
     btoa(Date.now().toString()),
   ].join("");
   const lineLength = 6;

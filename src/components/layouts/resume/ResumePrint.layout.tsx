@@ -6,11 +6,12 @@ import ResumePrintH2View from "_views/resume-print/ResumePrintH2.view";
 import ResumePrintH3View from "_views/resume-print/ResumePrintH3.view";
 import c from "classnames";
 import { printFilter, specialtyFilter } from "_utils/resume.utils";
+import { type IncludePhoto } from "_hooks/resume/resume.hooks";
 
 export interface ResumeLayoutProps {
   activeSpecialtyId: SpecialtyId;
   resume: Resume;
-  includePhoto: boolean;
+  includePhoto: IncludePhoto;
   resumeCode: string[];
 }
 
