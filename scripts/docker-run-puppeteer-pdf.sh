@@ -60,18 +60,19 @@ run_gs() {
   # PAPER_FORMAT_SHORT_CODE_VARIANTS='4 l'
 
   PHOTO_VARIANTS="$(
-    yq '.includePhoto[] | .shortCode' $RESUME_FILE_RELPATH
+    yq '.includePhoto[] | .shortCode' $RESUME_FILE_RELPATH | tr '\n' ' '
   )"
   SPECIALTY_ID_VARIANTS="$(
-    yq '.specialties[] | .id' $RESUME_FILE_RELPATH
+    yq '.specialties[] | .id' $RESUME_FILE_RELPATH | tr '\n' ' '
   )"
   PAPER_FORMAT_SHORT_CODE_VARIANTS="$(
-    yq '.paperFormats[] | .shortCode' $RESUME_FILE_RELPATH
+    yq '.paperFormats[] | .shortCode' $RESUME_FILE_RELPATH | tr '\n' ' '
   )"
 
-  echo "photo variants $PHOTO_VARIANTS"
-  echo "specialty id variants: $SPECIALTY_ID_VARIANTS"
-  echo "paper format short code variants: $PAPER_FORMAT_SHORT_CODE_VARIANTS"
+  echo 'Ghostscript will process pdf files agains following specs:'
+  echo "  Photo variants: '$PHOTO_VARIANTS'"
+  echo "  Specialty id variants: '$SPECIALTY_ID_VARIANTS'"
+  echo "  Paper format short code variants: '$PAPER_FORMAT_SHORT_CODE_VARIANTS'"
 
   for photo_included in $PHOTO_VARIANTS; do
     if [ $photo_included = 'p' ]; then
@@ -81,6 +82,7 @@ run_gs() {
       for paper_format_short_code in $PAPER_FORMAT_SHORT_CODE_VARIANTS; #1
       do
         resume_code="$specialty_id$photo_included$paper_format_short_code"
+        echo "resume code $resume_code"
         source="resume-$resume_code-raw.pdf"
         target_folder="$host_compressed_artifacts_path"
         filename_prefix="utku-sarioglu-resume"

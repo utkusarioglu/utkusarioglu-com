@@ -11,14 +11,15 @@ const resume = yaml.parse(resumeFile);
 const paperFormatVariants = resume.paperFormats;
 
 const specialtyIdVariants = resume.specialties.map(({ id }) => id);
-const includePhotoVariants = resume.includePhoto.map(
-  ({ searchQueryValue }) => searchQueryValue
-);
+const includePhotoVariants = resume.includePhoto;
 
 console.log({
-  includePhotoVariants,
-  paperFormatVariants,
-  specialtyIdVariants,
+  message: "Puppeteer is creating pdfs against following variants",
+  specs: {
+    includePhotoVariants,
+    paperFormatVariants,
+    specialtyIdVariants,
+  },
 });
 
 function createMatrix(specialtyIds, photoVariants, paperFormatVariants) {
@@ -34,23 +35,23 @@ function createMatrix(specialtyIds, photoVariants, paperFormatVariants) {
 }
 
 async function createSingle(browser, specialtyId, includePhoto, paperFormat) {
-  console.log({
-    status: "Creating pdf",
-    specs: { specialtyId, includePhoto, paperFormat },
-  });
-
   const url = [
     baseUrl,
     [
       `specialty-id=${specialtyId}`,
-      `include-photo=${includePhoto ? "true" : "false"}`,
+      `include-photo=${includePhoto.searchQueryValue}`,
       `paper-format=${paperFormat.name}`,
     ].join("&"),
   ].join("?");
 
+  console.log({
+    status: "Creating pdf",
+    specs: { url, specialtyId, includePhoto, paperFormat },
+  });
+
   const resumeCode = [
     specialtyId,
-    includePhoto ? "p" : "n",
+    includePhoto.shortCode,
     paperFormat.shortCode,
   ].join("");
 
@@ -73,17 +74,17 @@ async function createSingle(browser, specialtyId, includePhoto, paperFormat) {
     path: resumePath,
     format: paperFormat.name,
     margin: {
-      left: paperFormat.margin.x,
-      right: paperFormat.margin.x,
-      bottom: paperFormat.margin.y,
-      top: paperFormat.margin.y,
+      left: paperFormat.margins.x,
+      right: paperFormat.margins.x,
+      bottom: paperFormat.margins.y,
+      top: paperFormat.margins.y,
     },
   });
 
   await page.close();
 }
 
-async () => {
+(async () => {
   console.log("Starting pdf files creation…");
 
   const browser = await puppeteer.launch({
@@ -107,4 +108,5 @@ async () => {
   }, Promise.resolve());
 
   await browser.close();
-};
+  console.log("Pdf creation complete.");
+})();
