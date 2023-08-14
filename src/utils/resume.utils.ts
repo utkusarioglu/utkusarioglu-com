@@ -5,6 +5,7 @@ import {
   type Specialty,
   type PaperFormat,
   type PaperFormatShortCode,
+  PaperFormatSearchQueryValue,
 } from "_types/resume.types";
 
 export function getActiveSpecialty(
@@ -41,7 +42,7 @@ export function printFilter(item: any): boolean {
 }
 
 export function createPaperFormatShortCode(
-  paperFormat: PaperFormat
+  paperFormat: PaperFormatSearchQueryValue
 ): PaperFormatShortCode {
   switch (paperFormat) {
     case "a4":

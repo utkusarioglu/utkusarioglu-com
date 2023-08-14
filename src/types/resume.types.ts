@@ -56,12 +56,13 @@ export type Specialty = {
 
 export type Specialties = Specialty[];
 
-// export type PaperFormat = "a4" | "letter" | "unspecified";
+export type PaperFormatSearchQueryValue = "a4" | "letter" | "unspecified";
 export type PaperFormatShortCode = "4" | "l" | "-";
 
-type PaperFormat = Titled &
+export type PaperFormat = Titled &
   Remarked & {
     shortCode: PaperFormatShortCode;
+    searchQueryValue: PaperFormatSearchQueryValue;
     margins: {
       x: number;
       y: number;

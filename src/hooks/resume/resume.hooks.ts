@@ -29,7 +29,9 @@ export function useResumeCustomization(): UseResumeCustomizationReturn {
   const router = useRouter();
   const querySpecialtyId = router.query["specialty-id"] as SpecialtyId;
   const queryIncludePhoto = router.query["include-photo"] === "true";
-  const queryPaperFormat = router.query["paper-format"] as PaperFormat;
+  const queryPaperFormat = router.query[
+    "paper-format"
+  ] as PaperFormat["searchQueryValue"];
   const [activeSpecialtyId, setActiveSpecialtyId] = useState<SpecialtyId>(
     querySpecialtyId || "al"
   );

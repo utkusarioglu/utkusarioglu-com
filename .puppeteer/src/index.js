@@ -40,7 +40,7 @@ async function createSingle(browser, specialtyId, includePhoto, paperFormat) {
     [
       `specialty-id=${specialtyId}`,
       `include-photo=${includePhoto.searchQueryValue}`,
-      `paper-format=${paperFormat.name}`,
+      `paper-format=${paperFormat.searchQueryValue}`,
     ].join("&"),
   ].join("?");
 

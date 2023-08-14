@@ -21,6 +21,7 @@ variants:
 
   paperFormats:
     - title: A4
+      searchQueryValue: a4
       remarks: North American standard
       shortCode: 4
       margins:
@@ -28,6 +29,7 @@ variants:
         y: 70
     - title: Letter
       remarks: Standard format for Europe and the rest of the world
+      searchQueryValue: letter
       shortCode: l
       margins:
         x: 40
