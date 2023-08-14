@@ -69,6 +69,10 @@ run_gs() {
     yq '.paperFormats[] | .shortCode' $RESUME_FILE_RELPATH
   )"
 
+  echo "photo variants $PHOTO_VARIANTS"
+  echo "specialty id variants: $SPECIALTY_ID_VARIANTS"
+  echo "paper format short code variants: $PAPER_FORMAT_SHORT_CODE_VARIANTS"
+
   for photo_included in $PHOTO_VARIANTS; do
     if [ $photo_included = 'p' ]; then
       photo_params="-dColorImageResolution=300"
