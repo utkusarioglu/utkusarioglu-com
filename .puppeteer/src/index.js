@@ -13,14 +13,20 @@ const paperFormatVariants = resume.variants.paperFormats;
 const specialtyIdVariants = resume.variants.specialties.map(({ id }) => id);
 const includePhotoVariants = resume.variants.includePhoto;
 
-console.log({
-  message: "Puppeteer is creating pdfs against following variants",
-  specs: {
-    includePhotoVariants,
-    paperFormatVariants,
-    specialtyIdVariants,
-  },
-});
+console.log(
+  JSON.stringify(
+    {
+      message: "Puppeteer is creating pdfs against following variants",
+      specs: {
+        includePhotoVariants,
+        paperFormatVariants,
+        specialtyIdVariants,
+      },
+    },
+    null,
+    2
+  )
+);
 
 function createMatrix(specialtyIds, photoVariants, paperFormatVariants) {
   matrix = [];
@@ -44,10 +50,16 @@ async function createSingle(browser, specialtyId, includePhoto, paperFormat) {
     ].join("&"),
   ].join("?");
 
-  console.log({
-    status: "Creating pdf",
-    specs: { url, specialtyId, includePhoto, paperFormat },
-  });
+  console.log(
+    JSON.stringify(
+      {
+        status: "Creating pdf",
+        specs: { url, specialtyId, includePhoto, paperFormat },
+      },
+      null,
+      2
+    )
+  );
 
   const resumeCode = [
     specialtyId,
