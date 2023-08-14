@@ -4,6 +4,10 @@ import { specialtyFilter } from "_utils/resume.utils";
 import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import ContentCardSectionView from "_views/content-card/ContentCardSection.view";
+import {
+  type ResumeSpecialtyStateProps,
+  type ResumePhotoStateProps,
+} from "./Resume.layout";
 
 import ResumeSpecialtySelectionView from "_views/resume-screen/ResumeSpecialtySelection.view";
 import ResumeCertificationLi from "_views/resume-screen/ResumeScreenCertificationLi.view";
@@ -14,15 +18,16 @@ import ResumeIntroduction from "_views/resume-screen/ResumeScreenIntroduction.vi
 import ResumeSkills from "_views/resume-screen/ResumeScreenSkills.view";
 import ResumeWorkExperienceLi from "_views/resume-screen/ResumeScreenWorkExperienceLi.view";
 
-export interface ResumeScreenLayoutProps {
-  activeSpecialtyId: SpecialtyId;
-  setActiveSpecialtyId: Dispatch<SetStateAction<SpecialtyId>>;
-  resume: Resume;
-}
+export type ResumeScreenLayoutProps = ResumeSpecialtyStateProps &
+  ResumePhotoStateProps & {
+    resume: Resume;
+  };
 
 const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
   activeSpecialtyId,
   setActiveSpecialtyId,
+  includePhoto,
+  setIncludePhoto,
   resume: {
     specialties,
     introduction,
@@ -43,6 +48,8 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
     <ResumeDownload
       specialties={specialties}
       activeSpecialtyId={activeSpecialtyId}
+      includePhoto={includePhoto}
+      setIncludePhoto={setIncludePhoto}
     />
     <ContentCardBackgroundLayout>
       <ResumeSkills

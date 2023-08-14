@@ -1,12 +1,14 @@
-import { Dispatch, SetStateAction, type FC } from "react";
-import { type SpecialtyId, type Specialties } from "_types/resume.types";
+import { type FC } from "react";
 import ContentCardSectionView from "_views/content-card/ContentCardSection.view";
 import ContentCardBackgroundLayout from "_layouts/content-card/ContentCardBackground.layout";
 import ContentCardItemLayout from "_layouts/content-card/ContentCardItem.layout";
 import { COLORS } from "_config";
 import ContentCardLinkView from "_views/content-card/ContentCardLink.view";
 import H3 from "_primitives/headings/H3.primitive";
-import { type SpecialtyReaderProps } from "_layouts/resume/Resume.layout";
+import {
+  type SpecialtyReaderProps,
+  type ResumePhotoStateProps,
+} from "_layouts/resume/Resume.layout";
 
 const RESUME_LIST = [
   {
@@ -23,10 +25,8 @@ const RESUME_LIST = [
   },
 ];
 
-type ResumeScreenDownloadViewProps = SpecialtyReaderProps & {
-  setIncludePhoto: Dispatch<SetStateAction<boolean>>;
-  includePhoto: boolean;
-};
+type ResumeScreenDownloadViewProps = SpecialtyReaderProps &
+  ResumePhotoStateProps & {};
 
 const ResumeScreenDownloadView: FC<ResumeScreenDownloadViewProps> = ({
   specialties,

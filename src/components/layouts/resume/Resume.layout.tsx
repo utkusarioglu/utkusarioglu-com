@@ -1,4 +1,4 @@
-import { type FC, useEffect, useState } from "react";
+import { type FC, useEffect, useState, Dispatch, SetStateAction } from "react";
 import ResumePrintLayout from "./ResumePrint.layout";
 import ResumeScreenLayout from "./ResumeScreen.layout";
 import {
@@ -19,7 +19,23 @@ export interface SpecialtyReaderProps {
   specialties: Specialties;
 }
 
-function useResumeCustomization() {
+export interface ResumePhotoStateProps {
+  setIncludePhoto: Dispatch<SetStateAction<boolean>>;
+  includePhoto: boolean;
+}
+
+export interface ResumeSpecialtyStateProps {
+  activeSpecialtyId: SpecialtyId;
+  setActiveSpecialtyId: Dispatch<SetStateAction<SpecialtyId>>;
+}
+
+type UseResumeCustomizationReturn = ResumeSpecialtyStateProps &
+  ResumePhotoStateProps & {
+    resumeCode: string[];
+    paperFormat: PaperFormat;
+  };
+
+function useResumeCustomization(): UseResumeCustomizationReturn {
   const router = useRouter();
   const querySpecialtyId = router.query["specialty-id"] as SpecialtyId;
   const queryIncludePhoto = router.query["include-photo"] === "true";
@@ -58,8 +74,13 @@ function useResumeCustomization() {
 }
 
 const ResumeLayout: FC<ResumeLayoutProps> = ({ resume }) => {
-  const { activeSpecialtyId, setActiveSpecialtyId, includePhoto, resumeCode } =
-    useResumeCustomization();
+  const {
+    activeSpecialtyId,
+    setActiveSpecialtyId,
+    resumeCode,
+    includePhoto,
+    setIncludePhoto,
+  } = useResumeCustomization();
 
   return (
     <>
@@ -67,6 +88,8 @@ const ResumeLayout: FC<ResumeLayoutProps> = ({ resume }) => {
         resume={resume}
         activeSpecialtyId={activeSpecialtyId}
         setActiveSpecialtyId={setActiveSpecialtyId}
+        includePhoto={includePhoto}
+        setIncludePhoto={setIncludePhoto}
       />
       <ResumePrintLayout
         resume={resume}
