@@ -51,6 +51,7 @@ function useResumeCustomization() {
     activeSpecialtyId,
     setActiveSpecialtyId,
     includePhoto,
+    setIncludePhoto,
     paperFormat,
     resumeCode,
   };

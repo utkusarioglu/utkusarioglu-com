@@ -49,7 +49,8 @@ const CanvasLayout = () => {
       }}
       className={c(
         "absolute h-full w-full top-0 left-0 z-0",
-        "pointer-events-none flex justify-center"
+        "pointer-events-none flex justify-center",
+        "print:hidden"
       )}
     >
       <ErrorBoundary FallbackComponent={ErrorFallbackView}>

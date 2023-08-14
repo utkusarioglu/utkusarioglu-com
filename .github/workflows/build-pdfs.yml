@@ -76,12 +76,3 @@ jobs:
         with:
           name: utkusarioglu-com-pdf-artifacts
           path: .puppeteer/artifacts
-
-      - name: Telegram notifications
-        if: always()
-        uses: utkusarioglu/telegram-notifications@main
-        with:
-          telegram_id: ${{ secrets.TELEGRAM_ID }}
-          telegram_token: ${{ secrets.TELEGRAM_TOKEN }}
-          job_status: ${{ job.status }}
-          github_context: ${{ toJson(github) }}

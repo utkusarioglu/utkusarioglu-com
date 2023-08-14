@@ -51,14 +51,16 @@ run_docker() {
 # 1- 4 means a4, l means letter. Same values is are enforced by puppeteer and
 #    `utils/resume.utils.ts`.
 run_gs() {
-  # You also need to set the format settings in 
-  # `.puppeteer/src/index.js` for everything to work as expected
-  for photo_included in p n; do
+  PHOTO_VARIANTS='p n'
+  SPECIALTY_ID_VARIANTS='fe be al w3 fs'
+  PAPER_FORMAT_SHORT_CODE_VARIANTS='4 l'
+
+  for photo_included in $PHOTO_VARIANTS; do
     if [ $photo_included = 'p' ]; then
       photo_params="-dColorImageResolution=300"
     fi
-    for specialty_id in fe be al w3 fs; do
-      for paper_format_short_code in 4 l; #1
+    for specialty_id in $SPECIALTY_ID_VARIANTS; do
+      for paper_format_short_code in $PAPER_FORMAT_SHORT_CODE_VARIANTS; #1
       do
         resume_code="$specialty_id$photo_included$paper_format_short_code"
         source="resume-$resume_code-raw.pdf"
@@ -74,6 +76,7 @@ run_gs() {
           -dQUIET \
           -dBATCH \
           -sOutputFile=$output_file \
+          -dMaxInlineImageSize=0 \
           $photo_params \
           "$host_raw_artifacts_path/$source"
       done
@@ -81,4 +84,22 @@ run_gs() {
   done
 }
 
+          # -dFILTERIMAGE \
+          # -dFILTERVECTOR \
+        # -dSAFER \
+        # -dOverPrint=/simulate \
+        # -dEmbedAllFonts=true \
+        # -dSubsetFonts=true \
+        # -dAutoRotatePages=/None \
+        # -dPrinted=false \
+        # -r10 \
+# -dColorImageDownsampleType=/Bicubic 
+# -dColorImageResolution=150 -
+# dGrayImageDownsampleType=/Bicubic 
+# -dGrayImageResolution=150 
+# -dMonoImageDownsampleType=/Bicubic 
+# -dMonoImageResolution=150 
+          # -dPDFSETTINGS=/screen \
+
 clean_artifacts && run_docker && run_gs
+# run_gs
