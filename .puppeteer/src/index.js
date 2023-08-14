@@ -8,10 +8,10 @@ const baseUrl = "http://www.utkusarioglu.com:3000/resume";
 const resumeFile = fs.readFileSync("./assets/resume.yml", "utf-8");
 const resume = yaml.parse(resumeFile);
 
-const paperFormatVariants = resume.paperFormats;
+const paperFormatVariants = resume.variants.paperFormats;
 
-const specialtyIdVariants = resume.specialties.map(({ id }) => id);
-const includePhotoVariants = resume.includePhoto;
+const specialtyIdVariants = resume.variants.specialties.map(({ id }) => id);
+const includePhotoVariants = resume.variants.includePhoto;
 
 console.log({
   message: "Puppeteer is creating pdfs against following variants",

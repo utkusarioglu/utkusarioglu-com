@@ -133,10 +133,12 @@ export const HEX = {
   base: {
     dark: process.env.LOWEST_DARK,
     light: process.env.HIGHEST_LIGHT,
+    primary: process.env.PRIMARY_LIGHT,
   },
   shadow: {
     light: process.env.TERTIARY_LIGHT,
     dark: process.env.TERTIARY_DARK,
+    primary: process.env.PRIMARY_DARK,
   },
 };
 

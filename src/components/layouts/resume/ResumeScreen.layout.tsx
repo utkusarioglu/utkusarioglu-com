@@ -29,7 +29,7 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
   includePhoto,
   setIncludePhoto,
   resume: {
-    specialties,
+    variants: { specialties, paperFormats },
     introduction,
     contact,
     skills,
@@ -46,6 +46,7 @@ const ResumeScreenLayout: FC<ResumeScreenLayoutProps> = ({
       setCurrentSpecialty={setActiveSpecialtyId}
     />
     <ResumeDownload
+      paperFormats={paperFormats}
       specialties={specialties}
       activeSpecialtyId={activeSpecialtyId}
       includePhoto={includePhoto}

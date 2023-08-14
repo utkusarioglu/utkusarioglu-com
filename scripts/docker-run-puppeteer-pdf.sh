@@ -60,13 +60,13 @@ run_gs() {
   # PAPER_FORMAT_SHORT_CODE_VARIANTS='4 l'
 
   PHOTO_VARIANTS="$(
-    yq '.includePhoto[] | .shortCode' $RESUME_FILE_RELPATH | tr '\n' ' '
+    yq '.variants.includePhoto[] | .shortCode' $RESUME_FILE_RELPATH | tr '\n' ' '
   )"
   SPECIALTY_ID_VARIANTS="$(
-    yq '.specialties[] | .id' $RESUME_FILE_RELPATH | tr '\n' ' '
+    yq '.variants.specialties[] | .id' $RESUME_FILE_RELPATH | tr '\n' ' '
   )"
   PAPER_FORMAT_SHORT_CODE_VARIANTS="$(
-    yq '.paperFormats[] | .shortCode' $RESUME_FILE_RELPATH | tr '\n' ' '
+    yq '.variants.paperFormats[] | .shortCode' $RESUME_FILE_RELPATH | tr '\n' ' '
   )"
 
   echo 'Ghostscript will process pdf files agains following specs:'

@@ -8,24 +8,27 @@ import H3 from "_primitives/headings/H3.primitive";
 import { type SpecialtyReaderProps } from "_layouts/resume/Resume.layout";
 import { type ResumeIncludePhotoStateProps } from "_hooks/resume/resume.hooks";
 import P from "_primitives/paragraph/P.primitive";
+import { Resume } from "_types/resume.types";
 
-const RESUME_LIST = [
-  {
-    title: "Letter",
-    remarks: "North American standard",
-    paperFormatShortCode: "l",
-  },
-  {
-    title: "A4",
-    remarks: "Standard format for Europe and the rest of the world",
-    paperFormatShortCode: "4",
-  },
-];
+// const RESUME_LIST = [
+//   {
+//     title: "Letter",
+//     remarks: "North American standard",
+//     paperFormatShortCode: "l",
+//   },
+//   {
+//     title: "A4",
+//     remarks: "Standard format for Europe and the rest of the world",
+//     paperFormatShortCode: "4",
+//   },
+// ];
 
 type ResumeScreenDownloadViewProps = SpecialtyReaderProps &
-  ResumeIncludePhotoStateProps & {};
+  ResumeIncludePhotoStateProps &
+  Pick<Resume["variants"], "paperFormats">;
 
 const ResumeScreenDownloadView: FC<ResumeScreenDownloadViewProps> = ({
+  paperFormats,
   specialties,
   activeSpecialtyId,
   includePhoto,
@@ -52,20 +55,23 @@ const ResumeScreenDownloadView: FC<ResumeScreenDownloadViewProps> = ({
             <P>Include a photo</P>
           </div>
         )}
-        list={RESUME_LIST}
+        list={paperFormats}
         keyFunction={(item) => item.title}
         filterFunction={() => true}
-        listItemComponent={({
-          item: { title, paperFormatShortCode, remarks },
-        }) => {
+        listItemComponent={({ item: { title, shortCode, remarks } }) => {
           const resumeCode = [
             activeSpecialtyId,
             includePhoto ? "p" : "n",
-            paperFormatShortCode,
+            shortCode,
           ].join("");
           return (
             <ContentCardLinkView
-              href={`/_next/static/resume/utku-sarioglu-resume-${resumeCode}.pdf`}
+              href={[
+                "/_next",
+                "static",
+                "resume",
+                `utku-sarioglu-resume-${resumeCode}.pdf`,
+              ].join("/")}
             >
               <ContentCardItemLayout>
                 <H3>{title}</H3>

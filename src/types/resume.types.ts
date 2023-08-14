@@ -56,12 +56,33 @@ export type Specialty = {
 
 export type Specialties = Specialty[];
 
-export type PaperFormat = "a4" | "letter" | "unspecified";
+// export type PaperFormat = "a4" | "letter" | "unspecified";
 export type PaperFormatShortCode = "4" | "l" | "-";
+
+type PaperFormat = Titled &
+  Remarked & {
+    shortCode: PaperFormatShortCode;
+    margins: {
+      x: number;
+      y: number;
+    };
+  };
+
+interface IncludePhoto {
+  state: boolean;
+  searchQueryValue: "true" | "false";
+  shortCode: "p" | "n";
+}
+
+interface Variants {
+  specialties: Specialties;
+  paperFormats: PaperFormat[];
+  includePhoto: IncludePhoto[];
+}
 
 export type Resume = {
   page: "Resume";
-  specialties: Specialties;
+  variants: Variants;
   introduction: Introduction;
   contact: Section<ContactListItem>;
   skills: Skills;
