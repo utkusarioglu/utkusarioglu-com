@@ -18,6 +18,26 @@ specialties:
     title: Web3
     remarks: Ethereum based fullstack web3 application development
 
+paperFormats:
+  - name: a4
+    shortCode: 4
+    margins:
+      x: 45
+      y: 70
+  - name: letter
+    shortCode: l
+    margins:
+      x: 40
+      y: 40
+  
+includePhoto:
+  - state: true
+    searchQueryValue: 'true'
+    shortCode: p
+  - state: false
+    searchQueryValue: 'false'
+    shortCode: n
+
 introduction:
   title: Introduction
   print: false

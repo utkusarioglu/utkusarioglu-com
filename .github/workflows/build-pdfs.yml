@@ -58,6 +58,7 @@ jobs:
       - name: Add required packages
         run: |
           rm package.json
+          yarn 
           yarn add http-server local-ssl-proxy \
             --frozen-lockfile \
             --non-interactive

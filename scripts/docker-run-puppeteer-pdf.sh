@@ -2,6 +2,7 @@
 
 source .env
 work_dir=/home/pptruser
+host_assets_path=$(pwd)/assets
 host_puppeteer_path=$(pwd)/.puppeteer
 host_artifacts_path=$(pwd)/.puppeteer/artifacts
 host_compressed_artifacts_path=$host_artifacts_path/compressed
@@ -34,6 +35,7 @@ run_docker() {
     --add-host=www.utkusarioglu.com:127.0.0.1 \
     --add-host=www.utkusarioglu.com:host-gateway \
     -v "$host_puppeteer_path/src:$work_dir/src" \
+    -v "$host_assets_path/resume.yml:$work_dir/assets/resume.yml" \
     -v "$host_artifacts_path:$work_dir/artifacts" \
     -v $CERTS_FOLDER:$work_dir/.certs  \
     --rm \
@@ -43,6 +45,7 @@ run_docker() {
       cd ./node_modules/puppeteer;
       npm install;
       cd ../..;
+      npm install yaml
       export NODE_EXTRA_CA_CERTS="$node_certificate_authority"; 
       node '$work_dir/src/index.js';
     "
@@ -51,9 +54,20 @@ run_docker() {
 # 1- 4 means a4, l means letter. Same values is are enforced by puppeteer and
 #    `utils/resume.utils.ts`.
 run_gs() {
-  PHOTO_VARIANTS='p n'
-  SPECIALTY_ID_VARIANTS='fe be al w3 fs'
-  PAPER_FORMAT_SHORT_CODE_VARIANTS='4 l'
+  RESUME_FILE_RELPATH='assets/resume.yml'
+  # PHOTO_VARIANTS='p n'
+  # SPECIALTY_ID_VARIANTS='fe be al w3 fs'
+  # PAPER_FORMAT_SHORT_CODE_VARIANTS='4 l'
+
+  PHOTO_VARIANTS="$(
+    yq '.includePhoto[] | .shortCode' $RESUME_FILE_RELPATH
+  )"
+  SPECIALTY_ID_VARIANTS="$(
+    yq '.specialties[] | .id' $RESUME_FILE_RELPATH
+  )"
+  PAPER_FORMAT_SHORT_CODE_VARIANTS="$(
+    yq '.paperFormats[] | .shortCode' $RESUME_FILE_RELPATH
+  )"
 
   for photo_included in $PHOTO_VARIANTS; do
     if [ $photo_included = 'p' ]; then
@@ -84,22 +98,4 @@ run_gs() {
   done
 }
 
-          # -dFILTERIMAGE \
-          # -dFILTERVECTOR \
-        # -dSAFER \
-        # -dOverPrint=/simulate \
-        # -dEmbedAllFonts=true \
-        # -dSubsetFonts=true \
-        # -dAutoRotatePages=/None \
-        # -dPrinted=false \
-        # -r10 \
-# -dColorImageDownsampleType=/Bicubic 
-# -dColorImageResolution=150 -
-# dGrayImageDownsampleType=/Bicubic 
-# -dGrayImageResolution=150 
-# -dMonoImageDownsampleType=/Bicubic 
-# -dMonoImageResolution=150 
-          # -dPDFSETTINGS=/screen \
-
 clean_artifacts && run_docker && run_gs
-# run_gs

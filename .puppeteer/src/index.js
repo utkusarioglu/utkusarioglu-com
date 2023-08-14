@@ -1,30 +1,25 @@
 const puppeteer = require("puppeteer");
+const yaml = require("yaml");
+const fs = require("node:fs");
 
 const artifactsPath = "/home/pptruser/artifacts";
 const baseUrl = "http://www.utkusarioglu.com:3000/resume";
 
-const PAPER_FORMAT_VARIANTS = [
-  {
-    name: "a4",
-    shortCode: "4",
-    margin: {
-      x: 45,
-      y: 70,
-    },
-  },
-  {
-    name: "letter",
-    shortCode: "l",
-    margin: {
-      x: 40,
-      y: 40,
-    },
-  },
-];
+const resumeFile = fs.readFileSync("./assets/resume.yml", "utf-8");
+const resume = yaml.parse(resumeFile);
 
-const SPECIALTY_VARIANTS = ["fe", "be", "fs", "w3", "al"];
+const paperFormatVariants = resume.paperFormats;
 
-const PHOTO_VARIANTS = [true, false];
+const specialtyIdVariants = resume.specialties.map(({ id }) => id);
+const includePhotoVariants = resume.includePhoto.map(
+  ({ searchQueryValue }) => searchQueryValue
+);
+
+console.log({
+  includePhotoVariants,
+  paperFormatVariants,
+  specialtyIdVariants,
+});
 
 function createMatrix(specialtyIds, photoVariants, paperFormatVariants) {
   matrix = [];
@@ -88,7 +83,7 @@ async function createSingle(browser, specialtyId, includePhoto, paperFormat) {
   await page.close();
 }
 
-(async () => {
+async () => {
   console.log("Starting pdf files creation…");
 
   const browser = await puppeteer.launch({
@@ -99,9 +94,9 @@ async function createSingle(browser, specialtyId, includePhoto, paperFormat) {
   });
 
   const matrix = createMatrix(
-    SPECIALTY_VARIANTS,
-    PHOTO_VARIANTS,
-    PAPER_FORMAT_VARIANTS
+    specialtyIdVariants,
+    includePhotoVariants,
+    paperFormatVariants
   );
 
   await matrix.reduce((acc, { specialtyId, includePhoto, paperFormat }) => {
@@ -112,4 +107,4 @@ async function createSingle(browser, specialtyId, includePhoto, paperFormat) {
   }, Promise.resolve());
 
   await browser.close();
-})();
+};
