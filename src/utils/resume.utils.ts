@@ -27,6 +27,9 @@ export function specialtyFilter(
   activeSpecialtyId: SpecialtyId
 ): boolean {
   let displayItem = true;
+  if (!["al", "w3", "fe", "be", "fs"].includes(activeSpecialtyId)) {
+    throw new Error("Unrecognized specialty id");
+  }
   if (
     item.specialties &&
     !item.specialties.includes(activeSpecialtyId) &&

@@ -12,7 +12,9 @@ import type {
 
 export type Skill = Titled & Partial<Remarked & Confided & Printable>;
 
-type Skills = Titled & Remarked & Listed<Section<Skill>>;
+export type SkillSection = Section<Skill>;
+
+type Skills = Titled & Remarked & Listed<SkillSection>;
 
 export type ContactListItem = {
   value: string;
