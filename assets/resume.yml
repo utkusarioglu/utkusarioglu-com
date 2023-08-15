@@ -474,9 +474,9 @@ relevantWorkExperience:
       finish: Mar, 2022
       remarks:
         - |
-          Built a scalable online sales management system aiding the product 
+          Built a fullstack scalable online sales management system aiding the product 
           listing, sales, marketing, shipments and competitor tracking using 
-          PHP, later using NodeJS + TypeScript.
+          PHP, TypeScript, and Python running on Kubernetes on prem and AWS.
         - |
           This project resulted in overhaul of the workflow of the company and 
           lead to massive time savings and more efficient personnel use.
@@ -501,7 +501,7 @@ relevantWorkExperience:
       finish: Aug, 2018
       remarks:
         - |
-          Built company's online sales website using PHP, JS. Maintained dev and
+          Built company's online sales online app using PHP, React. Maintained dev and
           production while it went through multiple advertising and growth 
           cycles.
 
