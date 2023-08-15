@@ -11,7 +11,7 @@ variants:
       remarks: React & React Native based frontend development
     - id: be
       title: Backend
-      remarks: NodeJS, Python, Kubernetes and AWS based backend development
+      remarks: Kubernetes and AWS based backend development
     - id: fs
       title: Fullstack
       remarks: Fullstack web2 development
