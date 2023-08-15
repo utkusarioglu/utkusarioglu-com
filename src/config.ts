@@ -183,6 +183,9 @@ const COLOR_CLASSES = {
   secondaryButtonBg: "bg-secondary-light dark:bg-secondary-dark",
   secondaryButtonText: "text-paragraph-dark dark:text-paragraph-light",
 
+  checkboxBorder:
+    "border-secondary-light dark:border-secondary-dark checked:bg-primary-light checked:dark:bg-primary-dark checked:border-0",
+
   scrollbar:
     "scrollbar-thumb-item-light dark:scrollbar-thumb-item-dark scrollbar-track-transparent", //
 };

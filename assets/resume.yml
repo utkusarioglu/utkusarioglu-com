@@ -22,14 +22,14 @@ variants:
   paperFormats:
     - title: A4
       searchQueryValue: a4
-      remarks: North American standard
+      remarks: Standard format for Europe and the rest of the world
       shortCode: 4
       margins:
         x: 45
         y: 70
     - title: Letter
-      remarks: Standard format for Europe and the rest of the world
       searchQueryValue: letter
+      remarks: North American standard
       shortCode: l
       margins:
         x: 40
