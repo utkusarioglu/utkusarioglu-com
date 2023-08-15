@@ -13,10 +13,8 @@ const ResumePrintResumeCodeView: FC<ResumePrintResumeCodeViewProps> = ({
     <div
       className={c(
         "fixed top-1 right-0",
-        // "z-50 text-[6px] text-right leading-[7px]",
-        // "text-gray-100 font-[monospace]",
-        "z-50 text-[12px] text-right leading-[14px]",
-        "font-[monospace]"
+        "z-50 text-[6px] text-right leading-[7px]",
+        "text-gray-100 font-[monospace]"
       )}
     >
       {resumeCode.map((section) => (
