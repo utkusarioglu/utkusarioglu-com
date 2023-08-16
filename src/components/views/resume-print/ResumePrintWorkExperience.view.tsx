@@ -26,7 +26,7 @@ const ResumePrintWorkExperienceView: FC<ResumePrintWorkExperienceViewProps> = ({
 
   return (
     <div>
-      <ResumePrintH2View>
+      <ResumePrintH2View activeSpecialty={activeSpecialty}>
         {relevantWorkExperience.title.toUpperCase()}
       </ResumePrintH2View>
       <ol className="flex flex-col" style={{ gap: olGap }}>

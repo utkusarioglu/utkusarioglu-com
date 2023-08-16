@@ -58,6 +58,9 @@ export type Specialty = {
       templateColumns: string;
       columnGap: string;
     };
+    title: {
+      marginBottom: number | string;
+    };
     relevantWorkExperience: {
       ol: {
         gap: number | string;
@@ -76,6 +79,11 @@ export type Specialty = {
         divider: {
           height: number | string;
         };
+      };
+    };
+    education: {
+      ol: {
+        gap: number | string;
       };
     };
   };

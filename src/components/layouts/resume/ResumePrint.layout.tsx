@@ -71,7 +71,7 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
               relevantWorkExperience={relevantWorkExperience}
             />
             <ResumePrintRelevantCertificationsView
-              activeSpecialtyId={activeSpecialtyId}
+              activeSpecialty={activeSpecialty}
               relevantCertifications={relevantCertifications}
             />
           </div>
@@ -88,7 +88,10 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
               // activeSpecialtyId={activeSpecialtyId}
               skills={skills}
             />
-            <ResumePrintEducationView education={education} />
+            <ResumePrintEducationView
+              activeSpecialty={activeSpecialty}
+              education={education}
+            />
           </div>
         </div>
       </div>

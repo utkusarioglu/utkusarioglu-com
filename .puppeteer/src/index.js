@@ -10,6 +10,7 @@ const resume = yaml.parse(resumeFile);
 
 const paperFormatVariants = resume.variants.paperFormats;
 
+const specialties = resume.variants.specialties;
 const specialtyIdVariants = resume.variants.specialties.map(({ id }) => id);
 const includePhotoVariants = resume.variants.includePhoto;
 
@@ -80,16 +81,19 @@ async function createSingle(browser, specialtyId, includePhoto, paperFormat) {
     `resume-${resumeCode}-raw.pdf`,
   ].join("/");
 
+  const specialty = specialties.filter(({ id }) => id === specialtyId)[0];
+  const margins = specialty.margins[paperFormat.searchQueryValue];
+
   await page.pdf({
     displayHeaderFooter: false,
     omitBackground: true,
     path: resumePath,
     format: paperFormat.searchQueryValue,
     margin: {
-      left: paperFormat.margins.x,
-      right: paperFormat.margins.x,
-      bottom: paperFormat.margins.y,
-      top: paperFormat.margins.y,
+      left: margins.x,
+      right: margins.x,
+      bottom: margins.y,
+      top: margins.y,
     },
   });
 

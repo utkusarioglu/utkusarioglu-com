@@ -3,7 +3,6 @@ import {
   type Specialties,
   type SpecialtyId,
   type Specialty,
-  type PaperFormat,
   type PaperFormatShortCode,
   PaperFormatSearchQueryValue,
 } from "_types/resume.types";
@@ -12,6 +11,7 @@ export function getActiveSpecialty(
   specialties: Specialties,
   activeSpecialtyId: SpecialtyId
 ): Specialty {
+  console.log({ activeSpecialtyId });
   const activeSpecialty = specialties.filter(
     ({ id }) => activeSpecialtyId == id
   );

@@ -22,9 +22,15 @@ const ResumePrintHeaderView: FC<ResumePrintHeaderViewProps> = ({
         />
       ) : null}
       <div>
-        {name.split(" ").map((word) => (
-          <ResumePrintH1View key={word}>{word}</ResumePrintH1View>
-        ))}
+        {includePhoto ? (
+          name
+            .split(" ")
+            .map((word) => (
+              <ResumePrintH1View key={word}>{word}</ResumePrintH1View>
+            ))
+        ) : (
+          <ResumePrintH1View>{name}</ResumePrintH1View>
+        )}
       </div>
     </div>
   );

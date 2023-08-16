@@ -1,36 +1,42 @@
 import { type FC } from "react";
-import type { Resume } from "_types/resume.types";
+import type { Resume, Specialty } from "_types/resume.types";
 import ResumePrintH2View from "_views/resume-print/ResumePrintH2.view";
 import ResumePrintH3View from "_views/resume-print/ResumePrintH3.view";
 
 interface ResumePrintEducationViewProps {
+  activeSpecialty: Specialty;
   education: Resume["education"];
 }
 
 const ResumePrintEducationView: FC<ResumePrintEducationViewProps> = ({
+  activeSpecialty,
   education,
 }) => {
+  const olGap = activeSpecialty.styles.education.ol.gap;
+
   return (
     <div>
-      <ResumePrintH2View>{education.title.toUpperCase()}</ResumePrintH2View>
-      <div>
+      <ResumePrintH2View activeSpecialty={activeSpecialty}>
+        {education.title.toUpperCase()}
+      </ResumePrintH2View>
+      <ol className="flex flex-col" style={{ gap: olGap }}>
         {education.list.map(
           ({ title, institution, location, start, finish }) => (
-            <div key={title} className="grid grid-rows-2 grid-cols-2">
-              <ResumePrintH3View className="row-start-1 col-start-1">
-                {title}
-              </ResumePrintH3View>
-              <span className="row-start-1 col-start-2 text-right">
-                {start} - {finish}
-              </span>
-              <span className="row-start-2 col-start-1">{institution}</span>
-              <span className="row-start-2 col-start-2 text-right">
-                {location}
-              </span>
+            <div key={title}>
+              <div className="flex justify-between">
+                <ResumePrintH3View>{title}</ResumePrintH3View>
+                <span>
+                  {start} - {finish}
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span>{institution}</span>
+                <span>{location}</span>
+              </div>
             </div>
           )
         )}
-      </div>
+      </ol>
     </div>
   );
 };

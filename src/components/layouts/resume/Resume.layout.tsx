@@ -28,7 +28,7 @@ const ResumeLayout: FC<ResumeLayoutProps> = ({ resume }) => {
 
   return (
     <>
-      <ResumeScreenLayout
+      {/* <ResumeScreenLayout
         {...{
           resume,
           activeSpecialtyId,
@@ -36,7 +36,7 @@ const ResumeLayout: FC<ResumeLayoutProps> = ({ resume }) => {
           includePhoto,
           setIncludePhoto,
         }}
-      />
+      /> */}
       <ResumePrintLayout
         {...{
           resume,

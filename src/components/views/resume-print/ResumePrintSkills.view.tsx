@@ -26,7 +26,9 @@ const ResumePrintSkillsView: FC<ResumePrintSkillsSectionViewProps> = ({
   return (
     <div>
       <div className="flex justify-between">
-        <ResumePrintH2View>{skills.title.toUpperCase()}</ResumePrintH2View>
+        <ResumePrintH2View activeSpecialty={activeSpecialty}>
+          {skills.title.toUpperCase()}
+        </ResumePrintH2View>
         <span className="text-right">{skills.remarks}</span>
       </div>
       <ol className="flex flex-col" style={{ gap: olGap }}>
