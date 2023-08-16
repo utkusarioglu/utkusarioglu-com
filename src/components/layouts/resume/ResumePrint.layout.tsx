@@ -10,6 +10,7 @@ import ResumePrintEducationView from "_views/resume-print/ResumePrintEducation.v
 import ResumePrintResumeCodeView from "_views/resume-print/ResumePrintResumeCode.view";
 import ResumePrintHeaderView from "_views/resume-print/ResumePrintHeader.view";
 import ResumePrintContactView from "_views/resume-print/ResumePrintContact.view";
+import { getActiveSpecialty } from "_utils/resume.utils";
 
 export interface ResumeLayoutProps {
   activeSpecialtyId: SpecialtyId;
@@ -23,6 +24,7 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
   includePhoto,
   resumeCode,
   resume: {
+    variants: { specialties },
     name,
     contact,
     skills,
@@ -31,6 +33,10 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
     education,
   },
 }) => {
+  const activeSpecialty = getActiveSpecialty(specialties, activeSpecialtyId);
+  const layoutTemplateColumns = activeSpecialty.styles.layout.templateColumns;
+  const layoutGridColumnGap = activeSpecialty.styles.layout.columnGap;
+
   return (
     <div className="hidden print:block relative">
       <ResumePrintResumeCodeView resumeCode={resumeCode} />
@@ -39,14 +45,16 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
           COLORS.print,
           COLORS.printBg,
           "fixed top-0 left-0 right-0 bottom-0",
-          "z-40 text-[12px] font-[Arial]"
+          "z-40 text-[12px] font-[Arial]",
+          "flex justify-between"
         )}
       >
         <div
-          className={c(
-            RESUME_PRINT_Y_GAP_CLASS,
-            "grid grid-cols-resume grid-rows-resume gap-x-5"
-          )}
+          className={c(RESUME_PRINT_Y_GAP_CLASS, "grid grid-rows-resume")}
+          style={{
+            gridTemplateColumns: layoutTemplateColumns,
+            columnGap: layoutGridColumnGap,
+          }}
         >
           <ResumePrintHeaderView includePhoto={includePhoto} name={name} />
           <ResumePrintContactView contact={contact} />
@@ -54,11 +62,12 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
           <div
             className={c(
               RESUME_PRINT_Y_GAP_CLASS,
-              "col-start-1 col-end-3 row-start-2 flex flex-col"
+              "col-start-1 col-end-3 row-start-2 flex flex-col",
+              "flex justify-between"
             )}
           >
             <ResumePrintWorkExperience
-              activeSpecialtyId={activeSpecialtyId}
+              activeSpecialty={activeSpecialty}
               relevantWorkExperience={relevantWorkExperience}
             />
             <ResumePrintRelevantCertificationsView
@@ -70,11 +79,13 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
           <div
             className={c(
               "col-start-3 row-start-2 flex flex-col",
-              RESUME_PRINT_Y_GAP_CLASS
+              RESUME_PRINT_Y_GAP_CLASS,
+              "flex justify-between"
             )}
           >
             <ResumePrintSkillsView
-              activeSpecialtyId={activeSpecialtyId}
+              activeSpecialty={activeSpecialty}
+              // activeSpecialtyId={activeSpecialtyId}
               skills={skills}
             />
             <ResumePrintEducationView education={education} />

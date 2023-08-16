@@ -82,7 +82,7 @@ run_gs() {
       for paper_format_short_code in $PAPER_FORMAT_SHORT_CODE_VARIANTS; #1
       do
         resume_code="$specialty_id$photo_included$paper_format_short_code"
-        echo "resume code $resume_code"
+        echo "Optimizing resume: '$resume_code'…"
         source="resume-$resume_code-raw.pdf"
         target_folder="$host_compressed_artifacts_path"
         filename_prefix="utku-sarioglu-resume"

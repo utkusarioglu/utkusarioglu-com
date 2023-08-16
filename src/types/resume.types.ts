@@ -53,6 +53,32 @@ export type SpecialtyIdList = SpecialtyId[];
 
 export type Specialty = {
   id: SpecialtyId;
+  styles: {
+    layout: {
+      templateColumns: string;
+      columnGap: string;
+    };
+    relevantWorkExperience: {
+      ol: {
+        gap: number | string;
+      };
+      li: {
+        divider: {
+          height: number | string;
+        };
+      };
+    };
+    skills: {
+      ol: {
+        gap: number | string;
+      };
+      li: {
+        divider: {
+          height: number | string;
+        };
+      };
+    };
+  };
 } & Titled &
   Remarked;
 

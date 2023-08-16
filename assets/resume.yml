@@ -6,6 +6,22 @@ variants:
     - id: al
       title: All
       remarks: Includes frontend, backend and Web3 skills
+      styles:
+        layout:
+          templateColumns: 50vw 13vw auto
+          columnGap: 20px 
+        relevantWorkExperience:
+          ol:
+            gap: 10px
+          li:
+            divider:
+              height: 2px
+        skills:
+          ol:
+            gap: 3px
+          li:
+            divider:
+              height: 0px
     - id: fe
       title: Frontend
       remarks: React & React Native based frontend development
@@ -26,7 +42,7 @@ variants:
       shortCode: 4
       margins:
         x: 45
-        y: 70
+        y: 60
     - title: Letter
       searchQueryValue: letter
       remarks: North American standard
@@ -34,13 +50,13 @@ variants:
       margins:
         x: 40
         y: 40
-    
+
   includePhoto:
     - state: true
-      searchQueryValue: 'true'
+      searchQueryValue: "true"
       shortCode: p
     - state: false
-      searchQueryValue: 'false'
+      searchQueryValue: "false"
       shortCode: n
 
 introduction:
@@ -115,7 +131,7 @@ skills:
           specialties:
             - w3
         - title: Python
-        - title: PHP
+        - title: Php
           specialties:
             - fs
             - be
@@ -474,12 +490,12 @@ relevantWorkExperience:
       finish: Mar, 2022
       remarks:
         - |
-          Built a fullstack scalable online sales management system aiding the product 
-          listing, sales, marketing, shipments and competitor tracking using 
-          PHP, TypeScript, and Python running on Kubernetes on prem and AWS.
+          Built a fullstack, scalable online sales management system aiding the product 
+          listing, sales, marketing, shipments and competitor tracking on Amazon and others. Used
+          Php, Python, and Typescript. Utilized IaC and ran on Kubernetes on prem and on AWS.
         - |
           This project resulted in overhaul of the workflow of the company and 
-          lead to massive time savings and more efficient personnel use.
+          lead to massive time savings and more efficient personnel and material use.
     - title: General Manager
       companyName: Altas USA, LLC
       location: Stockton, CA. USA
@@ -487,13 +503,17 @@ relevantWorkExperience:
       finish: Oct, 2018
       remarks:
         - |
-          Created the business plan for a new branch of the company located in 
-          California. Established the business on paper and on premise including 
-          the boot-up of the hardware used for seed pressing.
-        - |
-          Found suppliers for the new business in California, Oregon and 
-          Washington State. Handled product development and enhancement surveys 
-          in California.
+          Planned and established the company for a new branch located in California. 
+          Establishment involved finding suppliers for oil crops in California, Oregon and Washington state;
+          shipping and installation of machinery used for production of vegetable oil from said crops;
+          establishing preliminary sales partnerships in the US.
+        # Created the business plan for a new branch of the company located in 
+        # California. Established the business on paper and on premise including 
+        # the boot-up of the hardware used for seed pressing.
+        # - |
+        #   Found suppliers for the new business in California, Oregon and 
+        #   Washington State. Handled product development and enhancement surveys 
+        #   in California.
     - title: Full-stack developer
       companyName: Altas Oil Industry
       location: Ordu, Turkey
@@ -501,9 +521,15 @@ relevantWorkExperience:
       finish: Aug, 2018
       remarks:
         - |
-          Built company's online sales online app using PHP, React. Maintained dev and
-          production while it went through multiple advertising and growth 
-          cycles.
+          Built multiple web apps for the company using Php, React, WordPress, and IdeaSoft. 
+        - |
+          Apps included an online sales app, which was one of the first apps in the country that delivered local products nationwide; this concept became very successful in Turkey.
+        - |
+          Operated said apps through multiple marketing and advertising cycles. 
+
+        # Built company's online sales online app using Php, React. Maintained dev and
+        # production while it went through multiple advertising and growth 
+        # cycles.
 
     - title: Project Manager
       companyName: Altas Oil Industry
@@ -576,6 +602,7 @@ relevantCertifications:
       instructor: Google Digital Garage
     - course: Copywriting
       institution: Copy Club Advertising Training Agency
+      print: false
 
 education:
   title: Education

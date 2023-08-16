@@ -16,7 +16,7 @@ const ResumePrintHeaderView: FC<ResumePrintHeaderViewProps> = ({
     <div className="col-start-1 row-start-1 flex flex-row gap-5">
       {includePhoto ? (
         <img
-          style={{ objectFit: "scale-down", height: "80px" }}
+          style={{ objectFit: "scale-down", height: "70px" }}
           src={require("_assets/images/utku-resume-1x1.jpg")}
           className="rounded-full"
         />

@@ -1,28 +1,32 @@
 import { type FC } from "react";
-import type { SkillSection, SpecialtyId } from "_types/resume.types";
+import type { SkillSection, Specialty, SpecialtyId } from "_types/resume.types";
 import ResumePrintH3View from "_views/resume-print/ResumePrintH3.view";
 import { printFilter, specialtyFilter } from "_utils/resume.utils";
 
 interface ResumePrintSkillsSectionViewProps {
-  activeSpecialtyId: SpecialtyId;
+  // activeSpecialtyId: SpecialtyId;
+  activeSpecialty: Specialty;
   skillSection: SkillSection;
 }
 
 const ResumePrintSkillsSectionView: FC<ResumePrintSkillsSectionViewProps> = ({
-  activeSpecialtyId,
+  activeSpecialty,
   skillSection: { title, list },
 }) => {
   const filteredList = list.filter(
-    (item) => printFilter(item) && specialtyFilter(item, activeSpecialtyId)
+    (item) => printFilter(item) && specialtyFilter(item, activeSpecialty.id)
   );
 
   if (!filteredList.length) {
     return null;
   }
 
+  const headerDividerHeight = activeSpecialty.styles.skills.li.divider.height;
+
   return (
     <div>
       <ResumePrintH3View>{title}</ResumePrintH3View>
+      <div style={{ height: headerDividerHeight, background: "red" }} />
       <div>
         {filteredList.map(({ title, remarks, confident }, i, filtered) => (
           <>
