@@ -4,7 +4,7 @@ import c from "classnames";
 
 const FooterLayout = () => {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center print:hidden">
       <Link href="/credits">
         <a
           className={c(
