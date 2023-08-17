@@ -12,12 +12,18 @@ const ContentCardLinkView: FC<ContentCardLinkViewProps> = ({
   href,
   children,
 }) => {
-  const isExternalLink = !href.startsWith(APP_ADDRESS) && !href.startsWith("/");
+  // const isExternalLink = !href.startsWith(APP_ADDRESS) && !href.startsWith("/");
+  const isExternalLink = href.startsWith("/");
   return (
     <MDiv
-      className="mb-3 last:mb-0 rounded-lg"
+      className="mb-3 last:mb-0 rounded-lg box"
       layout
-      whileHover={{ backgroundColor: "#bbbbbb" }}
+      style={{
+        boxShadow: "0px 0px 0px 0px transparent inset",
+      }}
+      whileHover={{
+        boxShadow: `0px 0px 8px 8px #7FA4AC inset`,
+      }}
       transition={TRANSITIONS.routeFast}
     >
       {isExternalLink ? (

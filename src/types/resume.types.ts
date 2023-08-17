@@ -12,7 +12,9 @@ import type {
 
 export type Skill = Titled & Partial<Remarked & Confided & Printable>;
 
-type Skills = Titled & Remarked & Listed<Section<Skill>>;
+export type SkillSection = Section<Skill>;
+
+type Skills = Titled & Remarked & Listed<SkillSection>;
 
 export type ContactListItem = {
   value: string;
@@ -51,14 +53,75 @@ export type SpecialtyIdList = SpecialtyId[];
 
 export type Specialty = {
   id: SpecialtyId;
+  styles: {
+    layout: {
+      templateColumns: string;
+      columnGap: string;
+    };
+    header: {
+      clearance: {
+        height: number | string;
+      };
+    };
+    relevantWorkExperience: {
+      ol: {
+        gap: number | string;
+      };
+      li: {
+        divider: {
+          height: number | string;
+        };
+      };
+    };
+    skills: {
+      ol: {
+        gap: number | string;
+      };
+      li: {
+        divider: {
+          height: number | string;
+        };
+      };
+    };
+    education: {
+      ol: {
+        gap: number | string;
+      };
+    };
+  };
 } & Titled &
   Remarked;
 
 export type Specialties = Specialty[];
 
+export type PaperFormatSearchQueryValue = "a4" | "letter" | "unspecified";
+export type PaperFormatShortCode = "4" | "l" | "-";
+
+export type PaperFormat = Titled &
+  Remarked & {
+    shortCode: PaperFormatShortCode;
+    searchQueryValue: PaperFormatSearchQueryValue;
+    margins: {
+      x: number;
+      y: number;
+    };
+  };
+
+interface IncludePhoto {
+  state: boolean;
+  searchQueryValue: "true" | "false";
+  shortCode: "p" | "n";
+}
+
+interface Variants {
+  specialties: Specialties;
+  paperFormats: PaperFormat[];
+  includePhoto: IncludePhoto[];
+}
+
 export type Resume = {
   page: "Resume";
-  specialties: Specialties;
+  variants: Variants;
   introduction: Introduction;
   contact: Section<ContactListItem>;
   skills: Skills;
