@@ -56,7 +56,11 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
             columnGap: layoutGridColumnGap,
           }}
         >
-          <ResumePrintHeaderView includePhoto={includePhoto} name={name} />
+          <ResumePrintHeaderView
+            activeSpecialty={activeSpecialty}
+            includePhoto={includePhoto}
+            name={name}
+          />
           <ResumePrintContactView contact={contact} />
 
           <div

@@ -14,6 +14,9 @@ variants:
           x: 40
           y: 40
       styles:
+        header:
+          clearance: 
+            height: 0px
         h2:
           marginBottom: 4px
         layout:
@@ -46,6 +49,9 @@ variants:
           x: 45
           y: 42
       styles:
+        header:
+          clearance: 
+            height: 8px
         h2:
           marginBottom: 6px
         layout:
@@ -78,6 +84,9 @@ variants:
           x: 45
           y: 42
       styles:
+        header:
+          clearance: 
+            height: 8px
         h2:
           marginBottom: 6px
         layout:
@@ -110,6 +119,44 @@ variants:
           x: 45
           y: 42
       styles:
+        header:
+          clearance: 
+            height: 8px
+        h2:
+          marginBottom: 4px
+        layout:
+          templateColumns: 50vw 13vw auto
+          columnGap: 25px 
+        relevantWorkExperience:
+          ol:
+            gap: 4px
+          li:
+            divider:
+              height: 2px
+        skills:
+          ol:
+            gap: 4px
+          li:
+            divider:
+              height: 0px
+        education:
+          ol:
+            gap: 0px
+
+    - id: w3
+      title: Web3
+      remarks: Ethereum based fullstack web3 application development
+      margins:
+        a4:
+          x: 55
+          y: 60
+        letter:
+          x: 45
+          y: 42
+      styles:
+        header:
+          clearance: 
+            height: 8px
         h2:
           marginBottom: 4px
         layout:
@@ -129,39 +176,7 @@ variants:
               height: 1px
         education:
           ol:
-            gap: 1px
-
-    - id: w3
-      title: Web3
-      remarks: Ethereum based fullstack web3 application development
-      margins:
-        a4:
-          x: 55
-          y: 60
-        letter:
-          x: 45
-          y: 42
-      styles:
-        h2:
-          marginBottom: 6px
-        layout:
-          templateColumns: 50vw 17vw auto
-          columnGap: 25px 
-        relevantWorkExperience:
-          ol:
-            gap: 6px
-          li:
-            divider:
-              height: 2px
-        skills:
-          ol:
-            gap: 8px
-          li:
-            divider:
-              height: 2px
-        education:
-          ol:
-            gap: 8px
+            gap: 4px
 
   paperFormats:
     - title: A4
@@ -177,9 +192,9 @@ variants:
     - state: true
       searchQueryValue: "true"
       shortCode: p
-    # - state: false
-    #   searchQueryValue: "false"
-    #   shortCode: n
+    - state: false
+      searchQueryValue: "false"
+      shortCode: n
 
 introduction:
   title: Introduction
@@ -239,7 +254,7 @@ skills:
     - title: Natural Languages
       list:
         - title: English
-          remarks: Native level
+          remarks: Fluent
         - title: Turkish
           remarks: Native
     - title: Programming Languages

@@ -58,9 +58,14 @@ export type Specialty = {
       templateColumns: string;
       columnGap: string;
     };
-    title: {
-      marginBottom: number | string;
+    header: {
+      clearance: {
+        height: number | string;
+      };
     };
+    // title: {
+    //   marginBottom: number | string;
+    // };
     relevantWorkExperience: {
       ol: {
         gap: number | string;
