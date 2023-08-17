@@ -20,11 +20,33 @@ const ResumePrintContactView: FC<ResumePrintContactViewProps> = ({
         ))}
       </div>
       <div className="col-start-3 row-start-1">
-        {filteredList.map(({ value }) => (
-          <div key={value}>
-            <span>{value}</span>
-          </div>
-        ))}
+        {filteredList.map(({ title, value }) => {
+          let internalComponent = <span>{value}</span>;
+
+          switch (title) {
+            case "Phone":
+              internalComponent = <a href={`tel:${value}`}>{value}</a>;
+              break;
+
+            case "Email":
+              internalComponent = <a href={`mailto:${value}`}>{value}</a>;
+              break;
+
+            case "Website":
+              internalComponent = (
+                <a
+                  href={`https://${value}`}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  {value}
+                </a>
+              );
+              break;
+          }
+
+          return <div key={value}>{internalComponent}</div>;
+        })}
       </div>
     </>
   );
