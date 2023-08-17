@@ -11,7 +11,9 @@ export function getActiveSpecialty(
   specialties: Specialties,
   activeSpecialtyId: SpecialtyId
 ): Specialty {
-  console.log({ activeSpecialtyId });
+  if (!"al be fe fs w3".split(" ").includes) {
+    throw new Error("Unrecognized specialty id");
+  }
   const activeSpecialty = specialties.filter(
     ({ id }) => activeSpecialtyId == id
   );

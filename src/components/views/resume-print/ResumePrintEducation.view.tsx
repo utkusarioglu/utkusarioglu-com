@@ -25,13 +25,13 @@ const ResumePrintEducationView: FC<ResumePrintEducationViewProps> = ({
             <div key={title}>
               <div className="flex justify-between">
                 <ResumePrintH3View>{title}</ResumePrintH3View>
-                <span>
+                <span className="text-right">
                   {start} - {finish}
                 </span>
               </div>
               <div className="flex justify-between">
                 <span>{institution}</span>
-                <span>{location}</span>
+                <span className="text-right">{location}</span>
               </div>
             </div>
           )
