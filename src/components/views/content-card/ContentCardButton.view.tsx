@@ -4,18 +4,29 @@ import MDiv from "_primitives/framer-motion/m-div.primitive";
 
 type ContentCardButtonViewProps = PropsWithChildren<{
   onClick: () => void;
+  isActive?: boolean;
 }>;
 
 const ContentCardButtonView: FC<ContentCardButtonViewProps> = ({
   // href,
   onClick,
   children,
+  isActive,
 }) => {
+  const idleBoxShadow = isActive
+    ? "0px 0px 5px 5px #52A25D inset"
+    : "0px 0px 0px 0px transparent inset";
+
   return (
     <MDiv
       className="mb-3 last:mb-0 rounded-lg"
       layout
-      whileHover={{ backgroundColor: "#bbbbbb" }}
+      style={{
+        boxShadow: idleBoxShadow,
+      }}
+      whileHover={{
+        boxShadow: "0px 0px 8px 8px #7FA4AC inset",
+      }}
       transition={TRANSITIONS.routeFast}
     >
       <button
