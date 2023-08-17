@@ -133,10 +133,12 @@ export const HEX = {
   base: {
     dark: process.env.LOWEST_DARK,
     light: process.env.HIGHEST_LIGHT,
+    primary: process.env.PRIMARY_LIGHT,
   },
   shadow: {
     light: process.env.TERTIARY_LIGHT,
     dark: process.env.TERTIARY_DARK,
+    primary: process.env.PRIMARY_DARK,
   },
 };
 
@@ -180,6 +182,9 @@ const COLOR_CLASSES = {
   primaryButtonText: "text-paragraph-dark dark:text-paragraph-light",
   secondaryButtonBg: "bg-secondary-light dark:bg-secondary-dark",
   secondaryButtonText: "text-paragraph-dark dark:text-paragraph-light",
+
+  checkboxBorder:
+    "border-secondary-light dark:border-secondary-dark checked:bg-primary-light checked:dark:bg-primary-dark checked:border-0",
 
   scrollbar:
     "scrollbar-thumb-item-light dark:scrollbar-thumb-item-dark scrollbar-track-transparent", //

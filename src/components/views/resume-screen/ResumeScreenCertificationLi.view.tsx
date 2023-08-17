@@ -10,23 +10,16 @@ type ResumeScreenCertificationLiViewProps = Certification;
 
 const ResumeScreenCertificationLiView: FC<
   ResumeScreenCertificationLiViewProps
-> = ({
-  course,
-  institution,
-  instructor,
-  certificateId,
-  certificateUrl,
-  print,
-}) => {
+> = ({ course, institution, instructor, certificateId, certificateUrl }) => {
   const Content = () => (
     <ContentCardItemLayout>
       <H3>{course}</H3>
-      <div className="flex justify-between">
+      <div className="flex justify-between flex-col md:flex-row gap-1">
         <span className={COLORS.paragraph}>
           {instructor && `${instructor} @ `}
           {institution}
         </span>
-        <span className={c(COLORS.secondaryText)}>{certificateId}</span>
+        <span className={COLORS.secondaryText}>{certificateId}</span>
       </div>
     </ContentCardItemLayout>
   );

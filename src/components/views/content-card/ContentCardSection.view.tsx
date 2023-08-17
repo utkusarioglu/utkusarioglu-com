@@ -10,6 +10,7 @@ type ContentCardSectionViewProps<T> = Section<T> & {
   className?: string;
   keyFunction: KeyFunction;
   filterFunction: FilterFunction;
+  Body?: FC;
 };
 
 // TODO remove `any`
@@ -20,6 +21,7 @@ const ContentCardSectionView: FC<ContentCardSectionViewProps<any>> = ({
   keyFunction,
   filterFunction,
   remarks,
+  Body,
   listItemComponent: ListItem,
   className,
 }) => (
@@ -32,6 +34,11 @@ const ContentCardSectionView: FC<ContentCardSectionViewProps<any>> = ({
         ))}
       </div>
     )}
+    {Body ? (
+      <div className="px-5 pb-5">
+        <Body />
+      </div>
+    ) : null}
     <ContentCardListView
       list={list}
       listItemComponent={ListItem}

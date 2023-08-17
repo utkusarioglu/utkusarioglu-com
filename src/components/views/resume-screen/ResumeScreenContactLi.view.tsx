@@ -18,7 +18,7 @@ const ResumeScreenContactLiView: FC<ResumeScreenContactLiViewProps> = ({
     <ContentCardLinkView href={value}>
       <ContentCardItemLayout>
         <H3>{title}</H3>
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-col md:flex-row gap-1">
           <span className={COLORS.paragraph}>{remarks}</span>
           <span className={COLORS.secondaryText}>{handle}</span>
         </div>

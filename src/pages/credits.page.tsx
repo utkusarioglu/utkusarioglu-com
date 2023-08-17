@@ -48,6 +48,8 @@ const CreditsPage: FC<CreditsPageProps> = ({
       <ContentCardBackgroundLayout>
         <ContentCardSectionView
           {...sourceCode}
+          keyFunction={(item) => item.title}
+          filterFunction={() => true}
           listItemComponent={({ item }) => <SourceCodeItemView {...item} />}
         />
       </ContentCardBackgroundLayout>
@@ -55,6 +57,8 @@ const CreditsPage: FC<CreditsPageProps> = ({
       <ContentCardBackgroundLayout>
         <ContentCardSectionView
           {...techStack}
+          keyFunction={(item) => item.title}
+          filterFunction={() => true}
           listItemComponent={({ item }) => (
             <ContentCardItemLayout>
               <CreditsTechStackItemView {...item} />
