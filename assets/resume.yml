@@ -222,7 +222,7 @@ contact:
       print: false
     - title: Instagram
       value: https://www.instagram.com/utkusarioglu
-      handle: utkuasarioglu
+      handle: utkusarioglu
       remarks: Preferred for personal inquiries
       print: false
     - title: Twitter
@@ -299,6 +299,9 @@ skills:
           specialties:
             - fs
             - be
+        - title: Supercollider
+          specialties:
+            - al
     - title: Frontend
       list:
         - title: React
@@ -568,6 +571,11 @@ skills:
             - fs
             - w3
         - title: music21
+          specialties:
+            - al
+        - title: scamp
+          specialties:
+            - al
     - title: Development Software
       list:
         - title: VS Code
