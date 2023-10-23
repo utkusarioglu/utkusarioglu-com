@@ -281,6 +281,9 @@ skills:
           specialties:
             - fs
             - be
+        - title: Supercollider
+          specialties:
+            - al
     - title: Scripting Languages and DSL
       list:
         - title: SQL
@@ -299,9 +302,6 @@ skills:
           specialties:
             - fs
             - be
-        - title: Supercollider
-          specialties:
-            - al
     - title: Frontend
       list:
         - title: React
