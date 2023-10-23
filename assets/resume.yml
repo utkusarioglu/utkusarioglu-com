@@ -570,10 +570,10 @@ skills:
           specialties:
             - fs
             - w3
-        - title: music21
+        - title: Music21
           specialties:
             - al
-        - title: scamp
+        - title: Scamp
           specialties:
             - al
     - title: Development Software
