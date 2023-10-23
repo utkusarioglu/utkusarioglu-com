@@ -62,7 +62,7 @@ jobs:
           yarn add http-server local-ssl-proxy \
             --frozen-lockfile \
             --non-interactive
-          sudo apt update --no-cache
+          sudo apt update
           sudo apt install ghostscript -y 
 
       - name: Run Puppeteer pdf creation
