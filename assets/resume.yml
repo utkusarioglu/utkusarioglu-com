@@ -716,6 +716,7 @@ relevantCertifications:
       institution: Udemy
     - course: Apache Kafka
       institution: Udemy
+      print: false
       certificateId: UC-0d49da70-b845-4cc2-b2b2-2cadb6ca1990
       certificateUrl: https://www.udemy.com/certificate/UC-0d49da70-b845-4cc2-b2b2-2cadb6ca1990/
     - course: Apache Kafka Security
@@ -729,10 +730,10 @@ relevantCertifications:
       instructor: Google
       certificateId: 8S6F67S4FE5B
       certificateUrl: https://coursera.org/share/26f71a19335cf1ce898f93a8d25d0378
-    - course: Nand to Tetris I
+    - course: Nand to Tetris I & II
       institution: Udemy
-    - course: Nand to Tetris II
-      institution: Udemy
+    # - course: Nand to Tetris II
+    #   institution: Udemy
     - course: PostgreSQL Bootcamp
       institution: Udemy
     - course: Fundamentals of Digital Marketing
