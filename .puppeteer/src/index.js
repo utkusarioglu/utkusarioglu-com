@@ -10,7 +10,6 @@ const resume = yaml.parse(resumeFile);
 
 const paperFormatVariants = resume.variants.paperFormats;
 
-// const specialties = resume.variants.specialties;
 const paperStyles = resume.variants.paperStyles;
 const specialtyIdVariants = resume.variants.specialties.map(({ id }) => id);
 const includePhotoVariants = resume.variants.includePhoto;
@@ -82,7 +81,6 @@ async function createSingle(browser, specialtyId, includePhoto, paperFormat) {
     `resume-${resumeCode}-raw.pdf`,
   ].join("/");
 
-  // const specialty = specialties.filter(({ id }) => id === specialtyId)[0];
   const activeStyles = paperStyles.find(
     ({ id, paperFormatShortCode }) =>
       id === specialtyId && paperFormatShortCode == paperFormat.shortCode
@@ -94,7 +92,6 @@ async function createSingle(browser, specialtyId, includePhoto, paperFormat) {
     paperFormatShortCode: paperFormat.shortCode,
     margins,
   });
-  // const margins = specialty.margins[paperFormat.searchQueryValue];
 
   await page.pdf({
     displayHeaderFooter: false,
