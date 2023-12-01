@@ -225,9 +225,9 @@ contact:
       handle: utkusarioglu
       remarks: Preferred for personal inquiries
       print: false
-    - title: Twitter
-      value: https://www.twitter.com/utkusarioglu
-      handle: "@utkusarioglu"
+    - title: Github
+      value: https://github.com/utkusarioglu
+      handle: "utkusarioglu"
       print: false
       remarks: Professional and personal inquiries
     - title: Email
@@ -628,7 +628,7 @@ skills:
 relevantWorkExperience:
   title: Relevant Work Experience
   list:
-    - title: Full-stack developer
+    - title: Principal Software Engineer
       companyName: HSO, LLC - Oz Medical DBA
       location: Pleasanton, CA. USA
       start: Oct, 2019
@@ -652,8 +652,10 @@ relevantWorkExperience:
           Establishment involved finding suppliers for oil crops in California, Oregon and Washington state;
           shipping and installation of machinery used for production of vegetable oil from said crops;
           establishing preliminary sales partnerships in the US.
+        - |
+          This project ended prematurely due to an economic crisis in Turkey rendering the price points incompatible with the target markets.
           
-    - title: Full-stack developer
+    - title: Principal Software Engineer
       companyName: Altas Oil Industry
       location: Ordu, Turkey
       start: Jun, 2016
@@ -693,15 +695,16 @@ relevantWorkExperience:
           As a side project during this time, took Instagram followers from 50 
           to ~20k.
 
-    - title: Developer, Current Accounts Manager
+    - title: Software Development Consultant
       companyName: Index Group
       location: Istanbul, Turkey
       start: Sep, 2011
       finish: Sep, 2014
       remarks:
         - |
-          Wrote productivity modules using VBA, AutoIt, which reduced daily
-          workload by 60%. While primarily working as the current accounts'
+          Wrote productivity modules using C++, VBA, AutoIt, which reduced daily
+          workload by 60%. Later consulted on these features being implemented on
+          in-house software; While primarily working as the current accounts'
           manager.
 
 relevantCertifications:
@@ -735,6 +738,7 @@ relevantCertifications:
     - course: Fundamentals of Digital Marketing
       institution: Google
       instructor: Google Digital Garage
+      print: false
     - course: Copywriting
       institution: Copy Club Advertising Training Agency
       print: false
