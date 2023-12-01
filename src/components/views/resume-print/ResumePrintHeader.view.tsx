@@ -1,20 +1,21 @@
 import { type FC } from "react";
 import { type IncludePhoto } from "_hooks/resume/resume.hooks";
-import { type Specialty, type Resume } from "_types/resume.types";
+import { type Resume, PaperStyles } from "_types/resume.types";
 import ResumePrintH1View from "_views/resume-print/ResumePrintH1.view";
 
 interface ResumePrintHeaderViewProps {
-  activeSpecialty: Specialty;
+  activePaperStyles: PaperStyles;
   includePhoto: IncludePhoto;
   name: Resume["name"];
 }
 
 const ResumePrintHeaderView: FC<ResumePrintHeaderViewProps> = ({
-  activeSpecialty,
+  activePaperStyles,
   includePhoto,
   name,
 }) => {
-  const headerDividerHeight = activeSpecialty.styles.header.clearance.height;
+  const headerDividerHeight = activePaperStyles.styles.header.clearance.height;
+
   return (
     <div
       className="col-start-1 row-start-1 flex flex-row gap-5"

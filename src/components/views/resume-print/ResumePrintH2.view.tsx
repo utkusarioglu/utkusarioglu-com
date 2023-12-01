@@ -1,12 +1,19 @@
 import c from "classnames";
-import type { Specialty } from "_types/resume.types";
+import type { FC, ReactNode } from "react";
+import type { PaperStyles } from "_types/resume.types";
 
 interface ResumePrintH2View {
-  activeSpecialty: Specialty;
+  activePaperStyles: PaperStyles;
+  className?: string;
+  children: ReactNode;
 }
 
-const ResumePrintH2View = ({ children, className = "", activeSpecialty }) => {
-  const marginBottom = activeSpecialty.styles.h2.marginBottom;
+const ResumePrintH2View: FC<ResumePrintH2View> = ({
+  children,
+  className = "",
+  activePaperStyles,
+}) => {
+  const marginBottom = activePaperStyles.styles.h2.marginBottom;
 
   return (
     <h2

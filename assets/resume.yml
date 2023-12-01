@@ -6,13 +6,69 @@ variants:
     - id: al
       title: All
       remarks: Includes frontend, backend and Web3 skills
+
+    - id: be
+      title: Backend
+      remarks: Kubernetes and AWS based backend development
+
+    - id: fe
+      title: Frontend
+      remarks: React & React Native based frontend development
+
+    - id: fs
+      title: Fullstack
+      remarks: Fullstack web2 development
+
+    - id: w3
+      title: Web3
+      remarks: Ethereum based fullstack web3 application development
+  
+  paperFormats:
+    - title: A4
+      searchQueryValue: a4
+      remarks: Standard format for Europe and the rest of the world
+      shortCode: 4
+    - title: Letter
+      searchQueryValue: letter
+      remarks: North American standard
+      shortCode: l
+
+  paperStyles:
+    - id: al
+      paperFormatShortCode: 4
       margins:
-        a4:
-          x: 45
-          y: 60
-        letter:
-          x: 40
-          y: 40
+        x: 45
+        y: 60
+      styles:
+        header:
+          clearance: 
+            height: 0px
+        h2:
+          marginBottom: 4px
+        layout:
+          templateColumns: 50vw 13vw auto
+          columnGap: 20px 
+        relevantWorkExperience:
+          ol:
+            gap: 4px
+          li:
+            divider:
+              height: 2px
+        skills:
+          ol:
+            gap: 0px
+          li:
+            divider:
+              height: 0px
+        education:
+          ol:
+            gap: 0px
+
+    - id: al
+      paperFormatShortCode: l
+      margins:
+        x: 40
+        y: 40
       styles:
         header:
           clearance: 
@@ -39,15 +95,10 @@ variants:
             gap: 0px
 
     - id: be
-      title: Backend
-      remarks: Kubernetes and AWS based backend development
+      paperFormatShortCode: 4
       margins:
-        a4:
-          x: 55
-          y: 60
-        letter:
-          x: 45
-          y: 42
+        x: 55
+        y: 60
       styles:
         header:
           clearance: 
@@ -55,7 +106,67 @@ variants:
         h2:
           marginBottom: 6px
         layout:
-          templateColumns: 50vw 17vw auto
+          templateColumns: 50vw 18vw auto
+          columnGap: 25px 
+        relevantWorkExperience:
+          ol:
+            gap: 4px
+          li:
+            divider:
+              height: 2px
+        skills:
+          ol:
+            gap: 8px
+          li:
+            divider:
+              height: 2px
+        education:
+          ol:
+            gap: 8px
+
+    - id: be
+      paperFormatShortCode: l
+      margins:
+        x: 45
+        y: 42
+      styles:
+        header:
+          clearance: 
+            height: 8px
+        h2:
+          marginBottom: 6px
+        layout:
+          templateColumns: 50vw 18vw auto
+          columnGap: 25px 
+        relevantWorkExperience:
+          ol:
+            gap: 4px
+          li:
+            divider:
+              height: 2px
+        skills:
+          ol:
+            gap: 8px
+          li:
+            divider:
+              height: 2px
+        education:
+          ol:
+            gap: 8px
+
+    - id: fe
+      paperFormatShortCode: 4
+      margins:
+        x: 55
+        y: 60
+      styles:
+        header:
+          clearance: 
+            height: 8px
+        h2:
+          marginBottom: 6px
+        layout:
+          templateColumns: 50vw 18vw auto
           columnGap: 25px 
         relevantWorkExperience:
           ol:
@@ -74,15 +185,10 @@ variants:
             gap: 8px
 
     - id: fe
-      title: Frontend
-      remarks: React & React Native based frontend development
+      paperFormatShortCode: l
       margins:
-        a4:
-          x: 55
-          y: 60
-        letter:
-          x: 45
-          y: 42
+        x: 45
+        y: 42
       styles:
         header:
           clearance: 
@@ -90,7 +196,7 @@ variants:
         h2:
           marginBottom: 6px
         layout:
-          templateColumns: 50vw 17vw auto
+          templateColumns: 50vw 18vw auto
           columnGap: 25px 
         relevantWorkExperience:
           ol:
@@ -109,15 +215,40 @@ variants:
             gap: 8px
 
     - id: fs
-      title: Fullstack
-      remarks: Fullstack web2 development
+      paperFormatShortCode: 4
       margins:
-        a4:
-          x: 55
-          y: 60
-        letter:
-          x: 45
-          y: 42
+        x: 55
+        y: 60
+      styles:
+        header:
+          clearance: 
+            height: 8px
+        h2:
+          marginBottom: 4px
+        layout:
+          templateColumns: 50vw 13vw auto
+          columnGap: 25px 
+        relevantWorkExperience:
+          ol:
+            gap: 4px
+          li:
+            divider:
+              height: 2px
+        skills:
+          ol:
+            gap: 4px
+          li:
+            divider:
+              height: 0px
+        education:
+          ol:
+            gap: 0px
+
+    - id: fs
+      paperFormatShortCode: l
+      margins:
+        x: 45
+        y: 42
       styles:
         header:
           clearance: 
@@ -144,15 +275,10 @@ variants:
             gap: 0px
 
     - id: w3
-      title: Web3
-      remarks: Ethereum based fullstack web3 application development
+      paperFormatShortCode: 4
       margins:
-        a4:
-          x: 55
-          y: 60
-        letter:
-          x: 45
-          y: 42
+        x: 55
+        y: 60
       styles:
         header:
           clearance: 
@@ -178,15 +304,35 @@ variants:
           ol:
             gap: 4px
 
-  paperFormats:
-    - title: A4
-      searchQueryValue: a4
-      remarks: Standard format for Europe and the rest of the world
-      shortCode: 4
-    - title: Letter
-      searchQueryValue: letter
-      remarks: North American standard
-      shortCode: l
+    - id: w3
+      paperFormatShortCode: l
+      margins:
+        x: 45
+        y: 42
+      styles:
+        header:
+          clearance: 
+            height: 8px
+        h2:
+          marginBottom: 4px
+        layout:
+          templateColumns: 50vw 13vw auto
+          columnGap: 25px 
+        relevantWorkExperience:
+          ol:
+            gap: 4px
+          li:
+            divider:
+              height: 2px
+        skills:
+          ol:
+            gap: 4px
+          li:
+            divider:
+              height: 1px
+        education:
+          ol:
+            gap: 4px
 
   includePhoto:
     - state: true
@@ -268,7 +414,7 @@ skills:
           specialties:
             - w3
         - title: Python
-        - title: Php
+        - title: PHP
           specialties:
             - fs
             - be
@@ -635,12 +781,18 @@ relevantWorkExperience:
       finish: Mar, 2022
       remarks:
         - |
-          Built a fullstack, scalable online sales management system aiding the product 
-          listing, sales, marketing, shipments and competitor tracking on Amazon and others. Used
-          Php, Python, and Typescript. Utilized IaC and ran on Kubernetes on prem and on AWS.
+          Built a fullstack, scalable online sales management system aiding the
+          product listings, sales, marketing, shipments and competitor tracking
+          on Amazon and other channels.
         - |
-          This project resulted in overhaul of the workflow of the company and 
-          lead to massive time savings and more efficient personnel and material use.
+          The project utilized IaC and ran on AWS EKS. Most services were built
+          with Python, Typescript, and PHP. PostgreSQL and MongoDB handled most
+          persistence.
+        - |
+          This project integrated multiple fragmented workflows in the company,
+          which lead to much more efficient HR capitalization and lower operational
+          costs.
+
     - title: General Manager
       companyName: Altas USA, LLC
       location: Stockton, CA. USA
@@ -648,12 +800,15 @@ relevantWorkExperience:
       finish: Oct, 2018
       remarks:
         - |
-          Planned and established the company for a new branch located in California. 
-          Establishment involved finding suppliers for oil crops in California, Oregon and Washington state;
-          shipping and installation of machinery used for production of vegetable oil from said crops;
-          establishing preliminary sales partnerships in the US.
+          Planned and established the Californian branch of Altas Oil
+          Industries. This involved finding suppliers California, Oregon and
+          Washington state; shipping, installation and boot up of the heavy machinery
+          used for production of raw vegetable oil; and establishment of sales
+          partnerships in the US.
         - |
-          This project ended prematurely due to an economic crisis in Turkey rendering the price points incompatible with the target markets.
+          This project ended prematurely due to an unforeseen economic crisis
+          in Turkey, rendering the price points incompatible with the target
+          markets.
           
     - title: Principal Software Engineer
       companyName: Altas Oil Industry
@@ -662,9 +817,12 @@ relevantWorkExperience:
       finish: Aug, 2018
       remarks:
         - |
-          Built multiple web apps for the company using Php, React, WordPress, and IdeaSoft. 
+          Built multiple web apps for the company using PHP, React, WordPress,
+          and IdeaSoft. 
         - |
-          Apps included an online sales app, which was one of the first apps in the country that delivered local products nationwide; this concept became very successful in Turkey.
+          Apps included an online sales app, which was one of the first apps in
+          the country that delivered local products nationwide; this concept
+          became very successful in Turkey.
         - |
           Managed said apps through multiple marketing and advertising cycles. 
 
@@ -675,10 +833,10 @@ relevantWorkExperience:
       finish: Aug, 2018
       remarks:
         - |
-          Managed the construction, assembly and boot up of Turkey's first and 
-          world's sixth non-chemical process vegetable oil refinery: a 6 million 
-          dollar investment involving civic, chemical, electrical, mechanical, 
-          automation, IT, construction work with 10+ contractors and 100+ 
+          Managed the construction, assembly and boot up of Turkey's first, and 
+          world's sixth non-chemical vegetable oil refinery: a 6 million 
+          dollar investment involving civic, chemical, IT, electrical, mechanical, and
+          automation work with 10+ contractors and 100+ 
           personnel.
 
     - title: Foreign Trade Expert
@@ -689,11 +847,11 @@ relevantWorkExperience:
       remarks:
         - |
           Managed food grade and heavy machinery trade with 10+ countries at 
-          6000+ tones monthly volume, with deals many being valued at 
-          six-figures.
+          6000+ tones monthly volume, with many contracts being valued at 
+          six-figures in USD.
         - |
-          As a side project during this time, took Instagram followers from 50 
-          to ~20k.
+          As a side project during this time, took company's Instagram
+          followers from 50 to ~20k.
 
     - title: Software Development Consultant
       companyName: Index Group
@@ -702,10 +860,10 @@ relevantWorkExperience:
       finish: Sep, 2014
       remarks:
         - |
-          Wrote productivity modules using C++, VBA, AutoIt, which reduced daily
-          workload by 60%. Later consulted on these features being implemented on
-          in-house software; While primarily working as the current accounts'
-          manager.
+          Wrote productivity modules using C++, VBA, AutoIt, which reduced
+          daily workload on certain tasks by 60%. Later, consulted on these
+          features being implemented on the in-house software; While primarily
+          working as the current accounts' manager.
 
 relevantCertifications:
   title: Relevant Certifications

@@ -1,10 +1,11 @@
 import { IncludePhoto } from "_hooks/resume/resume.hooks";
-import {
-  type Specialties,
-  type SpecialtyId,
-  type Specialty,
-  type PaperFormatShortCode,
+import type {
+  Specialties,
+  SpecialtyId,
+  Specialty,
+  PaperFormatShortCode,
   PaperFormatSearchQueryValue,
+  PaperStyles,
 } from "_types/resume.types";
 
 export function getActiveSpecialty(
@@ -22,6 +23,25 @@ export function getActiveSpecialty(
   }
 
   return activeSpecialty[0];
+}
+
+export function getActivePaperStyles(
+  paperStyles: PaperStyles[],
+  activeSpecialtyId: SpecialtyId,
+  activePaperFormatShortCode: PaperFormatShortCode
+) {
+  const styles = paperStyles.find(
+    ({ id, paperFormatShortCode }) =>
+      id === activeSpecialtyId &&
+      paperFormatShortCode == activePaperFormatShortCode
+  );
+  console.log({
+    paperStyles,
+    styles,
+    activeSpecialtyId,
+    activePaperFormatShortCode,
+  });
+  return styles;
 }
 
 export function specialtyFilter(

@@ -24,7 +24,8 @@ const ResumeLayout: FC<ResumeLayoutProps> = ({ resume }) => {
     resumeCode,
     includePhoto,
     setIncludePhoto,
-  } = useResumeCustomization();
+    activePaperFormatShortCode,
+  } = useResumeCustomization(resume);
 
   return (
     <>
@@ -43,6 +44,7 @@ const ResumeLayout: FC<ResumeLayoutProps> = ({ resume }) => {
           activeSpecialtyId,
           includePhoto,
           resumeCode,
+          activePaperFormatShortCode,
         }}
       />
     </>

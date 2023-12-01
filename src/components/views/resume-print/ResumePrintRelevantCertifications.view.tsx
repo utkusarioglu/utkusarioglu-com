@@ -1,17 +1,18 @@
 import { type FC } from "react";
 import ResumePrintH2View from "_views/resume-print/ResumePrintH2.view";
-import type { Resume, Specialty, SpecialtyId } from "_types/resume.types";
+import type { PaperStyles, Resume, Specialty } from "_types/resume.types";
 import { APP_ADDRESS, DOMAIN } from "_config";
 import { printFilter, specialtyFilter } from "_utils/resume.utils";
 
 interface ResumePrintRelevantCertificationsViewProps {
   activeSpecialty: Specialty;
+  activePaperStyles: PaperStyles;
   relevantCertifications: Resume["relevantCertifications"];
 }
 
 const ResumePrintRelevantCertificationsView: FC<
   ResumePrintRelevantCertificationsViewProps
-> = ({ activeSpecialty, relevantCertifications }) => {
+> = ({ activeSpecialty, activePaperStyles, relevantCertifications }) => {
   const filteredList = relevantCertifications.list.filter(
     (item) => printFilter(item) && specialtyFilter(item, activeSpecialty.id)
   );
@@ -23,7 +24,7 @@ const ResumePrintRelevantCertificationsView: FC<
   return (
     <div>
       <div className="flex justify-between">
-        <ResumePrintH2View activeSpecialty={activeSpecialty}>
+        <ResumePrintH2View activePaperStyles={activePaperStyles}>
           {relevantCertifications.title.toUpperCase()}
         </ResumePrintH2View>
         <span className="text-right">

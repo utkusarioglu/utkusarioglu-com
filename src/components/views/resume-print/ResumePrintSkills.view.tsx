@@ -1,16 +1,18 @@
 import { type FC } from "react";
 import ResumePrintH2View from "_views/resume-print/ResumePrintH2.view";
-import type { Resume, Specialty, SpecialtyId } from "_types/resume.types";
+import type { PaperStyles, Resume, Specialty } from "_types/resume.types";
 import { printFilter, specialtyFilter } from "_utils/resume.utils";
 import ResumePrintSkillsSectionView from "./ResumePrintSkillsSection.view";
 
 interface ResumePrintSkillsSectionViewProps {
   activeSpecialty: Specialty;
+  activePaperStyles: PaperStyles;
   skills: Resume["skills"];
 }
 
 const ResumePrintSkillsView: FC<ResumePrintSkillsSectionViewProps> = ({
   activeSpecialty,
+  activePaperStyles,
   skills,
 }) => {
   const filteredList = skills.list.filter(
@@ -21,12 +23,12 @@ const ResumePrintSkillsView: FC<ResumePrintSkillsSectionViewProps> = ({
     return null;
   }
 
-  const olGap = activeSpecialty.styles.skills.ol.gap;
+  const olGap = activePaperStyles.styles.skills.ol.gap;
 
   return (
     <div>
       <div className="flex justify-between">
-        <ResumePrintH2View activeSpecialty={activeSpecialty}>
+        <ResumePrintH2View activePaperStyles={activePaperStyles}>
           {skills.title.toUpperCase()}
         </ResumePrintH2View>
         <span className="text-right">{skills.remarks}</span>
@@ -36,7 +38,7 @@ const ResumePrintSkillsView: FC<ResumePrintSkillsSectionViewProps> = ({
           <ResumePrintSkillsSectionView
             key={skillSection.title}
             activeSpecialty={activeSpecialty}
-            // activeSpecialtyId={activeSpecialtyId}
+            activePaperStyles={activePaperStyles}
             skillSection={skillSection}
           />
         ))}

@@ -1,20 +1,20 @@
 import { type FC } from "react";
 import ResumePrintH3View from "_views/resume-print/ResumePrintH3.view";
-import type { Specialty, WorkExperience } from "_types/resume.types";
+import type { PaperStyles, WorkExperience } from "_types/resume.types";
 
 interface ResumePrintWorkExperienceLiViewProps {
-  activeSpecialty: Specialty;
+  activePaperStyles: PaperStyles;
   item: WorkExperience;
 }
 
 const ResumePrintWorkExperienceLiView: FC<
   ResumePrintWorkExperienceLiViewProps
 > = ({
-  activeSpecialty,
+  activePaperStyles,
   item: { remarks, title, companyName, location, start, finish },
 }) => {
   const dividerHeight =
-    activeSpecialty.styles.relevantWorkExperience.li.divider.height;
+    activePaperStyles.styles.relevantWorkExperience.li.divider.height;
 
   return (
     <div className="grid grid-cols-2 grid-rows-3 last:mb-0">

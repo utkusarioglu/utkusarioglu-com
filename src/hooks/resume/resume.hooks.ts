@@ -1,5 +1,11 @@
 import { useEffect, useState, Dispatch, SetStateAction } from "react";
-import { type SpecialtyId, type PaperFormat } from "_types/resume.types";
+import type {
+  SpecialtyId,
+  PaperFormat,
+  Specialties,
+  Resume,
+  PaperFormatShortCode,
+} from "_types/resume.types";
 import { useRouter } from "next/router";
 import {
   createPaperFormatShortCode,
@@ -18,14 +24,26 @@ export interface ResumeSpecialtyIdStateProps {
   setActiveSpecialtyId: Dispatch<SetStateAction<SpecialtyId>>;
 }
 
+export interface ResumePaperFormatShortCodeProps {
+  activePaperFormatShortCode: PaperFormatShortCode;
+}
+
 export type ResumeCode = string[];
 
 type UseResumeCustomizationReturn = ResumeSpecialtyIdStateProps &
-  ResumeIncludePhotoStateProps & {
+  ResumeIncludePhotoStateProps &
+  ResumePaperFormatShortCodeProps & {
     resumeCode: ResumeCode;
   };
 
-export function useResumeCustomization(): UseResumeCustomizationReturn {
+function getInitialSpecialtyId(specialties: Specialties) {
+  const hasAl = specialties.filter((s) => s.id === "al").length > 0;
+  return !hasAl ? specialties[0].id : "al";
+}
+
+export function useResumeCustomization(
+  resume: Resume
+): UseResumeCustomizationReturn {
   const router = useRouter();
   const querySpecialtyId = router.query["specialty-id"] as SpecialtyId;
   const queryIncludePhoto = router.query["include-photo"] === "true";
@@ -33,17 +51,15 @@ export function useResumeCustomization(): UseResumeCustomizationReturn {
     "paper-format"
   ] as PaperFormat["searchQueryValue"];
   const [activeSpecialtyId, setActiveSpecialtyId] = useState<SpecialtyId>(
-    querySpecialtyId || "al"
+    querySpecialtyId || getInitialSpecialtyId(resume.variants.specialties)
   );
   const [includePhoto, setIncludePhoto] = useState(queryIncludePhoto);
-  const [paperFormat, setPaperFormat] = useState(
-    queryPaperFormat || "unspecified"
-  );
-  const paperFormatShortCode = createPaperFormatShortCode(paperFormat);
+  const [paperFormat, setPaperFormat] = useState(queryPaperFormat || "a4");
+  const activePaperFormatShortCode = createPaperFormatShortCode(paperFormat);
   const resumeCode = createResumeCode(
     activeSpecialtyId,
     includePhoto,
-    paperFormatShortCode
+    activePaperFormatShortCode
   );
 
   useEffect(() => {
@@ -59,6 +75,7 @@ export function useResumeCustomization(): UseResumeCustomizationReturn {
   return {
     activeSpecialtyId,
     setActiveSpecialtyId,
+    activePaperFormatShortCode,
     includePhoto,
     setIncludePhoto,
     resumeCode,

@@ -2,7 +2,10 @@ import { type FC } from "react";
 import { type SpecialtyId, type Resume } from "_types/resume.types";
 import { COLORS, RESUME_PRINT_Y_GAP_CLASS } from "_config";
 import c from "classnames";
-import { type IncludePhoto } from "_hooks/resume/resume.hooks";
+import type {
+  ResumePaperFormatShortCodeProps,
+  IncludePhoto,
+} from "_hooks/resume/resume.hooks";
 import ResumePrintWorkExperience from "_views/resume-print/ResumePrintWorkExperience.view";
 import ResumePrintRelevantCertificationsView from "_views/resume-print/ResumePrintRelevantCertifications.view";
 import ResumePrintSkillsView from "_views/resume-print/ResumePrintSkills.view";
@@ -10,21 +13,21 @@ import ResumePrintEducationView from "_views/resume-print/ResumePrintEducation.v
 import ResumePrintResumeCodeView from "_views/resume-print/ResumePrintResumeCode.view";
 import ResumePrintHeaderView from "_views/resume-print/ResumePrintHeader.view";
 import ResumePrintContactView from "_views/resume-print/ResumePrintContact.view";
-import { getActiveSpecialty } from "_utils/resume.utils";
+import { getActivePaperStyles, getActiveSpecialty } from "_utils/resume.utils";
 
-export interface ResumeLayoutProps {
+export type ResumeLayoutProps = ResumePaperFormatShortCodeProps & {
   activeSpecialtyId: SpecialtyId;
   resume: Resume;
   includePhoto: IncludePhoto;
   resumeCode: string[];
-}
+};
 
 const ResumePrintLayout: FC<ResumeLayoutProps> = ({
   activeSpecialtyId,
   includePhoto,
   resumeCode,
   resume: {
-    variants: { specialties },
+    variants: { specialties, paperStyles },
     name,
     contact,
     skills,
@@ -32,10 +35,16 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
     relevantCertifications,
     education,
   },
+  activePaperFormatShortCode,
 }) => {
   const activeSpecialty = getActiveSpecialty(specialties, activeSpecialtyId);
-  const layoutTemplateColumns = activeSpecialty.styles.layout.templateColumns;
-  const layoutGridColumnGap = activeSpecialty.styles.layout.columnGap;
+  const activePaperStyles = getActivePaperStyles(
+    paperStyles,
+    activeSpecialtyId,
+    activePaperFormatShortCode
+  );
+  const layoutTemplateColumns = activePaperStyles.styles.layout.templateColumns;
+  const layoutGridColumnGap = activePaperStyles.styles.layout.columnGap;
 
   return (
     <div className="hidden print:block relative">
@@ -57,7 +66,7 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
           }}
         >
           <ResumePrintHeaderView
-            activeSpecialty={activeSpecialty}
+            activePaperStyles={activePaperStyles}
             includePhoto={includePhoto}
             name={name}
           />
@@ -72,10 +81,12 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
           >
             <ResumePrintWorkExperience
               activeSpecialty={activeSpecialty}
+              activePaperStyles={activePaperStyles}
               relevantWorkExperience={relevantWorkExperience}
             />
             <ResumePrintRelevantCertificationsView
               activeSpecialty={activeSpecialty}
+              activePaperStyles={activePaperStyles}
               relevantCertifications={relevantCertifications}
             />
           </div>
@@ -89,11 +100,11 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
           >
             <ResumePrintSkillsView
               activeSpecialty={activeSpecialty}
-              // activeSpecialtyId={activeSpecialtyId}
+              activePaperStyles={activePaperStyles}
               skills={skills}
             />
             <ResumePrintEducationView
-              activeSpecialty={activeSpecialty}
+              activePaperStyles={activePaperStyles}
               education={education}
             />
           </div>

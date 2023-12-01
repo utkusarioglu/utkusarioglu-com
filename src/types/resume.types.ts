@@ -53,15 +53,24 @@ export type SpecialtyIdList = SpecialtyId[];
 
 export type Specialty = {
   id: SpecialtyId;
+} & Titled &
+  Remarked;
+
+export type PaperStyles = {
+  id: SpecialtyId;
+  paperFormatShortCode: PaperFormatShortCode;
   styles: {
-    layout: {
-      templateColumns: string;
-      columnGap: string;
-    };
     header: {
       clearance: {
         height: number | string;
       };
+    };
+    h2: {
+      marginBottom: number | string;
+    };
+    layout: {
+      templateColumns: string;
+      columnGap: string;
     };
     relevantWorkExperience: {
       ol: {
@@ -89,8 +98,7 @@ export type Specialty = {
       };
     };
   };
-} & Titled &
-  Remarked;
+};
 
 export type Specialties = Specialty[];
 
@@ -115,6 +123,7 @@ interface IncludePhoto {
 
 interface Variants {
   specialties: Specialties;
+  paperStyles: PaperStyles[];
   paperFormats: PaperFormat[];
   includePhoto: IncludePhoto[];
 }
