@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import { type Resume } from "_types/resume.types";
-import { printFilter, specialtyFilter } from "_utils/resume.utils";
+import { printFilter } from "_utils/resume.utils";
 
 interface ResumePrintContactViewProps {
   contact: Resume["contact"];

@@ -18,27 +18,27 @@ const PaperChainView: FC<PaperChainViewProps> = ({ list }) => {
   );
 };
 
-const variants = {
-  container: {
-    animate: {
-      transition: {
-        delayChildren: 0.1,
-        staggerChildren: 0.2,
-      },
-    },
-  },
-  item: {
-    initial: {
-      y: 50,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      duration: 0.4,
-      ease: "easeOut",
-    },
-  },
-};
+// const variants = {
+//   container: {
+//     animate: {
+//       transition: {
+//         delayChildren: 0.1,
+//         staggerChildren: 0.2,
+//       },
+//     },
+//   },
+//   item: {
+//     initial: {
+//       y: 50,
+//       opacity: 0,
+//     },
+//     animate: {
+//       y: 0,
+//       opacity: 1,
+//       duration: 0.4,
+//       ease: "easeOut",
+//     },
+//   },
+// };
 
 export default PaperChainView;

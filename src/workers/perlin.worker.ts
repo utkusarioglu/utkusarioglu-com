@@ -59,9 +59,9 @@ export async function perlinFactory({
     });
   }
 
-  const clamp = (hue: number, min: number, max: number) => {
-    return Math.max(Math.min(hue, max), min);
-  };
+  // const clamp = (hue: number, min: number, max: number) => {
+  //   return Math.max(Math.min(hue, max), min);
+  // };
 
   const drawFrame = () => {
     const results = [];
