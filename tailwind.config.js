@@ -18,7 +18,7 @@ module.exports = {
       base: ["1.1rem", { lineHeight: "1.6rem" }],
     },
     gridTemplateRows: {
-      resume: "min max",
+      resume: "min-content max-content",
     },
     extend: {
       colors: {

@@ -40,14 +40,13 @@ variants:
         x: 45
         y: 60
       styles:
-        header:
-          clearance: 
-            height: 0px
-        h2:
-          marginBottom: 4px
         layout:
           templateColumns: 50vw 12vw auto
-          columnGap: 20px 
+          columnGap: 20px
+          sectionsGap: 12px
+          headerGap: 20px
+        h2:
+          marginBottom: 4px
         relevantWorkExperience:
           ol:
             gap: 4px
@@ -70,14 +69,13 @@ variants:
         x: 40
         y: 40
       styles:
-        header:
-          clearance: 
-            height: 0px
-        h2:
-          marginBottom: 4px
         layout:
           templateColumns: 50vw 11vw auto
           columnGap: 20px 
+          sectionsGap: 8px
+          headerGap: 20px
+        h2:
+          marginBottom: 4px
         relevantWorkExperience:
           ol:
             gap: 4px
@@ -100,14 +98,13 @@ variants:
         x: 55
         y: 65
       styles:
-        header:
-          clearance: 
-            height: 8px
-        h2:
-          marginBottom: 6px
         layout:
           templateColumns: 50vw 18vw auto
-          columnGap: 25px 
+          columnGap: 30px 
+          sectionsGap: 12px
+          headerGap: 20px
+        h2:
+          marginBottom: 6px
         relevantWorkExperience:
           ol:
             gap: 4px
@@ -130,14 +127,13 @@ variants:
         x: 45
         y: 42
       styles:
-        header:
-          clearance: 
-            height: 8px
-        h2:
-          marginBottom: 6px
         layout:
           templateColumns: 50vw 20vw auto
-          columnGap: 25px 
+          columnGap: 30px 
+          sectionsGap: 12px
+          headerGap: 20px
+        h2:
+          marginBottom: 6px
         relevantWorkExperience:
           ol:
             gap: 4px
@@ -152,7 +148,7 @@ variants:
               height: 2px
         education:
           ol:
-            gap: 8px
+            gap: 6px
 
     - id: fe
       paperFormatShortCode: 4
@@ -160,14 +156,13 @@ variants:
         x: 55
         y: 65
       styles:
-        header:
-          clearance: 
-            height: 8px
-        h2:
-          marginBottom: 6px
         layout:
           templateColumns: 50vw 18vw auto
-          columnGap: 25px 
+          columnGap: 30px 
+          sectionsGap: 8px
+          headerGap: 20px
+        h2:
+          marginBottom: 6px
         relevantWorkExperience:
           ol:
             gap: 6px
@@ -188,16 +183,15 @@ variants:
       paperFormatShortCode: l
       margins:
         x: 45
-        y: 42
+        y: 45
       styles:
-        header:
-          clearance: 
-            height: 8px
+        layout:
+          templateColumns: 50vw 19vw auto
+          columnGap: 30px 
+          sectionsGap: 8px
+          headerGap: 20px
         h2:
           marginBottom: 6px
-        layout:
-          templateColumns: 50vw 20vw auto
-          columnGap: 25px 
         relevantWorkExperience:
           ol:
             gap: 4px
@@ -220,17 +214,16 @@ variants:
         x: 55
         y: 60
       styles:
-        header:
-          clearance: 
-            height: 8px
+        layout:
+          templateColumns: 50vw 13vw auto
+          columnGap: 30px 
+          sectionsGap: 8px
+          headerGap: 20px
         h2:
           marginBottom: 4px
-        layout:
-          templateColumns: 50vw 14vw auto
-          columnGap: 25px 
         relevantWorkExperience:
           ol:
-            gap: 4px
+            gap: 6px
           li:
             divider:
               height: 2px
@@ -250,14 +243,13 @@ variants:
         x: 45
         y: 42
       styles:
-        header:
-          clearance: 
-            height: 8px
+        layout:
+          templateColumns: 50vw 13vw auto
+          columnGap: 30px 
+          sectionsGap: 8px
+          headerGap: 20px
         h2:
           marginBottom: 4px
-        layout:
-          templateColumns: 50vw 15vw auto
-          columnGap: 25px 
         relevantWorkExperience:
           ol:
             gap: 4px
@@ -280,14 +272,13 @@ variants:
         x: 55
         y: 65
       styles:
-        header:
-          clearance: 
-            height: 8px
-        h2:
-          marginBottom: 4px
         layout:
           templateColumns: 50vw 15vw auto
           columnGap: 25px 
+          sectionsGap: 12px
+          headerGap: 20px
+        h2:
+          marginBottom: 4px
         relevantWorkExperience:
           ol:
             gap: 4px
@@ -310,14 +301,13 @@ variants:
         x: 45
         y: 42
       styles:
-        header:
-          clearance: 
-            height: 8px
-        h2:
-          marginBottom: 4px
         layout:
           templateColumns: 50vw 14vw auto
           columnGap: 25px 
+          sectionsGap: 12px
+          headerGap: 20px
+        h2:
+          marginBottom: 4px
         relevantWorkExperience:
           ol:
             gap: 4px
@@ -538,6 +528,10 @@ skills:
           specialties:
             - fs
             - be
+        - title: k3s
+          specialties:
+            - fs
+            - be
         - title: GitHub Actions
         - title: Jenkins
           confident: false
@@ -545,10 +539,6 @@ skills:
             - fs
             - be
         - title: LocalStack
-          specialties:
-            - fs
-            - be
-        - title: k3s
           specialties:
             - fs
             - be
@@ -857,8 +847,7 @@ relevantWorkExperience:
           6000+ tones monthly volume, with many contracts being valued at 
           six-figures in USD.
         - |
-          As a side project during this time, took company's Instagram
-          followers from 50 to ~20k.
+          As a side project, took company's Instagram followers from 50 to ~20k.
 
     - title: Software Development Consultant
       companyName: Index Group

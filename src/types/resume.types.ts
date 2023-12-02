@@ -60,17 +60,19 @@ export type PaperStyles = {
   id: SpecialtyId;
   paperFormatShortCode: PaperFormatShortCode;
   styles: {
-    header: {
-      clearance: {
-        height: number | string;
-      };
-    };
+    // header: {
+    //   clearance: {
+    //     height: number | string;
+    //   };
+    // };
     h2: {
       marginBottom: number | string;
     };
     layout: {
       templateColumns: string;
       columnGap: string;
+      sectionsGap: string;
+      headerGap: string;
     };
     relevantWorkExperience: {
       ol: {

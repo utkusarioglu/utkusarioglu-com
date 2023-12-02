@@ -52,6 +52,11 @@ run_docker() {
 }
 
 run_gs() {
+  if [ -z "$(which gs)" ]; then
+    echo "Error: GhostScript not installed on the host"
+    exit 1
+  fi
+  
   RESUME_FILE_RELPATH='assets/resume.yml'
 
   PHOTO_VARIANTS="$(

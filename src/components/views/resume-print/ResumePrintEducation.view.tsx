@@ -26,7 +26,7 @@ const ResumePrintEducationView: FC<ResumePrintEducationViewProps> = ({
               <div className="flex justify-between">
                 <ResumePrintH3View>{title}</ResumePrintH3View>
                 <span className="text-right">
-                  {start} - {finish}
+                  {start} - {finish}
                 </span>
               </div>
               <div className="flex justify-between">

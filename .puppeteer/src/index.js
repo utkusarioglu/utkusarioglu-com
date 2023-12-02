@@ -55,7 +55,12 @@ async function createSingle(browser, specialtyId, includePhoto, paperFormat) {
     JSON.stringify(
       {
         status: "Creating pdf",
-        specs: { url, specialtyId, includePhoto, paperFormat },
+        specs: {
+          url,
+          specialtyId,
+          includePhoto: includePhoto.state,
+          paperFormat: paperFormat.shortCode,
+        },
       },
       null,
       2

@@ -12,8 +12,8 @@ const ResumePrintResumeCodeView: FC<ResumePrintResumeCodeViewProps> = ({
   return (
     <div
       className={c(
-        "fixed top-1 right-0",
-        "z-50 text-[6px] text-right leading-[7px]",
+        "fixed top-[6px] right-1",
+        "z-50 text-[2px] text-right leading-[2px]",
         "text-gray-100 font-[monospace]"
       )}
     >

@@ -31,7 +31,7 @@ const ResumePrintSkillsSectionView: FC<ResumePrintSkillsSectionViewProps> = ({
       <div>
         {filteredList.map(({ title, remarks, confident }, i, filtered) => (
           <>
-            <span key={title}>
+            <span key={title} className="whitespace-nowrap">
               {title}
               {confident === false ? "*" : ""}
               {remarks ? ` (${remarks})` : ""}

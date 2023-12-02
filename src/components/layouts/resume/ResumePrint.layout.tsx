@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import { type SpecialtyId, type Resume } from "_types/resume.types";
-import { COLORS, RESUME_PRINT_Y_GAP_CLASS } from "_config";
+import { COLORS } from "_config";
 import c from "classnames";
 import type {
   ResumePaperFormatShortCodeProps,
@@ -45,6 +45,8 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
   );
   const layoutTemplateColumns = activePaperStyles.styles.layout.templateColumns;
   const layoutGridColumnGap = activePaperStyles.styles.layout.columnGap;
+  const sectionsRowGap = activePaperStyles.styles.layout.sectionsGap;
+  const headerGap = activePaperStyles.styles.layout.headerGap;
 
   return (
     <div className="hidden print:block relative">
@@ -59,25 +61,24 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
         )}
       >
         <div
-          className={c(RESUME_PRINT_Y_GAP_CLASS, "grid grid-rows-resume")}
+          className={"grid grid-rows-resume content-between"}
           style={{
             gridTemplateColumns: layoutTemplateColumns,
             columnGap: layoutGridColumnGap,
+            rowGap: headerGap,
           }}
         >
-          <ResumePrintHeaderView
-            activePaperStyles={activePaperStyles}
-            includePhoto={includePhoto}
-            name={name}
-          />
+          <ResumePrintHeaderView includePhoto={includePhoto} name={name} />
           <ResumePrintContactView contact={contact} />
 
           <div
             className={c(
-              RESUME_PRINT_Y_GAP_CLASS,
               "col-start-1 col-end-3 row-start-2 flex flex-col",
               "flex justify-between"
             )}
+            style={{
+              rowGap: sectionsRowGap,
+            }}
           >
             <ResumePrintWorkExperience
               activeSpecialty={activeSpecialty}
@@ -94,9 +95,11 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
           <div
             className={c(
               "col-start-3 row-start-2 flex flex-col",
-              RESUME_PRINT_Y_GAP_CLASS,
               "flex justify-between"
             )}
+            style={{
+              rowGap: sectionsRowGap,
+            }}
           >
             <ResumePrintSkillsView
               activeSpecialty={activeSpecialty}
