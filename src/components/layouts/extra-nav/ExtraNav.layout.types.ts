@@ -1,5 +1,5 @@
-import { type MutableRefObject } from "react";
+import { type RefObject } from "react";
 
 export interface ExtraNavLayoutProps {
-  titleRef: MutableRefObject<HTMLDivElement>;
+  titleRef: RefObject<HTMLDivElement>;
 }

@@ -1,5 +1,5 @@
 import { type FC, type PropsWithChildren } from "react";
-import { COLORS, TRANSITIONS, APP_ADDRESS } from "_config";
+import { TRANSITIONS } from "_config";
 import MDiv from "_primitives/framer-motion/m-div.primitive";
 
 type ContentCardButtonViewProps = PropsWithChildren<{

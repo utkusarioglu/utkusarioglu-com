@@ -35,12 +35,10 @@ export function getActivePaperStyles(
       id === activeSpecialtyId &&
       paperFormatShortCode == activePaperFormatShortCode
   );
-  console.log({
-    paperStyles,
-    styles,
-    activeSpecialtyId,
-    activePaperFormatShortCode,
-  });
+  if (!styles) {
+    const code = `${activeSpecialtyId}-${activePaperFormatShortCode}`;
+    throw new Error(`Cannot find style for ${code}`);
+  }
   return styles;
 }
 

@@ -112,6 +112,11 @@ export const ROUTE_PROPS: INavItem[] = [
     },
   },
   {
+    title: "Github",
+    type: "social",
+    href: "https://github.com/utkusarioglu",
+  },
+  {
     title: "LinkedIn",
     type: "social",
     href: "https://www.linkedin.com/in/utku-sarioglu",
@@ -121,11 +126,11 @@ export const ROUTE_PROPS: INavItem[] = [
     type: "social",
     href: "https://www.instagram.com/utkusarioglu",
   },
-  {
-    title: "Twitter",
-    type: "social",
-    href: "https://www.twitter.com/utkusarioglu",
-  },
+  // {
+  //   title: "Twitter",
+  //   type: "social",
+  //   href: "https://www.twitter.com/utkusarioglu",
+  // },
 ];
 
 export const HEX = {
@@ -503,3 +508,4 @@ export const IMG_ZOOM_MARGIN = +process.env.IMG_ZOOM_MARGIN;
 export const IMG_MAXIMIZED_BORDER_RADIUS = 20;
 export const CONTENT_ANIMATION_Y_DRIFT = 100;
 export const MAX_W_CONTENT = +process.env.MAX_W_CONTENT;
+export const MAX_EXPECTED_IMAGE_WIDTH = 1920 * 2;

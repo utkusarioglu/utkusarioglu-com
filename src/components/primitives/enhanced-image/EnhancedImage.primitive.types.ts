@@ -1,3 +1,4 @@
+// @ts-ignore: missing type defs
 import { type ResponsiveImageOutput } from "responsive-loader";
 
 export type EnhancedImageProps = {

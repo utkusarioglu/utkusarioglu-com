@@ -1,5 +1,5 @@
 import { type FC, type PropsWithChildren } from "react";
-import { COLORS, TRANSITIONS, APP_ADDRESS } from "_config";
+import { COLORS, TRANSITIONS } from "_config";
 import MDiv from "_primitives/framer-motion/m-div.primitive";
 import c from "classnames";
 import Link from "next/link";
@@ -12,8 +12,8 @@ const ContentCardLinkView: FC<ContentCardLinkViewProps> = ({
   href,
   children,
 }) => {
-  // const isExternalLink = !href.startsWith(APP_ADDRESS) && !href.startsWith("/");
-  const isExternalLink = href.startsWith("/");
+  const isInternalLink = href.startsWith("/");
+
   return (
     <MDiv
       className="mb-3 last:mb-0 rounded-lg box"
@@ -26,7 +26,11 @@ const ContentCardLinkView: FC<ContentCardLinkViewProps> = ({
       }}
       transition={TRANSITIONS.routeFast}
     >
-      {isExternalLink ? (
+      {isInternalLink ? (
+        <Link href={href} passHref>
+          <a>{children}</a>
+        </Link>
+      ) : (
         <a
           href={href}
           target="_blank"
@@ -38,10 +42,6 @@ const ContentCardLinkView: FC<ContentCardLinkViewProps> = ({
           </div>
           {children}
         </a>
-      ) : (
-        <Link href={href} passHref>
-          <a>{children}</a>
-        </Link>
       )}
     </MDiv>
   );

@@ -4,6 +4,7 @@ import type {
   EndZoom,
   OnLoad,
 } from "_primitives/enhanced-image/EnhancedImage.primitive.types";
+// @ts-ignore: missing typedef
 import { type ResponsiveImageOutput } from "responsive-loader";
 
 export interface LayoutSlice {

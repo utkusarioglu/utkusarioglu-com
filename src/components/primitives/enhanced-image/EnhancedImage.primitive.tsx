@@ -1,6 +1,6 @@
 import MImg from "_primitives/framer-motion/m-img.primitive";
 import { useEffect, useRef, useState, type FC } from "react";
-import { COLORS, TRANSITIONS } from "_config";
+import { COLORS, MAX_EXPECTED_IMAGE_WIDTH, TRANSITIONS } from "_config";
 import type {
   EnhancedImageProps,
   GetDims,
@@ -18,7 +18,6 @@ import c from "classnames";
 const INITIAL_SCALE = 1.2;
 const PLACEHOLDER_SCALE = 1.3;
 const INITIAL_IMG = { transform: `scale(${INITIAL_SCALE})`, opacity: 0 };
-const MAX_EXPECTED_IMAGE_WIDTH = 1920 * 2;
 
 const EnhancedImage: FC<EnhancedImageProps> = ({
   className,
@@ -39,20 +38,20 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
   const zoomEnabled = allowZoom && !isSm;
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout;
+    let timeout: NodeJS.Timeout | undefined = undefined;
     if (imgZoomed) {
       timeout = setTimeout(() => {
         setLoadingDialogShown(true);
       }, 800);
     } else {
-      clearTimeout(timeout);
+      timeout && clearTimeout(timeout);
       setLoadingDialogShown(false);
     }
     return () => clearTimeout(timeout);
   }, [imgZoomed]);
 
   const getBorderRadius = () =>
-    getComputedStyle(containerRef.current).borderRadius;
+    getComputedStyle(containerRef.current!).borderRadius;
 
   const getDims: GetDims = () => {
     if (!imgRef.current) {
@@ -117,6 +116,7 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
   return (
     <div className="mb-5">
       <div
+        // @ts-ignore
         ref={containerRef}
         className={c("overflow-hidden relative", className)}
         style={{
@@ -148,6 +148,7 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
 
         <MImg
           layout
+          // @ts-ignore
           ref={imgRef}
           initial={INITIAL_IMG}
           animate={

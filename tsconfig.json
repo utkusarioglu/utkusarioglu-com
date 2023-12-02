@@ -9,11 +9,13 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "incremental": true,
     "esModuleInterop": true,
+    "alwaysStrict": true,
+    "strict": true,
+    "noUnusedLocals": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -21,26 +23,53 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "_views/*": ["src/components/views/*"],
-      "_primitives/*": ["src/components/primitives/*"],
-      "_contexts/*": ["src/components/contexts/*"],
-      "_layouts/*": ["src/components/layouts/*"],
-      "_heads/*": ["src/components/heads/*"],
-      "_services/*": ["src/services/*"],
-      "_styles/*": ["src/styles/*"],
-      "_config": ["src/config"],
-      "_hooks/*": ["src/hooks/*"],
-      "_utils/*": ["src/utils/*"],
-      "_types/*": ["src/types/*"],
-      "_workers/*": ["src/workers/*"],
-      "_assets/*": ["assets/*"],
+      "_views/*": [
+        "src/components/views/*"
+      ],
+      "_primitives/*": [
+        "src/components/primitives/*"
+      ],
+      "_contexts/*": [
+        "src/components/contexts/*"
+      ],
+      "_layouts/*": [
+        "src/components/layouts/*"
+      ],
+      "_heads/*": [
+        "src/components/heads/*"
+      ],
+      "_services/*": [
+        "src/services/*"
+      ],
+      "_styles/*": [
+        "src/styles/*"
+      ],
+      "_config": [
+        "src/config"
+      ],
+      "_hooks/*": [
+        "src/hooks/*"
+      ],
+      "_utils/*": [
+        "src/utils/*"
+      ],
+      "_types/*": [
+        "src/types/*"
+      ],
+      "_workers/*": [
+        "src/workers/*"
+      ],
+      "_assets/*": [
+        "assets/*"
+      ]
     }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "public/sw.js"  ],
+    "**/*.tsx",
+    "public/sw.js"
+  ],
   "exclude": [
     "node_modules"
   ]
