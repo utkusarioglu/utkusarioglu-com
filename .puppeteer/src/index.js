@@ -86,12 +86,6 @@ async function createSingle(browser, specialtyId, includePhoto, paperFormat) {
       id === specialtyId && paperFormatShortCode == paperFormat.shortCode
   );
   const margins = activeStyles.margins;
-  console.log({
-    activeStyles,
-    specialtyId,
-    paperFormatShortCode: paperFormat.shortCode,
-    margins,
-  });
 
   await page.pdf({
     displayHeaderFooter: false,

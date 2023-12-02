@@ -46,7 +46,7 @@ variants:
         h2:
           marginBottom: 4px
         layout:
-          templateColumns: 50vw 13vw auto
+          templateColumns: 50vw 12vw auto
           columnGap: 20px 
         relevantWorkExperience:
           ol:
@@ -76,7 +76,7 @@ variants:
         h2:
           marginBottom: 4px
         layout:
-          templateColumns: 50vw 13vw auto
+          templateColumns: 50vw 11vw auto
           columnGap: 20px 
         relevantWorkExperience:
           ol:
@@ -98,7 +98,7 @@ variants:
       paperFormatShortCode: 4
       margins:
         x: 55
-        y: 60
+        y: 65
       styles:
         header:
           clearance: 
@@ -136,7 +136,7 @@ variants:
         h2:
           marginBottom: 6px
         layout:
-          templateColumns: 50vw 18vw auto
+          templateColumns: 50vw 20vw auto
           columnGap: 25px 
         relevantWorkExperience:
           ol:
@@ -146,7 +146,7 @@ variants:
               height: 2px
         skills:
           ol:
-            gap: 8px
+            gap: 6px
           li:
             divider:
               height: 2px
@@ -158,7 +158,7 @@ variants:
       paperFormatShortCode: 4
       margins:
         x: 55
-        y: 60
+        y: 65
       styles:
         header:
           clearance: 
@@ -196,11 +196,11 @@ variants:
         h2:
           marginBottom: 6px
         layout:
-          templateColumns: 50vw 18vw auto
+          templateColumns: 50vw 20vw auto
           columnGap: 25px 
         relevantWorkExperience:
           ol:
-            gap: 6px
+            gap: 4px
           li:
             divider:
               height: 2px
@@ -226,7 +226,7 @@ variants:
         h2:
           marginBottom: 4px
         layout:
-          templateColumns: 50vw 13vw auto
+          templateColumns: 50vw 14vw auto
           columnGap: 25px 
         relevantWorkExperience:
           ol:
@@ -242,7 +242,7 @@ variants:
               height: 0px
         education:
           ol:
-            gap: 0px
+            gap: 2px
 
     - id: fs
       paperFormatShortCode: l
@@ -256,7 +256,7 @@ variants:
         h2:
           marginBottom: 4px
         layout:
-          templateColumns: 50vw 13vw auto
+          templateColumns: 50vw 15vw auto
           columnGap: 25px 
         relevantWorkExperience:
           ol:
@@ -278,7 +278,7 @@ variants:
       paperFormatShortCode: 4
       margins:
         x: 55
-        y: 60
+        y: 65
       styles:
         header:
           clearance: 
@@ -286,7 +286,7 @@ variants:
         h2:
           marginBottom: 4px
         layout:
-          templateColumns: 50vw 13vw auto
+          templateColumns: 50vw 15vw auto
           columnGap: 25px 
         relevantWorkExperience:
           ol:
@@ -316,7 +316,7 @@ variants:
         h2:
           marginBottom: 4px
         layout:
-          templateColumns: 50vw 13vw auto
+          templateColumns: 50vw 14vw auto
           columnGap: 25px 
         relevantWorkExperience:
           ol:
@@ -338,9 +338,9 @@ variants:
     - state: true
       searchQueryValue: "true"
       shortCode: p
-    - state: false
-      searchQueryValue: "false"
-      shortCode: n
+    # - state: false
+    #   searchQueryValue: "false"
+    #   shortCode: n
 
 introduction:
   title: Introduction
@@ -430,7 +430,7 @@ skills:
         - title: Supercollider
           specialties:
             - al
-    - title: Scripting Languages and DSL
+    - title: Scripting Languages & DSL
       list:
         - title: SQL
           specialties:
@@ -440,6 +440,7 @@ skills:
           specialties:
             - fs
             - be
+            - fe
             - w3
         - title: PowerShell
           confident: false
@@ -448,6 +449,12 @@ skills:
           specialties:
             - fs
             - be
+        - title: D2
+          specialties:
+            - fs
+            - be
+            - fe
+            - w3
     - title: Frontend
       list:
         - title: React
@@ -608,12 +615,12 @@ skills:
           specialties:
             - fs
             - be
-        - title: OpenTelemetry
         - title: gRPC
           specialties:
             - fs
             - be
             - fe
+        - title: OpenTelemetry
         - title: Puppeteer
     - title: Testing and Analysis
       list:
