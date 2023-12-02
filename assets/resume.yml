@@ -328,9 +328,9 @@ variants:
     - state: true
       searchQueryValue: "true"
       shortCode: p
-    # - state: false
-    #   searchQueryValue: "false"
-    #   shortCode: n
+    - state: false
+      searchQueryValue: "false"
+      shortCode: n
 
 introduction:
   title: Introduction
