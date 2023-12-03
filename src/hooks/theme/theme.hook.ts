@@ -3,7 +3,11 @@ import { useWindow } from "_hooks/window/window.hook";
 import { type Theme } from "_types/theme.types";
 import { getHtmlElement } from "_utils/element.utils";
 import { loadTheme, saveTheme } from "_utils/local-storage.utils";
-import type { ThemeHookState, UseThemeReturn } from "./theme.hook.types";
+import type {
+  LocalStorageTheme,
+  ThemeHookState,
+  UseThemeReturn,
+} from "./theme.hook.types";
 import { useIsomorphicLayoutEffect } from "_hooks/layout-effect/layout-effect.hook";
 
 const initialProps: ThemeHookState = {
@@ -40,7 +44,7 @@ export function useTheme(): UseThemeReturn {
   const [themeProps, setThemeProps] = useState(initialProps);
   useIsomorphicLayoutEffect(() => {
     let system: Theme = "light";
-    let local: Theme = loadTheme();
+    let local: LocalStorageTheme = loadTheme();
 
     if (window) {
       system = window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -48,7 +52,7 @@ export function useTheme(): UseThemeReturn {
         : "light";
     }
 
-    const combined = (local ? local : system) as Theme;
+    const combined = local ? local : system;
 
     setThemeProps({ system, local, combined });
   }, [window]);

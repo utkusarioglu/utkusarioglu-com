@@ -17,6 +17,11 @@ import { useTheme } from "_hooks/theme/theme.hook";
 import HslColorBarView from "./HslColorBar.view";
 import c from "classnames";
 
+/**
+ * @dev
+ * 1- Mismatching types between perlin and this component
+ * 2- CANVAS_CONTROLS has some type variation and this causes errors
+ */
 const CanvasControlView: FC<CanvasControlViewProps> = ({
   minimize,
   helpEnabled,
@@ -197,6 +202,7 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
             <ol>
               {localStorageValues && (
                 <PresetItemView
+                  // @ts-ignore #1
                   setValues={setValues}
                   values={values}
                   submitForm={submitForm}
@@ -212,6 +218,7 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
                 <li key={key}>
                   <PresetItemView
                     name={preset.name}
+                    // @ts-ignore #1
                     setValues={setValues}
                     values={values}
                     submitForm={submitForm}
@@ -224,6 +231,7 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
               ))}
               <li key="random">
                 <PresetItemView
+                  // @ts-ignore #1
                   setValues={setValues}
                   values={values}
                   submitForm={submitForm}
@@ -262,8 +270,11 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
                 <Label htmlFor={name}>{label}</Label>
                 <Input
                   name={name}
+                  // @ts-ignore #2
                   type={type}
+                  // @ts-ignore #2
                   min={min}
+                  // @ts-ignore #2
                   max={max}
                   handleChange={handleChange}
                   values={values}

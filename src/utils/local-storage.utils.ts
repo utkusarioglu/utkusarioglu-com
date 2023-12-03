@@ -1,9 +1,14 @@
 import { PerlinConfig } from "_contexts/canvas/Canvas.context.types";
+import { LocalStorageTheme } from "_hooks/theme/theme.hook.types";
 import { Theme } from "_types/theme.types";
 
 export function loadPerlinConfig(): PerlinConfig | null {
   try {
-    return JSON.parse(localStorage.getItem("perlinConfig"));
+    const perlinConfig = localStorage.getItem("perlinConfig");
+    if (!perlinConfig) {
+      return null;
+    }
+    return JSON.parse(perlinConfig);
   } catch (e) {
     console.log(e);
     return null;
@@ -26,9 +31,12 @@ export function deletePerlinConfig() {
   }
 }
 
-export function loadTheme(): Theme | null {
+export function loadTheme(): LocalStorageTheme {
   try {
-    const storageTheme = localStorage.getItem("theme") as Theme;
+    const storageTheme = localStorage.getItem("theme") as LocalStorageTheme;
+    if (!storageTheme) {
+      return null;
+    }
     return ["light", "dark"].includes(storageTheme) ? storageTheme : null;
   } catch (e) {
     console.log(e);

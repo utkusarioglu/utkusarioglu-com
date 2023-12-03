@@ -25,5 +25,7 @@ interface HTMLCanvasElement {
 declare namespace NodeJS {
   interface ProcessEnv {
     manifestProps: string; // stringified json
+    IMG_ZOOM_MARGIN: string; // stringified number
+    MAX_W_CONTENT: string // stringified number
   }
 }

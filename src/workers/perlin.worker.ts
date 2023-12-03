@@ -3,7 +3,11 @@ import {
   type DrawPerlinReturn,
 } from "_contexts/canvas/Canvas.context.types";
 import { Perlin } from "./perlin.worker.logic";
-import { SetCanvasArgs, CreateImageOptions } from "./perlin.worker.types";
+import {
+  SetCanvasArgs,
+  CreateImageOptions,
+  Particle,
+} from "./perlin.worker.types";
 
 let activeConfigId: string = "";
 let canvas: HTMLCanvasElement;
@@ -38,12 +42,12 @@ export async function perlinFactory({
   const noise = new Perlin(seed);
   const period = 1 / freq;
 
-  ctx = canvas.getContext("2d");
+  ctx = canvas.getContext("2d")!;
   ctx.clearRect(0, 0, width, height);
   ctx.fillStyle = "transparent";
   ctx.fillRect(0, 0, width, height);
 
-  const particles = [];
+  const particles: Particle[] = [];
 
   for (let i = 1; i <= particleCount; i++) {
     const p1 = {
@@ -86,7 +90,7 @@ export async function perlinFactory({
       const hue = Math.floor(v * hueRange) + hueOffset;
       ctx.fillStyle = `hsl(${hue}, ${saturation}%, ${luminance}%)`;
       ctx.fillRect(p.x, p.y, particleSize, particleSize);
-      p.h++;
+      p.h = p.h ? p.h + 1 : 0;
       const a = v * 2 * Math.PI + p.a;
       p.x += Math.cos(a);
       results.push((p.y += Math.sin(a)));
@@ -140,7 +144,7 @@ async function createImage(options: CreateImageOptions): Promise<string> {
     }
     if (!!canvas.toBlob && !!FileReaderSync) {
       return new Promise((resolve) => {
-        canvas.toBlob((blob) => resolve(handleBlob(blob))),
+        canvas.toBlob((blob) => resolve(handleBlob(blob!))),
           options.type,
           options.type === "image/jpeg" && options.quality;
       });

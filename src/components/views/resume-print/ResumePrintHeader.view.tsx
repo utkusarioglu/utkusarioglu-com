@@ -14,9 +14,11 @@ const ResumePrintHeaderView: FC<ResumePrintHeaderViewProps> = ({
 }) => (
   <div className="col-start-1 row-start-1 flex flex-row gap-5">
     {includePhoto ? (
+      // eslint-disable-next-line @next/next/no-img-element
       <img
         style={{ objectFit: "scale-down", height: "70px" }}
         src={require("_assets/images/utku-resume-1x1.jpg")}
+        alt="Utku Sarioglu's photo"
         className="rounded-full"
       />
     ) : null}

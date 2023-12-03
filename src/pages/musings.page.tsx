@@ -29,6 +29,11 @@ export function getStaticProps() {
   };
 }
 
+/**
+ * @dev
+ * 1- This is related to the type of  `ContentCardSectionView`, which
+ * has an `any` type that needs to be worked on
+ */
 const AboutPage: FC<MusingsPageProps> = ({
   musings: { sections, remarks },
 }) => {
@@ -66,11 +71,14 @@ const AboutPage: FC<MusingsPageProps> = ({
                       <span className={COLORS.route}> ({subtitle})</span>
                     )}
                   </H3>
-                  {remarks.map((paragraph) => (
-                    <ContentCardParagraphView key={paragraph}>
-                      {paragraph}
-                    </ContentCardParagraphView>
-                  ))}
+                  {
+                    // @ts-ignore #1
+                    remarks.map((paragraph) => (
+                      <ContentCardParagraphView key={paragraph}>
+                        {paragraph}
+                      </ContentCardParagraphView>
+                    ))
+                  }
                 </ContentCardItemLayout>
               </ContentCardLinkView>
             )}

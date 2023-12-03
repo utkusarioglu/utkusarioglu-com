@@ -7,6 +7,10 @@ interface NavItemRouteIndicatorViewProps {
   type: string;
 }
 
+/**
+ * @dev
+ * 1- types for `type` are problematic and need to be reconsidered
+ */
 const NavItemRouteIndicatorView: FC<NavItemRouteIndicatorViewProps> = ({
   mode,
   type,
@@ -26,7 +30,15 @@ const NavItemRouteIndicatorView: FC<NavItemRouteIndicatorViewProps> = ({
           width={20}
           height={20}
         >
-          <circle cx={10} cy={20} r={10} className={COLORS[`${type}Fill`]} />
+          <circle
+            cx={10}
+            cy={20}
+            r={10}
+            className={
+              // @ts-ignore #1
+              COLORS[`${type}Fill`]
+            }
+          />
         </svg>
       ) : (
         <svg
@@ -34,7 +46,15 @@ const NavItemRouteIndicatorView: FC<NavItemRouteIndicatorViewProps> = ({
           width={20}
           height={20}
         >
-          <circle cx={0} cy={7} r={7} className={COLORS[`${type}Fill`]} />
+          <circle
+            cx={0}
+            cy={7}
+            r={7}
+            className={
+              // @ts-ignore #1
+              COLORS[`${type}Fill`]
+            }
+          />
         </svg>
       )}
     </MDiv>

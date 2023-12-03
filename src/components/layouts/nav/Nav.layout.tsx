@@ -29,15 +29,20 @@ const NavResponsive: FC<{ window: Window }> = ({ window }) => {
     createVariants(isHome, isSm, isNavEnabled)
   );
 
-  useEffect(() => {
-    const reposition = () => {
-      const newVariants = createVariants(isHome, isSm, isNavEnabled);
-      setVariants(newVariants);
-    };
-    reposition();
-    window.addEventListener("resize", reposition);
-    return () => window.removeEventListener("resize", reposition);
-  }, [isHome, isSm, isNavEnabled]);
+  useEffect(
+    () => {
+      const reposition = () => {
+        const newVariants = createVariants(isHome, isSm, isNavEnabled);
+        setVariants(newVariants);
+      };
+      reposition();
+      window.addEventListener("resize", reposition);
+
+      return () => window.removeEventListener("resize", reposition);
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [isHome, isSm, isNavEnabled]
+  );
 
   return (
     <AnimatePresence initial={false}>

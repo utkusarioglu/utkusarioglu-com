@@ -6,8 +6,16 @@ interface ResumeScreenTableViewProps {
   table: Record<string, string | number>;
 }
 
+interface PairProps {
+  heading: string;
+  value: string | number;
+  className?: string;
+}
+
+type Pair = FC<PairProps>;
+
 const ResumeScreenTableView: FC<ResumeScreenTableViewProps> = ({ table }) => {
-  const Pair = ({ heading, value, className = "" }) => (
+  const Pair: Pair = ({ heading, value, className = "" }) => (
     <div className={c("flex flex-col", className)}>
       <span className={c(COLORS.secondaryText, "font-bold")}>{heading}</span>
       <span className={COLORS.paragraph}>{value}</span>

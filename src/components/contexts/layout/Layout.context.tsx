@@ -25,9 +25,13 @@ const LayoutContextProvider: FC<LayoutContextProviderProps> = ({
   }
   const [slice, setSlice] = useState(layout);
 
-  useEffect(() => {
-    setSlice((slice) => ({ ...slice, ...layout }));
-  }, [route]);
+  useEffect(
+    () => {
+      setSlice((slice) => ({ ...slice, ...layout }));
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [route]
+  );
 
   const setLayout: SetLayout = (layoutSpecs) => {
     setSlice((slice) => ({ ...slice, ...layoutSpecs }));

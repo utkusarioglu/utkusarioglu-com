@@ -1,7 +1,10 @@
+import type { FC, PropsWithChildren } from "react";
 import { COLORS } from "_config";
 import c from "classnames";
 
-const ContentCardParagraphView = ({ children }) => (
+type ContentCardParagraphView = FC<PropsWithChildren<{}>>;
+
+const ContentCardParagraphView: ContentCardParagraphView = ({ children }) => (
   <p className={c(COLORS.paragraph, "mb-2 last:mb-0")}>{children}</p>
 );
 

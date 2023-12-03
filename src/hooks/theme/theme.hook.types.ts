@@ -8,8 +8,11 @@ export type UseThemeReturn = ThemeHookState & {
   loadTheme: typeof loadTheme;
   saveTheme: typeof saveTheme;
 };
+
+export type LocalStorageTheme = Theme | null;
+
 export interface ThemeHookState {
   system: Theme;
-  local: Theme;
+  local: LocalStorageTheme;
   combined: Theme;
 }

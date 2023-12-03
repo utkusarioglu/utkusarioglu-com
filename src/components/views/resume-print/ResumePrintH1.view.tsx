@@ -1,6 +1,13 @@
+import type { FC, PropsWithChildren } from "react";
 import c from "classnames";
 
-const ResumePrintH1View = ({ children, className = "" }) => (
+type ResumePrintH1View = FC<
+  PropsWithChildren<{
+    className?: string;
+  }>
+>;
+
+const ResumePrintH1View: ResumePrintH1View = ({ children, className = "" }) => (
   <h1 className={c("font-bold text-3xl leading-9", className)}>{children}</h1>
 );
 

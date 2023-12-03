@@ -4,6 +4,8 @@ import H3 from "_primitives/headings/H3.primitive";
 export type FilterFunction = (item: any) => boolean;
 export type KeyFunction = (item: any) => string;
 
+type DefaultWrapper = FC<PropsWithChildren<{}>>;
+
 interface ContentCardListProps {
   title?: string;
   list: any[];
@@ -13,7 +15,7 @@ interface ContentCardListProps {
   keyFunction: KeyFunction;
 }
 
-const DefaultWrapper = ({ children }) => <div>{children}</div>;
+const DefaultWrapper: DefaultWrapper = ({ children }) => <div>{children}</div>;
 
 const ContentCardListView: FC<ContentCardListProps> = ({
   list,

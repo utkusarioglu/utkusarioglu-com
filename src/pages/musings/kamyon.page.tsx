@@ -17,7 +17,9 @@ const TruckerJokesPage: FC<TruckerJokesPageProps> = ({ list }) => {
   return (
     <>
       <Head>
-        {/* eslint-disable @next/next/no-page-custom-font */}
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        {/* eslint-disable-next-line @next/next/google-font-display */}
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           href="https://fonts.googleapis.com/css2?family=Caveat&display=block"
           rel="stylesheet"

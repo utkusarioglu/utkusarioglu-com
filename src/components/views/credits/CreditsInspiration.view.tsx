@@ -11,9 +11,9 @@ const CreditsInspirationView: FC<CreditsInspirationViewProps> = ({
 }) => (
   <div className="px-5 mb-10">
     <H2>{title}</H2>
-    {remarks.map((paragraph) => (
-      <P key={paragraph}>{paragraph}</P>
-    ))}
+    {!!remarks
+      ? remarks.map((paragraph) => <P key={paragraph}>{paragraph}</P>)
+      : null}
   </div>
 );
 

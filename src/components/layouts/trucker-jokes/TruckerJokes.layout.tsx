@@ -15,10 +15,14 @@ const TruckerJokesLayout: FC<TruckerJokesLayoutProps> = ({ list }) => {
   const [joke, usedPercent, chooseJoke] = useJokeChooser(list);
   const [palette, setPalette] = useState(starterPalette);
 
-  useEffect(() => {
-    setPalette(randomPalette());
-    chooseJoke();
-  }, []);
+  useEffect(
+    () => {
+      setPalette(randomPalette());
+      chooseJoke();
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  );
 
   return (
     <div

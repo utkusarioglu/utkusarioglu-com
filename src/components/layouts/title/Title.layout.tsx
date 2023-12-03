@@ -30,15 +30,19 @@ const TitleResponsive = forwardRef<HTMLDivElement, TitleResponsiveProps>(
     const { isSm } = useDeviceQuery();
     const [variants, setVariants] = useState(createVariants(isHome, isSm));
 
-    useEffect(() => {
-      const reposition = () => {
-        const newVariants = createVariants(isHome, isSm);
-        setVariants(newVariants);
-      };
-      reposition();
-      window.addEventListener("resize", reposition);
-      return () => window.removeEventListener("resize", reposition);
-    }, [isHome, isSm]);
+    useEffect(
+      () => {
+        const reposition = () => {
+          const newVariants = createVariants(isHome, isSm);
+          setVariants(newVariants);
+        };
+        reposition();
+        window.addEventListener("resize", reposition);
+        return () => window.removeEventListener("resize", reposition);
+      },
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      [isHome, isSm]
+    );
 
     return (
       <AnimatePresence initial={false}>

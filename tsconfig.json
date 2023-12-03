@@ -13,11 +13,8 @@
     "noEmit": true,
     "incremental": true,
     "esModuleInterop": true,
-
-    // these are being worked on
-    "strict": false,
-    "alwaysStrict": false,
-
+    "strict": true,
+    "alwaysStrict": true,
     "noUnusedLocals": true,
     "module": "esnext",
     "moduleResolution": "node",

@@ -2,6 +2,7 @@ import type { INavItem } from "_views/nav-item/NavItem.view.types";
 import { type PerlinPresets } from "_contexts/canvas/Canvas.context.types";
 import { type MotionVariantRecord } from "_types/vendors/framer-motion.types";
 import type { LayoutSlice } from "_contexts/layout/Layout.context.types";
+// @ts-ignore: Missing type declarations
 import * as convert from "color-convert";
 
 export const DEFAULT_LAYOUT: LayoutSlice = {
@@ -195,14 +196,20 @@ const COLOR_CLASSES = {
     "scrollbar-thumb-item-light dark:scrollbar-thumb-item-dark scrollbar-track-transparent", //
 };
 
+/**
+ * @dev
+ * 1- This method needs a type def overhaul. Right now it's patched with a
+ * ts-ignore but `COLORS` and `COLOR_CLASSES` need to agree with their types.
+ */
 export const COLORS = Object.entries(COLOR_CLASSES).reduce(
   (p, [key, value]) => {
     const hasDarkMode = value.split(" ").length > 1;
+    // @ts-ignore #1
     p[key] = hasDarkMode ? `${value} transition-colors` : value;
     return p;
   },
   {} as typeof COLOR_CLASSES
-);
+) as typeof COLOR_CLASSES;
 
 export const TRANSITIONS = {
   route: {
