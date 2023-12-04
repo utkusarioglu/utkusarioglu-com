@@ -1,5 +1,5 @@
-import { type MutableRefObject } from "react";
+import { type RefObject } from "react";
 
 export interface CanvasControlLayoutProps {
-  dragConstraintsRef: MutableRefObject<HTMLDivElement>;
+  dragConstraintsRef: RefObject<HTMLDivElement>;
 }

@@ -27,8 +27,8 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
   allowZoom = true,
   maxResponsiveWidth = MAX_EXPECTED_IMAGE_WIDTH,
 }) => {
-  const imgRef = useRef<HTMLImageElement>();
-  const containerRef = useRef<HTMLDivElement>();
+  const imgRef = useRef<HTMLImageElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const { route } = useEnhancedRouter();
   const { navigation, canvas, content, setLayout } = useLayoutContext();
   const { isSm } = useDeviceQuery();
@@ -116,7 +116,6 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
   return (
     <div className="mb-5">
       <div
-        // @ts-ignore
         ref={containerRef}
         className={c("overflow-hidden relative", className)}
         style={{
@@ -148,7 +147,6 @@ const EnhancedImage: FC<EnhancedImageProps> = ({
 
         <MImg
           layout
-          // @ts-ignore
           ref={imgRef}
           initial={INITIAL_IMG}
           animate={

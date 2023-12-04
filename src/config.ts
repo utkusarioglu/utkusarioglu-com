@@ -2,7 +2,6 @@ import type { INavItem } from "_views/nav-item/NavItem.view.types";
 import { type PerlinPresets } from "_contexts/canvas/Canvas.context.types";
 import { type MotionVariantRecord } from "_types/vendors/framer-motion.types";
 import type { LayoutSlice } from "_contexts/layout/Layout.context.types";
-// @ts-ignore: Missing type declarations
 import * as convert from "color-convert";
 
 export const DEFAULT_LAYOUT: LayoutSlice = {

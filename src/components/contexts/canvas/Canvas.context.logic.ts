@@ -110,7 +110,7 @@ export function generateRandomConfig(): PerlinConfig {
 }
 
 export const initializeDraw: InitializeDraw = ({ onFinished, config }) => {
-  if (!ref || !window) {
+  if (!ref || !ref.current || !window) {
     throw new Error("setDependencies need to be called before anything else");
   }
   if (!drawer) {

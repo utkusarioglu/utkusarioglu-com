@@ -1,6 +1,5 @@
-import { type PropsWithChildren } from "react";
+import type { RefObject, PropsWithChildren } from "react";
 import { Theme } from "_types/theme.types";
-import { MutableRefObject } from "react";
 import {
   savePerlinConfig,
   deletePerlinConfig,
@@ -57,7 +56,7 @@ type UpdateConfig = (config: PerlinConfig) => Promise<void>;
 
 export type SetDependencies = (args: SetDependenciesArgs) => void;
 
-export type CanvasRef = MutableRefObject<HTMLCanvasElement>;
+export type CanvasRef = RefObject<HTMLCanvasElement>;
 type SetDependenciesArgs = {
   window: Window;
   ref: CanvasRef;

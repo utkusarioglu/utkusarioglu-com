@@ -12,12 +12,8 @@ import {
 } from "./NavItem.logic";
 import { useDeviceQuery } from "_hooks/device/device.hook";
 
-/**
- * @dev
- * 1- Removes `undefined` from the ref
- */
 const NavItem: FC<NavItemProps> = (props) => {
-  const containerRef = useRef<HTMLDivElement>();
+  const containerRef = useRef<HTMLDivElement>(null);
   const { isSm } = useDeviceQuery();
   const { fontSize, mode, href, type, title, zIndex } = props;
   const { isActiveRoute, isCanvas } = useEnhancedRouter();
@@ -54,7 +50,6 @@ const NavItem: FC<NavItemProps> = (props) => {
 
   return (
     <div
-      // @ts-ignore #1
       ref={containerRef}
       className={c("relative", paddingAndMargins)}
       style={{ zIndex }}

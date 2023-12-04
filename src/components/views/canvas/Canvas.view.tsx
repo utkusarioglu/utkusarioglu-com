@@ -4,12 +4,8 @@ import { useDeviceQuery } from "_hooks/device/device.hook";
 import { useTheme } from "_hooks/theme/theme.hook";
 import { type CanvasViewProps } from "./Canvas.view.types";
 
-/**
- * @dev
- * 1- Removes undefined from ref definition
- */
 const CanvasView: FC<CanvasViewProps> = ({ window }) => {
-  const canvasRef = useRef<HTMLCanvasElement>();
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const { isSm } = useDeviceQuery();
   const {
     adjustConfig,
@@ -23,7 +19,6 @@ const CanvasView: FC<CanvasViewProps> = ({ window }) => {
 
   useEffect(
     () => {
-      // @ts-ignore: #1
       setDependencies({ ref: canvasRef, window });
       if (localStorageValues) {
         draw(localStorageValues);
@@ -42,7 +37,6 @@ const CanvasView: FC<CanvasViewProps> = ({ window }) => {
 
   return (
     <canvas
-      // @ts-ignore: #1
       ref={canvasRef}
       className="w-full h-full"
       width={window.innerWidth}
