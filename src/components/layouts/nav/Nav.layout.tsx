@@ -21,6 +21,12 @@ const NavLayout: FC<NavLayoutProps> = () => {
   return <NavResponsive window={window} />;
 };
 
+/**
+ * @dev
+ * 1- `print:hidden` keeps the size of the created PDFs small. Despite these
+ * elements being covered, they are still placed in the PDF by puppeteer. This
+ * statement ensures they are removed.
+ */
 const NavResponsive: FC<{ window: Window }> = ({ window }) => {
   const { navigation: isNavEnabled } = useLayoutContext();
   const { isHome } = useEnhancedRouter();
@@ -70,7 +76,7 @@ const NavResponsive: FC<{ window: Window }> = ({ window }) => {
           className={c(
             "z-20 fixed justify-center left-0 right-0 bottom-0",
             "overflow-y-hidden overflow-x-auto scrollbar-hide",
-            // TODO this shouldn't be here, but it's still required in `print`
+            // #1
             "print:hidden"
           )}
           transition={TRANSITIONS.routeFast}
@@ -92,8 +98,11 @@ const NavResponsive: FC<{ window: Window }> = ({ window }) => {
           initial="initial"
           animate="animate"
           exit="exit"
-          // TODO print: shouldn't be here, but it's still required in `print`
-          className="top-0 z-20 bottom-0 fixed justify-center flex print:hidden"
+          className={c(
+            "top-0 z-20 bottom-0 fixed justify-center flex",
+            // #1
+            "print:hidden"
+          )}
           transition={TRANSITIONS.route}
           style={{
             pointerEvents: isNavEnabled ? "all" : "none",

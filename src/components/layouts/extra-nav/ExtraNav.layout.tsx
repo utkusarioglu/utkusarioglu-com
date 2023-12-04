@@ -10,7 +10,14 @@ import { homeNavX, homeNavY } from "_utils/positioning.utils";
 import { type ExtraNavLayoutProps } from "./ExtraNav.layout.types";
 import { type MotionVariantRecord } from "_types/vendors/framer-motion.types";
 import { useLayoutContext } from "_contexts/layout/Layout.context";
+import c from "classnames";
 
+/**
+ * @dev
+ * 1- `print:hidden` keeps the size of the created PDFs small. Despite these
+ * elements being covered, they are still placed in the PDF by puppeteer. This
+ * statement ensures they are removed.
+ */
 const ExtraNavLayout: FC<ExtraNavLayoutProps> = ({ titleRef }) => {
   const { navigation } = useLayoutContext();
   const { isHome } = useEnhancedRouter();
@@ -54,8 +61,11 @@ const ExtraNavLayout: FC<ExtraNavLayoutProps> = ({ titleRef }) => {
             initial="initial"
             animate="animate"
             exit="exit"
-            // TODO print: shouldn't be here, but it's still required in `print`
-            className="fixed bottom-0 left-0 py-5 z-30 print:hidden"
+            className={c(
+              "fixed bottom-0 left-0 py-5 z-30",
+              // #1
+              "print:hidden"
+            )}
             transition={TRANSITIONS.route}
           >
             <ExtraNavView mode="aside" />
@@ -81,8 +91,11 @@ const ExtraNavLayout: FC<ExtraNavLayoutProps> = ({ titleRef }) => {
             initial="initial"
             animate="animate"
             exit="exit"
-            // TODO print: shouldn't be here, but it's still required in `print`
-            className="fixed bottom-0 left-0 py-5 z-30 print:hidden"
+            className={c(
+              "fixed bottom-0 left-0 py-5 z-30",
+              // #1
+              "print:hidden"
+            )}
             transition={TRANSITIONS.route}
           >
             <ExtraNavView mode="aside" />

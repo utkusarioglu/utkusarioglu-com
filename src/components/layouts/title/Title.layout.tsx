@@ -24,6 +24,12 @@ interface TitleResponsiveProps {
   window: Window;
 }
 
+/**
+ * @dev
+ * 1- `print:hidden` keeps the size of the created PDFs small. Despite these
+ * elements being covered, they are still placed in the PDF by puppeteer. This
+ * statement ensures they are removed.
+ */
 const TitleResponsive = forwardRef<HTMLDivElement, TitleResponsiveProps>(
   ({ window }, ref) => {
     const { isHome } = useEnhancedRouter();
@@ -52,7 +58,7 @@ const TitleResponsive = forwardRef<HTMLDivElement, TitleResponsiveProps>(
           animate="animate"
           className={c(
             "fixed z-50 top-0 px-5",
-            // TODO this shouldn't be here, but it's still required in `print`
+            // #1
             "print:hidden",
             isSm ? "pt-4" : "pt-5"
           )}
