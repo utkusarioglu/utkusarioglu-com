@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     container:
-      image: utkusarioglu/node-devcontainer:17-slim.0.0
+      # image: utkusarioglu/node-devcontainer:17-slim.0.0
+      image: utkusarioglu/react-native-android-devcontainer:36-24-ubuntu-test-27
       options: --user 0:0
     steps:
       - name: Checkout
