@@ -771,6 +771,20 @@ skills:
 relevantWorkExperience:
   title: Relevant Work Experience
   list:
+    - title: Consultant
+      companyName: Utku Sarioglu Consultancy
+      location: Ordu, Turkiye
+      start: May, 2022
+      finish: Active
+      remarks:
+        - | 
+          Consulted various businesses on the architecture, planning of new features, modernization and migration of their databases, kubernetes clusters, aws and on premise assets
+        - |
+          Created and maintained custom frontend, backend applications for boutique trade and finance firms
+        - | 
+          Designed trading bots for retail investors and boutique finance firms
+        - | 
+          Created custom code for musicians using supercollider for use on live shows and recording sessions
     - title: Principal Software Engineer
       companyName: HSO, LLC - Oz Medical DBA
       location: Pleasanton, CA. USA

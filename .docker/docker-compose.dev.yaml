@@ -1,8 +1,7 @@
-version: "3.9"
-
 services:
   webclient:
-    image: utkusarioglu/node-devcontainer:20-slim.0.7
+    # image: utkusarioglu/node-devcontainer:20-slim.0.7
+    image: utkusarioglu/react-native-android-devcontainer:36-24-ubuntu-test-27
     volumes:
       - type: bind
         source: ..

@@ -47,7 +47,7 @@ jobs:
           CERTS_FOLDER: "${{ github.workspace }}/.certs"
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: utkusarioglu-com-cypress-artifacts
           path: .cypress/artifacts

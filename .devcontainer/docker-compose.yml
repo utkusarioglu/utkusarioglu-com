@@ -1,6 +1,7 @@
-version: "3.9"
 services:
   webclient:
+    stdin_open: true
+    init: true
     environment:
       GH_TOKEN: ${GH_TOKEN}
     ports:
@@ -9,7 +10,6 @@ services:
     volumes:
       - vscode-exts:/root/.vscode-server/extensions
       - vscode-exts-insiders:/root/.vscode-server-insiders/extensions
-    command: /bin/sh -c "while sleep 1000; do :; done"
 
 volumes:
   vscode-exts:
