@@ -3,8 +3,7 @@ const yaml = require("yaml");
 const fs = require("node:fs");
 
 const artifactsPath = "/home/pptruser/artifacts";
-// const baseUrl = "http://www.utkusarioglu.com:3000/resume";
-const baseUrl = "http://localhost:3000/resume";
+const baseUrl = "http://www.utkusarioglu.com:3000/resume";
 
 const resumeFile = fs.readFileSync("./assets/resume-multi.yml", "utf-8");
 const resume = yaml.parse(resumeFile);

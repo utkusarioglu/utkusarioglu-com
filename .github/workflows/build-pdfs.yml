@@ -19,7 +19,7 @@ jobs:
     environment: production
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v7
 
       - name: Download web build artifact
         uses: actions/download-artifact@v8
@@ -28,7 +28,7 @@ jobs:
           path: build
 
       - name: Cache resume artifacts
-        uses: actions/cache@v3
+        uses: actions/cache@v6
         id: resume-artifacts-cache
         with:
           path: .puppeteer/artifacts
