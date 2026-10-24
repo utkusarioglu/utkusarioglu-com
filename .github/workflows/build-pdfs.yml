@@ -70,8 +70,10 @@ jobs:
         env:
           CERTS_FOLDER: "${{ github.workspace }}/.certs"
         run: |
-          sudo scripts/start-local-server.sh & \
-            sudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER
+          sudo scripts/start-local-server.sh &
+          curl http://www.utkusarioglu:3000.com/resume | head
+          curl http://localhost:3000/resume | head
+          sudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER
 
       - name: Upload artifact
         uses: actions/upload-artifact@v7
