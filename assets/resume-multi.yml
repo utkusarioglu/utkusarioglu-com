@@ -379,7 +379,7 @@ contact:
       print: true
       screen: false
     - title: Address
-      value: Ordu, Turkey
+      value: Ordu, Turkiye
       print: true
       screen: false
 
@@ -818,12 +818,12 @@ relevantWorkExperience:
           partnerships in the US.
         - |
           This project ended prematurely due to an unforeseen economic crisis
-          in Turkey, rendering the price points incompatible with the target
+          in Turkiye, rendering the price points incompatible with the target
           markets.
           
     - title: Principal Software Engineer
       companyName: Altas Oil Industry
-      location: Ordu, Turkey
+      location: Ordu, Turkiye
       start: Jun, 2016
       finish: Aug, 2018
       remarks:
@@ -833,18 +833,18 @@ relevantWorkExperience:
         - |
           Apps included an online sales app, which was one of the first apps in
           the country that delivered local products nationwide; this concept
-          became very successful in Turkey.
+          became very successful in Turkiye.
         - |
           Managed said apps through multiple marketing and advertising cycles. 
 
     - title: Project Manager
       companyName: Altas Oil Industry
-      location: Ordu, Turkey
+      location: Ordu, Turkiye
       start: Jan, 2017
       finish: Aug, 2018
       remarks:
         - |
-          Managed the construction, assembly and boot up of Turkey's first, and 
+          Managed the construction, assembly and boot up of Turkiye's first, and 
           world's sixth non-chemical vegetable oil refinery: a 6 million 
           dollar investment involving civic, chemical, IT, electrical, mechanical, and
           automation work with 10+ contractors and 100+ 
@@ -852,7 +852,7 @@ relevantWorkExperience:
 
     - title: Foreign Trade Expert
       companyName: Altas Oil Industry
-      location: Ordu, Turkey
+      location: Ordu, Turkiye
       start: Jun, 2016
       finish: Jan, 2017
       remarks:
@@ -865,7 +865,7 @@ relevantWorkExperience:
 
     - title: Software Development Consultant
       companyName: Index Group
-      location: Istanbul, Turkey
+      location: Istanbul, Turkiye
       start: Sep, 2011
       finish: Sep, 2014
       remarks:
@@ -917,11 +917,11 @@ education:
   list:
     - title: Economics BA
       institution: Yeditepe Uni.
-      location: Istanbul, Turkey
+      location: Istanbul, Turkiye
       start: 2004
       finish: 2009
     - title: Advanced STEM
       institution: Ozel Ordu High
-      location: Ordu, Turkey
+      location: Ordu, Turkiye
       start: 2000
       finish: 2003

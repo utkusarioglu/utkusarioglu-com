@@ -3,9 +3,10 @@ const yaml = require("yaml");
 const fs = require("node:fs");
 
 const artifactsPath = "/home/pptruser/artifacts";
-const baseUrl = "http://www.utkusarioglu.com:3000/resume";
+// const baseUrl = "http://www.utkusarioglu.com:3000/resume";
+const baseUrl = "http://localhost:3000/resume";
 
-const resumeFile = fs.readFileSync("./assets/resume.yml", "utf-8");
+const resumeFile = fs.readFileSync("./assets/resume-multi.yml", "utf-8");
 const resume = yaml.parse(resumeFile);
 
 const paperFormatVariants = resume.variants.paperFormats;
@@ -29,11 +30,15 @@ console.log(
   )
 );
 
-function createMatrix(specialtyIds, photoVariants, paperFormatVariants) {
+function createMatrix(specialtyIds, photoVariants, paperFormatVariants)
+{
   matrix = [];
-  paperFormatVariants.forEach((paperFormat) => {
-    specialtyIds.forEach((specialtyId) => {
-      photoVariants.forEach((includePhoto) => {
+  paperFormatVariants.forEach((paperFormat) =>
+  {
+    specialtyIds.forEach((specialtyId) =>
+    {
+      photoVariants.forEach((includePhoto) =>
+      {
         matrix.push({ specialtyId, includePhoto, paperFormat });
       });
     });
@@ -41,7 +46,8 @@ function createMatrix(specialtyIds, photoVariants, paperFormatVariants) {
   return matrix;
 }
 
-async function createSingle(browser, specialtyId, includePhoto, paperFormat) {
+async function createSingle(browser, specialtyId, includePhoto, paperFormat)
+{
   const url = [
     baseUrl,
     [
@@ -108,7 +114,8 @@ async function createSingle(browser, specialtyId, includePhoto, paperFormat) {
   await page.close();
 }
 
-(async () => {
+(async () =>
+{
   console.log("Starting pdf files creation…");
 
   const browser = await puppeteer.launch({
@@ -124,7 +131,8 @@ async function createSingle(browser, specialtyId, includePhoto, paperFormat) {
     paperFormatVariants
   );
 
-  await matrix.reduce((acc, { specialtyId, includePhoto, paperFormat }) => {
+  await matrix.reduce((acc, { specialtyId, includePhoto, paperFormat }) =>
+  {
     acc = acc.then(() =>
       createSingle(browser, specialtyId, includePhoto, paperFormat)
     );

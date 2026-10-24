@@ -35,7 +35,7 @@ run_docker() {
     --add-host=www.utkusarioglu.com:127.0.0.1 \
     --add-host=www.utkusarioglu.com:host-gateway \
     -v "$host_puppeteer_path/src:$work_dir/src" \
-    -v "$host_assets_path/resume.yml:$work_dir/assets/resume.yml" \
+    -v "$host_assets_path/resume-multi.yml:$work_dir/assets/resume-multi.yml" \
     -v "$host_artifacts_path:$work_dir/artifacts" \
     -v $CERTS_FOLDER:$work_dir/.certs  \
     --rm \
@@ -57,7 +57,7 @@ run_gs() {
     exit 1
   fi
   
-  RESUME_FILE_RELPATH='assets/resume.yml'
+  RESUME_FILE_RELPATH='assets/resume-multi.yml'
 
   PHOTO_VARIANTS="$(
     yq '.variants.includePhoto[] | .shortCode' $RESUME_FILE_RELPATH | tr '\n' ' '

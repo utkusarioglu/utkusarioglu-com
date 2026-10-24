@@ -14,7 +14,7 @@ interface ResumePageProps {
 
 export function getStaticProps() {
   const resume = parse(
-    readFileSync("assets/resume.yml", { encoding: "UTF-8" })
+    readFileSync("assets/resume-multi.yml", { encoding: "UTF-8" })
   ) as Resume;
 
   return {
