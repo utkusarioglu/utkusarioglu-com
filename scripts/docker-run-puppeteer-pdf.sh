@@ -34,6 +34,7 @@ run_docker() {
     --cap-add=SYS_ADMIN \
     --add-host=www.utkusarioglu.com:127.0.0.1 \
     --add-host=www.utkusarioglu.com:host-gateway \
+    --network=host \
     -v "$host_puppeteer_path/src:$work_dir/src" \
     -v "$host_assets_path/resume-multi.yml:$work_dir/assets/resume-multi.yml" \
     -v "$host_artifacts_path:$work_dir/artifacts" \
