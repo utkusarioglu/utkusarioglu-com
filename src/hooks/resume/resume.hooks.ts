@@ -34,6 +34,7 @@ type UseResumeCustomizationReturn = ResumeSpecialtyIdStateProps &
   ResumeIncludePhotoStateProps &
   ResumePaperFormatShortCodeProps & {
     resumeCode: ResumeCode;
+    forcePrint: boolean;
   };
 
 function getInitialSpecialtyId(specialties: Specialties) {
@@ -41,10 +42,17 @@ function getInitialSpecialtyId(specialties: Specialties) {
   return !hasAl ? specialties[0].id : "al";
 }
 
+export function useForcePrint(): {forcePrint: boolean} {
+  const router = useRouter();
+  const forcePrint = router.query["force-print"] === "true";
+  return {forcePrint}
+}
+
 export function useResumeCustomization(
   resume: Resume
 ): UseResumeCustomizationReturn {
   const router = useRouter();
+  const {forcePrint} = useForcePrint();
   const querySpecialtyId = router.query["specialty-id"] as SpecialtyId;
   const queryIncludePhoto = router.query["include-photo"] === "true";
   const queryPaperFormat = router.query[
@@ -79,5 +87,6 @@ export function useResumeCustomization(
     includePhoto,
     setIncludePhoto,
     resumeCode,
+    forcePrint
   };
 }

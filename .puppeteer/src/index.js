@@ -81,9 +81,7 @@ async function createSingle(browser, specialtyId, includePhoto, paperFormat)
   const page = await browser.newPage();
   page.setViewport({ width: 1920, height: 1080 });
 
-  await page.goto(url, {
-    waitUntil: "networkidle2",
-  });
+  await page.goto(url, { waitUntil: "networkidle2", });
 
   const resumePath = [
     artifactsPath,

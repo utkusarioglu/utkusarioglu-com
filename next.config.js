@@ -18,7 +18,8 @@ const env = {
   ...commonConfig,
 };
 
-const getBuildConfig = async (...args) => {
+const getBuildConfig = async (...args) =>
+{
   const nextConfig = {
     reactStrictMode: true,
     pageExtensions: ["page.tsx"],
@@ -141,7 +142,8 @@ const getBuildConfig = async (...args) => {
   )(...args);
 };
 
-module.exports = (phase, ...rest) => {
+module.exports = (phase, ...rest) =>
+{
   const shouldAddBuildConfig = [
     PHASE_DEVELOPMENT_SERVER,
     PHASE_PRODUCTION_BUILD,

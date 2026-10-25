@@ -25,7 +25,21 @@ const ResumeLayout: FC<ResumeLayoutProps> = ({ resume }) => {
     includePhoto,
     setIncludePhoto,
     activePaperFormatShortCode,
+    forcePrint
   } = useResumeCustomization(resume);
+
+  if (forcePrint) {
+    return <ResumePrintLayout
+      {...{
+        resume,
+        activeSpecialtyId,
+        includePhoto,
+        resumeCode,
+        activePaperFormatShortCode,
+        forcePrint
+      }}
+    />
+  }
 
   return (
     <>
@@ -45,6 +59,7 @@ const ResumeLayout: FC<ResumeLayoutProps> = ({ resume }) => {
           includePhoto,
           resumeCode,
           activePaperFormatShortCode,
+          forcePrint
         }}
       />
     </>

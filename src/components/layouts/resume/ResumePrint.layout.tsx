@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import { type SpecialtyId, type Resume } from "_types/resume.types";
+import { type SpecialtyId, type Resume, PaperStyles, Specialties, PaperFormatShortCode } from "_types/resume.types";
 import { COLORS } from "_config";
 import c from "classnames";
 import type {
@@ -20,23 +20,15 @@ export type ResumeLayoutProps = ResumePaperFormatShortCodeProps & {
   resume: Resume;
   includePhoto: IncludePhoto;
   resumeCode: string[];
+  forcePrint: boolean;
 };
 
-const ResumePrintLayout: FC<ResumeLayoutProps> = ({
-  activeSpecialtyId,
-  includePhoto,
-  resumeCode,
-  resume: {
-    variants: { specialties, paperStyles },
-    name,
-    contact,
-    skills,
-    relevantWorkExperience,
-    relevantCertifications,
-    education,
-  },
-  activePaperFormatShortCode,
-}) => {
+function getResumeDetails(
+  specialties: Specialties,
+  activeSpecialtyId: SpecialtyId,
+  paperStyles: PaperStyles[],
+  activePaperFormatShortCode: PaperFormatShortCode,
+) {
   const activeSpecialty = getActiveSpecialty(specialties, activeSpecialtyId);
   const activePaperStyles = getActivePaperStyles(
     paperStyles,
@@ -48,13 +40,45 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
   const sectionsRowGap = activePaperStyles.styles.layout.sectionsGap;
   const headerGap = activePaperStyles.styles.layout.headerGap;
 
+  return {
+    layoutTemplateColumns,
+    layoutGridColumnGap,
+    headerGap,
+    sectionsRowGap,
+    activeSpecialty,
+    activePaperStyles
+  };
+}
+
+const ResumePrintLayout: FC<ResumeLayoutProps> = ({
+  activeSpecialtyId,
+  includePhoto,
+  resumeCode,
+  forcePrint,
+  resume: {
+    variants: { specialties, paperStyles },
+    name,
+    contact,
+    skills,
+    relevantWorkExperience,
+    relevantCertifications,
+    education,
+  },
+  activePaperFormatShortCode,
+}) => {
+  const { layoutTemplateColumns, layoutGridColumnGap, headerGap, sectionsRowGap, activeSpecialty, activePaperStyles } = getResumeDetails(specialties, activeSpecialtyId, paperStyles, activePaperFormatShortCode);
+
   return (
-    <div className="hidden print:block relative">
+    <div className={
+      c(
+        forcePrint ? "block" : "hidden print:block", 
+        "relative"
+      )}>
       <ResumePrintResumeCodeView resumeCode={resumeCode} />
       <div
         className={c(
           COLORS.print,
-          COLORS.printBg,
+          COLORS.printBg, "bg-white",
           "fixed top-0 left-0 right-0 bottom-0",
           "z-40 text-[12px] font-[Arial]",
           "flex justify-between"
@@ -96,6 +120,7 @@ const ResumePrintLayout: FC<ResumeLayoutProps> = ({
             className={c(
               "col-start-3 row-start-2 flex flex-col",
               "flex justify-between"
+              // "flex justify-start"
             )}
             style={{
               rowGap: sectionsRowGap,

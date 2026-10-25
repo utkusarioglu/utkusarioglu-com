@@ -70,10 +70,10 @@ variants:
         y: 40
       styles:
         layout:
-          templateColumns: 50vw 11vw auto
+          templateColumns: 51vw 11vw auto
           columnGap: 20px 
           sectionsGap: 8px
-          headerGap: 20px
+          headerGap: 12px
         h2:
           marginBottom: 4px
         relevantWorkExperience:
@@ -337,9 +337,7 @@ introduction:
   print: false
   remarks:
     - |
-      Full stack Web2 / Web3 developer experienced in economics and international
-      trade. 10+ years of experience in programming and 5+ years of experience in
-      management of trade and engineering projects.
+      Full stack Web2 / Web3 developer experienced in economics and international trade. 10+ years of experience in programming and 5+ years of experience in management of trade and engineering projects.
     - |
       An efficient leader through conscientious approaches and presentable
       personality. Excellent at creating intuitive solutions and multi-level steps for
@@ -778,13 +776,13 @@ relevantWorkExperience:
       finish: Active
       remarks:
         - | 
-          Consulted various businesses on the architecture, planning of new features, modernization and migration of their databases, kubernetes clusters, aws and on premise assets
+          Consulted various businesses on the architecture, planning of features, modernization and migration of their databases, kubernetes clusters, aws and on premise assets.
         - |
-          Created and maintained custom frontend, backend applications for boutique trade and finance firms
+          Created, maintained custom frontend, backend dashboards and management tooling for boutique trade and finance firms.
         - | 
-          Designed trading bots for retail investors and boutique finance firms
+          Designed, tested trading bots for retail investors and boutique finance firms.
         - | 
-          Created custom code for musicians using supercollider for use on live shows and recording sessions
+          Created custom code for musicians using supercollider for use on live shows and recording sessions.
     - title: Principal Software Engineer
       companyName: HSO, LLC - Oz Medical DBA
       location: Pleasanton, CA. USA
@@ -877,6 +875,7 @@ relevantWorkExperience:
 
 relevantCertifications:
   title: Relevant Certifications
+  print: false
   list:
     - course: AWS Certified Solutions Architect Associate
       institution: Udemy

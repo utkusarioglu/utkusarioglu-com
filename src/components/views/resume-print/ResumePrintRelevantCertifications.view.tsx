@@ -17,7 +17,7 @@ const ResumePrintRelevantCertificationsView: FC<
     (item) => printFilter(item) && specialtyFilter(item, activeSpecialty.id)
   );
 
-  if (!filteredList.length) {
+  if (!filteredList.length || relevantCertifications.print === false) {
     return null;
   }
 

@@ -54,8 +54,12 @@ run_docker() {
 
 run_gs() {
   if [ -z "$(which gs)" ]; then
-    echo "Error: GhostScript not installed on the host"
-    exit 1
+    echo "Warn: GhostScript not installed on the host. Installing..."
+    apt-get install ghostscript -y
+    if [ -z "$(which gs)" ]; then
+      echo "Error: GhostScript install didn't work. Exiting."
+      exit 1
+    fi
   fi
   
   RESUME_FILE_RELPATH='assets/resume-multi.yml'

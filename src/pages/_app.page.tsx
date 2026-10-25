@@ -13,10 +13,12 @@ import StandardHead from "_heads/Standard.head";
 import { progressBarInit } from "_utils/progress-bar.util";
 import type { AppProps } from "next/app";
 import { ROUTE_PROPS } from "_config";
+import { useForcePrint } from "_hooks/resume/resume.hooks";
 
 const App: FC<AppProps> = ({ Component, pageProps, router }) => {
   const window = useWindow();
   const { combined, setActive } = useTheme();
+  const { forcePrint } = useForcePrint();
 
   useEffect(() => {
     progressBarInit();
@@ -45,7 +47,7 @@ const App: FC<AppProps> = ({ Component, pageProps, router }) => {
       <StandardHead />
       <LayoutContextProvider route={router.route}>
         <CanvasContextProvider theme={combined}>
-          <ControlsLayout route={router.route} />
+          {forcePrint ? null : <ControlsLayout route={router.route} /> }
           <ErrorBoundary FallbackComponent={ErrorFallbackView}>
             <AnimatePresence initial={false}>
               <Component {...pageProps} key={router.route} window={window} />
