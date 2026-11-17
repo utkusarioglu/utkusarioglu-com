@@ -186,7 +186,7 @@ variants:
         y: 45
       styles:
         layout:
-          templateColumns: 51vw 11vw auto
+          templateColumns: 51vw 18vw auto
           columnGap: 20px 
           sectionsGap: 8px
           headerGap: 8px
@@ -212,7 +212,7 @@ variants:
       paperFormatShortCode: 4
       margins:
         x: 55
-        y: 60
+        y: 55
       styles:
         layout:
           templateColumns: 50vw 13vw auto
@@ -307,7 +307,7 @@ variants:
           sectionsGap: 12px
           headerGap: 20px
         h2:
-          marginBottom: 4px
+          marginBottom: 2px
         relevantWorkExperience:
           ol:
             gap: 4px
@@ -322,7 +322,7 @@ variants:
               height: 1px
         education:
           ol:
-            gap: 4px
+            gap: 2px
 
   includePhoto:
     - state: true
