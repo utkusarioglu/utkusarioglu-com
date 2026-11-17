@@ -1,1 +1,1 @@
-gh run view --watch && gh run download 44117966037 -D .ignore
+gh run watch && gh run download --name utkusarioglu-com-pdf-artifacts -D .ignore/pdf
