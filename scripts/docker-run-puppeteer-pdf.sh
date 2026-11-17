@@ -82,6 +82,7 @@ run_gs() {
   echo "Raw folder content: "
   echo "Raf folder: ${host_raw_artifacts_path}"
   ls -al $host_raw_artifacts_path
+  
 
   for photo_included in $PHOTO_VARIANTS; do
     if [ $photo_included = 'p' ]; then
@@ -97,6 +98,19 @@ run_gs() {
         filename_prefix="utku-sarioglu-resume"
         output_file="$target_folder/$filename_prefix-$resume_code.pdf"
         mkdir -p "$target_folder"
+        
+        echo "Current user:"
+        id
+
+        echo "Output directory:"
+        ls -lad $target_folder
+
+        echo "Output directory writable?"
+        test -w $target_folder && echo YES || echo NO
+
+        echo "Input file readable?"
+        test -r $host_raw_artifacts_path/$source && echo YES || echo NO
+
         gs \
           -sDEVICE=pdfwrite \
           -dCompatibilityLevel=1.4 \

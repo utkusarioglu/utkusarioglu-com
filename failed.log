@@ -1,588 +1,615 @@
-build-pdfs	Run Puppeteer pdf creation	﻿2026-11-17T15:01:28.7671448Z ##[group]Run sudo scripts/start-local-server.sh &
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7671895Z [36;1msudo scripts/start-local-server.sh &[0m
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7672316Z [36;1mcurl http://www.utkusarioglu.com:3000/resume | head[0m
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7672715Z [36;1mcurl http://localhost:3000/resume | head[0m
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7673358Z [36;1msudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER[0m
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7721917Z shell: /usr/bin/bash -e {0}
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7722181Z env:
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7722512Z   CERTS_FOLDER: /home/runner/work/utkusarioglu-com/utkusarioglu-com/.certs
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7723223Z ##[endgroup]
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7876238Z Starting local-ssl-proxy
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7876924Z Starting http-server
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7906584Z   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7907686Z                                  Dload  Upload  Total   Spent   Left   Speed
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7908387Z 
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.0474847Z yarn run v1.22.22
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.0477446Z yarn run v1.22.22
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.0637904Z   0      0   0      0   0      0      0      0                              0warning package.json: No license field
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.0639332Z warning package.json: No license field
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.1093699Z $ /home/runner/work/utkusarioglu-com/utkusarioglu-com/node_modules/.bin/http-server -p 3000 ./build
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.1095712Z $ /home/runner/work/utkusarioglu-com/utkusarioglu-com/node_modules/.bin/local-ssl-proxy --source 443 --target 3000 --key ./.certs/server/tls.key --cert ./.certs/server/chain.crt
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2184432Z [32mStarted proxy: https://localhost:443 → http://localhost:3000[39m
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2197388Z Starting up http-server, serving ./build
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2200411Z 
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2200582Z http-server version: 14.1.1
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2201368Z 
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2201533Z http-server settings: 
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2201789Z CORS: disabled
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2202003Z Cache: 3600 seconds
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2202245Z Connection Timeout: 120 seconds
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2202637Z Directory Listings: visible
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2203198Z AutoIndex: visible
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2203603Z Serve GZIP Files: false
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2204017Z Serve Brotli Files: false
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2204387Z Default File Extension: none
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2204564Z 
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2204645Z Available on:
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2204883Z   http://127.0.0.1:3000
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2205126Z   http://10.1.0.178:3000
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2205370Z Hit CTRL-C to stop the server
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2205533Z 
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:30.4511871Z 
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:31.4524024Z   0      0   0      0   0      0      0      0           00:01              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:32.4535417Z   0      0   0      0   0      0      0      0           00:02              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:33.4543680Z   0      0   0      0   0      0      0      0           00:03              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:34.4554931Z   0      0   0      0   0      0      0      0           00:04              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:35.4566007Z   0      0   0      0   0      0      0      0           00:05              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:36.4577883Z   0      0   0      0   0      0      0      0           00:06              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:37.4588368Z   0      0   0      0   0      0      0      0           00:07              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:38.4599281Z   0      0   0      0   0      0      0      0           00:08              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:39.4610944Z   0      0   0      0   0      0      0      0           00:09              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:40.4622539Z   0      0   0      0   0      0      0      0           00:10              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:41.4634384Z   0      0   0      0   0      0      0      0           00:11              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:42.4645683Z   0      0   0      0   0      0      0      0           00:12              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:43.4657579Z   0      0   0      0   0      0      0      0           00:13              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:44.4669145Z   0      0   0      0   0      0      0      0           00:14              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:45.4680559Z   0      0   0      0   0      0      0      0           00:15              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:46.4692467Z   0      0   0      0   0      0      0      0           00:16              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:47.4703978Z   0      0   0      0   0      0      0      0           00:17              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:48.4715127Z   0      0   0      0   0      0      0      0           00:18              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:49.4726812Z   0      0   0      0   0      0      0      0           00:19              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:50.4738911Z   0      0   0      0   0      0      0      0           00:20              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:51.4746151Z   0      0   0      0   0      0      0      0           00:21              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:52.4758168Z   0      0   0      0   0      0      0      0           00:22              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:53.4769207Z   0      0   0      0   0      0      0      0           00:23              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:54.4781389Z   0      0   0      0   0      0      0      0           00:24              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:55.4792464Z   0      0   0      0   0      0      0      0           00:25              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:56.4804502Z   0      0   0      0   0      0      0      0           00:26              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:57.4829166Z   0      0   0      0   0      0      0      0           00:27              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:58.4817585Z   0      0   0      0   0      0      0      0           00:28              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:59.4829157Z   0      0   0      0   0      0      0      0           00:29              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:00.4835731Z   0      0   0      0   0      0      0      0           00:30              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:01.4847131Z   0      0   0      0   0      0      0      0           00:31              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:02.4858382Z   0      0   0      0   0      0      0      0           00:32              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:03.4870247Z   0      0   0      0   0      0      0      0           00:33              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:04.4881715Z   0      0   0      0   0      0      0      0           00:34              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:05.4893626Z   0      0   0      0   0      0      0      0           00:35              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:06.4905003Z   0      0   0      0   0      0      0      0           00:36              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:07.4916166Z   0      0   0      0   0      0      0      0           00:37              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:08.4927360Z   0      0   0      0   0      0      0      0           00:38              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:09.4939070Z   0      0   0      0   0      0      0      0           00:39              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:10.4950885Z   0      0   0      0   0      0      0      0           00:40              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:11.4962170Z   0      0   0      0   0      0      0      0           00:41              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:12.4973694Z   0      0   0      0   0      0      0      0           00:42              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:13.4985278Z   0      0   0      0   0      0      0      0           00:43              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:14.4996762Z   0      0   0      0   0      0      0      0           00:44              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:15.5008371Z   0      0   0      0   0      0      0      0           00:45              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:16.5019521Z   0      0   0      0   0      0      0      0           00:46              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:17.5031864Z   0      0   0      0   0      0      0      0           00:47              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:18.5043424Z   0      0   0      0   0      0      0      0           00:48              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:19.5055173Z   0      0   0      0   0      0      0      0           00:49              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:20.5067568Z   0      0   0      0   0      0      0      0           00:50              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:21.5078659Z   0      0   0      0   0      0      0      0           00:51              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:22.5090060Z   0      0   0      0   0      0      0      0           00:52              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:23.5101591Z   0      0   0      0   0      0      0      0           00:53              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:24.5113461Z   0      0   0      0   0      0      0      0           00:54              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:25.5124525Z   0      0   0      0   0      0      0      0           00:55              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:26.5136320Z   0      0   0      0   0      0      0      0           00:56              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:27.5148021Z   0      0   0      0   0      0      0      0           00:57              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:28.5159535Z   0      0   0      0   0      0      0      0           00:58              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:29.5171087Z   0      0   0      0   0      0      0      0           00:59              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:30.5183121Z   0      0   0      0   0      0      0      0           01:00              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:31.5194108Z   0      0   0      0   0      0      0      0           01:01              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:32.5205621Z   0      0   0      0   0      0      0      0           01:02              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:33.5217528Z   0      0   0      0   0      0      0      0           01:03              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:34.5228569Z   0      0   0      0   0      0      0      0           01:04              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:35.5240407Z   0      0   0      0   0      0      0      0           01:05              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:36.5251585Z   0      0   0      0   0      0      0      0           01:06              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:37.5263425Z   0      0   0      0   0      0      0      0           01:07              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:38.5274861Z   0      0   0      0   0      0      0      0           01:08              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:39.5286250Z   0      0   0      0   0      0      0      0           01:09              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:40.5298197Z   0      0   0      0   0      0      0      0           01:10              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:41.5309692Z   0      0   0      0   0      0      0      0           01:11              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:42.5320891Z   0      0   0      0   0      0      0      0           01:12              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:43.5325435Z   0      0   0      0   0      0      0      0           01:13              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:44.5336982Z   0      0   0      0   0      0      0      0           01:14              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:45.5348337Z   0      0   0      0   0      0      0      0           01:15              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:46.5359783Z   0      0   0      0   0      0      0      0           01:16              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:47.5371920Z   0      0   0      0   0      0      0      0           01:17              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:48.5383598Z   0      0   0      0   0      0      0      0           01:18              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:49.5394455Z   0      0   0      0   0      0      0      0           01:19              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:50.5406228Z   0      0   0      0   0      0      0      0           01:20              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:51.5418589Z   0      0   0      0   0      0      0      0           01:21              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:52.5429598Z   0      0   0      0   0      0      0      0           01:22              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:53.5441254Z   0      0   0      0   0      0      0      0           01:23              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:54.5452525Z   0      0   0      0   0      0      0      0           01:24              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:55.5464114Z   0      0   0      0   0      0      0      0           01:25              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:56.5474996Z   0      0   0      0   0      0      0      0           01:26              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:57.5487074Z   0      0   0      0   0      0      0      0           01:27              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:58.5498608Z   0      0   0      0   0      0      0      0           01:28              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:59.5510299Z   0      0   0      0   0      0      0      0           01:29              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:00.5521721Z   0      0   0      0   0      0      0      0           01:30              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:01.5533565Z   0      0   0      0   0      0      0      0           01:31              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:02.5544688Z   0      0   0      0   0      0      0      0           01:32              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:03.5556351Z   0      0   0      0   0      0      0      0           01:33              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:04.5567761Z   0      0   0      0   0      0      0      0           01:34              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:05.5579229Z   0      0   0      0   0      0      0      0           01:35              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:06.5590902Z   0      0   0      0   0      0      0      0           01:36              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:07.5602155Z   0      0   0      0   0      0      0      0           01:37              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:08.5614199Z   0      0   0      0   0      0      0      0           01:38              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:09.5625773Z   0      0   0      0   0      0      0      0           01:39              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:10.5637202Z   0      0   0      0   0      0      0      0           01:40              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:11.5648856Z   0      0   0      0   0      0      0      0           01:41              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:12.5660375Z   0      0   0      0   0      0      0      0           01:42              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:13.5672408Z   0      0   0      0   0      0      0      0           01:43              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:14.5683868Z   0      0   0      0   0      0      0      0           01:44              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:15.5694477Z   0      0   0      0   0      0      0      0           01:45              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:16.5704412Z   0      0   0      0   0      0      0      0           01:46              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:17.5716469Z   0      0   0      0   0      0      0      0           01:47              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:18.5727849Z   0      0   0      0   0      0      0      0           01:48              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:19.5739554Z   0      0   0      0   0      0      0      0           01:49              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:20.5750909Z   0      0   0      0   0      0      0      0           01:50              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:21.5762425Z   0      0   0      0   0      0      0      0           01:51              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:22.5774154Z   0      0   0      0   0      0      0      0           01:52              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:23.5785764Z   0      0   0      0   0      0      0      0           01:53              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:24.5797334Z   0      0   0      0   0      0      0      0           01:54              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:25.5808826Z   0      0   0      0   0      0      0      0           01:55              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:26.5820639Z   0      0   0      0   0      0      0      0           01:56              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:27.5832008Z   0      0   0      0   0      0      0      0           01:57              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:28.5843537Z   0      0   0      0   0      0      0      0           01:58              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:29.5849678Z   0      0   0      0   0      0      0      0           01:59              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:30.5861036Z   0      0   0      0   0      0      0      0           02:00              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:31.5872389Z   0      0   0      0   0      0      0      0           02:01              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:32.5883745Z   0      0   0      0   0      0      0      0           02:02              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:33.5895630Z   0      0   0      0   0      0      0      0           02:03              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:34.5907155Z   0      0   0      0   0      0      0      0           02:04              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:35.5918531Z   0      0   0      0   0      0      0      0           02:05              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:36.5930302Z   0      0   0      0   0      0      0      0           02:06              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:37.5941712Z   0      0   0      0   0      0      0      0           02:07              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:38.5953646Z   0      0   0      0   0      0      0      0           02:08              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:39.5964853Z   0      0   0      0   0      0      0      0           02:09              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:40.5976211Z   0      0   0      0   0      0      0      0           02:10              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:41.5987933Z   0      0   0      0   0      0      0      0           02:11              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:42.5999391Z   0      0   0      0   0      0      0      0           02:12              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.3955850Z   0      0   0      0   0      0      0      0           02:13              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.3956900Z curl: (28) Failed to connect to www.utkusarioglu.com port 3000 after 134606 ms: Could not connect to server
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4030079Z   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4030783Z                                  Dload  Upload  Total   Spent   Left   Speed
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4031083Z 
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4069994Z [2026-11-17T15:03:43.406Z]  "GET /resume" "curl/8.18.0"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4115036Z   0      0   0      0   0      0      0      0                              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4115979Z 100  22629 100  22629   0      0  2.51M      0                              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4116909Z 100  22629 100  22629   0      0  2.49M      0                              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4117860Z 100  22629 100  22629   0      0  2.47M      0                              0
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4207373Z /home/runner/work/utkusarioglu-com/utkusarioglu-com/scripts/docker-run-puppeteer-pdf.sh: line 3: .env: No such file or directory
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4436120Z Unable to find image 'ghcr.io/puppeteer/puppeteer:latest' locally
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.9188684Z latest: Pulling from puppeteer/puppeteer
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4276448Z a2eac331341c: Pulling fs layer
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4277266Z a4aa977c0d0e: Pulling fs layer
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4277916Z c28c2f6c340d: Pulling fs layer
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4280117Z d9c899d8f000: Pulling fs layer
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4280587Z 9b2b3f6483a1: Pulling fs layer
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4281060Z 49dd0ae78313: Pulling fs layer
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4281501Z d3881772a308: Pulling fs layer
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4281794Z 661ef7e1e7b1: Pulling fs layer
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4282166Z d99c3612c451: Pulling fs layer
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4282579Z 6b10c2e8e756: Pulling fs layer
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4283139Z 412d30040dcb: Pulling fs layer
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4283573Z bf4ef2108243: Pulling fs layer
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4283856Z 4f4fb700ef54: Pulling fs layer
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4284166Z 68304cd75790: Pulling fs layer
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4470302Z 4f4fb700ef54: Already exists
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.7525306Z a2eac331341c: Download complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.7546553Z d3881772a308: Download complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.7559387Z 6b10c2e8e756: Download complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.7587619Z 68304cd75790: Download complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.7588686Z 5aae86a2be05: Download complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.8490703Z 412d30040dcb: Download complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.8524043Z d9c899d8f000: Download complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.9501246Z 49dd0ae78313: Download complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:45.0496788Z a4aa977c0d0e: Download complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:45.2484196Z 661ef7e1e7b1: Download complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:45.8465178Z 9b2b3f6483a1: Download complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:45.9469505Z d99c3612c451: Download complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:46.3469191Z c28c2f6c340d: Download complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:46.6575736Z a4aa977c0d0e: Pull complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:47.0584147Z 49dd0ae78313: Pull complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:48.5590236Z 661ef7e1e7b1: Pull complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:51.8469095Z bf4ef2108243: Download complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:52.4606675Z c28c2f6c340d: Pull complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:52.5553529Z 68304cd75790: Pull complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:54.0516477Z 6b10c2e8e756: Pull complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:54.0553561Z 9b2b3f6483a1: Pull complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:54.1476988Z 4f4fb700ef54: Pull complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:54.1521069Z d3881772a308: Pull complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:54.1534456Z 412d30040dcb: Pull complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:54.1547649Z d9c899d8f000: Pull complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:57.8534284Z bf4ef2108243: Pull complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:59.4482017Z d99c3612c451: Pull complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:59.6253174Z a2eac331341c: Pull complete
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:59.6254336Z Digest: sha256:8ed70a9d45734640080f5ca0c23316a659cab8c2e334ef7bccf6fc2e04862b8e
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:59.6255962Z Status: Downloaded newer image for ghcr.io/puppeteer/puppeteer:latest
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.8843628Z <!DOCTYPE html><html lang="en" class="h-full"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel="preload" href="/_next/static/css/74d8e99d52492782.css" as="style"/><link rel="stylesheet" href="/_next/static/css/74d8e99d52492782.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-5f099b5e3666017b.js" defer=""></script><script src="/_next/static/chunks/framework-5f4595e5518b5600.js" defer=""></script><script src="/_next/static/chunks/main-53abe94d2c7d8421.js" defer=""></script><script src="/_next/static/chunks/pages/_app-39eaf63c4ca270ca.js" defer=""></script><script src="/_next/static/chunks/33-e95244d9ca59f1f0.js" defer=""></script><script src="/_next/static/chunks/pages/resume-647e0c4612cf4a85.js" defer=""></script><script src="/_next/static/CsICnbAWmP9u5gJn1x33k/_buildManifest.js" defer=""></script><script src="/_next/static/CsICnbAWmP9u5gJn1x33k/_ssgManifest.js" defer=""></script><script src="/_next/static/CsICnbAWmP9u5gJn1x33k/_middlewareManifest.js" defer=""></script><style data-href="https://fonts.googleapis.com/css2?family=Galada&display=block">@font-face{font-family:'Galada';font-style:normal;font-weight:400;font-display:block;src:url(https://fonts.gstatic.com/s/galada/v21/H4cmBXyGmcjXlUX-8Q.woff) format('woff')}@font-face{font-family:'Galada';font-style:normal;font-weight:400;font-display:block;src:url(https://fonts.gstatic.com/s/galada/v21/H4cmBXyGmcjXlUXO5yY_wrmwgp63.woff2) format('woff2');unicode-range:U+0951-0952,U+0964-0965,U+0980-09FE,U+1CD0,U+1CD2,U+1CD5-1CD6,U+1CD8,U+1CE1,U+1CEA,U+1CED,U+1CF2,U+1CF5-1CF7,U+200C-200D,U+20B9,U+25CC,U+A8F1,U+11DF0-11DF1}@font-face{font-family:'Galada';font-style:normal;font-weight:400;font-display:block;src:url(https://fonts.gstatic.com/s/galada/v21/H4cmBXyGmcjXlUXO9SY_wrmwgg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style><style data-href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=block">@font-face{font-family:'Quicksand';font-style:normal;font-weight:300;font-display:block;src:url(https://fonts.gstatic.com/s/quicksand/v37/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo18I.woff) format('woff')}@font-face{font-family:'Quicksand';font-style:normal;font-weight:300;font-display:block;src:url(https://fonts.gstatic.com/s/quicksand/v37/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo58m-xDwxUD2GF9Zc.woff) format('woff');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Quicksand';font-style:normal;font-weight:300;font-display:block;src:url(https://fonts.gstatic.com/s/quicksand/v37/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo58i-xDwxUD2GF9Zc.woff) format('woff');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Quicksand';font-style:normal;font-weight:300;font-display:block;src:url(https://fonts.gstatic.com/s/quicksand/v37/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo58a-xDwxUD2GFw.woff) format('woff');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style><style data-href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=block">@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pYCM.woff) format('woff')}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCFPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCMPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCHPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCGPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCIPrcVIT9d0c8.woff) format('woff');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style></head><body class="bg-base-light dark:bg-base-dark transition-colors select-none h-full overflow-hidden"><div id="__next" data-reactroot=""></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"resume":{"name":"Utku Sarioglu","page":"Resume","variants":{"specialties":[{"id":"al","title":"All","remarks":"Includes frontend, backend and Web3 skills"},{"id":"be","title":"Backend","remarks":"Kubernetes and AWS based backend development"},{"id":"fe","title":"Frontend","remarks":"React \u0026 React Native based frontend development"},{"id":"fs","title":"Fullstack","remarks":"Fullstack web2 development"},{"id":"w3","title":"Web3","remarks":"Ethereum based fullstack web3 application development"}],"paperFormats":[{"title":"A4","searchQueryValue":"a4","remarks":"Standard format for Europe and the rest of the world","shortCode":4},{"title":"Letter","searchQueryValue":"letter","remarks":"North American standard","shortCode":"l"}],"paperStyles":[{"id":"al","paperFormatShortCode":4,"margins":{"x":45,"y":60},"styles":{"layout":{"templateColumns":"50vw 12vw auto","columnGap":"20px","sectionsGap":"12px","headerGap":"20px"},"h2":{"marginBottom":"4px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"0px"},"li":{"divider":{"height":"0px"}}},"education":{"ol":{"gap":"0px"}}}},{"id":"al","paperFormatShortCode":"l","margins":{"x":40,"y":40},"styles":{"layout":{"templateColumns":"51vw 11vw auto","columnGap":"20px","sectionsGap":"8px","headerGap":"12px"},"h2":{"marginBottom":"3px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"0px"},"li":{"divider":{"height":"0px"}}},"education":{"ol":{"gap":"0px"}}}},{"id":"be","paperFormatShortCode":4,"margins":{"x":55,"y":65},"styles":{"layout":{"templateColumns":"50vw 18vw auto","columnGap":"30px","sectionsGap":"12px","headerGap":"20px"},"h2":{"marginBottom":"6px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"8px"},"li":{"divider":{"height":"2px"}}},"education":{"ol":{"gap":"8px"}}}},{"id":"be","paperFormatShortCode":"l","margins":{"x":45,"y":42},"styles":{"layout":{"templateColumns":"50vw 20vw auto","columnGap":"30px","sectionsGap":"12px","headerGap":"20px"},"h2":{"marginBottom":"6px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"6px"},"li":{"divider":{"height":"2px"}}},"education":{"ol":{"gap":"6px"}}}},{"id":"fe","paperFormatShortCode":4,"margins":{"x":55,"y":65},"styles":{"layout":{"templateColumns":"50vw 18vw auto","columnGap":"30px","sectionsGap":"8px","headerGap":"20px"},"h2":{"marginBottom":"6px"},"relevantWorkExperience":{"ol":{"gap":"6px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"8px"},"li":{"divider":{"height":"2px"}}},"education":{"ol":{"gap":"8px"}}}},{"id":"fe","paperFormatShortCode":"l","margins":{"x":45,"y":45},"styles":{"layout":{"templateColumns":"50vw 19vw auto","columnGap":"30px","sectionsGap":"8px","headerGap":"20px"},"h2":{"marginBottom":"6px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"8px"},"li":{"divider":{"height":"2px"}}},"education":{"ol":{"gap":"8px"}}}},{"id":"fs","paperFormatShortCode":4,"margins":{"x":55,"y":60},"styles":{"layout":{"templateColumns":"50vw 13vw auto","columnGap":"30px","sectionsGap":"8px","headerGap":"20px"},"h2":{"marginBottom":"4px"},"relevantWorkExperience":{"ol":{"gap":"6px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"4px"},"li":{"divider":{"height":"0px"}}},"education":{"ol":{"gap":"2px"}}}},{"id":"fs","paperFormatShortCode":"l","margins":{"x":45,"y":42},"styles":{"layout":{"templateColumns":"50vw 13vw auto","columnGap":"30px","sectionsGap":"8px","headerGap":"20px"},"h2":{"marginBottom":"4px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"4px"},"li":{"divider":{"height":"0px"}}},"education":{"ol":{"gap":"0px"}}}},{"id":"w3","paperFormatShortCode":4,"margins":{"x":55,"y":65},"styles":{"layout":{"templateColumns":"50vw 15vw auto","columnGap":"25px","sectionsGap":"12px","headerGap":"20px"},"h2":{"marginBottom":"4px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"4px"},"li":{"divider":{"height":"1px"}}},"education":{"ol":{"gap":"4px"}}}},{"id":"w3","paperFormatShortCode":"l","margins":{"x":45,"y":42},"styles":{"layout":{"templateColumns":"50vw 14vw auto","columnGap":"25px","sectionsGap":"12px","headerGap":"20px"},"h2":{"marginBottom":"4px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"4px"},"li":{"divider":{"height":"1px"}}},"education":{"ol":{"gap":"4px"}}}}],"includePhoto":[{"state":true,"searchQueryValue":"true","shortCode":"p"},{"state":false,"searchQueryValue":"false","shortCode":"n"}]},"introduction":{"title":"Introduction","print":false,"remarks":["Full stack Web2 / Web3 developer experienced in economics and international trade. 10+ years of experience in programming and 5+ years of experience in management of trade and engineering projects.\n","An efficient leader through conscientious approaches and presentable\npersonality. Excellent at creating intuitive solutions and multi-level steps for\nhandling complexity. Experienced in international contexts and handling tricky\npersonnel and clients. Proven to be capable of creating wholistic solutions,\nmeeting complex requirements and handling stressful tasks.\n"]},"contact":{"title":"Contact","print":false,"list":[{"title":"Linkedin","value":"https://www.linkedin.com/in/utku-sarioglu/","handle":"utku-sarioglu","remarks":"Preferred for professional inquiries","print":false},{"title":"Instagram","value":"https://www.instagram.com/utkusarioglu","handle":"utkusarioglu","remarks":"Preferred for personal inquiries","print":false},{"title":"Github","value":"https://github.com/utkusarioglu","handle":"utkusarioglu","print":false,"remarks":"Professional and personal inquiries"},{"title":"Email","value":"utkusarioglu@hotmail.com","print":true,"screen":false},{"title":"Website","value":"www.utkusarioglu.com","print":true,"screen":false},{"title":"Phone","value":"+90 (532) 335 3334","print":true,"screen":false},{"title":"Address","value":"Ordu, Turkiye","print":true,"screen":false}]},"skills":{"title":"Skills","remarks":"* implies familiarity","list":[{"title":"Natural Languages","list":[{"title":"English","remarks":"Fluent"},{"title":"Turkish","remarks":"Native"}]},{"title":"Programming Languages","list":[{"title":"Typescript"},{"title":"Javascript"},{"title":"Solidity","specialties":["w3"]},{"title":"Yul","specialties":["w3"]},{"title":"Python"},{"title":"PHP","specialties":["fs","be"]},{"title":"C","confident":false},{"title":"C++","confident":false},{"title":"Go","confident":false,"specialties":["fs","be"]},{"title":"Supercollider","specialties":["al"]}]},{"title":"Scripting Languages \u0026 DSL","list":[{"title":"SQL","specialties":["fs","be"]},{"title":"Bash","specialties":["fs","be","fe","w3"]},{"title":"PowerShell","confident":false},{"title":"PlantUML"},{"title":"HCL","specialties":["fs","be"]},{"title":"D2","specialties":["fs","be","fe","w3"]}]},{"title":"Frontend","list":[{"title":"React","specialties":["fs","fe","w3"]},{"title":"React Native","confident":false,"specialties":["fs","fe","w3"]},{"title":"NextJS","specialties":["fs","fe","w3"]},{"title":"Tauri","confident":false,"specialties":["fs","fe","w3"]},{"title":"Apollo","specialties":["fs","fe","w3"]},{"title":"Redux","specialties":["fs","fe","w3"]},{"title":"WordPress","specialties":["fs","fe","w3"]},{"title":"TailwindCSS","specialties":["fs","fe","w3"]},{"title":"SDL","confident":false,"specialties":["fs","fe","w3"]},{"title":"ENTT","confident":false,"specialties":["fs","fe","w3"]}]},{"title":"DevOps and CI\u0026CD","list":[{"title":"Docker"},{"title":"Kubernetes","specialties":["fs","be"]},{"title":"kOps","specialties":["fs","be"]},{"title":"Skaffold","specialties":["fs","be"]},{"title":"Terraform","specialties":["fs","be"]},{"title":"Vagrant","specialties":["fs","be"]},{"title":"Hyper-V","specialties":["fs","be"]},{"title":"k3s","specialties":["fs","be"]},{"title":"GitHub Actions"},{"title":"Jenkins","confident":false,"specialties":["fs","be"]},{"title":"LocalStack","specialties":["fs","be"]}]},{"title":"Backend","list":[{"title":"NodeJS"},{"title":"MySQL","specialties":["fs","be"]},{"title":"PostgreSQL","specialties":["fs","be"]},{"title":"MongoDB","confident":false,"specialties":["fs","be"]},{"title":"Redis","specialties":["fs","be"]},{"title":"Kafka","specialties":["fs","be"]},{"title":"Debezium","specialties":["fs","be"]},{"title":"ZooKeeper","confident":false,"specialties":["fs","be"]},{"title":"Strimzi","specialties":["fs","be"]},{"title":"Grafana","confident":false,"specialties":["fs","be"]},{"title":"Loki","confident":false,"specialties":["fs","be"]},{"title":"Jaeger","confident":false,"specialties":["fs","be"]},{"title":"Prometheus","confident":false,"specialties":["fs","be"]},{"title":"OpenSSL"},{"title":"Vault","confident":false,"specialties":["fs","be"]},{"title":"gRPC","specialties":["fs","be","fe"]},{"title":"OpenTelemetry"},{"title":"Puppeteer"}]},{"title":"Testing and Analysis","list":[{"title":"Cypress"},{"title":"Jest"},{"title":"Mocha"},{"title":"Waffle","specialties":["w3"]},{"title":"Echidna","confident":false,"specialties":["w3"]},{"title":"Mythril","specialties":["w3"]},{"title":"Slither","specialties":["w3"]},{"title":"Manticore","specialties":["w3"]},{"title":"Terratest","confident":false,"specialties":["fs","be"]}]},{"title":"Project Handling","list":[{"title":"Git"},{"title":"Helm","specialties":["fs","be"]},{"title":"Conan","specialties":["fs","fe","be"]},{"title":"OpenAPI"},{"title":"Lerna"},{"title":"Emscripten"},{"title":"AsyncAPI"},{"title":"Metarepo"}]},{"title":"Web3","list":[{"title":"Truffle","specialties":["w3"]},{"title":"Drizzle","specialties":["w3"]},{"title":"Ganache","specialties":["w3"]},{"title":"Web3","specialties":["w3"]},{"title":"Ethers","specialties":["w3"]},{"title":"Matic","specialties":["w3"]},{"title":"Hardhat","specialties":["w3"]},{"title":"Waffle","specialties":["w3"]},{"title":"Geth","confident":false,"specialties":["w3"]},{"title":"The Graph","specialties":["w3"]},{"title":"EVM","specialties":["w3"]}]},{"title":"Data and Math","list":[{"title":"Pandas","specialties":["fs","w3"]},{"title":"NumPy","specialties":["fs","w3"]},{"title":"SciPy","specialties":["fs","w3"]},{"title":"SymPy","specialties":["fs","w3"]},{"title":"Matplotlib","specialties":["fs","w3"]},{"title":"Music21","specialties":["al"]},{"title":"Scamp","specialties":["al"]}]},{"title":"Development Software","list":[{"title":"VS Code"},{"title":"Visual Studio"},{"title":"Vim"},{"title":"Figma","specialties":["fs","fe","w3"]},{"title":"Jupyter Notebook","specialties":["fs","fe","w3"]},{"title":"Postman"},{"title":"Enterprise Architect"},{"title":"Adobe XD","specialties":["fs","fe","w3"]}]},{"title":"Notable Other Software","list":[{"title":"Photoshop","specialties":["fs","fe","w3"]},{"title":"Illustrator","confident":false,"specialties":["fs","fe","w3"]},{"title":"Lightroom","specialties":["fs","fe","w3"]},{"title":"Word"},{"title":"Excel"},{"title":"Outlook"},{"title":"PowerPoint"},{"title":"Visio"},{"title":"Cubase"},{"title":"CaptureOne"},{"title":"MuseScore"}]}]},"relevantWorkExperience":{"title":"Relevant Work Experience","list":[{"title":"Consultant","companyName":"Utku Sarioglu Consultancy","location":"Ordu, Turkiye","start":"May, 2022","finish":"Active","remarks":["Consulted various businesses on the architecture, planning of features, modernization and migration of their databases, kubernetes clusters, aws and on premise assets.\n","Created, maintained custom frontend, backend dashboards and management tooling for boutique trade and finance firms.\n","Designed, tested trading bots for retail investors and boutique finance firms.\n","Created custom code for musicians using supercollider for use on live shows and recording sessions.\n"]},{"title":"Principal Software Engineer","companyName":"HSO, LLC - Oz Medical DBA","location":"Pleasanton, CA. USA","start":"Oct, 2019","finish":"Mar, 2022","remarks":["Built a fullstack, scalable online sales management system aiding the\nproduct listings, sales, marketing, shipments and competitor tracking\non Amazon and other channels.\n","The project utilized IaC and ran on AWS EKS. Most services were built\nwith Python, Typescript, and PHP. PostgreSQL and MongoDB handled most\npersistence.\n","This project integrated multiple fragmented workflows in the company,\nwhich lead to much more efficient HR capitalization and lower operational\ncosts.\n"]},{"title":"General Manager","companyName":"Altas USA, LLC","location":"Stockton, CA. USA","start":"Aug, 2018","finish":"Oct, 2018","remarks":["Planned and established the Californian branch of Altas Oil\nIndustries. This involved finding suppliers California, Oregon and\nWashington state; shipping, installation and boot up of the heavy machinery\nused for production of raw vegetable oil; and establishment of sales\npartnerships in the US.\n","This project ended prematurely due to an unforeseen economic crisis\nin Turkiye, rendering the price points incompatible with the target\nmarkets.\n"]},{"title":"Principal Software Engineer","companyName":"Altas Oil Industry","location":"Ordu, Turkiye","start":"Jun, 2016","finish":"Aug, 2018","remarks":["Built multiple web apps for the company using PHP, React, WordPress,\nand IdeaSoft. \n","Apps included an online sales app, which was one of the first apps in\nthe country that delivered local products nationwide; this concept\nbecame very successful in Turkiye.\n","Managed said apps through multiple marketing and advertising cycles. \n"]},{"title":"Project Manager","companyName":"Altas Oil Industry","location":"Ordu, Turkiye","start":"Jan, 2017","finish":"Aug, 2018","remarks":["Managed the construction, assembly and boot up of Turkiye's first, and \nworld's sixth non-chemical vegetable oil refinery: a 6 million \ndollar investment involving civic, chemical, IT, electrical, mechanical, and\nautomation work with 10+ contractors and 100+ \npersonnel.\n"]},{"title":"Foreign Trade Expert","companyName":"Altas Oil Industry","location":"Ordu, Turkiye","start":"Jun, 2016","finish":"Jan, 2017","remarks":["Managed food grade and heavy machinery trade with 10+ countries at \n6000+ tones monthly volume, with many contracts being valued at \nsix-figures in USD.\n","As a side project, took company's Instagram followers from 50 to ~20k.\n"]},{"title":"Software Development Consultant","companyName":"Index Group","location":"Istanbul, Turkiye","start":"Sep, 2011","finish":"Sep, 2014","remarks":["Wrote productivity modules using C++, VBA, AutoIt, which reduced\ndaily workload on certain tasks by 60%. Later, consulted on these\nfeatures being implemented on the in-house software; While primarily\nworking as the current accounts' manager.\n"]}]},"relevantCertifications":{"title":"Relevant Certifications","print":false,"list":[{"course":"AWS Certified Solutions Architect Associate","institution":"Udemy"},{"course":"Advanced Kubernetes Usage","institution":"Udemy"},{"course":"Apache Kafka","institution":"Udemy","print":false,"certificateId":"UC-0d49da70-b845-4cc2-b2b2-2cadb6ca1990","certificateUrl":"https://www.udemy.com/certificate/UC-0d49da70-b845-4cc2-b2b2-2cadb6ca1990/"},{"course":"Apache Kafka Security","institution":"Udemy"},{"course":"Ethereum Blockchain Development Bootcamp","institution":"Udemy","certificateId":"UC-35f47a50-8dc7-48ef-b889-e17eb600e895","certificateUrl":"https://www.udemy.com/certificate/UC-35f47a50-8dc7-48ef-b889-e17eb600e895/"},{"course":"Professional IT Automation with Python","institution":"Coursera","instructor":"Google","certificateId":"8S6F67S4FE5B","certificateUrl":"https://coursera.org/share/26f71a19335cf1ce898f93a8d25d0378"},{"course":"Nand to Tetris I \u0026 II","institution":"Udemy"},{"course":"PostgreSQL Bootcamp","institution":"Udemy"},{"course":"Fundamentals of Digital Marketing","institution":"Google","instructor":"Google Digital Garage","print":false},{"course":"Copywriting","institution":"Copy Club Advertising Training Agency","print":false}]},"education":{"title":"Education","list":[{"title":"Economics BA","institution":"Yeditepe Uni.","location":"Istanbul, Turkiye","start":2004,"finish":2009},{"title":"Advanced STEM","institution":"Ozel Ordu High","location":"Ordu, Turkiye","start":2000,"finish":2003}]}}},"__N_SSG":true},"page":"/resume","query":{},"buildId":"CsICnbAWmP9u5gJn1x33k","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.8920866Z > puppeteer@25.18.0 postinstall
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.8921268Z > node install.mjs
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.8921402Z 
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9589393Z **INFO** Skipping Firefox download as instructed.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9611902Z chrome (157.0.8103.78) downloaded to /home/pptruser/.cache/puppeteer/chrome/linux-157.0.8103.78
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9613395Z chrome-headless-shell (157.0.8103.78) downloaded to /home/pptruser/.cache/puppeteer/chrome-headless-shell/linux-157.0.8103.78
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9747090Z 
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9747428Z added 28 packages, and audited 29 packages in 2s
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9748051Z 
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9748940Z 9 packages are looking for funding
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9749613Z   run `npm fund` for details
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9760953Z 
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9761340Z found 0 vulnerabilities
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5884952Z 
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5885847Z added 1 package, removed 28 packages, and audited 29 packages in 539ms
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5886423Z 
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5886634Z 10 packages are looking for funding
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5886985Z   run `npm fund` for details
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5898471Z 
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5898972Z found 0 vulnerabilities
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5909802Z npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5910927Z npm warn install-scripts   puppeteer@25.18.0 (postinstall: node install.mjs)
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5911741Z npm warn install-scripts
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5913272Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8292248Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8293020Z   "message": "Puppeteer is creating pdfs against following variants",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8293741Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8294139Z     "includePhotoVariants": [
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8294568Z       {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8294889Z         "state": true,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8295288Z         "searchQueryValue": "true",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8295731Z         "shortCode": "p"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8296099Z       },
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8296396Z       {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8296715Z         "state": false,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8297102Z         "searchQueryValue": "false",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8297543Z         "shortCode": "n"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8297872Z       }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8298043Z     ],
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8298291Z     "paperFormatVariants": [
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8298535Z       {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8298713Z         "title": "A4",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8298956Z         "searchQueryValue": "a4",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8299315Z         "remarks": "Standard format for Europe and the rest of the world",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8299696Z         "shortCode": 4
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8299906Z       },
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8300080Z       {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8300266Z         "title": "Letter",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8300525Z         "searchQueryValue": "letter",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8300811Z         "remarks": "North American standard",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8301090Z         "shortCode": "l"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8301297Z       }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8301474Z     ],
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8301667Z     "specialtyIdVariants": [
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8301897Z       "al",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8302074Z       "be",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8302280Z       "fe",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8302451Z       "fs",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8302620Z       "w3"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8303498Z     ]
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8303684Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8303989Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8304889Z Starting pdf files creation…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2293994Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2294628Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2295236Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2296063Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=al&include-photo=true&paper-format=a4",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2296702Z     "specialtyId": "al",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2296980Z     "includePhoto": true,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2297227Z     "paperFormat": 4
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2297483Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2297654Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2901516Z [2026-11-17T15:04:06.289Z]  "GET /resume?specialty-id=al&include-photo=true&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3160255Z [2026-11-17T15:04:06.315Z]  "GET /_next/static/chunks/webpack-5f099b5e3666017b.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3165306Z [2026-11-17T15:04:06.316Z]  "GET /_next/static/css/74d8e99d52492782.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3329474Z [2026-11-17T15:04:06.332Z]  "GET /_next/static/chunks/framework-5f4595e5518b5600.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3332038Z [2026-11-17T15:04:06.332Z]  "GET /_next/static/chunks/main-53abe94d2c7d8421.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3394713Z [2026-11-17T15:04:06.338Z]  "GET /_next/static/chunks/pages/_app-39eaf63c4ca270ca.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3397199Z [2026-11-17T15:04:06.339Z]  "GET /_next/static/chunks/33-e95244d9ca59f1f0.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3400183Z [2026-11-17T15:04:06.339Z]  "GET /_next/static/chunks/pages/resume-647e0c4612cf4a85.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3458958Z [2026-11-17T15:04:06.345Z]  "GET /_next/static/CsICnbAWmP9u5gJn1x33k/_buildManifest.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3593433Z [2026-11-17T15:04:06.358Z]  "GET /_next/static/CsICnbAWmP9u5gJn1x33k/_ssgManifest.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3599582Z [2026-11-17T15:04:06.359Z]  "GET /_next/static/CsICnbAWmP9u5gJn1x33k/_middlewareManifest.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.4907361Z [2026-11-17T15:04:06.490Z]  "GET /_next/static/chunks/288.81890c8f374c0bf3.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.4911470Z [2026-11-17T15:04:06.490Z]  "GET /_next/static/chunks/804.0632affcc84bdcbd.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.4936882Z [2026-11-17T15:04:06.493Z]  "GET /_next/static/chunks/247.cbec0696ca9a0ee5.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.5162489Z [2026-11-17T15:04:06.515Z]  "GET /_next/static/chunks/418.d1a1196d1a6ae347.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.5374703Z [2026-11-17T15:04:06.537Z]  "GET /_next/static/images/waves-and-bird-620-492d2ec999cc038f8dd58e99c03a3143.jpg" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.5885480Z [2026-11-17T15:04:06.587Z]  "GET /_next/static/images/utku-resume-1x1-602-4f026336d1fcd9c5a461e76d82c034a1.jpg" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6070256Z [2026-11-17T15:04:06.605Z]  "GET /_next/static/chunks/51.03e776eec2320f34.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6073199Z [2026-11-17T15:04:06.607Z]  "GET /_next/static/chunks/359-68b4faa140f71076.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6075702Z [2026-11-17T15:04:06.607Z]  "GET /_next/static/chunks/pages/canvas-74109fb3e0ef7cd5.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6078315Z [2026-11-17T15:04:06.607Z]  "GET /_next/static/chunks/pages/index-1e3dd158cbc8408b.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6080742Z [2026-11-17T15:04:06.607Z]  "GET /_next/data/CsICnbAWmP9u5gJn1x33k/about.json" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6104461Z [2026-11-17T15:04:06.607Z]  "GET /_next/static/chunks/pages/about-3b4c7226734c3705.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6161472Z [2026-11-17T15:04:06.615Z]  "GET /_next/data/CsICnbAWmP9u5gJn1x33k/resume.json" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6165845Z [2026-11-17T15:04:06.616Z]  "GET /_next/data/CsICnbAWmP9u5gJn1x33k/musings.json" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6169035Z [2026-11-17T15:04:06.616Z]  "GET /_next/static/chunks/pages/musings-752b29ad4eb27a67.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6596487Z [2026-11-17T15:04:06.659Z]  "GET /_next/static/manifest.40c17d797a.json" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6742309Z [2026-11-17T15:04:06.673Z]  "GET /_next/static/icons/favicon.fa5662651a.ico" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3885348Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3898157Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3900003Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3901238Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=al&include-photo=false&paper-format=a4",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3902617Z     "specialtyId": "al",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3903672Z     "includePhoto": false,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3904373Z     "paperFormat": 4
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3904981Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3905429Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.4544146Z [2026-11-17T15:04:07.453Z]  "GET /resume?specialty-id=al&include-photo=false&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4086498Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4088094Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4089010Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4090134Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=be&include-photo=true&paper-format=a4",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4091301Z     "specialtyId": "be",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4098280Z     "includePhoto": true,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4098889Z     "paperFormat": 4
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4099724Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4100206Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4879081Z [2026-11-17T15:04:08.487Z]  "GET /resume?specialty-id=be&include-photo=true&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3853935Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3866504Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3867454Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3868576Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=be&include-photo=false&paper-format=a4",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3869811Z     "specialtyId": "be",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3870355Z     "includePhoto": false,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3870899Z     "paperFormat": 4
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3871607Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3872062Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.4524841Z [2026-11-17T15:04:09.449Z]  "GET /resume?specialty-id=be&include-photo=false&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3388233Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3389522Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3390504Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3391593Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fe&include-photo=true&paper-format=a4",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3392699Z     "specialtyId": "fe",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3393465Z     "includePhoto": true,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3394051Z     "paperFormat": 4
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3394586Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3395042Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.4139474Z [2026-11-17T15:04:10.413Z]  "GET /resume?specialty-id=fe&include-photo=true&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3356564Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3357038Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3357474Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3358316Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fe&include-photo=false&paper-format=a4",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3359234Z     "specialtyId": "fe",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3359645Z     "includePhoto": false,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3360080Z     "paperFormat": 4
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3360466Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3360758Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3901029Z [2026-11-17T15:04:11.389Z]  "GET /resume?specialty-id=fe&include-photo=false&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2798965Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2800552Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2809660Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2810713Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fs&include-photo=true&paper-format=a4",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2811790Z     "specialtyId": "fs",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2812371Z     "includePhoto": true,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2813158Z     "paperFormat": 4
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2813676Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2814131Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.3551332Z [2026-11-17T15:04:12.354Z]  "GET /resume?specialty-id=fs&include-photo=true&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3019096Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3021021Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3021944Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3023746Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fs&include-photo=false&paper-format=a4",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3037557Z     "specialtyId": "fs",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3039647Z     "includePhoto": false,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3040620Z     "paperFormat": 4
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3041843Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3044511Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3665369Z [2026-11-17T15:04:13.364Z]  "GET /resume?specialty-id=fs&include-photo=false&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2864898Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2866501Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2867663Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2868737Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=w3&include-photo=true&paper-format=a4",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2870376Z     "specialtyId": "w3",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2895646Z     "includePhoto": true,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2898707Z     "paperFormat": 4
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2899442Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2900384Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.3438151Z [2026-11-17T15:04:14.343Z]  "GET /resume?specialty-id=w3&include-photo=true&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2864551Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2865474Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2866163Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2867079Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=w3&include-photo=false&paper-format=a4",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2867979Z     "specialtyId": "w3",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2868412Z     "includePhoto": false,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2868835Z     "paperFormat": 4
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2869197Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2869496Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.3600303Z [2026-11-17T15:04:15.359Z]  "GET /resume?specialty-id=w3&include-photo=false&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3303594Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3325775Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3340146Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3355460Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=al&include-photo=true&paper-format=letter",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3369616Z     "specialtyId": "al",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3370044Z     "includePhoto": true,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3370454Z     "paperFormat": "l"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3370811Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3371112Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.4065255Z [2026-11-17T15:04:16.400Z]  "GET /resume?specialty-id=al&include-photo=true&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5645649Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5646740Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5650621Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5651628Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=al&include-photo=false&paper-format=letter",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5653234Z     "specialtyId": "al",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5653792Z     "includePhoto": false,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5654340Z     "paperFormat": "l"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5666083Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5666767Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.6675204Z [2026-11-17T15:04:17.665Z]  "GET /resume?specialty-id=al&include-photo=false&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6644453Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6644937Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6645376Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6646138Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=be&include-photo=true&paper-format=letter",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6647073Z     "specialtyId": "be",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6647491Z     "includePhoto": true,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6647898Z     "paperFormat": "l"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6648294Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6648587Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.7541710Z [2026-11-17T15:04:18.752Z]  "GET /resume?specialty-id=be&include-photo=true&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.6856090Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.6913678Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.6994064Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.6999483Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=be&include-photo=false&paper-format=letter",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.7013621Z     "specialtyId": "be",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.7014286Z     "includePhoto": false,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.7014892Z     "paperFormat": "l"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.7015435Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.7015900Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.7582382Z [2026-11-17T15:04:19.757Z]  "GET /resume?specialty-id=be&include-photo=false&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8123584Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8124394Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8125103Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8126107Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fe&include-photo=true&paper-format=letter",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8127177Z     "specialtyId": "fe",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8127850Z     "includePhoto": true,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8128424Z     "paperFormat": "l"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8129030Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8129490Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.9045396Z [2026-11-17T15:04:20.903Z]  "GET /resume?specialty-id=fe&include-photo=true&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9286001Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9286624Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9287137Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9288020Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fe&include-photo=false&paper-format=letter",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9293534Z     "specialtyId": "fe",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9294138Z     "includePhoto": false,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9294571Z     "paperFormat": "l"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9294971Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9295266Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:22.0185760Z [2026-11-17T15:04:22.018Z]  "GET /resume?specialty-id=fe&include-photo=false&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0104101Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0109541Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0110074Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0110892Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fs&include-photo=true&paper-format=letter",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0111805Z     "specialtyId": "fs",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0112210Z     "includePhoto": true,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0853928Z     "paperFormat": "l"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0854416Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0854719Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0856059Z [2026-11-17T15:04:23.082Z]  "GET /resume?specialty-id=fs&include-photo=true&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1375612Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1377165Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1378336Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1379746Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fs&include-photo=false&paper-format=letter",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1381420Z     "specialtyId": "fs",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1382326Z     "includePhoto": false,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1383281Z     "paperFormat": "l"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1383902Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1384318Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.2211233Z [2026-11-17T15:04:24.220Z]  "GET /resume?specialty-id=fs&include-photo=false&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2229127Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2230971Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2231787Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2232923Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=w3&include-photo=true&paper-format=letter",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2234164Z     "specialtyId": "w3",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2234725Z     "includePhoto": true,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2235465Z     "paperFormat": "l"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2236164Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2236644Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.3070990Z [2026-11-17T15:04:25.306Z]  "GET /resume?specialty-id=w3&include-photo=true&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3119704Z {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3123281Z   "status": "Creating pdf",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3123713Z   "specs": {
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3124516Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=w3&include-photo=false&paper-format=letter",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3125416Z     "specialtyId": "w3",
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3125812Z     "includePhoto": false,
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3126206Z     "paperFormat": "l"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3127259Z   }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3127550Z }
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.4190843Z [2026-11-17T15:04:26.418Z]  "GET /resume?specialty-id=w3&include-photo=false&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:27.5989505Z Pdf creation complete.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.4468125Z Ghostscript will process pdf files agains following specs:
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.4469049Z   Photo variants: 'p n '
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.4470060Z   Specialty id variants: 'al be fe fs w3 '
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.4470766Z   Paper format short code variants: '4 l '
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.4471528Z Optimizing resume: 'alp4'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6012638Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-alp4.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6014432Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6191861Z Optimizing resume: 'alpl'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6480847Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-alpl.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6482309Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6495532Z Optimizing resume: 'bep4'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6781121Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-bep4.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6782646Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6813731Z Optimizing resume: 'bepl'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7108871Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-bepl.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7109969Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7126846Z Optimizing resume: 'fep4'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7409379Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fep4.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7411167Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7424296Z Optimizing resume: 'fepl'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7706330Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fepl.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7707760Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7721415Z Optimizing resume: 'fsp4'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8002417Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fsp4.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8004089Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8016756Z Optimizing resume: 'fspl'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8297270Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fspl.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8298240Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8312290Z Optimizing resume: 'w3p4'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8591018Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-w3p4.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8591969Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8605163Z Optimizing resume: 'w3pl'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8889994Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-w3pl.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8891428Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8905167Z Optimizing resume: 'aln4'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9189176Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-aln4.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9191110Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9203900Z Optimizing resume: 'alnl'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9480645Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-alnl.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9482063Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9495185Z Optimizing resume: 'ben4'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9773347Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-ben4.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9774801Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9787595Z Optimizing resume: 'benl'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0066514Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-benl.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0067993Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0080650Z Optimizing resume: 'fen4'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0357935Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fen4.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0359362Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0372170Z Optimizing resume: 'fenl'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0653598Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fenl.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0655058Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0668495Z Optimizing resume: 'fsn4'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0952397Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fsn4.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0954202Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0967879Z Optimizing resume: 'fsnl'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.1249839Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fsnl.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.1251266Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.1264958Z Optimizing resume: 'w3n4'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.1544925Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-w3n4.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.1546363Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.1561861Z Optimizing resume: 'w3nl'…
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.1839366Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-w3nl.pdf .
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.1840413Z **** Unable to open the initial device, quitting.
-build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:34.1892593Z ##[error]Process completed with exit code 1.
+build-pdfs	Run Puppeteer pdf creation	﻿2026-11-17T15:13:34.5555437Z ##[group]Run sudo scripts/start-local-server.sh &
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.5555787Z [36;1msudo scripts/start-local-server.sh &[0m
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.5556112Z [36;1mcurl http://www.utkusarioglu.com:3000/resume | head[0m
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.5556661Z [36;1mcurl http://localhost:3000/resume | head[0m
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.5556981Z [36;1msudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER[0m
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.5599992Z shell: /usr/bin/bash -e {0}
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.5600218Z env:
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.5600479Z   CERTS_FOLDER: /home/runner/work/utkusarioglu-com/utkusarioglu-com/.certs
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.5600807Z ##[endgroup]
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.5728052Z Starting http-server
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.5728758Z Starting local-ssl-proxy
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.5738949Z   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.5739701Z                                  Dload  Upload  Total   Spent   Left   Speed
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.5741106Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.7399525Z yarn run v1.22.22
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.7433192Z yarn run v1.22.22
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.7521892Z   0      0   0      0   0      0      0      0                              0warning package.json: No license field
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.7567096Z warning package.json: No license field
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.7851933Z $ /home/runner/work/utkusarioglu-com/utkusarioglu-com/node_modules/.bin/http-server -p 3000 ./build
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.7853468Z $ /home/runner/work/utkusarioglu-com/utkusarioglu-com/node_modules/.bin/local-ssl-proxy --source 443 --target 3000 --key ./.certs/server/tls.key --cert ./.certs/server/chain.crt
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8511574Z [32mStarted proxy: https://localhost:443 → http://localhost:3000[39m
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8761043Z Starting up http-server, serving ./build
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8762907Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8763475Z http-server version: 14.1.1
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8763679Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8763783Z http-server settings: 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8764044Z CORS: disabled
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8764279Z Cache: 3600 seconds
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8764580Z Connection Timeout: 120 seconds
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8764885Z Directory Listings: visible
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8765176Z AutoIndex: visible
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8765433Z Serve GZIP Files: false
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8765707Z Serve Brotli Files: false
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8765992Z Default File Extension: none
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8766128Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8766205Z Available on:
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8766616Z   http://127.0.0.1:3000
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8766829Z   http://10.1.0.195:3000
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8767037Z Hit CTRL-C to stop the server
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:34.8767177Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:36.2542766Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:37.2554563Z   0      0   0      0   0      0      0      0           00:01              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:38.2565930Z   0      0   0      0   0      0      0      0           00:02              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:39.2577121Z   0      0   0      0   0      0      0      0           00:03              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:40.2588514Z   0      0   0      0   0      0      0      0           00:04              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:41.2598935Z   0      0   0      0   0      0      0      0           00:05              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:42.2608174Z   0      0   0      0   0      0      0      0           00:06              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:43.2619535Z   0      0   0      0   0      0      0      0           00:07              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:44.2630800Z   0      0   0      0   0      0      0      0           00:08              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:45.2641741Z   0      0   0      0   0      0      0      0           00:09              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:46.2653430Z   0      0   0      0   0      0      0      0           00:10              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:47.2664863Z   0      0   0      0   0      0      0      0           00:11              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:48.2676257Z   0      0   0      0   0      0      0      0           00:12              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:49.2687587Z   0      0   0      0   0      0      0      0           00:13              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:50.2699158Z   0      0   0      0   0      0      0      0           00:14              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:51.2710436Z   0      0   0      0   0      0      0      0           00:15              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:52.2721947Z   0      0   0      0   0      0      0      0           00:16              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:53.2733266Z   0      0   0      0   0      0      0      0           00:17              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:54.2744749Z   0      0   0      0   0      0      0      0           00:18              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:55.2758435Z   0      0   0      0   0      0      0      0           00:19              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:56.2768612Z   0      0   0      0   0      0      0      0           00:20              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:57.2778499Z   0      0   0      0   0      0      0      0           00:21              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:58.2789465Z   0      0   0      0   0      0      0      0           00:22              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:13:59.2801148Z   0      0   0      0   0      0      0      0           00:23              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:00.2812609Z   0      0   0      0   0      0      0      0           00:24              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:01.2823933Z   0      0   0      0   0      0      0      0           00:25              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:02.2835343Z   0      0   0      0   0      0      0      0           00:26              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:03.2846762Z   0      0   0      0   0      0      0      0           00:27              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:04.2857940Z   0      0   0      0   0      0      0      0           00:28              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:05.2868553Z   0      0   0      0   0      0      0      0           00:29              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:06.2879775Z   0      0   0      0   0      0      0      0           00:30              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:07.2891302Z   0      0   0      0   0      0      0      0           00:31              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:08.2902704Z   0      0   0      0   0      0      0      0           00:32              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:09.2913840Z   0      0   0      0   0      0      0      0           00:33              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:10.2925558Z   0      0   0      0   0      0      0      0           00:34              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:11.2936993Z   0      0   0      0   0      0      0      0           00:35              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:12.2948319Z   0      0   0      0   0      0      0      0           00:36              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:13.2959531Z   0      0   0      0   0      0      0      0           00:37              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:14.2970834Z   0      0   0      0   0      0      0      0           00:38              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:15.2982247Z   0      0   0      0   0      0      0      0           00:39              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:16.2993439Z   0      0   0      0   0      0      0      0           00:40              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:17.3004858Z   0      0   0      0   0      0      0      0           00:41              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:18.3016490Z   0      0   0      0   0      0      0      0           00:42              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:19.3018746Z   0      0   0      0   0      0      0      0           00:43              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:20.3030158Z   0      0   0      0   0      0      0      0           00:44              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:21.3041899Z   0      0   0      0   0      0      0      0           00:45              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:22.3053463Z   0      0   0      0   0      0      0      0           00:46              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:23.3064993Z   0      0   0      0   0      0      0      0           00:47              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:24.3076618Z   0      0   0      0   0      0      0      0           00:48              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:25.3087563Z   0      0   0      0   0      0      0      0           00:49              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:26.3099533Z   0      0   0      0   0      0      0      0           00:50              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:27.3110760Z   0      0   0      0   0      0      0      0           00:51              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:28.3122439Z   0      0   0      0   0      0      0      0           00:52              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:29.3133559Z   0      0   0      0   0      0      0      0           00:53              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:30.3145106Z   0      0   0      0   0      0      0      0           00:54              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:31.3157085Z   0      0   0      0   0      0      0      0           00:55              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:32.3168380Z   0      0   0      0   0      0      0      0           00:56              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:33.3179818Z   0      0   0      0   0      0      0      0           00:57              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:34.3191334Z   0      0   0      0   0      0      0      0           00:58              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:35.3202887Z   0      0   0      0   0      0      0      0           00:59              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:36.3214330Z   0      0   0      0   0      0      0      0           01:00              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:37.3225663Z   0      0   0      0   0      0      0      0           01:01              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:38.3237285Z   0      0   0      0   0      0      0      0           01:02              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:39.3248618Z   0      0   0      0   0      0      0      0           01:03              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:40.3260087Z   0      0   0      0   0      0      0      0           01:04              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:41.3271440Z   0      0   0      0   0      0      0      0           01:05              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:42.3283132Z   0      0   0      0   0      0      0      0           01:06              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:43.3294532Z   0      0   0      0   0      0      0      0           01:07              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:44.3305869Z   0      0   0      0   0      0      0      0           01:08              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:45.3317459Z   0      0   0      0   0      0      0      0           01:09              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:46.3329027Z   0      0   0      0   0      0      0      0           01:10              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:47.3338740Z   0      0   0      0   0      0      0      0           01:11              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:48.3350440Z   0      0   0      0   0      0      0      0           01:12              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:49.3361941Z   0      0   0      0   0      0      0      0           01:13              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:50.3373352Z   0      0   0      0   0      0      0      0           01:14              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:51.3384788Z   0      0   0      0   0      0      0      0           01:15              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:52.3395934Z   0      0   0      0   0      0      0      0           01:16              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:53.3407633Z   0      0   0      0   0      0      0      0           01:17              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:54.3419245Z   0      0   0      0   0      0      0      0           01:18              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:55.3430672Z   0      0   0      0   0      0      0      0           01:19              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:56.3442136Z   0      0   0      0   0      0      0      0           01:20              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:57.3453523Z   0      0   0      0   0      0      0      0           01:21              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:58.3464669Z   0      0   0      0   0      0      0      0           01:22              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:14:59.3476521Z   0      0   0      0   0      0      0      0           01:23              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:00.3487822Z   0      0   0      0   0      0      0      0           01:24              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:01.3498963Z   0      0   0      0   0      0      0      0           01:25              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:02.3510487Z   0      0   0      0   0      0      0      0           01:26              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:03.3521639Z   0      0   0      0   0      0      0      0           01:27              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:04.3533214Z   0      0   0      0   0      0      0      0           01:28              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:05.3538760Z   0      0   0      0   0      0      0      0           01:29              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:06.3548087Z   0      0   0      0   0      0      0      0           01:30              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:07.3559558Z   0      0   0      0   0      0      0      0           01:31              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:08.3570727Z   0      0   0      0   0      0      0      0           01:32              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:09.3578336Z   0      0   0      0   0      0      0      0           01:33              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:10.3584824Z   0      0   0      0   0      0      0      0           01:34              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:11.3596544Z   0      0   0      0   0      0      0      0           01:35              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:12.3608051Z   0      0   0      0   0      0      0      0           01:36              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:13.3619306Z   0      0   0      0   0      0      0      0           01:37              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:14.3630741Z   0      0   0      0   0      0      0      0           01:38              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:15.3642206Z   0      0   0      0   0      0      0      0           01:39              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:16.3653379Z   0      0   0      0   0      0      0      0           01:40              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:17.3664915Z   0      0   0      0   0      0      0      0           01:41              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:18.3676283Z   0      0   0      0   0      0      0      0           01:42              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:19.3687548Z   0      0   0      0   0      0      0      0           01:43              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:20.3699124Z   0      0   0      0   0      0      0      0           01:44              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:21.3710475Z   0      0   0      0   0      0      0      0           01:45              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:22.3721865Z   0      0   0      0   0      0      0      0           01:46              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:23.3733328Z   0      0   0      0   0      0      0      0           01:47              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:24.3744611Z   0      0   0      0   0      0      0      0           01:48              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:25.3748082Z   0      0   0      0   0      0      0      0           01:49              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:26.3760388Z   0      0   0      0   0      0      0      0           01:50              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:27.3768195Z   0      0   0      0   0      0      0      0           01:51              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:28.3780123Z   0      0   0      0   0      0      0      0           01:52              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:29.3791537Z   0      0   0      0   0      0      0      0           01:53              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:30.3803065Z   0      0   0      0   0      0      0      0           01:54              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:31.3814559Z   0      0   0      0   0      0      0      0           01:55              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:32.3825853Z   0      0   0      0   0      0      0      0           01:56              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:33.3837486Z   0      0   0      0   0      0      0      0           01:57              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:34.3848919Z   0      0   0      0   0      0      0      0           01:58              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:35.3859963Z   0      0   0      0   0      0      0      0           01:59              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:36.3871220Z   0      0   0      0   0      0      0      0           02:00              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:37.3882319Z   0      0   0      0   0      0      0      0           02:01              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:38.3893854Z   0      0   0      0   0      0      0      0           02:02              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:39.3905725Z   0      0   0      0   0      0      0      0           02:03              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:40.3917051Z   0      0   0      0   0      0      0      0           02:04              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:41.3918215Z   0      0   0      0   0      0      0      0           02:05              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:42.3929883Z   0      0   0      0   0      0      0      0           02:06              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:43.3941406Z   0      0   0      0   0      0      0      0           02:07              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:44.3952762Z   0      0   0      0   0      0      0      0           02:08              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:45.3963909Z   0      0   0      0   0      0      0      0           02:09              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:46.3975311Z   0      0   0      0   0      0      0      0           02:10              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:47.3986899Z   0      0   0      0   0      0      0      0           02:11              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:48.3998268Z   0      0   0      0   0      0      0      0           02:12              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:49.4009634Z   0      0   0      0   0      0      0      0           02:13              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:50.4017139Z   0      0   0      0   0      0      0      0           02:14              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:50.8219241Z   0      0   0      0   0      0      0      0           02:15              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:50.8220229Z curl: (28) Failed to connect to www.utkusarioglu.com port 3000 after 136247 ms: Could not connect to server
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:50.8283757Z   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:50.8285320Z                                  Dload  Upload  Total   Spent   Left   Speed
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:50.8285997Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:50.8315363Z [2026-11-17T15:15:50.831Z]  "GET /resume" "curl/8.18.0"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:50.8349216Z   0      0   0      0   0      0      0      0                              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:50.8349761Z 100  22629 100  22629   0      0  3.24M      0                              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:50.8350462Z 100  22629 100  22629   0      0  3.20M      0                              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:50.8351192Z 100  22629 100  22629   0      0  3.16M      0                              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:50.8427834Z /home/runner/work/utkusarioglu-com/utkusarioglu-com/scripts/docker-run-puppeteer-pdf.sh: line 3: .env: No such file or directory
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:50.8625362Z Unable to find image 'ghcr.io/puppeteer/puppeteer:latest' locally
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.1149005Z latest: Pulling from puppeteer/puppeteer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.2709799Z a2eac331341c: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.2710278Z 661ef7e1e7b1: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.2710611Z 6b10c2e8e756: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.2710928Z d9c899d8f000: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.2711239Z 412d30040dcb: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.2711533Z d3881772a308: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.2711829Z bf4ef2108243: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.2712131Z 68304cd75790: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.2712373Z 9b2b3f6483a1: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.2712567Z 4f4fb700ef54: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.2712778Z 49dd0ae78313: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.2712987Z d99c3612c451: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.2713416Z c28c2f6c340d: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.2713611Z a4aa977c0d0e: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.3721664Z 4f4fb700ef54: Already exists
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.4681907Z 5aae86a2be05: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.4685240Z a2eac331341c: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.4700791Z d9c899d8f000: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.5671626Z d3881772a308: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.5673779Z 6b10c2e8e756: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.5688170Z 412d30040dcb: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.5706527Z 68304cd75790: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:51.9664104Z 49dd0ae78313: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:53.1651566Z 661ef7e1e7b1: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:53.5651375Z 9b2b3f6483a1: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:53.8648260Z a4aa977c0d0e: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:53.9654480Z c28c2f6c340d: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:53.9662472Z d99c3612c451: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:54.8742366Z a4aa977c0d0e: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:55.2788457Z 49dd0ae78313: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:56.7721849Z 661ef7e1e7b1: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:57.0651217Z bf4ef2108243: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:59.9743834Z 68304cd75790: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:15:59.9771654Z c28c2f6c340d: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:01.2665465Z 4f4fb700ef54: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:01.2695584Z d9c899d8f000: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:01.2702859Z d3881772a308: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:01.2714393Z 6b10c2e8e756: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:01.2727755Z 412d30040dcb: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:01.2739732Z 9b2b3f6483a1: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:04.3681458Z bf4ef2108243: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:05.6677386Z d99c3612c451: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:05.7654960Z a2eac331341c: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:05.8921046Z Digest: sha256:8ed70a9d45734640080f5ca0c23316a659cab8c2e334ef7bccf6fc2e04862b8e
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:05.8922122Z Status: Downloaded newer image for ghcr.io/puppeteer/puppeteer:latest
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:18.9304183Z <!DOCTYPE html><html lang="en" class="h-full"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel="preload" href="/_next/static/css/74d8e99d52492782.css" as="style"/><link rel="stylesheet" href="/_next/static/css/74d8e99d52492782.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-5f099b5e3666017b.js" defer=""></script><script src="/_next/static/chunks/framework-5f4595e5518b5600.js" defer=""></script><script src="/_next/static/chunks/main-53abe94d2c7d8421.js" defer=""></script><script src="/_next/static/chunks/pages/_app-39eaf63c4ca270ca.js" defer=""></script><script src="/_next/static/chunks/33-e95244d9ca59f1f0.js" defer=""></script><script src="/_next/static/chunks/pages/resume-647e0c4612cf4a85.js" defer=""></script><script src="/_next/static/CsICnbAWmP9u5gJn1x33k/_buildManifest.js" defer=""></script><script src="/_next/static/CsICnbAWmP9u5gJn1x33k/_ssgManifest.js" defer=""></script><script src="/_next/static/CsICnbAWmP9u5gJn1x33k/_middlewareManifest.js" defer=""></script><style data-href="https://fonts.googleapis.com/css2?family=Galada&display=block">@font-face{font-family:'Galada';font-style:normal;font-weight:400;font-display:block;src:url(https://fonts.gstatic.com/s/galada/v21/H4cmBXyGmcjXlUX-8Q.woff) format('woff')}@font-face{font-family:'Galada';font-style:normal;font-weight:400;font-display:block;src:url(https://fonts.gstatic.com/s/galada/v21/H4cmBXyGmcjXlUXO5yY_wrmwgp63.woff2) format('woff2');unicode-range:U+0951-0952,U+0964-0965,U+0980-09FE,U+1CD0,U+1CD2,U+1CD5-1CD6,U+1CD8,U+1CE1,U+1CEA,U+1CED,U+1CF2,U+1CF5-1CF7,U+200C-200D,U+20B9,U+25CC,U+A8F1,U+11DF0-11DF1}@font-face{font-family:'Galada';font-style:normal;font-weight:400;font-display:block;src:url(https://fonts.gstatic.com/s/galada/v21/H4cmBXyGmcjXlUXO9SY_wrmwgg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style><style data-href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=block">@font-face{font-family:'Quicksand';font-style:normal;font-weight:300;font-display:block;src:url(https://fonts.gstatic.com/s/quicksand/v37/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo18I.woff) format('woff')}@font-face{font-family:'Quicksand';font-style:normal;font-weight:300;font-display:block;src:url(https://fonts.gstatic.com/s/quicksand/v37/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo58m-xDwxUD2GF9Zc.woff) format('woff');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Quicksand';font-style:normal;font-weight:300;font-display:block;src:url(https://fonts.gstatic.com/s/quicksand/v37/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo58i-xDwxUD2GF9Zc.woff) format('woff');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Quicksand';font-style:normal;font-weight:300;font-display:block;src:url(https://fonts.gstatic.com/s/quicksand/v37/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo58a-xDwxUD2GFw.woff) format('woff');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style><style data-href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=block">@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pYCM.woff) format('woff')}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCFPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCMPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCHPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCGPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCIPrcVIT9d0c8.woff) format('woff');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style></head><body class="bg-base-light dark:bg-base-dark transition-colors select-none h-full overflow-hidden"><div id="__next" data-reactroot=""></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"resume":{"name":"Utku Sarioglu","page":"Resume","variants":{"specialties":[{"id":"al","title":"All","remarks":"Includes frontend, backend and Web3 skills"},{"id":"be","title":"Backend","remarks":"Kubernetes and AWS based backend development"},{"id":"fe","title":"Frontend","remarks":"React \u0026 React Native based frontend development"},{"id":"fs","title":"Fullstack","remarks":"Fullstack web2 development"},{"id":"w3","title":"Web3","remarks":"Ethereum based fullstack web3 application development"}],"paperFormats":[{"title":"A4","searchQueryValue":"a4","remarks":"Standard format for Europe and the rest of the world","shortCode":4},{"title":"Letter","searchQueryValue":"letter","remarks":"North American standard","shortCode":"l"}],"paperStyles":[{"id":"al","paperFormatShortCode":4,"margins":{"x":45,"y":60},"styles":{"layout":{"templateColumns":"50vw 12vw auto","columnGap":"20px","sectionsGap":"12px","headerGap":"20px"},"h2":{"marginBottom":"4px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"0px"},"li":{"divider":{"height":"0px"}}},"education":{"ol":{"gap":"0px"}}}},{"id":"al","paperFormatShortCode":"l","margins":{"x":40,"y":40},"styles":{"layout":{"templateColumns":"51vw 11vw auto","columnGap":"20px","sectionsGap":"8px","headerGap":"12px"},"h2":{"marginBottom":"3px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"0px"},"li":{"divider":{"height":"0px"}}},"education":{"ol":{"gap":"0px"}}}},{"id":"be","paperFormatShortCode":4,"margins":{"x":55,"y":65},"styles":{"layout":{"templateColumns":"50vw 18vw auto","columnGap":"30px","sectionsGap":"12px","headerGap":"20px"},"h2":{"marginBottom":"6px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"8px"},"li":{"divider":{"height":"2px"}}},"education":{"ol":{"gap":"8px"}}}},{"id":"be","paperFormatShortCode":"l","margins":{"x":45,"y":42},"styles":{"layout":{"templateColumns":"50vw 20vw auto","columnGap":"30px","sectionsGap":"12px","headerGap":"20px"},"h2":{"marginBottom":"6px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"6px"},"li":{"divider":{"height":"2px"}}},"education":{"ol":{"gap":"6px"}}}},{"id":"fe","paperFormatShortCode":4,"margins":{"x":55,"y":65},"styles":{"layout":{"templateColumns":"50vw 18vw auto","columnGap":"30px","sectionsGap":"8px","headerGap":"20px"},"h2":{"marginBottom":"6px"},"relevantWorkExperience":{"ol":{"gap":"6px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"8px"},"li":{"divider":{"height":"2px"}}},"education":{"ol":{"gap":"8px"}}}},{"id":"fe","paperFormatShortCode":"l","margins":{"x":45,"y":45},"styles":{"layout":{"templateColumns":"50vw 19vw auto","columnGap":"30px","sectionsGap":"8px","headerGap":"20px"},"h2":{"marginBottom":"6px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"8px"},"li":{"divider":{"height":"2px"}}},"education":{"ol":{"gap":"8px"}}}},{"id":"fs","paperFormatShortCode":4,"margins":{"x":55,"y":60},"styles":{"layout":{"templateColumns":"50vw 13vw auto","columnGap":"30px","sectionsGap":"8px","headerGap":"20px"},"h2":{"marginBottom":"4px"},"relevantWorkExperience":{"ol":{"gap":"6px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"4px"},"li":{"divider":{"height":"0px"}}},"education":{"ol":{"gap":"2px"}}}},{"id":"fs","paperFormatShortCode":"l","margins":{"x":45,"y":42},"styles":{"layout":{"templateColumns":"50vw 13vw auto","columnGap":"30px","sectionsGap":"8px","headerGap":"20px"},"h2":{"marginBottom":"4px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"4px"},"li":{"divider":{"height":"0px"}}},"education":{"ol":{"gap":"0px"}}}},{"id":"w3","paperFormatShortCode":4,"margins":{"x":55,"y":65},"styles":{"layout":{"templateColumns":"50vw 15vw auto","columnGap":"25px","sectionsGap":"12px","headerGap":"20px"},"h2":{"marginBottom":"4px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"4px"},"li":{"divider":{"height":"1px"}}},"education":{"ol":{"gap":"4px"}}}},{"id":"w3","paperFormatShortCode":"l","margins":{"x":45,"y":42},"styles":{"layout":{"templateColumns":"50vw 14vw auto","columnGap":"25px","sectionsGap":"12px","headerGap":"20px"},"h2":{"marginBottom":"4px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"4px"},"li":{"divider":{"height":"1px"}}},"education":{"ol":{"gap":"4px"}}}}],"includePhoto":[{"state":true,"searchQueryValue":"true","shortCode":"p"},{"state":false,"searchQueryValue":"false","shortCode":"n"}]},"introduction":{"title":"Introduction","print":false,"remarks":["Full stack Web2 / Web3 developer experienced in economics and international trade. 10+ years of experience in programming and 5+ years of experience in management of trade and engineering projects.\n","An efficient leader through conscientious approaches and presentable\npersonality. Excellent at creating intuitive solutions and multi-level steps for\nhandling complexity. Experienced in international contexts and handling tricky\npersonnel and clients. Proven to be capable of creating wholistic solutions,\nmeeting complex requirements and handling stressful tasks.\n"]},"contact":{"title":"Contact","print":false,"list":[{"title":"Linkedin","value":"https://www.linkedin.com/in/utku-sarioglu/","handle":"utku-sarioglu","remarks":"Preferred for professional inquiries","print":false},{"title":"Instagram","value":"https://www.instagram.com/utkusarioglu","handle":"utkusarioglu","remarks":"Preferred for personal inquiries","print":false},{"title":"Github","value":"https://github.com/utkusarioglu","handle":"utkusarioglu","print":false,"remarks":"Professional and personal inquiries"},{"title":"Email","value":"utkusarioglu@hotmail.com","print":true,"screen":false},{"title":"Website","value":"www.utkusarioglu.com","print":true,"screen":false},{"title":"Phone","value":"+90 (532) 335 3334","print":true,"screen":false},{"title":"Address","value":"Ordu, Turkiye","print":true,"screen":false}]},"skills":{"title":"Skills","remarks":"* implies familiarity","list":[{"title":"Natural Languages","list":[{"title":"English","remarks":"Fluent"},{"title":"Turkish","remarks":"Native"}]},{"title":"Programming Languages","list":[{"title":"Typescript"},{"title":"Javascript"},{"title":"Solidity","specialties":["w3"]},{"title":"Yul","specialties":["w3"]},{"title":"Python"},{"title":"PHP","specialties":["fs","be"]},{"title":"C","confident":false},{"title":"C++","confident":false},{"title":"Go","confident":false,"specialties":["fs","be"]},{"title":"Supercollider","specialties":["al"]}]},{"title":"Scripting Languages \u0026 DSL","list":[{"title":"SQL","specialties":["fs","be"]},{"title":"Bash","specialties":["fs","be","fe","w3"]},{"title":"PowerShell","confident":false},{"title":"PlantUML"},{"title":"HCL","specialties":["fs","be"]},{"title":"D2","specialties":["fs","be","fe","w3"]}]},{"title":"Frontend","list":[{"title":"React","specialties":["fs","fe","w3"]},{"title":"React Native","confident":false,"specialties":["fs","fe","w3"]},{"title":"NextJS","specialties":["fs","fe","w3"]},{"title":"Tauri","confident":false,"specialties":["fs","fe","w3"]},{"title":"Apollo","specialties":["fs","fe","w3"]},{"title":"Redux","specialties":["fs","fe","w3"]},{"title":"WordPress","specialties":["fs","fe","w3"]},{"title":"TailwindCSS","specialties":["fs","fe","w3"]},{"title":"SDL","confident":false,"specialties":["fs","fe","w3"]},{"title":"ENTT","confident":false,"specialties":["fs","fe","w3"]}]},{"title":"DevOps and CI\u0026CD","list":[{"title":"Docker"},{"title":"Kubernetes","specialties":["fs","be"]},{"title":"kOps","specialties":["fs","be"]},{"title":"Skaffold","specialties":["fs","be"]},{"title":"Terraform","specialties":["fs","be"]},{"title":"Vagrant","specialties":["fs","be"]},{"title":"Hyper-V","specialties":["fs","be"]},{"title":"k3s","specialties":["fs","be"]},{"title":"GitHub Actions"},{"title":"Jenkins","confident":false,"specialties":["fs","be"]},{"title":"LocalStack","specialties":["fs","be"]}]},{"title":"Backend","list":[{"title":"NodeJS"},{"title":"MySQL","specialties":["fs","be"]},{"title":"PostgreSQL","specialties":["fs","be"]},{"title":"MongoDB","confident":false,"specialties":["fs","be"]},{"title":"Redis","specialties":["fs","be"]},{"title":"Kafka","specialties":["fs","be"]},{"title":"Debezium","specialties":["fs","be"]},{"title":"ZooKeeper","confident":false,"specialties":["fs","be"]},{"title":"Strimzi","specialties":["fs","be"]},{"title":"Grafana","confident":false,"specialties":["fs","be"]},{"title":"Loki","confident":false,"specialties":["fs","be"]},{"title":"Jaeger","confident":false,"specialties":["fs","be"]},{"title":"Prometheus","confident":false,"specialties":["fs","be"]},{"title":"OpenSSL"},{"title":"Vault","confident":false,"specialties":["fs","be"]},{"title":"gRPC","specialties":["fs","be","fe"]},{"title":"OpenTelemetry"},{"title":"Puppeteer"}]},{"title":"Testing and Analysis","list":[{"title":"Cypress"},{"title":"Jest"},{"title":"Mocha"},{"title":"Waffle","specialties":["w3"]},{"title":"Echidna","confident":false,"specialties":["w3"]},{"title":"Mythril","specialties":["w3"]},{"title":"Slither","specialties":["w3"]},{"title":"Manticore","specialties":["w3"]},{"title":"Terratest","confident":false,"specialties":["fs","be"]}]},{"title":"Project Handling","list":[{"title":"Git"},{"title":"Helm","specialties":["fs","be"]},{"title":"Conan","specialties":["fs","fe","be"]},{"title":"OpenAPI"},{"title":"Lerna"},{"title":"Emscripten"},{"title":"AsyncAPI"},{"title":"Metarepo"}]},{"title":"Web3","list":[{"title":"Truffle","specialties":["w3"]},{"title":"Drizzle","specialties":["w3"]},{"title":"Ganache","specialties":["w3"]},{"title":"Web3","specialties":["w3"]},{"title":"Ethers","specialties":["w3"]},{"title":"Matic","specialties":["w3"]},{"title":"Hardhat","specialties":["w3"]},{"title":"Waffle","specialties":["w3"]},{"title":"Geth","confident":false,"specialties":["w3"]},{"title":"The Graph","specialties":["w3"]},{"title":"EVM","specialties":["w3"]}]},{"title":"Data and Math","list":[{"title":"Pandas","specialties":["fs","w3"]},{"title":"NumPy","specialties":["fs","w3"]},{"title":"SciPy","specialties":["fs","w3"]},{"title":"SymPy","specialties":["fs","w3"]},{"title":"Matplotlib","specialties":["fs","w3"]},{"title":"Music21","specialties":["al"]},{"title":"Scamp","specialties":["al"]}]},{"title":"Development Software","list":[{"title":"VS Code"},{"title":"Visual Studio"},{"title":"Vim"},{"title":"Figma","specialties":["fs","fe","w3"]},{"title":"Jupyter Notebook","specialties":["fs","fe","w3"]},{"title":"Postman"},{"title":"Enterprise Architect"},{"title":"Adobe XD","specialties":["fs","fe","w3"]}]},{"title":"Notable Other Software","list":[{"title":"Photoshop","specialties":["fs","fe","w3"]},{"title":"Illustrator","confident":false,"specialties":["fs","fe","w3"]},{"title":"Lightroom","specialties":["fs","fe","w3"]},{"title":"Word"},{"title":"Excel"},{"title":"Outlook"},{"title":"PowerPoint"},{"title":"Visio"},{"title":"Cubase"},{"title":"CaptureOne"},{"title":"MuseScore"}]}]},"relevantWorkExperience":{"title":"Relevant Work Experience","list":[{"title":"Consultant","companyName":"Utku Sarioglu Consultancy","location":"Ordu, Turkiye","start":"May, 2022","finish":"Active","remarks":["Consulted various businesses on the architecture, planning of features, modernization and migration of their databases, kubernetes clusters, aws and on premise assets.\n","Created, maintained custom frontend, backend dashboards and management tooling for boutique trade and finance firms.\n","Designed, tested trading bots for retail investors and boutique finance firms.\n","Created custom code for musicians using supercollider for use on live shows and recording sessions.\n"]},{"title":"Principal Software Engineer","companyName":"HSO, LLC - Oz Medical DBA","location":"Pleasanton, CA. USA","start":"Oct, 2019","finish":"Mar, 2022","remarks":["Built a fullstack, scalable online sales management system aiding the\nproduct listings, sales, marketing, shipments and competitor tracking\non Amazon and other channels.\n","The project utilized IaC and ran on AWS EKS. Most services were built\nwith Python, Typescript, and PHP. PostgreSQL and MongoDB handled most\npersistence.\n","This project integrated multiple fragmented workflows in the company,\nwhich lead to much more efficient HR capitalization and lower operational\ncosts.\n"]},{"title":"General Manager","companyName":"Altas USA, LLC","location":"Stockton, CA. USA","start":"Aug, 2018","finish":"Oct, 2018","remarks":["Planned and established the Californian branch of Altas Oil\nIndustries. This involved finding suppliers California, Oregon and\nWashington state; shipping, installation and boot up of the heavy machinery\nused for production of raw vegetable oil; and establishment of sales\npartnerships in the US.\n","This project ended prematurely due to an unforeseen economic crisis\nin Turkiye, rendering the price points incompatible with the target\nmarkets.\n"]},{"title":"Principal Software Engineer","companyName":"Altas Oil Industry","location":"Ordu, Turkiye","start":"Jun, 2016","finish":"Aug, 2018","remarks":["Built multiple web apps for the company using PHP, React, WordPress,\nand IdeaSoft. \n","Apps included an online sales app, which was one of the first apps in\nthe country that delivered local products nationwide; this concept\nbecame very successful in Turkiye.\n","Managed said apps through multiple marketing and advertising cycles. \n"]},{"title":"Project Manager","companyName":"Altas Oil Industry","location":"Ordu, Turkiye","start":"Jan, 2017","finish":"Aug, 2018","remarks":["Managed the construction, assembly and boot up of Turkiye's first, and \nworld's sixth non-chemical vegetable oil refinery: a 6 million \ndollar investment involving civic, chemical, IT, electrical, mechanical, and\nautomation work with 10+ contractors and 100+ \npersonnel.\n"]},{"title":"Foreign Trade Expert","companyName":"Altas Oil Industry","location":"Ordu, Turkiye","start":"Jun, 2016","finish":"Jan, 2017","remarks":["Managed food grade and heavy machinery trade with 10+ countries at \n6000+ tones monthly volume, with many contracts being valued at \nsix-figures in USD.\n","As a side project, took company's Instagram followers from 50 to ~20k.\n"]},{"title":"Software Development Consultant","companyName":"Index Group","location":"Istanbul, Turkiye","start":"Sep, 2011","finish":"Sep, 2014","remarks":["Wrote productivity modules using C++, VBA, AutoIt, which reduced\ndaily workload on certain tasks by 60%. Later, consulted on these\nfeatures being implemented on the in-house software; While primarily\nworking as the current accounts' manager.\n"]}]},"relevantCertifications":{"title":"Relevant Certifications","print":false,"list":[{"course":"AWS Certified Solutions Architect Associate","institution":"Udemy"},{"course":"Advanced Kubernetes Usage","institution":"Udemy"},{"course":"Apache Kafka","institution":"Udemy","print":false,"certificateId":"UC-0d49da70-b845-4cc2-b2b2-2cadb6ca1990","certificateUrl":"https://www.udemy.com/certificate/UC-0d49da70-b845-4cc2-b2b2-2cadb6ca1990/"},{"course":"Apache Kafka Security","institution":"Udemy"},{"course":"Ethereum Blockchain Development Bootcamp","institution":"Udemy","certificateId":"UC-35f47a50-8dc7-48ef-b889-e17eb600e895","certificateUrl":"https://www.udemy.com/certificate/UC-35f47a50-8dc7-48ef-b889-e17eb600e895/"},{"course":"Professional IT Automation with Python","institution":"Coursera","instructor":"Google","certificateId":"8S6F67S4FE5B","certificateUrl":"https://coursera.org/share/26f71a19335cf1ce898f93a8d25d0378"},{"course":"Nand to Tetris I \u0026 II","institution":"Udemy"},{"course":"PostgreSQL Bootcamp","institution":"Udemy"},{"course":"Fundamentals of Digital Marketing","institution":"Google","instructor":"Google Digital Garage","print":false},{"course":"Copywriting","institution":"Copy Club Advertising Training Agency","print":false}]},"education":{"title":"Education","list":[{"title":"Economics BA","institution":"Yeditepe Uni.","location":"Istanbul, Turkiye","start":2004,"finish":2009},{"title":"Advanced STEM","institution":"Ozel Ordu High","location":"Ordu, Turkiye","start":2000,"finish":2003}]}}},"__N_SSG":true},"page":"/resume","query":{},"buildId":"CsICnbAWmP9u5gJn1x33k","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:18.9358479Z > puppeteer@25.18.0 postinstall
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:18.9358762Z > node install.mjs
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:18.9358958Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:18.9951506Z **INFO** Skipping Firefox download as instructed.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:18.9969119Z chrome (157.0.8103.78) downloaded to /home/pptruser/.cache/puppeteer/chrome/linux-157.0.8103.78
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:18.9969907Z chrome-headless-shell (157.0.8103.78) downloaded to /home/pptruser/.cache/puppeteer/chrome-headless-shell/linux-157.0.8103.78
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.0077608Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.0077895Z added 28 packages, and audited 29 packages in 2s
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.0078316Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.0078739Z 9 packages are looking for funding
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.0079102Z   run `npm fund` for details
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.0086895Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.0087074Z found 0 vulnerabilities
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.4897330Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.4898096Z added 1 package, removed 28 packages, and audited 29 packages in 420ms
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.4898417Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.4898522Z 10 packages are looking for funding
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.4898761Z   run `npm fund` for details
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.4905012Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.4905265Z found 0 vulnerabilities
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.4913052Z npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.4914137Z npm warn install-scripts   puppeteer@25.18.0 (postinstall: node install.mjs)
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.4914695Z npm warn install-scripts
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.4915332Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6749840Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6750532Z   "message": "Puppeteer is creating pdfs against following variants",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6750977Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6751230Z     "includePhotoVariants": [
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6751494Z       {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6751678Z         "state": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6751922Z         "searchQueryValue": "true",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6752247Z         "shortCode": "p"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6752493Z       },
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6752703Z       {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6752908Z         "state": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6753184Z         "searchQueryValue": "false",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6753507Z         "shortCode": "n"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6753773Z       }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6753979Z     ],
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6754218Z     "paperFormatVariants": [
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6754509Z       {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6754730Z         "title": "A4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6755002Z         "searchQueryValue": "a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6755426Z         "remarks": "Standard format for Europe and the rest of the world",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6755872Z         "shortCode": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6756127Z       },
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6756290Z       {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6756660Z         "title": "Letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6756867Z         "searchQueryValue": "letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6757204Z         "remarks": "North American standard",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6757438Z         "shortCode": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6757622Z       }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6757777Z     ],
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6757950Z     "specialtyIdVariants": [
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6758154Z       "al",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6758307Z       "be",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6758468Z       "fe",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6758628Z       "fs",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6758773Z       "w3"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6758923Z     ]
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6759066Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6759210Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.6761249Z Starting pdf files creation…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.9897745Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.9920283Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.9941422Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.9947564Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=al&include-photo=true&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.9948431Z     "specialtyId": "al",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.9948928Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.9949688Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.9950084Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:19.9950432Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.0522595Z [2026-11-17T15:16:20.051Z]  "GET /resume?specialty-id=al&include-photo=true&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.0777979Z [2026-11-17T15:16:20.077Z]  "GET /_next/static/css/74d8e99d52492782.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.0790695Z [2026-11-17T15:16:20.078Z]  "GET /_next/static/chunks/webpack-5f099b5e3666017b.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.0808150Z [2026-11-17T15:16:20.079Z]  "GET /_next/static/chunks/framework-5f4595e5518b5600.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.0809789Z [2026-11-17T15:16:20.080Z]  "GET /_next/static/chunks/main-53abe94d2c7d8421.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.0817400Z [2026-11-17T15:16:20.081Z]  "GET /_next/static/chunks/pages/_app-39eaf63c4ca270ca.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.0857500Z [2026-11-17T15:16:20.081Z]  "GET /_next/static/chunks/33-e95244d9ca59f1f0.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.0949456Z [2026-11-17T15:16:20.092Z]  "GET /_next/static/chunks/pages/resume-647e0c4612cf4a85.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.0998795Z [2026-11-17T15:16:20.095Z]  "GET /_next/static/CsICnbAWmP9u5gJn1x33k/_buildManifest.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.1040205Z [2026-11-17T15:16:20.096Z]  "GET /_next/static/CsICnbAWmP9u5gJn1x33k/_ssgManifest.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.1042299Z [2026-11-17T15:16:20.098Z]  "GET /_next/static/CsICnbAWmP9u5gJn1x33k/_middlewareManifest.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.2014896Z [2026-11-17T15:16:20.201Z]  "GET /_next/static/chunks/804.0632affcc84bdcbd.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.2018214Z [2026-11-17T15:16:20.201Z]  "GET /_next/static/chunks/288.81890c8f374c0bf3.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.2021381Z [2026-11-17T15:16:20.202Z]  "GET /_next/static/chunks/247.cbec0696ca9a0ee5.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.2245455Z [2026-11-17T15:16:20.224Z]  "GET /_next/static/chunks/418.d1a1196d1a6ae347.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.2421935Z [2026-11-17T15:16:20.241Z]  "GET /_next/static/images/waves-and-bird-620-492d2ec999cc038f8dd58e99c03a3143.jpg" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.2818609Z [2026-11-17T15:16:20.281Z]  "GET /_next/static/images/utku-resume-1x1-602-4f026336d1fcd9c5a461e76d82c034a1.jpg" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.2919274Z [2026-11-17T15:16:20.291Z]  "GET /_next/static/chunks/359-68b4faa140f71076.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.2922808Z [2026-11-17T15:16:20.292Z]  "GET /_next/static/chunks/pages/canvas-74109fb3e0ef7cd5.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.2970032Z [2026-11-17T15:16:20.296Z]  "GET /_next/static/chunks/pages/index-1e3dd158cbc8408b.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.3022369Z [2026-11-17T15:16:20.302Z]  "GET /_next/static/chunks/51.03e776eec2320f34.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.3047430Z [2026-11-17T15:16:20.302Z]  "GET /_next/data/CsICnbAWmP9u5gJn1x33k/about.json" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.3051295Z [2026-11-17T15:16:20.303Z]  "GET /_next/data/CsICnbAWmP9u5gJn1x33k/resume.json" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.3053071Z [2026-11-17T15:16:20.303Z]  "GET /_next/data/CsICnbAWmP9u5gJn1x33k/musings.json" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.3054983Z [2026-11-17T15:16:20.304Z]  "GET /_next/static/chunks/pages/about-3b4c7226734c3705.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.3056920Z [2026-11-17T15:16:20.304Z]  "GET /_next/static/chunks/pages/musings-752b29ad4eb27a67.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.3369289Z [2026-11-17T15:16:20.336Z]  "GET /_next/static/manifest.40c17d797a.json" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:20.3568642Z [2026-11-17T15:16:20.355Z]  "GET /_next/static/icons/favicon.fa5662651a.ico" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.0360778Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.0361389Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.0362045Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.0362696Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=al&include-photo=false&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.0363320Z     "specialtyId": "al",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.0363609Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.0363891Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.0364141Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.0364372Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.1028369Z [2026-11-17T15:16:21.102Z]  "GET /resume?specialty-id=al&include-photo=false&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.9640485Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.9641104Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.9641665Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.9642398Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=be&include-photo=true&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.9643374Z     "specialtyId": "be",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.9643723Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.9644024Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.9644307Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:21.9644531Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:22.0198642Z [2026-11-17T15:16:22.018Z]  "GET /resume?specialty-id=be&include-photo=true&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:22.8546988Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:22.8550109Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:22.8550797Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:22.8551591Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=be&include-photo=false&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:22.8552386Z     "specialtyId": "be",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:22.8553367Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:22.8553828Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:22.8554243Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:22.8554676Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:22.9032755Z [2026-11-17T15:16:22.902Z]  "GET /resume?specialty-id=be&include-photo=false&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:23.7081566Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:23.7082138Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:23.7082682Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:23.7083500Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fe&include-photo=true&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:23.7084298Z     "specialtyId": "fe",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:23.7084751Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:23.7085201Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:23.7085623Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:23.7085994Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:23.7718672Z [2026-11-17T15:16:23.771Z]  "GET /resume?specialty-id=fe&include-photo=true&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:24.5910258Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:24.5911279Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:24.5911626Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:24.5912201Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fe&include-photo=false&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:24.5912783Z     "specialtyId": "fe",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:24.5913475Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:24.5913790Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:24.5914065Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:24.5914292Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:24.6371771Z [2026-11-17T15:16:24.636Z]  "GET /resume?specialty-id=fe&include-photo=false&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:25.4700298Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:25.4700805Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:25.4701350Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:25.4701948Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fs&include-photo=true&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:25.4702684Z     "specialtyId": "fs",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:25.4703357Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:25.4703661Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:25.4703987Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:25.4704424Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:25.5260729Z [2026-11-17T15:16:25.525Z]  "GET /resume?specialty-id=fs&include-photo=true&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:26.3802058Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:26.3830845Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:26.3836069Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:26.3867667Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fs&include-photo=false&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:26.3910890Z     "specialtyId": "fs",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:26.3911494Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:26.3911965Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:26.3912382Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:26.3912931Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:26.4387345Z [2026-11-17T15:16:26.437Z]  "GET /resume?specialty-id=fs&include-photo=false&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:27.2616837Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:27.2617672Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:27.2618187Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:27.2618951Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=w3&include-photo=true&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:27.2619806Z     "specialtyId": "w3",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:27.2620278Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:27.2621269Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:27.2621698Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:27.2622325Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:27.3096133Z [2026-11-17T15:16:27.309Z]  "GET /resume?specialty-id=w3&include-photo=true&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:28.1502490Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:28.1502848Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:28.1503531Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:28.1504146Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=w3&include-photo=false&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:28.1504784Z     "specialtyId": "w3",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:28.1505070Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:28.1505367Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:28.1505626Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:28.1505845Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:28.2031421Z [2026-11-17T15:16:28.201Z]  "GET /resume?specialty-id=w3&include-photo=false&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.0408217Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.0408669Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.0409028Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.0409642Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=al&include-photo=true&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.0410272Z     "specialtyId": "al",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.0410565Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.0410878Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.0411118Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.0411366Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.0980390Z [2026-11-17T15:16:29.097Z]  "GET /resume?specialty-id=al&include-photo=true&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.9710163Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.9710726Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.9711649Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.9712473Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=al&include-photo=false&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.9713331Z     "specialtyId": "al",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.9713756Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.9714393Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.9714909Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:29.9715232Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:30.0378829Z [2026-11-17T15:16:30.037Z]  "GET /resume?specialty-id=al&include-photo=false&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:30.9174771Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:30.9175154Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:30.9175516Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:30.9176143Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=be&include-photo=true&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:30.9176950Z     "specialtyId": "be",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:30.9177257Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:30.9177594Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:30.9177861Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:30.9178083Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:31.0009376Z [2026-11-17T15:16:30.999Z]  "GET /resume?specialty-id=be&include-photo=true&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:31.9521203Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:31.9521997Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:31.9522648Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:31.9523513Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=be&include-photo=false&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:31.9524396Z     "specialtyId": "be",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:31.9524863Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:31.9525319Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:31.9525917Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:31.9526766Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:32.0244657Z [2026-11-17T15:16:32.024Z]  "GET /resume?specialty-id=be&include-photo=false&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:32.9349900Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:32.9350431Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:32.9354338Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:32.9354980Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fe&include-photo=true&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:32.9355865Z     "specialtyId": "fe",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:32.9356236Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:32.9356682Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:32.9369470Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:32.9369748Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:32.9908256Z [2026-11-17T15:16:32.989Z]  "GET /resume?specialty-id=fe&include-photo=true&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:33.8910423Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:33.8919296Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:33.8919865Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:33.8920495Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fe&include-photo=false&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:33.8921189Z     "specialtyId": "fe",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:33.8921486Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:33.8921771Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:33.8922024Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:33.8922244Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:33.9654912Z [2026-11-17T15:16:33.964Z]  "GET /resume?specialty-id=fe&include-photo=false&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:34.8473613Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:34.8474042Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:34.8474459Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:34.8475117Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fs&include-photo=true&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:34.8516970Z     "specialtyId": "fs",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:34.8517421Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:34.8517761Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:34.8518024Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:34.8518228Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:34.9290458Z [2026-11-17T15:16:34.928Z]  "GET /resume?specialty-id=fs&include-photo=true&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:35.8638907Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:35.8639621Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:35.8640172Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:35.8640940Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fs&include-photo=false&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:35.8641712Z     "specialtyId": "fs",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:35.8642089Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:35.8642487Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:35.8642818Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:35.8649455Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:35.9268179Z [2026-11-17T15:16:35.924Z]  "GET /resume?specialty-id=fs&include-photo=false&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:36.8705414Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:36.8705945Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:36.8708281Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:36.8709103Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=w3&include-photo=true&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:36.8709915Z     "specialtyId": "w3",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:36.8710273Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:36.8710636Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:36.8710970Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:36.8711254Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:36.9548733Z [2026-11-17T15:16:36.954Z]  "GET /resume?specialty-id=w3&include-photo=true&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:37.8881315Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:37.8881836Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:37.8882183Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:37.8882816Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=w3&include-photo=false&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:37.8883497Z     "specialtyId": "w3",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:37.8883828Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:37.8884134Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:37.8884409Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:37.8884632Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:37.9550859Z [2026-11-17T15:16:37.954Z]  "GET /resume?specialty-id=w3&include-photo=false&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.0411652Z Pdf creation complete.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1362534Z Ghostscript will process pdf files against following specs:
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1363200Z   Photo variants: 'p n '
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1363670Z   Specialty id variants: 'al be fe fs w3 '
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1364419Z   Paper format short code variants: '4 l '
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1364729Z Raw folder content: 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1365225Z Raf folder: /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/raw
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1401208Z total 2156
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1401623Z drwxrwxrwx 2 root  root              4096 Nov 17 15:16 .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1402152Z drwxrwxrwx 5 root  root              4096 Nov 17 15:15 ..
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1402713Z -rw-r--r-- 1 10042 systemd-journal  96596 Nov 17 15:16 resume-aln4-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1403483Z -rw-r--r-- 1 10042 systemd-journal  96429 Nov 17 15:16 resume-alnl-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1404176Z -rw-r--r-- 1 10042 systemd-journal 136409 Nov 17 15:16 resume-alp4-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1404842Z -rw-r--r-- 1 10042 systemd-journal 136374 Nov 17 15:16 resume-alpl-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1405517Z -rw-r--r-- 1 10042 systemd-journal  83762 Nov 17 15:16 resume-ben4-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1406207Z -rw-r--r-- 1 10042 systemd-journal  83484 Nov 17 15:16 resume-benl-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1407042Z -rw-r--r-- 1 10042 systemd-journal 123837 Nov 17 15:16 resume-bep4-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1407822Z -rw-r--r-- 1 10042 systemd-journal 123550 Nov 17 15:16 resume-bepl-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1408415Z -rw-r--r-- 1 10042 systemd-journal  80147 Nov 17 15:16 resume-fen4-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1409255Z -rw-r--r-- 1 10042 systemd-journal  80138 Nov 17 15:16 resume-fenl-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1409842Z -rw-r--r-- 1 10042 systemd-journal 120214 Nov 17 15:16 resume-fep4-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1410429Z -rw-r--r-- 1 10042 systemd-journal 120108 Nov 17 15:16 resume-fepl-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1411026Z -rw-r--r-- 1 10042 systemd-journal  90480 Nov 17 15:16 resume-fsn4-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1411608Z -rw-r--r-- 1 10042 systemd-journal  90435 Nov 17 15:16 resume-fsnl-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1412191Z -rw-r--r-- 1 10042 systemd-journal 130395 Nov 17 15:16 resume-fsp4-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1412786Z -rw-r--r-- 1 10042 systemd-journal 130436 Nov 17 15:16 resume-fspl-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1413379Z -rw-r--r-- 1 10042 systemd-journal  86833 Nov 17 15:16 resume-w3n4-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1413955Z -rw-r--r-- 1 10042 systemd-journal  86667 Nov 17 15:16 resume-w3nl-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1414530Z -rw-r--r-- 1 10042 systemd-journal 126815 Nov 17 15:16 resume-w3p4-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1415109Z -rw-r--r-- 1 10042 systemd-journal 126981 Nov 17 15:16 resume-w3pl-raw.pdf
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1416091Z Optimizing resume: 'alp4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1665845Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-alp4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1667120Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1734210Z Optimizing resume: 'alpl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1971176Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-alpl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1972475Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.1984196Z Optimizing resume: 'bep4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.2219816Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-bep4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.2220918Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.2232439Z Optimizing resume: 'bepl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.2473231Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-bepl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.2474312Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.2486936Z Optimizing resume: 'fep4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.2725013Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fep4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.2726773Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.2738898Z Optimizing resume: 'fepl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.2973773Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fepl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.2974881Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.2987115Z Optimizing resume: 'fsp4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.3223595Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fsp4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.3224658Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.3237038Z Optimizing resume: 'fspl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.3471923Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fspl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.3473092Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.3484927Z Optimizing resume: 'w3p4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.3800516Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-w3p4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.3840662Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.3853950Z Optimizing resume: 'w3pl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.4095670Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-w3pl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.4096723Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.4108534Z Optimizing resume: 'aln4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.4337190Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-aln4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.4337861Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.4349886Z Optimizing resume: 'alnl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.4580736Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-alnl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.4581739Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.4593363Z Optimizing resume: 'ben4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.4822185Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-ben4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.4823221Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.4834715Z Optimizing resume: 'benl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.5062574Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-benl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.5063630Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.5075122Z Optimizing resume: 'fen4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.5304504Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fen4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.5305519Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.5317044Z Optimizing resume: 'fenl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.5548545Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fenl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.5549592Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.5561026Z Optimizing resume: 'fsn4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.5789314Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fsn4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.5790711Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.5801973Z Optimizing resume: 'fsnl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.6034335Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fsnl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.6035333Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.6046736Z Optimizing resume: 'w3n4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.6275708Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-w3n4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.6276761Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.6287777Z Optimizing resume: 'w3nl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.6518190Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-w3nl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:39.6518820Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:16:44.6564470Z ##[error]Process completed with exit code 1.
