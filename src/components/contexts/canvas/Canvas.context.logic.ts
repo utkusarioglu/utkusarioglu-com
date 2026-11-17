@@ -24,7 +24,7 @@ function init({ canvas, width, height }: InitParams): PerlinDrawer {
     if (!offscreen) {
       offscreen = canvas.transferControlToOffscreen();
       worker = new Worker(
-        new URL("_workers/perlin.worker.ts", import.meta.url)
+        new URL("_workers/perlin.worker.ts", import.meta.url),
       );
       const message: PerlinTargetMessage = {
         type: "setCanvas",
@@ -65,7 +65,7 @@ function init({ canvas, width, height }: InitParams): PerlinDrawer {
 
 export function produceConfig(
   preset: PerlinPreset,
-  seed?: number
+  seed?: number,
 ): PerlinConfig {
   return {
     ...preset,
@@ -76,7 +76,7 @@ export function produceConfig(
 export function adjustConfig(
   preset: PerlinConfig,
   isSm: boolean,
-  theme: Theme
+  theme: Theme,
 ) {
   return {
     ...preset,
@@ -96,6 +96,8 @@ export function generateRandomConfig(): PerlinConfig {
   const hueRange = Math.round(Math.random() * (360 - hueOffset));
 
   return {
+    immediate: false,
+    immediateIterations: 100,
     name: "Random",
     hueOffset,
     hueRange,

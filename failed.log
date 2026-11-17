@@ -1,0 +1,568 @@
+build-website / build-website	UNKNOWN STEP	﻿2026-11-17T14:39:18.1854014Z Current runner version: '2.338.2'
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1872469Z ##[group]Runner Image Provisioner
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1873405Z Hosted Compute Agent
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1873887Z Version: 20261103.629
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1874325Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1874891Z Build Date: 2026-11-03T17:26:59Z
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1875427Z Worker ID: {dc28981d-af9b-447c-bcad-d8ce6a877287}
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1875936Z Region: centralus
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1876328Z Cloud: Azure
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1876694Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1877859Z ##[group]Operating System
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1878373Z Ubuntu
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1878739Z 26.04.1
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1879325Z LTS
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1879688Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1880054Z ##[group]Runner Image
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1880497Z Image: ubuntu-26.04
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1880883Z Version: 20261111.196.1
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1881818Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1883056Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1883757Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1885814Z ##[group]GITHUB_TOKEN Permissions
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1887799Z Actions: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1888213Z ArtifactMetadata: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1888671Z Attestations: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1889055Z Checks: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1889420Z CodeQuality: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1889822Z Contents: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1890208Z CopilotRequests: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1890602Z Deployments: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1891036Z Discussions: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1891396Z Drives: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1891880Z Issues: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1892345Z Metadata: read
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1892916Z Models: read
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1893315Z Packages: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1893691Z Pages: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1894086Z PullRequests: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1894491Z RepositoryProjects: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1894954Z SecurityEvents: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1895409Z Statuses: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1895804Z VulnerabilityAlerts: read
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1896223Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1897830Z Secret source: Actions
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1898581Z Cache mode: write
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1899063Z Prepare workflow directory
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.2225355Z Prepare all required actions
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.2264230Z Getting action download info
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.5241134Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.6349825Z Download action repository 'actions/cache@v6' (SHA:55cc8345863c7cc4c66a329aec7e433d2d1c52a9)
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.7421938Z Download action repository 'actions/upload-artifact@v7' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.8942248Z Uses: utkusarioglu/utkusarioglu-com/.github/workflows/build-website.yml@refs/heads/experiment/feat/resume-update (fd2f35f63a2543f7b4cfc8fc56fd546bf0ddfb3a)
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.8946567Z Complete job name: build-website / build-website
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.9406275Z ##[group]Checking docker version
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.9416861Z ##[command]/usr/bin/docker version --format '{{.Server.APIVersion}}'
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0336427Z '1.54'
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0351803Z Docker daemon API version: '1.54'
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0352521Z ##[command]/usr/bin/docker version --format '{{.Client.APIVersion}}'
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0508703Z '1.54'
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0517714Z Docker client API version: '1.54'
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0522472Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0524853Z ##[group]Clean up resources from previous jobs
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0528755Z ##[command]/usr/bin/docker ps --all --quiet --no-trunc --filter "label=68af7e"
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0666804Z ##[command]/usr/bin/docker network prune --force --filter "label=68af7e"
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0796718Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0797296Z ##[group]Create local container network
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0805483Z ##[command]/usr/bin/docker network create --label 68af7e github_network_a1d1293d9b4644fbac3eb033f0c4274a
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.1240069Z 484dbfdae624e95240591abb64475f5f88f9a8db2da82b418be06d71038bfca2
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.1255134Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.1277581Z ##[group]Starting job container
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.1296668Z ##[command]/usr/bin/docker pull utkusarioglu/react-native-android-devcontainer:36-24-ubuntu-test-27
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.6480678Z 36-24-ubuntu-test-27: Pulling from utkusarioglu/react-native-android-devcontainer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1026192Z 2fea5c06077b: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1032106Z b6ee21cd8f7a: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1033156Z f110c3457340: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1033631Z 489ce25c545c: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1034059Z 4e73c6afaccc: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1034714Z 4f4fb700ef54: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1035208Z 4f4fb700ef54: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1035772Z 33d81b5c1b06: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1036238Z 99bf79fa0c27: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1036687Z d7632f814f7d: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1037112Z 1bf6eef35d94: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1037517Z 6be0facac74a: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1037934Z 4f4fb700ef54: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1038357Z 14480dcb5d6e: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1038794Z 4f4fb700ef54: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1039488Z 11adf9c03388: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1040038Z 5842f32d5898: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1040480Z a0934de6955c: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1040886Z f031410b7606: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1041301Z ff6801417c2a: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1041730Z 98d7932c34c0: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1042134Z b9689671207e: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1042542Z 1db6bdfb2f06: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1043196Z 261394d147b3: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1043648Z bcd3ebfea966: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1044123Z 4f4fb700ef54: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1044537Z ed22f604d169: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1045053Z 69ac71b7d7c0: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1045606Z c8a4bc84f1aa: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1046336Z 8f7570d65123: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1046914Z 630dc3037c36: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1047377Z 4f4fb700ef54: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1047872Z 34a9b767ed6c: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1048521Z fe4a27fbd9cd: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1049056Z 16adbbd32552: Pulling fs layer
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1455004Z 4f4fb700ef54: Already exists
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.3447983Z bcd3ebfea966: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.3451525Z a82a68a49cd0: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.5220598Z 261394d147b3: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.5222160Z 4e73c6afaccc: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.6464466Z 69ac71b7d7c0: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.6466058Z 14480dcb5d6e: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.8501316Z c8a4bc84f1aa: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.9451869Z ff6801417c2a: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:21.3447834Z ed22f604d169: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:22.2441032Z 98d7932c34c0: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:22.6452735Z b6ee21cd8f7a: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:22.8474006Z 2fea5c06077b: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.0448297Z 1bf6eef35d94: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1445468Z 99bf79fa0c27: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1458167Z 11adf9c03388: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1464684Z a0934de6955c: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1465265Z f110c3457340: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1465596Z 5842f32d5898: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1465917Z 8f7570d65123: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1466316Z 33d81b5c1b06: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1471435Z d7632f814f7d: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1489926Z b9689671207e: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1512540Z 1db6bdfb2f06: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1513908Z 34a9b767ed6c: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1514581Z 16adbbd32552: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1514918Z f031410b7606: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1515383Z 489ce25c545c: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1515779Z 6be0facac74a: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.6467740Z 4e73c6afaccc: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.6550919Z 2fea5c06077b: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.6677407Z 489ce25c545c: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.6697201Z 6be0facac74a: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.7511075Z ed22f604d169: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:24.0532557Z 11adf9c03388: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:24.5661385Z f031410b7606: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:25.5683903Z b9689671207e: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:25.6464637Z bcd3ebfea966: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:25.9469370Z 14480dcb5d6e: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:25.9490323Z ff6801417c2a: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:25.9531685Z 1bf6eef35d94: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:25.9546472Z 99bf79fa0c27: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:25.9568310Z 5842f32d5898: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:26.1535309Z 1db6bdfb2f06: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:26.2444474Z 4f4fb700ef54: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:26.2557104Z f110c3457340: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:26.2578921Z 33d81b5c1b06: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:26.5522940Z d7632f814f7d: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:27.9501521Z a0934de6955c: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:28.0464201Z c8a4bc84f1aa: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:28.0482112Z 98d7932c34c0: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:28.1440697Z 261394d147b3: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:28.1450052Z 69ac71b7d7c0: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:28.2465436Z 8f7570d65123: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:32.8435764Z fe4a27fbd9cd: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:37.8444171Z 630dc3037c36: Download complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:40.1483987Z fe4a27fbd9cd: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:40.2479296Z 16adbbd32552: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:51.7295547Z b6ee21cd8f7a: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:51.7311258Z 34a9b767ed6c: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:51.7321802Z 630dc3037c36: Pull complete
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:51.7322438Z Digest: sha256:f116cd4f92f5bd93ab0c6a05d5916edb198d7a23f7de8823d64d89f8407e6b4d
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:51.7323227Z Status: Downloaded newer image for utkusarioglu/react-native-android-devcontainer:36-24-ubuntu-test-27
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:51.7332930Z docker.io/utkusarioglu/react-native-android-devcontainer:36-24-ubuntu-test-27
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:51.7426345Z ##[command]/usr/bin/docker create --name 9355a95b0b6c41a19ef776acdf636350_utkusarioglureactnativeandroiddevcontainer3624ubuntutest27_3e0136 --label 68af7e --workdir /__w/utkusarioglu-com/utkusarioglu-com --network github_network_a1d1293d9b4644fbac3eb033f0c4274a --user 0:0 -e "HOME=/github/home" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work":"/__w" -v "/home/runner/actions-runner/cached/2.338.2/externals":"/__e":ro -v "/home/runner/work/_temp":"/__w/_temp" -v "/home/runner/work/_actions":"/__w/_actions" -v "/opt/hostedtoolcache":"/__t" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" --entrypoint "tail" utkusarioglu/react-native-android-devcontainer:36-24-ubuntu-test-27 "-f" "/dev/null"
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.1510065Z bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.1531741Z ##[command]/usr/bin/docker start bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3045767Z bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3064339Z ##[command]/usr/bin/docker ps --all --filter id=bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a --filter status=running --no-trunc --format "{{.ID}} {{.Status}}"
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3293583Z bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a Up Less than a second
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3309189Z ##[command]/usr/bin/docker inspect --format "{{range .Config.Env}}{{println .}}{{end}}" bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3418331Z HOME=/github/home
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3424440Z GITHUB_ACTIONS=true
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3424841Z CI=true
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3425573Z PATH=/opt/android/cmake/4.0.2/bin:/opt/android/cmdline-tools/latest/bin:/opt/android/emulator:/opt/android/platform-tools:/opt/android/tools:/opt/android/tools/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3426196Z EDITOR=nvim
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3426420Z DEBIAN_FRONTEND=noninteractive
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3426658Z ADB_INSTALL_TIMEOUT=10
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3426941Z ANDROID_HOME=/opt/android
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3427195Z ANDROID_SDK_ROOT=/opt/android
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3427446Z ANDROID_NDK_HOME=/opt/android/ndk/29.0.13599879
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3427789Z JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3428061Z CMAKE_BIN_PATH=/opt/android/cmake/4.0.2/bin
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3436417Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3444446Z ##[group]Waiting for all services to be ready
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3446250Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3674824Z ##[group]Run actions/checkout@v7
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3675278Z with:
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3675527Z   repository: utkusarioglu/utkusarioglu-com
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3677497Z   token: ***
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3677740Z   ssh-strict: true
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3677987Z   ssh-user: git
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3678216Z   persist-credentials: true
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3678451Z   clean: true
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3678680Z   sparse-checkout-cone-mode: true
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3678946Z   fetch-depth: 1
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3679144Z   fetch-tags: false
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3679378Z   show-progress: true
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3679588Z   lfs: false
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3679788Z   submodules: false
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3680035Z   set-safe-directory: true
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3680293Z   allow-unsafe-pr-checkout: false
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3680635Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3731543Z ##[command]/usr/bin/docker exec  bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a sh -c "cat /etc/*release | grep ^ID"
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6925629Z Syncing repository: utkusarioglu/utkusarioglu-com
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6927237Z ##[group]Getting Git version info
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6927650Z Working directory is '/__w/utkusarioglu-com/utkusarioglu-com'
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6928353Z [command]/usr/bin/git version
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6928665Z git version 2.43.0
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6929838Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6936920Z Temporarily overriding HOME='/__w/_temp/b7784070-e53d-468f-a751-8f864981f5a3' before making global git config changes
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6937670Z Adding repository directory to the temporary git global config as a safe directory
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6940075Z [command]/usr/bin/git config --global --add safe.directory /__w/utkusarioglu-com/utkusarioglu-com
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6971459Z Deleting the contents of '/__w/utkusarioglu-com/utkusarioglu-com'
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6972350Z ##[group]Determining repository object format
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6973018Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6973610Z ##[group]Initializing the repository
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6974074Z [command]/usr/bin/git init /__w/utkusarioglu-com/utkusarioglu-com
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6996855Z hint: Using 'master' as the name for the initial branch. This default branch name
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6997369Z hint: is subject to change. To configure the initial branch name to use in all
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6997990Z hint: of your new repositories, which will suppress this warning, call:
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6998434Z hint: 
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6998760Z hint: 	git config --global init.defaultBranch <name>
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6999076Z hint: 
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6999360Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6999754Z hint: 'development'. The just-created branch can be renamed via this command:
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7000131Z hint: 
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7000386Z hint: 	git branch -m <name>
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7008800Z Initialized empty Git repository in /__w/utkusarioglu-com/utkusarioglu-com/.git/
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7016931Z [command]/usr/bin/git remote add origin https://github.com/utkusarioglu/utkusarioglu-com
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7042896Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7043541Z ##[group]Disabling automatic garbage collection
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7045004Z [command]/usr/bin/git config --local gc.auto 0
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7067567Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7068190Z ##[group]Setting up auth
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7068524Z Removing SSH command configuration
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7071243Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7091795Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7251724Z Removing HTTP extra header
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7255375Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7277478Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7431619Z Removing includeIf entries pointing to credentials config files
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7435431Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7456509Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7622135Z [command]/usr/bin/git config --file /__w/_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7658612Z [command]/usr/bin/git config --local includeIf.gitdir:/__w/utkusarioglu-com/utkusarioglu-com/.git.path /__w/_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7681210Z [command]/usr/bin/git config --local includeIf.gitdir:/__w/utkusarioglu-com/utkusarioglu-com/.git/worktrees/*.path /__w/_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7705520Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7885563Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7908230Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7908606Z ##[group]Fetching the repository
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7913184Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +fd2f35f63a2543f7b4cfc8fc56fd546bf0ddfb3a:refs/remotes/origin/experiment/feat/resume-update
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7112195Z From https://github.com/utkusarioglu/utkusarioglu-com
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7113265Z  * [new ref]         fd2f35f63a2543f7b4cfc8fc56fd546bf0ddfb3a -> origin/experiment/feat/resume-update
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7129022Z [command]/usr/bin/git branch --list --remote origin/experiment/feat/resume-update
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7150599Z   origin/experiment/feat/resume-update
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7157396Z [command]/usr/bin/git rev-parse refs/remotes/origin/experiment/feat/resume-update
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7177483Z fd2f35f63a2543f7b4cfc8fc56fd546bf0ddfb3a
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7178724Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7179263Z ##[group]Determining the checkout info
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7182010Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7182821Z [command]/usr/bin/git sparse-checkout disable
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7218880Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7245399Z ##[group]Checking out the ref
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7247829Z [command]/usr/bin/git checkout --progress --force -B experiment/feat/resume-update refs/remotes/origin/experiment/feat/resume-update
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7988952Z Switched to a new branch 'experiment/feat/resume-update'
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7989662Z branch 'experiment/feat/resume-update' set up to track 'origin/experiment/feat/resume-update'.
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7995838Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8034824Z [command]/usr/bin/git log -1 --format=%H
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8047964Z fd2f35f63a2543f7b4cfc8fc56fd546bf0ddfb3a
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8726860Z ##[group]Run actions/cache@v6
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8727123Z with:
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8727361Z   path: node_modules
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8727720Z   key: node-modules-cache-66483e7ba46a102d2460075d88697dd521c6846d8476ec97bdb4629af27f86c6
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8728126Z   restore-keys: node-modules-cache-
+build-website / build-website	UNKNOWN STEP	
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8728388Z   enableCrossOsArchive: false
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8728651Z   fail-on-cache-miss: false
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8728903Z   lookup-only: false
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8729115Z   save-always: false
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8729336Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8733882Z ##[command]/usr/bin/docker exec  bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a sh -c "cat /etc/*release | grep ^ID"
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.1935062Z Cache not found for input keys: node-modules-cache-66483e7ba46a102d2460075d88697dd521c6846d8476ec97bdb4629af27f86c6, node-modules-cache-
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.2065148Z ##[group]Run yarn
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.2065503Z [36;1myarn[0m
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.2069093Z shell: sh -e {0}
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.2069342Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.4211565Z ! Corepack is about to download https://registry.yarnpkg.com/yarn/-/yarn-1.22.22.tgz
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.7626823Z yarn install v1.22.22
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.8126098Z [1/4] Resolving packages...
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.9420263Z (node:175) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.9421013Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.9427914Z [2/4] Fetching packages...
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:20.6596320Z warning url-loader@1.1.2: Invalid bin field for "url-loader".
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.6949261Z [3/4] Linking dependencies...
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.6970341Z warning "next-pwa > babel-loader@8.2.5" has unmet peer dependency "@babel/core@^7.0.0".
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.6971020Z warning "next-pwa > babel-loader@8.2.5" has unmet peer dependency "webpack@>=2".
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.6971718Z warning "next-pwa > clean-webpack-plugin@4.0.0" has unmet peer dependency "webpack@>=4.0.0 <6.0.0".
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.6972331Z warning "next-pwa > terser-webpack-plugin@5.3.3" has unmet peer dependency "webpack@^5.1.0".
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.6973050Z warning "next-pwa > workbox-webpack-plugin@6.5.3" has unmet peer dependency "webpack@^4.4.0 || ^5.9.0".
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.6994586Z warning " > react-ga@3.3.1" has unmet peer dependency "prop-types@^15.6.0".
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.6997424Z warning " > @testing-library/user-event@12.8.3" has unmet peer dependency "@testing-library/dom@>=7.21.4".
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7000794Z warning "@types/react-ga > react-ga@3.3.0" has unmet peer dependency "prop-types@^15.6.0".
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7016292Z warning "eslint-config-react-app > eslint-plugin-flowtype@8.0.3" has unmet peer dependency "@babel/plugin-syntax-flow@^7.14.5".
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7017850Z warning "eslint-config-react-app > eslint-plugin-flowtype@8.0.3" has unmet peer dependency "@babel/plugin-transform-react-jsx@^7.14.9".
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7020089Z warning "next-optimized-images > file-loader@3.0.1" has unmet peer dependency "webpack@^4.0.0".
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7021154Z warning "next-optimized-images > raw-loader@2.0.0" has unmet peer dependency "webpack@^4.3.0".
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7021866Z warning "next-optimized-images > url-loader@1.1.2" has unmet peer dependency "webpack@^3.0.0 || ^4.0.0".
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7022506Z warning " > responsive-loader@3.0.4" has unmet peer dependency "webpack@^5.73.0".
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7023492Z warning " > webpack-plugin-pwa-manifest@1.1.1" has unmet peer dependency "html-webpack-plugin@>=4 <5".
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7024231Z warning " > webpack-plugin-pwa-manifest@1.1.1" has unmet peer dependency "webpack@>=4.39.0 <5".
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:32.0716015Z [4/4] Building fresh packages...
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.3317498Z Done in 33.57s.
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5229887Z ##[group]Run actions/cache@v6
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5230143Z with:
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5230361Z   path: build
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5230710Z   key: nextjs-build-cache-029a321f70556baac0444dc15b444695f67a21c1fa3fdae1830947630b278505
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5231110Z   restore-keys: nextjs-build-cache
+build-website / build-website	UNKNOWN STEP	
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5231393Z   enableCrossOsArchive: false
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5231711Z   fail-on-cache-miss: false
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5231960Z   lookup-only: false
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5232174Z   save-always: false
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5232393Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5236488Z ##[command]/usr/bin/docker exec  bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a sh -c "cat /etc/*release | grep ^ID"
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.8530474Z Cache not found for input keys: nextjs-build-cache-029a321f70556baac0444dc15b444695f67a21c1fa3fdae1830947630b278505, nextjs-build-cache
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.8635380Z ##[group]Run yarn export
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.8635667Z [36;1myarn export[0m
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.8636014Z shell: sh -e {0}
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.8636214Z env:
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.8636467Z   SUBDOMAIN: experiment/feat/resume-update
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.8636725Z ##[endgroup]
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.0174324Z yarn run v1.22.22
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.0361927Z $ next build && next export -o build
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6662972Z next.config using env:
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6663410Z  {
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6663977Z   GITHUB_STATE: '/__w/_temp/_runner_file_commands/save_state_a42be946-9af7-41fe-8de9-4c07589dfea4',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6664602Z   npm_package_devDependencies__types_node: '^12.0.0',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6665098Z   npm_package_devDependencies_xml_writer: '^1.7.0',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6665574Z   npm_package_devDependencies_webpack_plugin_pwa_manifest: '^1.1.1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6666001Z   npm_package_devDependencies_jest: '^28.1.3',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6666670Z   npm_package_devDependencies__testing_library_jest_dom: '^5.11.4',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6667142Z   npm_config_version_commit_hooks: 'true',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6667603Z   npm_config_user_agent: 'yarn/1.22.22 npm/? node/v24.4.0 linux x64',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6667990Z   CI: 'true',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6668346Z   npm_package_devDependencies__testing_library_user_event: '^12.1.10',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6668877Z   npm_package_devDependencies__next_eslint_plugin_next: '^12.2.0',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6669347Z   npm_package_dependencies_react_device_detect: '^2.2.2',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6669794Z   npm_package_dependencies_formik: '^2.2.9',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6670202Z   npm_config_bin_links: 'true',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6670545Z   HOSTNAME: 'bbaf7e4ddbe1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6671146Z   GITHUB_ENV: '/__w/_temp/_runner_file_commands/set_env_a42be946-9af7-41fe-8de9-4c07589dfea4',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6671706Z   RUNNER_ENVIRONMENT: 'github-hosted',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6672114Z   npm_node_execpath: '/usr/bin/node',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6672535Z   npm_package_devDependencies_eslint_config_next: '12.2.0',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6673181Z   npm_config_init_version: '1.0.0',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6673629Z   npm_package_dependencies__badrap_bar_of_progress: '^0.2.1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6674059Z   HOME: '/github/home',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6674402Z   npm_package_browserslist_production_0: '>0.2%',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6674783Z   npm_package_devDependencies_to_ico: '^1.1.5',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6675168Z   npm_package_devDependencies_sass: '^1.53.0',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6675665Z   GITHUB_EVENT_PATH: '/github/workflow/event.json',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6676065Z   RUNNER_TEMP: '/__w/_temp',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6676414Z   npm_package_browserslist_production_1: 'not dead',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6676792Z   GITHUB_REPOSITORY_OWNER: 'utkusarioglu',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6677510Z   COREPACK_ROOT: '/usr/lib/node_modules/corepack',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6677984Z   npm_package_browserslist_production_2: 'not op_mini all',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6678426Z   npm_package_dependencies_framer_motion: '^6.3.6',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6678804Z   npm_config_init_license: 'MIT',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6679141Z   GITHUB_RETENTION_DAYS: '90',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6679508Z   YARN_WRAP_OUTPUT: 'false',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6679941Z   npm_package_devDependencies_imagemin_svgo: '^9.0.0',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6680353Z   npm_config_version_tag_prefix: 'v',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6680723Z   GITHUB_REPOSITORY_OWNER_ID: '32932503',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6681102Z   GITHUB_HEAD_REF: '',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6681462Z   npm_package_devDependencies__types_react_ga: '^2.3.0',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6681974Z   npm_package_devDependencies__types_color_convert: '^2.0.3',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6682588Z   ACTIONS_ORCHESTRATION_ID: '8d5404cc-556c-8d1b-a382-0a79d805f547.build-website.build-website.__default',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6683552Z   npm_package_devDependencies_eslint_plugin_react_hooks: '^4.6.0',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6684067Z   GITHUB_GRAPHQL_URL: 'https://api.github.com/graphql',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6685129Z   npm_package_description: 'This is the code for my personal site. At this point this code only renders a single route with only 2 nav items in the page.',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6685862Z   npm_package_devDependencies_typescript: '^4.0.3',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6686311Z   npm_package_devDependencies_tailwindcss: '^3.0.24',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6686713Z   npm_package_dependencies_react_router_dom: '^6.2.1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6687198Z   npm_package_dependencies_react_error_boundary: '^3.1.4',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6687671Z   SUBDOMAIN: 'experiment/feat/resume-update',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6688126Z   npm_package_readmeFilename: 'README.md',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6688561Z   npm_package_devDependencies_next_compose_plugins: '^2.2.1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6688994Z   npm_package_devDependencies__types_react_dom: '18.0.5',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6689457Z   COREPACK_ENABLE_DOWNLOAD_PROMPT: '1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6689894Z   npm_package_scripts_dev: 'scripts/start-dev-server.sh',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6690340Z   GITHUB_API_URL: 'https://api.github.com',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6690914Z   GITHUB_ARTIFACTS: '/__w/_temp/_runner_file_commands/artifacts_a42be946-9af7-41fe-8de9-4c07589dfea4',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6691461Z   RUNNER_OS: 'Linux',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6691874Z   npm_package_scripts_clean: 'scripts/clean.sh',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6692313Z   GITHUB_WORKFLOW: 'build-pdfs',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6692923Z   npm_package_devDependencies_autoprefixer: '^10.4.7',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6693385Z   npm_package_devDependencies__types_jest: '^26.0.15',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6693756Z   npm_package_private: 'true',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6694287Z   npm_config_registry: 'https://registry.yarnpkg.com',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6694755Z   GITHUB_RUN_ID: '44105465616',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6695207Z   npm_package_devDependencies_next_optimized_images: '^2.6.2',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6695727Z   npm_package_scripts_export: 'next build && next export -o build',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6696181Z   ADB_INSTALL_TIMEOUT: '10',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6696522Z   GITHUB_BASE_REF: '',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6696869Z   GITHUB_REF_TYPE: 'branch',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6697244Z   GITHUB_WORKFLOW_SHA: 'fd2f35f63a2543f7b4cfc8fc56fd546bf0ddfb3a',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6697836Z   npm_config_ignore_scripts: '',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6698506Z   GITHUB_WORKFLOW_REF: 'utkusarioglu/utkusarioglu-com/.github/workflows/build-pdfs.yml@refs/heads/experiment/feat/resume-update',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6699247Z   GITHUB_ACTION_REPOSITORY: '',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6699675Z   npm_package_browserslist_development_0: 'last 1 chrome version',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6701513Z   PATH: '/tmp/yarn--1794926444037-0.2255995644826334:/__w/utkusarioglu-com/utkusarioglu-com/node_modules/.bin:/usr/local/share/.config/yarn/link/node_modules/.bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/opt/android/cmake/4.0.2/bin:/opt/android/cmdline-tools/latest/bin:/opt/android/emulator:/opt/android/platform-tools:/opt/android/tools:/opt/android/tools/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6703709Z   NODE: '/usr/bin/node',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6704077Z   RUNNER_TOOL_CACHE: '/__t',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6704586Z   npm_package_browserslist_development_1: 'last 1 firefox version',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6705044Z   npm_package_dependencies_react_ga: '^3.3.1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6705478Z   npm_package_name: 'utkusarioglu-com.utkusarioglu.com',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6705931Z   GITHUB_RUN_NUMBER: '11',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6706256Z   GITHUB_TRIGGERING_ACTOR: 'utkusarioglu',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6706619Z   GITHUB_ACTION: 'export',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6706965Z   RUNNER_ARCH: 'X64',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6707291Z   npm_package_browserslist_development_2: 'last 1 safari version',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6707783Z   npm_package_devDependencies_local_ssl_proxy: '^1.3.0',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6708241Z   npm_package_scripts_local: 'scripts/start-local-server.sh',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6709227Z   npm_package_scripts_unit_test: "echo this isn't implemented yet",
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6709931Z   npm_package_devDependencies_eslint: '^8.19.0',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6710392Z   npm_package_dependencies_tailwind_scrollbar_hide: '^1.1.7',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6710814Z   npm_package_dependencies_react_dom: '^17.0.1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6711217Z   GITHUB_REPOSITORY: 'utkusarioglu/utkusarioglu-com',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6711759Z   GITHUB_REF_NAME: 'experiment/feat/resume-update',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6712203Z   RUNNER_NAME: 'GitHub Actions 1000000129',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6712615Z   npm_lifecycle_script: 'next build && next export -o build',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6713306Z   DEBIAN_FRONTEND: 'noninteractive',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6713666Z   GITHUB_ACTION_REF: '',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6714032Z   npm_package_dependencies_tailwind_scrollbar: '^1.3.1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6714519Z   npm_package_dependencies_react_responsive: '^9.0.0-beta.10',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6714893Z   npm_config_version_git_message: 'v%s',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6715244Z   GITHUB_ACTIONS: 'true',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6715603Z   CMAKE_BIN_PATH: '/opt/android/cmake/4.0.2/bin',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6715926Z   GITHUB_REPOSITORY_ID: '324495809',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6716256Z   npm_lifecycle_event: 'export',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6716596Z   npm_package_devDependencies_responsive_loader: '^3.0.4',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6717011Z   npm_package_devDependencies__types_react: '18.0.9',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6717438Z   npm_package_devDependencies__testing_library_react: '^11.1.0',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6717869Z   npm_package_version: '2.0.0',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6718198Z   GITHUB_REF_PROTECTED: 'false',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6718626Z   npm_config_argv: '{"remain":[],"cooked":["run","export"],"original":["export"]}',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6719154Z   npm_package_devDependencies_sharp: '^0.30.7',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6719519Z   GITHUB_JOB: 'build-website',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6720055Z   GITHUB_WORKSPACE: '/__w/utkusarioglu-com/utkusarioglu-com',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6720522Z   npm_package_devDependencies_http_server: '^14.1.1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6720940Z   npm_package_devDependencies_cypress: '^10.3.1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6721343Z   GITHUB_SHA: 'fd2f35f63a2543f7b4cfc8fc56fd546bf0ddfb3a',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6721779Z   GITHUB_RUN_ATTEMPT: '1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6722119Z   npm_package_dependencies_next_pwa: '^5.5.4',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6722488Z   npm_config_version_git_tag: 'true',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6723106Z   npm_config_version_git_sign: '',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6723421Z   ANDROID_SDK_ROOT: '/opt/android',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6723795Z   GITHUB_REF: 'refs/heads/experiment/feat/resume-update',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6724173Z   GITHUB_ACTOR: 'utkusarioglu',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6724553Z   npm_package_devDependencies_eslint_plugin_react: '^7.30.1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6724996Z   npm_package_dependencies_classnames: '^2.3.1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6725529Z   npm_config_strict_ssl: 'true',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6725957Z   npm_package_devDependencies_eslint_config_react_app: '^7.0.1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6726375Z   JAVA_HOME: '/usr/lib/jvm/java-17-openjdk-amd64',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6726770Z   GITHUB_ACTOR_ID: '32932503',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6727259Z   GITHUB_PATH: '/__w/_temp/_runner_file_commands/add_path_a42be946-9af7-41fe-8de9-4c07589dfea4',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6727810Z   RUNNER_WORKSPACE: '/__w/utkusarioglu-com',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6728274Z   PWD: '/__w/utkusarioglu-com/utkusarioglu-com',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6728785Z   npm_execpath: '/github/home/.cache/node/corepack/v1/yarn/1.22.22/bin/yarn.js',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6729333Z   npm_package_scripts_start_ssl_proxy: 'scripts/start-ssl-proxy.sh',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6729779Z   ANDROID_HOME: '/opt/android',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6730098Z   GITHUB_EVENT_NAME: 'push',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6730513Z   GITHUB_SERVER_URL: 'https://github.com',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6731017Z   GITHUB_OUTPUT: '/__w/_temp/_runner_file_commands/set_output_a42be946-9af7-41fe-8de9-4c07589dfea4',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6731533Z   npm_package_devDependencies_postcss: '^8.4.14',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6731980Z   npm_package_devDependencies_color_convert: '^2.0.1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6732541Z   npm_package_scripts_dev_insecure: 'next dev',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6733217Z   npm_config_save_prefix: '^',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6733576Z   npm_config_ignore_optional: '',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6734100Z   GITHUB_ARTIFACTS_LIST: '/__w/_temp/_runner_file_commands/artifacts_list_a42be946-9af7-41fe-8de9-4c07589dfea4',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6734738Z   npm_package_dependencies_next: '^12.1.6',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6735125Z   npm_package_dependencies_web_vitals: '^0.2.4',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6735571Z   INIT_CWD: '/__w/utkusarioglu-com/utkusarioglu-com',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6735965Z   EDITOR: 'nvim',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6736290Z   ANDROID_NDK_HOME: '/opt/android/ndk/29.0.13599879',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6736878Z   GITHUB_STEP_SUMMARY: '/__w/_temp/_runner_file_commands/step_summary_a42be946-9af7-41fe-8de9-4c07589dfea4',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6737442Z   npm_package_devDependencies_yaml: '^2.1.1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6737827Z   npm_package_dependencies_react: '^17.0.1',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6738829Z   npm_package_scripts_add_new_paper_chain_link: 'scripts/add-new-paper-chain-link.js',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6739302Z   NODE_ENV: 'production',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6739594Z   NEXT_RUNTIME: 'nodejs',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6739876Z   VIPS_MIN_STACK_SIZE: '2m',
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6740178Z   VIPSHOME: '/target'
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6740463Z }
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6744776Z warn  - No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.8602526Z Attention: Next.js now collects completely anonymous telemetry regarding usage.
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.8604589Z This information is used to shape Next.js' roadmap and prioritize features.
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.8605622Z You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.8606614Z https://nextjs.org/telemetry
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.8607102Z 
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.8774556Z Browserslist: caniuse-lite is outdated. Please run:
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.8775082Z   npx browserslist@latest --update-db
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.8775817Z   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.9056216Z info  - Checking validity of types...
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5545022Z Failed to compile.
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5545530Z 
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5548677Z ./src/components/contexts/canvas/Canvas.context.logic.ts:98:3
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5549602Z Type error: Type '{ name: string; hueOffset: number; hueRange: number; freq: number; particleCount: number; particleSize: number; saturation: number; luminance: number; maxDuration: number; seed: number; }' is not assignable to type 'PerlinConfig'.
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5551098Z   Type '{ name: string; hueOffset: number; hueRange: number; freq: number; particleCount: number; particleSize: number; saturation: number; luminance: number; maxDuration: number; seed: number; }' is missing the following properties from type 'PerlinPreset': immediate, immediateIterations
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5552319Z 
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5553419Z [0m [90m  96 | [39m  [36mconst[39m hueRange [33m=[39m [33mMath[39m[33m.[39mround([33mMath[39m[33m.[39mrandom() [33m*[39m ([35m360[39m [33m-[39m hueOffset))[33m;[39m[0m
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5554262Z [0m [90m  97 | [39m[0m
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5554764Z [0m[31m[1m>[22m[39m[90m  98 | [39m  [36mreturn[39m {[0m
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5555342Z [0m [90m     | [39m  [31m[1m^[22m[39m[0m
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5555879Z [0m [90m  99 | [39m    name[33m:[39m [32m"Random"[39m[33m,[39m[0m
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5556381Z [0m [90m 100 | [39m    hueOffset[33m,[39m[0m
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5556817Z [0m [90m 101 | [39m    hueRange[33m,[39m[0m
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5894875Z error Command failed with exit code 1.
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5895515Z info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.6014972Z ##[error]Process completed with exit code 1.
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.6155618Z Post job cleanup.
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.6163985Z ##[command]/usr/bin/docker exec  bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a sh -c "cat /etc/*release | grep ^ID"
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.7697146Z [command]/usr/bin/git version
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.7737950Z git version 2.43.0
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.7768741Z Temporarily overriding HOME='/__w/_temp/d9429907-f7de-4bed-8f55-dce1c47a9432' before making global git config changes
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.7771195Z Adding repository directory to the temporary git global config as a safe directory
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.7773336Z [command]/usr/bin/git config --global --add safe.directory /__w/utkusarioglu-com/utkusarioglu-com
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.7877263Z Removing SSH command configuration
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.7878282Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.7906563Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8130767Z Removing HTTP extra header
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8131624Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8164619Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8325604Z Removing includeIf entries pointing to credentials config files
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8329782Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8347958Z includeif.gitdir:/__w/utkusarioglu-com/utkusarioglu-com/.git.path
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8348751Z includeif.gitdir:/__w/utkusarioglu-com/utkusarioglu-com/.git/worktrees/*.path
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8349322Z includeif.gitdir:/github/workspace/.git.path
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8349944Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8353840Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/__w/utkusarioglu-com/utkusarioglu-com/.git.path
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8384222Z /__w/_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8388052Z [command]/usr/bin/git config --local --unset includeif.gitdir:/__w/utkusarioglu-com/utkusarioglu-com/.git.path \/__w\/_temp\/git\-credentials\-a3734864\-0c14\-4431\-b9c3\-f778ea3d8d18\.config
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8468847Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/__w/utkusarioglu-com/utkusarioglu-com/.git/worktrees/*.path
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8490596Z /__w/_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8503013Z [command]/usr/bin/git config --local --unset includeif.gitdir:/__w/utkusarioglu-com/utkusarioglu-com/.git/worktrees/*.path \/__w\/_temp\/git\-credentials\-a3734864\-0c14\-4431\-b9c3\-f778ea3d8d18\.config
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8697185Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8714540Z /github/runner_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8719976Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-a3734864\-0c14\-4431\-b9c3\-f778ea3d8d18\.config
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8749203Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8766761Z /github/runner_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8772111Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-a3734864\-0c14\-4431\-b9c3\-f778ea3d8d18\.config
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8816108Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8971324Z Removing credentials config '/__w/_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config'
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.9099090Z Stop and remove container: 9355a95b0b6c41a19ef776acdf636350_utkusarioglureactnativeandroiddevcontainer3624ubuntutest27_3e0136
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.9103302Z ##[command]/usr/bin/docker rm --force bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:41:04.6191330Z bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:41:04.6218332Z Remove container network: github_network_a1d1293d9b4644fbac3eb033f0c4274a
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:41:04.6221175Z ##[command]/usr/bin/docker network rm github_network_a1d1293d9b4644fbac3eb033f0c4274a
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:41:04.6748847Z github_network_a1d1293d9b4644fbac3eb033f0c4274a
+build-website / build-website	UNKNOWN STEP	2026-11-17T14:41:04.6825825Z Cleaning up orphan processes
