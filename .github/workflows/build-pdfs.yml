@@ -1,8 +1,8 @@
 name: build-pdfs
 on:
-  # push:
-  # branches:
-  # - feature/resume-print
+  push:
+    branches:
+    - experiment/feat/resume-update
   workflow_dispatch:
   workflow_call:
 
