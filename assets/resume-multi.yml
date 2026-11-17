@@ -187,11 +187,11 @@ variants:
       styles:
         layout:
           templateColumns: 51vw 11vw auto
-          columnGap: 30px 
+          columnGap: 20px 
           sectionsGap: 8px
-          headerGap: 20px
+          headerGap: 80px
         h2:
-          marginBottom: 6px
+          marginBottom: 3px
         relevantWorkExperience:
           ol:
             gap: 4px
@@ -200,13 +200,13 @@ variants:
               height: 2px
         skills:
           ol:
-            gap: 8px
+            gap: 0px
           li:
             divider:
-              height: 2px
+              height: 0px
         education:
           ol:
-            gap: 8px
+            gap: 0px
 
     - id: fs
       paperFormatShortCode: 4
