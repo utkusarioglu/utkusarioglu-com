@@ -186,7 +186,7 @@ variants:
         y: 45
       styles:
         layout:
-          templateColumns: 51vw 18vw auto
+          templateColumns: 51vw 20vw auto
           columnGap: 20px 
           sectionsGap: 8px
           headerGap: 8px
@@ -200,13 +200,13 @@ variants:
               height: 2px
         skills:
           ol:
-            gap: 0px
+            gap: 4px
           li:
             divider:
-              height: 0px
+              height: 4px
         education:
           ol:
-            gap: 0px
+            gap: 4px
 
     - id: fs
       paperFormatShortCode: 4
