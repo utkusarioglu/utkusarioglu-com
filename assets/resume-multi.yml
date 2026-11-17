@@ -189,7 +189,7 @@ variants:
           templateColumns: 51vw 11vw auto
           columnGap: 20px 
           sectionsGap: 8px
-          headerGap: 80px
+          headerGap: 8px
         h2:
           marginBottom: 3px
         relevantWorkExperience:
