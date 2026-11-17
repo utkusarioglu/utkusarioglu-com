@@ -36,6 +36,8 @@ export async function perlinFactory({
     saturation,
     luminance,
     maxDuration,
+    immediate,
+    immediateIterations,
   } = config;
   activeConfigId = configId;
   const startTime = Date.now();
@@ -105,32 +107,55 @@ export async function perlinFactory({
     requestAnimationFrame ||
     (async (callback) => setTimeout(callback, 1000 / 60));
 
-  return new Promise((resolve) => {
-    const frame = async function () {
-      if (activeConfigId === configId) {
-        const { results, done } = drawFrame();
-        if (!done && Date.now() - startTime < maxDuration) {
-          requestFrame(frame);
-        } else {
-          const [jpgDataUrl, pngDataUrl] = await Promise.all([
-            await createJpg(),
-            await createPng(),
-          ]);
-          resolve({
-            finished: true,
-            duration: Date.now() - startTime,
-            jpgDataUrl,
-            pngDataUrl,
-            handler,
-            config,
-          });
-        }
-        return results;
-      }
-    };
+  // const immediate = false;
 
-    requestFrame(frame);
-  });
+  if (immediate) {
+    return new Promise(async (resolve) => {
+      for (let i = 0; i < immediateIterations; i++) {
+        drawFrame();
+      }
+
+      const [jpgDataUrl, pngDataUrl] = await Promise.all([
+        await createJpg(),
+        await createPng(),
+      ]);
+      resolve({
+        finished: true,
+        duration: Date.now() - startTime,
+        jpgDataUrl,
+        pngDataUrl,
+        handler,
+        config,
+      });
+    });
+  } else {
+    return new Promise((resolve) => {
+      const frame = async function () {
+        if (activeConfigId === configId) {
+          const { results, done } = drawFrame();
+          if (!done && Date.now() - startTime < maxDuration) {
+            requestFrame(frame);
+          } else {
+            const [jpgDataUrl, pngDataUrl] = await Promise.all([
+              await createJpg(),
+              await createPng(),
+            ]);
+            resolve({
+              finished: true,
+              duration: Date.now() - startTime,
+              jpgDataUrl,
+              pngDataUrl,
+              handler,
+              config,
+            });
+          }
+          return results;
+        }
+      };
+
+      requestFrame(frame);
+    });
+  }
 }
 
 async function createImage(options: CreateImageOptions): Promise<string> {
@@ -144,9 +169,9 @@ async function createImage(options: CreateImageOptions): Promise<string> {
     }
     if (!!canvas.toBlob && !!FileReaderSync) {
       return new Promise((resolve) => {
-        canvas.toBlob((blob) => resolve(handleBlob(blob!))),
+        (canvas.toBlob((blob) => resolve(handleBlob(blob!))),
           options.type,
-          options.type === "image/jpeg" && options.quality;
+          options.type === "image/jpeg" && options.quality);
       });
     }
     return canvas.toDataURL(options.type);

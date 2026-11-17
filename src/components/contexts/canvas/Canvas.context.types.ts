@@ -66,7 +66,7 @@ export type UseCanvas = () => UseCanvasReturn;
 
 export type PerlinDrawer = (
   p: PerlinConfig,
-  configId: string
+  configId: string,
 ) => Promise<DrawPerlinReturn>;
 
 export interface DrawPerlinMessage {
@@ -98,6 +98,8 @@ export type PerlinPreset = {
   saturation: number;
   luminance: number;
   maxDuration: number;
+  immediate: boolean;
+  immediateIterations: number;
 };
 
 export interface DrawPerlinParams {

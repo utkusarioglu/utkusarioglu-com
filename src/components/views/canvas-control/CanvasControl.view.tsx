@@ -48,6 +48,7 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
     generateRandomConfig,
     removeFromLocalStorage,
   } = useCanvas();
+
   const { handleSubmit, values, submitForm, setValues, handleChange } =
     useFormik({
       initialValues: localStorageValues || config,
@@ -65,11 +66,14 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col overflow-hidden">
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col overflow-hidden"
+    >
       <div
         className={c(
           COLORS.scrollbar,
-          "scrollbar-thin px-5 overflow-x-hidden grow py-5"
+          "scrollbar-thin px-5 overflow-x-hidden grow py-5",
         )}
       >
         <SectionHelp enabled={helpEnabled}>
@@ -92,7 +96,7 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
               <span
                 className={c(
                   "bg-neutral-800 text-white px-2",
-                  "text-sm w-min h-min rounded-md inline-block"
+                  "text-sm w-min h-min rounded-md inline-block",
                 )}
               >
                 ?
@@ -131,7 +135,7 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
                           key={key}
                           className={c(
                             COLORS.secondaryText,
-                            "text-sm font-thin"
+                            "text-sm font-thin",
                           )}
                         >
                           {key}: {value}
@@ -263,10 +267,17 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
           </Legend>
         </div>
         {CANVAS_CONTROLS.map(({ title, items }) => (
-          <Legend title={title} key={title}>
+          <Legend
+            title={title}
+            key={title}
+          >
             {title === "HSL" && <HslColorBarView {...values} />}
             {items.map(({ name, label, unit, type, min, max, help }) => (
-              <Section key={name} helpEnabled={helpEnabled} help={help}>
+              <Section
+                key={name}
+                helpEnabled={helpEnabled}
+                help={help}
+              >
                 <Label htmlFor={name}>{label}</Label>
                 <Input
                   name={name}
@@ -293,7 +304,10 @@ const CanvasControlView: FC<CanvasControlViewProps> = ({
         >
           Save
         </CanvasControlFormButtonView>
-        <CanvasControlFormButtonView color="secondary" type="submit">
+        <CanvasControlFormButtonView
+          color="secondary"
+          type="submit"
+        >
           Draw
         </CanvasControlFormButtonView>
         <CanvasControlFormButtonView

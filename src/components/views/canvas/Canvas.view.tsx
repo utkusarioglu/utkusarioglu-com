@@ -26,13 +26,13 @@ const CanvasView: FC<CanvasViewProps> = ({ window }) => {
         const config = adjustConfig(
           produceConfig(presets[getActive()]),
           isSm,
-          getActive()
+          getActive(),
         );
         draw(config);
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [canvasRef, window.innerWidth, window.innerHeight]
+    [canvasRef, window.innerWidth, window.innerHeight],
   );
 
   return (

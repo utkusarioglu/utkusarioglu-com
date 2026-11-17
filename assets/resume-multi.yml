@@ -75,7 +75,7 @@ variants:
           sectionsGap: 8px
           headerGap: 12px
         h2:
-          marginBottom: 4px
+          marginBottom: 3px
         relevantWorkExperience:
           ol:
             gap: 4px

@@ -38,9 +38,11 @@ export function produceAnimate({
       }
     }
   } else {
-    if (!isAndroid) {
-      filter = "blur(3px)";
-    }
+    // Disabled because tech is better now
+    // if (!isAndroid) {
+    //   filter = "blur(3px)";
+    // }
+    filter = "blur(3px)";
     if (isSm) {
       masks.push(MASKS.horizontalOpaque);
     } else {

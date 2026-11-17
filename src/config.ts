@@ -207,7 +207,7 @@ export const COLORS = Object.entries(COLOR_CLASSES).reduce(
     p[key] = hasDarkMode ? `${value} transition-colors` : value;
     return p;
   },
-  {} as typeof COLOR_CLASSES
+  {} as typeof COLOR_CLASSES,
 ) as typeof COLOR_CLASSES;
 
 export const TRANSITIONS = {
@@ -389,6 +389,8 @@ export const PERLIN_PRESETS: PerlinPresets = {
     saturation: HSL.canvas.light[1],
     luminance: HSL.canvas.light[2],
     maxDuration: 30000,
+    immediate: false,
+    immediateIterations: 1000,
   },
   dark: {
     name: "Thin gray lines (dark theme default)",
@@ -400,6 +402,8 @@ export const PERLIN_PRESETS: PerlinPresets = {
     saturation: HSL.canvas.dark[1],
     luminance: HSL.canvas.dark[2],
     maxDuration: 30000,
+    immediate: false,
+    immediateIterations: 1000,
   },
   thinBlackLines: {
     name: "Thin black lines",
@@ -411,6 +415,8 @@ export const PERLIN_PRESETS: PerlinPresets = {
     saturation: 0,
     luminance: 0,
     maxDuration: 30000,
+    immediate: false,
+    immediateIterations: 1000,
   },
   allTheBlues: {
     name: "Blue marble",
@@ -422,6 +428,8 @@ export const PERLIN_PRESETS: PerlinPresets = {
     saturation: 100,
     luminance: 50,
     maxDuration: 30000,
+    immediate: false,
+    immediateIterations: 1000,
   },
   vibrant: {
     name: "Vibrant",
@@ -433,6 +441,8 @@ export const PERLIN_PRESETS: PerlinPresets = {
     saturation: 100,
     luminance: 50,
     maxDuration: 30000,
+    immediate: false,
+    immediateIterations: 1000,
   },
   thickBlackLines: {
     name: "Thick black lines",
@@ -444,6 +454,8 @@ export const PERLIN_PRESETS: PerlinPresets = {
     saturation: 0,
     luminance: 0,
     maxDuration: 30000,
+    immediate: false,
+    immediateIterations: 1000,
   },
   physarumPolycephalum: {
     name: "Physarum polycephalum",
@@ -455,6 +467,8 @@ export const PERLIN_PRESETS: PerlinPresets = {
     saturation: 100,
     luminance: 50,
     maxDuration: 60000,
+    immediate: false,
+    immediateIterations: 1000,
   },
   drawMeLikeOneOfYourFrenchCurves: {
     name: "Draw me like one of your French curves",
@@ -466,6 +480,8 @@ export const PERLIN_PRESETS: PerlinPresets = {
     saturation: 25,
     luminance: 16,
     maxDuration: 30000,
+    immediate: false,
+    immediateIterations: 1000,
   },
   drunkWindowsPipes: {
     name: "Drunk Windows Pipes",
@@ -477,6 +493,8 @@ export const PERLIN_PRESETS: PerlinPresets = {
     saturation: 100,
     luminance: 50,
     maxDuration: 30000,
+    immediate: false,
+    immediateIterations: 1000,
   },
   loveSeatInHyperspace: {
     name: "Love seat in hyperspace",
@@ -488,6 +506,8 @@ export const PERLIN_PRESETS: PerlinPresets = {
     saturation: 100,
     luminance: 50,
     maxDuration: 30000,
+    immediate: false,
+    immediateIterations: 1000,
   },
   asSmoothAsSilk: {
     name: "As smooth as silk",
@@ -499,6 +519,8 @@ export const PERLIN_PRESETS: PerlinPresets = {
     saturation: 0,
     luminance: 100,
     maxDuration: 60000,
+    immediate: false,
+    immediateIterations: 1000,
   },
 };
 
