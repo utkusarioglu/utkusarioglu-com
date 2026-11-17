@@ -73,7 +73,7 @@ variants:
           templateColumns: 51vw 11vw auto
           columnGap: 20px 
           sectionsGap: 8px
-          headerGap: 12px
+          headerGap: 8px
         h2:
           marginBottom: 3px
         relevantWorkExperience:
@@ -186,7 +186,7 @@ variants:
         y: 45
       styles:
         layout:
-          templateColumns: 50vw 19vw auto
+          templateColumns: 51vw 11vw auto
           columnGap: 30px 
           sectionsGap: 8px
           headerGap: 20px
