@@ -38,3 +38,5 @@ public/*.js.map
 
 .cypress/artifacts
 .puppeteer/artifacts
+
+.ignore
