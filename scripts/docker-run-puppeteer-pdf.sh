@@ -73,11 +73,15 @@ run_gs() {
   PAPER_FORMAT_SHORT_CODE_VARIANTS="$(
     yq '.variants.paperFormats[] | .shortCode' $RESUME_FILE_RELPATH | tr '\n' ' '
   )"
-
-  echo 'Ghostscript will process pdf files agains following specs:'
+  
+  echo 'Ghostscript will process pdf files against following specs:'
   echo "  Photo variants: '$PHOTO_VARIANTS'"
   echo "  Specialty id variants: '$SPECIALTY_ID_VARIANTS'"
   echo "  Paper format short code variants: '$PAPER_FORMAT_SHORT_CODE_VARIANTS'"
+
+  echo "Raw folder content: "
+  echo "Raf folder: ${host_raw_artifacts_path}"
+  ls -al $host_raw_artifacts_path
 
   for photo_included in $PHOTO_VARIANTS; do
     if [ $photo_included = 'p' ]; then

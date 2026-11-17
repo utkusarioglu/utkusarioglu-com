@@ -1,568 +1,588 @@
-build-website / build-website	UNKNOWN STEP	﻿2026-11-17T14:39:18.1854014Z Current runner version: '2.338.2'
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1872469Z ##[group]Runner Image Provisioner
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1873405Z Hosted Compute Agent
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1873887Z Version: 20261103.629
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1874325Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1874891Z Build Date: 2026-11-03T17:26:59Z
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1875427Z Worker ID: {dc28981d-af9b-447c-bcad-d8ce6a877287}
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1875936Z Region: centralus
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1876328Z Cloud: Azure
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1876694Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1877859Z ##[group]Operating System
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1878373Z Ubuntu
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1878739Z 26.04.1
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1879325Z LTS
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1879688Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1880054Z ##[group]Runner Image
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1880497Z Image: ubuntu-26.04
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1880883Z Version: 20261111.196.1
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1881818Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1883056Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1883757Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1885814Z ##[group]GITHUB_TOKEN Permissions
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1887799Z Actions: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1888213Z ArtifactMetadata: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1888671Z Attestations: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1889055Z Checks: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1889420Z CodeQuality: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1889822Z Contents: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1890208Z CopilotRequests: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1890602Z Deployments: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1891036Z Discussions: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1891396Z Drives: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1891880Z Issues: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1892345Z Metadata: read
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1892916Z Models: read
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1893315Z Packages: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1893691Z Pages: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1894086Z PullRequests: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1894491Z RepositoryProjects: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1894954Z SecurityEvents: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1895409Z Statuses: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1895804Z VulnerabilityAlerts: read
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1896223Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1897830Z Secret source: Actions
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1898581Z Cache mode: write
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.1899063Z Prepare workflow directory
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.2225355Z Prepare all required actions
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.2264230Z Getting action download info
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.5241134Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.6349825Z Download action repository 'actions/cache@v6' (SHA:55cc8345863c7cc4c66a329aec7e433d2d1c52a9)
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.7421938Z Download action repository 'actions/upload-artifact@v7' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.8942248Z Uses: utkusarioglu/utkusarioglu-com/.github/workflows/build-website.yml@refs/heads/experiment/feat/resume-update (fd2f35f63a2543f7b4cfc8fc56fd546bf0ddfb3a)
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.8946567Z Complete job name: build-website / build-website
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.9406275Z ##[group]Checking docker version
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:18.9416861Z ##[command]/usr/bin/docker version --format '{{.Server.APIVersion}}'
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0336427Z '1.54'
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0351803Z Docker daemon API version: '1.54'
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0352521Z ##[command]/usr/bin/docker version --format '{{.Client.APIVersion}}'
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0508703Z '1.54'
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0517714Z Docker client API version: '1.54'
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0522472Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0524853Z ##[group]Clean up resources from previous jobs
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0528755Z ##[command]/usr/bin/docker ps --all --quiet --no-trunc --filter "label=68af7e"
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0666804Z ##[command]/usr/bin/docker network prune --force --filter "label=68af7e"
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0796718Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0797296Z ##[group]Create local container network
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.0805483Z ##[command]/usr/bin/docker network create --label 68af7e github_network_a1d1293d9b4644fbac3eb033f0c4274a
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.1240069Z 484dbfdae624e95240591abb64475f5f88f9a8db2da82b418be06d71038bfca2
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.1255134Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.1277581Z ##[group]Starting job container
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.1296668Z ##[command]/usr/bin/docker pull utkusarioglu/react-native-android-devcontainer:36-24-ubuntu-test-27
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:19.6480678Z 36-24-ubuntu-test-27: Pulling from utkusarioglu/react-native-android-devcontainer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1026192Z 2fea5c06077b: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1032106Z b6ee21cd8f7a: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1033156Z f110c3457340: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1033631Z 489ce25c545c: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1034059Z 4e73c6afaccc: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1034714Z 4f4fb700ef54: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1035208Z 4f4fb700ef54: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1035772Z 33d81b5c1b06: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1036238Z 99bf79fa0c27: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1036687Z d7632f814f7d: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1037112Z 1bf6eef35d94: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1037517Z 6be0facac74a: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1037934Z 4f4fb700ef54: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1038357Z 14480dcb5d6e: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1038794Z 4f4fb700ef54: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1039488Z 11adf9c03388: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1040038Z 5842f32d5898: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1040480Z a0934de6955c: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1040886Z f031410b7606: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1041301Z ff6801417c2a: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1041730Z 98d7932c34c0: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1042134Z b9689671207e: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1042542Z 1db6bdfb2f06: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1043196Z 261394d147b3: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1043648Z bcd3ebfea966: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1044123Z 4f4fb700ef54: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1044537Z ed22f604d169: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1045053Z 69ac71b7d7c0: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1045606Z c8a4bc84f1aa: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1046336Z 8f7570d65123: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1046914Z 630dc3037c36: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1047377Z 4f4fb700ef54: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1047872Z 34a9b767ed6c: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1048521Z fe4a27fbd9cd: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1049056Z 16adbbd32552: Pulling fs layer
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.1455004Z 4f4fb700ef54: Already exists
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.3447983Z bcd3ebfea966: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.3451525Z a82a68a49cd0: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.5220598Z 261394d147b3: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.5222160Z 4e73c6afaccc: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.6464466Z 69ac71b7d7c0: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.6466058Z 14480dcb5d6e: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.8501316Z c8a4bc84f1aa: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:20.9451869Z ff6801417c2a: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:21.3447834Z ed22f604d169: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:22.2441032Z 98d7932c34c0: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:22.6452735Z b6ee21cd8f7a: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:22.8474006Z 2fea5c06077b: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.0448297Z 1bf6eef35d94: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1445468Z 99bf79fa0c27: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1458167Z 11adf9c03388: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1464684Z a0934de6955c: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1465265Z f110c3457340: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1465596Z 5842f32d5898: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1465917Z 8f7570d65123: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1466316Z 33d81b5c1b06: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1471435Z d7632f814f7d: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1489926Z b9689671207e: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1512540Z 1db6bdfb2f06: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1513908Z 34a9b767ed6c: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1514581Z 16adbbd32552: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1514918Z f031410b7606: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1515383Z 489ce25c545c: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.1515779Z 6be0facac74a: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.6467740Z 4e73c6afaccc: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.6550919Z 2fea5c06077b: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.6677407Z 489ce25c545c: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.6697201Z 6be0facac74a: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:23.7511075Z ed22f604d169: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:24.0532557Z 11adf9c03388: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:24.5661385Z f031410b7606: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:25.5683903Z b9689671207e: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:25.6464637Z bcd3ebfea966: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:25.9469370Z 14480dcb5d6e: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:25.9490323Z ff6801417c2a: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:25.9531685Z 1bf6eef35d94: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:25.9546472Z 99bf79fa0c27: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:25.9568310Z 5842f32d5898: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:26.1535309Z 1db6bdfb2f06: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:26.2444474Z 4f4fb700ef54: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:26.2557104Z f110c3457340: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:26.2578921Z 33d81b5c1b06: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:26.5522940Z d7632f814f7d: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:27.9501521Z a0934de6955c: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:28.0464201Z c8a4bc84f1aa: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:28.0482112Z 98d7932c34c0: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:28.1440697Z 261394d147b3: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:28.1450052Z 69ac71b7d7c0: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:28.2465436Z 8f7570d65123: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:32.8435764Z fe4a27fbd9cd: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:37.8444171Z 630dc3037c36: Download complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:40.1483987Z fe4a27fbd9cd: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:40.2479296Z 16adbbd32552: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:51.7295547Z b6ee21cd8f7a: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:51.7311258Z 34a9b767ed6c: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:51.7321802Z 630dc3037c36: Pull complete
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:51.7322438Z Digest: sha256:f116cd4f92f5bd93ab0c6a05d5916edb198d7a23f7de8823d64d89f8407e6b4d
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:51.7323227Z Status: Downloaded newer image for utkusarioglu/react-native-android-devcontainer:36-24-ubuntu-test-27
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:51.7332930Z docker.io/utkusarioglu/react-native-android-devcontainer:36-24-ubuntu-test-27
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:39:51.7426345Z ##[command]/usr/bin/docker create --name 9355a95b0b6c41a19ef776acdf636350_utkusarioglureactnativeandroiddevcontainer3624ubuntutest27_3e0136 --label 68af7e --workdir /__w/utkusarioglu-com/utkusarioglu-com --network github_network_a1d1293d9b4644fbac3eb033f0c4274a --user 0:0 -e "HOME=/github/home" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work":"/__w" -v "/home/runner/actions-runner/cached/2.338.2/externals":"/__e":ro -v "/home/runner/work/_temp":"/__w/_temp" -v "/home/runner/work/_actions":"/__w/_actions" -v "/opt/hostedtoolcache":"/__t" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" --entrypoint "tail" utkusarioglu/react-native-android-devcontainer:36-24-ubuntu-test-27 "-f" "/dev/null"
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.1510065Z bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.1531741Z ##[command]/usr/bin/docker start bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3045767Z bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3064339Z ##[command]/usr/bin/docker ps --all --filter id=bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a --filter status=running --no-trunc --format "{{.ID}} {{.Status}}"
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3293583Z bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a Up Less than a second
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3309189Z ##[command]/usr/bin/docker inspect --format "{{range .Config.Env}}{{println .}}{{end}}" bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3418331Z HOME=/github/home
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3424440Z GITHUB_ACTIONS=true
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3424841Z CI=true
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3425573Z PATH=/opt/android/cmake/4.0.2/bin:/opt/android/cmdline-tools/latest/bin:/opt/android/emulator:/opt/android/platform-tools:/opt/android/tools:/opt/android/tools/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3426196Z EDITOR=nvim
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3426420Z DEBIAN_FRONTEND=noninteractive
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3426658Z ADB_INSTALL_TIMEOUT=10
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3426941Z ANDROID_HOME=/opt/android
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3427195Z ANDROID_SDK_ROOT=/opt/android
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3427446Z ANDROID_NDK_HOME=/opt/android/ndk/29.0.13599879
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3427789Z JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3428061Z CMAKE_BIN_PATH=/opt/android/cmake/4.0.2/bin
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3436417Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3444446Z ##[group]Waiting for all services to be ready
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3446250Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3674824Z ##[group]Run actions/checkout@v7
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3675278Z with:
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3675527Z   repository: utkusarioglu/utkusarioglu-com
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3677497Z   token: ***
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3677740Z   ssh-strict: true
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3677987Z   ssh-user: git
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3678216Z   persist-credentials: true
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3678451Z   clean: true
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3678680Z   sparse-checkout-cone-mode: true
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3678946Z   fetch-depth: 1
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3679144Z   fetch-tags: false
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3679378Z   show-progress: true
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3679588Z   lfs: false
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3679788Z   submodules: false
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3680035Z   set-safe-directory: true
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3680293Z   allow-unsafe-pr-checkout: false
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3680635Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.3731543Z ##[command]/usr/bin/docker exec  bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a sh -c "cat /etc/*release | grep ^ID"
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6925629Z Syncing repository: utkusarioglu/utkusarioglu-com
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6927237Z ##[group]Getting Git version info
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6927650Z Working directory is '/__w/utkusarioglu-com/utkusarioglu-com'
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6928353Z [command]/usr/bin/git version
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6928665Z git version 2.43.0
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6929838Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6936920Z Temporarily overriding HOME='/__w/_temp/b7784070-e53d-468f-a751-8f864981f5a3' before making global git config changes
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6937670Z Adding repository directory to the temporary git global config as a safe directory
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6940075Z [command]/usr/bin/git config --global --add safe.directory /__w/utkusarioglu-com/utkusarioglu-com
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6971459Z Deleting the contents of '/__w/utkusarioglu-com/utkusarioglu-com'
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6972350Z ##[group]Determining repository object format
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6973018Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6973610Z ##[group]Initializing the repository
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6974074Z [command]/usr/bin/git init /__w/utkusarioglu-com/utkusarioglu-com
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6996855Z hint: Using 'master' as the name for the initial branch. This default branch name
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6997369Z hint: is subject to change. To configure the initial branch name to use in all
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6997990Z hint: of your new repositories, which will suppress this warning, call:
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6998434Z hint: 
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6998760Z hint: 	git config --global init.defaultBranch <name>
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6999076Z hint: 
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6999360Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.6999754Z hint: 'development'. The just-created branch can be renamed via this command:
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7000131Z hint: 
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7000386Z hint: 	git branch -m <name>
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7008800Z Initialized empty Git repository in /__w/utkusarioglu-com/utkusarioglu-com/.git/
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7016931Z [command]/usr/bin/git remote add origin https://github.com/utkusarioglu/utkusarioglu-com
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7042896Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7043541Z ##[group]Disabling automatic garbage collection
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7045004Z [command]/usr/bin/git config --local gc.auto 0
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7067567Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7068190Z ##[group]Setting up auth
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7068524Z Removing SSH command configuration
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7071243Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7091795Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7251724Z Removing HTTP extra header
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7255375Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7277478Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7431619Z Removing includeIf entries pointing to credentials config files
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7435431Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7456509Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7622135Z [command]/usr/bin/git config --file /__w/_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7658612Z [command]/usr/bin/git config --local includeIf.gitdir:/__w/utkusarioglu-com/utkusarioglu-com/.git.path /__w/_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7681210Z [command]/usr/bin/git config --local includeIf.gitdir:/__w/utkusarioglu-com/utkusarioglu-com/.git/worktrees/*.path /__w/_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7705520Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7885563Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7908230Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7908606Z ##[group]Fetching the repository
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:07.7913184Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +fd2f35f63a2543f7b4cfc8fc56fd546bf0ddfb3a:refs/remotes/origin/experiment/feat/resume-update
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7112195Z From https://github.com/utkusarioglu/utkusarioglu-com
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7113265Z  * [new ref]         fd2f35f63a2543f7b4cfc8fc56fd546bf0ddfb3a -> origin/experiment/feat/resume-update
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7129022Z [command]/usr/bin/git branch --list --remote origin/experiment/feat/resume-update
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7150599Z   origin/experiment/feat/resume-update
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7157396Z [command]/usr/bin/git rev-parse refs/remotes/origin/experiment/feat/resume-update
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7177483Z fd2f35f63a2543f7b4cfc8fc56fd546bf0ddfb3a
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7178724Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7179263Z ##[group]Determining the checkout info
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7182010Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7182821Z [command]/usr/bin/git sparse-checkout disable
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7218880Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7245399Z ##[group]Checking out the ref
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7247829Z [command]/usr/bin/git checkout --progress --force -B experiment/feat/resume-update refs/remotes/origin/experiment/feat/resume-update
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7988952Z Switched to a new branch 'experiment/feat/resume-update'
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7989662Z branch 'experiment/feat/resume-update' set up to track 'origin/experiment/feat/resume-update'.
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.7995838Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8034824Z [command]/usr/bin/git log -1 --format=%H
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8047964Z fd2f35f63a2543f7b4cfc8fc56fd546bf0ddfb3a
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8726860Z ##[group]Run actions/cache@v6
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8727123Z with:
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8727361Z   path: node_modules
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8727720Z   key: node-modules-cache-66483e7ba46a102d2460075d88697dd521c6846d8476ec97bdb4629af27f86c6
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8728126Z   restore-keys: node-modules-cache-
-build-website / build-website	UNKNOWN STEP	
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8728388Z   enableCrossOsArchive: false
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8728651Z   fail-on-cache-miss: false
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8728903Z   lookup-only: false
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8729115Z   save-always: false
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8729336Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:08.8733882Z ##[command]/usr/bin/docker exec  bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a sh -c "cat /etc/*release | grep ^ID"
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.1935062Z Cache not found for input keys: node-modules-cache-66483e7ba46a102d2460075d88697dd521c6846d8476ec97bdb4629af27f86c6, node-modules-cache-
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.2065148Z ##[group]Run yarn
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.2065503Z [36;1myarn[0m
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.2069093Z shell: sh -e {0}
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.2069342Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.4211565Z ! Corepack is about to download https://registry.yarnpkg.com/yarn/-/yarn-1.22.22.tgz
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.7626823Z yarn install v1.22.22
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.8126098Z [1/4] Resolving packages...
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.9420263Z (node:175) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.9421013Z (Use `node --trace-deprecation ...` to show where the warning was created)
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:09.9427914Z [2/4] Fetching packages...
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:20.6596320Z warning url-loader@1.1.2: Invalid bin field for "url-loader".
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.6949261Z [3/4] Linking dependencies...
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.6970341Z warning "next-pwa > babel-loader@8.2.5" has unmet peer dependency "@babel/core@^7.0.0".
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.6971020Z warning "next-pwa > babel-loader@8.2.5" has unmet peer dependency "webpack@>=2".
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.6971718Z warning "next-pwa > clean-webpack-plugin@4.0.0" has unmet peer dependency "webpack@>=4.0.0 <6.0.0".
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.6972331Z warning "next-pwa > terser-webpack-plugin@5.3.3" has unmet peer dependency "webpack@^5.1.0".
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.6973050Z warning "next-pwa > workbox-webpack-plugin@6.5.3" has unmet peer dependency "webpack@^4.4.0 || ^5.9.0".
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.6994586Z warning " > react-ga@3.3.1" has unmet peer dependency "prop-types@^15.6.0".
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.6997424Z warning " > @testing-library/user-event@12.8.3" has unmet peer dependency "@testing-library/dom@>=7.21.4".
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7000794Z warning "@types/react-ga > react-ga@3.3.0" has unmet peer dependency "prop-types@^15.6.0".
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7016292Z warning "eslint-config-react-app > eslint-plugin-flowtype@8.0.3" has unmet peer dependency "@babel/plugin-syntax-flow@^7.14.5".
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7017850Z warning "eslint-config-react-app > eslint-plugin-flowtype@8.0.3" has unmet peer dependency "@babel/plugin-transform-react-jsx@^7.14.9".
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7020089Z warning "next-optimized-images > file-loader@3.0.1" has unmet peer dependency "webpack@^4.0.0".
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7021154Z warning "next-optimized-images > raw-loader@2.0.0" has unmet peer dependency "webpack@^4.3.0".
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7021866Z warning "next-optimized-images > url-loader@1.1.2" has unmet peer dependency "webpack@^3.0.0 || ^4.0.0".
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7022506Z warning " > responsive-loader@3.0.4" has unmet peer dependency "webpack@^5.73.0".
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7023492Z warning " > webpack-plugin-pwa-manifest@1.1.1" has unmet peer dependency "html-webpack-plugin@>=4 <5".
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:22.7024231Z warning " > webpack-plugin-pwa-manifest@1.1.1" has unmet peer dependency "webpack@>=4.39.0 <5".
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:32.0716015Z [4/4] Building fresh packages...
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.3317498Z Done in 33.57s.
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5229887Z ##[group]Run actions/cache@v6
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5230143Z with:
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5230361Z   path: build
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5230710Z   key: nextjs-build-cache-029a321f70556baac0444dc15b444695f67a21c1fa3fdae1830947630b278505
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5231110Z   restore-keys: nextjs-build-cache
-build-website / build-website	UNKNOWN STEP	
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5231393Z   enableCrossOsArchive: false
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5231711Z   fail-on-cache-miss: false
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5231960Z   lookup-only: false
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5232174Z   save-always: false
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5232393Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.5236488Z ##[command]/usr/bin/docker exec  bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a sh -c "cat /etc/*release | grep ^ID"
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.8530474Z Cache not found for input keys: nextjs-build-cache-029a321f70556baac0444dc15b444695f67a21c1fa3fdae1830947630b278505, nextjs-build-cache
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.8635380Z ##[group]Run yarn export
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.8635667Z [36;1myarn export[0m
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.8636014Z shell: sh -e {0}
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.8636214Z env:
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.8636467Z   SUBDOMAIN: experiment/feat/resume-update
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:43.8636725Z ##[endgroup]
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.0174324Z yarn run v1.22.22
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.0361927Z $ next build && next export -o build
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6662972Z next.config using env:
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6663410Z  {
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6663977Z   GITHUB_STATE: '/__w/_temp/_runner_file_commands/save_state_a42be946-9af7-41fe-8de9-4c07589dfea4',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6664602Z   npm_package_devDependencies__types_node: '^12.0.0',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6665098Z   npm_package_devDependencies_xml_writer: '^1.7.0',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6665574Z   npm_package_devDependencies_webpack_plugin_pwa_manifest: '^1.1.1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6666001Z   npm_package_devDependencies_jest: '^28.1.3',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6666670Z   npm_package_devDependencies__testing_library_jest_dom: '^5.11.4',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6667142Z   npm_config_version_commit_hooks: 'true',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6667603Z   npm_config_user_agent: 'yarn/1.22.22 npm/? node/v24.4.0 linux x64',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6667990Z   CI: 'true',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6668346Z   npm_package_devDependencies__testing_library_user_event: '^12.1.10',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6668877Z   npm_package_devDependencies__next_eslint_plugin_next: '^12.2.0',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6669347Z   npm_package_dependencies_react_device_detect: '^2.2.2',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6669794Z   npm_package_dependencies_formik: '^2.2.9',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6670202Z   npm_config_bin_links: 'true',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6670545Z   HOSTNAME: 'bbaf7e4ddbe1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6671146Z   GITHUB_ENV: '/__w/_temp/_runner_file_commands/set_env_a42be946-9af7-41fe-8de9-4c07589dfea4',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6671706Z   RUNNER_ENVIRONMENT: 'github-hosted',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6672114Z   npm_node_execpath: '/usr/bin/node',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6672535Z   npm_package_devDependencies_eslint_config_next: '12.2.0',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6673181Z   npm_config_init_version: '1.0.0',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6673629Z   npm_package_dependencies__badrap_bar_of_progress: '^0.2.1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6674059Z   HOME: '/github/home',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6674402Z   npm_package_browserslist_production_0: '>0.2%',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6674783Z   npm_package_devDependencies_to_ico: '^1.1.5',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6675168Z   npm_package_devDependencies_sass: '^1.53.0',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6675665Z   GITHUB_EVENT_PATH: '/github/workflow/event.json',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6676065Z   RUNNER_TEMP: '/__w/_temp',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6676414Z   npm_package_browserslist_production_1: 'not dead',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6676792Z   GITHUB_REPOSITORY_OWNER: 'utkusarioglu',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6677510Z   COREPACK_ROOT: '/usr/lib/node_modules/corepack',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6677984Z   npm_package_browserslist_production_2: 'not op_mini all',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6678426Z   npm_package_dependencies_framer_motion: '^6.3.6',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6678804Z   npm_config_init_license: 'MIT',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6679141Z   GITHUB_RETENTION_DAYS: '90',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6679508Z   YARN_WRAP_OUTPUT: 'false',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6679941Z   npm_package_devDependencies_imagemin_svgo: '^9.0.0',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6680353Z   npm_config_version_tag_prefix: 'v',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6680723Z   GITHUB_REPOSITORY_OWNER_ID: '32932503',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6681102Z   GITHUB_HEAD_REF: '',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6681462Z   npm_package_devDependencies__types_react_ga: '^2.3.0',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6681974Z   npm_package_devDependencies__types_color_convert: '^2.0.3',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6682588Z   ACTIONS_ORCHESTRATION_ID: '8d5404cc-556c-8d1b-a382-0a79d805f547.build-website.build-website.__default',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6683552Z   npm_package_devDependencies_eslint_plugin_react_hooks: '^4.6.0',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6684067Z   GITHUB_GRAPHQL_URL: 'https://api.github.com/graphql',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6685129Z   npm_package_description: 'This is the code for my personal site. At this point this code only renders a single route with only 2 nav items in the page.',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6685862Z   npm_package_devDependencies_typescript: '^4.0.3',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6686311Z   npm_package_devDependencies_tailwindcss: '^3.0.24',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6686713Z   npm_package_dependencies_react_router_dom: '^6.2.1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6687198Z   npm_package_dependencies_react_error_boundary: '^3.1.4',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6687671Z   SUBDOMAIN: 'experiment/feat/resume-update',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6688126Z   npm_package_readmeFilename: 'README.md',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6688561Z   npm_package_devDependencies_next_compose_plugins: '^2.2.1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6688994Z   npm_package_devDependencies__types_react_dom: '18.0.5',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6689457Z   COREPACK_ENABLE_DOWNLOAD_PROMPT: '1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6689894Z   npm_package_scripts_dev: 'scripts/start-dev-server.sh',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6690340Z   GITHUB_API_URL: 'https://api.github.com',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6690914Z   GITHUB_ARTIFACTS: '/__w/_temp/_runner_file_commands/artifacts_a42be946-9af7-41fe-8de9-4c07589dfea4',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6691461Z   RUNNER_OS: 'Linux',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6691874Z   npm_package_scripts_clean: 'scripts/clean.sh',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6692313Z   GITHUB_WORKFLOW: 'build-pdfs',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6692923Z   npm_package_devDependencies_autoprefixer: '^10.4.7',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6693385Z   npm_package_devDependencies__types_jest: '^26.0.15',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6693756Z   npm_package_private: 'true',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6694287Z   npm_config_registry: 'https://registry.yarnpkg.com',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6694755Z   GITHUB_RUN_ID: '44105465616',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6695207Z   npm_package_devDependencies_next_optimized_images: '^2.6.2',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6695727Z   npm_package_scripts_export: 'next build && next export -o build',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6696181Z   ADB_INSTALL_TIMEOUT: '10',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6696522Z   GITHUB_BASE_REF: '',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6696869Z   GITHUB_REF_TYPE: 'branch',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6697244Z   GITHUB_WORKFLOW_SHA: 'fd2f35f63a2543f7b4cfc8fc56fd546bf0ddfb3a',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6697836Z   npm_config_ignore_scripts: '',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6698506Z   GITHUB_WORKFLOW_REF: 'utkusarioglu/utkusarioglu-com/.github/workflows/build-pdfs.yml@refs/heads/experiment/feat/resume-update',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6699247Z   GITHUB_ACTION_REPOSITORY: '',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6699675Z   npm_package_browserslist_development_0: 'last 1 chrome version',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6701513Z   PATH: '/tmp/yarn--1794926444037-0.2255995644826334:/__w/utkusarioglu-com/utkusarioglu-com/node_modules/.bin:/usr/local/share/.config/yarn/link/node_modules/.bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/opt/android/cmake/4.0.2/bin:/opt/android/cmdline-tools/latest/bin:/opt/android/emulator:/opt/android/platform-tools:/opt/android/tools:/opt/android/tools/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6703709Z   NODE: '/usr/bin/node',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6704077Z   RUNNER_TOOL_CACHE: '/__t',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6704586Z   npm_package_browserslist_development_1: 'last 1 firefox version',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6705044Z   npm_package_dependencies_react_ga: '^3.3.1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6705478Z   npm_package_name: 'utkusarioglu-com.utkusarioglu.com',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6705931Z   GITHUB_RUN_NUMBER: '11',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6706256Z   GITHUB_TRIGGERING_ACTOR: 'utkusarioglu',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6706619Z   GITHUB_ACTION: 'export',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6706965Z   RUNNER_ARCH: 'X64',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6707291Z   npm_package_browserslist_development_2: 'last 1 safari version',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6707783Z   npm_package_devDependencies_local_ssl_proxy: '^1.3.0',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6708241Z   npm_package_scripts_local: 'scripts/start-local-server.sh',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6709227Z   npm_package_scripts_unit_test: "echo this isn't implemented yet",
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6709931Z   npm_package_devDependencies_eslint: '^8.19.0',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6710392Z   npm_package_dependencies_tailwind_scrollbar_hide: '^1.1.7',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6710814Z   npm_package_dependencies_react_dom: '^17.0.1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6711217Z   GITHUB_REPOSITORY: 'utkusarioglu/utkusarioglu-com',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6711759Z   GITHUB_REF_NAME: 'experiment/feat/resume-update',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6712203Z   RUNNER_NAME: 'GitHub Actions 1000000129',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6712615Z   npm_lifecycle_script: 'next build && next export -o build',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6713306Z   DEBIAN_FRONTEND: 'noninteractive',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6713666Z   GITHUB_ACTION_REF: '',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6714032Z   npm_package_dependencies_tailwind_scrollbar: '^1.3.1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6714519Z   npm_package_dependencies_react_responsive: '^9.0.0-beta.10',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6714893Z   npm_config_version_git_message: 'v%s',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6715244Z   GITHUB_ACTIONS: 'true',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6715603Z   CMAKE_BIN_PATH: '/opt/android/cmake/4.0.2/bin',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6715926Z   GITHUB_REPOSITORY_ID: '324495809',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6716256Z   npm_lifecycle_event: 'export',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6716596Z   npm_package_devDependencies_responsive_loader: '^3.0.4',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6717011Z   npm_package_devDependencies__types_react: '18.0.9',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6717438Z   npm_package_devDependencies__testing_library_react: '^11.1.0',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6717869Z   npm_package_version: '2.0.0',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6718198Z   GITHUB_REF_PROTECTED: 'false',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6718626Z   npm_config_argv: '{"remain":[],"cooked":["run","export"],"original":["export"]}',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6719154Z   npm_package_devDependencies_sharp: '^0.30.7',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6719519Z   GITHUB_JOB: 'build-website',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6720055Z   GITHUB_WORKSPACE: '/__w/utkusarioglu-com/utkusarioglu-com',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6720522Z   npm_package_devDependencies_http_server: '^14.1.1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6720940Z   npm_package_devDependencies_cypress: '^10.3.1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6721343Z   GITHUB_SHA: 'fd2f35f63a2543f7b4cfc8fc56fd546bf0ddfb3a',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6721779Z   GITHUB_RUN_ATTEMPT: '1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6722119Z   npm_package_dependencies_next_pwa: '^5.5.4',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6722488Z   npm_config_version_git_tag: 'true',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6723106Z   npm_config_version_git_sign: '',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6723421Z   ANDROID_SDK_ROOT: '/opt/android',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6723795Z   GITHUB_REF: 'refs/heads/experiment/feat/resume-update',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6724173Z   GITHUB_ACTOR: 'utkusarioglu',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6724553Z   npm_package_devDependencies_eslint_plugin_react: '^7.30.1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6724996Z   npm_package_dependencies_classnames: '^2.3.1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6725529Z   npm_config_strict_ssl: 'true',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6725957Z   npm_package_devDependencies_eslint_config_react_app: '^7.0.1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6726375Z   JAVA_HOME: '/usr/lib/jvm/java-17-openjdk-amd64',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6726770Z   GITHUB_ACTOR_ID: '32932503',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6727259Z   GITHUB_PATH: '/__w/_temp/_runner_file_commands/add_path_a42be946-9af7-41fe-8de9-4c07589dfea4',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6727810Z   RUNNER_WORKSPACE: '/__w/utkusarioglu-com',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6728274Z   PWD: '/__w/utkusarioglu-com/utkusarioglu-com',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6728785Z   npm_execpath: '/github/home/.cache/node/corepack/v1/yarn/1.22.22/bin/yarn.js',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6729333Z   npm_package_scripts_start_ssl_proxy: 'scripts/start-ssl-proxy.sh',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6729779Z   ANDROID_HOME: '/opt/android',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6730098Z   GITHUB_EVENT_NAME: 'push',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6730513Z   GITHUB_SERVER_URL: 'https://github.com',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6731017Z   GITHUB_OUTPUT: '/__w/_temp/_runner_file_commands/set_output_a42be946-9af7-41fe-8de9-4c07589dfea4',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6731533Z   npm_package_devDependencies_postcss: '^8.4.14',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6731980Z   npm_package_devDependencies_color_convert: '^2.0.1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6732541Z   npm_package_scripts_dev_insecure: 'next dev',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6733217Z   npm_config_save_prefix: '^',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6733576Z   npm_config_ignore_optional: '',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6734100Z   GITHUB_ARTIFACTS_LIST: '/__w/_temp/_runner_file_commands/artifacts_list_a42be946-9af7-41fe-8de9-4c07589dfea4',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6734738Z   npm_package_dependencies_next: '^12.1.6',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6735125Z   npm_package_dependencies_web_vitals: '^0.2.4',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6735571Z   INIT_CWD: '/__w/utkusarioglu-com/utkusarioglu-com',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6735965Z   EDITOR: 'nvim',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6736290Z   ANDROID_NDK_HOME: '/opt/android/ndk/29.0.13599879',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6736878Z   GITHUB_STEP_SUMMARY: '/__w/_temp/_runner_file_commands/step_summary_a42be946-9af7-41fe-8de9-4c07589dfea4',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6737442Z   npm_package_devDependencies_yaml: '^2.1.1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6737827Z   npm_package_dependencies_react: '^17.0.1',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6738829Z   npm_package_scripts_add_new_paper_chain_link: 'scripts/add-new-paper-chain-link.js',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6739302Z   NODE_ENV: 'production',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6739594Z   NEXT_RUNTIME: 'nodejs',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6739876Z   VIPS_MIN_STACK_SIZE: '2m',
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6740178Z   VIPSHOME: '/target'
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6740463Z }
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.6744776Z warn  - No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.8602526Z Attention: Next.js now collects completely anonymous telemetry regarding usage.
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.8604589Z This information is used to shape Next.js' roadmap and prioritize features.
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.8605622Z You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.8606614Z https://nextjs.org/telemetry
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.8607102Z 
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.8774556Z Browserslist: caniuse-lite is outdated. Please run:
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.8775082Z   npx browserslist@latest --update-db
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.8775817Z   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:44.9056216Z info  - Checking validity of types...
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5545022Z Failed to compile.
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5545530Z 
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5548677Z ./src/components/contexts/canvas/Canvas.context.logic.ts:98:3
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5549602Z Type error: Type '{ name: string; hueOffset: number; hueRange: number; freq: number; particleCount: number; particleSize: number; saturation: number; luminance: number; maxDuration: number; seed: number; }' is not assignable to type 'PerlinConfig'.
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5551098Z   Type '{ name: string; hueOffset: number; hueRange: number; freq: number; particleCount: number; particleSize: number; saturation: number; luminance: number; maxDuration: number; seed: number; }' is missing the following properties from type 'PerlinPreset': immediate, immediateIterations
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5552319Z 
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5553419Z [0m [90m  96 | [39m  [36mconst[39m hueRange [33m=[39m [33mMath[39m[33m.[39mround([33mMath[39m[33m.[39mrandom() [33m*[39m ([35m360[39m [33m-[39m hueOffset))[33m;[39m[0m
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5554262Z [0m [90m  97 | [39m[0m
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5554764Z [0m[31m[1m>[22m[39m[90m  98 | [39m  [36mreturn[39m {[0m
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5555342Z [0m [90m     | [39m  [31m[1m^[22m[39m[0m
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5555879Z [0m [90m  99 | [39m    name[33m:[39m [32m"Random"[39m[33m,[39m[0m
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5556381Z [0m [90m 100 | [39m    hueOffset[33m,[39m[0m
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5556817Z [0m [90m 101 | [39m    hueRange[33m,[39m[0m
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5894875Z error Command failed with exit code 1.
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.5895515Z info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.6014972Z ##[error]Process completed with exit code 1.
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.6155618Z Post job cleanup.
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.6163985Z ##[command]/usr/bin/docker exec  bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a sh -c "cat /etc/*release | grep ^ID"
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.7697146Z [command]/usr/bin/git version
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.7737950Z git version 2.43.0
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.7768741Z Temporarily overriding HOME='/__w/_temp/d9429907-f7de-4bed-8f55-dce1c47a9432' before making global git config changes
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.7771195Z Adding repository directory to the temporary git global config as a safe directory
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.7773336Z [command]/usr/bin/git config --global --add safe.directory /__w/utkusarioglu-com/utkusarioglu-com
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.7877263Z Removing SSH command configuration
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.7878282Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.7906563Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8130767Z Removing HTTP extra header
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8131624Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8164619Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8325604Z Removing includeIf entries pointing to credentials config files
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8329782Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8347958Z includeif.gitdir:/__w/utkusarioglu-com/utkusarioglu-com/.git.path
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8348751Z includeif.gitdir:/__w/utkusarioglu-com/utkusarioglu-com/.git/worktrees/*.path
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8349322Z includeif.gitdir:/github/workspace/.git.path
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8349944Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8353840Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/__w/utkusarioglu-com/utkusarioglu-com/.git.path
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8384222Z /__w/_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8388052Z [command]/usr/bin/git config --local --unset includeif.gitdir:/__w/utkusarioglu-com/utkusarioglu-com/.git.path \/__w\/_temp\/git\-credentials\-a3734864\-0c14\-4431\-b9c3\-f778ea3d8d18\.config
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8468847Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/__w/utkusarioglu-com/utkusarioglu-com/.git/worktrees/*.path
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8490596Z /__w/_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8503013Z [command]/usr/bin/git config --local --unset includeif.gitdir:/__w/utkusarioglu-com/utkusarioglu-com/.git/worktrees/*.path \/__w\/_temp\/git\-credentials\-a3734864\-0c14\-4431\-b9c3\-f778ea3d8d18\.config
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8697185Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8714540Z /github/runner_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8719976Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-a3734864\-0c14\-4431\-b9c3\-f778ea3d8d18\.config
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8749203Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8766761Z /github/runner_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8772111Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-a3734864\-0c14\-4431\-b9c3\-f778ea3d8d18\.config
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8816108Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.8971324Z Removing credentials config '/__w/_temp/git-credentials-a3734864-0c14-4431-b9c3-f778ea3d8d18.config'
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.9099090Z Stop and remove container: 9355a95b0b6c41a19ef776acdf636350_utkusarioglureactnativeandroiddevcontainer3624ubuntutest27_3e0136
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:40:47.9103302Z ##[command]/usr/bin/docker rm --force bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:41:04.6191330Z bbaf7e4ddbe12c1435d5849c3f006943720c17b8e649da6514217710734d8b2a
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:41:04.6218332Z Remove container network: github_network_a1d1293d9b4644fbac3eb033f0c4274a
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:41:04.6221175Z ##[command]/usr/bin/docker network rm github_network_a1d1293d9b4644fbac3eb033f0c4274a
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:41:04.6748847Z github_network_a1d1293d9b4644fbac3eb033f0c4274a
-build-website / build-website	UNKNOWN STEP	2026-11-17T14:41:04.6825825Z Cleaning up orphan processes
+build-pdfs	Run Puppeteer pdf creation	﻿2026-11-17T15:01:28.7671448Z ##[group]Run sudo scripts/start-local-server.sh &
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7671895Z [36;1msudo scripts/start-local-server.sh &[0m
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7672316Z [36;1mcurl http://www.utkusarioglu.com:3000/resume | head[0m
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7672715Z [36;1mcurl http://localhost:3000/resume | head[0m
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7673358Z [36;1msudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER[0m
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7721917Z shell: /usr/bin/bash -e {0}
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7722181Z env:
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7722512Z   CERTS_FOLDER: /home/runner/work/utkusarioglu-com/utkusarioglu-com/.certs
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7723223Z ##[endgroup]
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7876238Z Starting local-ssl-proxy
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7876924Z Starting http-server
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7906584Z   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7907686Z                                  Dload  Upload  Total   Spent   Left   Speed
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:28.7908387Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.0474847Z yarn run v1.22.22
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.0477446Z yarn run v1.22.22
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.0637904Z   0      0   0      0   0      0      0      0                              0warning package.json: No license field
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.0639332Z warning package.json: No license field
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.1093699Z $ /home/runner/work/utkusarioglu-com/utkusarioglu-com/node_modules/.bin/http-server -p 3000 ./build
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.1095712Z $ /home/runner/work/utkusarioglu-com/utkusarioglu-com/node_modules/.bin/local-ssl-proxy --source 443 --target 3000 --key ./.certs/server/tls.key --cert ./.certs/server/chain.crt
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2184432Z [32mStarted proxy: https://localhost:443 → http://localhost:3000[39m
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2197388Z Starting up http-server, serving ./build
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2200411Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2200582Z http-server version: 14.1.1
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2201368Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2201533Z http-server settings: 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2201789Z CORS: disabled
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2202003Z Cache: 3600 seconds
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2202245Z Connection Timeout: 120 seconds
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2202637Z Directory Listings: visible
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2203198Z AutoIndex: visible
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2203603Z Serve GZIP Files: false
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2204017Z Serve Brotli Files: false
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2204387Z Default File Extension: none
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2204564Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2204645Z Available on:
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2204883Z   http://127.0.0.1:3000
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2205126Z   http://10.1.0.178:3000
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2205370Z Hit CTRL-C to stop the server
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:29.2205533Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:30.4511871Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:31.4524024Z   0      0   0      0   0      0      0      0           00:01              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:32.4535417Z   0      0   0      0   0      0      0      0           00:02              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:33.4543680Z   0      0   0      0   0      0      0      0           00:03              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:34.4554931Z   0      0   0      0   0      0      0      0           00:04              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:35.4566007Z   0      0   0      0   0      0      0      0           00:05              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:36.4577883Z   0      0   0      0   0      0      0      0           00:06              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:37.4588368Z   0      0   0      0   0      0      0      0           00:07              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:38.4599281Z   0      0   0      0   0      0      0      0           00:08              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:39.4610944Z   0      0   0      0   0      0      0      0           00:09              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:40.4622539Z   0      0   0      0   0      0      0      0           00:10              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:41.4634384Z   0      0   0      0   0      0      0      0           00:11              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:42.4645683Z   0      0   0      0   0      0      0      0           00:12              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:43.4657579Z   0      0   0      0   0      0      0      0           00:13              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:44.4669145Z   0      0   0      0   0      0      0      0           00:14              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:45.4680559Z   0      0   0      0   0      0      0      0           00:15              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:46.4692467Z   0      0   0      0   0      0      0      0           00:16              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:47.4703978Z   0      0   0      0   0      0      0      0           00:17              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:48.4715127Z   0      0   0      0   0      0      0      0           00:18              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:49.4726812Z   0      0   0      0   0      0      0      0           00:19              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:50.4738911Z   0      0   0      0   0      0      0      0           00:20              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:51.4746151Z   0      0   0      0   0      0      0      0           00:21              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:52.4758168Z   0      0   0      0   0      0      0      0           00:22              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:53.4769207Z   0      0   0      0   0      0      0      0           00:23              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:54.4781389Z   0      0   0      0   0      0      0      0           00:24              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:55.4792464Z   0      0   0      0   0      0      0      0           00:25              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:56.4804502Z   0      0   0      0   0      0      0      0           00:26              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:57.4829166Z   0      0   0      0   0      0      0      0           00:27              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:58.4817585Z   0      0   0      0   0      0      0      0           00:28              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:01:59.4829157Z   0      0   0      0   0      0      0      0           00:29              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:00.4835731Z   0      0   0      0   0      0      0      0           00:30              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:01.4847131Z   0      0   0      0   0      0      0      0           00:31              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:02.4858382Z   0      0   0      0   0      0      0      0           00:32              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:03.4870247Z   0      0   0      0   0      0      0      0           00:33              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:04.4881715Z   0      0   0      0   0      0      0      0           00:34              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:05.4893626Z   0      0   0      0   0      0      0      0           00:35              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:06.4905003Z   0      0   0      0   0      0      0      0           00:36              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:07.4916166Z   0      0   0      0   0      0      0      0           00:37              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:08.4927360Z   0      0   0      0   0      0      0      0           00:38              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:09.4939070Z   0      0   0      0   0      0      0      0           00:39              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:10.4950885Z   0      0   0      0   0      0      0      0           00:40              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:11.4962170Z   0      0   0      0   0      0      0      0           00:41              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:12.4973694Z   0      0   0      0   0      0      0      0           00:42              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:13.4985278Z   0      0   0      0   0      0      0      0           00:43              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:14.4996762Z   0      0   0      0   0      0      0      0           00:44              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:15.5008371Z   0      0   0      0   0      0      0      0           00:45              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:16.5019521Z   0      0   0      0   0      0      0      0           00:46              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:17.5031864Z   0      0   0      0   0      0      0      0           00:47              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:18.5043424Z   0      0   0      0   0      0      0      0           00:48              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:19.5055173Z   0      0   0      0   0      0      0      0           00:49              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:20.5067568Z   0      0   0      0   0      0      0      0           00:50              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:21.5078659Z   0      0   0      0   0      0      0      0           00:51              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:22.5090060Z   0      0   0      0   0      0      0      0           00:52              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:23.5101591Z   0      0   0      0   0      0      0      0           00:53              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:24.5113461Z   0      0   0      0   0      0      0      0           00:54              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:25.5124525Z   0      0   0      0   0      0      0      0           00:55              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:26.5136320Z   0      0   0      0   0      0      0      0           00:56              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:27.5148021Z   0      0   0      0   0      0      0      0           00:57              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:28.5159535Z   0      0   0      0   0      0      0      0           00:58              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:29.5171087Z   0      0   0      0   0      0      0      0           00:59              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:30.5183121Z   0      0   0      0   0      0      0      0           01:00              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:31.5194108Z   0      0   0      0   0      0      0      0           01:01              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:32.5205621Z   0      0   0      0   0      0      0      0           01:02              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:33.5217528Z   0      0   0      0   0      0      0      0           01:03              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:34.5228569Z   0      0   0      0   0      0      0      0           01:04              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:35.5240407Z   0      0   0      0   0      0      0      0           01:05              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:36.5251585Z   0      0   0      0   0      0      0      0           01:06              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:37.5263425Z   0      0   0      0   0      0      0      0           01:07              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:38.5274861Z   0      0   0      0   0      0      0      0           01:08              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:39.5286250Z   0      0   0      0   0      0      0      0           01:09              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:40.5298197Z   0      0   0      0   0      0      0      0           01:10              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:41.5309692Z   0      0   0      0   0      0      0      0           01:11              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:42.5320891Z   0      0   0      0   0      0      0      0           01:12              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:43.5325435Z   0      0   0      0   0      0      0      0           01:13              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:44.5336982Z   0      0   0      0   0      0      0      0           01:14              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:45.5348337Z   0      0   0      0   0      0      0      0           01:15              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:46.5359783Z   0      0   0      0   0      0      0      0           01:16              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:47.5371920Z   0      0   0      0   0      0      0      0           01:17              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:48.5383598Z   0      0   0      0   0      0      0      0           01:18              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:49.5394455Z   0      0   0      0   0      0      0      0           01:19              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:50.5406228Z   0      0   0      0   0      0      0      0           01:20              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:51.5418589Z   0      0   0      0   0      0      0      0           01:21              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:52.5429598Z   0      0   0      0   0      0      0      0           01:22              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:53.5441254Z   0      0   0      0   0      0      0      0           01:23              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:54.5452525Z   0      0   0      0   0      0      0      0           01:24              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:55.5464114Z   0      0   0      0   0      0      0      0           01:25              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:56.5474996Z   0      0   0      0   0      0      0      0           01:26              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:57.5487074Z   0      0   0      0   0      0      0      0           01:27              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:58.5498608Z   0      0   0      0   0      0      0      0           01:28              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:02:59.5510299Z   0      0   0      0   0      0      0      0           01:29              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:00.5521721Z   0      0   0      0   0      0      0      0           01:30              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:01.5533565Z   0      0   0      0   0      0      0      0           01:31              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:02.5544688Z   0      0   0      0   0      0      0      0           01:32              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:03.5556351Z   0      0   0      0   0      0      0      0           01:33              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:04.5567761Z   0      0   0      0   0      0      0      0           01:34              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:05.5579229Z   0      0   0      0   0      0      0      0           01:35              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:06.5590902Z   0      0   0      0   0      0      0      0           01:36              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:07.5602155Z   0      0   0      0   0      0      0      0           01:37              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:08.5614199Z   0      0   0      0   0      0      0      0           01:38              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:09.5625773Z   0      0   0      0   0      0      0      0           01:39              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:10.5637202Z   0      0   0      0   0      0      0      0           01:40              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:11.5648856Z   0      0   0      0   0      0      0      0           01:41              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:12.5660375Z   0      0   0      0   0      0      0      0           01:42              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:13.5672408Z   0      0   0      0   0      0      0      0           01:43              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:14.5683868Z   0      0   0      0   0      0      0      0           01:44              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:15.5694477Z   0      0   0      0   0      0      0      0           01:45              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:16.5704412Z   0      0   0      0   0      0      0      0           01:46              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:17.5716469Z   0      0   0      0   0      0      0      0           01:47              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:18.5727849Z   0      0   0      0   0      0      0      0           01:48              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:19.5739554Z   0      0   0      0   0      0      0      0           01:49              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:20.5750909Z   0      0   0      0   0      0      0      0           01:50              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:21.5762425Z   0      0   0      0   0      0      0      0           01:51              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:22.5774154Z   0      0   0      0   0      0      0      0           01:52              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:23.5785764Z   0      0   0      0   0      0      0      0           01:53              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:24.5797334Z   0      0   0      0   0      0      0      0           01:54              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:25.5808826Z   0      0   0      0   0      0      0      0           01:55              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:26.5820639Z   0      0   0      0   0      0      0      0           01:56              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:27.5832008Z   0      0   0      0   0      0      0      0           01:57              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:28.5843537Z   0      0   0      0   0      0      0      0           01:58              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:29.5849678Z   0      0   0      0   0      0      0      0           01:59              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:30.5861036Z   0      0   0      0   0      0      0      0           02:00              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:31.5872389Z   0      0   0      0   0      0      0      0           02:01              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:32.5883745Z   0      0   0      0   0      0      0      0           02:02              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:33.5895630Z   0      0   0      0   0      0      0      0           02:03              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:34.5907155Z   0      0   0      0   0      0      0      0           02:04              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:35.5918531Z   0      0   0      0   0      0      0      0           02:05              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:36.5930302Z   0      0   0      0   0      0      0      0           02:06              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:37.5941712Z   0      0   0      0   0      0      0      0           02:07              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:38.5953646Z   0      0   0      0   0      0      0      0           02:08              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:39.5964853Z   0      0   0      0   0      0      0      0           02:09              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:40.5976211Z   0      0   0      0   0      0      0      0           02:10              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:41.5987933Z   0      0   0      0   0      0      0      0           02:11              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:42.5999391Z   0      0   0      0   0      0      0      0           02:12              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.3955850Z   0      0   0      0   0      0      0      0           02:13              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.3956900Z curl: (28) Failed to connect to www.utkusarioglu.com port 3000 after 134606 ms: Could not connect to server
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4030079Z   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4030783Z                                  Dload  Upload  Total   Spent   Left   Speed
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4031083Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4069994Z [2026-11-17T15:03:43.406Z]  "GET /resume" "curl/8.18.0"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4115036Z   0      0   0      0   0      0      0      0                              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4115979Z 100  22629 100  22629   0      0  2.51M      0                              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4116909Z 100  22629 100  22629   0      0  2.49M      0                              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4117860Z 100  22629 100  22629   0      0  2.47M      0                              0
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4207373Z /home/runner/work/utkusarioglu-com/utkusarioglu-com/scripts/docker-run-puppeteer-pdf.sh: line 3: .env: No such file or directory
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.4436120Z Unable to find image 'ghcr.io/puppeteer/puppeteer:latest' locally
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:43.9188684Z latest: Pulling from puppeteer/puppeteer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4276448Z a2eac331341c: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4277266Z a4aa977c0d0e: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4277916Z c28c2f6c340d: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4280117Z d9c899d8f000: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4280587Z 9b2b3f6483a1: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4281060Z 49dd0ae78313: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4281501Z d3881772a308: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4281794Z 661ef7e1e7b1: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4282166Z d99c3612c451: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4282579Z 6b10c2e8e756: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4283139Z 412d30040dcb: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4283573Z bf4ef2108243: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4283856Z 4f4fb700ef54: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4284166Z 68304cd75790: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.4470302Z 4f4fb700ef54: Already exists
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.7525306Z a2eac331341c: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.7546553Z d3881772a308: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.7559387Z 6b10c2e8e756: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.7587619Z 68304cd75790: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.7588686Z 5aae86a2be05: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.8490703Z 412d30040dcb: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.8524043Z d9c899d8f000: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:44.9501246Z 49dd0ae78313: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:45.0496788Z a4aa977c0d0e: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:45.2484196Z 661ef7e1e7b1: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:45.8465178Z 9b2b3f6483a1: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:45.9469505Z d99c3612c451: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:46.3469191Z c28c2f6c340d: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:46.6575736Z a4aa977c0d0e: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:47.0584147Z 49dd0ae78313: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:48.5590236Z 661ef7e1e7b1: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:51.8469095Z bf4ef2108243: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:52.4606675Z c28c2f6c340d: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:52.5553529Z 68304cd75790: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:54.0516477Z 6b10c2e8e756: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:54.0553561Z 9b2b3f6483a1: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:54.1476988Z 4f4fb700ef54: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:54.1521069Z d3881772a308: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:54.1534456Z 412d30040dcb: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:54.1547649Z d9c899d8f000: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:57.8534284Z bf4ef2108243: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:59.4482017Z d99c3612c451: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:59.6253174Z a2eac331341c: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:59.6254336Z Digest: sha256:8ed70a9d45734640080f5ca0c23316a659cab8c2e334ef7bccf6fc2e04862b8e
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:03:59.6255962Z Status: Downloaded newer image for ghcr.io/puppeteer/puppeteer:latest
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.8843628Z <!DOCTYPE html><html lang="en" class="h-full"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel="preload" href="/_next/static/css/74d8e99d52492782.css" as="style"/><link rel="stylesheet" href="/_next/static/css/74d8e99d52492782.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-5f099b5e3666017b.js" defer=""></script><script src="/_next/static/chunks/framework-5f4595e5518b5600.js" defer=""></script><script src="/_next/static/chunks/main-53abe94d2c7d8421.js" defer=""></script><script src="/_next/static/chunks/pages/_app-39eaf63c4ca270ca.js" defer=""></script><script src="/_next/static/chunks/33-e95244d9ca59f1f0.js" defer=""></script><script src="/_next/static/chunks/pages/resume-647e0c4612cf4a85.js" defer=""></script><script src="/_next/static/CsICnbAWmP9u5gJn1x33k/_buildManifest.js" defer=""></script><script src="/_next/static/CsICnbAWmP9u5gJn1x33k/_ssgManifest.js" defer=""></script><script src="/_next/static/CsICnbAWmP9u5gJn1x33k/_middlewareManifest.js" defer=""></script><style data-href="https://fonts.googleapis.com/css2?family=Galada&display=block">@font-face{font-family:'Galada';font-style:normal;font-weight:400;font-display:block;src:url(https://fonts.gstatic.com/s/galada/v21/H4cmBXyGmcjXlUX-8Q.woff) format('woff')}@font-face{font-family:'Galada';font-style:normal;font-weight:400;font-display:block;src:url(https://fonts.gstatic.com/s/galada/v21/H4cmBXyGmcjXlUXO5yY_wrmwgp63.woff2) format('woff2');unicode-range:U+0951-0952,U+0964-0965,U+0980-09FE,U+1CD0,U+1CD2,U+1CD5-1CD6,U+1CD8,U+1CE1,U+1CEA,U+1CED,U+1CF2,U+1CF5-1CF7,U+200C-200D,U+20B9,U+25CC,U+A8F1,U+11DF0-11DF1}@font-face{font-family:'Galada';font-style:normal;font-weight:400;font-display:block;src:url(https://fonts.gstatic.com/s/galada/v21/H4cmBXyGmcjXlUXO9SY_wrmwgg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style><style data-href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=block">@font-face{font-family:'Quicksand';font-style:normal;font-weight:300;font-display:block;src:url(https://fonts.gstatic.com/s/quicksand/v37/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo18I.woff) format('woff')}@font-face{font-family:'Quicksand';font-style:normal;font-weight:300;font-display:block;src:url(https://fonts.gstatic.com/s/quicksand/v37/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo58m-xDwxUD2GF9Zc.woff) format('woff');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Quicksand';font-style:normal;font-weight:300;font-display:block;src:url(https://fonts.gstatic.com/s/quicksand/v37/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo58i-xDwxUD2GF9Zc.woff) format('woff');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Quicksand';font-style:normal;font-weight:300;font-display:block;src:url(https://fonts.gstatic.com/s/quicksand/v37/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo58a-xDwxUD2GFw.woff) format('woff');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style><style data-href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=block">@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pYCM.woff) format('woff')}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCFPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCMPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCHPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCGPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:block;src:url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCIPrcVIT9d0c8.woff) format('woff');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style></head><body class="bg-base-light dark:bg-base-dark transition-colors select-none h-full overflow-hidden"><div id="__next" data-reactroot=""></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"resume":{"name":"Utku Sarioglu","page":"Resume","variants":{"specialties":[{"id":"al","title":"All","remarks":"Includes frontend, backend and Web3 skills"},{"id":"be","title":"Backend","remarks":"Kubernetes and AWS based backend development"},{"id":"fe","title":"Frontend","remarks":"React \u0026 React Native based frontend development"},{"id":"fs","title":"Fullstack","remarks":"Fullstack web2 development"},{"id":"w3","title":"Web3","remarks":"Ethereum based fullstack web3 application development"}],"paperFormats":[{"title":"A4","searchQueryValue":"a4","remarks":"Standard format for Europe and the rest of the world","shortCode":4},{"title":"Letter","searchQueryValue":"letter","remarks":"North American standard","shortCode":"l"}],"paperStyles":[{"id":"al","paperFormatShortCode":4,"margins":{"x":45,"y":60},"styles":{"layout":{"templateColumns":"50vw 12vw auto","columnGap":"20px","sectionsGap":"12px","headerGap":"20px"},"h2":{"marginBottom":"4px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"0px"},"li":{"divider":{"height":"0px"}}},"education":{"ol":{"gap":"0px"}}}},{"id":"al","paperFormatShortCode":"l","margins":{"x":40,"y":40},"styles":{"layout":{"templateColumns":"51vw 11vw auto","columnGap":"20px","sectionsGap":"8px","headerGap":"12px"},"h2":{"marginBottom":"3px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"0px"},"li":{"divider":{"height":"0px"}}},"education":{"ol":{"gap":"0px"}}}},{"id":"be","paperFormatShortCode":4,"margins":{"x":55,"y":65},"styles":{"layout":{"templateColumns":"50vw 18vw auto","columnGap":"30px","sectionsGap":"12px","headerGap":"20px"},"h2":{"marginBottom":"6px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"8px"},"li":{"divider":{"height":"2px"}}},"education":{"ol":{"gap":"8px"}}}},{"id":"be","paperFormatShortCode":"l","margins":{"x":45,"y":42},"styles":{"layout":{"templateColumns":"50vw 20vw auto","columnGap":"30px","sectionsGap":"12px","headerGap":"20px"},"h2":{"marginBottom":"6px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"6px"},"li":{"divider":{"height":"2px"}}},"education":{"ol":{"gap":"6px"}}}},{"id":"fe","paperFormatShortCode":4,"margins":{"x":55,"y":65},"styles":{"layout":{"templateColumns":"50vw 18vw auto","columnGap":"30px","sectionsGap":"8px","headerGap":"20px"},"h2":{"marginBottom":"6px"},"relevantWorkExperience":{"ol":{"gap":"6px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"8px"},"li":{"divider":{"height":"2px"}}},"education":{"ol":{"gap":"8px"}}}},{"id":"fe","paperFormatShortCode":"l","margins":{"x":45,"y":45},"styles":{"layout":{"templateColumns":"50vw 19vw auto","columnGap":"30px","sectionsGap":"8px","headerGap":"20px"},"h2":{"marginBottom":"6px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"8px"},"li":{"divider":{"height":"2px"}}},"education":{"ol":{"gap":"8px"}}}},{"id":"fs","paperFormatShortCode":4,"margins":{"x":55,"y":60},"styles":{"layout":{"templateColumns":"50vw 13vw auto","columnGap":"30px","sectionsGap":"8px","headerGap":"20px"},"h2":{"marginBottom":"4px"},"relevantWorkExperience":{"ol":{"gap":"6px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"4px"},"li":{"divider":{"height":"0px"}}},"education":{"ol":{"gap":"2px"}}}},{"id":"fs","paperFormatShortCode":"l","margins":{"x":45,"y":42},"styles":{"layout":{"templateColumns":"50vw 13vw auto","columnGap":"30px","sectionsGap":"8px","headerGap":"20px"},"h2":{"marginBottom":"4px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"4px"},"li":{"divider":{"height":"0px"}}},"education":{"ol":{"gap":"0px"}}}},{"id":"w3","paperFormatShortCode":4,"margins":{"x":55,"y":65},"styles":{"layout":{"templateColumns":"50vw 15vw auto","columnGap":"25px","sectionsGap":"12px","headerGap":"20px"},"h2":{"marginBottom":"4px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"4px"},"li":{"divider":{"height":"1px"}}},"education":{"ol":{"gap":"4px"}}}},{"id":"w3","paperFormatShortCode":"l","margins":{"x":45,"y":42},"styles":{"layout":{"templateColumns":"50vw 14vw auto","columnGap":"25px","sectionsGap":"12px","headerGap":"20px"},"h2":{"marginBottom":"4px"},"relevantWorkExperience":{"ol":{"gap":"4px"},"li":{"divider":{"height":"2px"}}},"skills":{"ol":{"gap":"4px"},"li":{"divider":{"height":"1px"}}},"education":{"ol":{"gap":"4px"}}}}],"includePhoto":[{"state":true,"searchQueryValue":"true","shortCode":"p"},{"state":false,"searchQueryValue":"false","shortCode":"n"}]},"introduction":{"title":"Introduction","print":false,"remarks":["Full stack Web2 / Web3 developer experienced in economics and international trade. 10+ years of experience in programming and 5+ years of experience in management of trade and engineering projects.\n","An efficient leader through conscientious approaches and presentable\npersonality. Excellent at creating intuitive solutions and multi-level steps for\nhandling complexity. Experienced in international contexts and handling tricky\npersonnel and clients. Proven to be capable of creating wholistic solutions,\nmeeting complex requirements and handling stressful tasks.\n"]},"contact":{"title":"Contact","print":false,"list":[{"title":"Linkedin","value":"https://www.linkedin.com/in/utku-sarioglu/","handle":"utku-sarioglu","remarks":"Preferred for professional inquiries","print":false},{"title":"Instagram","value":"https://www.instagram.com/utkusarioglu","handle":"utkusarioglu","remarks":"Preferred for personal inquiries","print":false},{"title":"Github","value":"https://github.com/utkusarioglu","handle":"utkusarioglu","print":false,"remarks":"Professional and personal inquiries"},{"title":"Email","value":"utkusarioglu@hotmail.com","print":true,"screen":false},{"title":"Website","value":"www.utkusarioglu.com","print":true,"screen":false},{"title":"Phone","value":"+90 (532) 335 3334","print":true,"screen":false},{"title":"Address","value":"Ordu, Turkiye","print":true,"screen":false}]},"skills":{"title":"Skills","remarks":"* implies familiarity","list":[{"title":"Natural Languages","list":[{"title":"English","remarks":"Fluent"},{"title":"Turkish","remarks":"Native"}]},{"title":"Programming Languages","list":[{"title":"Typescript"},{"title":"Javascript"},{"title":"Solidity","specialties":["w3"]},{"title":"Yul","specialties":["w3"]},{"title":"Python"},{"title":"PHP","specialties":["fs","be"]},{"title":"C","confident":false},{"title":"C++","confident":false},{"title":"Go","confident":false,"specialties":["fs","be"]},{"title":"Supercollider","specialties":["al"]}]},{"title":"Scripting Languages \u0026 DSL","list":[{"title":"SQL","specialties":["fs","be"]},{"title":"Bash","specialties":["fs","be","fe","w3"]},{"title":"PowerShell","confident":false},{"title":"PlantUML"},{"title":"HCL","specialties":["fs","be"]},{"title":"D2","specialties":["fs","be","fe","w3"]}]},{"title":"Frontend","list":[{"title":"React","specialties":["fs","fe","w3"]},{"title":"React Native","confident":false,"specialties":["fs","fe","w3"]},{"title":"NextJS","specialties":["fs","fe","w3"]},{"title":"Tauri","confident":false,"specialties":["fs","fe","w3"]},{"title":"Apollo","specialties":["fs","fe","w3"]},{"title":"Redux","specialties":["fs","fe","w3"]},{"title":"WordPress","specialties":["fs","fe","w3"]},{"title":"TailwindCSS","specialties":["fs","fe","w3"]},{"title":"SDL","confident":false,"specialties":["fs","fe","w3"]},{"title":"ENTT","confident":false,"specialties":["fs","fe","w3"]}]},{"title":"DevOps and CI\u0026CD","list":[{"title":"Docker"},{"title":"Kubernetes","specialties":["fs","be"]},{"title":"kOps","specialties":["fs","be"]},{"title":"Skaffold","specialties":["fs","be"]},{"title":"Terraform","specialties":["fs","be"]},{"title":"Vagrant","specialties":["fs","be"]},{"title":"Hyper-V","specialties":["fs","be"]},{"title":"k3s","specialties":["fs","be"]},{"title":"GitHub Actions"},{"title":"Jenkins","confident":false,"specialties":["fs","be"]},{"title":"LocalStack","specialties":["fs","be"]}]},{"title":"Backend","list":[{"title":"NodeJS"},{"title":"MySQL","specialties":["fs","be"]},{"title":"PostgreSQL","specialties":["fs","be"]},{"title":"MongoDB","confident":false,"specialties":["fs","be"]},{"title":"Redis","specialties":["fs","be"]},{"title":"Kafka","specialties":["fs","be"]},{"title":"Debezium","specialties":["fs","be"]},{"title":"ZooKeeper","confident":false,"specialties":["fs","be"]},{"title":"Strimzi","specialties":["fs","be"]},{"title":"Grafana","confident":false,"specialties":["fs","be"]},{"title":"Loki","confident":false,"specialties":["fs","be"]},{"title":"Jaeger","confident":false,"specialties":["fs","be"]},{"title":"Prometheus","confident":false,"specialties":["fs","be"]},{"title":"OpenSSL"},{"title":"Vault","confident":false,"specialties":["fs","be"]},{"title":"gRPC","specialties":["fs","be","fe"]},{"title":"OpenTelemetry"},{"title":"Puppeteer"}]},{"title":"Testing and Analysis","list":[{"title":"Cypress"},{"title":"Jest"},{"title":"Mocha"},{"title":"Waffle","specialties":["w3"]},{"title":"Echidna","confident":false,"specialties":["w3"]},{"title":"Mythril","specialties":["w3"]},{"title":"Slither","specialties":["w3"]},{"title":"Manticore","specialties":["w3"]},{"title":"Terratest","confident":false,"specialties":["fs","be"]}]},{"title":"Project Handling","list":[{"title":"Git"},{"title":"Helm","specialties":["fs","be"]},{"title":"Conan","specialties":["fs","fe","be"]},{"title":"OpenAPI"},{"title":"Lerna"},{"title":"Emscripten"},{"title":"AsyncAPI"},{"title":"Metarepo"}]},{"title":"Web3","list":[{"title":"Truffle","specialties":["w3"]},{"title":"Drizzle","specialties":["w3"]},{"title":"Ganache","specialties":["w3"]},{"title":"Web3","specialties":["w3"]},{"title":"Ethers","specialties":["w3"]},{"title":"Matic","specialties":["w3"]},{"title":"Hardhat","specialties":["w3"]},{"title":"Waffle","specialties":["w3"]},{"title":"Geth","confident":false,"specialties":["w3"]},{"title":"The Graph","specialties":["w3"]},{"title":"EVM","specialties":["w3"]}]},{"title":"Data and Math","list":[{"title":"Pandas","specialties":["fs","w3"]},{"title":"NumPy","specialties":["fs","w3"]},{"title":"SciPy","specialties":["fs","w3"]},{"title":"SymPy","specialties":["fs","w3"]},{"title":"Matplotlib","specialties":["fs","w3"]},{"title":"Music21","specialties":["al"]},{"title":"Scamp","specialties":["al"]}]},{"title":"Development Software","list":[{"title":"VS Code"},{"title":"Visual Studio"},{"title":"Vim"},{"title":"Figma","specialties":["fs","fe","w3"]},{"title":"Jupyter Notebook","specialties":["fs","fe","w3"]},{"title":"Postman"},{"title":"Enterprise Architect"},{"title":"Adobe XD","specialties":["fs","fe","w3"]}]},{"title":"Notable Other Software","list":[{"title":"Photoshop","specialties":["fs","fe","w3"]},{"title":"Illustrator","confident":false,"specialties":["fs","fe","w3"]},{"title":"Lightroom","specialties":["fs","fe","w3"]},{"title":"Word"},{"title":"Excel"},{"title":"Outlook"},{"title":"PowerPoint"},{"title":"Visio"},{"title":"Cubase"},{"title":"CaptureOne"},{"title":"MuseScore"}]}]},"relevantWorkExperience":{"title":"Relevant Work Experience","list":[{"title":"Consultant","companyName":"Utku Sarioglu Consultancy","location":"Ordu, Turkiye","start":"May, 2022","finish":"Active","remarks":["Consulted various businesses on the architecture, planning of features, modernization and migration of their databases, kubernetes clusters, aws and on premise assets.\n","Created, maintained custom frontend, backend dashboards and management tooling for boutique trade and finance firms.\n","Designed, tested trading bots for retail investors and boutique finance firms.\n","Created custom code for musicians using supercollider for use on live shows and recording sessions.\n"]},{"title":"Principal Software Engineer","companyName":"HSO, LLC - Oz Medical DBA","location":"Pleasanton, CA. USA","start":"Oct, 2019","finish":"Mar, 2022","remarks":["Built a fullstack, scalable online sales management system aiding the\nproduct listings, sales, marketing, shipments and competitor tracking\non Amazon and other channels.\n","The project utilized IaC and ran on AWS EKS. Most services were built\nwith Python, Typescript, and PHP. PostgreSQL and MongoDB handled most\npersistence.\n","This project integrated multiple fragmented workflows in the company,\nwhich lead to much more efficient HR capitalization and lower operational\ncosts.\n"]},{"title":"General Manager","companyName":"Altas USA, LLC","location":"Stockton, CA. USA","start":"Aug, 2018","finish":"Oct, 2018","remarks":["Planned and established the Californian branch of Altas Oil\nIndustries. This involved finding suppliers California, Oregon and\nWashington state; shipping, installation and boot up of the heavy machinery\nused for production of raw vegetable oil; and establishment of sales\npartnerships in the US.\n","This project ended prematurely due to an unforeseen economic crisis\nin Turkiye, rendering the price points incompatible with the target\nmarkets.\n"]},{"title":"Principal Software Engineer","companyName":"Altas Oil Industry","location":"Ordu, Turkiye","start":"Jun, 2016","finish":"Aug, 2018","remarks":["Built multiple web apps for the company using PHP, React, WordPress,\nand IdeaSoft. \n","Apps included an online sales app, which was one of the first apps in\nthe country that delivered local products nationwide; this concept\nbecame very successful in Turkiye.\n","Managed said apps through multiple marketing and advertising cycles. \n"]},{"title":"Project Manager","companyName":"Altas Oil Industry","location":"Ordu, Turkiye","start":"Jan, 2017","finish":"Aug, 2018","remarks":["Managed the construction, assembly and boot up of Turkiye's first, and \nworld's sixth non-chemical vegetable oil refinery: a 6 million \ndollar investment involving civic, chemical, IT, electrical, mechanical, and\nautomation work with 10+ contractors and 100+ \npersonnel.\n"]},{"title":"Foreign Trade Expert","companyName":"Altas Oil Industry","location":"Ordu, Turkiye","start":"Jun, 2016","finish":"Jan, 2017","remarks":["Managed food grade and heavy machinery trade with 10+ countries at \n6000+ tones monthly volume, with many contracts being valued at \nsix-figures in USD.\n","As a side project, took company's Instagram followers from 50 to ~20k.\n"]},{"title":"Software Development Consultant","companyName":"Index Group","location":"Istanbul, Turkiye","start":"Sep, 2011","finish":"Sep, 2014","remarks":["Wrote productivity modules using C++, VBA, AutoIt, which reduced\ndaily workload on certain tasks by 60%. Later, consulted on these\nfeatures being implemented on the in-house software; While primarily\nworking as the current accounts' manager.\n"]}]},"relevantCertifications":{"title":"Relevant Certifications","print":false,"list":[{"course":"AWS Certified Solutions Architect Associate","institution":"Udemy"},{"course":"Advanced Kubernetes Usage","institution":"Udemy"},{"course":"Apache Kafka","institution":"Udemy","print":false,"certificateId":"UC-0d49da70-b845-4cc2-b2b2-2cadb6ca1990","certificateUrl":"https://www.udemy.com/certificate/UC-0d49da70-b845-4cc2-b2b2-2cadb6ca1990/"},{"course":"Apache Kafka Security","institution":"Udemy"},{"course":"Ethereum Blockchain Development Bootcamp","institution":"Udemy","certificateId":"UC-35f47a50-8dc7-48ef-b889-e17eb600e895","certificateUrl":"https://www.udemy.com/certificate/UC-35f47a50-8dc7-48ef-b889-e17eb600e895/"},{"course":"Professional IT Automation with Python","institution":"Coursera","instructor":"Google","certificateId":"8S6F67S4FE5B","certificateUrl":"https://coursera.org/share/26f71a19335cf1ce898f93a8d25d0378"},{"course":"Nand to Tetris I \u0026 II","institution":"Udemy"},{"course":"PostgreSQL Bootcamp","institution":"Udemy"},{"course":"Fundamentals of Digital Marketing","institution":"Google","instructor":"Google Digital Garage","print":false},{"course":"Copywriting","institution":"Copy Club Advertising Training Agency","print":false}]},"education":{"title":"Education","list":[{"title":"Economics BA","institution":"Yeditepe Uni.","location":"Istanbul, Turkiye","start":2004,"finish":2009},{"title":"Advanced STEM","institution":"Ozel Ordu High","location":"Ordu, Turkiye","start":2000,"finish":2003}]}}},"__N_SSG":true},"page":"/resume","query":{},"buildId":"CsICnbAWmP9u5gJn1x33k","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.8920866Z > puppeteer@25.18.0 postinstall
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.8921268Z > node install.mjs
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.8921402Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9589393Z **INFO** Skipping Firefox download as instructed.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9611902Z chrome (157.0.8103.78) downloaded to /home/pptruser/.cache/puppeteer/chrome/linux-157.0.8103.78
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9613395Z chrome-headless-shell (157.0.8103.78) downloaded to /home/pptruser/.cache/puppeteer/chrome-headless-shell/linux-157.0.8103.78
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9747090Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9747428Z added 28 packages, and audited 29 packages in 2s
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9748051Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9748940Z 9 packages are looking for funding
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9749613Z   run `npm fund` for details
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9760953Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:04.9761340Z found 0 vulnerabilities
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5884952Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5885847Z added 1 package, removed 28 packages, and audited 29 packages in 539ms
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5886423Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5886634Z 10 packages are looking for funding
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5886985Z   run `npm fund` for details
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5898471Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5898972Z found 0 vulnerabilities
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5909802Z npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5910927Z npm warn install-scripts   puppeteer@25.18.0 (postinstall: node install.mjs)
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5911741Z npm warn install-scripts
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.5913272Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8292248Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8293020Z   "message": "Puppeteer is creating pdfs against following variants",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8293741Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8294139Z     "includePhotoVariants": [
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8294568Z       {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8294889Z         "state": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8295288Z         "searchQueryValue": "true",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8295731Z         "shortCode": "p"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8296099Z       },
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8296396Z       {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8296715Z         "state": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8297102Z         "searchQueryValue": "false",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8297543Z         "shortCode": "n"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8297872Z       }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8298043Z     ],
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8298291Z     "paperFormatVariants": [
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8298535Z       {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8298713Z         "title": "A4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8298956Z         "searchQueryValue": "a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8299315Z         "remarks": "Standard format for Europe and the rest of the world",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8299696Z         "shortCode": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8299906Z       },
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8300080Z       {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8300266Z         "title": "Letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8300525Z         "searchQueryValue": "letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8300811Z         "remarks": "North American standard",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8301090Z         "shortCode": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8301297Z       }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8301474Z     ],
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8301667Z     "specialtyIdVariants": [
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8301897Z       "al",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8302074Z       "be",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8302280Z       "fe",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8302451Z       "fs",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8302620Z       "w3"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8303498Z     ]
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8303684Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8303989Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:05.8304889Z Starting pdf files creation…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2293994Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2294628Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2295236Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2296063Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=al&include-photo=true&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2296702Z     "specialtyId": "al",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2296980Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2297227Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2297483Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2297654Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.2901516Z [2026-11-17T15:04:06.289Z]  "GET /resume?specialty-id=al&include-photo=true&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3160255Z [2026-11-17T15:04:06.315Z]  "GET /_next/static/chunks/webpack-5f099b5e3666017b.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3165306Z [2026-11-17T15:04:06.316Z]  "GET /_next/static/css/74d8e99d52492782.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3329474Z [2026-11-17T15:04:06.332Z]  "GET /_next/static/chunks/framework-5f4595e5518b5600.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3332038Z [2026-11-17T15:04:06.332Z]  "GET /_next/static/chunks/main-53abe94d2c7d8421.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3394713Z [2026-11-17T15:04:06.338Z]  "GET /_next/static/chunks/pages/_app-39eaf63c4ca270ca.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3397199Z [2026-11-17T15:04:06.339Z]  "GET /_next/static/chunks/33-e95244d9ca59f1f0.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3400183Z [2026-11-17T15:04:06.339Z]  "GET /_next/static/chunks/pages/resume-647e0c4612cf4a85.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3458958Z [2026-11-17T15:04:06.345Z]  "GET /_next/static/CsICnbAWmP9u5gJn1x33k/_buildManifest.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3593433Z [2026-11-17T15:04:06.358Z]  "GET /_next/static/CsICnbAWmP9u5gJn1x33k/_ssgManifest.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.3599582Z [2026-11-17T15:04:06.359Z]  "GET /_next/static/CsICnbAWmP9u5gJn1x33k/_middlewareManifest.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.4907361Z [2026-11-17T15:04:06.490Z]  "GET /_next/static/chunks/288.81890c8f374c0bf3.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.4911470Z [2026-11-17T15:04:06.490Z]  "GET /_next/static/chunks/804.0632affcc84bdcbd.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.4936882Z [2026-11-17T15:04:06.493Z]  "GET /_next/static/chunks/247.cbec0696ca9a0ee5.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.5162489Z [2026-11-17T15:04:06.515Z]  "GET /_next/static/chunks/418.d1a1196d1a6ae347.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.5374703Z [2026-11-17T15:04:06.537Z]  "GET /_next/static/images/waves-and-bird-620-492d2ec999cc038f8dd58e99c03a3143.jpg" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.5885480Z [2026-11-17T15:04:06.587Z]  "GET /_next/static/images/utku-resume-1x1-602-4f026336d1fcd9c5a461e76d82c034a1.jpg" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6070256Z [2026-11-17T15:04:06.605Z]  "GET /_next/static/chunks/51.03e776eec2320f34.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6073199Z [2026-11-17T15:04:06.607Z]  "GET /_next/static/chunks/359-68b4faa140f71076.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6075702Z [2026-11-17T15:04:06.607Z]  "GET /_next/static/chunks/pages/canvas-74109fb3e0ef7cd5.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6078315Z [2026-11-17T15:04:06.607Z]  "GET /_next/static/chunks/pages/index-1e3dd158cbc8408b.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6080742Z [2026-11-17T15:04:06.607Z]  "GET /_next/data/CsICnbAWmP9u5gJn1x33k/about.json" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6104461Z [2026-11-17T15:04:06.607Z]  "GET /_next/static/chunks/pages/about-3b4c7226734c3705.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6161472Z [2026-11-17T15:04:06.615Z]  "GET /_next/data/CsICnbAWmP9u5gJn1x33k/resume.json" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6165845Z [2026-11-17T15:04:06.616Z]  "GET /_next/data/CsICnbAWmP9u5gJn1x33k/musings.json" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6169035Z [2026-11-17T15:04:06.616Z]  "GET /_next/static/chunks/pages/musings-752b29ad4eb27a67.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6596487Z [2026-11-17T15:04:06.659Z]  "GET /_next/static/manifest.40c17d797a.json" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:06.6742309Z [2026-11-17T15:04:06.673Z]  "GET /_next/static/icons/favicon.fa5662651a.ico" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3885348Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3898157Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3900003Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3901238Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=al&include-photo=false&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3902617Z     "specialtyId": "al",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3903672Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3904373Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3904981Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.3905429Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:07.4544146Z [2026-11-17T15:04:07.453Z]  "GET /resume?specialty-id=al&include-photo=false&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4086498Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4088094Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4089010Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4090134Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=be&include-photo=true&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4091301Z     "specialtyId": "be",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4098280Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4098889Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4099724Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4100206Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:08.4879081Z [2026-11-17T15:04:08.487Z]  "GET /resume?specialty-id=be&include-photo=true&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3853935Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3866504Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3867454Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3868576Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=be&include-photo=false&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3869811Z     "specialtyId": "be",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3870355Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3870899Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3871607Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.3872062Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:09.4524841Z [2026-11-17T15:04:09.449Z]  "GET /resume?specialty-id=be&include-photo=false&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3388233Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3389522Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3390504Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3391593Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fe&include-photo=true&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3392699Z     "specialtyId": "fe",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3393465Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3394051Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3394586Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.3395042Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:10.4139474Z [2026-11-17T15:04:10.413Z]  "GET /resume?specialty-id=fe&include-photo=true&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3356564Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3357038Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3357474Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3358316Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fe&include-photo=false&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3359234Z     "specialtyId": "fe",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3359645Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3360080Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3360466Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3360758Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:11.3901029Z [2026-11-17T15:04:11.389Z]  "GET /resume?specialty-id=fe&include-photo=false&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2798965Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2800552Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2809660Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2810713Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fs&include-photo=true&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2811790Z     "specialtyId": "fs",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2812371Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2813158Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2813676Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.2814131Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:12.3551332Z [2026-11-17T15:04:12.354Z]  "GET /resume?specialty-id=fs&include-photo=true&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3019096Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3021021Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3021944Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3023746Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fs&include-photo=false&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3037557Z     "specialtyId": "fs",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3039647Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3040620Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3041843Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3044511Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:13.3665369Z [2026-11-17T15:04:13.364Z]  "GET /resume?specialty-id=fs&include-photo=false&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2864898Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2866501Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2867663Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2868737Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=w3&include-photo=true&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2870376Z     "specialtyId": "w3",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2895646Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2898707Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2899442Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.2900384Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:14.3438151Z [2026-11-17T15:04:14.343Z]  "GET /resume?specialty-id=w3&include-photo=true&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2864551Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2865474Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2866163Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2867079Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=w3&include-photo=false&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2867979Z     "specialtyId": "w3",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2868412Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2868835Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2869197Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.2869496Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:15.3600303Z [2026-11-17T15:04:15.359Z]  "GET /resume?specialty-id=w3&include-photo=false&paper-format=a4" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3303594Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3325775Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3340146Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3355460Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=al&include-photo=true&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3369616Z     "specialtyId": "al",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3370044Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3370454Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3370811Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.3371112Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:16.4065255Z [2026-11-17T15:04:16.400Z]  "GET /resume?specialty-id=al&include-photo=true&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5645649Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5646740Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5650621Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5651628Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=al&include-photo=false&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5653234Z     "specialtyId": "al",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5653792Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5654340Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5666083Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.5666767Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:17.6675204Z [2026-11-17T15:04:17.665Z]  "GET /resume?specialty-id=al&include-photo=false&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6644453Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6644937Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6645376Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6646138Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=be&include-photo=true&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6647073Z     "specialtyId": "be",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6647491Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6647898Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6648294Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.6648587Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:18.7541710Z [2026-11-17T15:04:18.752Z]  "GET /resume?specialty-id=be&include-photo=true&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.6856090Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.6913678Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.6994064Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.6999483Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=be&include-photo=false&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.7013621Z     "specialtyId": "be",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.7014286Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.7014892Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.7015435Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.7015900Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:19.7582382Z [2026-11-17T15:04:19.757Z]  "GET /resume?specialty-id=be&include-photo=false&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8123584Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8124394Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8125103Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8126107Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fe&include-photo=true&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8127177Z     "specialtyId": "fe",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8127850Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8128424Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8129030Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.8129490Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:20.9045396Z [2026-11-17T15:04:20.903Z]  "GET /resume?specialty-id=fe&include-photo=true&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9286001Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9286624Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9287137Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9288020Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fe&include-photo=false&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9293534Z     "specialtyId": "fe",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9294138Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9294571Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9294971Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:21.9295266Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:22.0185760Z [2026-11-17T15:04:22.018Z]  "GET /resume?specialty-id=fe&include-photo=false&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0104101Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0109541Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0110074Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0110892Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fs&include-photo=true&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0111805Z     "specialtyId": "fs",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0112210Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0853928Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0854416Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0854719Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:23.0856059Z [2026-11-17T15:04:23.082Z]  "GET /resume?specialty-id=fs&include-photo=true&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1375612Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1377165Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1378336Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1379746Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=fs&include-photo=false&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1381420Z     "specialtyId": "fs",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1382326Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1383281Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1383902Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.1384318Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:24.2211233Z [2026-11-17T15:04:24.220Z]  "GET /resume?specialty-id=fs&include-photo=false&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2229127Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2230971Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2231787Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2232923Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=w3&include-photo=true&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2234164Z     "specialtyId": "w3",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2234725Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2235465Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2236164Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.2236644Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:25.3070990Z [2026-11-17T15:04:25.306Z]  "GET /resume?specialty-id=w3&include-photo=true&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3119704Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3123281Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3123713Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3124516Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=w3&include-photo=false&paper-format=letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3125416Z     "specialtyId": "w3",
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3125812Z     "includePhoto": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3126206Z     "paperFormat": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3127259Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.3127550Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:26.4190843Z [2026-11-17T15:04:26.418Z]  "GET /resume?specialty-id=w3&include-photo=false&paper-format=letter" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:27.5989505Z Pdf creation complete.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.4468125Z Ghostscript will process pdf files agains following specs:
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.4469049Z   Photo variants: 'p n '
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.4470060Z   Specialty id variants: 'al be fe fs w3 '
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.4470766Z   Paper format short code variants: '4 l '
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.4471528Z Optimizing resume: 'alp4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6012638Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-alp4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6014432Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6191861Z Optimizing resume: 'alpl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6480847Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-alpl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6482309Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6495532Z Optimizing resume: 'bep4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6781121Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-bep4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6782646Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.6813731Z Optimizing resume: 'bepl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7108871Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-bepl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7109969Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7126846Z Optimizing resume: 'fep4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7409379Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fep4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7411167Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7424296Z Optimizing resume: 'fepl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7706330Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fepl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7707760Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.7721415Z Optimizing resume: 'fsp4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8002417Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fsp4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8004089Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8016756Z Optimizing resume: 'fspl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8297270Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fspl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8298240Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8312290Z Optimizing resume: 'w3p4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8591018Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-w3p4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8591969Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8605163Z Optimizing resume: 'w3pl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8889994Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-w3pl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8891428Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.8905167Z Optimizing resume: 'aln4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9189176Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-aln4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9191110Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9203900Z Optimizing resume: 'alnl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9480645Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-alnl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9482063Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9495185Z Optimizing resume: 'ben4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9773347Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-ben4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9774801Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:28.9787595Z Optimizing resume: 'benl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0066514Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-benl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0067993Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0080650Z Optimizing resume: 'fen4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0357935Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fen4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0359362Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0372170Z Optimizing resume: 'fenl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0653598Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fenl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0655058Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0668495Z Optimizing resume: 'fsn4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0952397Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fsn4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0954202Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.0967879Z Optimizing resume: 'fsnl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.1249839Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-fsnl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.1251266Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.1264958Z Optimizing resume: 'w3n4'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.1544925Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-w3n4.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.1546363Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.1561861Z Optimizing resume: 'w3nl'…
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.1839366Z GPL Ghostscript 10.06.0: **** Could not open the file /home/runner/work/utkusarioglu-com/utkusarioglu-com/.puppeteer/artifacts/compressed/utku-sarioglu-resume-w3nl.pdf .
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:29.1840413Z **** Unable to open the initial device, quitting.
+build-pdfs	Run Puppeteer pdf creation	2026-11-17T15:04:34.1892593Z ##[error]Process completed with exit code 1.
