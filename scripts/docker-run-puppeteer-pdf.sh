@@ -55,8 +55,8 @@ run_docker() {
 run_gs() {
   if [ -z "$(which gs)" ]; then
     echo "Warn: GhostScript not installed on the host. Installing..."
-    # apt-get install ghostscript -y
-    apt-get install -y ghostscript=9.55.0~dfsg1-0ubuntu5
+    apt-get install ghostscript -y
+    # apt-get install -y ghostscript=9.55.0~dfsg1-0ubuntu5
   fi
   if [ -z "$(which gs)" ]; then
     echo "Error: GhostScript install didn't work. Exiting."
@@ -119,8 +119,9 @@ run_gs() {
           -dNOPAUSE \
           -dQUIET \
           -dBATCH \
-          -sOutputFile=$output_file \
+          -sOutputFile="${output_file}" \
           -dMaxInlineImageSize=0 \
+          --permit-file-write="$target_folder/*" \
           $photo_params \
           "$host_raw_artifacts_path/$source"
       done
