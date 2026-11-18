@@ -86,6 +86,9 @@ run_gs() {
   echo "Raw folder content: "
   echo "Raf folder: ${host_raw_artifacts_path}"
   ls -al $host_raw_artifacts_path
+
+  echo "Compressed folder before start:"
+  ls -al $host_compressed_artifacts_path
   
 
   for photo_included in $PHOTO_VARIANTS; do
