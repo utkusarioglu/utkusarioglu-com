@@ -112,7 +112,6 @@ run_gs() {
         echo "Input file readable?"
         test -r $host_raw_artifacts_path/$source && echo YES || echo NO
 
-        set -v
         gs \
           -sDEVICE=pdfwrite \
           -dCompatibilityLevel=1.4 \
@@ -120,14 +119,13 @@ run_gs() {
           -dNOPAUSE \
           -dQUIET \
           -dBATCH \
-          --permit-file-write="$target_folder/*" \
+          -dNOSAFER \
+          # --permit-file-write="$target_folder/*" \
           -sOutputFile="${output_file}" \
           -dMaxInlineImageSize=0 \
           $photo_params \
           "$host_raw_artifacts_path/$source"
       
-          # -dNOSAFER \
-        set +v
 
       done
 
