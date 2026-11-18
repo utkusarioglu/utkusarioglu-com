@@ -2,7 +2,7 @@ download_path=.ignore/pdf
 log_file=failed.log
 
 function final_things {
-  if [ ! -z "$(cat failed.log)" ]; then
+  if [ -z "$(cat $log_file)" ]; then
     echo "Downloading..."
     gh run download --name utkusarioglu-com-pdf-artifacts -D $download_path
   else 
