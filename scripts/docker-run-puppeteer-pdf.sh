@@ -120,13 +120,13 @@ run_gs() {
           -dNOPAUSE \
           -dQUIET \
           -dBATCH \
-          -dNOSAFER \
+          --permit-file-write="$target_folder/*" \
           -sOutputFile="${output_file}" \
           -dMaxInlineImageSize=0 \
           $photo_params \
           "$host_raw_artifacts_path/$source"
       
-          # --permit-file-write="$target_folder/*" \
+          # -dNOSAFER \
         set +v
       done
     done
