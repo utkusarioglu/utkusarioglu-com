@@ -128,9 +128,14 @@ run_gs() {
       
           # -dNOSAFER \
         set +v
+
       done
+
     done
   done
+
+  echo "Compressed files list:"
+  ls -al $host_compressed_artifacts_path
 }
 
 clean_artifacts && run_docker && run_gs
