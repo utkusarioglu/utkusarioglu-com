@@ -132,6 +132,13 @@ run_gs() {
     done
   done
 
+  gs \
+  -dNOSAFER \
+  -sDEVICE=pdfwrite \
+  -sOutputFile=/tmp/gs-test.pdf \
+  -c "showpage" \
+  -dBATCH
+
   echo "Compressed files list:"
   ls -al $host_compressed_artifacts_path
 }
