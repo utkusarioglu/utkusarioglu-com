@@ -1,0 +1,11 @@
+build-pdfs	Run Puppeteer pdf creation	﻿2026-11-18T19:11:06.5273815Z ##[group]Run # sudo scripts/start-local-server.sh &
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.5274991Z [36;1m# sudo scripts/start-local-server.sh &[0m
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.5275922Z [36;1m# curl http://www.utkusarioglu.com:3000/resume | head[0m
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.5276998Z [36;1m# curl http://localhost:3000/resume | head[0m
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.5278021Z [36;1msudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER[0m
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.5678429Z shell: /usr/bin/bash -e {0}
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.5679479Z env:
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.5680442Z   CERTS_FOLDER: /home/runner/work/utkusarioglu-com/utkusarioglu-com/.certs
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.5681433Z ##[endgroup]
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.6047008Z sudo: 'scripts/docker-run-puppeteer-pdf.sh': command not found
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.6063605Z ##[error]Process completed with exit code 1.
