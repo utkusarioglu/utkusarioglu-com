@@ -85,52 +85,52 @@ run_gs() {
   ls -al $host_raw_artifacts_path
   
 
-  for photo_included in $PHOTO_VARIANTS; do
-    if [ $photo_included = 'p' ]; then
-      photo_params="-dColorImageResolution=300"
-    fi
-    for specialty_id in $SPECIALTY_ID_VARIANTS; do
-      for paper_format_short_code in $PAPER_FORMAT_SHORT_CODE_VARIANTS; #1
-      do
-        resume_code="$specialty_id$photo_included$paper_format_short_code"
-        echo "Optimizing resume: '$resume_code'…"
-        source="resume-$resume_code-raw.pdf"
-        target_folder="$host_compressed_artifacts_path"
-        filename_prefix="utku-sarioglu-resume"
-        output_file="$target_folder/$filename_prefix-$resume_code.pdf"
-        mkdir -p "$target_folder"
+  # for photo_included in $PHOTO_VARIANTS; do
+  #   if [ $photo_included = 'p' ]; then
+  #     photo_params="-dColorImageResolution=300"
+  #   fi
+  #   for specialty_id in $SPECIALTY_ID_VARIANTS; do
+  #     for paper_format_short_code in $PAPER_FORMAT_SHORT_CODE_VARIANTS; #1
+  #     do
+  #       resume_code="$specialty_id$photo_included$paper_format_short_code"
+  #       echo "Optimizing resume: '$resume_code'…"
+  #       source="resume-$resume_code-raw.pdf"
+  #       target_folder="$host_compressed_artifacts_path"
+  #       filename_prefix="utku-sarioglu-resume"
+  #       output_file="$target_folder/$filename_prefix-$resume_code.pdf"
+  #       mkdir -p "$target_folder"
         
-        echo "Current user:"
-        id
+  #       echo "Current user:"
+  #       id
 
-        echo "Output directory:"
-        ls -lad $target_folder
+  #       echo "Output directory:"
+  #       ls -lad $target_folder
 
-        echo "Output directory writable?"
-        test -w $target_folder && echo YES || echo NO
+  #       echo "Output directory writable?"
+  #       test -w $target_folder && echo YES || echo NO
 
-        echo "Input file readable?"
-        test -r $host_raw_artifacts_path/$source && echo YES || echo NO
+  #       echo "Input file readable?"
+  #       test -r $host_raw_artifacts_path/$source && echo YES || echo NO
 
-        gs \
-          -sDEVICE=pdfwrite \
-          -dCompatibilityLevel=1.4 \
-          -dPDFSETTINGS=/screen \
-          -dNOPAUSE \
-          -dQUIET \
-          -dBATCH \
-          -dNOSAFER \
-          -sOutputFile="${output_file}" \
-          -dMaxInlineImageSize=0 \
-          $photo_params \
-          "$host_raw_artifacts_path/$source"
+  #       gs \
+  #         -sDEVICE=pdfwrite \
+  #         -dCompatibilityLevel=1.4 \
+  #         -dPDFSETTINGS=/screen \
+  #         -dNOPAUSE \
+  #         -dQUIET \
+  #         -dBATCH \
+  #         -dNOSAFER \
+  #         -sOutputFile="${output_file}" \
+  #         -dMaxInlineImageSize=0 \
+  #         $photo_params \
+  #         "$host_raw_artifacts_path/$source"
       
 
-          # --permit-file-write="$target_folder/*" \
-      done
+  #         # --permit-file-write="$target_folder/*" \
+  #     done
 
-    done
-  done
+  #   done
+  # done
 
   gs \
   -sDEVICE=pdfwrite \
