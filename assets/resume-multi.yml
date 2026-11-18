@@ -26,7 +26,7 @@ variants:
   paperFormats:
     - title: A4
       searchQueryValue: a4
-      remarks: Standard format for Europe and the rest of the world
+      remarks: ISO 216 metric paper format
       shortCode: 4
     - title: Letter
       searchQueryValue: letter
