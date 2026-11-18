@@ -128,7 +128,7 @@ variants:
         y: 42
       styles:
         layout:
-          templateColumns: 50vw 20vw auto
+          templateColumns: 50vw 18vw auto
           columnGap: 30px 
           sectionsGap: 12px
           headerGap: 20px
@@ -789,7 +789,7 @@ relevantWorkExperience:
         - | 
           Designed, tested trading bots for retail investors and boutique finance firms.
         - | 
-          Created custom code for musicians using SuperCollider for use on live shows and recordings.
+          Created custom SuperCollider frameworks for musicians for use on live shows and recordings.
     - title: Principal Software Engineer
       companyName: HSO, LLC - Oz Medical DBA
       location: Pleasanton, CA. USA
