@@ -128,7 +128,7 @@ variants:
         y: 42
       styles:
         layout:
-          templateColumns: 50vw 20vw auto
+          templateColumns: 49vw 18vw auto
           columnGap: 30px 
           sectionsGap: 12px
           headerGap: 20px
@@ -157,7 +157,7 @@ variants:
         y: 65
       styles:
         layout:
-          templateColumns: 50vw 18vw auto
+          templateColumns: 49vw 18vw auto
           columnGap: 30px 
           sectionsGap: 8px
           headerGap: 20px
