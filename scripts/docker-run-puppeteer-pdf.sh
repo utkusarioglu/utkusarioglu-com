@@ -80,8 +80,8 @@ run_gs() {
   echo "  Specialty id variants: '$SPECIALTY_ID_VARIANTS'"
   echo "  Paper format short code variants: '$PAPER_FORMAT_SHORT_CODE_VARIANTS'"
   
-  mkdir -R $host_raw_artifacts_path
-  mkdir -R $host_compressed_artifacts_path
+  mkdir -p $host_raw_artifacts_path
+  mkdir -p $host_compressed_artifacts_path
 
   echo "Raw folder content: "
   echo "Raf folder: ${host_raw_artifacts_path}"

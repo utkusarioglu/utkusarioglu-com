@@ -7,7 +7,7 @@ on:
       - dev
     tags:
       - "**.**.**"
-      - experiment/**/**/**
+      # - experiment/**/**/**
   workflow_dispatch:
 
 jobs:
