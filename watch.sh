@@ -1,7 +1,7 @@
 download_path=.ignore/pdf
 log_file=failed.log
 
-function done {
+function final_things {
   if [ ! -z "$(cat failed.log)" ]; then
     echo "Downloading..."
     gh run download --name utkusarioglu-com-pdf-artifacts -D $download_path
@@ -17,7 +17,7 @@ run_id=$(gh run list --json databaseId -q ".[0].databaseId")
 
 gh run watch $run_id \
   && gh run view $run_id --log-failed > $log_file \
-  && done
+  && final_things
 
 # gh run watch $run_id && 
 # run download --name utkusarioglu-com-pdf-artifacts -D $download_path
