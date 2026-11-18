@@ -247,7 +247,7 @@ variants:
           templateColumns: 50vw 13vw auto
           columnGap: 30px 
           sectionsGap: 8px
-          headerGap: 20px
+          headerGap: 15px
         h2:
           marginBottom: 4px
         relevantWorkExperience:
