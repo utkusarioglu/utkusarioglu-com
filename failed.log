@@ -1,11 +1,145 @@
-build-pdfs	Run Puppeteer pdf creation	﻿2026-11-18T19:11:06.5273815Z ##[group]Run # sudo scripts/start-local-server.sh &
-build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.5274991Z [36;1m# sudo scripts/start-local-server.sh &[0m
-build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.5275922Z [36;1m# curl http://www.utkusarioglu.com:3000/resume | head[0m
-build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.5276998Z [36;1m# curl http://localhost:3000/resume | head[0m
-build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.5278021Z [36;1msudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER[0m
-build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.5678429Z shell: /usr/bin/bash -e {0}
-build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.5679479Z env:
-build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.5680442Z   CERTS_FOLDER: /home/runner/work/utkusarioglu-com/utkusarioglu-com/.certs
-build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.5681433Z ##[endgroup]
-build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.6047008Z sudo: 'scripts/docker-run-puppeteer-pdf.sh': command not found
-build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:11:06.6063605Z ##[error]Process completed with exit code 1.
+build-pdfs	Run Puppeteer pdf creation	﻿2026-11-18T19:13:29.3292617Z ##[group]Run # sudo scripts/start-local-server.sh &
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:29.3294025Z [36;1m# sudo scripts/start-local-server.sh &[0m
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:29.3295450Z [36;1m# curl http://www.utkusarioglu.com:3000/resume | head[0m
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:29.3296871Z [36;1m# curl http://localhost:3000/resume | head[0m
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:29.3298365Z [36;1msudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER[0m
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:29.3348896Z shell: /usr/bin/bash -e {0}
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:29.3349879Z env:
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:29.3351028Z   CERTS_FOLDER: /home/runner/work/utkusarioglu-com/utkusarioglu-com/.certs
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:29.3352698Z ##[endgroup]
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:29.3503453Z /home/runner/work/utkusarioglu-com/utkusarioglu-com/scripts/docker-run-puppeteer-pdf.sh: line 3: .env: No such file or directory
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:29.4203049Z Unable to find image 'ghcr.io/puppeteer/puppeteer:latest' locally
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:29.9091378Z latest: Pulling from puppeteer/puppeteer
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.3400503Z f82c5e8e2d90: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.3401237Z a4aa977c0d0e: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.3405127Z 49dd0ae78313: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.3405756Z 661ef7e1e7b1: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.3406149Z c28c2f6c340d: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.3406640Z e757f74a9923: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.3407066Z da0648c3a7b2: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.3407478Z f1b35d018c2d: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.3407870Z 9b2b3f6483a1: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.3408287Z d4eaaa78bf70: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.3408658Z 68304cd75790: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.3408992Z 6b10c2e8e756: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.3409246Z 4f4fb700ef54: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.3409526Z d9c899d8f000: Pulling fs layer
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.4247249Z 4f4fb700ef54: Already exists
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.5229633Z d9c899d8f000: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.5231348Z bf1ec4cd79b4: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.6250326Z f82c5e8e2d90: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.6282027Z e757f74a9923: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.6282648Z 68304cd75790: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.7243011Z da0648c3a7b2: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:30.7251369Z 6b10c2e8e756: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:31.1234912Z 49dd0ae78313: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:31.9234159Z a4aa977c0d0e: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:32.1231509Z 661ef7e1e7b1: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:32.8226666Z d4eaaa78bf70: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:33.1234405Z 9b2b3f6483a1: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:33.4228195Z c28c2f6c340d: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:33.7353440Z a4aa977c0d0e: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:34.0308469Z 49dd0ae78313: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:35.8288196Z 661ef7e1e7b1: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:36.3250623Z f1b35d018c2d: Download complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:39.1284032Z 68304cd75790: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:39.1336618Z c28c2f6c340d: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:40.3314886Z 9b2b3f6483a1: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:40.4239686Z 4f4fb700ef54: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:40.4253066Z d9c899d8f000: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:40.4278573Z e757f74a9923: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:40.4279313Z da0648c3a7b2: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:40.4288175Z 6b10c2e8e756: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:43.6267316Z f1b35d018c2d: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:44.8255480Z d4eaaa78bf70: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:45.1234070Z f82c5e8e2d90: Pull complete
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:45.2568221Z Digest: sha256:e94e5de180f0488aceebda0e8c32404075c089ec2ac8e9f2f4ec47034a049126
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:45.2568924Z Status: Downloaded newer image for ghcr.io/puppeteer/puppeteer:latest
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.1154357Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.1154892Z > puppeteer@25.18.1 postinstall
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.1155277Z > node install.mjs
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.1155432Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.1803409Z **INFO** Skipping Firefox download as instructed.
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.1827083Z chrome (157.0.8103.78) downloaded to /home/pptruser/.cache/puppeteer/chrome/linux-157.0.8103.78
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.1828154Z chrome-headless-shell (157.0.8103.78) downloaded to /home/pptruser/.cache/puppeteer/chrome-headless-shell/linux-157.0.8103.78
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.1933038Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.1933692Z added 28 packages, and audited 29 packages in 2s
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.1934024Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.1934285Z 9 packages are looking for funding
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.1934638Z   run `npm fund` for details
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.1947269Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.1947436Z found 0 vulnerabilities
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.7340400Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.7340963Z added 1 package, removed 28 packages, and audited 29 packages in 478ms
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.7341258Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.7341358Z 10 packages are looking for funding
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.7341598Z   run `npm fund` for details
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.7347938Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.7348228Z found 0 vulnerabilities
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.7356020Z npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.7356693Z npm warn install-scripts   puppeteer@25.18.1 (postinstall: node install.mjs)
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.7357035Z npm warn install-scripts
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.7357453Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.8449315Z Warning: Ignoring extra certs from `/home/pptruser/.certs/server/ca.crt`, load failed: error:80000002:system library::No such file or directory
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9188712Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9189329Z   "message": "Puppeteer is creating pdfs against following variants",
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9189966Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9190217Z     "includePhotoVariants": [
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9190495Z       {
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9190650Z         "state": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9190834Z         "searchQueryValue": "true",
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9191502Z         "shortCode": "p"
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9191886Z       },
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9192093Z       {
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9192329Z         "state": false,
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9192668Z         "searchQueryValue": "false",
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9192978Z         "shortCode": "n"
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9193229Z       }
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9193442Z     ],
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9193680Z     "paperFormatVariants": [
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9193964Z       {
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9194179Z         "title": "A4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9194449Z         "searchQueryValue": "a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9194786Z         "remarks": "ISO 216 metric paper format",
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9195137Z         "shortCode": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9195378Z       },
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9195594Z       {
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9195818Z         "title": "Letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9196103Z         "searchQueryValue": "letter",
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9196437Z         "remarks": "North American standard",
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9197076Z         "shortCode": "l"
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9197339Z       }
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9197480Z     ],
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9197643Z     "specialtyIdVariants": [
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9197835Z       "al",
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9197997Z       "be",
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9198140Z       "fe",
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9198281Z       "fs",
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9198428Z       "w3"
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9198570Z     ]
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9198709Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9198846Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:57.9199381Z Starting pdf files creation…
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.2433726Z {
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.2434224Z   "status": "Creating pdf",
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.2446673Z   "specs": {
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.2464731Z     "url": "http://www.utkusarioglu.com:3000/resume?specialty-id=al&include-photo=true&paper-format=a4",
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.2469508Z     "specialtyId": "al",
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.2470048Z     "includePhoto": true,
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.2470572Z     "paperFormat": 4
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.2470942Z   }
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.2471270Z }
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.3067595Z file:///home/pptruser/node_modules/puppeteer-core/lib/puppeteer/cdp/Frame.js:194
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.3068579Z                         ? new Error(`${response.errorText} at ${url}`)
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.3069477Z                           ^
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.3069865Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.3070696Z Error: net::ERR_CONNECTION_REFUSED at http://www.utkusarioglu.com:3000/resume?specialty-id=al&include-photo=true&paper-format=a4
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.3072388Z     at navigate (file:///home/pptruser/node_modules/puppeteer-core/lib/puppeteer/cdp/Frame.js:194:27)
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.3099107Z     at async Deferred.race (file:///home/pptruser/node_modules/puppeteer-core/lib/puppeteer/util/Deferred.js:33:20)
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.3100239Z     at async CdpFrame.goto (file:///home/pptruser/node_modules/puppeteer-core/lib/puppeteer/cdp/Frame.js:157:29)
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.3101403Z     at async CdpPage.goto (file:///home/pptruser/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:587:20)
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.3102403Z     at async createSingle (/home/pptruser/src/index.js:84:3)
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.3103009Z     at async /home/pptruser/src/index.js:131:3
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.3103385Z 
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.3103619Z Node.js v24.22.2
+build-pdfs	Run Puppeteer pdf creation	2026-11-18T19:13:58.5404198Z ##[error]Process completed with exit code 1.

@@ -147,4 +147,5 @@ run_gs() {
   ls -al $host_compressed_artifacts_path
 }
 
-clean_artifacts && run_docker && run_gs
+# clean_artifacts && run_docker && 
+run_gs
