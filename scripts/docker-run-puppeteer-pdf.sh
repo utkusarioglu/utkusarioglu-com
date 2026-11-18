@@ -128,5 +128,4 @@ run_gs() {
   done
 }
 
-clean_artifacts && run_docker 
-# && run_gs
+clean_artifacts && run_docker && run_gs
