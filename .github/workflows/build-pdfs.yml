@@ -65,15 +65,21 @@ jobs:
       #     sudo apt update
       #     sudo apt install ghostscript -y
 
-      - name: Run Puppeteer pdf creation
+      # - name: Run Puppeteer pdf creation
+      #   # if: steps.resume-artifacts-cache.outputs.cache-hit != 'true'
+      #   env:
+      #     CERTS_FOLDER: "${{ github.workspace }}/.certs"
+      #   run: |
+      #     sudo scripts/start-local-server.sh &
+      #     curl http://www.utkusarioglu.com:3000/resume | head
+      #     curl http://localhost:3000/resume | head
+      #     sudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER
+        
+      - name: Run Puppeteer pdf compression
         # if: steps.resume-artifacts-cache.outputs.cache-hit != 'true'
-        env:
-          CERTS_FOLDER: "${{ github.workspace }}/.certs"
+        # env:
+        #   CERTS_FOLDER: "${{ github.workspace }}/.certs"
         run: |
-          # sudo scripts/start-local-server.sh &
-          # curl http://www.utkusarioglu.com:3000/resume | head
-          # curl http://localhost:3000/resume | head
-          # sudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER
           sudo scripts/docker-run-puppeteer-gs.sh $CERTS_FOLDER
 
       - name: Upload artifact
