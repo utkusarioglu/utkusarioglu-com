@@ -123,7 +123,6 @@ run_gs() {
           -dCompatibilityLevel=1.4 \
           -dPDFSETTINGS=/screen \
           -dNOPAUSE \
-          -dQUIET \
           -dBATCH \
           -dNOSAFER \
           -sOutputFile="${output_file}" \
@@ -132,24 +131,35 @@ run_gs() {
           "$host_raw_artifacts_path/$source"
       
 
-          # --permit-file-write="$target_folder/*" \
       done
 
     done
   done
 
-  echo "creating at temp"
+  echo "Ghostscript version:"
+  gs --version
+
+  echo "AppArmor status:"
+  cat /proc/self/attr/current
+  sudo aa-status || true
+
+  echo "Testing /tmp:"
   gs \
-  -sDEVICE=pdfwrite \
-  -dCompatibilityLevel=1.4 \
-  -dPDFSETTINGS=/screen \
-  -dNOPAUSE \
-  -dQUIET \
-  -dBATCH \
-  -dNOSAFER \
-  -sOutputFile=/tmp/gs-test.pdf \
-  -c "showpage" 
-  echo "temp creation done"
+    -sDEVICE=pdfwrite \
+    -sOutputFile=/tmp/gs-test.pdf \
+    -c "showpage"
+
+  echo "Exit code: $?"
+  ls -l /tmp/gs-test.pdf 2>&1
+
+  echo "Testing workspace:"
+  gs \
+    -sDEVICE=pdfwrite \
+    -sOutputFile="$host_compressed_artifacts_path/gs-test.pdf" \
+    -c "showpage"
+
+  echo "Exit code: $?"
+  ls -l "$host_compressed_artifacts_path/gs-test.pdf" 2>&1
 
   echo "creating at ${host_compressed_artifacts_path}"
   gs \
@@ -157,7 +167,6 @@ run_gs() {
   -dCompatibilityLevel=1.4 \
   -dPDFSETTINGS=/screen \
   -dNOPAUSE \
-  -dQUIET \
   -dBATCH \
   -dNOSAFER \
   -sOutputFile="${host_compressed_artifacts_path}/gs-test.pdf" \
@@ -169,3 +178,5 @@ run_gs() {
 }
 
 clean_artifacts && run_docker && run_gs
+
+          # --permit-file-write="$target_folder/*" \
