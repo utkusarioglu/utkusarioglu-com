@@ -19,7 +19,7 @@ git add . \
   && git commit -m "$1" \
   && git push \
   && sleep 5 \
-  && git gh run watch $run_id \
+  && gh run watch $run_id \
   && gh run view $run_id --log-failed > $log_file \
   && final_things
 
