@@ -138,16 +138,31 @@ run_gs() {
     done
   done
 
-  # gs \
-  # -sDEVICE=pdfwrite \
-  # -dCompatibilityLevel=1.4 \
-  # -dPDFSETTINGS=/screen \
-  # -dNOPAUSE \
-  # -dQUIET \
-  # -dBATCH \
-  # -dNOSAFER \
-  # -sOutputFile=/tmp/gs-test.pdf \
-  # -c "showpage" \
+  echo "creating at temp"
+  gs \
+  -sDEVICE=pdfwrite \
+  -dCompatibilityLevel=1.4 \
+  -dPDFSETTINGS=/screen \
+  -dNOPAUSE \
+  -dQUIET \
+  -dBATCH \
+  -dNOSAFER \
+  -sOutputFile=/tmp/gs-test.pdf \
+  -c "showpage" \
+  echo "temp creation done"
+
+  echo "creating at ${host_compressed_artifacts_path}"
+  gs \
+  -sDEVICE=pdfwrite \
+  -dCompatibilityLevel=1.4 \
+  -dPDFSETTINGS=/screen \
+  -dNOPAUSE \
+  -dQUIET \
+  -dBATCH \
+  -dNOSAFER \
+  -sOutputFile="${host_compressed_artifacts_path}/gs-test.pdf" \
+  -c "showpage" \
+  echo "creating at ${host_compressed_artifacts_path} done"
 
   echo "Compressed files list:"
   ls -al $host_compressed_artifacts_path

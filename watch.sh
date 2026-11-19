@@ -12,10 +12,14 @@ function final_things {
 }
 
 rm -rf $download_path
-rm $log_file
+rm -f $log_file
 run_id=$(gh run list --json databaseId -q ".[0].databaseId")
 
-gh run watch $run_id \
+git add . \
+  && git commit -m "$1" \
+  && git push \
+  && sleep 5 \
+  && git gh run watch $run_id \
   && gh run view $run_id --log-failed > $log_file \
   && final_things
 
