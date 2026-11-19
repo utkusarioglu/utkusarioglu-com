@@ -119,8 +119,9 @@ run_gs() {
   -dNOPAUSE \
   -dBATCH \
   -dNOSAFER \
-  -sOutputFile="${host_compressed_artifacts_path}/gs-test.pdf" \
+  -sOutputFile="/tmp/gs-test.pdf" \
   -c "showpage" 
+  mv /tmp/gs-test.pdf" "${host_compressed_artifacts_path}/gs-test.pdf"
   echo "creating at ${host_compressed_artifacts_path} done"
 
   echo "Compressed files list:"
