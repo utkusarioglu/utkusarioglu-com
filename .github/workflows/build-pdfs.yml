@@ -76,7 +76,6 @@ jobs:
       #     sudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER
         
       - name: Run Puppeteer pdf compression
-        shell: bash
         run: |
           sudo scripts/docker-run-puppeteer-gs.sh 
 

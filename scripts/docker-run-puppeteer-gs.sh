@@ -2,10 +2,6 @@
 
 source "${0%/*}/docker-run-puppeteer-src.sh"
 
-declare -p work_dir
-script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-echo "script dir: ${script_dir}"
-
 run_gs() {
   if [ -z "$(which gs)" ]; then
     echo "Warn: GhostScript not installed on the host. Installing..."
@@ -131,6 +127,5 @@ run_gs() {
   ls -al $host_compressed_artifacts_path
 }
 
-echo "BASEDIR: ${0%/*}"
 echo "WORKDIR: ${work_dir}"
-# run_gs
+run_gs
