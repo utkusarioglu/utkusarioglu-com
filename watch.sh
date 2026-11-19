@@ -1,14 +1,17 @@
 download_path=.ignore/pdf
-log_file=failed.log
+log_file=gh.log
 
 function final_things {
   if [ -z "$(cat $log_file)" ]; then
     echo "Downloading..."
     gh run download --name utkusarioglu-com-pdf-artifacts -D $download_path
+    gh run view $run_id --log > $log_file
+    echo "LOG ALL:"
   else 
+    gh run view $run_id --log-failed > $log_file 
     echo "FAILED LOG:"
-    cat $log_file
   fi
+  cat $log_file
 }
 
 rm -rf $download_path
@@ -20,7 +23,6 @@ git add . \
   && git push \
   && sleep 5 \
   && gh run watch $run_id \
-  && gh run view $run_id --log-failed > $log_file \
   && final_things
 
 # gh run watch $run_id && 
