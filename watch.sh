@@ -14,14 +14,16 @@ function final_things {
   cat $log_file
 }
 
+
+
 rm -rf $download_path
 rm -f $log_file
-run_id=$(gh run list --json databaseId -q ".[0].databaseId")
 
 git add . \
   && git commit -m "$1" \
   && git push \
   && sleep 5 \
+  && run_id=$(gh run list --json databaseId -q ".[0].databaseId") \
   && gh run watch $run_id \
   && final_things
 

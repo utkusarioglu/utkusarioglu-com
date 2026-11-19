@@ -5,8 +5,8 @@ on:
     branches:
       - main
       - dev
-    tags:
-      - "**.**.**"
+    # tags:
+      # - "**.**.**"
       # - experiment/**/**/**
   workflow_dispatch:
 
