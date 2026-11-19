@@ -1,4 +1,4 @@
-source .env
+source ${0%/*}/../.env
 
 work_dir=/home/pptruser
 host_assets_path=$(pwd)/assets
