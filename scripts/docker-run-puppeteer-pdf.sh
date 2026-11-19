@@ -1,5 +1,6 @@
 #!/bin/bash
-source ./docker-run-puppeteer-src.sh
+
+source ${0%/*}/docker-run-puppeteer-src.sh
 
 if [ -z $(which docker) ];
 then
