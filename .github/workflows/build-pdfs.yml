@@ -12,8 +12,8 @@ jobs:
     secrets: inherit
 
   build-pdfs:
-    needs:
-      - build-website
+    # needs:
+    #   - build-website
     name: build-pdfs
     runs-on: ubuntu-latest
     environment: production

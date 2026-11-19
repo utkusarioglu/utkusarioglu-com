@@ -1,4 +1,4 @@
-source ${0%/*}/docker-run-puppeteer-src.sh
+source ${0%/*}/docker-run-puppeteer-src
 
 
 run_gs() {
@@ -126,5 +126,6 @@ run_gs() {
   ls -al $host_compressed_artifacts_path
 }
 
+echo "BASEDIR: ${0%/*}"
 echo "WORKDIR: ${work_dir}"
 run_gs
