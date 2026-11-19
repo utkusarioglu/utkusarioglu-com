@@ -1,5 +1,6 @@
 source ./docker-run-puppeteer-src.sh
 
+
 run_gs() {
   if [ -z "$(which gs)" ]; then
     echo "Warn: GhostScript not installed on the host. Installing..."
@@ -125,4 +126,5 @@ run_gs() {
   ls -al $host_compressed_artifacts_path
 }
 
+echo "WORKDIR: ${work_dir}"
 run_gs
