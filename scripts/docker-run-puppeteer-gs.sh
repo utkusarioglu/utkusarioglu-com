@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 source "${0%/*}/docker-run-puppeteer-src.sh"
 
 declare -p work_dir
