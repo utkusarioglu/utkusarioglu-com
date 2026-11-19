@@ -76,6 +76,7 @@ jobs:
       #     sudo scripts/docker-run-puppeteer-pdf.sh $CERTS_FOLDER
         
       - name: Run Puppeteer pdf compression
+        shell: bash
         # if: steps.resume-artifacts-cache.outputs.cache-hit != 'true'
         # env:
         #   CERTS_FOLDER: "${{ github.workspace }}/.certs"
