@@ -1,4 +1,4 @@
-source ./docker-run-puppeteer-src.sh
+source ${0%/*}/docker-run-puppeteer-src.sh
 
 
 run_gs() {
