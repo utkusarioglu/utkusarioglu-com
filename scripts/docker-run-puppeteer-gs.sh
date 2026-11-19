@@ -1,5 +1,8 @@
-source ${0%/*}/docker-run-puppeteer-src.sh
+source "${0%/*}/docker-run-puppeteer-src.sh"
 
+declare -p work_dir
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+echo "script dir: ${script_dir}"
 
 run_gs() {
   if [ -z "$(which gs)" ]; then
@@ -128,4 +131,4 @@ run_gs() {
 
 echo "BASEDIR: ${0%/*}"
 echo "WORKDIR: ${work_dir}"
-run_gs
+# run_gs
