@@ -57,6 +57,9 @@ run_gs() {
         filename="$filename_prefix-$resume_code.pdf"
         tmp_file="/tmp/$filename"
         output_file="$target_folder/$filename"
+        tmp_raw_file="/tmp/$source"
+
+        cp "$host_raw_artifacts_path/$source" "$tmp_raw_file"
         
         # echo "Current user:"
         # id
@@ -80,7 +83,7 @@ run_gs() {
           -sOutputFile="${tmp_file}" \
           -dMaxInlineImageSize=0 \
           $photo_params \
-          "$host_raw_artifacts_path/$source"
+          "$tmp_raw_file"
 
           # -dNOSAFER \
         mv "${tmp_file}" "${output_file}"
