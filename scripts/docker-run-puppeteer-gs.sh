@@ -8,7 +8,6 @@ run_gs() {
   if [ -z "$(which gs)" ]; then
     echo "Warn: GhostScript not installed on the host. Installing..."
     apt-get install ghostscript -y
-    # apt-get install -y ghostscript=9.55.0~dfsg1-0ubuntu5
   fi
   if [ -z "$(which gs)" ]; then
     echo "Error: GhostScript install didn't work. Exiting."
@@ -41,7 +40,6 @@ run_gs() {
 
   echo "Compressed folder before start:"
   ls -al $host_compressed_artifacts_path
-  
 
   for photo_included in $PHOTO_VARIANTS; do
     if [ $photo_included = 'p' ]; then
@@ -60,76 +58,27 @@ run_gs() {
         tmp_raw_file="/tmp/$source"
 
         cp "$host_raw_artifacts_path/$source" "$tmp_raw_file"
-        
-        # echo "Current user:"
-        # id
-
-        # echo "Output directory:"
-        # ls -lad $target_folder
-
-        # echo "Output directory writable?"
-        # test -w $target_folder && echo YES || echo NO
-
-        # echo "Input file readable?"
-        # test -r $host_raw_artifacts_path/$source && echo YES || echo NO
 
         gs \
           -sDEVICE=pdfwrite \
           -dCompatibilityLevel=1.4 \
           -dPDFSETTINGS=/screen \
           -dNOPAUSE \
-          -dQUIET \
           -dBATCH \
           -sOutputFile="${tmp_file}" \
           -dMaxInlineImageSize=0 \
+          -dSubsetFonts=true \
+          -dCompressFonts=true \
           $photo_params \
           "$tmp_raw_file"
 
-          # -dNOSAFER \
+          # -dQUIET \
         mv "${tmp_file}" "${output_file}"
 
       done
 
     done
   done
-
-  # echo "Ghostscript version:"
-  # gs --version
-
-  # echo "AppArmor status:"
-  # cat /proc/self/attr/current
-  # sudo aa-status || true
-
-  # echo "Testing /tmp:"
-  # gs \
-  #   -sDEVICE=pdfwrite \
-  #   -sOutputFile=/tmp/gs-test.pdf \
-  #   -c "showpage"
-
-  # echo "Exit code: $?"
-  # ls -l /tmp/gs-test.pdf 2>&1
-
-  # echo "Testing workspace:"
-  # gs \
-  #   -sDEVICE=pdfwrite \
-  #   -sOutputFile="$host_compressed_artifacts_path/gs-test.pdf" \
-  #   -c "showpage"
-
-  # echo "Exit code: $?"
-  # ls -l "$host_compressed_artifacts_path/gs-test.pdf" 2>&1
-
-  # echo "creating at ${host_compressed_artifacts_path}"
-  # gs \
-  # -sDEVICE=pdfwrite \
-  # -dCompatibilityLevel=1.4 \
-  # -dPDFSETTINGS=/screen \
-  # -dNOPAUSE \
-  # -dBATCH \
-  # -dNOSAFER \
-  # -sOutputFile="/tmp/gs-test.pdf" \
-  # -c "showpage" 
-  # mv "/tmp/gs-test.pdf" "${host_compressed_artifacts_path}/gs-test.pdf"
-  # echo "creating at ${host_compressed_artifacts_path} done"
 
   echo "Compressed files list:"
   ls -al $host_compressed_artifacts_path
