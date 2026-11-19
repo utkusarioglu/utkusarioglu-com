@@ -57,32 +57,32 @@ run_gs() {
         filename="$filename_prefix-$resume_code.pdf"
         tmp_file="/tmp/$filename"
         output_file="$target_folder/$filename"
-        mkdir -p "$target_folder"
         
-        echo "Current user:"
-        id
+        # echo "Current user:"
+        # id
 
-        echo "Output directory:"
-        ls -lad $target_folder
+        # echo "Output directory:"
+        # ls -lad $target_folder
 
-        echo "Output directory writable?"
-        test -w $target_folder && echo YES || echo NO
+        # echo "Output directory writable?"
+        # test -w $target_folder && echo YES || echo NO
 
-        echo "Input file readable?"
-        test -r $host_raw_artifacts_path/$source && echo YES || echo NO
+        # echo "Input file readable?"
+        # test -r $host_raw_artifacts_path/$source && echo YES || echo NO
 
         gs \
           -sDEVICE=pdfwrite \
           -dCompatibilityLevel=1.4 \
           -dPDFSETTINGS=/screen \
           -dNOPAUSE \
+          -dQUIET \
           -dBATCH \
-          -dNOSAFER \
           -sOutputFile="${tmp_file}" \
           -dMaxInlineImageSize=0 \
           $photo_params \
           "$host_raw_artifacts_path/$source"
 
+          # -dNOSAFER \
         mv "${tmp_file}" "${output_file}"
 
       done
