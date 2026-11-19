@@ -127,5 +127,6 @@ run_gs() {
   ls -al $host_compressed_artifacts_path
 }
 
+echo "PWD: $(pwd)"
 echo "WORKDIR: ${work_dir}"
 run_gs
